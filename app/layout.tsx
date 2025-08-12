@@ -35,7 +35,7 @@ export const metadata = {
   // For more information on metadata API, see: https://nextjs.org/docs/app/building-your-application/optimizing/metadata
 }
 
-const banner = <Banner storageKey="some-key">Nextra 4.0 is released 🎉</Banner>
+const banner = <Banner dismissible={false} storageKey="under-construction">⚠ Under Construction</Banner>
 
 const navbar = (
   <Navbar
@@ -58,7 +58,7 @@ const footer = <footer className="bg-gray-100 dark:bg-neutral-900">
       </div>
       <div className="mt-8 text-gray-600 md:order-1 md:mt-0">
         <p className="text-sm"> Copyright &copy; 2023 - {new Date().getFullYear()} EndstoneMC. </p>
-        <p className="text-xs pt-1"> Made with <a href="https://nextra.site/">Nextra</a> </p>
+        <p className="text-xs pt-1"> Made with <a href="https://nextra.site/">Nextra</a></p>
       </div>
     </div>
   </div>
