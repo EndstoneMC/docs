@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import {motion} from "motion/react";
 import {
   ComponentPropsWithoutRef,
   useEffect,
@@ -9,7 +9,7 @@ import {
   useState,
 } from "react";
 
-import { cn } from "@/lib/utils";
+import {cn} from "@/lib/utils";
 
 export interface AnimatedGridPatternProps
   extends ComponentPropsWithoutRef<"svg"> {
@@ -25,21 +25,21 @@ export interface AnimatedGridPatternProps
 }
 
 export function AnimatedGridPattern({
-  width = 40,
-  height = 40,
-  x = -1,
-  y = -1,
-  strokeDasharray = 0,
-  numSquares = 50,
-  className,
-  maxOpacity = 0.5,
-  duration = 4,
-  repeatDelay = 0.5,
-  ...props
-}: AnimatedGridPatternProps) {
+                                      width = 40,
+                                      height = 40,
+                                      x = -1,
+                                      y = -1,
+                                      strokeDasharray = 0,
+                                      numSquares = 50,
+                                      className,
+                                      maxOpacity = 0.5,
+                                      duration = 4,
+                                      repeatDelay = 0.5,
+                                      ...props
+                                    }: AnimatedGridPatternProps) {
   const id = useId();
   const containerRef = useRef(null);
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+  const [dimensions, setDimensions] = useState({width: 0, height: 0});
   const [squares, setSquares] = useState(() => generateSquares(numSquares));
 
   function getPos() {
@@ -51,7 +51,7 @@ export function AnimatedGridPattern({
 
   // Adjust the generateSquares function to return objects with an id, x, and y
   function generateSquares(count: number) {
-    return Array.from({ length: count }, (_, i) => ({
+    return Array.from({length: count}, (_, i) => ({
       id: i,
       pos: getPos(),
     }));
@@ -63,9 +63,9 @@ export function AnimatedGridPattern({
       currentSquares.map((sq) =>
         sq.id === id
           ? {
-              ...sq,
-              pos: getPos(),
-            }
+            ...sq,
+            pos: getPos(),
+          }
           : sq,
       ),
     );
@@ -126,12 +126,12 @@ export function AnimatedGridPattern({
           />
         </pattern>
       </defs>
-      <rect width="100%" height="100%" fill={`url(#${id})`} />
+      <rect width="100%" height="100%" fill={`url(#${id})`}/>
       <svg x={x} y={y} className="overflow-visible">
-        {squares.map(({ pos: [x, y], id }, index) => (
+        {squares.map(({pos: [x, y], id}, index) => (
           <motion.rect
-            initial={{ opacity: 0 }}
-            animate={{ opacity: maxOpacity }}
+            initial={{opacity: 0}}
+            animate={{opacity: maxOpacity}}
             transition={{
               duration,
               repeat: 1,
@@ -144,6 +144,7 @@ export function AnimatedGridPattern({
             height={height - 1}
             x={x * width + 1}
             y={y * height + 1}
+            className="text-yellow-600 dark:text-amber-200"
             fill="currentColor"
             strokeWidth="0"
           />

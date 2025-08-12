@@ -1,34 +1,16 @@
-import {Footer, Layout, Navbar} from 'nextra-theme-docs'
+import {Footer, Layout, Navbar, ThemeSwitch} from 'nextra-theme-docs'
 import {Banner, Head} from 'nextra/components'
 import {getPageMap} from 'nextra/page-map'
 import '@/app/globals.css'
 import {FaDiscord, FaDocker, FaGithub, FaPython} from 'react-icons/fa'
 import {FaXTwitter} from "react-icons/fa6";
+import Image from "next/image";
+import Link from "next/link";
+import {cn} from "@/lib/utils";
+import {buttonVariants} from "@/components/ui/button";
+import {siteConfig} from "@/app/config";
+import {ModeToggle} from "@/components/magicui/mode-toggle";
 
-const extra = {
-  social: [
-    {
-      icon: FaGithub,
-      link: 'https://github.com/EndstoneMC',
-    },
-    {
-      icon: FaPython,
-      link: 'https://pypi.org/project/endstone',
-    },
-    {
-      icon: FaDocker,
-      link: 'https://hub.docker.com/u/endstone',
-    },
-    {
-      icon: FaXTwitter,
-      link: 'https://twitter.com/endstone_mc',
-    },
-    {
-      icon: FaDiscord,
-      link: 'https://discord.gg/xxgPuc2XN9',
-    },
-  ]
-}
 
 export const metadata = {
   // Define your metadata here
@@ -39,10 +21,53 @@ const banner = <Banner dismissible={false} storageKey="under-construction">⚠ U
 
 const navbar = (
   <Navbar
-    logo={<b>Nextra</b>}
-    // ... Your additional navbar options
-  />
+    logo={
+      <div className="flex gap-2 items-center">
+        <Image src="/logo.png" alt="logo" width={28} height={28}/>
+        <b className="text-xl">Endstone</b>
+      </div>
+    }
+  >
+    <div className="flex">
+      <Link
+        href={siteConfig.repo_url}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <div
+          className={cn(
+            buttonVariants({
+              variant: "ghost",
+            }),
+            "w-9 px-0",
+          )}
+        >
+          <FaGithub className="size-4"/>
+          <span className="sr-only">GitHub</span>
+        </div>
+      </Link>
+      <Link
+        href={siteConfig.extra.social[4].link}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <div
+          className={cn(
+            buttonVariants({
+              variant: "ghost",
+            }),
+            "w-9 px-0",
+          )}
+        >
+          <FaDiscord className="size-4"/>
+          <span className="sr-only">Discord</span>
+        </div>
+      </Link>
+      <ModeToggle/>
+    </div>
+  </Navbar>
 )
+
 
 const footer = <footer className="bg-gray-100 dark:bg-neutral-900">
   <div
@@ -50,15 +75,29 @@ const footer = <footer className="bg-gray-100 dark:bg-neutral-900">
     <hr className="nextra-border"/>
     <div className="py-12 md:flex md:items-center md:justify-between">
       <div className="flex gap-x-5 md:order-2">
-        {extra.social.map((item, index) => (
-          <a key={index} href={item.link} className="text-gray-600 hover:text-gray-800">
-            <item.icon aria-hidden="true" className="size-6"/>
-          </a>
+        {siteConfig.extra.social.map((item, index) => (
+          <Link
+            key={index}
+            href={item.link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div
+              className={cn(
+                buttonVariants({
+                  variant: "ghost",
+                }),
+                "w-9 px-0",
+              )}
+            >
+              <item.icon className="size-6"/>
+            </div>
+          </Link>
         ))}
       </div>
-      <div className="mt-8 text-gray-600 md:order-1 md:mt-0">
+      <div className="mt-8 md:order-1 md:mt-0">
         <p className="text-sm"> Copyright &copy; 2023 - {new Date().getFullYear()} EndstoneMC. </p>
-        <p className="text-xs pt-1"> Made with <a href="https://nextra.site/">Nextra</a></p>
+        <p className="text-xs pt-1"> Made with <a href="https://nextra.site/" className="font-semibold">Nextra</a></p>
       </div>
     </div>
   </div>
@@ -71,11 +110,7 @@ export default async function RootLayout({children}: Readonly<{ children: React.
       dir="ltr"
       suppressHydrationWarning
     >
-    <Head
-      // ... Your additional head options
-    >
-      {/* Your additional tags should be passed as `children` of `<Head>` element */}
-    </Head>
+    <Head/>
     <body>
     <Layout
       banner={banner}
