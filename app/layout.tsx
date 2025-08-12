@@ -81,7 +81,7 @@ export default async function RootLayout({children}: Readonly<{ children: React.
       banner={banner}
       navbar={navbar}
       pageMap={await getPageMap()}
-      docsRepositoryBase="https://github.com/shuding/nextra/tree/main/docs"
+      docsRepositoryBase="https://github.com/EndstoneMC/docs/tree/main"
       footer={footer}
       // ... Your additional layout options
     >
