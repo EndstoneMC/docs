@@ -13,7 +13,6 @@ interface BentoCardProps extends ComponentPropsWithoutRef<"div"> {
   name: string;
   className: string;
   background: ReactNode;
-  Icon: React.ElementType;
   description: string;
   href: string;
   cta: string;
@@ -37,7 +36,6 @@ const BentoCard = ({
   name,
   className,
   background,
-  Icon,
   description,
   href,
   cta,
@@ -58,11 +56,10 @@ const BentoCard = ({
     <div>{background}</div>
     <div className="p-4">
       <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 transition-all duration-300 lg:group-hover:-translate-y-10">
-        <Icon className="h-12 w-12 origin-left transform-gpu text-neutral-700 transition-all duration-300 ease-in-out group-hover:scale-75" />
-        <h3 className="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
+        <h3 className="text-xl font-semibold text-foreground">
           {name}
         </h3>
-        <p className="max-w-lg text-neutral-400">{description}</p>
+        <p className="max-w-lg text-muted-foreground">{description}</p>
       </div>
 
       <div
@@ -74,7 +71,7 @@ const BentoCard = ({
           variant="link"
           asChild
           size="sm"
-          className="pointer-events-auto p-0"
+          className="pointer-events-auto p-0 has-[svg]:p-0 text-foreground"
         >
           <a href={href}>
             {cta}
@@ -93,7 +90,7 @@ const BentoCard = ({
         variant="link"
         asChild
         size="sm"
-        className="pointer-events-auto p-0"
+        className="pointer-events-auto p-0 has-[svg]:p-0 text-foreground"
       >
         <a href={href}>
           {cta}

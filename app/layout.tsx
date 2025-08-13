@@ -1,15 +1,15 @@
-import {Footer, Layout, Navbar, ThemeSwitch} from 'nextra-theme-docs'
+import {Layout, Navbar} from 'nextra-theme-docs'
 import {Banner, Head} from 'nextra/components'
 import {getPageMap} from 'nextra/page-map'
 import '@/app/globals.css'
-import {FaDiscord, FaDocker, FaGithub, FaPython} from 'react-icons/fa'
-import {FaXTwitter} from "react-icons/fa6";
+import {FaDiscord, FaGithub} from 'react-icons/fa'
 import Image from "next/image";
 import Link from "next/link";
 import {cn} from "@/lib/utils";
 import {buttonVariants} from "@/components/ui/button";
 import {siteConfig} from "@/app/config";
 import {ModeToggle} from "@/components/magicui/mode-toggle";
+import React from "react";
 
 
 export const metadata = {
@@ -42,7 +42,7 @@ const navbar = (
             "w-9 px-0",
           )}
         >
-          <FaGithub className="size-4"/>
+          <FaGithub className="size-5"/>
           <span className="sr-only">GitHub</span>
         </div>
       </Link>
@@ -59,7 +59,7 @@ const navbar = (
             "w-9 px-0",
           )}
         >
-          <FaDiscord className="size-4"/>
+          <FaDiscord className="size-5"/>
           <span className="sr-only">Discord</span>
         </div>
       </Link>
@@ -69,7 +69,7 @@ const navbar = (
 )
 
 
-const footer = <footer className="bg-gray-100 dark:bg-neutral-900">
+const footer = <footer>
   <div
     className="mx-auto max-w-(--nextra-content-width) pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)]">
     <hr className="nextra-border"/>

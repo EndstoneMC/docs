@@ -3,9 +3,6 @@ const meta = {
     title: 'Home',
     type: 'page',
     display: 'hidden',
-    theme: {
-      layout: 'full'
-    }
   },
   docs: {
     type: 'page',
@@ -17,4 +14,4 @@ const meta = {
   }
 }
 
-export default meta
+export default meta;
