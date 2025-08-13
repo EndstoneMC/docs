@@ -5,12 +5,22 @@ import '@/app/globals.css'
 import {FaDiscord, FaGithub} from 'react-icons/fa'
 import Image from "next/image";
 import Link from "next/link";
-import {cn} from "@/lib/utils";
-import {buttonVariants} from "@/components/ui/button";
+import {Button} from "@/components/ui/button";
 import {siteConfig} from "@/app/config";
 import {ModeToggle} from "@/components/magicui/mode-toggle";
 import React from "react";
 
+import {Geist, Geist_Mono} from 'next/font/google'
+
+const geistSans = Geist({
+  subsets: ['latin'],
+  variable: "--font-geist-sans",
+})
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
 
 export const metadata = {
   // Define your metadata here
@@ -24,45 +34,23 @@ const navbar = (
     logo={
       <div className="flex gap-2 items-center">
         <Image src="/logo.png" alt="logo" width={28} height={28}/>
-        <b className="text-xl">Endstone</b>
+        <b className="text-xl font-mono font-semibold tracking-tighter">Endstone</b>
       </div>
     }
   >
     <div className="flex">
-      <Link
-        href={siteConfig.repo_url}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <div
-          className={cn(
-            buttonVariants({
-              variant: "ghost",
-            }),
-            "w-9 px-0",
-          )}
-        >
+      <Button variant="ghost" className="w-9 h-9" asChild>
+        <Link href={siteConfig.repo_url} target="_blank" rel="noreferrer">
           <FaGithub className="size-5"/>
           <span className="sr-only">GitHub</span>
-        </div>
-      </Link>
-      <Link
-        href={siteConfig.extra.social[4].link}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <div
-          className={cn(
-            buttonVariants({
-              variant: "ghost",
-            }),
-            "w-9 px-0",
-          )}
-        >
+        </Link>
+      </Button>
+      <Button variant="ghost" className="w-9 h-9" asChild>
+        <Link href={siteConfig.extra.social[4].link} target="_blank" rel="noreferrer">
           <FaDiscord className="size-5"/>
           <span className="sr-only">Discord</span>
-        </div>
-      </Link>
+        </Link>
+      </Button>
       <ModeToggle/>
     </div>
   </Navbar>
@@ -74,25 +62,13 @@ const footer = <footer>
     className="mx-auto max-w-(--nextra-content-width) pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)]">
     <hr className="nextra-border"/>
     <div className="py-12 md:flex md:items-center md:justify-between">
-      <div className="flex gap-x-5 md:order-2">
+      <div className="flex gap-x-2 md:order-2">
         {siteConfig.extra.social.map((item, index) => (
-          <Link
-            key={index}
-            href={item.link}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div
-              className={cn(
-                buttonVariants({
-                  variant: "ghost",
-                }),
-                "w-9 px-0",
-              )}
-            >
+          <Button key={index} variant="ghost" className="w-12 h-12" asChild>
+            <Link href={item.link} target="_blank" rel="noreferrer">
               <item.icon className="size-6"/>
-            </div>
-          </Link>
+            </Link>
+          </Button>
         ))}
       </div>
       <div className="mt-8 md:order-1 md:mt-0">
@@ -105,11 +81,8 @@ const footer = <footer>
 
 export default async function RootLayout({children}: Readonly<{ children: React.ReactNode; }>) {
   return (
-    <html
-      lang="en"
-      dir="ltr"
-      suppressHydrationWarning
-    >
+    <html lang="en" dir="ltr" suppressHydrationWarning
+          className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans`}>
     <Head/>
     <body>
     <Layout
