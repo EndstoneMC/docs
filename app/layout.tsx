@@ -33,13 +33,14 @@ const navbar = (
   <Navbar
     align="left"
     logo={
-      <div className="flex gap-2 items-center mr-8">
-        <Image src="/logo.png" alt="logo" width={28} height={28}/>
-        <b className="text-xl font-mono font-semibold tracking-tighter">Endstone</b>
+      <div className="flex gap-2 items-center">
+        <Image src="/logo.png" alt="logo" width={32} height={32}/>
+        <b className="text-xl font-mono font-semibold tracking-widest uppercase">Endstone</b>
+        <div className="h-6 border-l border-gray-600 dark:border-gray-400 ml-2 hidden md:inline"></div>
       </div>
     }
   >
-    <div className="flex">
+    <div className="flex gap-2">
       <Button variant="ghost" className="w-9 h-9" asChild>
         <Link href={siteConfig.repo_url} target="_blank" rel="noreferrer">
           <FaGithub className="size-5"/>
@@ -92,6 +93,8 @@ export default async function RootLayout({children}: Readonly<{ children: React.
       pageMap={await getPageMap()}
       docsRepositoryBase="https://github.com/EndstoneMC/docs/tree/main"
       footer={footer}
+      darkMode={false}
+      // sidebar={{toggleButton: false}}
       // ... Your additional layout options
     >
       {children}
