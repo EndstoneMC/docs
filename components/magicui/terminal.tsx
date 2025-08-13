@@ -241,7 +241,7 @@ export const Terminal = ({
         </div>
       </div>
       <pre className="p-4 h-full overflow-auto">
-        <code className="grid gap-y-1">{wrappedChildren}</code>
+        <code className="grid gap-y-1 font-mono">{wrappedChildren}</code>
       </pre>
     </div>
   );
