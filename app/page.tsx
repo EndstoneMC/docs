@@ -10,6 +10,7 @@ import {FaGithub, FaStar} from "react-icons/fa";
 import {BentoCard, BentoGrid} from "@/components/magicui/bento-grid";
 import Image from "next/image";
 import useSWR from "swr";
+import {Skeleton} from "@/components/ui/skeleton";
 
 const fetcher = async (url: string) => {
   const response = await fetch(url, {
@@ -84,8 +85,8 @@ export default function Home() {
               <Button className="rounded-xl h-10" variant="outline" asChild>
                 <Link href="https://github.com/EndstoneMC/endstone">
                   <FaGithub className="size-4"/>
-                  Star on GitHub
-                  {!isLoading && !isError && stars > 0 && (<><FaStar className="size-4"/> {stars}</>)}
+                  Star on GitHub <FaStar className="size-4"/>
+                  {!isLoading && !isError && stars > 0 ? (<> {stars}</>) : <Skeleton className="h-4 w-8 bg-foreground/40"/>}
                 </Link>
               </Button>
             </div>
