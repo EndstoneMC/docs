@@ -2,7 +2,7 @@ import {FaCircleInfo} from "react-icons/fa6";
 import {ReactNode} from "react";
 import {cn} from "@/lib/utils";
 import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
-import {FaFire, FaLightbulb} from "react-icons/fa";
+import {FaFire} from "react-icons/fa";
 
 const typeStyles = {
   note: {
@@ -50,12 +50,12 @@ export default function Admonition({type, children, title}: AdmonitionProps) {
 
   return (
     <Alert className={cn(
-      "p-4 rounded-none border-l-4 border-r-0 border-y-0 space-x-2",
+      "p-4 rounded-none border-l-4 border-r-0 border-y-0 space-x-2 mt-[1.25em]",
       styles.bg,
       styles.border
     )}>
       {styles.icon}
-      <AlertTitle className="font-semibold pb-2">
+      <AlertTitle className="font-semibold pb-1">
         {title ?? styles.title}
       </AlertTitle>
       <AlertDescription className="text-foreground">

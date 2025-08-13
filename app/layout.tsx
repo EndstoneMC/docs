@@ -95,9 +95,7 @@ export default async function RootLayout({children}: Readonly<{ children: React.
       docsRepositoryBase="https://github.com/EndstoneMC/docs/tree/main"
       footer={footer}
       darkMode={false}
-      // sidebar={{toggleButton: false}}
-      // ... Your additional layout options
-    >
+      sidebar={{toggleButton: false}}>
       {children}
     </Layout>
     </body>
