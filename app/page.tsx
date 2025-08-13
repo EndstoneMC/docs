@@ -1,14 +1,52 @@
+'use client';
+
 import {AnimatedGridPattern} from "@/components/magicui/animated-grid-pattern";
 import {cn} from "@/lib/utils";
 import {AnimatedSpan, Terminal, TypingAnimation} from "@/components/magicui/terminal";
 import Link from "next/link";
 import {ChevronRight} from "lucide-react";
 import {Button} from "@/components/ui/button";
-import {FaGithub} from "react-icons/fa";
+import {FaGithub, FaStar} from "react-icons/fa";
 import {BentoCard, BentoGrid} from "@/components/magicui/bento-grid";
 import Image from "next/image";
+import useSWR from "swr";
+
+const fetcher = async (url: string) => {
+  const response = await fetch(url, {
+    headers: process.env.GITHUB_OAUTH_TOKEN
+      ? {
+        Authorization: `Bearer ${process.env.GITHUB_OAUTH_TOKEN}`,
+        "Content-Type": "application/json",
+      }
+      : {},
+  });
+  if (!response.ok) {
+    console.error("Error fetching GitHub stars");
+  }
+  return response.json();
+};
+
+const useGitHubStars = (org: string, repo: string) => {
+  const {data, error} = useSWR(
+    `https://api.github.com/repos/${org}/${repo}`,
+    fetcher,
+    {
+      revalidateOnMount: true,
+      revalidateOnFocus: true,
+      dedupingInterval: 3600 * 1000, // 1 hour
+    }
+  );
+
+  return {
+    stars: data?.stargazers_count ?? 0,
+    isLoading: !data && !error,
+    isError: error,
+  };
+};
 
 export default function Home() {
+  const {stars, isLoading, isError} = useGitHubStars('EndstoneMC', 'endstone');
+
   return (
     <div>
       <section id="hero" className="relative h-full">
@@ -45,9 +83,9 @@ export default function Home() {
               </Button>
               <Button className="rounded-xl h-10" variant="outline" asChild>
                 <Link href="https://github.com/EndstoneMC/endstone">
-                  <FaGithub
-                    className="size-4 shrink-0 transition-all duration-300 ease-out group-hover:translate-x-1"/>
+                  <FaGithub className="size-4"/>
                   Star on GitHub
+                  {!isLoading && !isError && stars > 0 && (<><FaStar className="size-4"/> {stars}</>)}
                 </Link>
               </Button>
             </div>
