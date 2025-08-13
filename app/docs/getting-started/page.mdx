@@ -1,11 +1,36 @@
 import {FaApple, FaDocker, FaLinux, FaWindows} from "react-icons/fa";
+import Admonition from "@/components/endstone/admonition";
 
 # Overview
 
-Endstone offers a plugin API for Bedrock Dedicated Servers, supporting both Python and C++ languages.
-This allows developers to enhance Bedrock Dedicated Servers with various features and functionalities.
+**Endstone** is a modern server software for **Minecraft: Bedrock Edition**.
+It adds a clean, Paper-style **plugin API** (Python & C++) on top of the [Bedrock Dedicated Server (BDS)](https://www.minecraft.net/en-us/download/server/bedrock),
+letting you extend gameplay effortlessly, from high-level features (commands, events, permissions) to advanced capabilities
+like packet interception.
 
-## System Requirement
+Endstone aims for **vanilla parity** (world generation, mob AI, behaviour packs) with a focus on performance, stability,
+and an ergonomic developer experience.
+
+## System Requirements
+
+<Admonition type="note">
+  These baseline requirements mirror the official [Bedrock Dedicated Server](https://www.minecraft.net/en-us/download/server/bedrock) page.<br/>
+  Actual needs grow with player count, world size, and plugins.
+</Admonition>
+
+- **CPU:** Intel® Core™ i3-3210 or AMD A8-7600 APU (or equivalent)
+- **Memory:** 4 GB RAM (minimum; more recommended for plugins/players)
+- **Storage:** 180 MB to 1 GB free (worlds will grow over time)
+- **Network:** Broadband internet connection
+- **Operating System:**
+* **Windows:** Windows 10 (build 15063+) or Windows Server 2016+
+* **Linux:** **Ubuntu 22.04 LTS or later** (other distros not officially supported)
+
+
+<Admonition type="tip">
+  Bedrock servers uses **19132/UDP (IPv4)** and **19133/UDP (IPv6)** by default.
+  Ensure these ports are open or forwarded to allow players to connect over the internet.
+</Admonition>
 
 ## Installation
 
@@ -16,11 +41,11 @@ This allows developers to enhance Bedrock Dedicated Servers with various feature
   </LinkedCard>
   <LinkedCard href="/docs/getting-started/installation/linux">
     <FaLinux className="size-8"/>
-    <p className="font-semibold pl-2">Linux</p>
+    <p className="font-semibold pl-2">Linux (Ubuntu 22.04+)</p>
   </LinkedCard>
   <LinkedCard href="/docs/getting-started/installation/macos">
     <FaApple className="size-8"/>
-    <p className="font-semibold pl-2">macOS</p>
+    <p className="font-semibold pl-2">macOS (via Docker)</p>
   </LinkedCard>
   <LinkedCard href="/docs/getting-started/installation/docker">
     <FaDocker className="size-8"/>

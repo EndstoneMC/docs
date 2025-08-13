@@ -11,6 +11,7 @@ import {ModeToggle} from "@/components/magicui/mode-toggle";
 import React from "react";
 
 import {Geist, Geist_Mono} from 'next/font/google'
+import {Separator} from "@/components/ui/separator";
 
 const geistSans = Geist({
   subsets: ['latin'],
@@ -36,7 +37,7 @@ const navbar = (
       <div className="flex gap-2 items-center">
         <Image src="/logo.png" alt="logo" width={32} height={32}/>
         <b className="text-xl font-mono font-semibold tracking-widest uppercase">Endstone</b>
-        <div className="h-6 border-l border-gray-600 dark:border-gray-400 ml-2 hidden md:inline"></div>
+        <Separator orientation="vertical" className="h-6! ml-2 bg-foreground/40 hidden md:block"/>
       </div>
     }
   >
