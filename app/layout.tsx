@@ -1,5 +1,5 @@
 import {Layout, Navbar} from 'nextra-theme-docs'
-import {Banner, Head} from 'nextra/components'
+import {Banner, Head, Search} from 'nextra/components'
 import {getPageMap} from 'nextra/page-map'
 import '@/app/globals.css'
 import {FaDiscord, FaGithub} from 'react-icons/fa'
@@ -24,6 +24,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  title: {
+    default: 'Endstone - Full-featured server software built for Bedrock.',
+    template: '%s | Endstone'
+  },
   // Define your metadata here
   // For more information on metadata API, see: https://nextjs.org/docs/app/building-your-application/optimizing/metadata
 }
