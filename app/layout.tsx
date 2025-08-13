@@ -31,8 +31,9 @@ const banner = <Banner dismissible={false} storageKey="under-construction">⚠ U
 
 const navbar = (
   <Navbar
+    align="left"
     logo={
-      <div className="flex gap-2 items-center">
+      <div className="flex gap-2 items-center mr-8">
         <Image src="/logo.png" alt="logo" width={28} height={28}/>
         <b className="text-xl font-mono font-semibold tracking-tighter">Endstone</b>
       </div>
