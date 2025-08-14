@@ -1,4 +1,4 @@
-import {Layout, Navbar} from 'nextra-theme-docs'
+import {Footer, Layout, Navbar} from 'nextra-theme-docs'
 import {Banner, Head, Search} from 'nextra/components'
 import {getPageMap} from 'nextra/page-map'
 import '@/app/globals.css'
@@ -63,15 +63,12 @@ const navbar = (
   </Navbar>
 )
 
-
-const footer = <footer>
-  <div
-    className="mx-auto max-w-(--nextra-content-width) pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)]">
-    <hr className="nextra-border"/>
-    <div className="py-12 md:flex md:items-center md:justify-between">
+const footer = (
+  <Footer>
+    <div className="w-full py-12 md:flex md:items-center md:justify-between">
       <div className="flex gap-x-2 md:order-2">
         {siteConfig.extra.social.map((item, index) => (
-          <Button key={index} variant="ghost" className="w-12 h-12" asChild>
+          <Button key={`${index}`} variant="ghost" className="w-12 h-12" asChild>
             <Link href={item.link} target="_blank" rel="noreferrer">
               <item.icon className="size-6"/>
             </Link>
@@ -80,11 +77,12 @@ const footer = <footer>
       </div>
       <div className="mt-8 md:order-1 md:mt-0">
         <p className="text-sm"> Copyright &copy; 2023 - {new Date().getFullYear()} EndstoneMC. </p>
-        <p className="text-xs pt-1"> Made with <a href="https://nextra.site/" className="font-semibold">Nextra</a></p>
+        <p className="text-xs pt-1"> Made with <a href="https://nextra.site/" className="font-semibold">Nextra</a>
+        </p>
       </div>
     </div>
-  </div>
-</footer>
+  </Footer>
+)
 
 export default async function RootLayout({children}: Readonly<{ children: React.ReactNode; }>) {
   return (
