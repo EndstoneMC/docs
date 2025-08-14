@@ -1,47 +1,13 @@
-diff --git a/dist/server/rehype-plugins/rehype-extract-toc-content.js b/dist/server/rehype-plugins/rehype-extract-toc-content.js
-index 06ab63b9d4fef1df77e748df00a2d84b8adf9f8f..870f2167259dd64be721088420bc772e27af77e4 100644
---- a/dist/server/rehype-plugins/rehype-extract-toc-content.js
-+++ b/dist/server/rehype-plugins/rehype-extract-toc-content.js
-@@ -23,6 +23,15 @@ const transformer = (ast, file) => {
-       };
-     }
-     const node = TocMap[name.id];
-+    // Endstone: PATCH BEGIN
-+    if (!node) {
-+      return createAstObject({
-+        value: name.value,
-+        id: name.id,
-+        depth: name.depth
-+      });
-+    }
-+    // Endstone: PATCH END
-     const isTextOnly = node.children.every((child) => child.type === "text");
-     const result = isTextOnly ? node.children.map((n) => n.value).join("") : (
-       // @ts-expect-error -- fixme
 diff --git a/dist/server/remark-plugins/remark-headings.js b/dist/server/remark-plugins/remark-headings.js
-index 39f387e748c0e200a62b431c5a4cb3a695e112e5..356dfabc60ccd3dce168c2c46a145d74824d6309 100644
+index 39f387e748c0e200a62b431c5a4cb3a695e112e5..87bd56325c911fc1e56bc02cf99bfb2969bebaef 100644
 --- a/dist/server/remark-plugins/remark-headings.js
 +++ b/dist/server/remark-plugins/remark-headings.js
-@@ -33,6 +33,22 @@ const remarkHeadings = ({ exportName = "toc", isRemoteContent }) => {
+@@ -28,7 +28,7 @@ const remarkHeadings = ({ exportName = "toc", isRemoteContent }) => {
+           node.data ||= {};
+           const headingProps = node.data.hProperties ||= {};
+           const value = getFlattenedValue(node);
+-          const id = slugger.slug(headingProps.id || value);
++          const id = headingProps.id || slugger.slug(value);
+           headingProps.id = id;
            headings.push({ depth: node.depth, value, id });
            return;
-         }
-+        // Endstone: PATCH BEGIN
-+        if (node.type === "mdxJsxFlowElement" && /^h[2-6]$/.test(node.name || "")) {
-+          const depth = Number(node.name.slice(1));
-+          if (depth === 1) {
-+            return;
-+          }
-+          const idAttr = node.attributes.find(
-+            (attr) => attr.type === "mdxJsxAttribute" && attr.name === "id"
-+          );
-+          if (!idAttr) return;
-+          const value = getFlattenedValue(node);
-+          const id = idAttr.value;
-+          headings.push({ depth, value, id });
-+          return;
-+        }
-+        // Endstone: PATCH END
-         const isTab = node.type === "mdxJsxFlowElement" && node.name === "Tabs.Tab";
-         if (isTab) {
-           const itemsAttr = parent && parent.type === "mdxJsxFlowElement" && parent.name === "Tabs" && parent.attributes.find(
