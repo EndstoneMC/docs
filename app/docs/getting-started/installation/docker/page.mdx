@@ -1,1 +1,103 @@
-# Running inside Docker
+import {Steps} from 'nextra/components'
+import Admonition from "@/components/endstone/admonition";
+import {Kbd} from '@/components/ui/kbd';
+
+# Run with Docker
+
+Run Endstone **in Docker** on any machine with Docker installed (Linux, macOS, or Windows).  
+This is recommended if your OS/arch isn't supported natively.
+
+## Prerequisites
+- [Docker Desktop](https://docs.docker.com/desktop/) (macOS/Windows) or [Docker Engine](https://docs.docker.com/engine/) (Linux)
+
+## Run in the foreground
+
+<Steps>
+  ### Pull the image
+
+  ```bash copy
+  docker pull --platform linux/amd64 endstone/endstone
+  ````
+
+  <Admonition type="note">
+    Currently, only `amd64` is supported natively. On other architecture, Docker will run Endstone image using
+    emulation.
+  </Admonition>
+
+  ### Start (interactive mode)
+
+  ```bash copy
+  docker run --rm -it --name endstone \
+    -p 19132:19132/udp \
+    -v ./bedrock_server:/home/endstone/bedrock_server \
+    --platform linux/amd64 \
+    endstone/endstone
+  ```
+
+  Command breakdown:
+  - **`--rm`**: automatically removes the container when it stops
+  - **`-it`**: runs in interactive mode so you can see logs and interact with the process
+  - **`-p 19132:19132/udp`**: opens the port for the server. Make sure this UDP port is also open on your
+  firewall/router.
+  - **`-v ./bedrock_server:/home/endstone/bedrock_server`**: mounts a local folder into the container so worlds/configs
+  persist between runs.
+    - The left side (`./bedrock_server`) is a path on your machine (created if missing)
+    - the right side is where Endstone expects data inside the container (you don't need to change this).
+  - **`--platform linux/amd64`**: ensures the container runs the amd64 build (emulated on non-amd64 hosts).
+  - **`endstone/endstone`**: the image to run. Add a tag if you want to pin a specific version (e.g.,
+  `endstone/endstone:latest`).
+
+
+  ### Stop
+
+  Press <Kbd>CTRL + C</Kbd> to stop.
+
+</Steps>
+
+## Run in the background (Docker Compose)
+
+Create a `docker-compose.yml` next to your `bedrock_server/` directory:
+
+```yml copy
+services:
+  endstone:
+    container_name: endstone
+    image: endstone/endstone:latest
+    platform: linux/amd64
+    command: endstone -y
+    ports:
+      - "19132:19132/udp"
+    volumes:
+      - ./bedrock_server:/home/endstone/bedrock_server:rw
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+```
+
+<Steps>
+  ### Start (detached)
+
+  ```bash copy
+  docker compose up -d
+  ```
+
+  ### View logs
+
+  ```bash copy
+  docker compose logs -f
+  ```
+
+  ### Stop
+
+  ```bash copy
+  docker compose down
+  ```
+
+  <Admonition type="tip">
+    To update with Compose: `docker compose pull` then `docker compose up -d`.`
+  </Admonition>
+</Steps>
+
+## Next steps
+
+* Proceed to **[First Steps](/docs/getting-started/first-steps)** to configure the server and join.

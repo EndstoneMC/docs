@@ -1,1 +1,57 @@
-# Installation on Linux
+import {Steps} from 'nextra/components'
+import Admonition from "@/components/endstone/admonition";
+
+# Install on Linux
+
+## System Requirements
+
+Before starting the installation, ensure your system meets the following requirements:
+
+- Ubuntu 22.04 LTS or later
+- Debian 12 or later
+
+<Admonition type="note">
+  If your Linux distribution isn't Ubuntu 22.04 LTS+ or Debian 12+, **or** your CPU architecture isn't `x86_64`,
+  consider running Endstone inside Docker instead. See **[Run with Docker](/docs/installation/docker)**.
+</Admonition>
+
+## Installation
+
+<Steps>
+  ### Install [uv](https://docs.astral.sh/uv/getting-started/installation)
+
+  **Using the official install script (recommended):**
+
+  ```bash copy
+  curl -LsSf https://astral.sh/uv/install.sh | sh
+  ````
+
+  If your system doesn't have `curl`, you can use `wget`:
+
+  ```bash copy
+  wget -qO- https://astral.sh/uv/install.sh | sh
+  ````
+
+  ### Create a virtual environment
+
+  ```bash copy
+  uv venv
+  ```
+
+  ### Activate the virtual environment
+
+  ```bash copy
+  source .venv/bin/activate
+  ```
+
+  ### Install Endstone
+
+  ```bash copy
+  uv pip install -U endstone
+  ```
+
+</Steps>
+
+## Next steps
+
+* Continue to **[First Steps](/docs/getting-started/first-steps)** to learn how to run the server, configure it, and join.

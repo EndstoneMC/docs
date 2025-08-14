@@ -1,1 +1,51 @@
-# Installation on Windows
+import {Steps} from 'nextra/components'
+
+# Install on Windows
+
+## System Requirements
+
+Before starting the installation, ensure your system meets the following requirements:
+
+- Windows 10 version 10.0.15063 or later
+- Windows Server 2016 or later
+
+## Installation
+
+<Steps>
+  ### Install [uv](https://docs.astral.sh/uv/getting-started/installation)
+
+  **Using WinGet (recommended):**
+
+  ```bash copy
+  winget install --id=astral-sh.uv -e
+  ````
+
+  Alternatively, via PowerShell:
+
+  ```bash copy
+  powershell -ExecutionPolicy Bypass -c "irm https://astral.sh/uv/install.ps1 | iex"
+  ```
+
+  ### Create a virtual environment
+
+  ```bash copy
+  uv venv
+  ```
+
+  ### Activate the virtual environment
+
+  ```bash copy
+  .venv\Scripts\activate
+  ```
+
+  ### Install Endstone
+
+  ```bash copy
+  uv pip install -U endstone
+  ```
+
+</Steps>
+
+## Next steps
+
+* Continue to **[First Steps](/docs/getting-started/first-steps)** to learn how to run the server, configure it, and join.

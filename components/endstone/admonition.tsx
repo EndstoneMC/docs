@@ -1,4 +1,4 @@
-import {FaCircleInfo} from "react-icons/fa6";
+import {FaCircleInfo, FaTriangleExclamation} from "react-icons/fa6";
 import {ReactNode} from "react";
 import {cn} from "@/lib/utils";
 import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
@@ -26,7 +26,7 @@ const typeStyles = {
   warning: {
     bg: "bg-yellow-500/10 dark:bg-yellow-600/30",
     border: "border-yellow-300 dark:border-yellow-600/70",
-    icon: <FaCircleInfo className="h-4 w-4 !text-yellow-500"/>,
+    icon: <FaTriangleExclamation className="h-4 w-4 !text-yellow-500"/>,
     title: "Warning",
   },
   caution: {

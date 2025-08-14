@@ -1,1 +1,49 @@
-# Installation on macOS
+import {Steps} from 'nextra/components'
+import Admonition from "@/components/endstone/admonition";
+
+# Install on macOS
+
+<Admonition type="warning">
+  **Bedrock Dedicated Server (BDS) doesn’t officially support macOS**.
+  Endstone will be run inside Docker on your Mac.
+</Admonition>
+
+## System Requirements
+
+Before starting the installation, ensure your system meets the following requirements:
+* A supported version of macOS.
+* At least 4 GB RAM.
+
+<Admonition type="note">
+  Docker Desktop is supported on the current and two previous major macOS releases.
+</Admonition>
+
+## Installation
+
+<Steps>
+  ### Install Docker Desktop for macOS
+
+  Download the installer from the official site:
+  [Docker Desktop for Mac](https://docs.docker.com/desktop/install/mac-install/).
+
+  After installation, **launch Docker Desktop** and wait until it shows "Docker is running."
+
+  ### Verify Docker works
+
+  ```bash copy
+  docker run --rm hello-world
+  ```
+
+  You should see a confirmation message from Docker.
+
+  ### Run Endstone in Docker
+
+  Since BDS doesn't support macOS, continue to **[Run with Docker](/docs/getting-started/installation/docker)**
+  for the full guide.
+
+</Steps>
+
+## Next steps
+
+* Continue to **[Run with Docker](/docs/getting-started/installation/docker)** for the full guide on
+pulling the image, configuring the server, and joining.

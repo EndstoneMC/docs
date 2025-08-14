@@ -34,8 +34,8 @@ const meta = {
               docker: 'Docker',
             }
           },
+          'first-steps': 'First Steps',
           update: 'Update Endstone',
-          'next-steps': 'Next Steps',
         }
       },
       'user-guide': {
