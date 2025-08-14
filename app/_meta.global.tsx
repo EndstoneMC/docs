@@ -34,11 +34,21 @@ const meta = {
               docker: 'Docker',
             }
           },
+          update: 'Update Endstone',
+          'next-steps': 'Next Steps',
         }
       },
       'user-guide': {
         items: {
-          configuration: 'Configuration',
+          configuration: {
+            items: {
+              'server-properties': 'server.properties',
+              'endstone-toml': 'endstone.toml',
+            }
+          },
+          commands: 'Commands',
+          packs: 'Packs',
+          permissions: 'Permissions',
         }
       },
       'developer-guide': {

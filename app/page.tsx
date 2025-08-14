@@ -86,7 +86,8 @@ export default function Home() {
                 <Link href="https://github.com/EndstoneMC/endstone">
                   <FaGithub className="size-4"/>
                   Star on GitHub <FaStar className="size-4"/>
-                  {!isLoading && !isError && stars > 0 ? (<> {stars}</>) : <Skeleton className="h-4 w-8 bg-foreground/40"/>}
+                  {!isLoading && !isError && stars > 0 ? (<> {stars}</>) :
+                    <Skeleton className="h-4 w-8 bg-foreground/40"/>}
                 </Link>
               </Button>
             </div>
@@ -120,7 +121,7 @@ export default function Home() {
           <BentoGrid className="grid-cols-1 lg:grid-cols-3 w-full">
             <BentoCard name="All Vanilla Features"
                        className="col-span-1 lg:col-span-2 dark"
-                       background={<Image fill={true} objectFit="cover" src="/assets/vanilla-features.jpg"
+                       background={<Image fill={true} className="object-cover" src="/assets/vanilla-features.jpg"
                                           alt="Vanilla Features"/>}
                        description="Endstone supports every vanilla feature, from mob AI to world generation, redstone mechanics, and behavior packs."
                        href="#" cta="Get Started"/>

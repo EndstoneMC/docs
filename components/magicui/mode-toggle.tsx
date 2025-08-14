@@ -24,8 +24,8 @@ export const ModeToggle = React.forwardRef<
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       {...props}
     >
-      <FaSun className="size-5 text-neutral-800 dark:hidden dark:text-neutral-200"/>
-      <FaMoon className="hidden size-5 text-neutral-800 dark:block dark:text-neutral-200"/>
+      <FaSun className="text-neutral-800 dark:hidden dark:text-neutral-200 size-5"/>
+      <FaMoon className="hidden text-neutral-800 dark:block dark:text-neutral-200"/>
     </Button>
   );
 });
