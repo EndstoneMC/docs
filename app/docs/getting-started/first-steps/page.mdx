@@ -1,0 +1,92 @@
+import Admonition from "@/components/endstone/admonition";
+
+# First Steps
+
+This page helps you:
+1. start Endstone for the first time,
+2. make a few essential configuration changes, and
+3. join from a Bedrock client.
+
+<Admonition type="tip">
+  If you haven’t installed Endstone yet, see **[Getting Started](/docs/getting-started)** first.
+</Admonition>
+
+## Start the server
+
+### If you installed with uv + pip
+
+Open your project folder and activate the virtual environment, then start Endstone:
+
+```bash
+source .venv/bin/activate
+uv run endstone
+```
+
+### If you're using Docker
+
+Follow the instructions on the [Run with Docker](/docs/getting-started/installation/docker/) page.
+
+## Basic configuration
+
+Most base-game settings live in the Bedrock **`server.properties`** file.
+After the first run, stop the server, edit the file, and start the server again.
+
+### Quick Tweak
+
+Typical options you may want to set:
+
+```ini filename="server.properties"
+server-name=Endstone Server
+gamemode=survival
+difficulty=normal
+max-players=10
+allow-cheats=false
+allow-list=false
+server-port=19132
+server-portv6=19133
+```
+
+* **`server-name`**
+The name shown to clients in the server list. Cosmetic only; doesn’t affect reachability.
+
+* **`gamemode`** (`survival` | `creative` | `adventure`)
+Default gamemode for new players. Existing players keep their current mode unless changed with commands.
+
+* **`difficulty`** (`peaceful` | `easy` | `normal` | `hard`)
+World difficulty. Can be changed at runtime with `/difficulty`, but set it here to persist.
+
+* **`max-players`**
+Hard cap on simultaneous connections. Higher numbers increase CPU/RAM and bandwidth needs.
+
+* **`allow-cheats`** (`true`/`false`)
+When **true**, the server allows cheats-like commands (like `/give`, `/tp`).
+You still need elevated permissions (see [Permissions](/docs/user-guide/permissions/)).
+
+* **`allow-list`** (`true`/`false`)
+When **true**, only players listed in `allowlist.json` can join. Good for private servers.
+
+* **`server-port` / `server-portv6`**
+The UDP ports the server listens on. If you’re behind a router/firewall, you **must** open/forward these (UDP, not TCP).
+
+### Make yourself an operator
+
+From the server console, grant operator privileges to your player name (Gamertag):
+
+```text
+op <YourGamertag>
+```
+
+## Join from a Bedrock client
+
+1. Make sure your **firewall allows UDP** on the Bedrock port (default **19132**).
+2. If you’re on the **same LAN**, the server usually appears under the **Friends / LAN** tab. Otherwise:
+3. On your device, go to **Play → Servers → Add Server** and enter:
+   - **Server Address:** your PC's IP (or your public IP if port forwarded)
+   - **Port:** `19132` (or whatever you set in `server-port`)
+4. Save and **Join**.
+
+<Admonition type="tip">
+  Hosting over the internet? Don't forget to set up **port forwarding** on your router for UDP <b>19132</b> (and
+  optionally <b>19133</b> for IPv6) to your server machine's local IP.
+</Admonition>
+
