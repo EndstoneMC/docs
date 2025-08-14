@@ -14,7 +14,6 @@ const ExternalLink: FC<{ children: ReactNode }> = ({children}) => {
   )
 }
 
-
 const meta = {
   index: {
     title: 'Home',
@@ -66,7 +65,7 @@ const meta = {
             items: {
               reference: {
                 title: <ExternalLink>Reference</ExternalLink>,
-                href: '/reference/cpp'
+                href: '/reference/python'
               },
               examples: 'Examples',
             },
@@ -76,7 +75,7 @@ const meta = {
     }
   },
   reference: {
-    type: 'page',
+    type: 'menu',
     title: 'Reference',
     items: {
       cpp: 'C++ API',
