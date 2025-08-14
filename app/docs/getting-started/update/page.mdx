@@ -1,0 +1,97 @@
+import {Steps} from 'nextra/components'
+import Admonition from "@/components/endstone/admonition";
+import {FaWindows, FaLinux} from "react-icons/fa";
+import {File, Folder, Tree} from "@/components/magicui/file-tree";
+
+# Update Endstone
+
+## Pre-update backups
+
+Before updating, **stop the server** and make a quick backup of your world.
+
+<Tree
+  className="overflow-hidden rounded-md bg-background p-2" initialExpandedItems={["1", "2"]}
+>
+  <Folder value="1" element="bedrock_server">
+    <Folder value="2" element="worlds">
+      <Folder value="3" element="Bedrock Level">
+        <Folder value="4" element="db">
+          <File value="5">001387.db</File>
+          <File value="6">CURRENT</File>
+          <File value="7">MANIFEST-001374</File>
+        </Folder>
+        <File value="8">level.dat</File>
+        <File value="9">levelname.txt</File>
+      </Folder>
+    </Folder>
+  </Folder>
+</Tree>
+
+<Admonition type="warning">
+  If you use **C++ plugins**, some releases may require **rebuilding** against the new Endstone API.
+  Python plugins are generally unaffected. Check the **Release Notes** for any breaking changes.
+</Admonition>
+
+## Update
+
+### If you installed with uv + pip
+
+<Steps>
+
+  #### Activate your virtual environment
+
+  <Tabs defaultValue="windows">
+    <TabsList>
+      <TabsTrigger value="windows"><FaWindows/> Windows</TabsTrigger>
+      <TabsTrigger value="linux"><FaLinux/> Linux</TabsTrigger>
+    </TabsList>
+    <TabsContent value="windows">
+      ```bash copy
+      .\.venv\Scripts\activate
+      ```
+    </TabsContent>
+    <TabsContent value="linux">
+      ```bash
+      source ./.venv/bin/activate
+      ```
+    </TabsContent>
+  </Tabs>
+
+  #### Upgrade Endstone
+
+  ```powershell
+  uv pip install -U endstone
+  ```
+
+  #### Verify the version
+
+  ```bash copy
+  uv run endstone --version
+  # Extra: show installed package details
+  uv pip show endstone
+  ```
+
+  #### Start the server again
+
+  ```bash copy
+  uv run endstone
+  ```
+
+</Steps>
+
+If something goes wrong, you can roll back to a previous version:
+
+```bash copy
+uv pip install endstone==<previous_version>
+```
+
+### If you're using Docker
+
+For Docker users, follow the platform-specific update steps (pull the new image tag and recreate the container)
+on the [Run with Docker](/docs/getting-started/installation/docker) page.
+
+## Post-update checks
+
+* **Confirm plugins loaded** without errors.
+* **Join from a client** and verify basic gameplay.
+* **Scan the logs** for warnings or deprecations, and review the **Release Notes** for any follow-up actions.
