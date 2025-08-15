@@ -2,7 +2,7 @@
 title: "endstone.event"
 ---
 
-## endstone.event [#endstone.event]
+## <code className="doc-symbol doc-symbol-module"/> endstone.event [#endstone.event]
 
 **Classes:**
 
@@ -87,7 +87,7 @@ Name | Description
     </tr></tbody>
 </table>
 
-### ActorDamageEvent [#endstone.event.ActorDamageEvent]
+### <code className="doc-symbol doc-symbol-class"/> ActorDamageEvent [#endstone.event.ActorDamageEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -118,7 +118,7 @@ Called when an Actor is damaged.
     </tr></tbody>
 </table>
 
-#### damage [#endstone.event.ActorDamageEvent.damage]
+#### <code className="doc-symbol doc-symbol-attribute"/> damage [#endstone.event.ActorDamageEvent.damage]
 
 ```python
 damage: float
@@ -126,7 +126,7 @@ damage: float
 
 Gets or sets the amount of damage caused by the event
 
-#### damage_source [#endstone.event.ActorDamageEvent.damage_source]
+#### <code className="doc-symbol doc-symbol-attribute"/> damage_source [#endstone.event.ActorDamageEvent.damage_source]
 
 ```python
 damage_source: DamageSource
@@ -136,7 +136,7 @@ Gets the source of damage.
 
 </div>
 
-### ActorDeathEvent [#endstone.event.ActorDeathEvent]
+### <code className="doc-symbol doc-symbol-class"/> ActorDeathEvent [#endstone.event.ActorDeathEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -162,7 +162,7 @@ Called when an Actor dies.
     </tr></tbody>
 </table>
 
-#### damage_source [#endstone.event.ActorDeathEvent.damage_source]
+#### <code className="doc-symbol doc-symbol-attribute"/> damage_source [#endstone.event.ActorDeathEvent.damage_source]
 
 ```python
 damage_source: DamageSource
@@ -172,7 +172,7 @@ Gets the source of damage which caused the death.
 
 </div>
 
-### ActorEvent [#endstone.event.ActorEvent]
+### <code className="doc-symbol doc-symbol-class"/> ActorEvent [#endstone.event.ActorEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -198,7 +198,7 @@ Represents an Actor-related event.
     </tr></tbody>
 </table>
 
-#### actor [#endstone.event.ActorEvent.actor]
+#### <code className="doc-symbol doc-symbol-attribute"/> actor [#endstone.event.ActorEvent.actor]
 
 ```python
 actor: Actor
@@ -208,7 +208,7 @@ Returns the Actor involved in this event
 
 </div>
 
-### ActorExplodeEvent [#endstone.event.ActorExplodeEvent]
+### <code className="doc-symbol doc-symbol-class"/> ActorExplodeEvent [#endstone.event.ActorExplodeEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -239,7 +239,7 @@ Called when an Actor explodes.
     </tr></tbody>
 </table>
 
-#### block_list [#endstone.event.ActorExplodeEvent.block_list]
+#### <code className="doc-symbol doc-symbol-attribute"/> block_list [#endstone.event.ActorExplodeEvent.block_list]
 
 ```python
 block_list: list[Block]
@@ -247,7 +247,7 @@ block_list: list[Block]
 
 Gets or sets the list of blocks that would have been removed or were removed from the explosion event.
 
-#### location [#endstone.event.ActorExplodeEvent.location]
+#### <code className="doc-symbol doc-symbol-attribute"/> location [#endstone.event.ActorExplodeEvent.location]
 
 ```python
 location: Location
@@ -257,7 +257,7 @@ Returns the location where the explosion happened.
 
 </div>
 
-### ActorKnockbackEvent [#endstone.event.ActorKnockbackEvent]
+### <code className="doc-symbol doc-symbol-class"/> ActorKnockbackEvent [#endstone.event.ActorKnockbackEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -288,7 +288,7 @@ Called when a living entity receives knockback.
     </tr></tbody>
 </table>
 
-#### knockback [#endstone.event.ActorKnockbackEvent.knockback]
+#### <code className="doc-symbol doc-symbol-attribute"/> knockback [#endstone.event.ActorKnockbackEvent.knockback]
 
 ```python
 knockback: Vector
@@ -296,7 +296,7 @@ knockback: Vector
 
 Gets or sets the knockback that will be applied to the entity.
 
-#### source [#endstone.event.ActorKnockbackEvent.source]
+#### <code className="doc-symbol doc-symbol-attribute"/> source [#endstone.event.ActorKnockbackEvent.source]
 
 ```python
 source: Actor
@@ -306,7 +306,7 @@ Get the source actor that has caused knockback to the defender, if exists.
 
 </div>
 
-### ActorRemoveEvent [#endstone.event.ActorRemoveEvent]
+### <code className="doc-symbol doc-symbol-class"/> ActorRemoveEvent [#endstone.event.ActorRemoveEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -316,7 +316,7 @@ Called when an Actor is removed.
 
 </div>
 
-### ActorSpawnEvent [#endstone.event.ActorSpawnEvent]
+### <code className="doc-symbol doc-symbol-class"/> ActorSpawnEvent [#endstone.event.ActorSpawnEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -326,7 +326,7 @@ Called when an Actor is spawned into a world.
 
 </div>
 
-### ActorTeleportEvent [#endstone.event.ActorTeleportEvent]
+### <code className="doc-symbol doc-symbol-class"/> ActorTeleportEvent [#endstone.event.ActorTeleportEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -357,7 +357,7 @@ Called when a non-player entity is teleported from one location to another.
     </tr></tbody>
 </table>
 
-#### from_location [#endstone.event.ActorTeleportEvent.from_location]
+#### <code className="doc-symbol doc-symbol-attribute"/> from_location [#endstone.event.ActorTeleportEvent.from_location]
 
 ```python
 from_location: Location
@@ -365,7 +365,7 @@ from_location: Location
 
 Gets or sets the location that this actor moved from.
 
-#### to_location [#endstone.event.ActorTeleportEvent.to_location]
+#### <code className="doc-symbol doc-symbol-attribute"/> to_location [#endstone.event.ActorTeleportEvent.to_location]
 
 ```python
 to_location: Location
@@ -375,7 +375,7 @@ Gets or sets the location that this actor moved to.
 
 </div>
 
-### BlockBreakEvent [#endstone.event.BlockBreakEvent]
+### <code className="doc-symbol doc-symbol-class"/> BlockBreakEvent [#endstone.event.BlockBreakEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -401,7 +401,7 @@ Called when a block is broken by a player.
     </tr></tbody>
 </table>
 
-#### player [#endstone.event.BlockBreakEvent.player]
+#### <code className="doc-symbol doc-symbol-attribute"/> player [#endstone.event.BlockBreakEvent.player]
 
 ```python
 player: Player
@@ -411,7 +411,7 @@ Gets the Player that is breaking the block involved in this event.
 
 </div>
 
-### BlockCookEvent [#endstone.event.BlockCookEvent]
+### <code className="doc-symbol doc-symbol-class"/> BlockCookEvent [#endstone.event.BlockCookEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -442,7 +442,7 @@ Called when an ItemStack is successfully cooked in a block.
     </tr></tbody>
 </table>
 
-#### result [#endstone.event.BlockCookEvent.result]
+#### <code className="doc-symbol doc-symbol-attribute"/> result [#endstone.event.BlockCookEvent.result]
 
 ```python
 result: ItemStack
@@ -450,7 +450,7 @@ result: ItemStack
 
 Gets or sets the resultant ItemStack for this event
 
-#### source [#endstone.event.BlockCookEvent.source]
+#### <code className="doc-symbol doc-symbol-attribute"/> source [#endstone.event.BlockCookEvent.source]
 
 ```python
 source: ItemStack
@@ -460,7 +460,7 @@ Gets the smelted ItemStack for this event
 
 </div>
 
-### BlockEvent [#endstone.event.BlockEvent]
+### <code className="doc-symbol doc-symbol-class"/> BlockEvent [#endstone.event.BlockEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -486,7 +486,7 @@ Represents an Block-related event
     </tr></tbody>
 </table>
 
-#### block [#endstone.event.BlockEvent.block]
+#### <code className="doc-symbol doc-symbol-attribute"/> block [#endstone.event.BlockEvent.block]
 
 ```python
 block: Block
@@ -496,7 +496,7 @@ Gets the block involved in this event.
 
 </div>
 
-### BlockPistonEvent [#endstone.event.BlockPistonEvent]
+### <code className="doc-symbol doc-symbol-class"/> BlockPistonEvent [#endstone.event.BlockPistonEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -522,7 +522,7 @@ Called when a piston block is triggered
     </tr></tbody>
 </table>
 
-#### direction [#endstone.event.BlockPistonEvent.direction]
+#### <code className="doc-symbol doc-symbol-attribute"/> direction [#endstone.event.BlockPistonEvent.direction]
 
 ```python
 direction: BlockFace
@@ -532,7 +532,7 @@ Return the direction in which the piston will operate.
 
 </div>
 
-### BlockPistonExtendEvent [#endstone.event.BlockPistonExtendEvent]
+### <code className="doc-symbol doc-symbol-class"/> BlockPistonExtendEvent [#endstone.event.BlockPistonExtendEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -542,7 +542,7 @@ Called when a piston extends.
 
 </div>
 
-### BlockPistonRetractEvent [#endstone.event.BlockPistonRetractEvent]
+### <code className="doc-symbol doc-symbol-class"/> BlockPistonRetractEvent [#endstone.event.BlockPistonRetractEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -552,7 +552,7 @@ Called when a piston retracts.
 
 </div>
 
-### BlockPlaceEvent [#endstone.event.BlockPlaceEvent]
+### <code className="doc-symbol doc-symbol-class"/> BlockPlaceEvent [#endstone.event.BlockPlaceEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -593,7 +593,7 @@ Called when a block is placed by a player.
     </tr></tbody>
 </table>
 
-#### block_against [#endstone.event.BlockPlaceEvent.block_against]
+#### <code className="doc-symbol doc-symbol-attribute"/> block_against [#endstone.event.BlockPlaceEvent.block_against]
 
 ```python
 block_against: Block
@@ -601,7 +601,7 @@ block_against: Block
 
 Gets the block that this block was placed against
 
-#### block_placed_state [#endstone.event.BlockPlaceEvent.block_placed_state]
+#### <code className="doc-symbol doc-symbol-attribute"/> block_placed_state [#endstone.event.BlockPlaceEvent.block_placed_state]
 
 ```python
 block_placed_state: BlockState
@@ -609,7 +609,7 @@ block_placed_state: BlockState
 
 Gets the BlockState for the block which was placed.
 
-#### block_replaced [#endstone.event.BlockPlaceEvent.block_replaced]
+#### <code className="doc-symbol doc-symbol-attribute"/> block_replaced [#endstone.event.BlockPlaceEvent.block_replaced]
 
 ```python
 block_replaced: Block
@@ -617,7 +617,7 @@ block_replaced: Block
 
 Gets the block which was replaced.
 
-#### player [#endstone.event.BlockPlaceEvent.player]
+#### <code className="doc-symbol doc-symbol-attribute"/> player [#endstone.event.BlockPlaceEvent.player]
 
 ```python
 player: Player
@@ -627,7 +627,7 @@ Gets the player who placed the block involved in this event.
 
 </div>
 
-### BroadcastMessageEvent [#endstone.event.BroadcastMessageEvent]
+### <code className="doc-symbol doc-symbol-class"/> BroadcastMessageEvent [#endstone.event.BroadcastMessageEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -658,7 +658,7 @@ Event triggered for server broadcast messages such as from Server.broadcast
     </tr></tbody>
 </table>
 
-#### message [#endstone.event.BroadcastMessageEvent.message]
+#### <code className="doc-symbol doc-symbol-attribute"/> message [#endstone.event.BroadcastMessageEvent.message]
 
 ```python
 message: str | Translatable
@@ -666,7 +666,7 @@ message: str | Translatable
 
 Gets or sets the message to broadcast.
 
-#### recipients [#endstone.event.BroadcastMessageEvent.recipients]
+#### <code className="doc-symbol doc-symbol-attribute"/> recipients [#endstone.event.BroadcastMessageEvent.recipients]
 
 ```python
 recipients: set[CommandSender]
@@ -676,7 +676,7 @@ Gets a set of recipients that this broadcast message will be displayed to.
 
 </div>
 
-### Cancellable [#endstone.event.Cancellable]
+### <code className="doc-symbol doc-symbol-class"/> Cancellable [#endstone.event.Cancellable]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -721,7 +721,7 @@ Represents an event that may be cancelled by a plugin or the server.
     </tr></tbody>
 </table>
 
-#### cancel [#endstone.event.Cancellable.cancel]
+#### <code className="doc-symbol doc-symbol-method"/> cancel [#endstone.event.Cancellable.cancel]
 
 ```python
 cancel() -> None
@@ -729,7 +729,7 @@ cancel() -> None
 
 Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 
-#### cancelled [#endstone.event.Cancellable.cancelled]
+#### <code className="doc-symbol doc-symbol-attribute"/> cancelled [#endstone.event.Cancellable.cancelled]
 
 ```python
 cancelled: bool
@@ -737,7 +737,7 @@ cancelled: bool
 
 Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
 
-#### is_cancelled [#endstone.event.Cancellable.is_cancelled]
+#### <code className="doc-symbol doc-symbol-attribute"/> is_cancelled [#endstone.event.Cancellable.is_cancelled]
 
 ```python
 is_cancelled: bool
@@ -747,7 +747,7 @@ Gets or sets the cancellation state of this event. A cancelled event will not be
 
 </div>
 
-### ChunkEvent [#endstone.event.ChunkEvent]
+### <code className="doc-symbol doc-symbol-class"/> ChunkEvent [#endstone.event.ChunkEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -773,7 +773,7 @@ Represents a Chunk related event
     </tr></tbody>
 </table>
 
-#### chunk [#endstone.event.ChunkEvent.chunk]
+#### <code className="doc-symbol doc-symbol-attribute"/> chunk [#endstone.event.ChunkEvent.chunk]
 
 ```python
 chunk: Chunk
@@ -783,7 +783,7 @@ Gets the chunk being loaded/unloaded
 
 </div>
 
-### ChunkLoadEvent [#endstone.event.ChunkLoadEvent]
+### <code className="doc-symbol doc-symbol-class"/> ChunkLoadEvent [#endstone.event.ChunkLoadEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -793,7 +793,7 @@ Called when a chunk is loaded
 
 </div>
 
-### ChunkUnloadEvent [#endstone.event.ChunkUnloadEvent]
+### <code className="doc-symbol doc-symbol-class"/> ChunkUnloadEvent [#endstone.event.ChunkUnloadEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -803,7 +803,7 @@ Called when a chunk is unloaded
 
 </div>
 
-### DimensionEvent [#endstone.event.DimensionEvent]
+### <code className="doc-symbol doc-symbol-class"/> DimensionEvent [#endstone.event.DimensionEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -829,7 +829,7 @@ Represents events within a dimension
     </tr></tbody>
 </table>
 
-#### dimension [#endstone.event.DimensionEvent.dimension]
+#### <code className="doc-symbol doc-symbol-attribute"/> dimension [#endstone.event.DimensionEvent.dimension]
 
 ```python
 dimension: Dimension
@@ -839,7 +839,7 @@ Gets the dimension primarily involved with this event
 
 </div>
 
-### Event [#endstone.event.Event]
+### <code className="doc-symbol doc-symbol-class"/> Event [#endstone.event.Event]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -868,7 +868,7 @@ Represents an event.
     </tr></tbody>
 </table>
 
-#### event_name [#endstone.event.Event.event_name]
+#### <code className="doc-symbol doc-symbol-attribute"/> event_name [#endstone.event.Event.event_name]
 
 ```python
 event_name: str
@@ -876,7 +876,7 @@ event_name: str
 
 Gets a user-friendly identifier for this event.
 
-#### is_asynchronous [#endstone.event.Event.is_asynchronous]
+#### <code className="doc-symbol doc-symbol-attribute"/> is_asynchronous [#endstone.event.Event.is_asynchronous]
 
 ```python
 is_asynchronous: bool
@@ -886,7 +886,7 @@ Whether the event fires asynchronously.
 
 </div>
 
-### EventPriority [#endstone.event.EventPriority]
+### <code className="doc-symbol doc-symbol-class"/> EventPriority [#endstone.event.EventPriority]
 
 ```python
 EventPriority(value:int)
@@ -949,49 +949,49 @@ Listeners are called in following order: LOWEST -> LOW -> NORMAL -> HIGH -> HIGH
     </tr></tbody>
 </table>
 
-#### HIGH [#endstone.event.EventPriority.HIGH]
+#### <code className="doc-symbol doc-symbol-attribute"/> HIGH [#endstone.event.EventPriority.HIGH]
 
 ```python
 HIGH: EventPriority
 ```
 
-#### HIGHEST [#endstone.event.EventPriority.HIGHEST]
+#### <code className="doc-symbol doc-symbol-attribute"/> HIGHEST [#endstone.event.EventPriority.HIGHEST]
 
 ```python
 HIGHEST: EventPriority
 ```
 
-#### LOW [#endstone.event.EventPriority.LOW]
+#### <code className="doc-symbol doc-symbol-attribute"/> LOW [#endstone.event.EventPriority.LOW]
 
 ```python
 LOW: EventPriority
 ```
 
-#### LOWEST [#endstone.event.EventPriority.LOWEST]
+#### <code className="doc-symbol doc-symbol-attribute"/> LOWEST [#endstone.event.EventPriority.LOWEST]
 
 ```python
 LOWEST: EventPriority
 ```
 
-#### MONITOR [#endstone.event.EventPriority.MONITOR]
+#### <code className="doc-symbol doc-symbol-attribute"/> MONITOR [#endstone.event.EventPriority.MONITOR]
 
 ```python
 MONITOR: EventPriority
 ```
 
-#### NORMAL [#endstone.event.EventPriority.NORMAL]
+#### <code className="doc-symbol doc-symbol-attribute"/> NORMAL [#endstone.event.EventPriority.NORMAL]
 
 ```python
 NORMAL: EventPriority
 ```
 
-#### name [#endstone.event.EventPriority.name]
+#### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.event.EventPriority.name]
 
 ```python
 name: str
 ```
 
-#### value [#endstone.event.EventPriority.value]
+#### <code className="doc-symbol doc-symbol-attribute"/> value [#endstone.event.EventPriority.value]
 
 ```python
 value: int
@@ -999,7 +999,7 @@ value: int
 
 </div>
 
-### EventResult [#endstone.event.EventResult]
+### <code className="doc-symbol doc-symbol-class"/> EventResult [#endstone.event.EventResult]
 
 ```python
 EventResult(value:int)
@@ -1045,31 +1045,31 @@ EventResult(value:int)
     </tr></tbody>
 </table>
 
-#### ALLOW [#endstone.event.EventResult.ALLOW]
+#### <code className="doc-symbol doc-symbol-attribute"/> ALLOW [#endstone.event.EventResult.ALLOW]
 
 ```python
 ALLOW: EventResult
 ```
 
-#### DEFAULT [#endstone.event.EventResult.DEFAULT]
+#### <code className="doc-symbol doc-symbol-attribute"/> DEFAULT [#endstone.event.EventResult.DEFAULT]
 
 ```python
 DEFAULT: EventResult
 ```
 
-#### DENY [#endstone.event.EventResult.DENY]
+#### <code className="doc-symbol doc-symbol-attribute"/> DENY [#endstone.event.EventResult.DENY]
 
 ```python
 DENY: EventResult
 ```
 
-#### name [#endstone.event.EventResult.name]
+#### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.event.EventResult.name]
 
 ```python
 name: str
 ```
 
-#### value [#endstone.event.EventResult.value]
+#### <code className="doc-symbol doc-symbol-attribute"/> value [#endstone.event.EventResult.value]
 
 ```python
 value: int
@@ -1077,7 +1077,7 @@ value: int
 
 </div>
 
-### LeavesDecayEvent [#endstone.event.LeavesDecayEvent]
+### <code className="doc-symbol doc-symbol-class"/> LeavesDecayEvent [#endstone.event.LeavesDecayEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -1088,7 +1088,7 @@ If a Leaves Decay event is cancelled, the leaves will not decay.
 
 </div>
 
-### LevelEvent [#endstone.event.LevelEvent]
+### <code className="doc-symbol doc-symbol-class"/> LevelEvent [#endstone.event.LevelEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -1114,7 +1114,7 @@ Represents events within a level
     </tr></tbody>
 </table>
 
-#### level [#endstone.event.LevelEvent.level]
+#### <code className="doc-symbol doc-symbol-attribute"/> level [#endstone.event.LevelEvent.level]
 
 ```python
 level: Level
@@ -1124,7 +1124,7 @@ Gets the level primarily involved with this event
 
 </div>
 
-### MobEvent [#endstone.event.MobEvent]
+### <code className="doc-symbol doc-symbol-class"/> MobEvent [#endstone.event.MobEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -1150,7 +1150,7 @@ Represents an Mob-related event.
     </tr></tbody>
 </table>
 
-#### actor [#endstone.event.MobEvent.actor]
+#### <code className="doc-symbol doc-symbol-attribute"/> actor [#endstone.event.MobEvent.actor]
 
 ```python
 actor: Mob
@@ -1160,7 +1160,7 @@ Returns the Mob involved in this event
 
 </div>
 
-### PacketReceiveEvent [#endstone.event.PacketReceiveEvent]
+### <code className="doc-symbol doc-symbol-class"/> PacketReceiveEvent [#endstone.event.PacketReceiveEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -1206,7 +1206,7 @@ Called when the server receives a packet from a connected client.
     </tr></tbody>
 </table>
 
-#### address [#endstone.event.PacketReceiveEvent.address]
+#### <code className="doc-symbol doc-symbol-attribute"/> address [#endstone.event.PacketReceiveEvent.address]
 
 ```python
 address: SocketAddress
@@ -1214,7 +1214,7 @@ address: SocketAddress
 
 Gets the network address to which this packet is being sent.
 
-#### packet_id [#endstone.event.PacketReceiveEvent.packet_id]
+#### <code className="doc-symbol doc-symbol-attribute"/> packet_id [#endstone.event.PacketReceiveEvent.packet_id]
 
 ```python
 packet_id: int
@@ -1222,7 +1222,7 @@ packet_id: int
 
 Gets the ID of the packet.
 
-#### payload [#endstone.event.PacketReceiveEvent.payload]
+#### <code className="doc-symbol doc-symbol-attribute"/> payload [#endstone.event.PacketReceiveEvent.payload]
 
 ```python
 payload: bytes
@@ -1230,7 +1230,7 @@ payload: bytes
 
 Gets or sets the raw packet data **excluding** the header.
 
-#### player [#endstone.event.PacketReceiveEvent.player]
+#### <code className="doc-symbol doc-symbol-attribute"/> player [#endstone.event.PacketReceiveEvent.player]
 
 ```python
 player: Player
@@ -1239,7 +1239,7 @@ player: Player
 Gets the player involved in this event
 NOTE: This may return None if the packet is sent before the player completes the login process.
 
-#### sub_client_id [#endstone.event.PacketReceiveEvent.sub_client_id]
+#### <code className="doc-symbol doc-symbol-attribute"/> sub_client_id [#endstone.event.PacketReceiveEvent.sub_client_id]
 
 ```python
 sub_client_id: int
@@ -1249,7 +1249,7 @@ Gets the SubClient ID (0 = primary client; 1-3 = split-screen clients).
 
 </div>
 
-### PacketSendEvent [#endstone.event.PacketSendEvent]
+### <code className="doc-symbol doc-symbol-class"/> PacketSendEvent [#endstone.event.PacketSendEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -1295,7 +1295,7 @@ Called when the server sends a packet to a connected client.
     </tr></tbody>
 </table>
 
-#### address [#endstone.event.PacketSendEvent.address]
+#### <code className="doc-symbol doc-symbol-attribute"/> address [#endstone.event.PacketSendEvent.address]
 
 ```python
 address: SocketAddress
@@ -1303,7 +1303,7 @@ address: SocketAddress
 
 Gets the network address to which this packet is being sent.
 
-#### packet_id [#endstone.event.PacketSendEvent.packet_id]
+#### <code className="doc-symbol doc-symbol-attribute"/> packet_id [#endstone.event.PacketSendEvent.packet_id]
 
 ```python
 packet_id: int
@@ -1311,7 +1311,7 @@ packet_id: int
 
 Gets the ID of the packet.
 
-#### payload [#endstone.event.PacketSendEvent.payload]
+#### <code className="doc-symbol doc-symbol-attribute"/> payload [#endstone.event.PacketSendEvent.payload]
 
 ```python
 payload: bytes
@@ -1319,7 +1319,7 @@ payload: bytes
 
 Gets or sets the raw packet data **excluding** the header.
 
-#### player [#endstone.event.PacketSendEvent.player]
+#### <code className="doc-symbol doc-symbol-attribute"/> player [#endstone.event.PacketSendEvent.player]
 
 ```python
 player: Player
@@ -1328,7 +1328,7 @@ player: Player
 Gets the player involved in this event
 NOTE: This may return None if the packet is sent before the player completes the login process.
 
-#### sub_client_id [#endstone.event.PacketSendEvent.sub_client_id]
+#### <code className="doc-symbol doc-symbol-attribute"/> sub_client_id [#endstone.event.PacketSendEvent.sub_client_id]
 
 ```python
 sub_client_id: int
@@ -1338,7 +1338,7 @@ Gets the SubClient ID (0 = primary client; 1-3 = split-screen clients).
 
 </div>
 
-### PlayerBedEnterEvent [#endstone.event.PlayerBedEnterEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerBedEnterEvent [#endstone.event.PlayerBedEnterEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -1364,7 +1364,7 @@ Called when a player is almost about to enter the bed.
     </tr></tbody>
 </table>
 
-#### bed [#endstone.event.PlayerBedEnterEvent.bed]
+#### <code className="doc-symbol doc-symbol-attribute"/> bed [#endstone.event.PlayerBedEnterEvent.bed]
 
 ```python
 bed: Block
@@ -1374,7 +1374,7 @@ Returns the bed block involved in this event.
 
 </div>
 
-### PlayerBedLeaveEvent [#endstone.event.PlayerBedLeaveEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerBedLeaveEvent [#endstone.event.PlayerBedLeaveEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -1400,7 +1400,7 @@ Called when a player is leaving a bed.
     </tr></tbody>
 </table>
 
-#### bed [#endstone.event.PlayerBedLeaveEvent.bed]
+#### <code className="doc-symbol doc-symbol-attribute"/> bed [#endstone.event.PlayerBedLeaveEvent.bed]
 
 ```python
 bed: Block
@@ -1410,7 +1410,7 @@ Returns the bed block involved in this event.
 
 </div>
 
-### PlayerChatEvent [#endstone.event.PlayerChatEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerChatEvent [#endstone.event.PlayerChatEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -1436,7 +1436,7 @@ Called when a player sends a chat message.
     </tr></tbody>
 </table>
 
-#### message [#endstone.event.PlayerChatEvent.message]
+#### <code className="doc-symbol doc-symbol-attribute"/> message [#endstone.event.PlayerChatEvent.message]
 
 ```python
 message: str
@@ -1446,7 +1446,7 @@ Gets or sets the message that the player will send.
 
 </div>
 
-### PlayerCommandEvent [#endstone.event.PlayerCommandEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerCommandEvent [#endstone.event.PlayerCommandEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -1472,7 +1472,7 @@ Called whenever a player runs a command.
     </tr></tbody>
 </table>
 
-#### command [#endstone.event.PlayerCommandEvent.command]
+#### <code className="doc-symbol doc-symbol-attribute"/> command [#endstone.event.PlayerCommandEvent.command]
 
 ```python
 command: str
@@ -1482,7 +1482,7 @@ Gets or sets the command that the player will send.
 
 </div>
 
-### PlayerDeathEvent [#endstone.event.PlayerDeathEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerDeathEvent [#endstone.event.PlayerDeathEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -1508,7 +1508,7 @@ Called when a player dies
     </tr></tbody>
 </table>
 
-#### death_message [#endstone.event.PlayerDeathEvent.death_message]
+#### <code className="doc-symbol doc-symbol-attribute"/> death_message [#endstone.event.PlayerDeathEvent.death_message]
 
 ```python
 death_message: str | Translatable | None
@@ -1518,7 +1518,7 @@ Gets or sets the death message that will appear to everyone on the server.
 
 </div>
 
-### PlayerDropItemEvent [#endstone.event.PlayerDropItemEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerDropItemEvent [#endstone.event.PlayerDropItemEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -1544,7 +1544,7 @@ Called when a player drops an item from their inventory
     </tr></tbody>
 </table>
 
-#### item [#endstone.event.PlayerDropItemEvent.item]
+#### <code className="doc-symbol doc-symbol-attribute"/> item [#endstone.event.PlayerDropItemEvent.item]
 
 ```python
 item: ItemStack
@@ -1554,7 +1554,7 @@ Gets the ItemStack dropped by the player
 
 </div>
 
-### PlayerEmoteEvent [#endstone.event.PlayerEmoteEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerEmoteEvent [#endstone.event.PlayerEmoteEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -1585,7 +1585,7 @@ Called when a player uses and emote
     </tr></tbody>
 </table>
 
-#### emote_id [#endstone.event.PlayerEmoteEvent.emote_id]
+#### <code className="doc-symbol doc-symbol-attribute"/> emote_id [#endstone.event.PlayerEmoteEvent.emote_id]
 
 ```python
 emote_id: str
@@ -1593,7 +1593,7 @@ emote_id: str
 
 Gets the emote piece ID
 
-#### is_muted [#endstone.event.PlayerEmoteEvent.is_muted]
+#### <code className="doc-symbol doc-symbol-attribute"/> is_muted [#endstone.event.PlayerEmoteEvent.is_muted]
 
 ```python
 is_muted: bool
@@ -1603,7 +1603,7 @@ Gets or sets the muted state for the emote.
 
 </div>
 
-### PlayerEvent [#endstone.event.PlayerEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerEvent [#endstone.event.PlayerEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -1629,7 +1629,7 @@ Represents a player related event
     </tr></tbody>
 </table>
 
-#### player [#endstone.event.PlayerEvent.player]
+#### <code className="doc-symbol doc-symbol-attribute"/> player [#endstone.event.PlayerEvent.player]
 
 ```python
 player: Player
@@ -1639,7 +1639,7 @@ Returns the player involved in this event.
 
 </div>
 
-### PlayerGameModeChangeEvent [#endstone.event.PlayerGameModeChangeEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerGameModeChangeEvent [#endstone.event.PlayerGameModeChangeEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -1665,7 +1665,7 @@ Called when the GameMode of the player is changed.
     </tr></tbody>
 </table>
 
-#### new_game_mode [#endstone.event.PlayerGameModeChangeEvent.new_game_mode]
+#### <code className="doc-symbol doc-symbol-attribute"/> new_game_mode [#endstone.event.PlayerGameModeChangeEvent.new_game_mode]
 
 ```python
 new_game_mode: GameMode
@@ -1675,7 +1675,7 @@ Gets the GameMode the player is switched to.
 
 </div>
 
-### PlayerInteractActorEvent [#endstone.event.PlayerInteractActorEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerInteractActorEvent [#endstone.event.PlayerInteractActorEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -1701,7 +1701,7 @@ Represents an event that is called when a player right-clicks an actor.
     </tr></tbody>
 </table>
 
-#### actor [#endstone.event.PlayerInteractActorEvent.actor]
+#### <code className="doc-symbol doc-symbol-attribute"/> actor [#endstone.event.PlayerInteractActorEvent.actor]
 
 ```python
 actor: Actor
@@ -1711,7 +1711,7 @@ Gets the actor that was right-clicked by the player.
 
 </div>
 
-### PlayerInteractEvent [#endstone.event.PlayerInteractEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerInteractEvent [#endstone.event.PlayerInteractEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -1773,7 +1773,7 @@ Name | Description
     </tr></tbody>
 </table>
 
-#### Action [#endstone.event.PlayerInteractEvent.Action]
+#### <code className="doc-symbol doc-symbol-class"/> Action [#endstone.event.PlayerInteractEvent.Action]
 
 ```python
 Action(value:int)
@@ -1824,37 +1824,37 @@ Action(value:int)
     </tr></tbody>
 </table>
 
-##### LEFT_CLICK_AIR [#endstone.event.PlayerInteractEvent.Action.LEFT_CLICK_AIR]
+##### <code className="doc-symbol doc-symbol-attribute"/> LEFT_CLICK_AIR [#endstone.event.PlayerInteractEvent.Action.LEFT_CLICK_AIR]
 
 ```python
 LEFT_CLICK_AIR: PlayerInteractEvent.Action
 ```
 
-##### LEFT_CLICK_BLOCK [#endstone.event.PlayerInteractEvent.Action.LEFT_CLICK_BLOCK]
+##### <code className="doc-symbol doc-symbol-attribute"/> LEFT_CLICK_BLOCK [#endstone.event.PlayerInteractEvent.Action.LEFT_CLICK_BLOCK]
 
 ```python
 LEFT_CLICK_BLOCK: PlayerInteractEvent.Action
 ```
 
-##### RIGHT_CLICK_AIR [#endstone.event.PlayerInteractEvent.Action.RIGHT_CLICK_AIR]
+##### <code className="doc-symbol doc-symbol-attribute"/> RIGHT_CLICK_AIR [#endstone.event.PlayerInteractEvent.Action.RIGHT_CLICK_AIR]
 
 ```python
 RIGHT_CLICK_AIR: PlayerInteractEvent.Action
 ```
 
-##### RIGHT_CLICK_BLOCK [#endstone.event.PlayerInteractEvent.Action.RIGHT_CLICK_BLOCK]
+##### <code className="doc-symbol doc-symbol-attribute"/> RIGHT_CLICK_BLOCK [#endstone.event.PlayerInteractEvent.Action.RIGHT_CLICK_BLOCK]
 
 ```python
 RIGHT_CLICK_BLOCK: PlayerInteractEvent.Action
 ```
 
-##### name [#endstone.event.PlayerInteractEvent.Action.name]
+##### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.event.PlayerInteractEvent.Action.name]
 
 ```python
 name: str
 ```
 
-##### value [#endstone.event.PlayerInteractEvent.Action.value]
+##### <code className="doc-symbol doc-symbol-attribute"/> value [#endstone.event.PlayerInteractEvent.Action.value]
 
 ```python
 value: int
@@ -1862,7 +1862,7 @@ value: int
 
 </div>
 
-#### action [#endstone.event.PlayerInteractEvent.action]
+#### <code className="doc-symbol doc-symbol-attribute"/> action [#endstone.event.PlayerInteractEvent.action]
 
 ```python
 action: PlayerInteractEvent.Action
@@ -1870,7 +1870,7 @@ action: PlayerInteractEvent.Action
 
 Returns the action type of interaction
 
-#### block [#endstone.event.PlayerInteractEvent.block]
+#### <code className="doc-symbol doc-symbol-attribute"/> block [#endstone.event.PlayerInteractEvent.block]
 
 ```python
 block: Block
@@ -1878,7 +1878,7 @@ block: Block
 
 Returns the clicked block
 
-#### block_face [#endstone.event.PlayerInteractEvent.block_face]
+#### <code className="doc-symbol doc-symbol-attribute"/> block_face [#endstone.event.PlayerInteractEvent.block_face]
 
 ```python
 block_face: BlockFace
@@ -1886,7 +1886,7 @@ block_face: BlockFace
 
 Returns the face of the block that was clicked
 
-#### clicked_position [#endstone.event.PlayerInteractEvent.clicked_position]
+#### <code className="doc-symbol doc-symbol-attribute"/> clicked_position [#endstone.event.PlayerInteractEvent.clicked_position]
 
 ```python
 clicked_position: Vector | None
@@ -1894,7 +1894,7 @@ clicked_position: Vector | None
 
 Gets the exact position on the block the player interacted with.
 
-#### has_block [#endstone.event.PlayerInteractEvent.has_block]
+#### <code className="doc-symbol doc-symbol-attribute"/> has_block [#endstone.event.PlayerInteractEvent.has_block]
 
 ```python
 has_block: bool
@@ -1902,7 +1902,7 @@ has_block: bool
 
 Check if this event involved a block
 
-#### has_item [#endstone.event.PlayerInteractEvent.has_item]
+#### <code className="doc-symbol doc-symbol-attribute"/> has_item [#endstone.event.PlayerInteractEvent.has_item]
 
 ```python
 has_item: bool
@@ -1910,7 +1910,7 @@ has_item: bool
 
 Check if this event involved an item
 
-#### item [#endstone.event.PlayerInteractEvent.item]
+#### <code className="doc-symbol doc-symbol-attribute"/> item [#endstone.event.PlayerInteractEvent.item]
 
 ```python
 item: ItemStack
@@ -1920,7 +1920,7 @@ Returns the item in hand represented by this event
 
 </div>
 
-### PlayerItemConsumeEvent [#endstone.event.PlayerItemConsumeEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerItemConsumeEvent [#endstone.event.PlayerItemConsumeEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -1951,7 +1951,7 @@ Called when a player is finishing consuming an item (food, potion, milk bucket).
     </tr></tbody>
 </table>
 
-#### hand [#endstone.event.PlayerItemConsumeEvent.hand]
+#### <code className="doc-symbol doc-symbol-attribute"/> hand [#endstone.event.PlayerItemConsumeEvent.hand]
 
 ```python
 hand: EquipmentSlot
@@ -1959,7 +1959,7 @@ hand: EquipmentSlot
 
 Get the hand used to consume the item.
 
-#### item [#endstone.event.PlayerItemConsumeEvent.item]
+#### <code className="doc-symbol doc-symbol-attribute"/> item [#endstone.event.PlayerItemConsumeEvent.item]
 
 ```python
 item: ItemStack
@@ -1969,7 +1969,7 @@ Gets or sets the item that is being consumed.
 
 </div>
 
-### PlayerItemHeldEvent [#endstone.event.PlayerItemHeldEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerItemHeldEvent [#endstone.event.PlayerItemHeldEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -2000,7 +2000,7 @@ Called when a player changes their currently held item.
     </tr></tbody>
 </table>
 
-#### new_slot [#endstone.event.PlayerItemHeldEvent.new_slot]
+#### <code className="doc-symbol doc-symbol-attribute"/> new_slot [#endstone.event.PlayerItemHeldEvent.new_slot]
 
 ```python
 new_slot: int
@@ -2008,7 +2008,7 @@ new_slot: int
 
 Gets the new held slot index
 
-#### previous_slot [#endstone.event.PlayerItemHeldEvent.previous_slot]
+#### <code className="doc-symbol doc-symbol-attribute"/> previous_slot [#endstone.event.PlayerItemHeldEvent.previous_slot]
 
 ```python
 previous_slot: int
@@ -2018,7 +2018,7 @@ Gets the previous held slot index.
 
 </div>
 
-### PlayerJoinEvent [#endstone.event.PlayerJoinEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerJoinEvent [#endstone.event.PlayerJoinEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -2044,7 +2044,7 @@ Called when a player joins a server
     </tr></tbody>
 </table>
 
-#### join_message [#endstone.event.PlayerJoinEvent.join_message]
+#### <code className="doc-symbol doc-symbol-attribute"/> join_message [#endstone.event.PlayerJoinEvent.join_message]
 
 ```python
 join_message: str | Translatable | None
@@ -2054,7 +2054,7 @@ Gets or sets the join message to send to all online players.
 
 </div>
 
-### PlayerJumpEvent [#endstone.event.PlayerJumpEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerJumpEvent [#endstone.event.PlayerJumpEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -2064,7 +2064,7 @@ Called when a player jumps.
 
 </div>
 
-### PlayerKickEvent [#endstone.event.PlayerKickEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerKickEvent [#endstone.event.PlayerKickEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -2090,7 +2090,7 @@ Called when a player gets kicked from the server
     </tr></tbody>
 </table>
 
-#### reason [#endstone.event.PlayerKickEvent.reason]
+#### <code className="doc-symbol doc-symbol-attribute"/> reason [#endstone.event.PlayerKickEvent.reason]
 
 ```python
 reason: str
@@ -2100,7 +2100,7 @@ Gets or sets the reason why the player is getting kicked
 
 </div>
 
-### PlayerLoginEvent [#endstone.event.PlayerLoginEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerLoginEvent [#endstone.event.PlayerLoginEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -2126,7 +2126,7 @@ Called when a player attempts to login in.
     </tr></tbody>
 </table>
 
-#### kick_message [#endstone.event.PlayerLoginEvent.kick_message]
+#### <code className="doc-symbol doc-symbol-attribute"/> kick_message [#endstone.event.PlayerLoginEvent.kick_message]
 
 ```python
 kick_message: str
@@ -2136,7 +2136,7 @@ Gets or sets kick message to display if event is cancelled
 
 </div>
 
-### PlayerMoveEvent [#endstone.event.PlayerMoveEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerMoveEvent [#endstone.event.PlayerMoveEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -2167,7 +2167,7 @@ Called when a player moves.
     </tr></tbody>
 </table>
 
-#### from_location [#endstone.event.PlayerMoveEvent.from_location]
+#### <code className="doc-symbol doc-symbol-attribute"/> from_location [#endstone.event.PlayerMoveEvent.from_location]
 
 ```python
 from_location: Location
@@ -2175,7 +2175,7 @@ from_location: Location
 
 Gets or sets the location that this player moved from.
 
-#### to_location [#endstone.event.PlayerMoveEvent.to_location]
+#### <code className="doc-symbol doc-symbol-attribute"/> to_location [#endstone.event.PlayerMoveEvent.to_location]
 
 ```python
 to_location: Location
@@ -2185,7 +2185,7 @@ Gets or sets the location that this player moved to.
 
 </div>
 
-### PlayerPickupItemEvent [#endstone.event.PlayerPickupItemEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerPickupItemEvent [#endstone.event.PlayerPickupItemEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -2211,7 +2211,7 @@ Called when a player picks an item up from the ground.
     </tr></tbody>
 </table>
 
-#### item [#endstone.event.PlayerPickupItemEvent.item]
+#### <code className="doc-symbol doc-symbol-attribute"/> item [#endstone.event.PlayerPickupItemEvent.item]
 
 ```python
 item: Item
@@ -2221,7 +2221,7 @@ Gets the Item picked up by the entity.
 
 </div>
 
-### PlayerQuitEvent [#endstone.event.PlayerQuitEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerQuitEvent [#endstone.event.PlayerQuitEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -2247,7 +2247,7 @@ Called when a player leaves a server.
     </tr></tbody>
 </table>
 
-#### quit_message [#endstone.event.PlayerQuitEvent.quit_message]
+#### <code className="doc-symbol doc-symbol-attribute"/> quit_message [#endstone.event.PlayerQuitEvent.quit_message]
 
 ```python
 quit_message: str | Translatable | None
@@ -2257,7 +2257,7 @@ Gets or sets the quit message to send to all online players.
 
 </div>
 
-### PlayerRespawnEvent [#endstone.event.PlayerRespawnEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerRespawnEvent [#endstone.event.PlayerRespawnEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -2267,7 +2267,7 @@ Called when a player respawns.
 
 </div>
 
-### PlayerSkinChangeEvent [#endstone.event.PlayerSkinChangeEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerSkinChangeEvent [#endstone.event.PlayerSkinChangeEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -2298,7 +2298,7 @@ Called when a player changes their skin.
     </tr></tbody>
 </table>
 
-#### new_skin [#endstone.event.PlayerSkinChangeEvent.new_skin]
+#### <code className="doc-symbol doc-symbol-attribute"/> new_skin [#endstone.event.PlayerSkinChangeEvent.new_skin]
 
 ```python
 new_skin: Skin
@@ -2306,7 +2306,7 @@ new_skin: Skin
 
 Gets the player's new skin.
 
-#### skin_change_message [#endstone.event.PlayerSkinChangeEvent.skin_change_message]
+#### <code className="doc-symbol doc-symbol-attribute"/> skin_change_message [#endstone.event.PlayerSkinChangeEvent.skin_change_message]
 
 ```python
 skin_change_message: str | Translatable | None
@@ -2316,7 +2316,7 @@ Gets or sets the message to send to all online players for this skin change.
 
 </div>
 
-### PlayerTeleportEvent [#endstone.event.PlayerTeleportEvent]
+### <code className="doc-symbol doc-symbol-class"/> PlayerTeleportEvent [#endstone.event.PlayerTeleportEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -2326,7 +2326,7 @@ Called when a player is teleported from one location to another.
 
 </div>
 
-### PluginDisableEvent [#endstone.event.PluginDisableEvent]
+### <code className="doc-symbol doc-symbol-class"/> PluginDisableEvent [#endstone.event.PluginDisableEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -2352,7 +2352,7 @@ Called when a plugin is disabled.
     </tr></tbody>
 </table>
 
-#### plugin [#endstone.event.PluginDisableEvent.plugin]
+#### <code className="doc-symbol doc-symbol-attribute"/> plugin [#endstone.event.PluginDisableEvent.plugin]
 
 ```python
 plugin: Plugin
@@ -2360,7 +2360,7 @@ plugin: Plugin
 
 </div>
 
-### PluginEnableEvent [#endstone.event.PluginEnableEvent]
+### <code className="doc-symbol doc-symbol-class"/> PluginEnableEvent [#endstone.event.PluginEnableEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -2386,7 +2386,7 @@ Called when a plugin is enabled.
     </tr></tbody>
 </table>
 
-#### plugin [#endstone.event.PluginEnableEvent.plugin]
+#### <code className="doc-symbol doc-symbol-attribute"/> plugin [#endstone.event.PluginEnableEvent.plugin]
 
 ```python
 plugin: Plugin
@@ -2394,7 +2394,7 @@ plugin: Plugin
 
 </div>
 
-### ScriptMessageEvent [#endstone.event.ScriptMessageEvent]
+### <code className="doc-symbol doc-symbol-class"/> ScriptMessageEvent [#endstone.event.ScriptMessageEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -2430,7 +2430,7 @@ Called when a message is sent by `/scriptevent` command
     </tr></tbody>
 </table>
 
-#### message [#endstone.event.ScriptMessageEvent.message]
+#### <code className="doc-symbol doc-symbol-attribute"/> message [#endstone.event.ScriptMessageEvent.message]
 
 ```python
 message: str
@@ -2438,7 +2438,7 @@ message: str
 
 Get the message to send.
 
-#### message_id [#endstone.event.ScriptMessageEvent.message_id]
+#### <code className="doc-symbol doc-symbol-attribute"/> message_id [#endstone.event.ScriptMessageEvent.message_id]
 
 ```python
 message_id: str
@@ -2446,7 +2446,7 @@ message_id: str
 
 Get the message id to send.
 
-#### sender [#endstone.event.ScriptMessageEvent.sender]
+#### <code className="doc-symbol doc-symbol-attribute"/> sender [#endstone.event.ScriptMessageEvent.sender]
 
 ```python
 sender: CommandSender
@@ -2456,7 +2456,7 @@ Gets the command sender who initiated the command.
 
 </div>
 
-### ServerCommandEvent [#endstone.event.ServerCommandEvent]
+### <code className="doc-symbol doc-symbol-class"/> ServerCommandEvent [#endstone.event.ServerCommandEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -2487,7 +2487,7 @@ Called when the console runs a command, early in the process.
     </tr></tbody>
 </table>
 
-#### command [#endstone.event.ServerCommandEvent.command]
+#### <code className="doc-symbol doc-symbol-attribute"/> command [#endstone.event.ServerCommandEvent.command]
 
 ```python
 command: str
@@ -2495,7 +2495,7 @@ command: str
 
 Gets or sets the command that the server will execute
 
-#### sender [#endstone.event.ServerCommandEvent.sender]
+#### <code className="doc-symbol doc-symbol-attribute"/> sender [#endstone.event.ServerCommandEvent.sender]
 
 ```python
 sender: CommandSender
@@ -2505,7 +2505,7 @@ Get the command sender.
 
 </div>
 
-### ServerEvent [#endstone.event.ServerEvent]
+### <code className="doc-symbol doc-symbol-class"/> ServerEvent [#endstone.event.ServerEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -2515,7 +2515,7 @@ Represents a server-related event
 
 </div>
 
-### ServerListPingEvent [#endstone.event.ServerListPingEvent]
+### <code className="doc-symbol doc-symbol-class"/> ServerListPingEvent [#endstone.event.ServerListPingEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -2596,7 +2596,7 @@ Called when a server ping is coming in.
     </tr></tbody>
 </table>
 
-#### game_mode [#endstone.event.ServerListPingEvent.game_mode]
+#### <code className="doc-symbol doc-symbol-attribute"/> game_mode [#endstone.event.ServerListPingEvent.game_mode]
 
 ```python
 game_mode: GameMode
@@ -2604,7 +2604,7 @@ game_mode: GameMode
 
 Gets or sets the current game mode.
 
-#### level_name [#endstone.event.ServerListPingEvent.level_name]
+#### <code className="doc-symbol doc-symbol-attribute"/> level_name [#endstone.event.ServerListPingEvent.level_name]
 
 ```python
 level_name: str
@@ -2612,7 +2612,7 @@ level_name: str
 
 Gets or sets the level name.
 
-#### local_port [#endstone.event.ServerListPingEvent.local_port]
+#### <code className="doc-symbol doc-symbol-attribute"/> local_port [#endstone.event.ServerListPingEvent.local_port]
 
 ```python
 local_port: int
@@ -2620,7 +2620,7 @@ local_port: int
 
 Get or set the local port of the server.
 
-#### local_port_v6 [#endstone.event.ServerListPingEvent.local_port_v6]
+#### <code className="doc-symbol doc-symbol-attribute"/> local_port_v6 [#endstone.event.ServerListPingEvent.local_port_v6]
 
 ```python
 local_port_v6: int
@@ -2628,7 +2628,7 @@ local_port_v6: int
 
 Get or set the local port of the server for IPv6 support
 
-#### max_players [#endstone.event.ServerListPingEvent.max_players]
+#### <code className="doc-symbol doc-symbol-attribute"/> max_players [#endstone.event.ServerListPingEvent.max_players]
 
 ```python
 max_players: int
@@ -2636,7 +2636,7 @@ max_players: int
 
 Gets or sets the maximum number of players allowed.
 
-#### minecraft_version_network [#endstone.event.ServerListPingEvent.minecraft_version_network]
+#### <code className="doc-symbol doc-symbol-attribute"/> minecraft_version_network [#endstone.event.ServerListPingEvent.minecraft_version_network]
 
 ```python
 minecraft_version_network: str
@@ -2644,7 +2644,7 @@ minecraft_version_network: str
 
 Gets or sets the network version of Minecraft that is supported by this server
 
-#### motd [#endstone.event.ServerListPingEvent.motd]
+#### <code className="doc-symbol doc-symbol-attribute"/> motd [#endstone.event.ServerListPingEvent.motd]
 
 ```python
 motd: str
@@ -2652,7 +2652,7 @@ motd: str
 
 Gets or sets the message of the day message.
 
-#### network_protocol_version [#endstone.event.ServerListPingEvent.network_protocol_version]
+#### <code className="doc-symbol doc-symbol-attribute"/> network_protocol_version [#endstone.event.ServerListPingEvent.network_protocol_version]
 
 ```python
 network_protocol_version: int
@@ -2660,7 +2660,7 @@ network_protocol_version: int
 
 Get the network protocol version of this server
 
-#### num_players [#endstone.event.ServerListPingEvent.num_players]
+#### <code className="doc-symbol doc-symbol-attribute"/> num_players [#endstone.event.ServerListPingEvent.num_players]
 
 ```python
 num_players: int
@@ -2668,7 +2668,7 @@ num_players: int
 
 Gets or sets the number of players online.
 
-#### remote_host [#endstone.event.ServerListPingEvent.remote_host]
+#### <code className="doc-symbol doc-symbol-attribute"/> remote_host [#endstone.event.ServerListPingEvent.remote_host]
 
 ```python
 remote_host: str
@@ -2676,7 +2676,7 @@ remote_host: str
 
 Get the host the ping is coming from.
 
-#### remote_port [#endstone.event.ServerListPingEvent.remote_port]
+#### <code className="doc-symbol doc-symbol-attribute"/> remote_port [#endstone.event.ServerListPingEvent.remote_port]
 
 ```python
 remote_port: int
@@ -2684,7 +2684,7 @@ remote_port: int
 
 Get the port the ping is coming from.
 
-#### server_guid [#endstone.event.ServerListPingEvent.server_guid]
+#### <code className="doc-symbol doc-symbol-attribute"/> server_guid [#endstone.event.ServerListPingEvent.server_guid]
 
 ```python
 server_guid: str
@@ -2694,7 +2694,7 @@ Get or set the unique identifier of the server.
 
 </div>
 
-### ServerLoadEvent [#endstone.event.ServerLoadEvent]
+### <code className="doc-symbol doc-symbol-class"/> ServerLoadEvent [#endstone.event.ServerLoadEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -2731,7 +2731,7 @@ Name | Description
     </tr></tbody>
 </table>
 
-#### LoadType [#endstone.event.ServerLoadEvent.LoadType]
+#### <code className="doc-symbol doc-symbol-class"/> LoadType [#endstone.event.ServerLoadEvent.LoadType]
 
 ```python
 LoadType(value:int)
@@ -2767,19 +2767,19 @@ LoadType(value:int)
     </tr></tbody>
 </table>
 
-##### STARTUP [#endstone.event.ServerLoadEvent.LoadType.STARTUP]
+##### <code className="doc-symbol doc-symbol-attribute"/> STARTUP [#endstone.event.ServerLoadEvent.LoadType.STARTUP]
 
 ```python
 STARTUP: ServerLoadEvent.LoadType
 ```
 
-##### name [#endstone.event.ServerLoadEvent.LoadType.name]
+##### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.event.ServerLoadEvent.LoadType.name]
 
 ```python
 name: str
 ```
 
-##### value [#endstone.event.ServerLoadEvent.LoadType.value]
+##### <code className="doc-symbol doc-symbol-attribute"/> value [#endstone.event.ServerLoadEvent.LoadType.value]
 
 ```python
 value: int
@@ -2787,13 +2787,13 @@ value: int
 
 </div>
 
-#### STARTUP [#endstone.event.ServerLoadEvent.STARTUP]
+#### <code className="doc-symbol doc-symbol-attribute"/> STARTUP [#endstone.event.ServerLoadEvent.STARTUP]
 
 ```python
 STARTUP: ServerLoadEvent.LoadType
 ```
 
-#### type [#endstone.event.ServerLoadEvent.type]
+#### <code className="doc-symbol doc-symbol-attribute"/> type [#endstone.event.ServerLoadEvent.type]
 
 ```python
 type: ServerLoadEvent.LoadType
@@ -2801,7 +2801,7 @@ type: ServerLoadEvent.LoadType
 
 </div>
 
-### ThunderChangeEvent [#endstone.event.ThunderChangeEvent]
+### <code className="doc-symbol doc-symbol-class"/> ThunderChangeEvent [#endstone.event.ThunderChangeEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -2827,7 +2827,7 @@ Called when the thunder state in a world is changing.
     </tr></tbody>
 </table>
 
-#### to_thunder_state [#endstone.event.ThunderChangeEvent.to_thunder_state]
+#### <code className="doc-symbol doc-symbol-attribute"/> to_thunder_state [#endstone.event.ThunderChangeEvent.to_thunder_state]
 
 ```python
 to_thunder_state: bool
@@ -2837,7 +2837,7 @@ Gets the state of thunder that the world is being set to
 
 </div>
 
-### WeatherChangeEvent [#endstone.event.WeatherChangeEvent]
+### <code className="doc-symbol doc-symbol-class"/> WeatherChangeEvent [#endstone.event.WeatherChangeEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -2863,7 +2863,7 @@ Called when the weather (rain) state in a world is changing.
     </tr></tbody>
 </table>
 
-#### to_weather_state [#endstone.event.WeatherChangeEvent.to_weather_state]
+#### <code className="doc-symbol doc-symbol-attribute"/> to_weather_state [#endstone.event.WeatherChangeEvent.to_weather_state]
 
 ```python
 to_weather_state: bool
@@ -2873,7 +2873,7 @@ Gets the state of weather that the world is being set to
 
 </div>
 
-### WeatherEvent [#endstone.event.WeatherEvent]
+### <code className="doc-symbol doc-symbol-class"/> WeatherEvent [#endstone.event.WeatherEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -2899,7 +2899,7 @@ Represents a weather-related event
     </tr></tbody>
 </table>
 
-#### level [#endstone.event.WeatherEvent.level]
+#### <code className="doc-symbol doc-symbol-attribute"/> level [#endstone.event.WeatherEvent.level]
 
 ```python
 level: Level
@@ -2909,7 +2909,7 @@ Returns the Level where this event is occurring
 
 </div>
 
-### event_handler [#endstone.event.event_handler]
+### <code className="doc-symbol doc-symbol-method"/> event_handler [#endstone.event.event_handler]
 
 ```python
 event_handler(

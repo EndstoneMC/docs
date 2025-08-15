@@ -2,7 +2,7 @@
 title: "endstone.scoreboard"
 ---
 
-## endstone.scoreboard [#endstone.scoreboard]
+## <code className="doc-symbol doc-symbol-module"/> endstone.scoreboard [#endstone.scoreboard]
 
 **Classes:**
 
@@ -15,7 +15,7 @@ Name | Description
 [`Score`](#endstone.scoreboard.Score) | Represents a score for an objective on a scoreboard.
 [`Scoreboard`](#endstone.scoreboard.Scoreboard) | Represents a scoreboard
 
-### Criteria [#endstone.scoreboard.Criteria]
+### <code className="doc-symbol doc-symbol-class"/> Criteria [#endstone.scoreboard.Criteria]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -60,13 +60,13 @@ Name | Description
     </tr></tbody>
 </table>
 
-#### DUMMY [#endstone.scoreboard.Criteria.DUMMY]
+#### <code className="doc-symbol doc-symbol-attribute"/> DUMMY [#endstone.scoreboard.Criteria.DUMMY]
 
 ```python
 DUMMY: Criteria.Type
 ```
 
-#### Type [#endstone.scoreboard.Criteria.Type]
+#### <code className="doc-symbol doc-symbol-class"/> Type [#endstone.scoreboard.Criteria.Type]
 
 ```python
 Type(value:int)
@@ -104,19 +104,19 @@ Represents a scoreboard criteria.
     </tr></tbody>
 </table>
 
-##### DUMMY [#endstone.scoreboard.Criteria.Type.DUMMY]
+##### <code className="doc-symbol doc-symbol-attribute"/> DUMMY [#endstone.scoreboard.Criteria.Type.DUMMY]
 
 ```python
 DUMMY: Criteria.Type
 ```
 
-##### name [#endstone.scoreboard.Criteria.Type.name]
+##### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.scoreboard.Criteria.Type.name]
 
 ```python
 name: str
 ```
 
-##### value [#endstone.scoreboard.Criteria.Type.value]
+##### <code className="doc-symbol doc-symbol-attribute"/> value [#endstone.scoreboard.Criteria.Type.value]
 
 ```python
 value: int
@@ -124,19 +124,19 @@ value: int
 
 </div>
 
-#### default_render_type [#endstone.scoreboard.Criteria.default_render_type]
+#### <code className="doc-symbol doc-symbol-attribute"/> default_render_type [#endstone.scoreboard.Criteria.default_render_type]
 
 ```python
 default_render_type: RenderType
 ```
 
-#### is_read_only [#endstone.scoreboard.Criteria.is_read_only]
+#### <code className="doc-symbol doc-symbol-attribute"/> is_read_only [#endstone.scoreboard.Criteria.is_read_only]
 
 ```python
 is_read_only: bool
 ```
 
-#### name [#endstone.scoreboard.Criteria.name]
+#### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.scoreboard.Criteria.name]
 
 ```python
 name: str
@@ -144,7 +144,7 @@ name: str
 
 </div>
 
-### DisplaySlot [#endstone.scoreboard.DisplaySlot]
+### <code className="doc-symbol doc-symbol-class"/> DisplaySlot [#endstone.scoreboard.DisplaySlot]
 
 ```python
 DisplaySlot(value:int)
@@ -192,31 +192,31 @@ Locations for displaying objectives to the player
     </tr></tbody>
 </table>
 
-#### BELOW_NAME [#endstone.scoreboard.DisplaySlot.BELOW_NAME]
+#### <code className="doc-symbol doc-symbol-attribute"/> BELOW_NAME [#endstone.scoreboard.DisplaySlot.BELOW_NAME]
 
 ```python
 BELOW_NAME: DisplaySlot
 ```
 
-#### PLAYER_LIST [#endstone.scoreboard.DisplaySlot.PLAYER_LIST]
+#### <code className="doc-symbol doc-symbol-attribute"/> PLAYER_LIST [#endstone.scoreboard.DisplaySlot.PLAYER_LIST]
 
 ```python
 PLAYER_LIST: DisplaySlot
 ```
 
-#### SIDE_BAR [#endstone.scoreboard.DisplaySlot.SIDE_BAR]
+#### <code className="doc-symbol doc-symbol-attribute"/> SIDE_BAR [#endstone.scoreboard.DisplaySlot.SIDE_BAR]
 
 ```python
 SIDE_BAR: DisplaySlot
 ```
 
-#### name [#endstone.scoreboard.DisplaySlot.name]
+#### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.scoreboard.DisplaySlot.name]
 
 ```python
 name: str
 ```
 
-#### value [#endstone.scoreboard.DisplaySlot.value]
+#### <code className="doc-symbol doc-symbol-attribute"/> value [#endstone.scoreboard.DisplaySlot.value]
 
 ```python
 value: int
@@ -224,7 +224,7 @@ value: int
 
 </div>
 
-### Objective [#endstone.scoreboard.Objective]
+### <code className="doc-symbol doc-symbol-class"/> Objective [#endstone.scoreboard.Objective]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -312,7 +312,7 @@ Represents an objective on a scoreboard that can show scores specific to entries
     </tr></tbody>
 </table>
 
-#### criteria [#endstone.scoreboard.Objective.criteria]
+#### <code className="doc-symbol doc-symbol-attribute"/> criteria [#endstone.scoreboard.Objective.criteria]
 
 ```python
 criteria: Criteria
@@ -320,7 +320,7 @@ criteria: Criteria
 
 Gets the criteria this objective tracks
 
-#### display_name [#endstone.scoreboard.Objective.display_name]
+#### <code className="doc-symbol doc-symbol-attribute"/> display_name [#endstone.scoreboard.Objective.display_name]
 
 ```python
 display_name: str
@@ -328,7 +328,7 @@ display_name: str
 
 Gets or sets the name displayed to players for this objective
 
-#### display_slot [#endstone.scoreboard.Objective.display_slot]
+#### <code className="doc-symbol doc-symbol-attribute"/> display_slot [#endstone.scoreboard.Objective.display_slot]
 
 ```python
 display_slot: DisplaySlot | None
@@ -336,7 +336,7 @@ display_slot: DisplaySlot | None
 
 Gets or sets the display slot this objective is displayed at
 
-#### get_score [#endstone.scoreboard.Objective.get_score]
+#### <code className="doc-symbol doc-symbol-method"/> get_score [#endstone.scoreboard.Objective.get_score]
 
 ```python
 get_score(entry:Player | Actor | str) -> Score
@@ -344,7 +344,7 @@ get_score(entry:Player | Actor | str) -> Score
 
 Gets an entry's Score for this objective
 
-#### is_displayed [#endstone.scoreboard.Objective.is_displayed]
+#### <code className="doc-symbol doc-symbol-attribute"/> is_displayed [#endstone.scoreboard.Objective.is_displayed]
 
 ```python
 is_displayed: bool
@@ -352,7 +352,7 @@ is_displayed: bool
 
 Gets if the objective is currently displayed in a slot.
 
-#### is_modifiable [#endstone.scoreboard.Objective.is_modifiable]
+#### <code className="doc-symbol doc-symbol-attribute"/> is_modifiable [#endstone.scoreboard.Objective.is_modifiable]
 
 ```python
 is_modifiable: bool
@@ -360,7 +360,7 @@ is_modifiable: bool
 
 Gets if the objective's scores can be modified directly by a plugin
 
-#### name [#endstone.scoreboard.Objective.name]
+#### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.scoreboard.Objective.name]
 
 ```python
 name: str
@@ -368,7 +368,7 @@ name: str
 
 Gets the name of this Objective
 
-#### render_type [#endstone.scoreboard.Objective.render_type]
+#### <code className="doc-symbol doc-symbol-attribute"/> render_type [#endstone.scoreboard.Objective.render_type]
 
 ```python
 render_type: RenderType
@@ -376,7 +376,7 @@ render_type: RenderType
 
 Gets the manner in which this objective will be rendered.
 
-#### scoreboard [#endstone.scoreboard.Objective.scoreboard]
+#### <code className="doc-symbol doc-symbol-attribute"/> scoreboard [#endstone.scoreboard.Objective.scoreboard]
 
 ```python
 scoreboard: Scoreboard
@@ -384,7 +384,7 @@ scoreboard: Scoreboard
 
 Gets the scoreboard to which this objective is attached
 
-#### set_display [#endstone.scoreboard.Objective.set_display]
+#### <code className="doc-symbol doc-symbol-method"/> set_display [#endstone.scoreboard.Objective.set_display]
 
 ```python
 set_display(
@@ -394,7 +394,7 @@ set_display(
 
 Sets the display slot and sort order for this objective. This will remove it from any other display slot.
 
-#### sort_order [#endstone.scoreboard.Objective.sort_order]
+#### <code className="doc-symbol doc-symbol-attribute"/> sort_order [#endstone.scoreboard.Objective.sort_order]
 
 ```python
 sort_order: ObjectiveSortOrder | None
@@ -402,7 +402,7 @@ sort_order: ObjectiveSortOrder | None
 
 Gets or sets the sort order for this objective
 
-#### unregister [#endstone.scoreboard.Objective.unregister]
+#### <code className="doc-symbol doc-symbol-method"/> unregister [#endstone.scoreboard.Objective.unregister]
 
 ```python
 unregister() -> None
@@ -412,7 +412,7 @@ Unregisters this objective from the associated Scoreboard.
 
 </div>
 
-### ObjectiveSortOrder [#endstone.scoreboard.ObjectiveSortOrder]
+### <code className="doc-symbol doc-symbol-class"/> ObjectiveSortOrder [#endstone.scoreboard.ObjectiveSortOrder]
 
 ```python
 ObjectiveSortOrder(value:int)
@@ -455,25 +455,25 @@ Represents the sort order of objectives on a DisplaySlot.
     </tr></tbody>
 </table>
 
-#### ASCENDING [#endstone.scoreboard.ObjectiveSortOrder.ASCENDING]
+#### <code className="doc-symbol doc-symbol-attribute"/> ASCENDING [#endstone.scoreboard.ObjectiveSortOrder.ASCENDING]
 
 ```python
 ASCENDING: ObjectiveSortOrder
 ```
 
-#### DESCENDING [#endstone.scoreboard.ObjectiveSortOrder.DESCENDING]
+#### <code className="doc-symbol doc-symbol-attribute"/> DESCENDING [#endstone.scoreboard.ObjectiveSortOrder.DESCENDING]
 
 ```python
 DESCENDING: ObjectiveSortOrder
 ```
 
-#### name [#endstone.scoreboard.ObjectiveSortOrder.name]
+#### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.scoreboard.ObjectiveSortOrder.name]
 
 ```python
 name: str
 ```
 
-#### value [#endstone.scoreboard.ObjectiveSortOrder.value]
+#### <code className="doc-symbol doc-symbol-attribute"/> value [#endstone.scoreboard.ObjectiveSortOrder.value]
 
 ```python
 value: int
@@ -481,7 +481,7 @@ value: int
 
 </div>
 
-### Score [#endstone.scoreboard.Score]
+### <code className="doc-symbol doc-symbol-class"/> Score [#endstone.scoreboard.Score]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -525,7 +525,7 @@ Represents a score for an objective on a scoreboard.
     </tr></tbody>
 </table>
 
-#### entry [#endstone.scoreboard.Score.entry]
+#### <code className="doc-symbol doc-symbol-attribute"/> entry [#endstone.scoreboard.Score.entry]
 
 ```python
 entry: Player | Actor | str
@@ -533,7 +533,7 @@ entry: Player | Actor | str
 
 Gets the entry being tracked by this Score
 
-#### is_score_set [#endstone.scoreboard.Score.is_score_set]
+#### <code className="doc-symbol doc-symbol-attribute"/> is_score_set [#endstone.scoreboard.Score.is_score_set]
 
 ```python
 is_score_set: bool
@@ -541,7 +541,7 @@ is_score_set: bool
 
 Shows if this score has been set at any point in time.
 
-#### objective [#endstone.scoreboard.Score.objective]
+#### <code className="doc-symbol doc-symbol-attribute"/> objective [#endstone.scoreboard.Score.objective]
 
 ```python
 objective: Objective
@@ -549,7 +549,7 @@ objective: Objective
 
 Gets the Objective being tracked by this Score.
 
-#### scoreboard [#endstone.scoreboard.Score.scoreboard]
+#### <code className="doc-symbol doc-symbol-attribute"/> scoreboard [#endstone.scoreboard.Score.scoreboard]
 
 ```python
 scoreboard: Scoreboard
@@ -557,7 +557,7 @@ scoreboard: Scoreboard
 
 Gets the scoreboard for the associated objective.
 
-#### value [#endstone.scoreboard.Score.value]
+#### <code className="doc-symbol doc-symbol-attribute"/> value [#endstone.scoreboard.Score.value]
 
 ```python
 value: int
@@ -567,7 +567,7 @@ Gets or sets the current score.
 
 </div>
 
-### Scoreboard [#endstone.scoreboard.Scoreboard]
+### <code className="doc-symbol doc-symbol-class"/> Scoreboard [#endstone.scoreboard.Scoreboard]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -628,7 +628,7 @@ Represents a scoreboard
     </tr></tbody>
 </table>
 
-#### add_objective [#endstone.scoreboard.Scoreboard.add_objective]
+#### <code className="doc-symbol doc-symbol-method"/> add_objective [#endstone.scoreboard.Scoreboard.add_objective]
 
 ```python
 add_objective(
@@ -641,7 +641,7 @@ add_objective(
 
 Registers an Objective on this Scoreboard with a name displayed to players
 
-#### clear_slot [#endstone.scoreboard.Scoreboard.clear_slot]
+#### <code className="doc-symbol doc-symbol-method"/> clear_slot [#endstone.scoreboard.Scoreboard.clear_slot]
 
 ```python
 clear_slot(slot:DisplaySlot) -> None
@@ -649,7 +649,7 @@ clear_slot(slot:DisplaySlot) -> None
 
 Clears any objective in the specified slot
 
-#### entries [#endstone.scoreboard.Scoreboard.entries]
+#### <code className="doc-symbol doc-symbol-attribute"/> entries [#endstone.scoreboard.Scoreboard.entries]
 
 ```python
 entries: list[Player | Actor | str]
@@ -657,7 +657,7 @@ entries: list[Player | Actor | str]
 
 Gets all entries tracked by this Scoreboard
 
-#### get_objectives_by_criteria [#endstone.scoreboard.Scoreboard.get_objectives_by_criteria]
+#### <code className="doc-symbol doc-symbol-method"/> get_objectives_by_criteria [#endstone.scoreboard.Scoreboard.get_objectives_by_criteria]
 
 ```python
 get_objectives_by_criteria(criteria:Type) -> list[Objective]
@@ -665,7 +665,7 @@ get_objectives_by_criteria(criteria:Type) -> list[Objective]
 
 Gets all Objectives of a Criteria on the Scoreboard
 
-#### get_scores [#endstone.scoreboard.Scoreboard.get_scores]
+#### <code className="doc-symbol doc-symbol-method"/> get_scores [#endstone.scoreboard.Scoreboard.get_scores]
 
 ```python
 get_scores(entry:Player | Actor | str) -> list[Score]
@@ -673,7 +673,7 @@ get_scores(entry:Player | Actor | str) -> list[Score]
 
 Gets all scores for an entry on this Scoreboard
 
-#### objectives [#endstone.scoreboard.Scoreboard.objectives]
+#### <code className="doc-symbol doc-symbol-attribute"/> objectives [#endstone.scoreboard.Scoreboard.objectives]
 
 ```python
 objectives: list[Objective]
@@ -681,7 +681,7 @@ objectives: list[Objective]
 
 Gets all Objectives on this Scoreboard
 
-#### reset_scores [#endstone.scoreboard.Scoreboard.reset_scores]
+#### <code className="doc-symbol doc-symbol-method"/> reset_scores [#endstone.scoreboard.Scoreboard.reset_scores]
 
 ```python
 reset_scores(entry:Player | Actor | str) -> None

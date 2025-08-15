@@ -2,7 +2,7 @@
 title: "endstone.ban"
 ---
 
-## endstone.ban [#endstone.ban]
+## <code className="doc-symbol doc-symbol-module"/> endstone.ban [#endstone.ban]
 
 **Classes:**
 
@@ -13,7 +13,7 @@ Name | Description
 [`PlayerBanEntry`](#endstone.ban.PlayerBanEntry) | Represents a ban entry for a player.
 [`PlayerBanList`](#endstone.ban.PlayerBanList) | Represents a ban list containing banned players.
 
-### IpBanEntry [#endstone.ban.IpBanEntry]
+### <code className="doc-symbol doc-symbol-class"/> IpBanEntry [#endstone.ban.IpBanEntry]
 
 ```python
 IpBanEntry(address:str)
@@ -43,7 +43,7 @@ Represents a ban entry for an IP address.
     </tr></tbody>
 </table>
 
-#### address [#endstone.ban.IpBanEntry.address]
+#### <code className="doc-symbol doc-symbol-attribute"/> address [#endstone.ban.IpBanEntry.address]
 
 ```python
 address: str
@@ -53,7 +53,7 @@ Gets the banned IP address.
 
 </div>
 
-### IpBanList [#endstone.ban.IpBanList]
+### <code className="doc-symbol doc-symbol-class"/> IpBanList [#endstone.ban.IpBanList]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -105,7 +105,7 @@ Represents a ban list containing banned IP addresses.
     </tr></tbody>
 </table>
 
-#### add_ban [#endstone.ban.IpBanList.add_ban]
+#### <code className="doc-symbol doc-symbol-method"/> add_ban [#endstone.ban.IpBanList.add_ban]
 
 ```python
 add_ban(
@@ -118,7 +118,7 @@ add_ban(
 
 Adds a ban to this list, or updates an existing one.
 
-#### entries [#endstone.ban.IpBanList.entries]
+#### <code className="doc-symbol doc-symbol-attribute"/> entries [#endstone.ban.IpBanList.entries]
 
 ```python
 entries: list[IpBanEntry]
@@ -126,7 +126,7 @@ entries: list[IpBanEntry]
 
 Gets a vector of pointers to entries in the ban list.
 
-#### get_ban_entry [#endstone.ban.IpBanList.get_ban_entry]
+#### <code className="doc-symbol doc-symbol-method"/> get_ban_entry [#endstone.ban.IpBanList.get_ban_entry]
 
 ```python
 get_ban_entry(address:str) -> IpBanEntry
@@ -134,7 +134,7 @@ get_ban_entry(address:str) -> IpBanEntry
 
 Gets a BanEntry by IP address.
 
-#### is_banned [#endstone.ban.IpBanList.is_banned]
+#### <code className="doc-symbol doc-symbol-method"/> is_banned [#endstone.ban.IpBanList.is_banned]
 
 ```python
 is_banned(address:str) -> bool
@@ -142,7 +142,7 @@ is_banned(address:str) -> bool
 
 Checks if a BanEntry exists for the target by IP address.
 
-#### remove_ban [#endstone.ban.IpBanList.remove_ban]
+#### <code className="doc-symbol doc-symbol-method"/> remove_ban [#endstone.ban.IpBanList.remove_ban]
 
 ```python
 remove_ban(address:str) -> None
@@ -152,7 +152,7 @@ Removes an IP address from the ban list.
 
 </div>
 
-### PlayerBanEntry [#endstone.ban.PlayerBanEntry]
+### <code className="doc-symbol doc-symbol-class"/> PlayerBanEntry [#endstone.ban.PlayerBanEntry]
 
 ```python
 PlayerBanEntry(name:str, uuid:UUID | None = None, xuid:str | None = None)
@@ -192,7 +192,7 @@ Represents a ban entry for a player.
     </tr></tbody>
 </table>
 
-#### name [#endstone.ban.PlayerBanEntry.name]
+#### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.ban.PlayerBanEntry.name]
 
 ```python
 name: str
@@ -200,7 +200,7 @@ name: str
 
 Gets the banned player's name.
 
-#### unique_id [#endstone.ban.PlayerBanEntry.unique_id]
+#### <code className="doc-symbol doc-symbol-attribute"/> unique_id [#endstone.ban.PlayerBanEntry.unique_id]
 
 ```python
 unique_id: uuid.UUID | None
@@ -208,7 +208,7 @@ unique_id: uuid.UUID | None
 
 Gets the banned player's unique ID, or None if not available.
 
-#### xuid [#endstone.ban.PlayerBanEntry.xuid]
+#### <code className="doc-symbol doc-symbol-attribute"/> xuid [#endstone.ban.PlayerBanEntry.xuid]
 
 ```python
 xuid: str | None
@@ -218,7 +218,7 @@ Gets the banned player's Xbox user ID (XUID), or None if not available.
 
 </div>
 
-### PlayerBanList [#endstone.ban.PlayerBanList]
+### <code className="doc-symbol doc-symbol-class"/> PlayerBanList [#endstone.ban.PlayerBanList]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -270,7 +270,7 @@ Represents a ban list containing banned players.
     </tr></tbody>
 </table>
 
-#### add_ban [#endstone.ban.PlayerBanList.add_ban]
+#### <code className="doc-symbol doc-symbol-method"/> add_ban [#endstone.ban.PlayerBanList.add_ban]
 
 ```python
 add_ban(
@@ -285,7 +285,7 @@ add_ban(
 
 Adds a ban to this list, or updates an existing one.
 
-#### entries [#endstone.ban.PlayerBanList.entries]
+#### <code className="doc-symbol doc-symbol-attribute"/> entries [#endstone.ban.PlayerBanList.entries]
 
 ```python
 entries: list[PlayerBanEntry]
@@ -293,7 +293,7 @@ entries: list[PlayerBanEntry]
 
 Gets a vector of pointers to entries in the ban list.
 
-#### get_ban_entry [#endstone.ban.PlayerBanList.get_ban_entry]
+#### <code className="doc-symbol doc-symbol-method"/> get_ban_entry [#endstone.ban.PlayerBanList.get_ban_entry]
 
 ```python
 get_ban_entry(
@@ -303,7 +303,7 @@ get_ban_entry(
 
 Gets a BanEntry by player name, UUID, or XUID.
 
-#### is_banned [#endstone.ban.PlayerBanList.is_banned]
+#### <code className="doc-symbol doc-symbol-method"/> is_banned [#endstone.ban.PlayerBanList.is_banned]
 
 ```python
 is_banned(name:str, uuid:UUID | None = None, xuid:str | None = None) -> bool
@@ -311,7 +311,7 @@ is_banned(name:str, uuid:UUID | None = None, xuid:str | None = None) -> bool
 
 Checks if a BanEntry exists for the target by name, UUID, or XUID.
 
-#### remove_ban [#endstone.ban.PlayerBanList.remove_ban]
+#### <code className="doc-symbol doc-symbol-method"/> remove_ban [#endstone.ban.PlayerBanList.remove_ban]
 
 ```python
 remove_ban(name:str, uuid:UUID | None = None, xuid:str | None = None) -> None

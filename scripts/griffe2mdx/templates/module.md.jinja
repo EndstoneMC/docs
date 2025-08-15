@@ -8,11 +8,11 @@
 {%- set show_full_path = config.show_object_full_path -%}
 {%- endif -%}
 
-{%- with obj = module, module_name = module.path if show_full_path else module.name -%}
+{%- with obj = module, html_id = module.path, module_name = module.path if show_full_path else module.name -%}
 
 {%- if not root or config.show_root_heading %}
 
-{% filter heading(heading_level, id=module_name) -%}
+{% filter heading(heading_level, role="module", id=html_id) -%}
 {%- if config.separate_signature -%}
 {{ module_name }}
 {%- else -%}

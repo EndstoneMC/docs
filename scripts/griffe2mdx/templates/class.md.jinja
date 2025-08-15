@@ -11,7 +11,7 @@
 {%- with obj = class, html_id = class.path, class_name = class.path if show_full_path else class.name -%}
 {%- if not root or config.show_root_heading %}
 
-{% filter heading(heading_level, id=html_id) -%}
+{% filter heading(heading_level, role="class", id=html_id) -%}
 {%- if config.separate_signature -%}
 {{ class_name }}
 {%- elif config.merge_init_into_class and "__init__" in class.members -%}

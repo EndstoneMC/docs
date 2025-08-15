@@ -2,7 +2,7 @@
 title: "endstone.actor"
 ---
 
-## endstone.actor [#endstone.actor]
+## <code className="doc-symbol doc-symbol-module"/> endstone.actor [#endstone.actor]
 
 **Classes:**
 
@@ -12,7 +12,7 @@ Name | Description
 [`Item`](#endstone.actor.Item) | Represents a base actor in the level.
 [`Mob`](#endstone.actor.Mob) | Represents a mobile entity (i.e. living entity), such as a monster or player.
 
-### Actor [#endstone.actor.Actor]
+### <code className="doc-symbol doc-symbol-class"/> Actor [#endstone.actor.Actor]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -156,7 +156,7 @@ Represents a base actor in the level.
     </tr></tbody>
 </table>
 
-#### add_scoreboard_tag [#endstone.actor.Actor.add_scoreboard_tag]
+#### <code className="doc-symbol doc-symbol-method"/> add_scoreboard_tag [#endstone.actor.Actor.add_scoreboard_tag]
 
 ```python
 add_scoreboard_tag(tag:str) -> bool
@@ -164,7 +164,7 @@ add_scoreboard_tag(tag:str) -> bool
 
 Adds a tag to this actor.
 
-#### dimension [#endstone.actor.Actor.dimension]
+#### <code className="doc-symbol doc-symbol-attribute"/> dimension [#endstone.actor.Actor.dimension]
 
 ```python
 dimension: Dimension
@@ -172,7 +172,7 @@ dimension: Dimension
 
 Gets the current Dimension this actor resides in.
 
-#### health [#endstone.actor.Actor.health]
+#### <code className="doc-symbol doc-symbol-attribute"/> health [#endstone.actor.Actor.health]
 
 ```python
 health: int
@@ -180,7 +180,7 @@ health: int
 
 Gets or sets the entity's health from 0 to its max possible value, where 0 is dead.
 
-#### id [#endstone.actor.Actor.id]
+#### <code className="doc-symbol doc-symbol-attribute"/> id [#endstone.actor.Actor.id]
 
 ```python
 id: int
@@ -188,7 +188,7 @@ id: int
 
 Returns a unique id for this actor.
 
-#### is_dead [#endstone.actor.Actor.is_dead]
+#### <code className="doc-symbol doc-symbol-attribute"/> is_dead [#endstone.actor.Actor.is_dead]
 
 ```python
 is_dead: bool
@@ -196,7 +196,7 @@ is_dead: bool
 
 Returns true if this actor has been marked for removal.
 
-#### is_in_lava [#endstone.actor.Actor.is_in_lava]
+#### <code className="doc-symbol doc-symbol-attribute"/> is_in_lava [#endstone.actor.Actor.is_in_lava]
 
 ```python
 is_in_lava: bool
@@ -204,7 +204,7 @@ is_in_lava: bool
 
 Returns true if the actor is in lava.
 
-#### is_in_water [#endstone.actor.Actor.is_in_water]
+#### <code className="doc-symbol doc-symbol-attribute"/> is_in_water [#endstone.actor.Actor.is_in_water]
 
 ```python
 is_in_water: bool
@@ -212,7 +212,7 @@ is_in_water: bool
 
 Returns true if the actor is in water.
 
-#### is_name_tag_always_visible [#endstone.actor.Actor.is_name_tag_always_visible]
+#### <code className="doc-symbol doc-symbol-attribute"/> is_name_tag_always_visible [#endstone.actor.Actor.is_name_tag_always_visible]
 
 ```python
 is_name_tag_always_visible: bool
@@ -220,7 +220,7 @@ is_name_tag_always_visible: bool
 
 Gets or sets if the actor's name tag is always visible or not.
 
-#### is_name_tag_visible [#endstone.actor.Actor.is_name_tag_visible]
+#### <code className="doc-symbol doc-symbol-attribute"/> is_name_tag_visible [#endstone.actor.Actor.is_name_tag_visible]
 
 ```python
 is_name_tag_visible: bool
@@ -228,7 +228,7 @@ is_name_tag_visible: bool
 
 Gets or sets if the actor's name tag is visible or not.
 
-#### is_on_ground [#endstone.actor.Actor.is_on_ground]
+#### <code className="doc-symbol doc-symbol-attribute"/> is_on_ground [#endstone.actor.Actor.is_on_ground]
 
 ```python
 is_on_ground: bool
@@ -236,7 +236,7 @@ is_on_ground: bool
 
 Returns true if the actor is supported by a block, i.e. on ground.
 
-#### is_valid [#endstone.actor.Actor.is_valid]
+#### <code className="doc-symbol doc-symbol-attribute"/> is_valid [#endstone.actor.Actor.is_valid]
 
 ```python
 is_valid: bool
@@ -244,7 +244,7 @@ is_valid: bool
 
 Returns false if the entity has died, been despawned for some other reason, or has not been added to the level.
 
-#### level [#endstone.actor.Actor.level]
+#### <code className="doc-symbol doc-symbol-attribute"/> level [#endstone.actor.Actor.level]
 
 ```python
 level: Level
@@ -252,7 +252,7 @@ level: Level
 
 Gets the current Level this actor resides in.
 
-#### location [#endstone.actor.Actor.location]
+#### <code className="doc-symbol doc-symbol-attribute"/> location [#endstone.actor.Actor.location]
 
 ```python
 location: Location
@@ -260,7 +260,7 @@ location: Location
 
 Gets the actor's current position.
 
-#### max_health [#endstone.actor.Actor.max_health]
+#### <code className="doc-symbol doc-symbol-attribute"/> max_health [#endstone.actor.Actor.max_health]
 
 ```python
 max_health: int
@@ -268,7 +268,7 @@ max_health: int
 
 Gets the maximum health this entity has.
 
-#### name_tag [#endstone.actor.Actor.name_tag]
+#### <code className="doc-symbol doc-symbol-attribute"/> name_tag [#endstone.actor.Actor.name_tag]
 
 ```python
 name_tag: str
@@ -276,7 +276,7 @@ name_tag: str
 
 Gets or sets the current name tag of the actor.
 
-#### remove [#endstone.actor.Actor.remove]
+#### <code className="doc-symbol doc-symbol-method"/> remove [#endstone.actor.Actor.remove]
 
 ```python
 remove() -> None
@@ -284,7 +284,7 @@ remove() -> None
 
 Remove this actor from the level.
 
-#### remove_scoreboard_tag [#endstone.actor.Actor.remove_scoreboard_tag]
+#### <code className="doc-symbol doc-symbol-method"/> remove_scoreboard_tag [#endstone.actor.Actor.remove_scoreboard_tag]
 
 ```python
 remove_scoreboard_tag(tag:str) -> bool
@@ -292,7 +292,7 @@ remove_scoreboard_tag(tag:str) -> bool
 
 Removes a given tag from this actor.
 
-#### runtime_id [#endstone.actor.Actor.runtime_id]
+#### <code className="doc-symbol doc-symbol-attribute"/> runtime_id [#endstone.actor.Actor.runtime_id]
 
 ```python
 runtime_id: int
@@ -300,7 +300,7 @@ runtime_id: int
 
 Returns the runtime id for this actor.
 
-#### score_tag [#endstone.actor.Actor.score_tag]
+#### <code className="doc-symbol doc-symbol-attribute"/> score_tag [#endstone.actor.Actor.score_tag]
 
 ```python
 score_tag: str
@@ -308,7 +308,7 @@ score_tag: str
 
 Gets or sets the current score tag of the actor.
 
-#### scoreboard_tags [#endstone.actor.Actor.scoreboard_tags]
+#### <code className="doc-symbol doc-symbol-attribute"/> scoreboard_tags [#endstone.actor.Actor.scoreboard_tags]
 
 ```python
 scoreboard_tags: list[str]
@@ -316,7 +316,7 @@ scoreboard_tags: list[str]
 
 Returns a list of scoreboard tags for this actor.
 
-#### set_rotation [#endstone.actor.Actor.set_rotation]
+#### <code className="doc-symbol doc-symbol-method"/> set_rotation [#endstone.actor.Actor.set_rotation]
 
 ```python
 set_rotation(yaw:float, pitch:float) -> None
@@ -324,7 +324,7 @@ set_rotation(yaw:float, pitch:float) -> None
 
 Sets the actor's rotation.
 
-#### type [#endstone.actor.Actor.type]
+#### <code className="doc-symbol doc-symbol-attribute"/> type [#endstone.actor.Actor.type]
 
 ```python
 type: str
@@ -332,7 +332,7 @@ type: str
 
 Gets the type of the actor.
 
-#### velocity [#endstone.actor.Actor.velocity]
+#### <code className="doc-symbol doc-symbol-attribute"/> velocity [#endstone.actor.Actor.velocity]
 
 ```python
 velocity: Vector
@@ -342,7 +342,7 @@ Gets this actor's current velocity.
 
 </div>
 
-### Item [#endstone.actor.Item]
+### <code className="doc-symbol doc-symbol-class"/> Item [#endstone.actor.Item]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -383,7 +383,7 @@ Represents a base actor in the level.
     </tr></tbody>
 </table>
 
-#### is_unlimited_lifetime [#endstone.actor.Item.is_unlimited_lifetime]
+#### <code className="doc-symbol doc-symbol-attribute"/> is_unlimited_lifetime [#endstone.actor.Item.is_unlimited_lifetime]
 
 ```python
 is_unlimited_lifetime: bool
@@ -391,7 +391,7 @@ is_unlimited_lifetime: bool
 
 Gets or sets if this Item lives forever
 
-#### item_stack [#endstone.actor.Item.item_stack]
+#### <code className="doc-symbol doc-symbol-attribute"/> item_stack [#endstone.actor.Item.item_stack]
 
 ```python
 item_stack: ItemStack
@@ -399,7 +399,7 @@ item_stack: ItemStack
 
 Gets or sets the item stack associated with this item drop.
 
-#### pickup_delay [#endstone.actor.Item.pickup_delay]
+#### <code className="doc-symbol doc-symbol-attribute"/> pickup_delay [#endstone.actor.Item.pickup_delay]
 
 ```python
 pickup_delay: int
@@ -407,7 +407,7 @@ pickup_delay: int
 
 Gets or sets the delay before this Item is available to be picked up by players.
 
-#### thrower [#endstone.actor.Item.thrower]
+#### <code className="doc-symbol doc-symbol-attribute"/> thrower [#endstone.actor.Item.thrower]
 
 ```python
 thrower: int | None
@@ -417,7 +417,7 @@ Gets or sets the thrower of this item.
 
 </div>
 
-### Mob [#endstone.actor.Mob]
+### <code className="doc-symbol doc-symbol-class"/> Mob [#endstone.actor.Mob]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -443,7 +443,7 @@ Represents a mobile entity (i.e. living entity), such as a monster or player.
     </tr></tbody>
 </table>
 
-#### is_gliding [#endstone.actor.Mob.is_gliding]
+#### <code className="doc-symbol doc-symbol-attribute"/> is_gliding [#endstone.actor.Mob.is_gliding]
 
 ```python
 is_gliding: bool

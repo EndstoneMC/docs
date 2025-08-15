@@ -2,7 +2,7 @@
 title: "endstone.plugin"
 ---
 
-## endstone.plugin [#endstone.plugin]
+## <code className="doc-symbol doc-symbol-module"/> endstone.plugin [#endstone.plugin]
 
 **Classes:**
 
@@ -18,7 +18,7 @@ Name | Description
 [`ServiceManager`](#endstone.plugin.ServiceManager) | Represent a service manager that manages services and service providers.
 [`ServicePriority`](#endstone.plugin.ServicePriority) | Represents various priorities of a provider.
 
-### Plugin [#endstone.plugin.Plugin]
+### <code className="doc-symbol doc-symbol-class"/> Plugin [#endstone.plugin.Plugin]
 
 ```python
 Plugin()
@@ -158,133 +158,133 @@ Bases: <code className="nextra-code">[Plugin](#endstone._internal.endstone_pytho
     </tr></tbody>
 </table>
 
-#### api_version [#endstone.plugin.Plugin.api_version]
+#### <code className="doc-symbol doc-symbol-attribute"/> api_version [#endstone.plugin.Plugin.api_version]
 
 ```python
 api_version = None
 ```
 
-#### authors [#endstone.plugin.Plugin.authors]
+#### <code className="doc-symbol doc-symbol-attribute"/> authors [#endstone.plugin.Plugin.authors]
 
 ```python
 authors = None
 ```
 
-#### commands [#endstone.plugin.Plugin.commands]
+#### <code className="doc-symbol doc-symbol-attribute"/> commands [#endstone.plugin.Plugin.commands]
 
 ```python
 commands = None
 ```
 
-#### config [#endstone.plugin.Plugin.config]
+#### <code className="doc-symbol doc-symbol-attribute"/> config [#endstone.plugin.Plugin.config]
 
 ```python
 config: dict
 ```
 
-#### contributors [#endstone.plugin.Plugin.contributors]
+#### <code className="doc-symbol doc-symbol-attribute"/> contributors [#endstone.plugin.Plugin.contributors]
 
 ```python
 contributors = None
 ```
 
-#### default_permission [#endstone.plugin.Plugin.default_permission]
+#### <code className="doc-symbol doc-symbol-attribute"/> default_permission [#endstone.plugin.Plugin.default_permission]
 
 ```python
 default_permission = None
 ```
 
-#### depend [#endstone.plugin.Plugin.depend]
+#### <code className="doc-symbol doc-symbol-attribute"/> depend [#endstone.plugin.Plugin.depend]
 
 ```python
 depend = None
 ```
 
-#### description [#endstone.plugin.Plugin.description]
+#### <code className="doc-symbol doc-symbol-attribute"/> description [#endstone.plugin.Plugin.description]
 
 ```python
 description = None
 ```
 
-#### load [#endstone.plugin.Plugin.load]
+#### <code className="doc-symbol doc-symbol-attribute"/> load [#endstone.plugin.Plugin.load]
 
 ```python
 load = None
 ```
 
-#### load_before [#endstone.plugin.Plugin.load_before]
+#### <code className="doc-symbol doc-symbol-attribute"/> load_before [#endstone.plugin.Plugin.load_before]
 
 ```python
 load_before = None
 ```
 
-#### name [#endstone.plugin.Plugin.name]
+#### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.plugin.Plugin.name]
 
 ```python
 name = None
 ```
 
-#### permissions [#endstone.plugin.Plugin.permissions]
+#### <code className="doc-symbol doc-symbol-attribute"/> permissions [#endstone.plugin.Plugin.permissions]
 
 ```python
 permissions = None
 ```
 
-#### prefix [#endstone.plugin.Plugin.prefix]
+#### <code className="doc-symbol doc-symbol-attribute"/> prefix [#endstone.plugin.Plugin.prefix]
 
 ```python
 prefix = None
 ```
 
-#### provides [#endstone.plugin.Plugin.provides]
+#### <code className="doc-symbol doc-symbol-attribute"/> provides [#endstone.plugin.Plugin.provides]
 
 ```python
 provides = None
 ```
 
-#### register_events [#endstone.plugin.Plugin.register_events]
+#### <code className="doc-symbol doc-symbol-method"/> register_events [#endstone.plugin.Plugin.register_events]
 
 ```python
 register_events(listener:object) -> None
 ```
 
-#### reload_config [#endstone.plugin.Plugin.reload_config]
+#### <code className="doc-symbol doc-symbol-method"/> reload_config [#endstone.plugin.Plugin.reload_config]
 
 ```python
 reload_config() -> dict
 ```
 
-#### save_config [#endstone.plugin.Plugin.save_config]
+#### <code className="doc-symbol doc-symbol-method"/> save_config [#endstone.plugin.Plugin.save_config]
 
 ```python
 save_config() -> None
 ```
 
-#### save_default_config [#endstone.plugin.Plugin.save_default_config]
+#### <code className="doc-symbol doc-symbol-method"/> save_default_config [#endstone.plugin.Plugin.save_default_config]
 
 ```python
 save_default_config() -> None
 ```
 
-#### save_resources [#endstone.plugin.Plugin.save_resources]
+#### <code className="doc-symbol doc-symbol-method"/> save_resources [#endstone.plugin.Plugin.save_resources]
 
 ```python
 save_resources(path:str, replace:bool = False) -> None
 ```
 
-#### soft_depend [#endstone.plugin.Plugin.soft_depend]
+#### <code className="doc-symbol doc-symbol-attribute"/> soft_depend [#endstone.plugin.Plugin.soft_depend]
 
 ```python
 soft_depend = None
 ```
 
-#### version [#endstone.plugin.Plugin.version]
+#### <code className="doc-symbol doc-symbol-attribute"/> version [#endstone.plugin.Plugin.version]
 
 ```python
 version = None
 ```
 
-#### website [#endstone.plugin.Plugin.website]
+#### <code className="doc-symbol doc-symbol-attribute"/> website [#endstone.plugin.Plugin.website]
 
 ```python
 website = None
@@ -292,7 +292,7 @@ website = None
 
 </div>
 
-### PluginCommand [#endstone.plugin.PluginCommand]
+### <code className="doc-symbol doc-symbol-class"/> PluginCommand [#endstone.plugin.PluginCommand]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -323,7 +323,7 @@ Represents a Command belonging to a Plugin
     </tr></tbody>
 </table>
 
-#### executor [#endstone.plugin.PluginCommand.executor]
+#### <code className="doc-symbol doc-symbol-attribute"/> executor [#endstone.plugin.PluginCommand.executor]
 
 ```python
 executor: CommandExecutor
@@ -331,7 +331,7 @@ executor: CommandExecutor
 
 The CommandExecutor to run when parsing this command
 
-#### plugin [#endstone.plugin.PluginCommand.plugin]
+#### <code className="doc-symbol doc-symbol-attribute"/> plugin [#endstone.plugin.PluginCommand.plugin]
 
 ```python
 plugin: Plugin
@@ -341,7 +341,7 @@ The owner of this PluginCommand
 
 </div>
 
-### PluginDescription [#endstone.plugin.PluginDescription]
+### <code className="doc-symbol doc-symbol-class"/> PluginDescription [#endstone.plugin.PluginDescription]
 
 ```python
 PluginDescription(
@@ -467,7 +467,7 @@ Represents the basic information about a plugin that the plugin loader needs to 
     </tr></tbody>
 </table>
 
-#### api_version [#endstone.plugin.PluginDescription.api_version]
+#### <code className="doc-symbol doc-symbol-attribute"/> api_version [#endstone.plugin.PluginDescription.api_version]
 
 ```python
 api_version: str
@@ -475,7 +475,7 @@ api_version: str
 
 Gives the API version which this plugin is designed to support.
 
-#### authors [#endstone.plugin.PluginDescription.authors]
+#### <code className="doc-symbol doc-symbol-attribute"/> authors [#endstone.plugin.PluginDescription.authors]
 
 ```python
 authors: list[str]
@@ -483,7 +483,7 @@ authors: list[str]
 
 Gives the list of authors for the plugin.
 
-#### commands [#endstone.plugin.PluginDescription.commands]
+#### <code className="doc-symbol doc-symbol-attribute"/> commands [#endstone.plugin.PluginDescription.commands]
 
 ```python
 commands: list[Command]
@@ -491,7 +491,7 @@ commands: list[Command]
 
 Gives the list of commands the plugin will register at runtime.
 
-#### contributors [#endstone.plugin.PluginDescription.contributors]
+#### <code className="doc-symbol doc-symbol-attribute"/> contributors [#endstone.plugin.PluginDescription.contributors]
 
 ```python
 contributors: list[str]
@@ -499,7 +499,7 @@ contributors: list[str]
 
 Gives the list of contributors for the plugin.
 
-#### default_permission [#endstone.plugin.PluginDescription.default_permission]
+#### <code className="doc-symbol doc-symbol-attribute"/> default_permission [#endstone.plugin.PluginDescription.default_permission]
 
 ```python
 default_permission: PermissionDefault
@@ -507,7 +507,7 @@ default_permission: PermissionDefault
 
 Gives the default value of permissions registered for the plugin.
 
-#### depend [#endstone.plugin.PluginDescription.depend]
+#### <code className="doc-symbol doc-symbol-attribute"/> depend [#endstone.plugin.PluginDescription.depend]
 
 ```python
 depend: list[str]
@@ -515,7 +515,7 @@ depend: list[str]
 
 Gives a list of other plugins that the plugin requires.
 
-#### description [#endstone.plugin.PluginDescription.description]
+#### <code className="doc-symbol doc-symbol-attribute"/> description [#endstone.plugin.PluginDescription.description]
 
 ```python
 description: str
@@ -523,7 +523,7 @@ description: str
 
 Gives a human-friendly description of the functionality the plugin provides.
 
-#### full_name [#endstone.plugin.PluginDescription.full_name]
+#### <code className="doc-symbol doc-symbol-attribute"/> full_name [#endstone.plugin.PluginDescription.full_name]
 
 ```python
 full_name: str
@@ -531,7 +531,7 @@ full_name: str
 
 Returns the name of a plugin, including the version.
 
-#### load [#endstone.plugin.PluginDescription.load]
+#### <code className="doc-symbol doc-symbol-attribute"/> load [#endstone.plugin.PluginDescription.load]
 
 ```python
 load: PluginLoadOrder
@@ -539,7 +539,7 @@ load: PluginLoadOrder
 
 Gives the phase of server startup that the plugin should be loaded.
 
-#### load_before [#endstone.plugin.PluginDescription.load_before]
+#### <code className="doc-symbol doc-symbol-attribute"/> load_before [#endstone.plugin.PluginDescription.load_before]
 
 ```python
 load_before: list[str]
@@ -547,7 +547,7 @@ load_before: list[str]
 
 Gets the list of plugins that should consider this plugin a soft-dependency.
 
-#### name [#endstone.plugin.PluginDescription.name]
+#### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.plugin.PluginDescription.name]
 
 ```python
 name: str
@@ -555,7 +555,7 @@ name: str
 
 Gives the name of the plugin. This name is a unique identifier for plugins.
 
-#### permissions [#endstone.plugin.PluginDescription.permissions]
+#### <code className="doc-symbol doc-symbol-attribute"/> permissions [#endstone.plugin.PluginDescription.permissions]
 
 ```python
 permissions: list[Permission]
@@ -563,7 +563,7 @@ permissions: list[Permission]
 
 Gives the list of permissions the plugin will register at runtime, immediately proceeding enabling.
 
-#### prefix [#endstone.plugin.PluginDescription.prefix]
+#### <code className="doc-symbol doc-symbol-attribute"/> prefix [#endstone.plugin.PluginDescription.prefix]
 
 ```python
 prefix: str
@@ -571,7 +571,7 @@ prefix: str
 
 Gives the token to prefix plugin-specific logging messages with.
 
-#### provides [#endstone.plugin.PluginDescription.provides]
+#### <code className="doc-symbol doc-symbol-attribute"/> provides [#endstone.plugin.PluginDescription.provides]
 
 ```python
 provides: list[str]
@@ -579,7 +579,7 @@ provides: list[str]
 
 Gives the list of other plugin APIs which this plugin provides. These are usable for other plugins to depend on.
 
-#### soft_depend [#endstone.plugin.PluginDescription.soft_depend]
+#### <code className="doc-symbol doc-symbol-attribute"/> soft_depend [#endstone.plugin.PluginDescription.soft_depend]
 
 ```python
 soft_depend: list[str]
@@ -587,7 +587,7 @@ soft_depend: list[str]
 
 Gives a list of other plugins that the plugin requires for full functionality.
 
-#### version [#endstone.plugin.PluginDescription.version]
+#### <code className="doc-symbol doc-symbol-attribute"/> version [#endstone.plugin.PluginDescription.version]
 
 ```python
 version: str
@@ -595,7 +595,7 @@ version: str
 
 Gives the version of the plugin.
 
-#### website [#endstone.plugin.PluginDescription.website]
+#### <code className="doc-symbol doc-symbol-attribute"/> website [#endstone.plugin.PluginDescription.website]
 
 ```python
 website: str
@@ -605,7 +605,7 @@ Gives the plugin's or plugin's author's website.
 
 </div>
 
-### PluginLoadOrder [#endstone.plugin.PluginLoadOrder]
+### <code className="doc-symbol doc-symbol-class"/> PluginLoadOrder [#endstone.plugin.PluginLoadOrder]
 
 ```python
 PluginLoadOrder(value:int)
@@ -648,25 +648,25 @@ Represents the order in which a plugin should be initialized and enabled.
     </tr></tbody>
 </table>
 
-#### POSTWORLD [#endstone.plugin.PluginLoadOrder.POSTWORLD]
+#### <code className="doc-symbol doc-symbol-attribute"/> POSTWORLD [#endstone.plugin.PluginLoadOrder.POSTWORLD]
 
 ```python
 POSTWORLD: PluginLoadOrder
 ```
 
-#### STARTUP [#endstone.plugin.PluginLoadOrder.STARTUP]
+#### <code className="doc-symbol doc-symbol-attribute"/> STARTUP [#endstone.plugin.PluginLoadOrder.STARTUP]
 
 ```python
 STARTUP: PluginLoadOrder
 ```
 
-#### name [#endstone.plugin.PluginLoadOrder.name]
+#### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.plugin.PluginLoadOrder.name]
 
 ```python
 name: str
 ```
 
-#### value [#endstone.plugin.PluginLoadOrder.value]
+#### <code className="doc-symbol doc-symbol-attribute"/> value [#endstone.plugin.PluginLoadOrder.value]
 
 ```python
 value: int
@@ -674,7 +674,7 @@ value: int
 
 </div>
 
-### PluginLoader [#endstone.plugin.PluginLoader]
+### <code className="doc-symbol doc-symbol-class"/> PluginLoader [#endstone.plugin.PluginLoader]
 
 ```python
 PluginLoader(server:Server)
@@ -735,7 +735,7 @@ Represents a plugin loader, which handles direct access to specific types of plu
     </tr></tbody>
 </table>
 
-#### disable_plugin [#endstone.plugin.PluginLoader.disable_plugin]
+#### <code className="doc-symbol doc-symbol-method"/> disable_plugin [#endstone.plugin.PluginLoader.disable_plugin]
 
 ```python
 disable_plugin(plugin:Plugin) -> None
@@ -743,7 +743,7 @@ disable_plugin(plugin:Plugin) -> None
 
 Disables the specified plugin
 
-#### enable_plugin [#endstone.plugin.PluginLoader.enable_plugin]
+#### <code className="doc-symbol doc-symbol-method"/> enable_plugin [#endstone.plugin.PluginLoader.enable_plugin]
 
 ```python
 enable_plugin(plugin:Plugin) -> None
@@ -751,7 +751,7 @@ enable_plugin(plugin:Plugin) -> None
 
 Enables the specified plugin
 
-#### load_plugin [#endstone.plugin.PluginLoader.load_plugin]
+#### <code className="doc-symbol doc-symbol-method"/> load_plugin [#endstone.plugin.PluginLoader.load_plugin]
 
 ```python
 load_plugin(file:str) -> Plugin
@@ -759,7 +759,7 @@ load_plugin(file:str) -> Plugin
 
 Loads the plugin contained in the specified file
 
-#### load_plugins [#endstone.plugin.PluginLoader.load_plugins]
+#### <code className="doc-symbol doc-symbol-method"/> load_plugins [#endstone.plugin.PluginLoader.load_plugins]
 
 ```python
 load_plugins(directory:str) -> list[Plugin]
@@ -767,7 +767,7 @@ load_plugins(directory:str) -> list[Plugin]
 
 Loads the plugin contained within the specified directory
 
-#### plugin_file_filters [#endstone.plugin.PluginLoader.plugin_file_filters]
+#### <code className="doc-symbol doc-symbol-attribute"/> plugin_file_filters [#endstone.plugin.PluginLoader.plugin_file_filters]
 
 ```python
 plugin_file_filters: list[str]
@@ -775,7 +775,7 @@ plugin_file_filters: list[str]
 
 Returns a list of all filename filters expected by this PluginLoader
 
-#### server [#endstone.plugin.PluginLoader.server]
+#### <code className="doc-symbol doc-symbol-attribute"/> server [#endstone.plugin.PluginLoader.server]
 
 ```python
 server: Server
@@ -785,7 +785,7 @@ Retrieves the Server object associated with the PluginLoader.
 
 </div>
 
-### PluginManager [#endstone.plugin.PluginManager]
+### <code className="doc-symbol doc-symbol-class"/> PluginManager [#endstone.plugin.PluginManager]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -898,7 +898,7 @@ Represents a plugin manager that handles all plugins from the Server
     </tr></tbody>
 </table>
 
-#### call_event [#endstone.plugin.PluginManager.call_event]
+#### <code className="doc-symbol doc-symbol-method"/> call_event [#endstone.plugin.PluginManager.call_event]
 
 ```python
 call_event(event:Event) -> None
@@ -906,7 +906,7 @@ call_event(event:Event) -> None
 
 Calls an event which will be passed to plugins.
 
-#### clear_plugins [#endstone.plugin.PluginManager.clear_plugins]
+#### <code className="doc-symbol doc-symbol-method"/> clear_plugins [#endstone.plugin.PluginManager.clear_plugins]
 
 ```python
 clear_plugins() -> None
@@ -914,7 +914,7 @@ clear_plugins() -> None
 
 Disables and removes all plugins
 
-#### disable_plugin [#endstone.plugin.PluginManager.disable_plugin]
+#### <code className="doc-symbol doc-symbol-method"/> disable_plugin [#endstone.plugin.PluginManager.disable_plugin]
 
 ```python
 disable_plugin(plugin:Plugin) -> None
@@ -922,7 +922,7 @@ disable_plugin(plugin:Plugin) -> None
 
 Disables the specified plugin
 
-#### disable_plugins [#endstone.plugin.PluginManager.disable_plugins]
+#### <code className="doc-symbol doc-symbol-method"/> disable_plugins [#endstone.plugin.PluginManager.disable_plugins]
 
 ```python
 disable_plugins() -> None
@@ -930,7 +930,7 @@ disable_plugins() -> None
 
 Disables all the loaded plugins
 
-#### enable_plugin [#endstone.plugin.PluginManager.enable_plugin]
+#### <code className="doc-symbol doc-symbol-method"/> enable_plugin [#endstone.plugin.PluginManager.enable_plugin]
 
 ```python
 enable_plugin(plugin:Plugin) -> None
@@ -938,7 +938,7 @@ enable_plugin(plugin:Plugin) -> None
 
 Enables the specified plugin
 
-#### enable_plugins [#endstone.plugin.PluginManager.enable_plugins]
+#### <code className="doc-symbol doc-symbol-method"/> enable_plugins [#endstone.plugin.PluginManager.enable_plugins]
 
 ```python
 enable_plugins() -> None
@@ -946,7 +946,7 @@ enable_plugins() -> None
 
 Enable all the loaded plugins
 
-#### get_default_perm_subscriptions [#endstone.plugin.PluginManager.get_default_perm_subscriptions]
+#### <code className="doc-symbol doc-symbol-method"/> get_default_perm_subscriptions [#endstone.plugin.PluginManager.get_default_perm_subscriptions]
 
 ```python
 get_default_perm_subscriptions(level:PermissionLevel) -> set[Permissible]
@@ -954,7 +954,7 @@ get_default_perm_subscriptions(level:PermissionLevel) -> set[Permissible]
 
 Gets a set containing all subscribed Permissibles to the given default list, by permission level.
 
-#### get_default_permissions [#endstone.plugin.PluginManager.get_default_permissions]
+#### <code className="doc-symbol doc-symbol-method"/> get_default_permissions [#endstone.plugin.PluginManager.get_default_permissions]
 
 ```python
 get_default_permissions(level:PermissionLevel) -> list[Permission]
@@ -962,7 +962,7 @@ get_default_permissions(level:PermissionLevel) -> list[Permission]
 
 Gets the default permissions for the given permission level.
 
-#### get_permission [#endstone.plugin.PluginManager.get_permission]
+#### <code className="doc-symbol doc-symbol-method"/> get_permission [#endstone.plugin.PluginManager.get_permission]
 
 ```python
 get_permission(name:str) -> Permission
@@ -970,7 +970,7 @@ get_permission(name:str) -> Permission
 
 Gets a Permission from its fully qualified name.
 
-#### get_permission_subscriptions [#endstone.plugin.PluginManager.get_permission_subscriptions]
+#### <code className="doc-symbol doc-symbol-method"/> get_permission_subscriptions [#endstone.plugin.PluginManager.get_permission_subscriptions]
 
 ```python
 get_permission_subscriptions(permission:str) -> set[Permissible]
@@ -978,7 +978,7 @@ get_permission_subscriptions(permission:str) -> set[Permissible]
 
 Gets a set containing all subscribed Permissibles to the given permission.
 
-#### get_plugin [#endstone.plugin.PluginManager.get_plugin]
+#### <code className="doc-symbol doc-symbol-method"/> get_plugin [#endstone.plugin.PluginManager.get_plugin]
 
 ```python
 get_plugin(name:str) -> Plugin
@@ -986,7 +986,7 @@ get_plugin(name:str) -> Plugin
 
 Checks if the given plugin is loaded and returns it when applicable.
 
-#### load_plugin [#endstone.plugin.PluginManager.load_plugin]
+#### <code className="doc-symbol doc-symbol-method"/> load_plugin [#endstone.plugin.PluginManager.load_plugin]
 
 ```python
 load_plugin(file:str) -> Plugin
@@ -994,7 +994,7 @@ load_plugin(file:str) -> Plugin
 
 Loads the plugin in the specified file
 
-#### permissions [#endstone.plugin.PluginManager.permissions]
+#### <code className="doc-symbol doc-symbol-attribute"/> permissions [#endstone.plugin.PluginManager.permissions]
 
 ```python
 permissions: set[Permission]
@@ -1002,7 +1002,7 @@ permissions: set[Permission]
 
 Gets a set of all registered permissions.
 
-#### plugins [#endstone.plugin.PluginManager.plugins]
+#### <code className="doc-symbol doc-symbol-attribute"/> plugins [#endstone.plugin.PluginManager.plugins]
 
 ```python
 plugins: list[Plugin]
@@ -1010,7 +1010,7 @@ plugins: list[Plugin]
 
 Gets a list of all currently loaded plugins
 
-#### recalculate_permission_defaults [#endstone.plugin.PluginManager.recalculate_permission_defaults]
+#### <code className="doc-symbol doc-symbol-method"/> recalculate_permission_defaults [#endstone.plugin.PluginManager.recalculate_permission_defaults]
 
 ```python
 recalculate_permission_defaults(perm:Permission) -> None
@@ -1018,7 +1018,7 @@ recalculate_permission_defaults(perm:Permission) -> None
 
 Recalculates the defaults for the given Permission.
 
-#### register_event [#endstone.plugin.PluginManager.register_event]
+#### <code className="doc-symbol doc-symbol-method"/> register_event [#endstone.plugin.PluginManager.register_event]
 
 ```python
 register_event(
@@ -1032,7 +1032,7 @@ register_event(
 
 Registers the given event
 
-#### subscribe_to_default_perms [#endstone.plugin.PluginManager.subscribe_to_default_perms]
+#### <code className="doc-symbol doc-symbol-method"/> subscribe_to_default_perms [#endstone.plugin.PluginManager.subscribe_to_default_perms]
 
 ```python
 subscribe_to_default_perms(
@@ -1042,7 +1042,7 @@ subscribe_to_default_perms(
 
 Subscribes to the given Default permissions by permission level.
 
-#### subscribe_to_permission [#endstone.plugin.PluginManager.subscribe_to_permission]
+#### <code className="doc-symbol doc-symbol-method"/> subscribe_to_permission [#endstone.plugin.PluginManager.subscribe_to_permission]
 
 ```python
 subscribe_to_permission(permission:str, permissible:Permissible) -> None
@@ -1050,7 +1050,7 @@ subscribe_to_permission(permission:str, permissible:Permissible) -> None
 
 Subscribes the given Permissible for information about the requested Permission.
 
-#### unsubscribe_from_default_perms [#endstone.plugin.PluginManager.unsubscribe_from_default_perms]
+#### <code className="doc-symbol doc-symbol-method"/> unsubscribe_from_default_perms [#endstone.plugin.PluginManager.unsubscribe_from_default_perms]
 
 ```python
 unsubscribe_from_default_perms(
@@ -1060,7 +1060,7 @@ unsubscribe_from_default_perms(
 
 Unsubscribes from the given Default permissions by permission level.
 
-#### unsubscribe_from_permission [#endstone.plugin.PluginManager.unsubscribe_from_permission]
+#### <code className="doc-symbol doc-symbol-method"/> unsubscribe_from_permission [#endstone.plugin.PluginManager.unsubscribe_from_permission]
 
 ```python
 unsubscribe_from_permission(permission:str, permissible:Permissible) -> None
@@ -1070,7 +1070,7 @@ Unsubscribes the given Permissible for information about the requested Permissio
 
 </div>
 
-### Service [#endstone.plugin.Service]
+### <code className="doc-symbol doc-symbol-class"/> Service [#endstone.plugin.Service]
 
 ```python
 Service()
@@ -1082,7 +1082,7 @@ Represents a list of methods.
 
 </div>
 
-### ServiceManager [#endstone.plugin.ServiceManager]
+### <code className="doc-symbol doc-symbol-class"/> ServiceManager [#endstone.plugin.ServiceManager]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -1112,13 +1112,13 @@ Represent a service manager that manages services and service providers.
     </tr></tbody>
 </table>
 
-#### load [#endstone.plugin.ServiceManager.load]
+#### <code className="doc-symbol doc-symbol-method"/> load [#endstone.plugin.ServiceManager.load]
 
 ```python
 load(name:str) -> Service
 ```
 
-#### register [#endstone.plugin.ServiceManager.register]
+#### <code className="doc-symbol doc-symbol-method"/> register [#endstone.plugin.ServiceManager.register]
 
 ```python
 register(
@@ -1128,7 +1128,7 @@ register(
 
 Register a provider of a service.
 
-#### unregister_all [#endstone.plugin.ServiceManager.unregister_all]
+#### <code className="doc-symbol doc-symbol-method"/> unregister_all [#endstone.plugin.ServiceManager.unregister_all]
 
 ```python
 unregister_all(plugin:Plugin) -> None
@@ -1138,7 +1138,7 @@ Unregister all the services registered by a particular plugin.
 
 </div>
 
-### ServicePriority [#endstone.plugin.ServicePriority]
+### <code className="doc-symbol doc-symbol-class"/> ServicePriority [#endstone.plugin.ServicePriority]
 
 ```python
 ServicePriority(value:int)
@@ -1196,43 +1196,43 @@ Represents various priorities of a provider.
     </tr></tbody>
 </table>
 
-#### HIGH [#endstone.plugin.ServicePriority.HIGH]
+#### <code className="doc-symbol doc-symbol-attribute"/> HIGH [#endstone.plugin.ServicePriority.HIGH]
 
 ```python
 HIGH: ServicePriority
 ```
 
-#### HIGHEST [#endstone.plugin.ServicePriority.HIGHEST]
+#### <code className="doc-symbol doc-symbol-attribute"/> HIGHEST [#endstone.plugin.ServicePriority.HIGHEST]
 
 ```python
 HIGHEST: ServicePriority
 ```
 
-#### LOW [#endstone.plugin.ServicePriority.LOW]
+#### <code className="doc-symbol doc-symbol-attribute"/> LOW [#endstone.plugin.ServicePriority.LOW]
 
 ```python
 LOW: ServicePriority
 ```
 
-#### LOWEST [#endstone.plugin.ServicePriority.LOWEST]
+#### <code className="doc-symbol doc-symbol-attribute"/> LOWEST [#endstone.plugin.ServicePriority.LOWEST]
 
 ```python
 LOWEST: ServicePriority
 ```
 
-#### NORMAL [#endstone.plugin.ServicePriority.NORMAL]
+#### <code className="doc-symbol doc-symbol-attribute"/> NORMAL [#endstone.plugin.ServicePriority.NORMAL]
 
 ```python
 NORMAL: ServicePriority
 ```
 
-#### name [#endstone.plugin.ServicePriority.name]
+#### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.plugin.ServicePriority.name]
 
 ```python
 name: str
 ```
 
-#### value [#endstone.plugin.ServicePriority.value]
+#### <code className="doc-symbol doc-symbol-attribute"/> value [#endstone.plugin.ServicePriority.value]
 
 ```python
 value: int

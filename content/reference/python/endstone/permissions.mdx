@@ -2,7 +2,7 @@
 title: "endstone.permissions"
 ---
 
-## endstone.permissions [#endstone.permissions]
+## <code className="doc-symbol doc-symbol-module"/> endstone.permissions [#endstone.permissions]
 
 **Classes:**
 
@@ -15,7 +15,7 @@ Name | Description
 [`PermissionDefault`](#endstone.permissions.PermissionDefault) | Represents the possible default values for permissions
 [`PermissionLevel`](#endstone.permissions.PermissionLevel) |
 
-### Permissible [#endstone.permissions.Permissible]
+### <code className="doc-symbol doc-symbol-class"/> Permissible [#endstone.permissions.Permissible]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -64,7 +64,7 @@ Represents an object that may become a server operator and can be assigned permi
     </tr></tbody>
 </table>
 
-#### effective_permissions [#endstone.permissions.Permissible.effective_permissions]
+#### <code className="doc-symbol doc-symbol-attribute"/> effective_permissions [#endstone.permissions.Permissible.effective_permissions]
 
 ```python
 effective_permissions: set[PermissionAttachmentInfo]
@@ -72,7 +72,7 @@ effective_permissions: set[PermissionAttachmentInfo]
 
 Gets effective permissions.
 
-#### permission_level [#endstone.permissions.Permissible.permission_level]
+#### <code className="doc-symbol doc-symbol-attribute"/> permission_level [#endstone.permissions.Permissible.permission_level]
 
 ```python
 permission_level: PermissionLevel
@@ -80,7 +80,7 @@ permission_level: PermissionLevel
 
 Gets the permission level of this object
 
-#### recalculate_permissions [#endstone.permissions.Permissible.recalculate_permissions]
+#### <code className="doc-symbol doc-symbol-method"/> recalculate_permissions [#endstone.permissions.Permissible.recalculate_permissions]
 
 ```python
 recalculate_permissions() -> None
@@ -88,7 +88,7 @@ recalculate_permissions() -> None
 
 Recalculates the permissions.
 
-#### remove_attachment [#endstone.permissions.Permissible.remove_attachment]
+#### <code className="doc-symbol doc-symbol-method"/> remove_attachment [#endstone.permissions.Permissible.remove_attachment]
 
 ```python
 remove_attachment(attachment:PermissionAttachment) -> None
@@ -98,7 +98,7 @@ Removes a given PermissionAttachment.
 
 </div>
 
-### Permission [#endstone.permissions.Permission]
+### <code className="doc-symbol doc-symbol-class"/> Permission [#endstone.permissions.Permission]
 
 ```python
 Permission(
@@ -169,7 +169,7 @@ Represents a unique permission that may be attached to a Permissible
     </tr></tbody>
 </table>
 
-#### children [#endstone.permissions.Permission.children]
+#### <code className="doc-symbol doc-symbol-attribute"/> children [#endstone.permissions.Permission.children]
 
 ```python
 children: dict[str, bool]
@@ -177,7 +177,7 @@ children: dict[str, bool]
 
 Gets the children of this permission.
 
-#### default [#endstone.permissions.Permission.default]
+#### <code className="doc-symbol doc-symbol-attribute"/> default [#endstone.permissions.Permission.default]
 
 ```python
 default: PermissionDefault
@@ -185,7 +185,7 @@ default: PermissionDefault
 
 The default value of this permission.
 
-#### description [#endstone.permissions.Permission.description]
+#### <code className="doc-symbol doc-symbol-attribute"/> description [#endstone.permissions.Permission.description]
 
 ```python
 description: str
@@ -193,7 +193,7 @@ description: str
 
 The brief description of this permission
 
-#### name [#endstone.permissions.Permission.name]
+#### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.permissions.Permission.name]
 
 ```python
 name: str
@@ -201,7 +201,7 @@ name: str
 
 Gets the unique fully qualified name of this Permission.
 
-#### permissibles [#endstone.permissions.Permission.permissibles]
+#### <code className="doc-symbol doc-symbol-attribute"/> permissibles [#endstone.permissions.Permission.permissibles]
 
 ```python
 permissibles: set[Permissible]
@@ -209,7 +209,7 @@ permissibles: set[Permissible]
 
 Gets a set containing every Permissible that has this permission.
 
-#### recalculate_permissibles [#endstone.permissions.Permission.recalculate_permissibles]
+#### <code className="doc-symbol doc-symbol-method"/> recalculate_permissibles [#endstone.permissions.Permission.recalculate_permissibles]
 
 ```python
 recalculate_permissibles() -> None
@@ -219,7 +219,7 @@ Recalculates all Permissibles that contain this permission.
 
 </div>
 
-### PermissionAttachment [#endstone.permissions.PermissionAttachment]
+### <code className="doc-symbol doc-symbol-class"/> PermissionAttachment [#endstone.permissions.PermissionAttachment]
 
 ```python
 PermissionAttachment(plugin:Plugin, permissible:Permissible)
@@ -278,7 +278,7 @@ Holds information about a permission attachment on a Permissible object
     </tr></tbody>
 </table>
 
-#### permissible [#endstone.permissions.PermissionAttachment.permissible]
+#### <code className="doc-symbol doc-symbol-attribute"/> permissible [#endstone.permissions.PermissionAttachment.permissible]
 
 ```python
 permissible: Permissible
@@ -286,7 +286,7 @@ permissible: Permissible
 
 Gets the Permissible that this is attached to.
 
-#### permissions [#endstone.permissions.PermissionAttachment.permissions]
+#### <code className="doc-symbol doc-symbol-attribute"/> permissions [#endstone.permissions.PermissionAttachment.permissions]
 
 ```python
 permissions: dict[str, bool]
@@ -294,7 +294,7 @@ permissions: dict[str, bool]
 
 Gets a copy of all set permissions and values contained within this attachment.
 
-#### plugin [#endstone.permissions.PermissionAttachment.plugin]
+#### <code className="doc-symbol doc-symbol-attribute"/> plugin [#endstone.permissions.PermissionAttachment.plugin]
 
 ```python
 plugin: Plugin
@@ -302,7 +302,7 @@ plugin: Plugin
 
 Gets the plugin responsible for this attachment.
 
-#### removal_callback [#endstone.permissions.PermissionAttachment.removal_callback]
+#### <code className="doc-symbol doc-symbol-attribute"/> removal_callback [#endstone.permissions.PermissionAttachment.removal_callback]
 
 ```python
 removal_callback: typing.Callable[[PermissionAttachment], None]
@@ -310,7 +310,7 @@ removal_callback: typing.Callable[[PermissionAttachment], None]
 
 The callback to be called when this attachment is removed.
 
-#### remove [#endstone.permissions.PermissionAttachment.remove]
+#### <code className="doc-symbol doc-symbol-method"/> remove [#endstone.permissions.PermissionAttachment.remove]
 
 ```python
 remove() -> bool
@@ -320,7 +320,7 @@ Removes this attachment from its registered Permissible.
 
 </div>
 
-### PermissionAttachmentInfo [#endstone.permissions.PermissionAttachmentInfo]
+### <code className="doc-symbol doc-symbol-class"/> PermissionAttachmentInfo [#endstone.permissions.PermissionAttachmentInfo]
 
 ```python
 PermissionAttachmentInfo(
@@ -368,7 +368,7 @@ Holds information on a permission and which PermissionAttachment provides it
     </tr></tbody>
 </table>
 
-#### attachment [#endstone.permissions.PermissionAttachmentInfo.attachment]
+#### <code className="doc-symbol doc-symbol-attribute"/> attachment [#endstone.permissions.PermissionAttachmentInfo.attachment]
 
 ```python
 attachment: PermissionAttachment
@@ -376,7 +376,7 @@ attachment: PermissionAttachment
 
 Gets the attachment providing this permission.
 
-#### permissible [#endstone.permissions.PermissionAttachmentInfo.permissible]
+#### <code className="doc-symbol doc-symbol-attribute"/> permissible [#endstone.permissions.PermissionAttachmentInfo.permissible]
 
 ```python
 permissible: Permissible
@@ -384,7 +384,7 @@ permissible: Permissible
 
 Get the permissible this is attached to
 
-#### permission [#endstone.permissions.PermissionAttachmentInfo.permission]
+#### <code className="doc-symbol doc-symbol-attribute"/> permission [#endstone.permissions.PermissionAttachmentInfo.permission]
 
 ```python
 permission: str
@@ -392,7 +392,7 @@ permission: str
 
 Gets the permission being set
 
-#### value [#endstone.permissions.PermissionAttachmentInfo.value]
+#### <code className="doc-symbol doc-symbol-attribute"/> value [#endstone.permissions.PermissionAttachmentInfo.value]
 
 ```python
 value: bool
@@ -402,7 +402,7 @@ Gets the value of this permission
 
 </div>
 
-### PermissionDefault [#endstone.permissions.PermissionDefault]
+### <code className="doc-symbol doc-symbol-class"/> PermissionDefault [#endstone.permissions.PermissionDefault]
 
 ```python
 PermissionDefault(value:int)
@@ -470,55 +470,55 @@ Represents the possible default values for permissions
     </tr></tbody>
 </table>
 
-#### CONSOLE [#endstone.permissions.PermissionDefault.CONSOLE]
+#### <code className="doc-symbol doc-symbol-attribute"/> CONSOLE [#endstone.permissions.PermissionDefault.CONSOLE]
 
 ```python
 CONSOLE: PermissionDefault
 ```
 
-#### FALSE [#endstone.permissions.PermissionDefault.FALSE]
+#### <code className="doc-symbol doc-symbol-attribute"/> FALSE [#endstone.permissions.PermissionDefault.FALSE]
 
 ```python
 FALSE: PermissionDefault
 ```
 
-#### NOT_OP [#endstone.permissions.PermissionDefault.NOT_OP]
+#### <code className="doc-symbol doc-symbol-attribute"/> NOT_OP [#endstone.permissions.PermissionDefault.NOT_OP]
 
 ```python
 NOT_OP: PermissionDefault
 ```
 
-#### NOT_OPERATOR [#endstone.permissions.PermissionDefault.NOT_OPERATOR]
+#### <code className="doc-symbol doc-symbol-attribute"/> NOT_OPERATOR [#endstone.permissions.PermissionDefault.NOT_OPERATOR]
 
 ```python
 NOT_OPERATOR: PermissionDefault
 ```
 
-#### OP [#endstone.permissions.PermissionDefault.OP]
+#### <code className="doc-symbol doc-symbol-attribute"/> OP [#endstone.permissions.PermissionDefault.OP]
 
 ```python
 OP: PermissionDefault
 ```
 
-#### OPERATOR [#endstone.permissions.PermissionDefault.OPERATOR]
+#### <code className="doc-symbol doc-symbol-attribute"/> OPERATOR [#endstone.permissions.PermissionDefault.OPERATOR]
 
 ```python
 OPERATOR: PermissionDefault
 ```
 
-#### TRUE [#endstone.permissions.PermissionDefault.TRUE]
+#### <code className="doc-symbol doc-symbol-attribute"/> TRUE [#endstone.permissions.PermissionDefault.TRUE]
 
 ```python
 TRUE: PermissionDefault
 ```
 
-#### name [#endstone.permissions.PermissionDefault.name]
+#### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.permissions.PermissionDefault.name]
 
 ```python
 name: str
 ```
 
-#### value [#endstone.permissions.PermissionDefault.value]
+#### <code className="doc-symbol doc-symbol-attribute"/> value [#endstone.permissions.PermissionDefault.value]
 
 ```python
 value: int
@@ -526,7 +526,7 @@ value: int
 
 </div>
 
-### PermissionLevel [#endstone.permissions.PermissionLevel]
+### <code className="doc-symbol doc-symbol-class"/> PermissionLevel [#endstone.permissions.PermissionLevel]
 
 ```python
 PermissionLevel(value:int)
@@ -577,37 +577,37 @@ PermissionLevel(value:int)
     </tr></tbody>
 </table>
 
-#### CONSOLE [#endstone.permissions.PermissionLevel.CONSOLE]
+#### <code className="doc-symbol doc-symbol-attribute"/> CONSOLE [#endstone.permissions.PermissionLevel.CONSOLE]
 
 ```python
 CONSOLE: PermissionLevel
 ```
 
-#### DEFAULT [#endstone.permissions.PermissionLevel.DEFAULT]
+#### <code className="doc-symbol doc-symbol-attribute"/> DEFAULT [#endstone.permissions.PermissionLevel.DEFAULT]
 
 ```python
 DEFAULT: PermissionLevel
 ```
 
-#### OP [#endstone.permissions.PermissionLevel.OP]
+#### <code className="doc-symbol doc-symbol-attribute"/> OP [#endstone.permissions.PermissionLevel.OP]
 
 ```python
 OP: PermissionLevel
 ```
 
-#### OPERATOR [#endstone.permissions.PermissionLevel.OPERATOR]
+#### <code className="doc-symbol doc-symbol-attribute"/> OPERATOR [#endstone.permissions.PermissionLevel.OPERATOR]
 
 ```python
 OPERATOR: PermissionLevel
 ```
 
-#### name [#endstone.permissions.PermissionLevel.name]
+#### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.permissions.PermissionLevel.name]
 
 ```python
 name: str
 ```
 
-#### value [#endstone.permissions.PermissionLevel.value]
+#### <code className="doc-symbol doc-symbol-attribute"/> value [#endstone.permissions.PermissionLevel.value]
 
 ```python
 value: int

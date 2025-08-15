@@ -2,7 +2,7 @@
 title: "endstone.command"
 ---
 
-## endstone.command [#endstone.command]
+## <code className="doc-symbol doc-symbol-module"/> endstone.command [#endstone.command]
 
 **Classes:**
 
@@ -15,7 +15,7 @@ Name | Description
 [`CommandSenderWrapper`](#endstone.command.CommandSenderWrapper) | Represents a wrapper that forwards commands to the wrapped CommandSender and captures its output
 [`ConsoleCommandSender`](#endstone.command.ConsoleCommandSender) | Represents a console command sender.
 
-### BlockCommandSender [#endstone.command.BlockCommandSender]
+### <code className="doc-symbol doc-symbol-class"/> BlockCommandSender [#endstone.command.BlockCommandSender]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -41,7 +41,7 @@ Represents a block command sender.
     </tr></tbody>
 </table>
 
-#### block [#endstone.command.BlockCommandSender.block]
+#### <code className="doc-symbol doc-symbol-attribute"/> block [#endstone.command.BlockCommandSender.block]
 
 ```python
 block: Block
@@ -51,7 +51,7 @@ Returns the block this command sender belongs to
 
 </div>
 
-### Command [#endstone.command.Command]
+### <code className="doc-symbol doc-symbol-class"/> Command [#endstone.command.Command]
 
 ```python
 Command(
@@ -136,7 +136,7 @@ Represents a Command, which executes various tasks upon user input
     </tr></tbody>
 </table>
 
-#### aliases [#endstone.command.Command.aliases]
+#### <code className="doc-symbol doc-symbol-attribute"/> aliases [#endstone.command.Command.aliases]
 
 ```python
 aliases: list[str]
@@ -144,7 +144,7 @@ aliases: list[str]
 
 List of aliases of this command
 
-#### description [#endstone.command.Command.description]
+#### <code className="doc-symbol doc-symbol-attribute"/> description [#endstone.command.Command.description]
 
 ```python
 description: str
@@ -152,7 +152,7 @@ description: str
 
 Brief description of this command
 
-#### execute [#endstone.command.Command.execute]
+#### <code className="doc-symbol doc-symbol-method"/> execute [#endstone.command.Command.execute]
 
 ```python
 execute(sender:CommandSender, args:list[str]) -> bool
@@ -160,7 +160,7 @@ execute(sender:CommandSender, args:list[str]) -> bool
 
 Executes the command, returning its success
 
-#### is_registered [#endstone.command.Command.is_registered]
+#### <code className="doc-symbol doc-symbol-attribute"/> is_registered [#endstone.command.Command.is_registered]
 
 ```python
 is_registered: bool
@@ -168,7 +168,7 @@ is_registered: bool
 
 Returns the current registered state of this command
 
-#### name [#endstone.command.Command.name]
+#### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.command.Command.name]
 
 ```python
 name: str
@@ -176,7 +176,7 @@ name: str
 
 Name of this command.
 
-#### permissions [#endstone.command.Command.permissions]
+#### <code className="doc-symbol doc-symbol-attribute"/> permissions [#endstone.command.Command.permissions]
 
 ```python
 permissions: list[str]
@@ -184,7 +184,7 @@ permissions: list[str]
 
 The permissions required by users to be able to perform this command
 
-#### test_permission [#endstone.command.Command.test_permission]
+#### <code className="doc-symbol doc-symbol-method"/> test_permission [#endstone.command.Command.test_permission]
 
 ```python
 test_permission(target:CommandSender) -> bool
@@ -192,7 +192,7 @@ test_permission(target:CommandSender) -> bool
 
 Tests the given CommandSender to see if they can perform this command.
 
-#### test_permission_silently [#endstone.command.Command.test_permission_silently]
+#### <code className="doc-symbol doc-symbol-method"/> test_permission_silently [#endstone.command.Command.test_permission_silently]
 
 ```python
 test_permission_silently(target:CommandSender) -> bool
@@ -200,7 +200,7 @@ test_permission_silently(target:CommandSender) -> bool
 
 Tests the given CommandSender to see if they can perform this command. No error is sent to the sender.
 
-#### usages [#endstone.command.Command.usages]
+#### <code className="doc-symbol doc-symbol-attribute"/> usages [#endstone.command.Command.usages]
 
 ```python
 usages: list[str]
@@ -210,7 +210,7 @@ List of usages of this command
 
 </div>
 
-### CommandExecutor [#endstone.command.CommandExecutor]
+### <code className="doc-symbol doc-symbol-class"/> CommandExecutor [#endstone.command.CommandExecutor]
 
 ```python
 CommandExecutor()
@@ -236,7 +236,7 @@ Represents a class which contains a single method for executing commands
     </tr></tbody>
 </table>
 
-#### on_command [#endstone.command.CommandExecutor.on_command]
+#### <code className="doc-symbol doc-symbol-method"/> on_command [#endstone.command.CommandExecutor.on_command]
 
 ```python
 on_command(sender:CommandSender, command:Command, args:list[str]) -> bool
@@ -246,7 +246,7 @@ Executes the given command, returning its success.
 
 </div>
 
-### CommandSender [#endstone.command.CommandSender]
+### <code className="doc-symbol doc-symbol-class"/> CommandSender [#endstone.command.CommandSender]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -297,7 +297,7 @@ Represents a command sender.
     </tr></tbody>
 </table>
 
-#### name [#endstone.command.CommandSender.name]
+#### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.command.CommandSender.name]
 
 ```python
 name: str
@@ -305,7 +305,7 @@ name: str
 
 Gets the name of this command sender
 
-#### send_error_message [#endstone.command.CommandSender.send_error_message]
+#### <code className="doc-symbol doc-symbol-method"/> send_error_message [#endstone.command.CommandSender.send_error_message]
 
 ```python
 send_error_message(message:str | Translatable) -> None
@@ -313,7 +313,7 @@ send_error_message(message:str | Translatable) -> None
 
 Sends this sender an error message
 
-#### send_message [#endstone.command.CommandSender.send_message]
+#### <code className="doc-symbol doc-symbol-method"/> send_message [#endstone.command.CommandSender.send_message]
 
 ```python
 send_message(message:str | Translatable) -> None
@@ -321,7 +321,7 @@ send_message(message:str | Translatable) -> None
 
 Sends this sender a message
 
-#### server [#endstone.command.CommandSender.server]
+#### <code className="doc-symbol doc-symbol-attribute"/> server [#endstone.command.CommandSender.server]
 
 ```python
 server: Server
@@ -331,7 +331,7 @@ Returns the server instance that this command is running on
 
 </div>
 
-### CommandSenderWrapper [#endstone.command.CommandSenderWrapper]
+### <code className="doc-symbol doc-symbol-class"/> CommandSenderWrapper [#endstone.command.CommandSenderWrapper]
 
 ```python
 CommandSenderWrapper(
@@ -349,7 +349,7 @@ Represents a wrapper that forwards commands to the wrapped CommandSender and cap
 
 </div>
 
-### ConsoleCommandSender [#endstone.command.ConsoleCommandSender]
+### <code className="doc-symbol doc-symbol-class"/> ConsoleCommandSender [#endstone.command.ConsoleCommandSender]
 
 <div className="pl-[2em] mt-[1.25em]">
 

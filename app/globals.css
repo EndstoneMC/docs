@@ -157,3 +157,33 @@
         @apply font-mono;
     }
 }
+
+@layer components {
+    .doc-symbol::after {
+        @apply inline-block align-middle font-medium rounded text-center w-7 h-7 leading-7 text-lg mr-1;
+    }
+
+    .nextra-toc .doc-symbol::after {
+        @apply w-5 h-5 leading-5 text-xs mr-0;
+    }
+
+    .doc-symbol-module::after {
+        content: "M";
+        @apply bg-lime-700/20 text-lime-700;
+    }
+
+    .doc-symbol-class::after {
+        content: "C";
+        @apply bg-blue-700/20 text-blue-700;
+    }
+
+    .doc-symbol-method::after {
+        content: "f";
+        @apply bg-red-700/20 text-red-700 rounded-full;
+    }
+
+    .doc-symbol-attribute::after {
+        content: "p";
+        @apply bg-violet-700/20 text-violet-700 rounded-full;
+    }
+}

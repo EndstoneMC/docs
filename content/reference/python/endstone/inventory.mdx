@@ -2,7 +2,7 @@
 title: "endstone.inventory"
 ---
 
-## endstone.inventory [#endstone.inventory]
+## <code className="doc-symbol doc-symbol-module"/> endstone.inventory [#endstone.inventory]
 
 **Classes:**
 
@@ -17,7 +17,7 @@ Name | Description
 [`MapMeta`](#endstone.inventory.MapMeta) | Represents the metadata for a map item.
 [`PlayerInventory`](#endstone.inventory.PlayerInventory) | Interface to the inventory of a Player, including the four armor slots and any extra slots.
 
-### EquipmentSlot [#endstone.inventory.EquipmentSlot]
+### <code className="doc-symbol doc-symbol-class"/> EquipmentSlot [#endstone.inventory.EquipmentSlot]
 
 ```python
 EquipmentSlot(value:int)
@@ -83,55 +83,55 @@ EquipmentSlot(value:int)
     </tr></tbody>
 </table>
 
-#### BODY [#endstone.inventory.EquipmentSlot.BODY]
+#### <code className="doc-symbol doc-symbol-attribute"/> BODY [#endstone.inventory.EquipmentSlot.BODY]
 
 ```python
 BODY: EquipmentSlot
 ```
 
-#### CHEST [#endstone.inventory.EquipmentSlot.CHEST]
+#### <code className="doc-symbol doc-symbol-attribute"/> CHEST [#endstone.inventory.EquipmentSlot.CHEST]
 
 ```python
 CHEST: EquipmentSlot
 ```
 
-#### FEET [#endstone.inventory.EquipmentSlot.FEET]
+#### <code className="doc-symbol doc-symbol-attribute"/> FEET [#endstone.inventory.EquipmentSlot.FEET]
 
 ```python
 FEET: EquipmentSlot
 ```
 
-#### HAND [#endstone.inventory.EquipmentSlot.HAND]
+#### <code className="doc-symbol doc-symbol-attribute"/> HAND [#endstone.inventory.EquipmentSlot.HAND]
 
 ```python
 HAND: EquipmentSlot
 ```
 
-#### HEAD [#endstone.inventory.EquipmentSlot.HEAD]
+#### <code className="doc-symbol doc-symbol-attribute"/> HEAD [#endstone.inventory.EquipmentSlot.HEAD]
 
 ```python
 HEAD: EquipmentSlot
 ```
 
-#### LEGS [#endstone.inventory.EquipmentSlot.LEGS]
+#### <code className="doc-symbol doc-symbol-attribute"/> LEGS [#endstone.inventory.EquipmentSlot.LEGS]
 
 ```python
 LEGS: EquipmentSlot
 ```
 
-#### OFF_HAND [#endstone.inventory.EquipmentSlot.OFF_HAND]
+#### <code className="doc-symbol doc-symbol-attribute"/> OFF_HAND [#endstone.inventory.EquipmentSlot.OFF_HAND]
 
 ```python
 OFF_HAND: EquipmentSlot
 ```
 
-#### name [#endstone.inventory.EquipmentSlot.name]
+#### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.inventory.EquipmentSlot.name]
 
 ```python
 name: str
 ```
 
-#### value [#endstone.inventory.EquipmentSlot.value]
+#### <code className="doc-symbol doc-symbol-attribute"/> value [#endstone.inventory.EquipmentSlot.value]
 
 ```python
 value: int
@@ -139,7 +139,7 @@ value: int
 
 </div>
 
-### Inventory [#endstone.inventory.Inventory]
+### <code className="doc-symbol doc-symbol-class"/> Inventory [#endstone.inventory.Inventory]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -211,7 +211,7 @@ Interface to the various inventories.
     </tr></tbody>
 </table>
 
-#### add_item [#endstone.inventory.Inventory.add_item]
+#### <code className="doc-symbol doc-symbol-method"/> add_item [#endstone.inventory.Inventory.add_item]
 
 ```python
 add_item(*args) -> dict[int, ItemStack]
@@ -223,7 +223,7 @@ This will try to fill existing stacks and empty slots as well as it can.
 The returned map contains what it couldn't store, where the key is the index, and the value is the ItemStack.
 If all items are stored, it will return an empty dict.
 
-#### contents [#endstone.inventory.Inventory.contents]
+#### <code className="doc-symbol doc-symbol-attribute"/> contents [#endstone.inventory.Inventory.contents]
 
 ```python
 contents: list[ItemStack]
@@ -231,7 +231,7 @@ contents: list[ItemStack]
 
 Returns all ItemStacks from the inventory
 
-#### first_empty [#endstone.inventory.Inventory.first_empty]
+#### <code className="doc-symbol doc-symbol-attribute"/> first_empty [#endstone.inventory.Inventory.first_empty]
 
 ```python
 first_empty: int
@@ -239,7 +239,7 @@ first_empty: int
 
 Returns the first empty Slot.
 
-#### get_item [#endstone.inventory.Inventory.get_item]
+#### <code className="doc-symbol doc-symbol-method"/> get_item [#endstone.inventory.Inventory.get_item]
 
 ```python
 get_item(index:int) -> ItemStack
@@ -247,7 +247,7 @@ get_item(index:int) -> ItemStack
 
 Returns the ItemStack found in the slot at the given index
 
-#### is_empty [#endstone.inventory.Inventory.is_empty]
+#### <code className="doc-symbol doc-symbol-attribute"/> is_empty [#endstone.inventory.Inventory.is_empty]
 
 ```python
 is_empty: bool
@@ -255,7 +255,7 @@ is_empty: bool
 
 Check whether this inventory is empty. An inventory is considered to be empty if there are no ItemStacks in any slot of this inventory.
 
-#### max_stack_size [#endstone.inventory.Inventory.max_stack_size]
+#### <code className="doc-symbol doc-symbol-attribute"/> max_stack_size [#endstone.inventory.Inventory.max_stack_size]
 
 ```python
 max_stack_size: int
@@ -263,7 +263,7 @@ max_stack_size: int
 
 Returns the maximum stack size for an ItemStack in this inventory.
 
-#### remove_item [#endstone.inventory.Inventory.remove_item]
+#### <code className="doc-symbol doc-symbol-method"/> remove_item [#endstone.inventory.Inventory.remove_item]
 
 ```python
 remove_item(*args) -> dict[int, ItemStack]
@@ -275,7 +275,7 @@ It will try to remove 'as much as possible' from the types and amounts you give 
 The returned HashMap contains what it couldn't remove, where the key is the index, and the value is the ItemStack.
 If all the given ItemStacks are removed, it will return an empty dict.
 
-#### set_item [#endstone.inventory.Inventory.set_item]
+#### <code className="doc-symbol doc-symbol-method"/> set_item [#endstone.inventory.Inventory.set_item]
 
 ```python
 set_item(index:int, item:ItemStack) -> None
@@ -283,7 +283,7 @@ set_item(index:int, item:ItemStack) -> None
 
 Stores the ItemStack at the given index of the inventory.
 
-#### size [#endstone.inventory.Inventory.size]
+#### <code className="doc-symbol doc-symbol-attribute"/> size [#endstone.inventory.Inventory.size]
 
 ```python
 size: int
@@ -293,7 +293,7 @@ Returns the size of the inventory
 
 </div>
 
-### ItemFactory [#endstone.inventory.ItemFactory]
+### <code className="doc-symbol doc-symbol-class"/> ItemFactory [#endstone.inventory.ItemFactory]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -325,7 +325,7 @@ Returns the size of the inventory
     </tr></tbody>
 </table>
 
-#### as_meta_for [#endstone.inventory.ItemFactory.as_meta_for]
+#### <code className="doc-symbol doc-symbol-method"/> as_meta_for [#endstone.inventory.ItemFactory.as_meta_for]
 
 ```python
 as_meta_for(meta:ItemMeta, type:str) -> ItemMeta
@@ -333,7 +333,7 @@ as_meta_for(meta:ItemMeta, type:str) -> ItemMeta
 
 Returns an appropriate item meta for the specified item type.
 
-#### equals [#endstone.inventory.ItemFactory.equals]
+#### <code className="doc-symbol doc-symbol-method"/> equals [#endstone.inventory.ItemFactory.equals]
 
 ```python
 equals(meta1:ItemMeta, meta2:ItemMeta) -> bool
@@ -341,7 +341,7 @@ equals(meta1:ItemMeta, meta2:ItemMeta) -> bool
 
 This method is used to compare two ItemMeta objects.
 
-#### get_item_meta [#endstone.inventory.ItemFactory.get_item_meta]
+#### <code className="doc-symbol doc-symbol-method"/> get_item_meta [#endstone.inventory.ItemFactory.get_item_meta]
 
 ```python
 get_item_meta(type:str) -> ItemMeta
@@ -349,7 +349,7 @@ get_item_meta(type:str) -> ItemMeta
 
 This creates a new item meta for the item type.
 
-#### is_applicable [#endstone.inventory.ItemFactory.is_applicable]
+#### <code className="doc-symbol doc-symbol-method"/> is_applicable [#endstone.inventory.ItemFactory.is_applicable]
 
 ```python
 is_applicable(meta:ItemMeta, type:str) -> bool
@@ -359,7 +359,7 @@ This method checks the item meta to confirm that it is applicable (no data lost 
 
 </div>
 
-### ItemMeta [#endstone.inventory.ItemMeta]
+### <code className="doc-symbol doc-symbol-class"/> ItemMeta [#endstone.inventory.ItemMeta]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -469,7 +469,7 @@ Represents the metadata of a generic item.
     </tr></tbody>
 </table>
 
-#### add_enchant [#endstone.inventory.ItemMeta.add_enchant]
+#### <code className="doc-symbol doc-symbol-method"/> add_enchant [#endstone.inventory.ItemMeta.add_enchant]
 
 ```python
 add_enchant(id:str, level:int, force:bool = False) -> bool
@@ -477,7 +477,7 @@ add_enchant(id:str, level:int, force:bool = False) -> bool
 
 Adds the specified enchantment to this item meta.
 
-#### clone [#endstone.inventory.ItemMeta.clone]
+#### <code className="doc-symbol doc-symbol-method"/> clone [#endstone.inventory.ItemMeta.clone]
 
 ```python
 clone() -> ItemMeta
@@ -485,7 +485,7 @@ clone() -> ItemMeta
 
 Creates a clone of the current metadata.
 
-#### damage [#endstone.inventory.ItemMeta.damage]
+#### <code className="doc-symbol doc-symbol-attribute"/> damage [#endstone.inventory.ItemMeta.damage]
 
 ```python
 damage: int
@@ -493,7 +493,7 @@ damage: int
 
 Gets or sets the damage.
 
-#### display_name [#endstone.inventory.ItemMeta.display_name]
+#### <code className="doc-symbol doc-symbol-attribute"/> display_name [#endstone.inventory.ItemMeta.display_name]
 
 ```python
 display_name: str | None
@@ -501,7 +501,7 @@ display_name: str | None
 
 Gets or sets the display name.
 
-#### enchants [#endstone.inventory.ItemMeta.enchants]
+#### <code className="doc-symbol doc-symbol-attribute"/> enchants [#endstone.inventory.ItemMeta.enchants]
 
 ```python
 enchants: dict[str, int]
@@ -509,7 +509,7 @@ enchants: dict[str, int]
 
 Returns a copy the enchantments in this ItemMeta.
 
-#### get_enchant_level [#endstone.inventory.ItemMeta.get_enchant_level]
+#### <code className="doc-symbol doc-symbol-method"/> get_enchant_level [#endstone.inventory.ItemMeta.get_enchant_level]
 
 ```python
 get_enchant_level(id:str) -> int
@@ -517,7 +517,7 @@ get_enchant_level(id:str) -> int
 
 Checks for the level of the specified enchantment.
 
-#### has_damage [#endstone.inventory.ItemMeta.has_damage]
+#### <code className="doc-symbol doc-symbol-attribute"/> has_damage [#endstone.inventory.ItemMeta.has_damage]
 
 ```python
 has_damage: bool
@@ -525,7 +525,7 @@ has_damage: bool
 
 Checks to see if this item has damage.
 
-#### has_display_name [#endstone.inventory.ItemMeta.has_display_name]
+#### <code className="doc-symbol doc-symbol-attribute"/> has_display_name [#endstone.inventory.ItemMeta.has_display_name]
 
 ```python
 has_display_name: bool
@@ -533,7 +533,7 @@ has_display_name: bool
 
 Checks for existence of a display name.
 
-#### has_enchant [#endstone.inventory.ItemMeta.has_enchant]
+#### <code className="doc-symbol doc-symbol-method"/> has_enchant [#endstone.inventory.ItemMeta.has_enchant]
 
 ```python
 has_enchant(id:str) -> bool
@@ -541,7 +541,7 @@ has_enchant(id:str) -> bool
 
 Checks for existence of the specified enchantment.
 
-#### has_enchants [#endstone.inventory.ItemMeta.has_enchants]
+#### <code className="doc-symbol doc-symbol-attribute"/> has_enchants [#endstone.inventory.ItemMeta.has_enchants]
 
 ```python
 has_enchants: bool
@@ -549,7 +549,7 @@ has_enchants: bool
 
 Checks for the existence of any enchantments.
 
-#### has_lore [#endstone.inventory.ItemMeta.has_lore]
+#### <code className="doc-symbol doc-symbol-attribute"/> has_lore [#endstone.inventory.ItemMeta.has_lore]
 
 ```python
 has_lore: bool
@@ -557,7 +557,7 @@ has_lore: bool
 
 Checks for existence of lore.
 
-#### has_repair_cost [#endstone.inventory.ItemMeta.has_repair_cost]
+#### <code className="doc-symbol doc-symbol-attribute"/> has_repair_cost [#endstone.inventory.ItemMeta.has_repair_cost]
 
 ```python
 has_repair_cost: bool
@@ -565,7 +565,7 @@ has_repair_cost: bool
 
 Checks to see if this item has a repair penalty.
 
-#### is_unbreakable [#endstone.inventory.ItemMeta.is_unbreakable]
+#### <code className="doc-symbol doc-symbol-attribute"/> is_unbreakable [#endstone.inventory.ItemMeta.is_unbreakable]
 
 ```python
 is_unbreakable: bool
@@ -573,7 +573,7 @@ is_unbreakable: bool
 
 Gets or sets the unbreakable tag. An unbreakable item will not lose durability.
 
-#### lore [#endstone.inventory.ItemMeta.lore]
+#### <code className="doc-symbol doc-symbol-attribute"/> lore [#endstone.inventory.ItemMeta.lore]
 
 ```python
 lore: list[str] | None
@@ -581,7 +581,7 @@ lore: list[str] | None
 
 Gets or sets the lore for this item.
 
-#### remove_enchant [#endstone.inventory.ItemMeta.remove_enchant]
+#### <code className="doc-symbol doc-symbol-method"/> remove_enchant [#endstone.inventory.ItemMeta.remove_enchant]
 
 ```python
 remove_enchant(id:str) -> bool
@@ -589,7 +589,7 @@ remove_enchant(id:str) -> bool
 
 Removes the specified enchantment from this item meta.
 
-#### remove_enchants [#endstone.inventory.ItemMeta.remove_enchants]
+#### <code className="doc-symbol doc-symbol-method"/> remove_enchants [#endstone.inventory.ItemMeta.remove_enchants]
 
 ```python
 remove_enchants() -> None
@@ -597,7 +597,7 @@ remove_enchants() -> None
 
 Removes all enchantments from this item meta.
 
-#### repair_cost [#endstone.inventory.ItemMeta.repair_cost]
+#### <code className="doc-symbol doc-symbol-attribute"/> repair_cost [#endstone.inventory.ItemMeta.repair_cost]
 
 ```python
 repair_cost: int
@@ -607,7 +607,7 @@ Gets or sets the repair penalty.
 
 </div>
 
-### ItemStack [#endstone.inventory.ItemStack]
+### <code className="doc-symbol doc-symbol-class"/> ItemStack [#endstone.inventory.ItemStack]
 
 ```python
 ItemStack(type:str, amount:int = 1, data:int = 0)
@@ -675,7 +675,7 @@ Represents a stack of items.
     </tr></tbody>
 </table>
 
-#### amount [#endstone.inventory.ItemStack.amount]
+#### <code className="doc-symbol doc-symbol-attribute"/> amount [#endstone.inventory.ItemStack.amount]
 
 ```python
 amount: int
@@ -683,7 +683,7 @@ amount: int
 
 Gets or sets the amount of items in this stack.
 
-#### data [#endstone.inventory.ItemStack.data]
+#### <code className="doc-symbol doc-symbol-attribute"/> data [#endstone.inventory.ItemStack.data]
 
 ```python
 data: int
@@ -691,7 +691,7 @@ data: int
 
 Gets or sets the data for this stack of items.
 
-#### is_similar [#endstone.inventory.ItemStack.is_similar]
+#### <code className="doc-symbol doc-symbol-method"/> is_similar [#endstone.inventory.ItemStack.is_similar]
 
 ```python
 is_similar(other:ItemStack) -> bool
@@ -699,7 +699,7 @@ is_similar(other:ItemStack) -> bool
 
 Checks if the two stacks are equal, but does not consider stack size (amount).
 
-#### item_meta [#endstone.inventory.ItemStack.item_meta]
+#### <code className="doc-symbol doc-symbol-attribute"/> item_meta [#endstone.inventory.ItemStack.item_meta]
 
 ```python
 item_meta: ItemMeta
@@ -707,7 +707,7 @@ item_meta: ItemMeta
 
 Gets a copy of the ItemMeta of this ItemStack.
 
-#### max_stack_size [#endstone.inventory.ItemStack.max_stack_size]
+#### <code className="doc-symbol doc-symbol-attribute"/> max_stack_size [#endstone.inventory.ItemStack.max_stack_size]
 
 ```python
 max_stack_size: int
@@ -715,7 +715,7 @@ max_stack_size: int
 
 Get the maximum stack size for this item.
 
-#### set_item_meta [#endstone.inventory.ItemStack.set_item_meta]
+#### <code className="doc-symbol doc-symbol-method"/> set_item_meta [#endstone.inventory.ItemStack.set_item_meta]
 
 ```python
 set_item_meta(meta:ItemMeta) -> bool
@@ -723,7 +723,7 @@ set_item_meta(meta:ItemMeta) -> bool
 
 Set the ItemMeta of this ItemStack.
 
-#### type [#endstone.inventory.ItemStack.type]
+#### <code className="doc-symbol doc-symbol-attribute"/> type [#endstone.inventory.ItemStack.type]
 
 ```python
 type: str
@@ -733,7 +733,7 @@ Gets or sets the type of this item.
 
 </div>
 
-### ItemType [#endstone.inventory.ItemType]
+### <code className="doc-symbol doc-symbol-class"/> ItemType [#endstone.inventory.ItemType]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -793,7 +793,7 @@ Represents an item type.
     </tr></tbody>
 </table>
 
-#### get [#endstone.inventory.ItemType.get]
+#### <code className="doc-symbol doc-symbol-method"/> get [#endstone.inventory.ItemType.get]
 
 ```python
 get(name:str) -> ItemType
@@ -801,7 +801,7 @@ get(name:str) -> ItemType
 
 Attempts to get the ItemType with the given name.
 
-#### id [#endstone.inventory.ItemType.id]
+#### <code className="doc-symbol doc-symbol-attribute"/> id [#endstone.inventory.ItemType.id]
 
 ```python
 id: str
@@ -809,7 +809,7 @@ id: str
 
 Return the identifier of this item type.
 
-#### key [#endstone.inventory.ItemType.key]
+#### <code className="doc-symbol doc-symbol-attribute"/> key [#endstone.inventory.ItemType.key]
 
 ```python
 key: NamespacedKey
@@ -817,7 +817,7 @@ key: NamespacedKey
 
 Return the namespaced identifier of this item type.
 
-#### max_durability [#endstone.inventory.ItemType.max_durability]
+#### <code className="doc-symbol doc-symbol-attribute"/> max_durability [#endstone.inventory.ItemType.max_durability]
 
 ```python
 max_durability: int
@@ -825,7 +825,7 @@ max_durability: int
 
 Gets the maximum durability of this item type
 
-#### max_stack_size [#endstone.inventory.ItemType.max_stack_size]
+#### <code className="doc-symbol doc-symbol-attribute"/> max_stack_size [#endstone.inventory.ItemType.max_stack_size]
 
 ```python
 max_stack_size: int
@@ -833,7 +833,7 @@ max_stack_size: int
 
 Gets the maximum amount of this item type that can be held in a stack.
 
-#### translation_key [#endstone.inventory.ItemType.translation_key]
+#### <code className="doc-symbol doc-symbol-attribute"/> translation_key [#endstone.inventory.ItemType.translation_key]
 
 ```python
 translation_key: str
@@ -843,7 +843,7 @@ Get the translation key, suitable for use in a translation component.
 
 </div>
 
-### MapMeta [#endstone.inventory.MapMeta]
+### <code className="doc-symbol doc-symbol-class"/> MapMeta [#endstone.inventory.MapMeta]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -853,7 +853,7 @@ Represents the metadata for a map item.
 
 </div>
 
-### PlayerInventory [#endstone.inventory.PlayerInventory]
+### <code className="doc-symbol doc-symbol-class"/> PlayerInventory [#endstone.inventory.PlayerInventory]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -909,7 +909,7 @@ Interface to the inventory of a Player, including the four armor slots and any e
     </tr></tbody>
 </table>
 
-#### boots [#endstone.inventory.PlayerInventory.boots]
+#### <code className="doc-symbol doc-symbol-attribute"/> boots [#endstone.inventory.PlayerInventory.boots]
 
 ```python
 boots: ItemStack
@@ -917,7 +917,7 @@ boots: ItemStack
 
 Gets or sets the ItemStack in the boots slot
 
-#### chestplate [#endstone.inventory.PlayerInventory.chestplate]
+#### <code className="doc-symbol doc-symbol-attribute"/> chestplate [#endstone.inventory.PlayerInventory.chestplate]
 
 ```python
 chestplate: ItemStack
@@ -925,7 +925,7 @@ chestplate: ItemStack
 
 Gets or sets the ItemStack in the chestplate slot
 
-#### held_item_slot [#endstone.inventory.PlayerInventory.held_item_slot]
+#### <code className="doc-symbol doc-symbol-attribute"/> held_item_slot [#endstone.inventory.PlayerInventory.held_item_slot]
 
 ```python
 held_item_slot: int
@@ -933,7 +933,7 @@ held_item_slot: int
 
 Gets or sets the slot number of the currently held item
 
-#### helmet [#endstone.inventory.PlayerInventory.helmet]
+#### <code className="doc-symbol doc-symbol-attribute"/> helmet [#endstone.inventory.PlayerInventory.helmet]
 
 ```python
 helmet: ItemStack
@@ -941,7 +941,7 @@ helmet: ItemStack
 
 Gets or sets the ItemStack in the helmet slot
 
-#### item_in_main_hand [#endstone.inventory.PlayerInventory.item_in_main_hand]
+#### <code className="doc-symbol doc-symbol-attribute"/> item_in_main_hand [#endstone.inventory.PlayerInventory.item_in_main_hand]
 
 ```python
 item_in_main_hand: ItemStack
@@ -949,7 +949,7 @@ item_in_main_hand: ItemStack
 
 Gets or sets the item the player is currently holding in their main hand.
 
-#### item_in_off_hand [#endstone.inventory.PlayerInventory.item_in_off_hand]
+#### <code className="doc-symbol doc-symbol-attribute"/> item_in_off_hand [#endstone.inventory.PlayerInventory.item_in_off_hand]
 
 ```python
 item_in_off_hand: ItemStack
@@ -957,7 +957,7 @@ item_in_off_hand: ItemStack
 
 Gets or sets the item the player is currently holding in their off hand.
 
-#### leggings [#endstone.inventory.PlayerInventory.leggings]
+#### <code className="doc-symbol doc-symbol-attribute"/> leggings [#endstone.inventory.PlayerInventory.leggings]
 
 ```python
 leggings: ItemStack

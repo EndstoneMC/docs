@@ -2,7 +2,7 @@
 title: "endstone.form"
 ---
 
-## endstone.form [#endstone.form]
+## <code className="doc-symbol doc-symbol-module"/> endstone.form [#endstone.form]
 
 **Classes:**
 
@@ -21,7 +21,7 @@ Name | Description
 [`TextInput`](#endstone.form.TextInput) | Represents a text input field.
 [`Toggle`](#endstone.form.Toggle) | Represents a toggle button with a label.
 
-### ActionForm [#endstone.form.ActionForm]
+### <code className="doc-symbol doc-symbol-class"/> ActionForm [#endstone.form.ActionForm]
 
 ```python
 ActionForm(
@@ -103,7 +103,7 @@ Represents a form with buttons that let the player take action.
     </tr></tbody>
 </table>
 
-#### add_button [#endstone.form.ActionForm.add_button]
+#### <code className="doc-symbol doc-symbol-method"/> add_button [#endstone.form.ActionForm.add_button]
 
 ```python
 add_button(
@@ -115,7 +115,7 @@ add_button(
 
 Adds a button to the form.
 
-#### add_divider [#endstone.form.ActionForm.add_divider]
+#### <code className="doc-symbol doc-symbol-method"/> add_divider [#endstone.form.ActionForm.add_divider]
 
 ```python
 add_divider() -> ActionForm
@@ -123,7 +123,7 @@ add_divider() -> ActionForm
 
 Adds a divider to the form.
 
-#### add_header [#endstone.form.ActionForm.add_header]
+#### <code className="doc-symbol doc-symbol-method"/> add_header [#endstone.form.ActionForm.add_header]
 
 ```python
 add_header(text:str | Translatable) -> ActionForm
@@ -131,7 +131,7 @@ add_header(text:str | Translatable) -> ActionForm
 
 Adds a header to the form.
 
-#### add_label [#endstone.form.ActionForm.add_label]
+#### <code className="doc-symbol doc-symbol-method"/> add_label [#endstone.form.ActionForm.add_label]
 
 ```python
 add_label(text:str | Translatable) -> ActionForm
@@ -139,7 +139,7 @@ add_label(text:str | Translatable) -> ActionForm
 
 Adds a label to the form.
 
-#### content [#endstone.form.ActionForm.content]
+#### <code className="doc-symbol doc-symbol-attribute"/> content [#endstone.form.ActionForm.content]
 
 ```python
 content: str | Translatable
@@ -147,7 +147,7 @@ content: str | Translatable
 
 Gets or sets the content of the form.
 
-#### controls [#endstone.form.ActionForm.controls]
+#### <code className="doc-symbol doc-symbol-attribute"/> controls [#endstone.form.ActionForm.controls]
 
 ```python
 controls: list[Button | Divider | Header | Label]
@@ -155,7 +155,7 @@ controls: list[Button | Divider | Header | Label]
 
 Gets or sets the controls of the action form.
 
-#### on_close [#endstone.form.ActionForm.on_close]
+#### <code className="doc-symbol doc-symbol-attribute"/> on_close [#endstone.form.ActionForm.on_close]
 
 ```python
 on_close: typing.Callable[[Player], None]
@@ -163,7 +163,7 @@ on_close: typing.Callable[[Player], None]
 
 Gets or sets the on close callback.
 
-#### on_submit [#endstone.form.ActionForm.on_submit]
+#### <code className="doc-symbol doc-symbol-attribute"/> on_submit [#endstone.form.ActionForm.on_submit]
 
 ```python
 on_submit: typing.Callable[[Player, int], None]
@@ -171,7 +171,7 @@ on_submit: typing.Callable[[Player, int], None]
 
 Gets or sets the on submit callback.
 
-#### title [#endstone.form.ActionForm.title]
+#### <code className="doc-symbol doc-symbol-attribute"/> title [#endstone.form.ActionForm.title]
 
 ```python
 title: str | Translatable
@@ -181,7 +181,7 @@ Gets or sets the title of the form.
 
 </div>
 
-### Button [#endstone.form.Button]
+### <code className="doc-symbol doc-symbol-class"/> Button [#endstone.form.Button]
 
 ```python
 Button(
@@ -223,7 +223,7 @@ Represents a button with text and an optional icon.
     </tr></tbody>
 </table>
 
-#### icon [#endstone.form.Button.icon]
+#### <code className="doc-symbol doc-symbol-attribute"/> icon [#endstone.form.Button.icon]
 
 ```python
 icon: str | None
@@ -231,7 +231,7 @@ icon: str | None
 
 Gets or sets the icon path or URL of the button
 
-#### on_click [#endstone.form.Button.on_click]
+#### <code className="doc-symbol doc-symbol-attribute"/> on_click [#endstone.form.Button.on_click]
 
 ```python
 on_click: typing.Callable[[Player], None]
@@ -239,7 +239,7 @@ on_click: typing.Callable[[Player], None]
 
 Gets or sets the on click callback.
 
-#### text [#endstone.form.Button.text]
+#### <code className="doc-symbol doc-symbol-attribute"/> text [#endstone.form.Button.text]
 
 ```python
 text: str | Translatable
@@ -249,7 +249,7 @@ Gets or sets the text of the button
 
 </div>
 
-### Divider [#endstone.form.Divider]
+### <code className="doc-symbol doc-symbol-class"/> Divider [#endstone.form.Divider]
 
 ```python
 Divider()
@@ -261,7 +261,7 @@ Represents a divider.
 
 </div>
 
-### Dropdown [#endstone.form.Dropdown]
+### <code className="doc-symbol doc-symbol-class"/> Dropdown [#endstone.form.Dropdown]
 
 ```python
 Dropdown(
@@ -319,7 +319,7 @@ Represents a dropdown with a set of predefined options.
     </tr></tbody>
 </table>
 
-#### add_option [#endstone.form.Dropdown.add_option]
+#### <code className="doc-symbol doc-symbol-method"/> add_option [#endstone.form.Dropdown.add_option]
 
 ```python
 add_option(option:str) -> Dropdown
@@ -327,7 +327,7 @@ add_option(option:str) -> Dropdown
 
 Adds a new option to the dropdown.
 
-#### default_index [#endstone.form.Dropdown.default_index]
+#### <code className="doc-symbol doc-symbol-attribute"/> default_index [#endstone.form.Dropdown.default_index]
 
 ```python
 default_index: int | None
@@ -335,7 +335,7 @@ default_index: int | None
 
 Gets or sets the optional default index of the dropdown.
 
-#### label [#endstone.form.Dropdown.label]
+#### <code className="doc-symbol doc-symbol-attribute"/> label [#endstone.form.Dropdown.label]
 
 ```python
 label: str | Translatable
@@ -343,7 +343,7 @@ label: str | Translatable
 
 Gets or sets the label of the dropdown.
 
-#### options [#endstone.form.Dropdown.options]
+#### <code className="doc-symbol doc-symbol-attribute"/> options [#endstone.form.Dropdown.options]
 
 ```python
 options: list[str]
@@ -353,7 +353,7 @@ Gets or sets the options of the dropdown.
 
 </div>
 
-### Header [#endstone.form.Header]
+### <code className="doc-symbol doc-symbol-class"/> Header [#endstone.form.Header]
 
 ```python
 Header(label:str | Translatable = '')
@@ -381,7 +381,7 @@ Represents a header with a label.
     </tr></tbody>
 </table>
 
-#### label [#endstone.form.Header.label]
+#### <code className="doc-symbol doc-symbol-attribute"/> label [#endstone.form.Header.label]
 
 ```python
 label: str | Translatable
@@ -391,7 +391,7 @@ Gets or sets the label of the header.
 
 </div>
 
-### Label [#endstone.form.Label]
+### <code className="doc-symbol doc-symbol-class"/> Label [#endstone.form.Label]
 
 ```python
 Label(text:str | Translatable = '')
@@ -419,7 +419,7 @@ Represents a text label.
     </tr></tbody>
 </table>
 
-#### text [#endstone.form.Label.text]
+#### <code className="doc-symbol doc-symbol-attribute"/> text [#endstone.form.Label.text]
 
 ```python
 text: str | Translatable
@@ -429,7 +429,7 @@ Gets or sets the text of the label.
 
 </div>
 
-### MessageForm [#endstone.form.MessageForm]
+### <code className="doc-symbol doc-symbol-class"/> MessageForm [#endstone.form.MessageForm]
 
 ```python
 MessageForm(
@@ -489,7 +489,7 @@ Represents a form with two buttons.
     </tr></tbody>
 </table>
 
-#### button1 [#endstone.form.MessageForm.button1]
+#### <code className="doc-symbol doc-symbol-attribute"/> button1 [#endstone.form.MessageForm.button1]
 
 ```python
 button1: str | Translatable
@@ -497,7 +497,7 @@ button1: str | Translatable
 
 Gets or sets the text of button1.
 
-#### button2 [#endstone.form.MessageForm.button2]
+#### <code className="doc-symbol doc-symbol-attribute"/> button2 [#endstone.form.MessageForm.button2]
 
 ```python
 button2: str | Translatable
@@ -505,7 +505,7 @@ button2: str | Translatable
 
 Gets or sets the text of button2.
 
-#### content [#endstone.form.MessageForm.content]
+#### <code className="doc-symbol doc-symbol-attribute"/> content [#endstone.form.MessageForm.content]
 
 ```python
 content: str | Translatable
@@ -513,7 +513,7 @@ content: str | Translatable
 
 Gets or sets the content of the form.
 
-#### on_close [#endstone.form.MessageForm.on_close]
+#### <code className="doc-symbol doc-symbol-attribute"/> on_close [#endstone.form.MessageForm.on_close]
 
 ```python
 on_close: typing.Callable[[Player], None]
@@ -521,7 +521,7 @@ on_close: typing.Callable[[Player], None]
 
 Gets or sets the on close callback.
 
-#### on_submit [#endstone.form.MessageForm.on_submit]
+#### <code className="doc-symbol doc-symbol-attribute"/> on_submit [#endstone.form.MessageForm.on_submit]
 
 ```python
 on_submit: typing.Callable[[Player, int], None]
@@ -529,7 +529,7 @@ on_submit: typing.Callable[[Player, int], None]
 
 Gets or sets the on submit callback.
 
-#### title [#endstone.form.MessageForm.title]
+#### <code className="doc-symbol doc-symbol-attribute"/> title [#endstone.form.MessageForm.title]
 
 ```python
 title: str | Translatable
@@ -539,7 +539,7 @@ Gets or sets the title of the form.
 
 </div>
 
-### ModalForm [#endstone.form.ModalForm]
+### <code className="doc-symbol doc-symbol-class"/> ModalForm [#endstone.form.ModalForm]
 
 ```python
 ModalForm(
@@ -627,7 +627,7 @@ Represents a modal form with controls.
     </tr></tbody>
 </table>
 
-#### add_control [#endstone.form.ModalForm.add_control]
+#### <code className="doc-symbol doc-symbol-method"/> add_control [#endstone.form.ModalForm.add_control]
 
 ```python
 add_control(
@@ -646,7 +646,7 @@ add_control(
 
 Adds a control to the form.
 
-#### controls [#endstone.form.ModalForm.controls]
+#### <code className="doc-symbol doc-symbol-attribute"/> controls [#endstone.form.ModalForm.controls]
 
 ```python
 controls: list[
@@ -664,7 +664,7 @@ controls: list[
 
 Gets or sets the controls of the modal form.
 
-#### icon [#endstone.form.ModalForm.icon]
+#### <code className="doc-symbol doc-symbol-attribute"/> icon [#endstone.form.ModalForm.icon]
 
 ```python
 icon: str | None
@@ -672,7 +672,7 @@ icon: str | None
 
 Gets or sets the icon of the form.
 
-#### on_close [#endstone.form.ModalForm.on_close]
+#### <code className="doc-symbol doc-symbol-attribute"/> on_close [#endstone.form.ModalForm.on_close]
 
 ```python
 on_close: typing.Callable[[Player], None]
@@ -680,7 +680,7 @@ on_close: typing.Callable[[Player], None]
 
 Gets or sets the on close callback.
 
-#### on_submit [#endstone.form.ModalForm.on_submit]
+#### <code className="doc-symbol doc-symbol-attribute"/> on_submit [#endstone.form.ModalForm.on_submit]
 
 ```python
 on_submit: typing.Callable[[Player, str], None]
@@ -688,7 +688,7 @@ on_submit: typing.Callable[[Player, str], None]
 
 Gets or sets the on submit callback.
 
-#### submit_button [#endstone.form.ModalForm.submit_button]
+#### <code className="doc-symbol doc-symbol-attribute"/> submit_button [#endstone.form.ModalForm.submit_button]
 
 ```python
 submit_button: str | Translatable | None
@@ -696,7 +696,7 @@ submit_button: str | Translatable | None
 
 Gets or sets the submit button message of the form.
 
-#### title [#endstone.form.ModalForm.title]
+#### <code className="doc-symbol doc-symbol-attribute"/> title [#endstone.form.ModalForm.title]
 
 ```python
 title: str | Translatable
@@ -706,7 +706,7 @@ Gets or sets the title of the form.
 
 </div>
 
-### Slider [#endstone.form.Slider]
+### <code className="doc-symbol doc-symbol-class"/> Slider [#endstone.form.Slider]
 
 ```python
 Slider(
@@ -760,7 +760,7 @@ Represents a slider with a label.
     </tr></tbody>
 </table>
 
-#### default_value [#endstone.form.Slider.default_value]
+#### <code className="doc-symbol doc-symbol-attribute"/> default_value [#endstone.form.Slider.default_value]
 
 ```python
 default_value: float | None
@@ -768,7 +768,7 @@ default_value: float | None
 
 Gets or sets the optional default value of the slider.
 
-#### label [#endstone.form.Slider.label]
+#### <code className="doc-symbol doc-symbol-attribute"/> label [#endstone.form.Slider.label]
 
 ```python
 label: str | Translatable
@@ -776,7 +776,7 @@ label: str | Translatable
 
 Gets or sets the label of the slider.
 
-#### max [#endstone.form.Slider.max]
+#### <code className="doc-symbol doc-symbol-attribute"/> max [#endstone.form.Slider.max]
 
 ```python
 max: float
@@ -784,7 +784,7 @@ max: float
 
 Gets or sets the maximum value of the slider.
 
-#### min [#endstone.form.Slider.min]
+#### <code className="doc-symbol doc-symbol-attribute"/> min [#endstone.form.Slider.min]
 
 ```python
 min: float
@@ -792,7 +792,7 @@ min: float
 
 Gets or sets the minimum value of the slider.
 
-#### step [#endstone.form.Slider.step]
+#### <code className="doc-symbol doc-symbol-attribute"/> step [#endstone.form.Slider.step]
 
 ```python
 step: float
@@ -802,7 +802,7 @@ Gets or sets the step size of the slider.
 
 </div>
 
-### StepSlider [#endstone.form.StepSlider]
+### <code className="doc-symbol doc-symbol-class"/> StepSlider [#endstone.form.StepSlider]
 
 ```python
 StepSlider(
@@ -860,7 +860,7 @@ Represents a step slider with a set of predefined options.
     </tr></tbody>
 </table>
 
-#### add_option [#endstone.form.StepSlider.add_option]
+#### <code className="doc-symbol doc-symbol-method"/> add_option [#endstone.form.StepSlider.add_option]
 
 ```python
 add_option(option:str) -> Dropdown
@@ -868,7 +868,7 @@ add_option(option:str) -> Dropdown
 
 Adds a new option to the step slider.
 
-#### default_index [#endstone.form.StepSlider.default_index]
+#### <code className="doc-symbol doc-symbol-attribute"/> default_index [#endstone.form.StepSlider.default_index]
 
 ```python
 default_index: int | None
@@ -876,7 +876,7 @@ default_index: int | None
 
 Gets or sets the optional default index of the step slider.
 
-#### label [#endstone.form.StepSlider.label]
+#### <code className="doc-symbol doc-symbol-attribute"/> label [#endstone.form.StepSlider.label]
 
 ```python
 label: str | Translatable
@@ -884,7 +884,7 @@ label: str | Translatable
 
 Gets or sets the label of the step slider.
 
-#### options [#endstone.form.StepSlider.options]
+#### <code className="doc-symbol doc-symbol-attribute"/> options [#endstone.form.StepSlider.options]
 
 ```python
 options: list[str]
@@ -894,7 +894,7 @@ Gets or sets the options of the step slider.
 
 </div>
 
-### TextInput [#endstone.form.TextInput]
+### <code className="doc-symbol doc-symbol-class"/> TextInput [#endstone.form.TextInput]
 
 ```python
 TextInput(
@@ -936,7 +936,7 @@ Represents a text input field.
     </tr></tbody>
 </table>
 
-#### default_value [#endstone.form.TextInput.default_value]
+#### <code className="doc-symbol doc-symbol-attribute"/> default_value [#endstone.form.TextInput.default_value]
 
 ```python
 default_value: str | None
@@ -944,7 +944,7 @@ default_value: str | None
 
 Gets or sets the optional default text of the text input field.
 
-#### label [#endstone.form.TextInput.label]
+#### <code className="doc-symbol doc-symbol-attribute"/> label [#endstone.form.TextInput.label]
 
 ```python
 label: str | Translatable
@@ -952,7 +952,7 @@ label: str | Translatable
 
 Gets or sets the label of the text input field.
 
-#### placeholder [#endstone.form.TextInput.placeholder]
+#### <code className="doc-symbol doc-symbol-attribute"/> placeholder [#endstone.form.TextInput.placeholder]
 
 ```python
 placeholder: str | Translatable
@@ -962,7 +962,7 @@ Gets or sets the placeholder of the text input field.
 
 </div>
 
-### Toggle [#endstone.form.Toggle]
+### <code className="doc-symbol doc-symbol-class"/> Toggle [#endstone.form.Toggle]
 
 ```python
 Toggle(label:str | Translatable = '', default_value:bool = False)
@@ -995,7 +995,7 @@ Represents a toggle button with a label.
     </tr></tbody>
 </table>
 
-#### default_value [#endstone.form.Toggle.default_value]
+#### <code className="doc-symbol doc-symbol-attribute"/> default_value [#endstone.form.Toggle.default_value]
 
 ```python
 default_value: bool
@@ -1003,7 +1003,7 @@ default_value: bool
 
 Gets or sets the value of the toggle.
 
-#### label [#endstone.form.Toggle.label]
+#### <code className="doc-symbol doc-symbol-attribute"/> label [#endstone.form.Toggle.label]
 
 ```python
 label: str | Translatable

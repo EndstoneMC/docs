@@ -2,7 +2,7 @@
 title: "endstone.block"
 ---
 
-## endstone.block [#endstone.block]
+## <code className="doc-symbol doc-symbol-module"/> endstone.block [#endstone.block]
 
 **Classes:**
 
@@ -13,7 +13,7 @@ Name | Description
 [`BlockFace`](#endstone.block.BlockFace) |
 [`BlockState`](#endstone.block.BlockState) | Represents a captured state of a block, which will not update automatically.
 
-### Block [#endstone.block.Block]
+### <code className="doc-symbol doc-symbol-class"/> Block [#endstone.block.Block]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -91,7 +91,7 @@ Represents a block.
     </tr></tbody>
 </table>
 
-#### capture_state [#endstone.block.Block.capture_state]
+#### <code className="doc-symbol doc-symbol-method"/> capture_state [#endstone.block.Block.capture_state]
 
 ```python
 capture_state() -> BlockState
@@ -99,7 +99,7 @@ capture_state() -> BlockState
 
 Captures the current state of this block. The returned object will never be updated, and you are not guaranteed that (for example) a sign is still a sign after you capture its state.
 
-#### data [#endstone.block.Block.data]
+#### <code className="doc-symbol doc-symbol-attribute"/> data [#endstone.block.Block.data]
 
 ```python
 data: BlockData
@@ -107,7 +107,7 @@ data: BlockData
 
 Gets the complete data for this block
 
-#### dimension [#endstone.block.Block.dimension]
+#### <code className="doc-symbol doc-symbol-attribute"/> dimension [#endstone.block.Block.dimension]
 
 ```python
 dimension: Dimension
@@ -115,7 +115,7 @@ dimension: Dimension
 
 Gets the dimension which contains this Block
 
-#### location [#endstone.block.Block.location]
+#### <code className="doc-symbol doc-symbol-attribute"/> location [#endstone.block.Block.location]
 
 ```python
 location: Location
@@ -123,7 +123,7 @@ location: Location
 
 Gets the Location of the block
 
-#### set_data [#endstone.block.Block.set_data]
+#### <code className="doc-symbol doc-symbol-method"/> set_data [#endstone.block.Block.set_data]
 
 ```python
 set_data(data:BlockData, apply_physics:bool = True) -> None
@@ -131,7 +131,7 @@ set_data(data:BlockData, apply_physics:bool = True) -> None
 
 Sets the complete data for this block
 
-#### set_type [#endstone.block.Block.set_type]
+#### <code className="doc-symbol doc-symbol-method"/> set_type [#endstone.block.Block.set_type]
 
 ```python
 set_type(type:str, apply_physics:bool = True) -> None
@@ -139,7 +139,7 @@ set_type(type:str, apply_physics:bool = True) -> None
 
 Sets the type of this block
 
-#### type [#endstone.block.Block.type]
+#### <code className="doc-symbol doc-symbol-attribute"/> type [#endstone.block.Block.type]
 
 ```python
 type: str
@@ -147,7 +147,7 @@ type: str
 
 Gets or sets the type of the block.
 
-#### x [#endstone.block.Block.x]
+#### <code className="doc-symbol doc-symbol-attribute"/> x [#endstone.block.Block.x]
 
 ```python
 x: int
@@ -155,7 +155,7 @@ x: int
 
 Gets the x-coordinate of this block
 
-#### y [#endstone.block.Block.y]
+#### <code className="doc-symbol doc-symbol-attribute"/> y [#endstone.block.Block.y]
 
 ```python
 y: int
@@ -163,7 +163,7 @@ y: int
 
 Gets the y-coordinate of this block
 
-#### z [#endstone.block.Block.z]
+#### <code className="doc-symbol doc-symbol-attribute"/> z [#endstone.block.Block.z]
 
 ```python
 z: int
@@ -173,7 +173,7 @@ Gets the z-coordinate of this block
 
 </div>
 
-### BlockData [#endstone.block.BlockData]
+### <code className="doc-symbol doc-symbol-class"/> BlockData [#endstone.block.BlockData]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -207,7 +207,7 @@ Represents the data related to a live block
     </tr></tbody>
 </table>
 
-#### block_states [#endstone.block.BlockData.block_states]
+#### <code className="doc-symbol doc-symbol-attribute"/> block_states [#endstone.block.BlockData.block_states]
 
 ```python
 block_states: dict[str, bool | str | int]
@@ -215,7 +215,7 @@ block_states: dict[str, bool | str | int]
 
 Gets the block states for this block.
 
-#### runtime_id [#endstone.block.BlockData.runtime_id]
+#### <code className="doc-symbol doc-symbol-attribute"/> runtime_id [#endstone.block.BlockData.runtime_id]
 
 ```python
 runtime_id: int
@@ -223,7 +223,7 @@ runtime_id: int
 
 Gets the runtime id for this block.
 
-#### type [#endstone.block.BlockData.type]
+#### <code className="doc-symbol doc-symbol-attribute"/> type [#endstone.block.BlockData.type]
 
 ```python
 type: str
@@ -233,7 +233,7 @@ Get the block type represented by this block data.
 
 </div>
 
-### BlockFace [#endstone.block.BlockFace]
+### <code className="doc-symbol doc-symbol-class"/> BlockFace [#endstone.block.BlockFace]
 
 ```python
 BlockFace(value:int)
@@ -294,49 +294,49 @@ BlockFace(value:int)
     </tr></tbody>
 </table>
 
-#### DOWN [#endstone.block.BlockFace.DOWN]
+#### <code className="doc-symbol doc-symbol-attribute"/> DOWN [#endstone.block.BlockFace.DOWN]
 
 ```python
 DOWN: BlockFace
 ```
 
-#### EAST [#endstone.block.BlockFace.EAST]
+#### <code className="doc-symbol doc-symbol-attribute"/> EAST [#endstone.block.BlockFace.EAST]
 
 ```python
 EAST: BlockFace
 ```
 
-#### NORTH [#endstone.block.BlockFace.NORTH]
+#### <code className="doc-symbol doc-symbol-attribute"/> NORTH [#endstone.block.BlockFace.NORTH]
 
 ```python
 NORTH: BlockFace
 ```
 
-#### SOUTH [#endstone.block.BlockFace.SOUTH]
+#### <code className="doc-symbol doc-symbol-attribute"/> SOUTH [#endstone.block.BlockFace.SOUTH]
 
 ```python
 SOUTH: BlockFace
 ```
 
-#### UP [#endstone.block.BlockFace.UP]
+#### <code className="doc-symbol doc-symbol-attribute"/> UP [#endstone.block.BlockFace.UP]
 
 ```python
 UP: BlockFace
 ```
 
-#### WEST [#endstone.block.BlockFace.WEST]
+#### <code className="doc-symbol doc-symbol-attribute"/> WEST [#endstone.block.BlockFace.WEST]
 
 ```python
 WEST: BlockFace
 ```
 
-#### name [#endstone.block.BlockFace.name]
+#### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.block.BlockFace.name]
 
 ```python
 name: str
 ```
 
-#### value [#endstone.block.BlockFace.value]
+#### <code className="doc-symbol doc-symbol-attribute"/> value [#endstone.block.BlockFace.value]
 
 ```python
 value: int
@@ -344,7 +344,7 @@ value: int
 
 </div>
 
-### BlockState [#endstone.block.BlockState]
+### <code className="doc-symbol doc-symbol-class"/> BlockState [#endstone.block.BlockState]
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -419,7 +419,7 @@ Represents a captured state of a block, which will not update automatically.
     </tr></tbody>
 </table>
 
-#### block [#endstone.block.BlockState.block]
+#### <code className="doc-symbol doc-symbol-attribute"/> block [#endstone.block.BlockState.block]
 
 ```python
 block: Block
@@ -427,7 +427,7 @@ block: Block
 
 Gets the block represented by this block state.
 
-#### data [#endstone.block.BlockState.data]
+#### <code className="doc-symbol doc-symbol-attribute"/> data [#endstone.block.BlockState.data]
 
 ```python
 data: BlockData
@@ -435,7 +435,7 @@ data: BlockData
 
 Gets or sets the data for this block state.
 
-#### dimension [#endstone.block.BlockState.dimension]
+#### <code className="doc-symbol doc-symbol-attribute"/> dimension [#endstone.block.BlockState.dimension]
 
 ```python
 dimension: Dimension
@@ -443,7 +443,7 @@ dimension: Dimension
 
 Gets the dimension which contains the block represented by this block state.
 
-#### location [#endstone.block.BlockState.location]
+#### <code className="doc-symbol doc-symbol-attribute"/> location [#endstone.block.BlockState.location]
 
 ```python
 location: Location
@@ -451,7 +451,7 @@ location: Location
 
 Gets the location of this block state.
 
-#### type [#endstone.block.BlockState.type]
+#### <code className="doc-symbol doc-symbol-attribute"/> type [#endstone.block.BlockState.type]
 
 ```python
 type: str
@@ -459,7 +459,7 @@ type: str
 
 Gets or sets the type of this block state.
 
-#### update [#endstone.block.BlockState.update]
+#### <code className="doc-symbol doc-symbol-method"/> update [#endstone.block.BlockState.update]
 
 ```python
 update(force:bool = False, apply_physics:bool = True) -> bool
@@ -467,7 +467,7 @@ update(force:bool = False, apply_physics:bool = True) -> bool
 
 Attempts to update the block represented by this state.
 
-#### x [#endstone.block.BlockState.x]
+#### <code className="doc-symbol doc-symbol-attribute"/> x [#endstone.block.BlockState.x]
 
 ```python
 x: int
@@ -475,7 +475,7 @@ x: int
 
 Gets the x-coordinate of this block state.
 
-#### y [#endstone.block.BlockState.y]
+#### <code className="doc-symbol doc-symbol-attribute"/> y [#endstone.block.BlockState.y]
 
 ```python
 y: int
@@ -483,7 +483,7 @@ y: int
 
 Gets the y-coordinate of this block state.
 
-#### z [#endstone.block.BlockState.z]
+#### <code className="doc-symbol doc-symbol-attribute"/> z [#endstone.block.BlockState.z]
 
 ```python
 z: int
