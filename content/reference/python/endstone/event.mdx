@@ -6,85 +6,117 @@ title: "endstone.event"
 
 **Classes:**
 
-- [**ActorDamageEvent**](#endstone.event.ActorDamageEvent) – Called when an Actor is damaged.
-- [**ActorDeathEvent**](#endstone.event.ActorDeathEvent) – Called when an Actor dies.
-- [**ActorEvent**](#endstone.event.ActorEvent) – Represents an Actor-related event.
-- [**ActorExplodeEvent**](#endstone.event.ActorExplodeEvent) – Called when an Actor explodes.
-- [**ActorKnockbackEvent**](#endstone.event.ActorKnockbackEvent) – Called when a living entity receives knockback.
-- [**ActorRemoveEvent**](#endstone.event.ActorRemoveEvent) – Called when an Actor is removed.
-- [**ActorSpawnEvent**](#endstone.event.ActorSpawnEvent) – Called when an Actor is spawned into a world.
-- [**ActorTeleportEvent**](#endstone.event.ActorTeleportEvent) – Called when a non-player entity is teleported from one location to another.
-- [**BlockBreakEvent**](#endstone.event.BlockBreakEvent) – Called when a block is broken by a player.
-- [**BlockCookEvent**](#endstone.event.BlockCookEvent) – Called when an ItemStack is successfully cooked in a block.
-- [**BlockEvent**](#endstone.event.BlockEvent) – Represents an Block-related event
-- [**BlockPistonEvent**](#endstone.event.BlockPistonEvent) – Called when a piston block is triggered
-- [**BlockPistonExtendEvent**](#endstone.event.BlockPistonExtendEvent) – Called when a piston extends.
-- [**BlockPistonRetractEvent**](#endstone.event.BlockPistonRetractEvent) – Called when a piston retracts.
-- [**BlockPlaceEvent**](#endstone.event.BlockPlaceEvent) – Called when a block is placed by a player.
-- [**BroadcastMessageEvent**](#endstone.event.BroadcastMessageEvent) – Event triggered for server broadcast messages such as from Server.broadcast
-- [**Cancellable**](#endstone.event.Cancellable) – Represents an event that may be cancelled by a plugin or the server.
-- [**ChunkEvent**](#endstone.event.ChunkEvent) – Represents a Chunk related event
-- [**ChunkLoadEvent**](#endstone.event.ChunkLoadEvent) – Called when a chunk is loaded
-- [**ChunkUnloadEvent**](#endstone.event.ChunkUnloadEvent) – Called when a chunk is unloaded
-- [**DimensionEvent**](#endstone.event.DimensionEvent) – Represents events within a dimension
-- [**Event**](#endstone.event.Event) – Represents an event.
-- [**EventPriority**](#endstone.event.EventPriority) – Listeners are called in following order: LOWEST -> LOW -> NORMAL -> HIGH -> HIGHEST -> MONITOR
-- [**EventResult**](#endstone.event.EventResult) –
-- [**LeavesDecayEvent**](#endstone.event.LeavesDecayEvent) – Called when leaves are decaying naturally.
-- [**LevelEvent**](#endstone.event.LevelEvent) – Represents events within a level
-- [**MobEvent**](#endstone.event.MobEvent) – Represents an Mob-related event.
-- [**PacketReceiveEvent**](#endstone.event.PacketReceiveEvent) – Called when the server receives a packet from a connected client.
-- [**PacketSendEvent**](#endstone.event.PacketSendEvent) – Called when the server sends a packet to a connected client.
-- [**PlayerBedEnterEvent**](#endstone.event.PlayerBedEnterEvent) – Called when a player is almost about to enter the bed.
-- [**PlayerBedLeaveEvent**](#endstone.event.PlayerBedLeaveEvent) – Called when a player is leaving a bed.
-- [**PlayerChatEvent**](#endstone.event.PlayerChatEvent) – Called when a player sends a chat message.
-- [**PlayerCommandEvent**](#endstone.event.PlayerCommandEvent) – Called whenever a player runs a command.
-- [**PlayerDeathEvent**](#endstone.event.PlayerDeathEvent) – Called when a player dies
-- [**PlayerDropItemEvent**](#endstone.event.PlayerDropItemEvent) – Called when a player drops an item from their inventory
-- [**PlayerEmoteEvent**](#endstone.event.PlayerEmoteEvent) – Called when a player uses and emote
-- [**PlayerEvent**](#endstone.event.PlayerEvent) – Represents a player related event
-- [**PlayerGameModeChangeEvent**](#endstone.event.PlayerGameModeChangeEvent) – Called when the GameMode of the player is changed.
-- [**PlayerInteractActorEvent**](#endstone.event.PlayerInteractActorEvent) – Represents an event that is called when a player right-clicks an actor.
-- [**PlayerInteractEvent**](#endstone.event.PlayerInteractEvent) – Represents an event that is called when a player right-clicks a block.
-- [**PlayerItemConsumeEvent**](#endstone.event.PlayerItemConsumeEvent) – Called when a player is finishing consuming an item (food, potion, milk bucket).
-- [**PlayerItemHeldEvent**](#endstone.event.PlayerItemHeldEvent) – Called when a player changes their currently held item.
-- [**PlayerJoinEvent**](#endstone.event.PlayerJoinEvent) – Called when a player joins a server
-- [**PlayerJumpEvent**](#endstone.event.PlayerJumpEvent) – Called when a player jumps.
-- [**PlayerKickEvent**](#endstone.event.PlayerKickEvent) – Called when a player gets kicked from the server
-- [**PlayerLoginEvent**](#endstone.event.PlayerLoginEvent) – Called when a player attempts to login in.
-- [**PlayerMoveEvent**](#endstone.event.PlayerMoveEvent) – Called when a player moves.
-- [**PlayerPickupItemEvent**](#endstone.event.PlayerPickupItemEvent) – Called when a player picks an item up from the ground.
-- [**PlayerQuitEvent**](#endstone.event.PlayerQuitEvent) – Called when a player leaves a server.
-- [**PlayerRespawnEvent**](#endstone.event.PlayerRespawnEvent) – Called when a player respawns.
-- [**PlayerSkinChangeEvent**](#endstone.event.PlayerSkinChangeEvent) – Called when a player changes their skin.
-- [**PlayerTeleportEvent**](#endstone.event.PlayerTeleportEvent) – Called when a player is teleported from one location to another.
-- [**PluginDisableEvent**](#endstone.event.PluginDisableEvent) – Called when a plugin is disabled.
-- [**PluginEnableEvent**](#endstone.event.PluginEnableEvent) – Called when a plugin is enabled.
-- [**ScriptMessageEvent**](#endstone.event.ScriptMessageEvent) – Called when a message is sent by `/scriptevent` command
-- [**ServerCommandEvent**](#endstone.event.ServerCommandEvent) – Called when the console runs a command, early in the process.
-- [**ServerEvent**](#endstone.event.ServerEvent) – Represents a server-related event
-- [**ServerListPingEvent**](#endstone.event.ServerListPingEvent) – Called when a server ping is coming in.
-- [**ServerLoadEvent**](#endstone.event.ServerLoadEvent) – Called when either the server startup or reload has completed.
-- [**ThunderChangeEvent**](#endstone.event.ThunderChangeEvent) – Called when the thunder state in a world is changing.
-- [**WeatherChangeEvent**](#endstone.event.WeatherChangeEvent) – Called when the weather (rain) state in a world is changing.
-- [**WeatherEvent**](#endstone.event.WeatherEvent) – Represents a weather-related event
+Name | Description
+---- | -----------
+[`ActorDamageEvent`](#endstone.event.ActorDamageEvent) | Called when an Actor is damaged.
+[`ActorDeathEvent`](#endstone.event.ActorDeathEvent) | Called when an Actor dies.
+[`ActorEvent`](#endstone.event.ActorEvent) | Represents an Actor-related event.
+[`ActorExplodeEvent`](#endstone.event.ActorExplodeEvent) | Called when an Actor explodes.
+[`ActorKnockbackEvent`](#endstone.event.ActorKnockbackEvent) | Called when a living entity receives knockback.
+[`ActorRemoveEvent`](#endstone.event.ActorRemoveEvent) | Called when an Actor is removed.
+[`ActorSpawnEvent`](#endstone.event.ActorSpawnEvent) | Called when an Actor is spawned into a world.
+[`ActorTeleportEvent`](#endstone.event.ActorTeleportEvent) | Called when a non-player entity is teleported from one location to another.
+[`BlockBreakEvent`](#endstone.event.BlockBreakEvent) | Called when a block is broken by a player.
+[`BlockCookEvent`](#endstone.event.BlockCookEvent) | Called when an ItemStack is successfully cooked in a block.
+[`BlockEvent`](#endstone.event.BlockEvent) | Represents an Block-related event
+[`BlockPistonEvent`](#endstone.event.BlockPistonEvent) | Called when a piston block is triggered
+[`BlockPistonExtendEvent`](#endstone.event.BlockPistonExtendEvent) | Called when a piston extends.
+[`BlockPistonRetractEvent`](#endstone.event.BlockPistonRetractEvent) | Called when a piston retracts.
+[`BlockPlaceEvent`](#endstone.event.BlockPlaceEvent) | Called when a block is placed by a player.
+[`BroadcastMessageEvent`](#endstone.event.BroadcastMessageEvent) | Event triggered for server broadcast messages such as from Server.broadcast
+[`Cancellable`](#endstone.event.Cancellable) | Represents an event that may be cancelled by a plugin or the server.
+[`ChunkEvent`](#endstone.event.ChunkEvent) | Represents a Chunk related event
+[`ChunkLoadEvent`](#endstone.event.ChunkLoadEvent) | Called when a chunk is loaded
+[`ChunkUnloadEvent`](#endstone.event.ChunkUnloadEvent) | Called when a chunk is unloaded
+[`DimensionEvent`](#endstone.event.DimensionEvent) | Represents events within a dimension
+[`Event`](#endstone.event.Event) | Represents an event.
+[`EventPriority`](#endstone.event.EventPriority) | Listeners are called in following order: LOWEST -> LOW -> NORMAL -> HIGH -> HIGHEST -> MONITOR
+[`EventResult`](#endstone.event.EventResult) |
+[`LeavesDecayEvent`](#endstone.event.LeavesDecayEvent) | Called when leaves are decaying naturally.
+[`LevelEvent`](#endstone.event.LevelEvent) | Represents events within a level
+[`MobEvent`](#endstone.event.MobEvent) | Represents an Mob-related event.
+[`PacketReceiveEvent`](#endstone.event.PacketReceiveEvent) | Called when the server receives a packet from a connected client.
+[`PacketSendEvent`](#endstone.event.PacketSendEvent) | Called when the server sends a packet to a connected client.
+[`PlayerBedEnterEvent`](#endstone.event.PlayerBedEnterEvent) | Called when a player is almost about to enter the bed.
+[`PlayerBedLeaveEvent`](#endstone.event.PlayerBedLeaveEvent) | Called when a player is leaving a bed.
+[`PlayerChatEvent`](#endstone.event.PlayerChatEvent) | Called when a player sends a chat message.
+[`PlayerCommandEvent`](#endstone.event.PlayerCommandEvent) | Called whenever a player runs a command.
+[`PlayerDeathEvent`](#endstone.event.PlayerDeathEvent) | Called when a player dies
+[`PlayerDropItemEvent`](#endstone.event.PlayerDropItemEvent) | Called when a player drops an item from their inventory
+[`PlayerEmoteEvent`](#endstone.event.PlayerEmoteEvent) | Called when a player uses and emote
+[`PlayerEvent`](#endstone.event.PlayerEvent) | Represents a player related event
+[`PlayerGameModeChangeEvent`](#endstone.event.PlayerGameModeChangeEvent) | Called when the GameMode of the player is changed.
+[`PlayerInteractActorEvent`](#endstone.event.PlayerInteractActorEvent) | Represents an event that is called when a player right-clicks an actor.
+[`PlayerInteractEvent`](#endstone.event.PlayerInteractEvent) | Represents an event that is called when a player right-clicks a block.
+[`PlayerItemConsumeEvent`](#endstone.event.PlayerItemConsumeEvent) | Called when a player is finishing consuming an item (food, potion, milk bucket).
+[`PlayerItemHeldEvent`](#endstone.event.PlayerItemHeldEvent) | Called when a player changes their currently held item.
+[`PlayerJoinEvent`](#endstone.event.PlayerJoinEvent) | Called when a player joins a server
+[`PlayerJumpEvent`](#endstone.event.PlayerJumpEvent) | Called when a player jumps.
+[`PlayerKickEvent`](#endstone.event.PlayerKickEvent) | Called when a player gets kicked from the server
+[`PlayerLoginEvent`](#endstone.event.PlayerLoginEvent) | Called when a player attempts to login in.
+[`PlayerMoveEvent`](#endstone.event.PlayerMoveEvent) | Called when a player moves.
+[`PlayerPickupItemEvent`](#endstone.event.PlayerPickupItemEvent) | Called when a player picks an item up from the ground.
+[`PlayerQuitEvent`](#endstone.event.PlayerQuitEvent) | Called when a player leaves a server.
+[`PlayerRespawnEvent`](#endstone.event.PlayerRespawnEvent) | Called when a player respawns.
+[`PlayerSkinChangeEvent`](#endstone.event.PlayerSkinChangeEvent) | Called when a player changes their skin.
+[`PlayerTeleportEvent`](#endstone.event.PlayerTeleportEvent) | Called when a player is teleported from one location to another.
+[`PluginDisableEvent`](#endstone.event.PluginDisableEvent) | Called when a plugin is disabled.
+[`PluginEnableEvent`](#endstone.event.PluginEnableEvent) | Called when a plugin is enabled.
+[`ScriptMessageEvent`](#endstone.event.ScriptMessageEvent) | Called when a message is sent by `/scriptevent` command
+[`ServerCommandEvent`](#endstone.event.ServerCommandEvent) | Called when the console runs a command, early in the process.
+[`ServerEvent`](#endstone.event.ServerEvent) | Represents a server-related event
+[`ServerListPingEvent`](#endstone.event.ServerListPingEvent) | Called when a server ping is coming in.
+[`ServerLoadEvent`](#endstone.event.ServerLoadEvent) | Called when either the server startup or reload has completed.
+[`ThunderChangeEvent`](#endstone.event.ThunderChangeEvent) | Called when the thunder state in a world is changing.
+[`WeatherChangeEvent`](#endstone.event.WeatherChangeEvent) | Called when the weather (rain) state in a world is changing.
+[`WeatherEvent`](#endstone.event.WeatherEvent) | Represents a weather-related event
 
 **Methods:**
 
-- [**event_handler**](#endstone.event.event_handler) –
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="event_handler">
+        <td>[`event_handler`](#endstone.event.event_handler)</td>
+        <td></td>
+    </tr></tbody>
+</table>
 
 ### ActorDamageEvent [#endstone.event.ActorDamageEvent]
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[MobEvent](#endstone._internal.endstone_python.MobEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[MobEvent](#endstone._internal.endstone_python.MobEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when an Actor is damaged.
 
 **Attributes:**
 
-- [**damage**](#endstone.event.ActorDamageEvent.damage) (<code>[float](#float)</code>) – Gets or sets the amount of damage caused by the event
-- [**damage_source**](#endstone.event.ActorDamageEvent.damage_source) (<code>[DamageSource](#endstone._internal.endstone_python.DamageSource)</code>) – Gets the source of damage.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="damage">
+        <td>[`damage`](#endstone.event.ActorDamageEvent.damage)</td>
+        <td><code className="nextra-code">[float](#float)</code></td>
+        <td>Gets or sets the amount of damage caused by the event</td>
+    </tr>
+    <tr key="damage_source">
+        <td>[`damage_source`](#endstone.event.ActorDamageEvent.damage_source)</td>
+        <td><code className="nextra-code">[DamageSource](#endstone._internal.endstone_python.DamageSource)</code></td>
+        <td>Gets the source of damage.</td>
+    </tr></tbody>
+</table>
 
 #### damage [#endstone.event.ActorDamageEvent.damage]
 
@@ -108,13 +140,27 @@ Gets the source of damage.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[MobEvent](#endstone._internal.endstone_python.MobEvent)</code>
+Bases: <code className="nextra-code">[MobEvent](#endstone._internal.endstone_python.MobEvent)</code>
 
 Called when an Actor dies.
 
 **Attributes:**
 
-- [**damage_source**](#endstone.event.ActorDeathEvent.damage_source) (<code>[DamageSource](#endstone._internal.endstone_python.DamageSource)</code>) – Gets the source of damage which caused the death.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="damage_source">
+        <td>[`damage_source`](#endstone.event.ActorDeathEvent.damage_source)</td>
+        <td><code className="nextra-code">[DamageSource](#endstone._internal.endstone_python.DamageSource)</code></td>
+        <td>Gets the source of damage which caused the death.</td>
+    </tr></tbody>
+</table>
 
 #### damage_source [#endstone.event.ActorDeathEvent.damage_source]
 
@@ -130,13 +176,27 @@ Gets the source of damage which caused the death.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[Event](#endstone._internal.endstone_python.Event)</code>
+Bases: <code className="nextra-code">[Event](#endstone._internal.endstone_python.Event)</code>
 
 Represents an Actor-related event.
 
 **Attributes:**
 
-- [**actor**](#endstone.event.ActorEvent.actor) (<code>[Actor](#endstone._internal.endstone_python.Actor)</code>) – Returns the Actor involved in this event
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="actor">
+        <td>[`actor`](#endstone.event.ActorEvent.actor)</td>
+        <td><code className="nextra-code">[Actor](#endstone._internal.endstone_python.Actor)</code></td>
+        <td>Returns the Actor involved in this event</td>
+    </tr></tbody>
+</table>
 
 #### actor [#endstone.event.ActorEvent.actor]
 
@@ -152,14 +212,32 @@ Returns the Actor involved in this event
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[ActorEvent](#endstone._internal.endstone_python.ActorEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[ActorEvent](#endstone._internal.endstone_python.ActorEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when an Actor explodes.
 
 **Attributes:**
 
-- [**block_list**](#endstone.event.ActorExplodeEvent.block_list) (<code>[list](#list)\[[Block](#endstone._internal.endstone_python.Block)\]</code>) – Gets or sets the list of blocks that would have been removed or were removed from the explosion event.
-- [**location**](#endstone.event.ActorExplodeEvent.location) (<code>[Location](#endstone._internal.endstone_python.Location)</code>) – Returns the location where the explosion happened.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="block_list">
+        <td>[`block_list`](#endstone.event.ActorExplodeEvent.block_list)</td>
+        <td><code className="nextra-code">[list](#list)[[Block](#endstone._internal.endstone_python.Block)]</code></td>
+        <td>Gets or sets the list of blocks that would have been removed or were removed from the explosion event.</td>
+    </tr>
+    <tr key="location">
+        <td>[`location`](#endstone.event.ActorExplodeEvent.location)</td>
+        <td><code className="nextra-code">[Location](#endstone._internal.endstone_python.Location)</code></td>
+        <td>Returns the location where the explosion happened.</td>
+    </tr></tbody>
+</table>
 
 #### block_list [#endstone.event.ActorExplodeEvent.block_list]
 
@@ -183,14 +261,32 @@ Returns the location where the explosion happened.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[MobEvent](#endstone._internal.endstone_python.MobEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[MobEvent](#endstone._internal.endstone_python.MobEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a living entity receives knockback.
 
 **Attributes:**
 
-- [**knockback**](#endstone.event.ActorKnockbackEvent.knockback) (<code>[Vector](#endstone._internal.endstone_python.Vector)</code>) – Gets or sets the knockback that will be applied to the entity.
-- [**source**](#endstone.event.ActorKnockbackEvent.source) (<code>[Actor](#endstone._internal.endstone_python.Actor)</code>) – Get the source actor that has caused knockback to the defender, if exists.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="knockback">
+        <td>[`knockback`](#endstone.event.ActorKnockbackEvent.knockback)</td>
+        <td><code className="nextra-code">[Vector](#endstone._internal.endstone_python.Vector)</code></td>
+        <td>Gets or sets the knockback that will be applied to the entity.</td>
+    </tr>
+    <tr key="source">
+        <td>[`source`](#endstone.event.ActorKnockbackEvent.source)</td>
+        <td><code className="nextra-code">[Actor](#endstone._internal.endstone_python.Actor)</code></td>
+        <td>Get the source actor that has caused knockback to the defender, if exists.</td>
+    </tr></tbody>
+</table>
 
 #### knockback [#endstone.event.ActorKnockbackEvent.knockback]
 
@@ -214,7 +310,7 @@ Get the source actor that has caused knockback to the defender, if exists.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[ActorEvent](#endstone._internal.endstone_python.ActorEvent)</code>
+Bases: <code className="nextra-code">[ActorEvent](#endstone._internal.endstone_python.ActorEvent)</code>
 
 Called when an Actor is removed.
 
@@ -224,7 +320,7 @@ Called when an Actor is removed.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[ActorEvent](#endstone._internal.endstone_python.ActorEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[ActorEvent](#endstone._internal.endstone_python.ActorEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when an Actor is spawned into a world.
 
@@ -234,14 +330,32 @@ Called when an Actor is spawned into a world.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[ActorEvent](#endstone._internal.endstone_python.ActorEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[ActorEvent](#endstone._internal.endstone_python.ActorEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a non-player entity is teleported from one location to another.
 
 **Attributes:**
 
-- [**from_location**](#endstone.event.ActorTeleportEvent.from_location) (<code>[Location](#endstone._internal.endstone_python.Location)</code>) – Gets or sets the location that this actor moved from.
-- [**to_location**](#endstone.event.ActorTeleportEvent.to_location) (<code>[Location](#endstone._internal.endstone_python.Location)</code>) – Gets or sets the location that this actor moved to.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="from_location">
+        <td>[`from_location`](#endstone.event.ActorTeleportEvent.from_location)</td>
+        <td><code className="nextra-code">[Location](#endstone._internal.endstone_python.Location)</code></td>
+        <td>Gets or sets the location that this actor moved from.</td>
+    </tr>
+    <tr key="to_location">
+        <td>[`to_location`](#endstone.event.ActorTeleportEvent.to_location)</td>
+        <td><code className="nextra-code">[Location](#endstone._internal.endstone_python.Location)</code></td>
+        <td>Gets or sets the location that this actor moved to.</td>
+    </tr></tbody>
+</table>
 
 #### from_location [#endstone.event.ActorTeleportEvent.from_location]
 
@@ -265,13 +379,27 @@ Gets or sets the location that this actor moved to.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[BlockEvent](#endstone._internal.endstone_python.BlockEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[BlockEvent](#endstone._internal.endstone_python.BlockEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a block is broken by a player.
 
 **Attributes:**
 
-- [**player**](#endstone.event.BlockBreakEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Gets the Player that is breaking the block involved in this event.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="player">
+        <td>[`player`](#endstone.event.BlockBreakEvent.player)</td>
+        <td><code className="nextra-code">[Player](#endstone._internal.endstone_python.Player)</code></td>
+        <td>Gets the Player that is breaking the block involved in this event.</td>
+    </tr></tbody>
+</table>
 
 #### player [#endstone.event.BlockBreakEvent.player]
 
@@ -287,14 +415,32 @@ Gets the Player that is breaking the block involved in this event.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[BlockEvent](#endstone._internal.endstone_python.BlockEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[BlockEvent](#endstone._internal.endstone_python.BlockEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when an ItemStack is successfully cooked in a block.
 
 **Attributes:**
 
-- [**result**](#endstone.event.BlockCookEvent.result) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Gets or sets the resultant ItemStack for this event
-- [**source**](#endstone.event.BlockCookEvent.source) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Gets the smelted ItemStack for this event
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="result">
+        <td>[`result`](#endstone.event.BlockCookEvent.result)</td>
+        <td><code className="nextra-code">[ItemStack](#endstone._internal.endstone_python.ItemStack)</code></td>
+        <td>Gets or sets the resultant ItemStack for this event</td>
+    </tr>
+    <tr key="source">
+        <td>[`source`](#endstone.event.BlockCookEvent.source)</td>
+        <td><code className="nextra-code">[ItemStack](#endstone._internal.endstone_python.ItemStack)</code></td>
+        <td>Gets the smelted ItemStack for this event</td>
+    </tr></tbody>
+</table>
 
 #### result [#endstone.event.BlockCookEvent.result]
 
@@ -318,13 +464,27 @@ Gets the smelted ItemStack for this event
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[Event](#endstone._internal.endstone_python.Event)</code>
+Bases: <code className="nextra-code">[Event](#endstone._internal.endstone_python.Event)</code>
 
 Represents an Block-related event
 
 **Attributes:**
 
-- [**block**](#endstone.event.BlockEvent.block) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Gets the block involved in this event.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="block">
+        <td>[`block`](#endstone.event.BlockEvent.block)</td>
+        <td><code className="nextra-code">[Block](#endstone._internal.endstone_python.Block)</code></td>
+        <td>Gets the block involved in this event.</td>
+    </tr></tbody>
+</table>
 
 #### block [#endstone.event.BlockEvent.block]
 
@@ -340,13 +500,27 @@ Gets the block involved in this event.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[BlockEvent](#endstone._internal.endstone_python.BlockEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[BlockEvent](#endstone._internal.endstone_python.BlockEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a piston block is triggered
 
 **Attributes:**
 
-- [**direction**](#endstone.event.BlockPistonEvent.direction) (<code>[BlockFace](#endstone._internal.endstone_python.BlockFace)</code>) – Return the direction in which the piston will operate.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="direction">
+        <td>[`direction`](#endstone.event.BlockPistonEvent.direction)</td>
+        <td><code className="nextra-code">[BlockFace](#endstone._internal.endstone_python.BlockFace)</code></td>
+        <td>Return the direction in which the piston will operate.</td>
+    </tr></tbody>
+</table>
 
 #### direction [#endstone.event.BlockPistonEvent.direction]
 
@@ -362,7 +536,7 @@ Return the direction in which the piston will operate.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[BlockPistonEvent](#endstone._internal.endstone_python.BlockPistonEvent)</code>
+Bases: <code className="nextra-code">[BlockPistonEvent](#endstone._internal.endstone_python.BlockPistonEvent)</code>
 
 Called when a piston extends.
 
@@ -372,7 +546,7 @@ Called when a piston extends.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[BlockPistonEvent](#endstone._internal.endstone_python.BlockPistonEvent)</code>
+Bases: <code className="nextra-code">[BlockPistonEvent](#endstone._internal.endstone_python.BlockPistonEvent)</code>
 
 Called when a piston retracts.
 
@@ -382,16 +556,42 @@ Called when a piston retracts.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[BlockEvent](#endstone._internal.endstone_python.BlockEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[BlockEvent](#endstone._internal.endstone_python.BlockEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a block is placed by a player.
 
 **Attributes:**
 
-- [**block_against**](#endstone.event.BlockPlaceEvent.block_against) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Gets the block that this block was placed against
-- [**block_placed_state**](#endstone.event.BlockPlaceEvent.block_placed_state) (<code>[BlockState](#endstone._internal.endstone_python.BlockState)</code>) – Gets the BlockState for the block which was placed.
-- [**block_replaced**](#endstone.event.BlockPlaceEvent.block_replaced) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Gets the block which was replaced.
-- [**player**](#endstone.event.BlockPlaceEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Gets the player who placed the block involved in this event.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="block_against">
+        <td>[`block_against`](#endstone.event.BlockPlaceEvent.block_against)</td>
+        <td><code className="nextra-code">[Block](#endstone._internal.endstone_python.Block)</code></td>
+        <td>Gets the block that this block was placed against</td>
+    </tr>
+    <tr key="block_placed_state">
+        <td>[`block_placed_state`](#endstone.event.BlockPlaceEvent.block_placed_state)</td>
+        <td><code className="nextra-code">[BlockState](#endstone._internal.endstone_python.BlockState)</code></td>
+        <td>Gets the BlockState for the block which was placed.</td>
+    </tr>
+    <tr key="block_replaced">
+        <td>[`block_replaced`](#endstone.event.BlockPlaceEvent.block_replaced)</td>
+        <td><code className="nextra-code">[Block](#endstone._internal.endstone_python.Block)</code></td>
+        <td>Gets the block which was replaced.</td>
+    </tr>
+    <tr key="player">
+        <td>[`player`](#endstone.event.BlockPlaceEvent.player)</td>
+        <td><code className="nextra-code">[Player](#endstone._internal.endstone_python.Player)</code></td>
+        <td>Gets the player who placed the block involved in this event.</td>
+    </tr></tbody>
+</table>
 
 #### block_against [#endstone.event.BlockPlaceEvent.block_against]
 
@@ -431,14 +631,32 @@ Gets the player who placed the block involved in this event.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Event triggered for server broadcast messages such as from Server.broadcast
 
 **Attributes:**
 
-- [**message**](#endstone.event.BroadcastMessageEvent.message) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable)</code>) – Gets or sets the message to broadcast.
-- [**recipients**](#endstone.event.BroadcastMessageEvent.recipients) (<code>[set](#set)\[[CommandSender](#endstone._internal.endstone_python.CommandSender)\]</code>) – Gets a set of recipients that this broadcast message will be displayed to.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="message">
+        <td>[`message`](#endstone.event.BroadcastMessageEvent.message)</td>
+        <td><code className="nextra-code">[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable)</code></td>
+        <td>Gets or sets the message to broadcast.</td>
+    </tr>
+    <tr key="recipients">
+        <td>[`recipients`](#endstone.event.BroadcastMessageEvent.recipients)</td>
+        <td><code className="nextra-code">[set](#set)[[CommandSender](#endstone._internal.endstone_python.CommandSender)]</code></td>
+        <td>Gets a set of recipients that this broadcast message will be displayed to.</td>
+    </tr></tbody>
+</table>
 
 #### message [#endstone.event.BroadcastMessageEvent.message]
 
@@ -466,12 +684,42 @@ Represents an event that may be cancelled by a plugin or the server.
 
 **Methods:**
 
-- [**cancel**](#endstone.event.Cancellable.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="cancel">
+        <td>[`cancel`](#endstone.event.Cancellable.cancel)</td>
+        <td>Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**cancelled**](#endstone.event.Cancellable.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**is_cancelled**](#endstone.event.Cancellable.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="cancelled">
+        <td>[`cancelled`](#endstone.event.Cancellable.cancelled)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.</td>
+    </tr>
+    <tr key="is_cancelled">
+        <td>[`is_cancelled`](#endstone.event.Cancellable.is_cancelled)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.</td>
+    </tr></tbody>
+</table>
 
 #### cancel [#endstone.event.Cancellable.cancel]
 
@@ -503,13 +751,27 @@ Gets or sets the cancellation state of this event. A cancelled event will not be
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[DimensionEvent](#endstone._internal.endstone_python.DimensionEvent)</code>
+Bases: <code className="nextra-code">[DimensionEvent](#endstone._internal.endstone_python.DimensionEvent)</code>
 
 Represents a Chunk related event
 
 **Attributes:**
 
-- [**chunk**](#endstone.event.ChunkEvent.chunk) (<code>[Chunk](#endstone._internal.endstone_python.Chunk)</code>) – Gets the chunk being loaded/unloaded
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="chunk">
+        <td>[`chunk`](#endstone.event.ChunkEvent.chunk)</td>
+        <td><code className="nextra-code">[Chunk](#endstone._internal.endstone_python.Chunk)</code></td>
+        <td>Gets the chunk being loaded/unloaded</td>
+    </tr></tbody>
+</table>
 
 #### chunk [#endstone.event.ChunkEvent.chunk]
 
@@ -525,7 +787,7 @@ Gets the chunk being loaded/unloaded
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[ChunkEvent](#endstone._internal.endstone_python.ChunkEvent)</code>
+Bases: <code className="nextra-code">[ChunkEvent](#endstone._internal.endstone_python.ChunkEvent)</code>
 
 Called when a chunk is loaded
 
@@ -535,7 +797,7 @@ Called when a chunk is loaded
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[ChunkEvent](#endstone._internal.endstone_python.ChunkEvent)</code>
+Bases: <code className="nextra-code">[ChunkEvent](#endstone._internal.endstone_python.ChunkEvent)</code>
 
 Called when a chunk is unloaded
 
@@ -545,13 +807,27 @@ Called when a chunk is unloaded
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[LevelEvent](#endstone._internal.endstone_python.LevelEvent)</code>
+Bases: <code className="nextra-code">[LevelEvent](#endstone._internal.endstone_python.LevelEvent)</code>
 
 Represents events within a dimension
 
 **Attributes:**
 
-- [**dimension**](#endstone.event.DimensionEvent.dimension) (<code>[Dimension](#endstone._internal.endstone_python.Dimension)</code>) – Gets the dimension primarily involved with this event
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="dimension">
+        <td>[`dimension`](#endstone.event.DimensionEvent.dimension)</td>
+        <td><code className="nextra-code">[Dimension](#endstone._internal.endstone_python.Dimension)</code></td>
+        <td>Gets the dimension primarily involved with this event</td>
+    </tr></tbody>
+</table>
 
 #### dimension [#endstone.event.DimensionEvent.dimension]
 
@@ -571,8 +847,26 @@ Represents an event.
 
 **Attributes:**
 
-- [**event_name**](#endstone.event.Event.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.Event.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="event_name">
+        <td>[`event_name`](#endstone.event.Event.event_name)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets a user-friendly identifier for this event.</td>
+    </tr>
+    <tr key="is_asynchronous">
+        <td>[`is_asynchronous`](#endstone.event.Event.is_asynchronous)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Whether the event fires asynchronously.</td>
+    </tr></tbody>
+</table>
 
 #### event_name [#endstone.event.Event.event_name]
 
@@ -595,7 +889,7 @@ Whether the event fires asynchronously.
 ### EventPriority [#endstone.event.EventPriority]
 
 ```python
-EventPriority(value:int) -> None
+EventPriority(value:int)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
@@ -604,14 +898,56 @@ Listeners are called in following order: LOWEST -> LOW -> NORMAL -> HIGH -> HIGH
 
 **Attributes:**
 
-- [**HIGH**](#endstone.event.EventPriority.HIGH) (<code>[EventPriority](#endstone._internal.endstone_python.EventPriority)</code>) –
-- [**HIGHEST**](#endstone.event.EventPriority.HIGHEST) (<code>[EventPriority](#endstone._internal.endstone_python.EventPriority)</code>) –
-- [**LOW**](#endstone.event.EventPriority.LOW) (<code>[EventPriority](#endstone._internal.endstone_python.EventPriority)</code>) –
-- [**LOWEST**](#endstone.event.EventPriority.LOWEST) (<code>[EventPriority](#endstone._internal.endstone_python.EventPriority)</code>) –
-- [**MONITOR**](#endstone.event.EventPriority.MONITOR) (<code>[EventPriority](#endstone._internal.endstone_python.EventPriority)</code>) –
-- [**NORMAL**](#endstone.event.EventPriority.NORMAL) (<code>[EventPriority](#endstone._internal.endstone_python.EventPriority)</code>) –
-- [**name**](#endstone.event.EventPriority.name) (<code>[str](#str)</code>) –
-- [**value**](#endstone.event.EventPriority.value) (<code>[int](#int)</code>) –
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="HIGH">
+        <td>[`HIGH`](#endstone.event.EventPriority.HIGH)</td>
+        <td><code className="nextra-code">[EventPriority](#endstone._internal.endstone_python.EventPriority)</code></td>
+        <td></td>
+    </tr>
+    <tr key="HIGHEST">
+        <td>[`HIGHEST`](#endstone.event.EventPriority.HIGHEST)</td>
+        <td><code className="nextra-code">[EventPriority](#endstone._internal.endstone_python.EventPriority)</code></td>
+        <td></td>
+    </tr>
+    <tr key="LOW">
+        <td>[`LOW`](#endstone.event.EventPriority.LOW)</td>
+        <td><code className="nextra-code">[EventPriority](#endstone._internal.endstone_python.EventPriority)</code></td>
+        <td></td>
+    </tr>
+    <tr key="LOWEST">
+        <td>[`LOWEST`](#endstone.event.EventPriority.LOWEST)</td>
+        <td><code className="nextra-code">[EventPriority](#endstone._internal.endstone_python.EventPriority)</code></td>
+        <td></td>
+    </tr>
+    <tr key="MONITOR">
+        <td>[`MONITOR`](#endstone.event.EventPriority.MONITOR)</td>
+        <td><code className="nextra-code">[EventPriority](#endstone._internal.endstone_python.EventPriority)</code></td>
+        <td></td>
+    </tr>
+    <tr key="NORMAL">
+        <td>[`NORMAL`](#endstone.event.EventPriority.NORMAL)</td>
+        <td><code className="nextra-code">[EventPriority](#endstone._internal.endstone_python.EventPriority)</code></td>
+        <td></td>
+    </tr>
+    <tr key="name">
+        <td>[`name`](#endstone.event.EventPriority.name)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td></td>
+    </tr>
+    <tr key="value">
+        <td>[`value`](#endstone.event.EventPriority.value)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td></td>
+    </tr></tbody>
+</table>
 
 #### HIGH [#endstone.event.EventPriority.HIGH]
 
@@ -666,18 +1002,48 @@ value: int
 ### EventResult [#endstone.event.EventResult]
 
 ```python
-EventResult(value:int) -> None
+EventResult(value:int)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
 
 **Attributes:**
 
-- [**ALLOW**](#endstone.event.EventResult.ALLOW) (<code>[EventResult](#endstone._internal.endstone_python.EventResult)</code>) –
-- [**DEFAULT**](#endstone.event.EventResult.DEFAULT) (<code>[EventResult](#endstone._internal.endstone_python.EventResult)</code>) –
-- [**DENY**](#endstone.event.EventResult.DENY) (<code>[EventResult](#endstone._internal.endstone_python.EventResult)</code>) –
-- [**name**](#endstone.event.EventResult.name) (<code>[str](#str)</code>) –
-- [**value**](#endstone.event.EventResult.value) (<code>[int](#int)</code>) –
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="ALLOW">
+        <td>[`ALLOW`](#endstone.event.EventResult.ALLOW)</td>
+        <td><code className="nextra-code">[EventResult](#endstone._internal.endstone_python.EventResult)</code></td>
+        <td></td>
+    </tr>
+    <tr key="DEFAULT">
+        <td>[`DEFAULT`](#endstone.event.EventResult.DEFAULT)</td>
+        <td><code className="nextra-code">[EventResult](#endstone._internal.endstone_python.EventResult)</code></td>
+        <td></td>
+    </tr>
+    <tr key="DENY">
+        <td>[`DENY`](#endstone.event.EventResult.DENY)</td>
+        <td><code className="nextra-code">[EventResult](#endstone._internal.endstone_python.EventResult)</code></td>
+        <td></td>
+    </tr>
+    <tr key="name">
+        <td>[`name`](#endstone.event.EventResult.name)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td></td>
+    </tr>
+    <tr key="value">
+        <td>[`value`](#endstone.event.EventResult.value)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td></td>
+    </tr></tbody>
+</table>
 
 #### ALLOW [#endstone.event.EventResult.ALLOW]
 
@@ -715,7 +1081,7 @@ value: int
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[BlockEvent](#endstone._internal.endstone_python.BlockEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[BlockEvent](#endstone._internal.endstone_python.BlockEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when leaves are decaying naturally.
 If a Leaves Decay event is cancelled, the leaves will not decay.
@@ -726,13 +1092,27 @@ If a Leaves Decay event is cancelled, the leaves will not decay.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[Event](#endstone._internal.endstone_python.Event)</code>
+Bases: <code className="nextra-code">[Event](#endstone._internal.endstone_python.Event)</code>
 
 Represents events within a level
 
 **Attributes:**
 
-- [**level**](#endstone.event.LevelEvent.level) (<code>[Level](#endstone._internal.endstone_python.Level)</code>) – Gets the level primarily involved with this event
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="level">
+        <td>[`level`](#endstone.event.LevelEvent.level)</td>
+        <td><code className="nextra-code">[Level](#endstone._internal.endstone_python.Level)</code></td>
+        <td>Gets the level primarily involved with this event</td>
+    </tr></tbody>
+</table>
 
 #### level [#endstone.event.LevelEvent.level]
 
@@ -748,13 +1128,27 @@ Gets the level primarily involved with this event
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[Event](#endstone._internal.endstone_python.Event)</code>
+Bases: <code className="nextra-code">[Event](#endstone._internal.endstone_python.Event)</code>
 
 Represents an Mob-related event.
 
 **Attributes:**
 
-- [**actor**](#endstone.event.MobEvent.actor) (<code>[Mob](#endstone._internal.endstone_python.Mob)</code>) – Returns the Mob involved in this event
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="actor">
+        <td>[`actor`](#endstone.event.MobEvent.actor)</td>
+        <td><code className="nextra-code">[Mob](#endstone._internal.endstone_python.Mob)</code></td>
+        <td>Returns the Mob involved in this event</td>
+    </tr></tbody>
+</table>
 
 #### actor [#endstone.event.MobEvent.actor]
 
@@ -770,17 +1164,47 @@ Returns the Mob involved in this event
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when the server receives a packet from a connected client.
 
 **Attributes:**
 
-- [**address**](#endstone.event.PacketReceiveEvent.address) (<code>[SocketAddress](#endstone._internal.endstone_python.SocketAddress)</code>) – Gets the network address to which this packet is being sent.
-- [**packet_id**](#endstone.event.PacketReceiveEvent.packet_id) (<code>[int](#int)</code>) – Gets the ID of the packet.
-- [**payload**](#endstone.event.PacketReceiveEvent.payload) (<code>[bytes](#bytes)</code>) – Gets or sets the raw packet data **excluding** the header.
-- [**player**](#endstone.event.PacketReceiveEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Gets the player involved in this event
-- [**sub_client_id**](#endstone.event.PacketReceiveEvent.sub_client_id) (<code>[int](#int)</code>) – Gets the SubClient ID (0 = primary client; 1-3 = split-screen clients).
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="address">
+        <td>[`address`](#endstone.event.PacketReceiveEvent.address)</td>
+        <td><code className="nextra-code">[SocketAddress](#endstone._internal.endstone_python.SocketAddress)</code></td>
+        <td>Gets the network address to which this packet is being sent.</td>
+    </tr>
+    <tr key="packet_id">
+        <td>[`packet_id`](#endstone.event.PacketReceiveEvent.packet_id)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets the ID of the packet.</td>
+    </tr>
+    <tr key="payload">
+        <td>[`payload`](#endstone.event.PacketReceiveEvent.payload)</td>
+        <td><code className="nextra-code">[bytes](#bytes)</code></td>
+        <td>Gets or sets the raw packet data **excluding** the header.</td>
+    </tr>
+    <tr key="player">
+        <td>[`player`](#endstone.event.PacketReceiveEvent.player)</td>
+        <td><code className="nextra-code">[Player](#endstone._internal.endstone_python.Player)</code></td>
+        <td>Gets the player involved in this event</td>
+    </tr>
+    <tr key="sub_client_id">
+        <td>[`sub_client_id`](#endstone.event.PacketReceiveEvent.sub_client_id)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets the SubClient ID (0 = primary client; 1-3 = split-screen clients).</td>
+    </tr></tbody>
+</table>
 
 #### address [#endstone.event.PacketReceiveEvent.address]
 
@@ -829,17 +1253,47 @@ Gets the SubClient ID (0 = primary client; 1-3 = split-screen clients).
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when the server sends a packet to a connected client.
 
 **Attributes:**
 
-- [**address**](#endstone.event.PacketSendEvent.address) (<code>[SocketAddress](#endstone._internal.endstone_python.SocketAddress)</code>) – Gets the network address to which this packet is being sent.
-- [**packet_id**](#endstone.event.PacketSendEvent.packet_id) (<code>[int](#int)</code>) – Gets the ID of the packet.
-- [**payload**](#endstone.event.PacketSendEvent.payload) (<code>[bytes](#bytes)</code>) – Gets or sets the raw packet data **excluding** the header.
-- [**player**](#endstone.event.PacketSendEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Gets the player involved in this event
-- [**sub_client_id**](#endstone.event.PacketSendEvent.sub_client_id) (<code>[int](#int)</code>) – Gets the SubClient ID (0 = primary client; 1-3 = split-screen clients).
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="address">
+        <td>[`address`](#endstone.event.PacketSendEvent.address)</td>
+        <td><code className="nextra-code">[SocketAddress](#endstone._internal.endstone_python.SocketAddress)</code></td>
+        <td>Gets the network address to which this packet is being sent.</td>
+    </tr>
+    <tr key="packet_id">
+        <td>[`packet_id`](#endstone.event.PacketSendEvent.packet_id)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets the ID of the packet.</td>
+    </tr>
+    <tr key="payload">
+        <td>[`payload`](#endstone.event.PacketSendEvent.payload)</td>
+        <td><code className="nextra-code">[bytes](#bytes)</code></td>
+        <td>Gets or sets the raw packet data **excluding** the header.</td>
+    </tr>
+    <tr key="player">
+        <td>[`player`](#endstone.event.PacketSendEvent.player)</td>
+        <td><code className="nextra-code">[Player](#endstone._internal.endstone_python.Player)</code></td>
+        <td>Gets the player involved in this event</td>
+    </tr>
+    <tr key="sub_client_id">
+        <td>[`sub_client_id`](#endstone.event.PacketSendEvent.sub_client_id)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets the SubClient ID (0 = primary client; 1-3 = split-screen clients).</td>
+    </tr></tbody>
+</table>
 
 #### address [#endstone.event.PacketSendEvent.address]
 
@@ -888,13 +1342,27 @@ Gets the SubClient ID (0 = primary client; 1-3 = split-screen clients).
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a player is almost about to enter the bed.
 
 **Attributes:**
 
-- [**bed**](#endstone.event.PlayerBedEnterEvent.bed) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Returns the bed block involved in this event.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="bed">
+        <td>[`bed`](#endstone.event.PlayerBedEnterEvent.bed)</td>
+        <td><code className="nextra-code">[Block](#endstone._internal.endstone_python.Block)</code></td>
+        <td>Returns the bed block involved in this event.</td>
+    </tr></tbody>
+</table>
 
 #### bed [#endstone.event.PlayerBedEnterEvent.bed]
 
@@ -910,13 +1378,27 @@ Returns the bed block involved in this event.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>
+Bases: <code className="nextra-code">[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>
 
 Called when a player is leaving a bed.
 
 **Attributes:**
 
-- [**bed**](#endstone.event.PlayerBedLeaveEvent.bed) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Returns the bed block involved in this event.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="bed">
+        <td>[`bed`](#endstone.event.PlayerBedLeaveEvent.bed)</td>
+        <td><code className="nextra-code">[Block](#endstone._internal.endstone_python.Block)</code></td>
+        <td>Returns the bed block involved in this event.</td>
+    </tr></tbody>
+</table>
 
 #### bed [#endstone.event.PlayerBedLeaveEvent.bed]
 
@@ -932,13 +1414,27 @@ Returns the bed block involved in this event.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a player sends a chat message.
 
 **Attributes:**
 
-- [**message**](#endstone.event.PlayerChatEvent.message) (<code>[str](#str)</code>) – Gets or sets the message that the player will send.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="message">
+        <td>[`message`](#endstone.event.PlayerChatEvent.message)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets or sets the message that the player will send.</td>
+    </tr></tbody>
+</table>
 
 #### message [#endstone.event.PlayerChatEvent.message]
 
@@ -954,13 +1450,27 @@ Gets or sets the message that the player will send.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called whenever a player runs a command.
 
 **Attributes:**
 
-- [**command**](#endstone.event.PlayerCommandEvent.command) (<code>[str](#str)</code>) – Gets or sets the command that the player will send.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="command">
+        <td>[`command`](#endstone.event.PlayerCommandEvent.command)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets or sets the command that the player will send.</td>
+    </tr></tbody>
+</table>
 
 #### command [#endstone.event.PlayerCommandEvent.command]
 
@@ -976,13 +1486,27 @@ Gets or sets the command that the player will send.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[ActorDeathEvent](#endstone._internal.endstone_python.ActorDeathEvent)</code>, <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>
+Bases: <code className="nextra-code">[ActorDeathEvent](#endstone._internal.endstone_python.ActorDeathEvent)</code>, <code className="nextra-code">[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>
 
 Called when a player dies
 
 **Attributes:**
 
-- [**death_message**](#endstone.event.PlayerDeathEvent.death_message) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable) | None</code>) – Gets or sets the death message that will appear to everyone on the server.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="death_message">
+        <td>[`death_message`](#endstone.event.PlayerDeathEvent.death_message)</td>
+        <td><code className="nextra-code">[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable) | None</code></td>
+        <td>Gets or sets the death message that will appear to everyone on the server.</td>
+    </tr></tbody>
+</table>
 
 #### death_message [#endstone.event.PlayerDeathEvent.death_message]
 
@@ -998,13 +1522,27 @@ Gets or sets the death message that will appear to everyone on the server.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a player drops an item from their inventory
 
 **Attributes:**
 
-- [**item**](#endstone.event.PlayerDropItemEvent.item) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Gets the ItemStack dropped by the player
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="item">
+        <td>[`item`](#endstone.event.PlayerDropItemEvent.item)</td>
+        <td><code className="nextra-code">[ItemStack](#endstone._internal.endstone_python.ItemStack)</code></td>
+        <td>Gets the ItemStack dropped by the player</td>
+    </tr></tbody>
+</table>
 
 #### item [#endstone.event.PlayerDropItemEvent.item]
 
@@ -1020,14 +1558,32 @@ Gets the ItemStack dropped by the player
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a player uses and emote
 
 **Attributes:**
 
-- [**emote_id**](#endstone.event.PlayerEmoteEvent.emote_id) (<code>[str](#str)</code>) – Gets the emote piece ID
-- [**is_muted**](#endstone.event.PlayerEmoteEvent.is_muted) (<code>[bool](#bool)</code>) – Gets or sets the muted state for the emote.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="emote_id">
+        <td>[`emote_id`](#endstone.event.PlayerEmoteEvent.emote_id)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets the emote piece ID</td>
+    </tr>
+    <tr key="is_muted">
+        <td>[`is_muted`](#endstone.event.PlayerEmoteEvent.is_muted)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Gets or sets the muted state for the emote.</td>
+    </tr></tbody>
+</table>
 
 #### emote_id [#endstone.event.PlayerEmoteEvent.emote_id]
 
@@ -1051,13 +1607,27 @@ Gets or sets the muted state for the emote.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[Event](#endstone._internal.endstone_python.Event)</code>
+Bases: <code className="nextra-code">[Event](#endstone._internal.endstone_python.Event)</code>
 
 Represents a player related event
 
 **Attributes:**
 
-- [**player**](#endstone.event.PlayerEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="player">
+        <td>[`player`](#endstone.event.PlayerEvent.player)</td>
+        <td><code className="nextra-code">[Player](#endstone._internal.endstone_python.Player)</code></td>
+        <td>Returns the player involved in this event.</td>
+    </tr></tbody>
+</table>
 
 #### player [#endstone.event.PlayerEvent.player]
 
@@ -1073,13 +1643,27 @@ Returns the player involved in this event.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when the GameMode of the player is changed.
 
 **Attributes:**
 
-- [**new_game_mode**](#endstone.event.PlayerGameModeChangeEvent.new_game_mode) (<code>[GameMode](#endstone._internal.endstone_python.GameMode)</code>) – Gets the GameMode the player is switched to.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="new_game_mode">
+        <td>[`new_game_mode`](#endstone.event.PlayerGameModeChangeEvent.new_game_mode)</td>
+        <td><code className="nextra-code">[GameMode](#endstone._internal.endstone_python.GameMode)</code></td>
+        <td>Gets the GameMode the player is switched to.</td>
+    </tr></tbody>
+</table>
 
 #### new_game_mode [#endstone.event.PlayerGameModeChangeEvent.new_game_mode]
 
@@ -1095,13 +1679,27 @@ Gets the GameMode the player is switched to.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Represents an event that is called when a player right-clicks an actor.
 
 **Attributes:**
 
-- [**actor**](#endstone.event.PlayerInteractActorEvent.actor) (<code>[Actor](#endstone._internal.endstone_python.Actor)</code>) – Gets the actor that was right-clicked by the player.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="actor">
+        <td>[`actor`](#endstone.event.PlayerInteractActorEvent.actor)</td>
+        <td><code className="nextra-code">[Actor](#endstone._internal.endstone_python.Actor)</code></td>
+        <td>Gets the actor that was right-clicked by the player.</td>
+    </tr></tbody>
+</table>
 
 #### actor [#endstone.event.PlayerInteractActorEvent.actor]
 
@@ -1117,40 +1715,114 @@ Gets the actor that was right-clicked by the player.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Represents an event that is called when a player right-clicks a block.
 
 **Classes:**
 
-- [**Action**](#endstone.event.PlayerInteractEvent.Action) –
+Name | Description
+---- | -----------
+[`Action`](#endstone.event.PlayerInteractEvent.Action) |
 
 **Attributes:**
 
-- [**action**](#endstone.event.PlayerInteractEvent.action) (<code>[Action](#endstone._internal.endstone_python.PlayerInteractEvent.Action)</code>) – Returns the action type of interaction
-- [**block**](#endstone.event.PlayerInteractEvent.block) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Returns the clicked block
-- [**block_face**](#endstone.event.PlayerInteractEvent.block_face) (<code>[BlockFace](#endstone._internal.endstone_python.BlockFace)</code>) – Returns the face of the block that was clicked
-- [**clicked_position**](#endstone.event.PlayerInteractEvent.clicked_position) (<code>[Vector](#endstone._internal.endstone_python.Vector) | None</code>) – Gets the exact position on the block the player interacted with.
-- [**has_block**](#endstone.event.PlayerInteractEvent.has_block) (<code>[bool](#bool)</code>) – Check if this event involved a block
-- [**has_item**](#endstone.event.PlayerInteractEvent.has_item) (<code>[bool](#bool)</code>) – Check if this event involved an item
-- [**item**](#endstone.event.PlayerInteractEvent.item) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Returns the item in hand represented by this event
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="action">
+        <td>[`action`](#endstone.event.PlayerInteractEvent.action)</td>
+        <td><code className="nextra-code">[Action](#endstone._internal.endstone_python.PlayerInteractEvent.Action)</code></td>
+        <td>Returns the action type of interaction</td>
+    </tr>
+    <tr key="block">
+        <td>[`block`](#endstone.event.PlayerInteractEvent.block)</td>
+        <td><code className="nextra-code">[Block](#endstone._internal.endstone_python.Block)</code></td>
+        <td>Returns the clicked block</td>
+    </tr>
+    <tr key="block_face">
+        <td>[`block_face`](#endstone.event.PlayerInteractEvent.block_face)</td>
+        <td><code className="nextra-code">[BlockFace](#endstone._internal.endstone_python.BlockFace)</code></td>
+        <td>Returns the face of the block that was clicked</td>
+    </tr>
+    <tr key="clicked_position">
+        <td>[`clicked_position`](#endstone.event.PlayerInteractEvent.clicked_position)</td>
+        <td><code className="nextra-code">[Vector](#endstone._internal.endstone_python.Vector) | None</code></td>
+        <td>Gets the exact position on the block the player interacted with.</td>
+    </tr>
+    <tr key="has_block">
+        <td>[`has_block`](#endstone.event.PlayerInteractEvent.has_block)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Check if this event involved a block</td>
+    </tr>
+    <tr key="has_item">
+        <td>[`has_item`](#endstone.event.PlayerInteractEvent.has_item)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Check if this event involved an item</td>
+    </tr>
+    <tr key="item">
+        <td>[`item`](#endstone.event.PlayerInteractEvent.item)</td>
+        <td><code className="nextra-code">[ItemStack](#endstone._internal.endstone_python.ItemStack)</code></td>
+        <td>Returns the item in hand represented by this event</td>
+    </tr></tbody>
+</table>
 
 #### Action [#endstone.event.PlayerInteractEvent.Action]
 
 ```python
-Action(value:int) -> None
+Action(value:int)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
 
 **Attributes:**
 
-- [**LEFT_CLICK_AIR**](#endstone.event.PlayerInteractEvent.Action.LEFT_CLICK_AIR) (<code>[Action](#endstone._internal.endstone_python.PlayerInteractEvent.Action)</code>) –
-- [**LEFT_CLICK_BLOCK**](#endstone.event.PlayerInteractEvent.Action.LEFT_CLICK_BLOCK) (<code>[Action](#endstone._internal.endstone_python.PlayerInteractEvent.Action)</code>) –
-- [**RIGHT_CLICK_AIR**](#endstone.event.PlayerInteractEvent.Action.RIGHT_CLICK_AIR) (<code>[Action](#endstone._internal.endstone_python.PlayerInteractEvent.Action)</code>) –
-- [**RIGHT_CLICK_BLOCK**](#endstone.event.PlayerInteractEvent.Action.RIGHT_CLICK_BLOCK) (<code>[Action](#endstone._internal.endstone_python.PlayerInteractEvent.Action)</code>) –
-- [**name**](#endstone.event.PlayerInteractEvent.Action.name) (<code>[str](#str)</code>) –
-- [**value**](#endstone.event.PlayerInteractEvent.Action.value) (<code>[int](#int)</code>) –
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="LEFT_CLICK_AIR">
+        <td>[`LEFT_CLICK_AIR`](#endstone.event.PlayerInteractEvent.Action.LEFT_CLICK_AIR)</td>
+        <td><code className="nextra-code">[Action](#endstone._internal.endstone_python.PlayerInteractEvent.Action)</code></td>
+        <td></td>
+    </tr>
+    <tr key="LEFT_CLICK_BLOCK">
+        <td>[`LEFT_CLICK_BLOCK`](#endstone.event.PlayerInteractEvent.Action.LEFT_CLICK_BLOCK)</td>
+        <td><code className="nextra-code">[Action](#endstone._internal.endstone_python.PlayerInteractEvent.Action)</code></td>
+        <td></td>
+    </tr>
+    <tr key="RIGHT_CLICK_AIR">
+        <td>[`RIGHT_CLICK_AIR`](#endstone.event.PlayerInteractEvent.Action.RIGHT_CLICK_AIR)</td>
+        <td><code className="nextra-code">[Action](#endstone._internal.endstone_python.PlayerInteractEvent.Action)</code></td>
+        <td></td>
+    </tr>
+    <tr key="RIGHT_CLICK_BLOCK">
+        <td>[`RIGHT_CLICK_BLOCK`](#endstone.event.PlayerInteractEvent.Action.RIGHT_CLICK_BLOCK)</td>
+        <td><code className="nextra-code">[Action](#endstone._internal.endstone_python.PlayerInteractEvent.Action)</code></td>
+        <td></td>
+    </tr>
+    <tr key="name">
+        <td>[`name`](#endstone.event.PlayerInteractEvent.Action.name)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td></td>
+    </tr>
+    <tr key="value">
+        <td>[`value`](#endstone.event.PlayerInteractEvent.Action.value)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td></td>
+    </tr></tbody>
+</table>
 
 ##### LEFT_CLICK_AIR [#endstone.event.PlayerInteractEvent.Action.LEFT_CLICK_AIR]
 
@@ -1252,14 +1924,32 @@ Returns the item in hand represented by this event
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a player is finishing consuming an item (food, potion, milk bucket).
 
 **Attributes:**
 
-- [**hand**](#endstone.event.PlayerItemConsumeEvent.hand) (<code>[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code>) – Get the hand used to consume the item.
-- [**item**](#endstone.event.PlayerItemConsumeEvent.item) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Gets or sets the item that is being consumed.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="hand">
+        <td>[`hand`](#endstone.event.PlayerItemConsumeEvent.hand)</td>
+        <td><code className="nextra-code">[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code></td>
+        <td>Get the hand used to consume the item.</td>
+    </tr>
+    <tr key="item">
+        <td>[`item`](#endstone.event.PlayerItemConsumeEvent.item)</td>
+        <td><code className="nextra-code">[ItemStack](#endstone._internal.endstone_python.ItemStack)</code></td>
+        <td>Gets or sets the item that is being consumed.</td>
+    </tr></tbody>
+</table>
 
 #### hand [#endstone.event.PlayerItemConsumeEvent.hand]
 
@@ -1283,14 +1973,32 @@ Gets or sets the item that is being consumed.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a player changes their currently held item.
 
 **Attributes:**
 
-- [**new_slot**](#endstone.event.PlayerItemHeldEvent.new_slot) (<code>[int](#int)</code>) – Gets the new held slot index
-- [**previous_slot**](#endstone.event.PlayerItemHeldEvent.previous_slot) (<code>[int](#int)</code>) – Gets the previous held slot index.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="new_slot">
+        <td>[`new_slot`](#endstone.event.PlayerItemHeldEvent.new_slot)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets the new held slot index</td>
+    </tr>
+    <tr key="previous_slot">
+        <td>[`previous_slot`](#endstone.event.PlayerItemHeldEvent.previous_slot)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets the previous held slot index.</td>
+    </tr></tbody>
+</table>
 
 #### new_slot [#endstone.event.PlayerItemHeldEvent.new_slot]
 
@@ -1314,13 +2022,27 @@ Gets the previous held slot index.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>
+Bases: <code className="nextra-code">[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>
 
 Called when a player joins a server
 
 **Attributes:**
 
-- [**join_message**](#endstone.event.PlayerJoinEvent.join_message) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable) | None</code>) – Gets or sets the join message to send to all online players.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="join_message">
+        <td>[`join_message`](#endstone.event.PlayerJoinEvent.join_message)</td>
+        <td><code className="nextra-code">[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable) | None</code></td>
+        <td>Gets or sets the join message to send to all online players.</td>
+    </tr></tbody>
+</table>
 
 #### join_message [#endstone.event.PlayerJoinEvent.join_message]
 
@@ -1336,7 +2058,7 @@ Gets or sets the join message to send to all online players.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[PlayerMoveEvent](#endstone._internal.endstone_python.PlayerMoveEvent)</code>
+Bases: <code className="nextra-code">[PlayerMoveEvent](#endstone._internal.endstone_python.PlayerMoveEvent)</code>
 
 Called when a player jumps.
 
@@ -1346,13 +2068,27 @@ Called when a player jumps.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a player gets kicked from the server
 
 **Attributes:**
 
-- [**reason**](#endstone.event.PlayerKickEvent.reason) (<code>[str](#str)</code>) – Gets or sets the reason why the player is getting kicked
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="reason">
+        <td>[`reason`](#endstone.event.PlayerKickEvent.reason)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets or sets the reason why the player is getting kicked</td>
+    </tr></tbody>
+</table>
 
 #### reason [#endstone.event.PlayerKickEvent.reason]
 
@@ -1368,13 +2104,27 @@ Gets or sets the reason why the player is getting kicked
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a player attempts to login in.
 
 **Attributes:**
 
-- [**kick_message**](#endstone.event.PlayerLoginEvent.kick_message) (<code>[str](#str)</code>) – Gets or sets kick message to display if event is cancelled
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="kick_message">
+        <td>[`kick_message`](#endstone.event.PlayerLoginEvent.kick_message)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets or sets kick message to display if event is cancelled</td>
+    </tr></tbody>
+</table>
 
 #### kick_message [#endstone.event.PlayerLoginEvent.kick_message]
 
@@ -1390,14 +2140,32 @@ Gets or sets kick message to display if event is cancelled
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a player moves.
 
 **Attributes:**
 
-- [**from_location**](#endstone.event.PlayerMoveEvent.from_location) (<code>[Location](#endstone._internal.endstone_python.Location)</code>) – Gets or sets the location that this player moved from.
-- [**to_location**](#endstone.event.PlayerMoveEvent.to_location) (<code>[Location](#endstone._internal.endstone_python.Location)</code>) – Gets or sets the location that this player moved to.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="from_location">
+        <td>[`from_location`](#endstone.event.PlayerMoveEvent.from_location)</td>
+        <td><code className="nextra-code">[Location](#endstone._internal.endstone_python.Location)</code></td>
+        <td>Gets or sets the location that this player moved from.</td>
+    </tr>
+    <tr key="to_location">
+        <td>[`to_location`](#endstone.event.PlayerMoveEvent.to_location)</td>
+        <td><code className="nextra-code">[Location](#endstone._internal.endstone_python.Location)</code></td>
+        <td>Gets or sets the location that this player moved to.</td>
+    </tr></tbody>
+</table>
 
 #### from_location [#endstone.event.PlayerMoveEvent.from_location]
 
@@ -1421,13 +2189,27 @@ Gets or sets the location that this player moved to.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a player picks an item up from the ground.
 
 **Attributes:**
 
-- [**item**](#endstone.event.PlayerPickupItemEvent.item) (<code>[Item](#endstone._internal.endstone_python.Item)</code>) – Gets the Item picked up by the entity.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="item">
+        <td>[`item`](#endstone.event.PlayerPickupItemEvent.item)</td>
+        <td><code className="nextra-code">[Item](#endstone._internal.endstone_python.Item)</code></td>
+        <td>Gets the Item picked up by the entity.</td>
+    </tr></tbody>
+</table>
 
 #### item [#endstone.event.PlayerPickupItemEvent.item]
 
@@ -1443,13 +2225,27 @@ Gets the Item picked up by the entity.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>
+Bases: <code className="nextra-code">[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>
 
 Called when a player leaves a server.
 
 **Attributes:**
 
-- [**quit_message**](#endstone.event.PlayerQuitEvent.quit_message) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable) | None</code>) – Gets or sets the quit message to send to all online players.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="quit_message">
+        <td>[`quit_message`](#endstone.event.PlayerQuitEvent.quit_message)</td>
+        <td><code className="nextra-code">[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable) | None</code></td>
+        <td>Gets or sets the quit message to send to all online players.</td>
+    </tr></tbody>
+</table>
 
 #### quit_message [#endstone.event.PlayerQuitEvent.quit_message]
 
@@ -1465,7 +2261,7 @@ Gets or sets the quit message to send to all online players.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>
+Bases: <code className="nextra-code">[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>
 
 Called when a player respawns.
 
@@ -1475,14 +2271,32 @@ Called when a player respawns.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a player changes their skin.
 
 **Attributes:**
 
-- [**new_skin**](#endstone.event.PlayerSkinChangeEvent.new_skin) (<code>[Skin](#endstone._internal.endstone_python.Skin)</code>) – Gets the player's new skin.
-- [**skin_change_message**](#endstone.event.PlayerSkinChangeEvent.skin_change_message) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable) | None</code>) – Gets or sets the message to send to all online players for this skin change.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="new_skin">
+        <td>[`new_skin`](#endstone.event.PlayerSkinChangeEvent.new_skin)</td>
+        <td><code className="nextra-code">[Skin](#endstone._internal.endstone_python.Skin)</code></td>
+        <td>Gets the player's new skin.</td>
+    </tr>
+    <tr key="skin_change_message">
+        <td>[`skin_change_message`](#endstone.event.PlayerSkinChangeEvent.skin_change_message)</td>
+        <td><code className="nextra-code">[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable) | None</code></td>
+        <td>Gets or sets the message to send to all online players for this skin change.</td>
+    </tr></tbody>
+</table>
 
 #### new_skin [#endstone.event.PlayerSkinChangeEvent.new_skin]
 
@@ -1506,7 +2320,7 @@ Gets or sets the message to send to all online players for this skin change.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[PlayerMoveEvent](#endstone._internal.endstone_python.PlayerMoveEvent)</code>
+Bases: <code className="nextra-code">[PlayerMoveEvent](#endstone._internal.endstone_python.PlayerMoveEvent)</code>
 
 Called when a player is teleported from one location to another.
 
@@ -1516,13 +2330,27 @@ Called when a player is teleported from one location to another.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>
+Bases: <code className="nextra-code">[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>
 
 Called when a plugin is disabled.
 
 **Attributes:**
 
-- [**plugin**](#endstone.event.PluginDisableEvent.plugin) (<code>[Plugin](#endstone._internal.endstone_python.Plugin)</code>) –
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="plugin">
+        <td>[`plugin`](#endstone.event.PluginDisableEvent.plugin)</td>
+        <td><code className="nextra-code">[Plugin](#endstone._internal.endstone_python.Plugin)</code></td>
+        <td></td>
+    </tr></tbody>
+</table>
 
 #### plugin [#endstone.event.PluginDisableEvent.plugin]
 
@@ -1536,13 +2364,27 @@ plugin: Plugin
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>
+Bases: <code className="nextra-code">[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>
 
 Called when a plugin is enabled.
 
 **Attributes:**
 
-- [**plugin**](#endstone.event.PluginEnableEvent.plugin) (<code>[Plugin](#endstone._internal.endstone_python.Plugin)</code>) –
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="plugin">
+        <td>[`plugin`](#endstone.event.PluginEnableEvent.plugin)</td>
+        <td><code className="nextra-code">[Plugin](#endstone._internal.endstone_python.Plugin)</code></td>
+        <td></td>
+    </tr></tbody>
+</table>
 
 #### plugin [#endstone.event.PluginEnableEvent.plugin]
 
@@ -1556,15 +2398,37 @@ plugin: Plugin
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a message is sent by `/scriptevent` command
 
 **Attributes:**
 
-- [**message**](#endstone.event.ScriptMessageEvent.message) (<code>[str](#str)</code>) – Get the message to send.
-- [**message_id**](#endstone.event.ScriptMessageEvent.message_id) (<code>[str](#str)</code>) – Get the message id to send.
-- [**sender**](#endstone.event.ScriptMessageEvent.sender) (<code>[CommandSender](#endstone._internal.endstone_python.CommandSender)</code>) – Gets the command sender who initiated the command.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="message">
+        <td>[`message`](#endstone.event.ScriptMessageEvent.message)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Get the message to send.</td>
+    </tr>
+    <tr key="message_id">
+        <td>[`message_id`](#endstone.event.ScriptMessageEvent.message_id)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Get the message id to send.</td>
+    </tr>
+    <tr key="sender">
+        <td>[`sender`](#endstone.event.ScriptMessageEvent.sender)</td>
+        <td><code className="nextra-code">[CommandSender](#endstone._internal.endstone_python.CommandSender)</code></td>
+        <td>Gets the command sender who initiated the command.</td>
+    </tr></tbody>
+</table>
 
 #### message [#endstone.event.ScriptMessageEvent.message]
 
@@ -1596,14 +2460,32 @@ Gets the command sender who initiated the command.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when the console runs a command, early in the process.
 
 **Attributes:**
 
-- [**command**](#endstone.event.ServerCommandEvent.command) (<code>[str](#str)</code>) – Gets or sets the command that the server will execute
-- [**sender**](#endstone.event.ServerCommandEvent.sender) (<code>[CommandSender](#endstone._internal.endstone_python.CommandSender)</code>) – Get the command sender.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="command">
+        <td>[`command`](#endstone.event.ServerCommandEvent.command)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets or sets the command that the server will execute</td>
+    </tr>
+    <tr key="sender">
+        <td>[`sender`](#endstone.event.ServerCommandEvent.sender)</td>
+        <td><code className="nextra-code">[CommandSender](#endstone._internal.endstone_python.CommandSender)</code></td>
+        <td>Get the command sender.</td>
+    </tr></tbody>
+</table>
 
 #### command [#endstone.event.ServerCommandEvent.command]
 
@@ -1627,7 +2509,7 @@ Get the command sender.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[Event](#endstone._internal.endstone_python.Event)</code>
+Bases: <code className="nextra-code">[Event](#endstone._internal.endstone_python.Event)</code>
 
 Represents a server-related event
 
@@ -1637,24 +2519,82 @@ Represents a server-related event
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a server ping is coming in.
 
 **Attributes:**
 
-- [**game_mode**](#endstone.event.ServerListPingEvent.game_mode) (<code>[GameMode](#endstone._internal.endstone_python.GameMode)</code>) – Gets or sets the current game mode.
-- [**level_name**](#endstone.event.ServerListPingEvent.level_name) (<code>[str](#str)</code>) – Gets or sets the level name.
-- [**local_port**](#endstone.event.ServerListPingEvent.local_port) (<code>[int](#int)</code>) – Get or set the local port of the server.
-- [**local_port_v6**](#endstone.event.ServerListPingEvent.local_port_v6) (<code>[int](#int)</code>) – Get or set the local port of the server for IPv6 support
-- [**max_players**](#endstone.event.ServerListPingEvent.max_players) (<code>[int](#int)</code>) – Gets or sets the maximum number of players allowed.
-- [**minecraft_version_network**](#endstone.event.ServerListPingEvent.minecraft_version_network) (<code>[str](#str)</code>) – Gets or sets the network version of Minecraft that is supported by this server
-- [**motd**](#endstone.event.ServerListPingEvent.motd) (<code>[str](#str)</code>) – Gets or sets the message of the day message.
-- [**network_protocol_version**](#endstone.event.ServerListPingEvent.network_protocol_version) (<code>[int](#int)</code>) – Get the network protocol version of this server
-- [**num_players**](#endstone.event.ServerListPingEvent.num_players) (<code>[int](#int)</code>) – Gets or sets the number of players online.
-- [**remote_host**](#endstone.event.ServerListPingEvent.remote_host) (<code>[str](#str)</code>) – Get the host the ping is coming from.
-- [**remote_port**](#endstone.event.ServerListPingEvent.remote_port) (<code>[int](#int)</code>) – Get the port the ping is coming from.
-- [**server_guid**](#endstone.event.ServerListPingEvent.server_guid) (<code>[str](#str)</code>) – Get or set the unique identifier of the server.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="game_mode">
+        <td>[`game_mode`](#endstone.event.ServerListPingEvent.game_mode)</td>
+        <td><code className="nextra-code">[GameMode](#endstone._internal.endstone_python.GameMode)</code></td>
+        <td>Gets or sets the current game mode.</td>
+    </tr>
+    <tr key="level_name">
+        <td>[`level_name`](#endstone.event.ServerListPingEvent.level_name)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets or sets the level name.</td>
+    </tr>
+    <tr key="local_port">
+        <td>[`local_port`](#endstone.event.ServerListPingEvent.local_port)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Get or set the local port of the server.</td>
+    </tr>
+    <tr key="local_port_v6">
+        <td>[`local_port_v6`](#endstone.event.ServerListPingEvent.local_port_v6)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Get or set the local port of the server for IPv6 support</td>
+    </tr>
+    <tr key="max_players">
+        <td>[`max_players`](#endstone.event.ServerListPingEvent.max_players)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets or sets the maximum number of players allowed.</td>
+    </tr>
+    <tr key="minecraft_version_network">
+        <td>[`minecraft_version_network`](#endstone.event.ServerListPingEvent.minecraft_version_network)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets or sets the network version of Minecraft that is supported by this server</td>
+    </tr>
+    <tr key="motd">
+        <td>[`motd`](#endstone.event.ServerListPingEvent.motd)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets or sets the message of the day message.</td>
+    </tr>
+    <tr key="network_protocol_version">
+        <td>[`network_protocol_version`](#endstone.event.ServerListPingEvent.network_protocol_version)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Get the network protocol version of this server</td>
+    </tr>
+    <tr key="num_players">
+        <td>[`num_players`](#endstone.event.ServerListPingEvent.num_players)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets or sets the number of players online.</td>
+    </tr>
+    <tr key="remote_host">
+        <td>[`remote_host`](#endstone.event.ServerListPingEvent.remote_host)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Get the host the ping is coming from.</td>
+    </tr>
+    <tr key="remote_port">
+        <td>[`remote_port`](#endstone.event.ServerListPingEvent.remote_port)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Get the port the ping is coming from.</td>
+    </tr>
+    <tr key="server_guid">
+        <td>[`server_guid`](#endstone.event.ServerListPingEvent.server_guid)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Get or set the unique identifier of the server.</td>
+    </tr></tbody>
+</table>
 
 #### game_mode [#endstone.event.ServerListPingEvent.game_mode]
 
@@ -1758,32 +2698,74 @@ Get or set the unique identifier of the server.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[Event](#endstone._internal.endstone_python.Event)</code>
+Bases: <code className="nextra-code">[Event](#endstone._internal.endstone_python.Event)</code>
 
 Called when either the server startup or reload has completed.
 
 **Classes:**
 
-- [**LoadType**](#endstone.event.ServerLoadEvent.LoadType) –
+Name | Description
+---- | -----------
+[`LoadType`](#endstone.event.ServerLoadEvent.LoadType) |
 
 **Attributes:**
 
-- [**STARTUP**](#endstone.event.ServerLoadEvent.STARTUP) (<code>[LoadType](#endstone._internal.endstone_python.ServerLoadEvent.LoadType)</code>) –
-- [**type**](#endstone.event.ServerLoadEvent.type) (<code>[LoadType](#endstone._internal.endstone_python.ServerLoadEvent.LoadType)</code>) –
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="STARTUP">
+        <td>[`STARTUP`](#endstone.event.ServerLoadEvent.STARTUP)</td>
+        <td><code className="nextra-code">[LoadType](#endstone._internal.endstone_python.ServerLoadEvent.LoadType)</code></td>
+        <td></td>
+    </tr>
+    <tr key="type">
+        <td>[`type`](#endstone.event.ServerLoadEvent.type)</td>
+        <td><code className="nextra-code">[LoadType](#endstone._internal.endstone_python.ServerLoadEvent.LoadType)</code></td>
+        <td></td>
+    </tr></tbody>
+</table>
 
 #### LoadType [#endstone.event.ServerLoadEvent.LoadType]
 
 ```python
-LoadType(value:int) -> None
+LoadType(value:int)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
 
 **Attributes:**
 
-- [**STARTUP**](#endstone.event.ServerLoadEvent.LoadType.STARTUP) (<code>[LoadType](#endstone._internal.endstone_python.ServerLoadEvent.LoadType)</code>) –
-- [**name**](#endstone.event.ServerLoadEvent.LoadType.name) (<code>[str](#str)</code>) –
-- [**value**](#endstone.event.ServerLoadEvent.LoadType.value) (<code>[int](#int)</code>) –
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="STARTUP">
+        <td>[`STARTUP`](#endstone.event.ServerLoadEvent.LoadType.STARTUP)</td>
+        <td><code className="nextra-code">[LoadType](#endstone._internal.endstone_python.ServerLoadEvent.LoadType)</code></td>
+        <td></td>
+    </tr>
+    <tr key="name">
+        <td>[`name`](#endstone.event.ServerLoadEvent.LoadType.name)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td></td>
+    </tr>
+    <tr key="value">
+        <td>[`value`](#endstone.event.ServerLoadEvent.LoadType.value)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td></td>
+    </tr></tbody>
+</table>
 
 ##### STARTUP [#endstone.event.ServerLoadEvent.LoadType.STARTUP]
 
@@ -1823,13 +2805,27 @@ type: ServerLoadEvent.LoadType
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[WeatherEvent](#endstone._internal.endstone_python.WeatherEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[WeatherEvent](#endstone._internal.endstone_python.WeatherEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when the thunder state in a world is changing.
 
 **Attributes:**
 
-- [**to_thunder_state**](#endstone.event.ThunderChangeEvent.to_thunder_state) (<code>[bool](#bool)</code>) – Gets the state of thunder that the world is being set to
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="to_thunder_state">
+        <td>[`to_thunder_state`](#endstone.event.ThunderChangeEvent.to_thunder_state)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Gets the state of thunder that the world is being set to</td>
+    </tr></tbody>
+</table>
 
 #### to_thunder_state [#endstone.event.ThunderChangeEvent.to_thunder_state]
 
@@ -1845,13 +2841,27 @@ Gets the state of thunder that the world is being set to
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[WeatherEvent](#endstone._internal.endstone_python.WeatherEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
+Bases: <code className="nextra-code">[WeatherEvent](#endstone._internal.endstone_python.WeatherEvent)</code>, <code className="nextra-code">[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when the weather (rain) state in a world is changing.
 
 **Attributes:**
 
-- [**to_weather_state**](#endstone.event.WeatherChangeEvent.to_weather_state) (<code>[bool](#bool)</code>) – Gets the state of weather that the world is being set to
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="to_weather_state">
+        <td>[`to_weather_state`](#endstone.event.WeatherChangeEvent.to_weather_state)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Gets the state of weather that the world is being set to</td>
+    </tr></tbody>
+</table>
 
 #### to_weather_state [#endstone.event.WeatherChangeEvent.to_weather_state]
 
@@ -1867,13 +2877,27 @@ Gets the state of weather that the world is being set to
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[Event](#endstone._internal.endstone_python.Event)</code>
+Bases: <code className="nextra-code">[Event](#endstone._internal.endstone_python.Event)</code>
 
 Represents a weather-related event
 
 **Attributes:**
 
-- [**level**](#endstone.event.WeatherEvent.level) (<code>[Level](#endstone._internal.endstone_python.Level)</code>) – Returns the Level where this event is occurring
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="level">
+        <td>[`level`](#endstone.event.WeatherEvent.level)</td>
+        <td><code className="nextra-code">[Level](#endstone._internal.endstone_python.Level)</code></td>
+        <td>Returns the Level where this event is occurring</td>
+    </tr></tbody>
+</table>
 
 #### level [#endstone.event.WeatherEvent.level]
 

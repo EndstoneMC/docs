@@ -6,10 +6,12 @@ title: "endstone.block"
 
 **Classes:**
 
-- [**Block**](#endstone.block.Block) – Represents a block.
-- [**BlockData**](#endstone.block.BlockData) – Represents the data related to a live block
-- [**BlockFace**](#endstone.block.BlockFace) –
-- [**BlockState**](#endstone.block.BlockState) – Represents a captured state of a block, which will not update automatically.
+Name | Description
+---- | -----------
+[`Block`](#endstone.block.Block) | Represents a block.
+[`BlockData`](#endstone.block.BlockData) | Represents the data related to a live block
+[`BlockFace`](#endstone.block.BlockFace) |
+[`BlockState`](#endstone.block.BlockState) | Represents a captured state of a block, which will not update automatically.
 
 ### Block [#endstone.block.Block]
 
@@ -19,19 +21,75 @@ Represents a block.
 
 **Methods:**
 
-- [**capture_state**](#endstone.block.Block.capture_state) – Captures the current state of this block. The returned object will never be updated, and you are not guaranteed that (for example) a sign is still a sign after you capture its state.
-- [**set_data**](#endstone.block.Block.set_data) – Sets the complete data for this block
-- [**set_type**](#endstone.block.Block.set_type) – Sets the type of this block
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="capture_state">
+        <td>[`capture_state`](#endstone.block.Block.capture_state)</td>
+        <td>Captures the current state of this block. The returned object will never be updated, and you are not guaranteed that (for example) a sign is still a sign after you capture its state.</td>
+    </tr>
+    <tr key="set_data">
+        <td>[`set_data`](#endstone.block.Block.set_data)</td>
+        <td>Sets the complete data for this block</td>
+    </tr>
+    <tr key="set_type">
+        <td>[`set_type`](#endstone.block.Block.set_type)</td>
+        <td>Sets the type of this block</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**data**](#endstone.block.Block.data) (<code>[BlockData](#endstone._internal.endstone_python.BlockData)</code>) – Gets the complete data for this block
-- [**dimension**](#endstone.block.Block.dimension) (<code>[Dimension](#endstone._internal.endstone_python.Dimension)</code>) – Gets the dimension which contains this Block
-- [**location**](#endstone.block.Block.location) (<code>[Location](#endstone._internal.endstone_python.Location)</code>) – Gets the Location of the block
-- [**type**](#endstone.block.Block.type) (<code>[str](#str)</code>) – Gets or sets the type of the block.
-- [**x**](#endstone.block.Block.x) (<code>[int](#int)</code>) – Gets the x-coordinate of this block
-- [**y**](#endstone.block.Block.y) (<code>[int](#int)</code>) – Gets the y-coordinate of this block
-- [**z**](#endstone.block.Block.z) (<code>[int](#int)</code>) – Gets the z-coordinate of this block
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="data">
+        <td>[`data`](#endstone.block.Block.data)</td>
+        <td><code className="nextra-code">[BlockData](#endstone._internal.endstone_python.BlockData)</code></td>
+        <td>Gets the complete data for this block</td>
+    </tr>
+    <tr key="dimension">
+        <td>[`dimension`](#endstone.block.Block.dimension)</td>
+        <td><code className="nextra-code">[Dimension](#endstone._internal.endstone_python.Dimension)</code></td>
+        <td>Gets the dimension which contains this Block</td>
+    </tr>
+    <tr key="location">
+        <td>[`location`](#endstone.block.Block.location)</td>
+        <td><code className="nextra-code">[Location](#endstone._internal.endstone_python.Location)</code></td>
+        <td>Gets the Location of the block</td>
+    </tr>
+    <tr key="type">
+        <td>[`type`](#endstone.block.Block.type)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets or sets the type of the block.</td>
+    </tr>
+    <tr key="x">
+        <td>[`x`](#endstone.block.Block.x)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets the x-coordinate of this block</td>
+    </tr>
+    <tr key="y">
+        <td>[`y`](#endstone.block.Block.y)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets the y-coordinate of this block</td>
+    </tr>
+    <tr key="z">
+        <td>[`z`](#endstone.block.Block.z)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets the z-coordinate of this block</td>
+    </tr></tbody>
+</table>
 
 #### capture_state [#endstone.block.Block.capture_state]
 
@@ -123,9 +181,31 @@ Represents the data related to a live block
 
 **Attributes:**
 
-- [**block_states**](#endstone.block.BlockData.block_states) (<code>[dict](#dict)\[[str](#str), [bool](#bool) | [str](#str) | [int](#int)\]</code>) – Gets the block states for this block.
-- [**runtime_id**](#endstone.block.BlockData.runtime_id) (<code>[int](#int)</code>) – Gets the runtime id for this block.
-- [**type**](#endstone.block.BlockData.type) (<code>[str](#str)</code>) – Get the block type represented by this block data.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="block_states">
+        <td>[`block_states`](#endstone.block.BlockData.block_states)</td>
+        <td><code className="nextra-code">[dict](#dict)[[str](#str), [bool](#bool) | [str](#str) | [int](#int)]</code></td>
+        <td>Gets the block states for this block.</td>
+    </tr>
+    <tr key="runtime_id">
+        <td>[`runtime_id`](#endstone.block.BlockData.runtime_id)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets the runtime id for this block.</td>
+    </tr>
+    <tr key="type">
+        <td>[`type`](#endstone.block.BlockData.type)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Get the block type represented by this block data.</td>
+    </tr></tbody>
+</table>
 
 #### block_states [#endstone.block.BlockData.block_states]
 
@@ -156,21 +236,63 @@ Get the block type represented by this block data.
 ### BlockFace [#endstone.block.BlockFace]
 
 ```python
-BlockFace(value:int) -> None
+BlockFace(value:int)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
 
 **Attributes:**
 
-- [**DOWN**](#endstone.block.BlockFace.DOWN) (<code>[BlockFace](#endstone._internal.endstone_python.BlockFace)</code>) –
-- [**EAST**](#endstone.block.BlockFace.EAST) (<code>[BlockFace](#endstone._internal.endstone_python.BlockFace)</code>) –
-- [**NORTH**](#endstone.block.BlockFace.NORTH) (<code>[BlockFace](#endstone._internal.endstone_python.BlockFace)</code>) –
-- [**SOUTH**](#endstone.block.BlockFace.SOUTH) (<code>[BlockFace](#endstone._internal.endstone_python.BlockFace)</code>) –
-- [**UP**](#endstone.block.BlockFace.UP) (<code>[BlockFace](#endstone._internal.endstone_python.BlockFace)</code>) –
-- [**WEST**](#endstone.block.BlockFace.WEST) (<code>[BlockFace](#endstone._internal.endstone_python.BlockFace)</code>) –
-- [**name**](#endstone.block.BlockFace.name) (<code>[str](#str)</code>) –
-- [**value**](#endstone.block.BlockFace.value) (<code>[int](#int)</code>) –
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="DOWN">
+        <td>[`DOWN`](#endstone.block.BlockFace.DOWN)</td>
+        <td><code className="nextra-code">[BlockFace](#endstone._internal.endstone_python.BlockFace)</code></td>
+        <td></td>
+    </tr>
+    <tr key="EAST">
+        <td>[`EAST`](#endstone.block.BlockFace.EAST)</td>
+        <td><code className="nextra-code">[BlockFace](#endstone._internal.endstone_python.BlockFace)</code></td>
+        <td></td>
+    </tr>
+    <tr key="NORTH">
+        <td>[`NORTH`](#endstone.block.BlockFace.NORTH)</td>
+        <td><code className="nextra-code">[BlockFace](#endstone._internal.endstone_python.BlockFace)</code></td>
+        <td></td>
+    </tr>
+    <tr key="SOUTH">
+        <td>[`SOUTH`](#endstone.block.BlockFace.SOUTH)</td>
+        <td><code className="nextra-code">[BlockFace](#endstone._internal.endstone_python.BlockFace)</code></td>
+        <td></td>
+    </tr>
+    <tr key="UP">
+        <td>[`UP`](#endstone.block.BlockFace.UP)</td>
+        <td><code className="nextra-code">[BlockFace](#endstone._internal.endstone_python.BlockFace)</code></td>
+        <td></td>
+    </tr>
+    <tr key="WEST">
+        <td>[`WEST`](#endstone.block.BlockFace.WEST)</td>
+        <td><code className="nextra-code">[BlockFace](#endstone._internal.endstone_python.BlockFace)</code></td>
+        <td></td>
+    </tr>
+    <tr key="name">
+        <td>[`name`](#endstone.block.BlockFace.name)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td></td>
+    </tr>
+    <tr key="value">
+        <td>[`value`](#endstone.block.BlockFace.value)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td></td>
+    </tr></tbody>
+</table>
 
 #### DOWN [#endstone.block.BlockFace.DOWN]
 
@@ -230,18 +352,72 @@ Represents a captured state of a block, which will not update automatically.
 
 **Methods:**
 
-- [**update**](#endstone.block.BlockState.update) – Attempts to update the block represented by this state.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="update">
+        <td>[`update`](#endstone.block.BlockState.update)</td>
+        <td>Attempts to update the block represented by this state.</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**block**](#endstone.block.BlockState.block) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Gets the block represented by this block state.
-- [**data**](#endstone.block.BlockState.data) (<code>[BlockData](#endstone._internal.endstone_python.BlockData)</code>) – Gets or sets the data for this block state.
-- [**dimension**](#endstone.block.BlockState.dimension) (<code>[Dimension](#endstone._internal.endstone_python.Dimension)</code>) – Gets the dimension which contains the block represented by this block state.
-- [**location**](#endstone.block.BlockState.location) (<code>[Location](#endstone._internal.endstone_python.Location)</code>) – Gets the location of this block state.
-- [**type**](#endstone.block.BlockState.type) (<code>[str](#str)</code>) – Gets or sets the type of this block state.
-- [**x**](#endstone.block.BlockState.x) (<code>[int](#int)</code>) – Gets the x-coordinate of this block state.
-- [**y**](#endstone.block.BlockState.y) (<code>[int](#int)</code>) – Gets the y-coordinate of this block state.
-- [**z**](#endstone.block.BlockState.z) (<code>[int](#int)</code>) – Gets the z-coordinate of this block state.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="block">
+        <td>[`block`](#endstone.block.BlockState.block)</td>
+        <td><code className="nextra-code">[Block](#endstone._internal.endstone_python.Block)</code></td>
+        <td>Gets the block represented by this block state.</td>
+    </tr>
+    <tr key="data">
+        <td>[`data`](#endstone.block.BlockState.data)</td>
+        <td><code className="nextra-code">[BlockData](#endstone._internal.endstone_python.BlockData)</code></td>
+        <td>Gets or sets the data for this block state.</td>
+    </tr>
+    <tr key="dimension">
+        <td>[`dimension`](#endstone.block.BlockState.dimension)</td>
+        <td><code className="nextra-code">[Dimension](#endstone._internal.endstone_python.Dimension)</code></td>
+        <td>Gets the dimension which contains the block represented by this block state.</td>
+    </tr>
+    <tr key="location">
+        <td>[`location`](#endstone.block.BlockState.location)</td>
+        <td><code className="nextra-code">[Location](#endstone._internal.endstone_python.Location)</code></td>
+        <td>Gets the location of this block state.</td>
+    </tr>
+    <tr key="type">
+        <td>[`type`](#endstone.block.BlockState.type)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets or sets the type of this block state.</td>
+    </tr>
+    <tr key="x">
+        <td>[`x`](#endstone.block.BlockState.x)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets the x-coordinate of this block state.</td>
+    </tr>
+    <tr key="y">
+        <td>[`y`](#endstone.block.BlockState.y)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets the y-coordinate of this block state.</td>
+    </tr>
+    <tr key="z">
+        <td>[`z`](#endstone.block.BlockState.z)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets the z-coordinate of this block state.</td>
+    </tr></tbody>
+</table>
 
 #### block [#endstone.block.BlockState.block]
 

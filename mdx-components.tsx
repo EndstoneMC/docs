@@ -3,6 +3,7 @@ import Link from "next/link";
 import {ComponentProps} from "react";
 import {cn} from "@/lib/utils";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 
 const themeComponents = getThemeComponents()
 
@@ -61,5 +62,23 @@ export function useMDXComponents<T>(components: T) {
     Tab: ({className, ...props}: React.ComponentProps<"div">) => (
       <div className={cn(className)} {...props} />
     ),
+    table: ({className, ...props}: React.ComponentProps<typeof Table>) => {
+      return <Table className={className} {...props} />
+    },
+    thead: ({className, ...props}: React.ComponentProps<typeof TableHeader>) => {
+      return <TableHeader className={className} {...props} />
+    },
+    th: ({className, ...props}: React.ComponentProps<typeof TableHead>) => {
+      return <TableHead className={className} {...props} />
+    },
+    tr: ({className, ...props}: React.ComponentProps<typeof TableRow>) => {
+      return <TableRow className={className} {...props} />
+    },
+    tbody: ({className, ...props}: React.ComponentProps<typeof TableBody>) => {
+      return <TableBody className={className} {...props} />
+    },
+    td: ({className, ...props}: React.ComponentProps<typeof TableCell>) => {
+      return <TableCell className={cn(className, "whitespace-normal")} {...props} />
+    },
   }
 }

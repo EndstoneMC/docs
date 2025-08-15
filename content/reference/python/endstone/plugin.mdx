@@ -6,15 +6,17 @@ title: "endstone.plugin"
 
 **Classes:**
 
-- [**Plugin**](#endstone.plugin.Plugin) –
-- [**PluginCommand**](#endstone.plugin.PluginCommand) – Represents a Command belonging to a Plugin
-- [**PluginDescription**](#endstone.plugin.PluginDescription) – Represents the basic information about a plugin that the plugin loader needs to know.
-- [**PluginLoadOrder**](#endstone.plugin.PluginLoadOrder) – Represents the order in which a plugin should be initialized and enabled.
-- [**PluginLoader**](#endstone.plugin.PluginLoader) – Represents a plugin loader, which handles direct access to specific types of plugins
-- [**PluginManager**](#endstone.plugin.PluginManager) – Represents a plugin manager that handles all plugins from the Server
-- [**Service**](#endstone.plugin.Service) – Represents a list of methods.
-- [**ServiceManager**](#endstone.plugin.ServiceManager) – Represent a service manager that manages services and service providers.
-- [**ServicePriority**](#endstone.plugin.ServicePriority) – Represents various priorities of a provider.
+Name | Description
+---- | -----------
+[`Plugin`](#endstone.plugin.Plugin) |
+[`PluginCommand`](#endstone.plugin.PluginCommand) | Represents a Command belonging to a Plugin
+[`PluginDescription`](#endstone.plugin.PluginDescription) | Represents the basic information about a plugin that the plugin loader needs to know.
+[`PluginLoadOrder`](#endstone.plugin.PluginLoadOrder) | Represents the order in which a plugin should be initialized and enabled.
+[`PluginLoader`](#endstone.plugin.PluginLoader) | Represents a plugin loader, which handles direct access to specific types of plugins
+[`PluginManager`](#endstone.plugin.PluginManager) | Represents a plugin manager that handles all plugins from the Server
+[`Service`](#endstone.plugin.Service) | Represents a list of methods.
+[`ServiceManager`](#endstone.plugin.ServiceManager) | Represent a service manager that manages services and service providers.
+[`ServicePriority`](#endstone.plugin.ServicePriority) | Represents various priorities of a provider.
 
 ### Plugin [#endstone.plugin.Plugin]
 
@@ -24,35 +26,137 @@ Plugin()
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[Plugin](#endstone._internal.endstone_python.Plugin)</code>
+Bases: <code className="nextra-code">[Plugin](#endstone._internal.endstone_python.Plugin)</code>
 
 **Methods:**
 
-- [**register_events**](#endstone.plugin.Plugin.register_events) –
-- [**reload_config**](#endstone.plugin.Plugin.reload_config) –
-- [**save_config**](#endstone.plugin.Plugin.save_config) –
-- [**save_default_config**](#endstone.plugin.Plugin.save_default_config) –
-- [**save_resources**](#endstone.plugin.Plugin.save_resources) –
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="register_events">
+        <td>[`register_events`](#endstone.plugin.Plugin.register_events)</td>
+        <td></td>
+    </tr>
+    <tr key="reload_config">
+        <td>[`reload_config`](#endstone.plugin.Plugin.reload_config)</td>
+        <td></td>
+    </tr>
+    <tr key="save_config">
+        <td>[`save_config`](#endstone.plugin.Plugin.save_config)</td>
+        <td></td>
+    </tr>
+    <tr key="save_default_config">
+        <td>[`save_default_config`](#endstone.plugin.Plugin.save_default_config)</td>
+        <td></td>
+    </tr>
+    <tr key="save_resources">
+        <td>[`save_resources`](#endstone.plugin.Plugin.save_resources)</td>
+        <td></td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**api_version**](#endstone.plugin.Plugin.api_version) –
-- [**authors**](#endstone.plugin.Plugin.authors) –
-- [**commands**](#endstone.plugin.Plugin.commands) –
-- [**config**](#endstone.plugin.Plugin.config) (<code>[dict](#dict)</code>) –
-- [**contributors**](#endstone.plugin.Plugin.contributors) –
-- [**default_permission**](#endstone.plugin.Plugin.default_permission) –
-- [**depend**](#endstone.plugin.Plugin.depend) –
-- [**description**](#endstone.plugin.Plugin.description) –
-- [**load**](#endstone.plugin.Plugin.load) –
-- [**load_before**](#endstone.plugin.Plugin.load_before) –
-- [**name**](#endstone.plugin.Plugin.name) –
-- [**permissions**](#endstone.plugin.Plugin.permissions) –
-- [**prefix**](#endstone.plugin.Plugin.prefix) –
-- [**provides**](#endstone.plugin.Plugin.provides) –
-- [**soft_depend**](#endstone.plugin.Plugin.soft_depend) –
-- [**version**](#endstone.plugin.Plugin.version) –
-- [**website**](#endstone.plugin.Plugin.website) –
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="api_version">
+        <td>[`api_version`](#endstone.plugin.Plugin.api_version)</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr key="authors">
+        <td>[`authors`](#endstone.plugin.Plugin.authors)</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr key="commands">
+        <td>[`commands`](#endstone.plugin.Plugin.commands)</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr key="config">
+        <td>[`config`](#endstone.plugin.Plugin.config)</td>
+        <td><code className="nextra-code">[dict](#dict)</code></td>
+        <td></td>
+    </tr>
+    <tr key="contributors">
+        <td>[`contributors`](#endstone.plugin.Plugin.contributors)</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr key="default_permission">
+        <td>[`default_permission`](#endstone.plugin.Plugin.default_permission)</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr key="depend">
+        <td>[`depend`](#endstone.plugin.Plugin.depend)</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr key="description">
+        <td>[`description`](#endstone.plugin.Plugin.description)</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr key="load">
+        <td>[`load`](#endstone.plugin.Plugin.load)</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr key="load_before">
+        <td>[`load_before`](#endstone.plugin.Plugin.load_before)</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr key="name">
+        <td>[`name`](#endstone.plugin.Plugin.name)</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr key="permissions">
+        <td>[`permissions`](#endstone.plugin.Plugin.permissions)</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr key="prefix">
+        <td>[`prefix`](#endstone.plugin.Plugin.prefix)</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr key="provides">
+        <td>[`provides`](#endstone.plugin.Plugin.provides)</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr key="soft_depend">
+        <td>[`soft_depend`](#endstone.plugin.Plugin.soft_depend)</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr key="version">
+        <td>[`version`](#endstone.plugin.Plugin.version)</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr key="website">
+        <td>[`website`](#endstone.plugin.Plugin.website)</td>
+        <td></td>
+        <td></td>
+    </tr></tbody>
+</table>
 
 #### api_version [#endstone.plugin.Plugin.api_version]
 
@@ -192,14 +296,32 @@ website = None
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[Command](#endstone._internal.endstone_python.Command)</code>
+Bases: <code className="nextra-code">[Command](#endstone._internal.endstone_python.Command)</code>
 
 Represents a Command belonging to a Plugin
 
 **Attributes:**
 
-- [**executor**](#endstone.plugin.PluginCommand.executor) (<code>[CommandExecutor](#endstone._internal.endstone_python.CommandExecutor)</code>) – The CommandExecutor to run when parsing this command
-- [**plugin**](#endstone.plugin.PluginCommand.plugin) (<code>[Plugin](#endstone._internal.endstone_python.Plugin)</code>) – The owner of this PluginCommand
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="executor">
+        <td>[`executor`](#endstone.plugin.PluginCommand.executor)</td>
+        <td><code className="nextra-code">[CommandExecutor](#endstone._internal.endstone_python.CommandExecutor)</code></td>
+        <td>The CommandExecutor to run when parsing this command</td>
+    </tr>
+    <tr key="plugin">
+        <td>[`plugin`](#endstone.plugin.PluginCommand.plugin)</td>
+        <td><code className="nextra-code">[Plugin](#endstone._internal.endstone_python.Plugin)</code></td>
+        <td>The owner of this PluginCommand</td>
+    </tr></tbody>
+</table>
 
 #### executor [#endstone.plugin.PluginCommand.executor]
 
@@ -240,7 +362,7 @@ PluginDescription(
     permissions: list[Permission] | None = None,
     *args: list[Permission] | None,
     **kwargs: list[Permission] | None
-) -> None
+)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
@@ -249,23 +371,101 @@ Represents the basic information about a plugin that the plugin loader needs to 
 
 **Attributes:**
 
-- [**api_version**](#endstone.plugin.PluginDescription.api_version) (<code>[str](#str)</code>) – Gives the API version which this plugin is designed to support.
-- [**authors**](#endstone.plugin.PluginDescription.authors) (<code>[list](#list)\[[str](#str)\]</code>) – Gives the list of authors for the plugin.
-- [**commands**](#endstone.plugin.PluginDescription.commands) (<code>[list](#list)\[[Command](#endstone._internal.endstone_python.Command)\]</code>) – Gives the list of commands the plugin will register at runtime.
-- [**contributors**](#endstone.plugin.PluginDescription.contributors) (<code>[list](#list)\[[str](#str)\]</code>) – Gives the list of contributors for the plugin.
-- [**default_permission**](#endstone.plugin.PluginDescription.default_permission) (<code>[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code>) – Gives the default value of permissions registered for the plugin.
-- [**depend**](#endstone.plugin.PluginDescription.depend) (<code>[list](#list)\[[str](#str)\]</code>) – Gives a list of other plugins that the plugin requires.
-- [**description**](#endstone.plugin.PluginDescription.description) (<code>[str](#str)</code>) – Gives a human-friendly description of the functionality the plugin provides.
-- [**full_name**](#endstone.plugin.PluginDescription.full_name) (<code>[str](#str)</code>) – Returns the name of a plugin, including the version.
-- [**load**](#endstone.plugin.PluginDescription.load) (<code>[PluginLoadOrder](#endstone._internal.endstone_python.PluginLoadOrder)</code>) – Gives the phase of server startup that the plugin should be loaded.
-- [**load_before**](#endstone.plugin.PluginDescription.load_before) (<code>[list](#list)\[[str](#str)\]</code>) – Gets the list of plugins that should consider this plugin a soft-dependency.
-- [**name**](#endstone.plugin.PluginDescription.name) (<code>[str](#str)</code>) – Gives the name of the plugin. This name is a unique identifier for plugins.
-- [**permissions**](#endstone.plugin.PluginDescription.permissions) (<code>[list](#list)\[[Permission](#endstone._internal.endstone_python.Permission)\]</code>) – Gives the list of permissions the plugin will register at runtime, immediately proceeding enabling.
-- [**prefix**](#endstone.plugin.PluginDescription.prefix) (<code>[str](#str)</code>) – Gives the token to prefix plugin-specific logging messages with.
-- [**provides**](#endstone.plugin.PluginDescription.provides) (<code>[list](#list)\[[str](#str)\]</code>) – Gives the list of other plugin APIs which this plugin provides. These are usable for other plugins to depend on.
-- [**soft_depend**](#endstone.plugin.PluginDescription.soft_depend) (<code>[list](#list)\[[str](#str)\]</code>) – Gives a list of other plugins that the plugin requires for full functionality.
-- [**version**](#endstone.plugin.PluginDescription.version) (<code>[str](#str)</code>) – Gives the version of the plugin.
-- [**website**](#endstone.plugin.PluginDescription.website) (<code>[str](#str)</code>) – Gives the plugin's or plugin's author's website.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="api_version">
+        <td>[`api_version`](#endstone.plugin.PluginDescription.api_version)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gives the API version which this plugin is designed to support.</td>
+    </tr>
+    <tr key="authors">
+        <td>[`authors`](#endstone.plugin.PluginDescription.authors)</td>
+        <td><code className="nextra-code">[list](#list)[[str](#str)]</code></td>
+        <td>Gives the list of authors for the plugin.</td>
+    </tr>
+    <tr key="commands">
+        <td>[`commands`](#endstone.plugin.PluginDescription.commands)</td>
+        <td><code className="nextra-code">[list](#list)[[Command](#endstone._internal.endstone_python.Command)]</code></td>
+        <td>Gives the list of commands the plugin will register at runtime.</td>
+    </tr>
+    <tr key="contributors">
+        <td>[`contributors`](#endstone.plugin.PluginDescription.contributors)</td>
+        <td><code className="nextra-code">[list](#list)[[str](#str)]</code></td>
+        <td>Gives the list of contributors for the plugin.</td>
+    </tr>
+    <tr key="default_permission">
+        <td>[`default_permission`](#endstone.plugin.PluginDescription.default_permission)</td>
+        <td><code className="nextra-code">[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code></td>
+        <td>Gives the default value of permissions registered for the plugin.</td>
+    </tr>
+    <tr key="depend">
+        <td>[`depend`](#endstone.plugin.PluginDescription.depend)</td>
+        <td><code className="nextra-code">[list](#list)[[str](#str)]</code></td>
+        <td>Gives a list of other plugins that the plugin requires.</td>
+    </tr>
+    <tr key="description">
+        <td>[`description`](#endstone.plugin.PluginDescription.description)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gives a human-friendly description of the functionality the plugin provides.</td>
+    </tr>
+    <tr key="full_name">
+        <td>[`full_name`](#endstone.plugin.PluginDescription.full_name)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Returns the name of a plugin, including the version.</td>
+    </tr>
+    <tr key="load">
+        <td>[`load`](#endstone.plugin.PluginDescription.load)</td>
+        <td><code className="nextra-code">[PluginLoadOrder](#endstone._internal.endstone_python.PluginLoadOrder)</code></td>
+        <td>Gives the phase of server startup that the plugin should be loaded.</td>
+    </tr>
+    <tr key="load_before">
+        <td>[`load_before`](#endstone.plugin.PluginDescription.load_before)</td>
+        <td><code className="nextra-code">[list](#list)[[str](#str)]</code></td>
+        <td>Gets the list of plugins that should consider this plugin a soft-dependency.</td>
+    </tr>
+    <tr key="name">
+        <td>[`name`](#endstone.plugin.PluginDescription.name)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gives the name of the plugin. This name is a unique identifier for plugins.</td>
+    </tr>
+    <tr key="permissions">
+        <td>[`permissions`](#endstone.plugin.PluginDescription.permissions)</td>
+        <td><code className="nextra-code">[list](#list)[[Permission](#endstone._internal.endstone_python.Permission)]</code></td>
+        <td>Gives the list of permissions the plugin will register at runtime, immediately proceeding enabling.</td>
+    </tr>
+    <tr key="prefix">
+        <td>[`prefix`](#endstone.plugin.PluginDescription.prefix)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gives the token to prefix plugin-specific logging messages with.</td>
+    </tr>
+    <tr key="provides">
+        <td>[`provides`](#endstone.plugin.PluginDescription.provides)</td>
+        <td><code className="nextra-code">[list](#list)[[str](#str)]</code></td>
+        <td>Gives the list of other plugin APIs which this plugin provides. These are usable for other plugins to depend on.</td>
+    </tr>
+    <tr key="soft_depend">
+        <td>[`soft_depend`](#endstone.plugin.PluginDescription.soft_depend)</td>
+        <td><code className="nextra-code">[list](#list)[[str](#str)]</code></td>
+        <td>Gives a list of other plugins that the plugin requires for full functionality.</td>
+    </tr>
+    <tr key="version">
+        <td>[`version`](#endstone.plugin.PluginDescription.version)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gives the version of the plugin.</td>
+    </tr>
+    <tr key="website">
+        <td>[`website`](#endstone.plugin.PluginDescription.website)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gives the plugin's or plugin's author's website.</td>
+    </tr></tbody>
+</table>
 
 #### api_version [#endstone.plugin.PluginDescription.api_version]
 
@@ -408,7 +608,7 @@ Gives the plugin's or plugin's author's website.
 ### PluginLoadOrder [#endstone.plugin.PluginLoadOrder]
 
 ```python
-PluginLoadOrder(value:int) -> None
+PluginLoadOrder(value:int)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
@@ -417,10 +617,36 @@ Represents the order in which a plugin should be initialized and enabled.
 
 **Attributes:**
 
-- [**POSTWORLD**](#endstone.plugin.PluginLoadOrder.POSTWORLD) (<code>[PluginLoadOrder](#endstone._internal.endstone_python.PluginLoadOrder)</code>) –
-- [**STARTUP**](#endstone.plugin.PluginLoadOrder.STARTUP) (<code>[PluginLoadOrder](#endstone._internal.endstone_python.PluginLoadOrder)</code>) –
-- [**name**](#endstone.plugin.PluginLoadOrder.name) (<code>[str](#str)</code>) –
-- [**value**](#endstone.plugin.PluginLoadOrder.value) (<code>[int](#int)</code>) –
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="POSTWORLD">
+        <td>[`POSTWORLD`](#endstone.plugin.PluginLoadOrder.POSTWORLD)</td>
+        <td><code className="nextra-code">[PluginLoadOrder](#endstone._internal.endstone_python.PluginLoadOrder)</code></td>
+        <td></td>
+    </tr>
+    <tr key="STARTUP">
+        <td>[`STARTUP`](#endstone.plugin.PluginLoadOrder.STARTUP)</td>
+        <td><code className="nextra-code">[PluginLoadOrder](#endstone._internal.endstone_python.PluginLoadOrder)</code></td>
+        <td></td>
+    </tr>
+    <tr key="name">
+        <td>[`name`](#endstone.plugin.PluginLoadOrder.name)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td></td>
+    </tr>
+    <tr key="value">
+        <td>[`value`](#endstone.plugin.PluginLoadOrder.value)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td></td>
+    </tr></tbody>
+</table>
 
 #### POSTWORLD [#endstone.plugin.PluginLoadOrder.POSTWORLD]
 
@@ -451,7 +677,7 @@ value: int
 ### PluginLoader [#endstone.plugin.PluginLoader]
 
 ```python
-PluginLoader(server:Server) -> None
+PluginLoader(server:Server)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
@@ -460,15 +686,54 @@ Represents a plugin loader, which handles direct access to specific types of plu
 
 **Methods:**
 
-- [**disable_plugin**](#endstone.plugin.PluginLoader.disable_plugin) – Disables the specified plugin
-- [**enable_plugin**](#endstone.plugin.PluginLoader.enable_plugin) – Enables the specified plugin
-- [**load_plugin**](#endstone.plugin.PluginLoader.load_plugin) – Loads the plugin contained in the specified file
-- [**load_plugins**](#endstone.plugin.PluginLoader.load_plugins) – Loads the plugin contained within the specified directory
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="disable_plugin">
+        <td>[`disable_plugin`](#endstone.plugin.PluginLoader.disable_plugin)</td>
+        <td>Disables the specified plugin</td>
+    </tr>
+    <tr key="enable_plugin">
+        <td>[`enable_plugin`](#endstone.plugin.PluginLoader.enable_plugin)</td>
+        <td>Enables the specified plugin</td>
+    </tr>
+    <tr key="load_plugin">
+        <td>[`load_plugin`](#endstone.plugin.PluginLoader.load_plugin)</td>
+        <td>Loads the plugin contained in the specified file</td>
+    </tr>
+    <tr key="load_plugins">
+        <td>[`load_plugins`](#endstone.plugin.PluginLoader.load_plugins)</td>
+        <td>Loads the plugin contained within the specified directory</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**plugin_file_filters**](#endstone.plugin.PluginLoader.plugin_file_filters) (<code>[list](#list)\[[str](#str)\]</code>) – Returns a list of all filename filters expected by this PluginLoader
-- [**server**](#endstone.plugin.PluginLoader.server) (<code>[Server](#endstone._internal.endstone_python.Server)</code>) – Retrieves the Server object associated with the PluginLoader.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="plugin_file_filters">
+        <td>[`plugin_file_filters`](#endstone.plugin.PluginLoader.plugin_file_filters)</td>
+        <td><code className="nextra-code">[list](#list)[[str](#str)]</code></td>
+        <td>Returns a list of all filename filters expected by this PluginLoader</td>
+    </tr>
+    <tr key="server">
+        <td>[`server`](#endstone.plugin.PluginLoader.server)</td>
+        <td><code className="nextra-code">[Server](#endstone._internal.endstone_python.Server)</code></td>
+        <td>Retrieves the Server object associated with the PluginLoader.</td>
+    </tr></tbody>
+</table>
 
 #### disable_plugin [#endstone.plugin.PluginLoader.disable_plugin]
 
@@ -528,29 +793,110 @@ Represents a plugin manager that handles all plugins from the Server
 
 **Methods:**
 
-- [**call_event**](#endstone.plugin.PluginManager.call_event) – Calls an event which will be passed to plugins.
-- [**clear_plugins**](#endstone.plugin.PluginManager.clear_plugins) – Disables and removes all plugins
-- [**disable_plugin**](#endstone.plugin.PluginManager.disable_plugin) – Disables the specified plugin
-- [**disable_plugins**](#endstone.plugin.PluginManager.disable_plugins) – Disables all the loaded plugins
-- [**enable_plugin**](#endstone.plugin.PluginManager.enable_plugin) – Enables the specified plugin
-- [**enable_plugins**](#endstone.plugin.PluginManager.enable_plugins) – Enable all the loaded plugins
-- [**get_default_perm_subscriptions**](#endstone.plugin.PluginManager.get_default_perm_subscriptions) – Gets a set containing all subscribed Permissibles to the given default list, by permission level.
-- [**get_default_permissions**](#endstone.plugin.PluginManager.get_default_permissions) – Gets the default permissions for the given permission level.
-- [**get_permission**](#endstone.plugin.PluginManager.get_permission) – Gets a Permission from its fully qualified name.
-- [**get_permission_subscriptions**](#endstone.plugin.PluginManager.get_permission_subscriptions) – Gets a set containing all subscribed Permissibles to the given permission.
-- [**get_plugin**](#endstone.plugin.PluginManager.get_plugin) – Checks if the given plugin is loaded and returns it when applicable.
-- [**load_plugin**](#endstone.plugin.PluginManager.load_plugin) – Loads the plugin in the specified file
-- [**recalculate_permission_defaults**](#endstone.plugin.PluginManager.recalculate_permission_defaults) – Recalculates the defaults for the given Permission.
-- [**register_event**](#endstone.plugin.PluginManager.register_event) – Registers the given event
-- [**subscribe_to_default_perms**](#endstone.plugin.PluginManager.subscribe_to_default_perms) – Subscribes to the given Default permissions by permission level.
-- [**subscribe_to_permission**](#endstone.plugin.PluginManager.subscribe_to_permission) – Subscribes the given Permissible for information about the requested Permission.
-- [**unsubscribe_from_default_perms**](#endstone.plugin.PluginManager.unsubscribe_from_default_perms) – Unsubscribes from the given Default permissions by permission level.
-- [**unsubscribe_from_permission**](#endstone.plugin.PluginManager.unsubscribe_from_permission) – Unsubscribes the given Permissible for information about the requested Permission.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="call_event">
+        <td>[`call_event`](#endstone.plugin.PluginManager.call_event)</td>
+        <td>Calls an event which will be passed to plugins.</td>
+    </tr>
+    <tr key="clear_plugins">
+        <td>[`clear_plugins`](#endstone.plugin.PluginManager.clear_plugins)</td>
+        <td>Disables and removes all plugins</td>
+    </tr>
+    <tr key="disable_plugin">
+        <td>[`disable_plugin`](#endstone.plugin.PluginManager.disable_plugin)</td>
+        <td>Disables the specified plugin</td>
+    </tr>
+    <tr key="disable_plugins">
+        <td>[`disable_plugins`](#endstone.plugin.PluginManager.disable_plugins)</td>
+        <td>Disables all the loaded plugins</td>
+    </tr>
+    <tr key="enable_plugin">
+        <td>[`enable_plugin`](#endstone.plugin.PluginManager.enable_plugin)</td>
+        <td>Enables the specified plugin</td>
+    </tr>
+    <tr key="enable_plugins">
+        <td>[`enable_plugins`](#endstone.plugin.PluginManager.enable_plugins)</td>
+        <td>Enable all the loaded plugins</td>
+    </tr>
+    <tr key="get_default_perm_subscriptions">
+        <td>[`get_default_perm_subscriptions`](#endstone.plugin.PluginManager.get_default_perm_subscriptions)</td>
+        <td>Gets a set containing all subscribed Permissibles to the given default list, by permission level.</td>
+    </tr>
+    <tr key="get_default_permissions">
+        <td>[`get_default_permissions`](#endstone.plugin.PluginManager.get_default_permissions)</td>
+        <td>Gets the default permissions for the given permission level.</td>
+    </tr>
+    <tr key="get_permission">
+        <td>[`get_permission`](#endstone.plugin.PluginManager.get_permission)</td>
+        <td>Gets a Permission from its fully qualified name.</td>
+    </tr>
+    <tr key="get_permission_subscriptions">
+        <td>[`get_permission_subscriptions`](#endstone.plugin.PluginManager.get_permission_subscriptions)</td>
+        <td>Gets a set containing all subscribed Permissibles to the given permission.</td>
+    </tr>
+    <tr key="get_plugin">
+        <td>[`get_plugin`](#endstone.plugin.PluginManager.get_plugin)</td>
+        <td>Checks if the given plugin is loaded and returns it when applicable.</td>
+    </tr>
+    <tr key="load_plugin">
+        <td>[`load_plugin`](#endstone.plugin.PluginManager.load_plugin)</td>
+        <td>Loads the plugin in the specified file</td>
+    </tr>
+    <tr key="recalculate_permission_defaults">
+        <td>[`recalculate_permission_defaults`](#endstone.plugin.PluginManager.recalculate_permission_defaults)</td>
+        <td>Recalculates the defaults for the given Permission.</td>
+    </tr>
+    <tr key="register_event">
+        <td>[`register_event`](#endstone.plugin.PluginManager.register_event)</td>
+        <td>Registers the given event</td>
+    </tr>
+    <tr key="subscribe_to_default_perms">
+        <td>[`subscribe_to_default_perms`](#endstone.plugin.PluginManager.subscribe_to_default_perms)</td>
+        <td>Subscribes to the given Default permissions by permission level.</td>
+    </tr>
+    <tr key="subscribe_to_permission">
+        <td>[`subscribe_to_permission`](#endstone.plugin.PluginManager.subscribe_to_permission)</td>
+        <td>Subscribes the given Permissible for information about the requested Permission.</td>
+    </tr>
+    <tr key="unsubscribe_from_default_perms">
+        <td>[`unsubscribe_from_default_perms`](#endstone.plugin.PluginManager.unsubscribe_from_default_perms)</td>
+        <td>Unsubscribes from the given Default permissions by permission level.</td>
+    </tr>
+    <tr key="unsubscribe_from_permission">
+        <td>[`unsubscribe_from_permission`](#endstone.plugin.PluginManager.unsubscribe_from_permission)</td>
+        <td>Unsubscribes the given Permissible for information about the requested Permission.</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**permissions**](#endstone.plugin.PluginManager.permissions) (<code>[set](#set)\[[Permission](#endstone._internal.endstone_python.Permission)\]</code>) – Gets a set of all registered permissions.
-- [**plugins**](#endstone.plugin.PluginManager.plugins) (<code>[list](#list)\[[Plugin](#endstone._internal.endstone_python.Plugin)\]</code>) – Gets a list of all currently loaded plugins
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="permissions">
+        <td>[`permissions`](#endstone.plugin.PluginManager.permissions)</td>
+        <td><code className="nextra-code">[set](#set)[[Permission](#endstone._internal.endstone_python.Permission)]</code></td>
+        <td>Gets a set of all registered permissions.</td>
+    </tr>
+    <tr key="plugins">
+        <td>[`plugins`](#endstone.plugin.PluginManager.plugins)</td>
+        <td><code className="nextra-code">[list](#list)[[Plugin](#endstone._internal.endstone_python.Plugin)]</code></td>
+        <td>Gets a list of all currently loaded plugins</td>
+    </tr></tbody>
+</table>
 
 #### call_event [#endstone.plugin.PluginManager.call_event]
 
@@ -727,7 +1073,7 @@ Unsubscribes the given Permissible for information about the requested Permissio
 ### Service [#endstone.plugin.Service]
 
 ```python
-Service() -> None
+Service()
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
@@ -744,9 +1090,27 @@ Represent a service manager that manages services and service providers.
 
 **Methods:**
 
-- [**load**](#endstone.plugin.ServiceManager.load) –
-- [**register**](#endstone.plugin.ServiceManager.register) – Register a provider of a service.
-- [**unregister_all**](#endstone.plugin.ServiceManager.unregister_all) – Unregister all the services registered by a particular plugin.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="load">
+        <td>[`load`](#endstone.plugin.ServiceManager.load)</td>
+        <td></td>
+    </tr>
+    <tr key="register">
+        <td>[`register`](#endstone.plugin.ServiceManager.register)</td>
+        <td>Register a provider of a service.</td>
+    </tr>
+    <tr key="unregister_all">
+        <td>[`unregister_all`](#endstone.plugin.ServiceManager.unregister_all)</td>
+        <td>Unregister all the services registered by a particular plugin.</td>
+    </tr></tbody>
+</table>
 
 #### load [#endstone.plugin.ServiceManager.load]
 
@@ -777,7 +1141,7 @@ Unregister all the services registered by a particular plugin.
 ### ServicePriority [#endstone.plugin.ServicePriority]
 
 ```python
-ServicePriority(value:int) -> None
+ServicePriority(value:int)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
@@ -786,13 +1150,51 @@ Represents various priorities of a provider.
 
 **Attributes:**
 
-- [**HIGH**](#endstone.plugin.ServicePriority.HIGH) (<code>[ServicePriority](#endstone._internal.endstone_python.ServicePriority)</code>) –
-- [**HIGHEST**](#endstone.plugin.ServicePriority.HIGHEST) (<code>[ServicePriority](#endstone._internal.endstone_python.ServicePriority)</code>) –
-- [**LOW**](#endstone.plugin.ServicePriority.LOW) (<code>[ServicePriority](#endstone._internal.endstone_python.ServicePriority)</code>) –
-- [**LOWEST**](#endstone.plugin.ServicePriority.LOWEST) (<code>[ServicePriority](#endstone._internal.endstone_python.ServicePriority)</code>) –
-- [**NORMAL**](#endstone.plugin.ServicePriority.NORMAL) (<code>[ServicePriority](#endstone._internal.endstone_python.ServicePriority)</code>) –
-- [**name**](#endstone.plugin.ServicePriority.name) (<code>[str](#str)</code>) –
-- [**value**](#endstone.plugin.ServicePriority.value) (<code>[int](#int)</code>) –
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="HIGH">
+        <td>[`HIGH`](#endstone.plugin.ServicePriority.HIGH)</td>
+        <td><code className="nextra-code">[ServicePriority](#endstone._internal.endstone_python.ServicePriority)</code></td>
+        <td></td>
+    </tr>
+    <tr key="HIGHEST">
+        <td>[`HIGHEST`](#endstone.plugin.ServicePriority.HIGHEST)</td>
+        <td><code className="nextra-code">[ServicePriority](#endstone._internal.endstone_python.ServicePriority)</code></td>
+        <td></td>
+    </tr>
+    <tr key="LOW">
+        <td>[`LOW`](#endstone.plugin.ServicePriority.LOW)</td>
+        <td><code className="nextra-code">[ServicePriority](#endstone._internal.endstone_python.ServicePriority)</code></td>
+        <td></td>
+    </tr>
+    <tr key="LOWEST">
+        <td>[`LOWEST`](#endstone.plugin.ServicePriority.LOWEST)</td>
+        <td><code className="nextra-code">[ServicePriority](#endstone._internal.endstone_python.ServicePriority)</code></td>
+        <td></td>
+    </tr>
+    <tr key="NORMAL">
+        <td>[`NORMAL`](#endstone.plugin.ServicePriority.NORMAL)</td>
+        <td><code className="nextra-code">[ServicePriority](#endstone._internal.endstone_python.ServicePriority)</code></td>
+        <td></td>
+    </tr>
+    <tr key="name">
+        <td>[`name`](#endstone.plugin.ServicePriority.name)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td></td>
+    </tr>
+    <tr key="value">
+        <td>[`value`](#endstone.plugin.ServicePriority.value)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td></td>
+    </tr></tbody>
+</table>
 
 #### HIGH [#endstone.plugin.ServicePriority.HIGH]
 

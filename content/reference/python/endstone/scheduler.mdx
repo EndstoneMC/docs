@@ -6,8 +6,10 @@ title: "endstone.scheduler"
 
 **Classes:**
 
-- [**Scheduler**](#endstone.scheduler.Scheduler) – Represents a scheduler that executes various tasks
-- [**Task**](#endstone.scheduler.Task) – Represents a task being executed by the scheduler
+Name | Description
+---- | -----------
+[`Scheduler`](#endstone.scheduler.Scheduler) | Represents a scheduler that executes various tasks
+[`Task`](#endstone.scheduler.Task) | Represents a task being executed by the scheduler
 
 ### Scheduler [#endstone.scheduler.Scheduler]
 
@@ -17,12 +19,39 @@ Represents a scheduler that executes various tasks
 
 **Methods:**
 
-- [**cancel_task**](#endstone.scheduler.Scheduler.cancel_task) – Removes task from scheduler.
-- [**cancel_tasks**](#endstone.scheduler.Scheduler.cancel_tasks) – Removes all tasks associated with a particular plugin from the scheduler.
-- [**get_pending_tasks**](#endstone.scheduler.Scheduler.get_pending_tasks) – Returns a vector of all pending tasks.
-- [**is_queued**](#endstone.scheduler.Scheduler.is_queued) – Check if the task queued to be run later.
-- [**is_running**](#endstone.scheduler.Scheduler.is_running) – Check if the task currently running.
-- [**run_task**](#endstone.scheduler.Scheduler.run_task) – Returns a task that will be executed synchronously
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="cancel_task">
+        <td>[`cancel_task`](#endstone.scheduler.Scheduler.cancel_task)</td>
+        <td>Removes task from scheduler.</td>
+    </tr>
+    <tr key="cancel_tasks">
+        <td>[`cancel_tasks`](#endstone.scheduler.Scheduler.cancel_tasks)</td>
+        <td>Removes all tasks associated with a particular plugin from the scheduler.</td>
+    </tr>
+    <tr key="get_pending_tasks">
+        <td>[`get_pending_tasks`](#endstone.scheduler.Scheduler.get_pending_tasks)</td>
+        <td>Returns a vector of all pending tasks.</td>
+    </tr>
+    <tr key="is_queued">
+        <td>[`is_queued`](#endstone.scheduler.Scheduler.is_queued)</td>
+        <td>Check if the task queued to be run later.</td>
+    </tr>
+    <tr key="is_running">
+        <td>[`is_running`](#endstone.scheduler.Scheduler.is_running)</td>
+        <td>Check if the task currently running.</td>
+    </tr>
+    <tr key="run_task">
+        <td>[`run_task`](#endstone.scheduler.Scheduler.run_task)</td>
+        <td>Returns a task that will be executed synchronously</td>
+    </tr></tbody>
+</table>
 
 #### cancel_task [#endstone.scheduler.Scheduler.cancel_task]
 
@@ -84,14 +113,52 @@ Represents a task being executed by the scheduler
 
 **Methods:**
 
-- [**cancel**](#endstone.scheduler.Task.cancel) – Attempts to cancel this task.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="cancel">
+        <td>[`cancel`](#endstone.scheduler.Task.cancel)</td>
+        <td>Attempts to cancel this task.</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**is_cancelled**](#endstone.scheduler.Task.is_cancelled) (<code>[bool](#bool)</code>) – Returns true if the task has been cancelled.
-- [**is_sync**](#endstone.scheduler.Task.is_sync) (<code>[bool](#bool)</code>) – Returns true if the task is run by server thread.
-- [**owner**](#endstone.scheduler.Task.owner) (<code>[Plugin](#endstone._internal.endstone_python.Plugin)</code>) – Returns the Plugin that owns the task.
-- [**task_id**](#endstone.scheduler.Task.task_id) (<code>[int](#int)</code>) – Returns the task id.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="is_cancelled">
+        <td>[`is_cancelled`](#endstone.scheduler.Task.is_cancelled)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Returns true if the task has been cancelled.</td>
+    </tr>
+    <tr key="is_sync">
+        <td>[`is_sync`](#endstone.scheduler.Task.is_sync)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Returns true if the task is run by server thread.</td>
+    </tr>
+    <tr key="owner">
+        <td>[`owner`](#endstone.scheduler.Task.owner)</td>
+        <td><code className="nextra-code">[Plugin](#endstone._internal.endstone_python.Plugin)</code></td>
+        <td>Returns the Plugin that owns the task.</td>
+    </tr>
+    <tr key="task_id">
+        <td>[`task_id`](#endstone.scheduler.Task.task_id)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Returns the task id.</td>
+    </tr></tbody>
+</table>
 
 #### cancel [#endstone.scheduler.Task.cancel]
 

@@ -6,9 +6,11 @@ title: "endstone.map"
 
 **Classes:**
 
-- [**MapCanvas**](#endstone.map.MapCanvas) – Represents a canvas for drawing to a map. Each canvas is associated with a specific MapRenderer and represents that renderer's layer on the map.
-- [**MapRenderer**](#endstone.map.MapRenderer) – Represents a renderer for a map.
-- [**MapView**](#endstone.map.MapView) – Represents a map item.
+Name | Description
+---- | -----------
+[`MapCanvas`](#endstone.map.MapCanvas) | Represents a canvas for drawing to a map. Each canvas is associated with a specific MapRenderer and represents that renderer's layer on the map.
+[`MapRenderer`](#endstone.map.MapRenderer) | Represents a renderer for a map.
+[`MapView`](#endstone.map.MapView) | Represents a map item.
 
 ### MapCanvas [#endstone.map.MapCanvas]
 
@@ -18,14 +20,49 @@ Represents a canvas for drawing to a map. Each canvas is associated with a speci
 
 **Methods:**
 
-- [**draw_image**](#endstone.map.MapCanvas.draw_image) – Draw an image to the map. The image will be clipped if necessary.
-- [**get_base_pixel_color**](#endstone.map.MapCanvas.get_base_pixel_color) – Get a pixel from the layers below this canvas.
-- [**get_pixel_color**](#endstone.map.MapCanvas.get_pixel_color) – Get a pixel from the canvas.
-- [**set_pixel_color**](#endstone.map.MapCanvas.set_pixel_color) – Draw a pixel to the canvas.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="draw_image">
+        <td>[`draw_image`](#endstone.map.MapCanvas.draw_image)</td>
+        <td>Draw an image to the map. The image will be clipped if necessary.</td>
+    </tr>
+    <tr key="get_base_pixel_color">
+        <td>[`get_base_pixel_color`](#endstone.map.MapCanvas.get_base_pixel_color)</td>
+        <td>Get a pixel from the layers below this canvas.</td>
+    </tr>
+    <tr key="get_pixel_color">
+        <td>[`get_pixel_color`](#endstone.map.MapCanvas.get_pixel_color)</td>
+        <td>Get a pixel from the canvas.</td>
+    </tr>
+    <tr key="set_pixel_color">
+        <td>[`set_pixel_color`](#endstone.map.MapCanvas.set_pixel_color)</td>
+        <td>Draw a pixel to the canvas.</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**map_view**](#endstone.map.MapCanvas.map_view) (<code>[MapView](#endstone._internal.endstone_python.MapView)</code>) – Get the map this canvas is attached to.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="map_view">
+        <td>[`map_view`](#endstone.map.MapCanvas.map_view)</td>
+        <td><code className="nextra-code">[MapView](#endstone._internal.endstone_python.MapView)</code></td>
+        <td>Get the map this canvas is attached to.</td>
+    </tr></tbody>
+</table>
 
 #### draw_image [#endstone.map.MapCanvas.draw_image]
 
@@ -76,7 +113,7 @@ If None is used as color, then the color returned by get_base_pixel_color() is s
 ### MapRenderer [#endstone.map.MapRenderer]
 
 ```python
-MapRenderer(is_contextual:bool = False) -> None
+MapRenderer(is_contextual:bool = False)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
@@ -85,8 +122,23 @@ Represents a renderer for a map.
 
 **Methods:**
 
-- [**initialize**](#endstone.map.MapRenderer.initialize) – Initialize this MapRenderer for the given map.
-- [**render**](#endstone.map.MapRenderer.render) – Render to the given map.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="initialize">
+        <td>[`initialize`](#endstone.map.MapRenderer.initialize)</td>
+        <td>Initialize this MapRenderer for the given map.</td>
+    </tr>
+    <tr key="render">
+        <td>[`render`](#endstone.map.MapRenderer.render)</td>
+        <td>Render to the given map.</td>
+    </tr></tbody>
+</table>
 
 Initialize the map renderer base with the given contextual status.
 
@@ -116,29 +168,92 @@ Represents a map item.
 
 **Classes:**
 
-- [**Scale**](#endstone.map.MapView.Scale) – An enum representing all possible scales a map can be set to.
+Name | Description
+---- | -----------
+[`Scale`](#endstone.map.MapView.Scale) | An enum representing all possible scales a map can be set to.
 
 **Methods:**
 
-- [**add_renderer**](#endstone.map.MapView.add_renderer) – Add a renderer to this map.
-- [**remove_renderer**](#endstone.map.MapView.remove_renderer) – Remove a renderer from this map.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="add_renderer">
+        <td>[`add_renderer`](#endstone.map.MapView.add_renderer)</td>
+        <td>Add a renderer to this map.</td>
+    </tr>
+    <tr key="remove_renderer">
+        <td>[`remove_renderer`](#endstone.map.MapView.remove_renderer)</td>
+        <td>Remove a renderer from this map.</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**center_x**](#endstone.map.MapView.center_x) (<code>[int](#int)</code>) – Get or set the center X position of this map.
-- [**center_z**](#endstone.map.MapView.center_z) (<code>[int](#int)</code>) – Get or set the center Z position of this map.
-- [**dimension**](#endstone.map.MapView.dimension) (<code>[Dimension](#endstone._internal.endstone_python.Dimension)</code>) – Get or set the dimension that this map is associated with.
-- [**id**](#endstone.map.MapView.id) (<code>[int](#int)</code>) – Get the ID of this map item for use with MapMeta.
-- [**is_unlimited_tracking**](#endstone.map.MapView.is_unlimited_tracking) (<code>[bool](#bool)</code>) – Whether the map will show a smaller position cursor (true), or no position cursor (false) when cursor is outside of map's range.
-- [**is_virtual**](#endstone.map.MapView.is_virtual) (<code>[bool](#bool)</code>) – Check whether this map is virtual.
-- [**locked**](#endstone.map.MapView.locked) (<code>[bool](#bool)</code>) – Whether the map is locked or not. A locked map may not be explored further.
-- [**renderers**](#endstone.map.MapView.renderers) (<code>[list](#list)\[[MapRenderer](#endstone._internal.endstone_python.MapRenderer)\]</code>) – Get a copied list of MapRenderers currently in effect.
-- [**scale**](#endstone.map.MapView.scale) (<code>[Scale](#endstone._internal.endstone_python.MapView.Scale)</code>) – Get or set the scale of this map.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="center_x">
+        <td>[`center_x`](#endstone.map.MapView.center_x)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Get or set the center X position of this map.</td>
+    </tr>
+    <tr key="center_z">
+        <td>[`center_z`](#endstone.map.MapView.center_z)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Get or set the center Z position of this map.</td>
+    </tr>
+    <tr key="dimension">
+        <td>[`dimension`](#endstone.map.MapView.dimension)</td>
+        <td><code className="nextra-code">[Dimension](#endstone._internal.endstone_python.Dimension)</code></td>
+        <td>Get or set the dimension that this map is associated with.</td>
+    </tr>
+    <tr key="id">
+        <td>[`id`](#endstone.map.MapView.id)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Get the ID of this map item for use with MapMeta.</td>
+    </tr>
+    <tr key="is_unlimited_tracking">
+        <td>[`is_unlimited_tracking`](#endstone.map.MapView.is_unlimited_tracking)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Whether the map will show a smaller position cursor (true), or no position cursor (false) when cursor is outside of map's range.</td>
+    </tr>
+    <tr key="is_virtual">
+        <td>[`is_virtual`](#endstone.map.MapView.is_virtual)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Check whether this map is virtual.</td>
+    </tr>
+    <tr key="locked">
+        <td>[`locked`](#endstone.map.MapView.locked)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Whether the map is locked or not. A locked map may not be explored further.</td>
+    </tr>
+    <tr key="renderers">
+        <td>[`renderers`](#endstone.map.MapView.renderers)</td>
+        <td><code className="nextra-code">[list](#list)[[MapRenderer](#endstone._internal.endstone_python.MapRenderer)]</code></td>
+        <td>Get a copied list of MapRenderers currently in effect.</td>
+    </tr>
+    <tr key="scale">
+        <td>[`scale`](#endstone.map.MapView.scale)</td>
+        <td><code className="nextra-code">[Scale](#endstone._internal.endstone_python.MapView.Scale)</code></td>
+        <td>Get or set the scale of this map.</td>
+    </tr></tbody>
+</table>
 
 #### Scale [#endstone.map.MapView.Scale]
 
 ```python
-Scale(value:int) -> None
+Scale(value:int)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
@@ -147,13 +262,51 @@ An enum representing all possible scales a map can be set to.
 
 **Attributes:**
 
-- [**CLOSE**](#endstone.map.MapView.Scale.CLOSE) (<code>[Scale](#endstone._internal.endstone_python.MapView.Scale)</code>) –
-- [**CLOSEST**](#endstone.map.MapView.Scale.CLOSEST) (<code>[Scale](#endstone._internal.endstone_python.MapView.Scale)</code>) –
-- [**FAR**](#endstone.map.MapView.Scale.FAR) (<code>[Scale](#endstone._internal.endstone_python.MapView.Scale)</code>) –
-- [**FARTHEST**](#endstone.map.MapView.Scale.FARTHEST) (<code>[Scale](#endstone._internal.endstone_python.MapView.Scale)</code>) –
-- [**NORMAL**](#endstone.map.MapView.Scale.NORMAL) (<code>[Scale](#endstone._internal.endstone_python.MapView.Scale)</code>) –
-- [**name**](#endstone.map.MapView.Scale.name) (<code>[str](#str)</code>) –
-- [**value**](#endstone.map.MapView.Scale.value) (<code>[int](#int)</code>) –
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="CLOSE">
+        <td>[`CLOSE`](#endstone.map.MapView.Scale.CLOSE)</td>
+        <td><code className="nextra-code">[Scale](#endstone._internal.endstone_python.MapView.Scale)</code></td>
+        <td></td>
+    </tr>
+    <tr key="CLOSEST">
+        <td>[`CLOSEST`](#endstone.map.MapView.Scale.CLOSEST)</td>
+        <td><code className="nextra-code">[Scale](#endstone._internal.endstone_python.MapView.Scale)</code></td>
+        <td></td>
+    </tr>
+    <tr key="FAR">
+        <td>[`FAR`](#endstone.map.MapView.Scale.FAR)</td>
+        <td><code className="nextra-code">[Scale](#endstone._internal.endstone_python.MapView.Scale)</code></td>
+        <td></td>
+    </tr>
+    <tr key="FARTHEST">
+        <td>[`FARTHEST`](#endstone.map.MapView.Scale.FARTHEST)</td>
+        <td><code className="nextra-code">[Scale](#endstone._internal.endstone_python.MapView.Scale)</code></td>
+        <td></td>
+    </tr>
+    <tr key="NORMAL">
+        <td>[`NORMAL`](#endstone.map.MapView.Scale.NORMAL)</td>
+        <td><code className="nextra-code">[Scale](#endstone._internal.endstone_python.MapView.Scale)</code></td>
+        <td></td>
+    </tr>
+    <tr key="name">
+        <td>[`name`](#endstone.map.MapView.Scale.name)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td></td>
+    </tr>
+    <tr key="value">
+        <td>[`value`](#endstone.map.MapView.Scale.value)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td></td>
+    </tr></tbody>
+</table>
 
 ##### CLOSE [#endstone.map.MapView.Scale.CLOSE]
 

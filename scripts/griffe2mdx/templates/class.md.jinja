@@ -48,7 +48,7 @@
 
 {%- if config.show_bases and class.bases -%}
 Bases: {% for expression in class.bases -%}
-<code>{%- include "expression.md.jinja" with context -%}</code>{%- if not loop.last -%}, {% endif -%}
+<code className="nextra-code">{%- include "expression.md.jinja" with context -%}</code>{%- if not loop.last -%}, {% endif -%}
 {% endfor %}
 
 {% endif %}

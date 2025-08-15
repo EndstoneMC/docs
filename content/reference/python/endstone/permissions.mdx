@@ -6,12 +6,14 @@ title: "endstone.permissions"
 
 **Classes:**
 
-- [**Permissible**](#endstone.permissions.Permissible) – Represents an object that may become a server operator and can be assigned permissions.
-- [**Permission**](#endstone.permissions.Permission) – Represents a unique permission that may be attached to a Permissible
-- [**PermissionAttachment**](#endstone.permissions.PermissionAttachment) – Holds information about a permission attachment on a Permissible object
-- [**PermissionAttachmentInfo**](#endstone.permissions.PermissionAttachmentInfo) – Holds information on a permission and which PermissionAttachment provides it
-- [**PermissionDefault**](#endstone.permissions.PermissionDefault) – Represents the possible default values for permissions
-- [**PermissionLevel**](#endstone.permissions.PermissionLevel) –
+Name | Description
+---- | -----------
+[`Permissible`](#endstone.permissions.Permissible) | Represents an object that may become a server operator and can be assigned permissions.
+[`Permission`](#endstone.permissions.Permission) | Represents a unique permission that may be attached to a Permissible
+[`PermissionAttachment`](#endstone.permissions.PermissionAttachment) | Holds information about a permission attachment on a Permissible object
+[`PermissionAttachmentInfo`](#endstone.permissions.PermissionAttachmentInfo) | Holds information on a permission and which PermissionAttachment provides it
+[`PermissionDefault`](#endstone.permissions.PermissionDefault) | Represents the possible default values for permissions
+[`PermissionLevel`](#endstone.permissions.PermissionLevel) |
 
 ### Permissible [#endstone.permissions.Permissible]
 
@@ -21,13 +23,46 @@ Represents an object that may become a server operator and can be assigned permi
 
 **Methods:**
 
-- [**recalculate_permissions**](#endstone.permissions.Permissible.recalculate_permissions) – Recalculates the permissions.
-- [**remove_attachment**](#endstone.permissions.Permissible.remove_attachment) – Removes a given PermissionAttachment.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="recalculate_permissions">
+        <td>[`recalculate_permissions`](#endstone.permissions.Permissible.recalculate_permissions)</td>
+        <td>Recalculates the permissions.</td>
+    </tr>
+    <tr key="remove_attachment">
+        <td>[`remove_attachment`](#endstone.permissions.Permissible.remove_attachment)</td>
+        <td>Removes a given PermissionAttachment.</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**effective_permissions**](#endstone.permissions.Permissible.effective_permissions) (<code>[set](#set)\[[PermissionAttachmentInfo](#endstone._internal.endstone_python.PermissionAttachmentInfo)\]</code>) – Gets effective permissions.
-- [**permission_level**](#endstone.permissions.Permissible.permission_level) (<code>[PermissionLevel](#endstone._internal.endstone_python.PermissionLevel)</code>) – Gets the permission level of this object
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="effective_permissions">
+        <td>[`effective_permissions`](#endstone.permissions.Permissible.effective_permissions)</td>
+        <td><code className="nextra-code">[set](#set)[[PermissionAttachmentInfo](#endstone._internal.endstone_python.PermissionAttachmentInfo)]</code></td>
+        <td>Gets effective permissions.</td>
+    </tr>
+    <tr key="permission_level">
+        <td>[`permission_level`](#endstone.permissions.Permissible.permission_level)</td>
+        <td><code className="nextra-code">[PermissionLevel](#endstone._internal.endstone_python.PermissionLevel)</code></td>
+        <td>Gets the permission level of this object</td>
+    </tr></tbody>
+</table>
 
 #### effective_permissions [#endstone.permissions.Permissible.effective_permissions]
 
@@ -73,7 +108,7 @@ Permission(
     children: dict[str, bool] | None = None,
     *args: dict[str, bool] | None,
     **kwargs: dict[str, bool] | None
-) -> None
+)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
@@ -82,15 +117,57 @@ Represents a unique permission that may be attached to a Permissible
 
 **Methods:**
 
-- [**recalculate_permissibles**](#endstone.permissions.Permission.recalculate_permissibles) – Recalculates all Permissibles that contain this permission.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="recalculate_permissibles">
+        <td>[`recalculate_permissibles`](#endstone.permissions.Permission.recalculate_permissibles)</td>
+        <td>Recalculates all Permissibles that contain this permission.</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**children**](#endstone.permissions.Permission.children) (<code>[dict](#dict)\[[str](#str), [bool](#bool)\]</code>) – Gets the children of this permission.
-- [**default**](#endstone.permissions.Permission.default) (<code>[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code>) – The default value of this permission.
-- [**description**](#endstone.permissions.Permission.description) (<code>[str](#str)</code>) – The brief description of this permission
-- [**name**](#endstone.permissions.Permission.name) (<code>[str](#str)</code>) – Gets the unique fully qualified name of this Permission.
-- [**permissibles**](#endstone.permissions.Permission.permissibles) (<code>[set](#set)\[[Permissible](#endstone._internal.endstone_python.Permissible)\]</code>) – Gets a set containing every Permissible that has this permission.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="children">
+        <td>[`children`](#endstone.permissions.Permission.children)</td>
+        <td><code className="nextra-code">[dict](#dict)[[str](#str), [bool](#bool)]</code></td>
+        <td>Gets the children of this permission.</td>
+    </tr>
+    <tr key="default">
+        <td>[`default`](#endstone.permissions.Permission.default)</td>
+        <td><code className="nextra-code">[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code></td>
+        <td>The default value of this permission.</td>
+    </tr>
+    <tr key="description">
+        <td>[`description`](#endstone.permissions.Permission.description)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>The brief description of this permission</td>
+    </tr>
+    <tr key="name">
+        <td>[`name`](#endstone.permissions.Permission.name)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets the unique fully qualified name of this Permission.</td>
+    </tr>
+    <tr key="permissibles">
+        <td>[`permissibles`](#endstone.permissions.Permission.permissibles)</td>
+        <td><code className="nextra-code">[set](#set)[[Permissible](#endstone._internal.endstone_python.Permissible)]</code></td>
+        <td>Gets a set containing every Permissible that has this permission.</td>
+    </tr></tbody>
+</table>
 
 #### children [#endstone.permissions.Permission.children]
 
@@ -145,7 +222,7 @@ Recalculates all Permissibles that contain this permission.
 ### PermissionAttachment [#endstone.permissions.PermissionAttachment]
 
 ```python
-PermissionAttachment(plugin:Plugin, permissible:Permissible) -> None
+PermissionAttachment(plugin:Plugin, permissible:Permissible)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
@@ -154,14 +231,52 @@ Holds information about a permission attachment on a Permissible object
 
 **Methods:**
 
-- [**remove**](#endstone.permissions.PermissionAttachment.remove) – Removes this attachment from its registered Permissible.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="remove">
+        <td>[`remove`](#endstone.permissions.PermissionAttachment.remove)</td>
+        <td>Removes this attachment from its registered Permissible.</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**permissible**](#endstone.permissions.PermissionAttachment.permissible) (<code>[Permissible](#endstone._internal.endstone_python.Permissible)</code>) – Gets the Permissible that this is attached to.
-- [**permissions**](#endstone.permissions.PermissionAttachment.permissions) (<code>[dict](#dict)\[[str](#str), [bool](#bool)\]</code>) – Gets a copy of all set permissions and values contained within this attachment.
-- [**plugin**](#endstone.permissions.PermissionAttachment.plugin) (<code>[Plugin](#endstone._internal.endstone_python.Plugin)</code>) – Gets the plugin responsible for this attachment.
-- [**removal_callback**](#endstone.permissions.PermissionAttachment.removal_callback) (<code>[Callable](#typing.Callable)\[\[[PermissionAttachment](#endstone._internal.endstone_python.PermissionAttachment)\], None\]</code>) – The callback to be called when this attachment is removed.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="permissible">
+        <td>[`permissible`](#endstone.permissions.PermissionAttachment.permissible)</td>
+        <td><code className="nextra-code">[Permissible](#endstone._internal.endstone_python.Permissible)</code></td>
+        <td>Gets the Permissible that this is attached to.</td>
+    </tr>
+    <tr key="permissions">
+        <td>[`permissions`](#endstone.permissions.PermissionAttachment.permissions)</td>
+        <td><code className="nextra-code">[dict](#dict)[[str](#str), [bool](#bool)]</code></td>
+        <td>Gets a copy of all set permissions and values contained within this attachment.</td>
+    </tr>
+    <tr key="plugin">
+        <td>[`plugin`](#endstone.permissions.PermissionAttachment.plugin)</td>
+        <td><code className="nextra-code">[Plugin](#endstone._internal.endstone_python.Plugin)</code></td>
+        <td>Gets the plugin responsible for this attachment.</td>
+    </tr>
+    <tr key="removal_callback">
+        <td>[`removal_callback`](#endstone.permissions.PermissionAttachment.removal_callback)</td>
+        <td><code className="nextra-code">[Callable](#typing.Callable)[[[PermissionAttachment](#endstone._internal.endstone_python.PermissionAttachment)], None]</code></td>
+        <td>The callback to be called when this attachment is removed.</td>
+    </tr></tbody>
+</table>
 
 #### permissible [#endstone.permissions.PermissionAttachment.permissible]
 
@@ -213,7 +328,7 @@ PermissionAttachmentInfo(
     permission: str,
     attachment: PermissionAttachment,
     value: bool,
-) -> None
+)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
@@ -222,10 +337,36 @@ Holds information on a permission and which PermissionAttachment provides it
 
 **Attributes:**
 
-- [**attachment**](#endstone.permissions.PermissionAttachmentInfo.attachment) (<code>[PermissionAttachment](#endstone._internal.endstone_python.PermissionAttachment)</code>) – Gets the attachment providing this permission.
-- [**permissible**](#endstone.permissions.PermissionAttachmentInfo.permissible) (<code>[Permissible](#endstone._internal.endstone_python.Permissible)</code>) – Get the permissible this is attached to
-- [**permission**](#endstone.permissions.PermissionAttachmentInfo.permission) (<code>[str](#str)</code>) – Gets the permission being set
-- [**value**](#endstone.permissions.PermissionAttachmentInfo.value) (<code>[bool](#bool)</code>) – Gets the value of this permission
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="attachment">
+        <td>[`attachment`](#endstone.permissions.PermissionAttachmentInfo.attachment)</td>
+        <td><code className="nextra-code">[PermissionAttachment](#endstone._internal.endstone_python.PermissionAttachment)</code></td>
+        <td>Gets the attachment providing this permission.</td>
+    </tr>
+    <tr key="permissible">
+        <td>[`permissible`](#endstone.permissions.PermissionAttachmentInfo.permissible)</td>
+        <td><code className="nextra-code">[Permissible](#endstone._internal.endstone_python.Permissible)</code></td>
+        <td>Get the permissible this is attached to</td>
+    </tr>
+    <tr key="permission">
+        <td>[`permission`](#endstone.permissions.PermissionAttachmentInfo.permission)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets the permission being set</td>
+    </tr>
+    <tr key="value">
+        <td>[`value`](#endstone.permissions.PermissionAttachmentInfo.value)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Gets the value of this permission</td>
+    </tr></tbody>
+</table>
 
 #### attachment [#endstone.permissions.PermissionAttachmentInfo.attachment]
 
@@ -264,7 +405,7 @@ Gets the value of this permission
 ### PermissionDefault [#endstone.permissions.PermissionDefault]
 
 ```python
-PermissionDefault(value:int) -> None
+PermissionDefault(value:int)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
@@ -273,15 +414,61 @@ Represents the possible default values for permissions
 
 **Attributes:**
 
-- [**CONSOLE**](#endstone.permissions.PermissionDefault.CONSOLE) (<code>[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code>) –
-- [**FALSE**](#endstone.permissions.PermissionDefault.FALSE) (<code>[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code>) –
-- [**NOT_OP**](#endstone.permissions.PermissionDefault.NOT_OP) (<code>[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code>) –
-- [**NOT_OPERATOR**](#endstone.permissions.PermissionDefault.NOT_OPERATOR) (<code>[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code>) –
-- [**OP**](#endstone.permissions.PermissionDefault.OP) (<code>[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code>) –
-- [**OPERATOR**](#endstone.permissions.PermissionDefault.OPERATOR) (<code>[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code>) –
-- [**TRUE**](#endstone.permissions.PermissionDefault.TRUE) (<code>[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code>) –
-- [**name**](#endstone.permissions.PermissionDefault.name) (<code>[str](#str)</code>) –
-- [**value**](#endstone.permissions.PermissionDefault.value) (<code>[int](#int)</code>) –
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="CONSOLE">
+        <td>[`CONSOLE`](#endstone.permissions.PermissionDefault.CONSOLE)</td>
+        <td><code className="nextra-code">[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code></td>
+        <td></td>
+    </tr>
+    <tr key="FALSE">
+        <td>[`FALSE`](#endstone.permissions.PermissionDefault.FALSE)</td>
+        <td><code className="nextra-code">[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code></td>
+        <td></td>
+    </tr>
+    <tr key="NOT_OP">
+        <td>[`NOT_OP`](#endstone.permissions.PermissionDefault.NOT_OP)</td>
+        <td><code className="nextra-code">[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code></td>
+        <td></td>
+    </tr>
+    <tr key="NOT_OPERATOR">
+        <td>[`NOT_OPERATOR`](#endstone.permissions.PermissionDefault.NOT_OPERATOR)</td>
+        <td><code className="nextra-code">[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code></td>
+        <td></td>
+    </tr>
+    <tr key="OP">
+        <td>[`OP`](#endstone.permissions.PermissionDefault.OP)</td>
+        <td><code className="nextra-code">[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code></td>
+        <td></td>
+    </tr>
+    <tr key="OPERATOR">
+        <td>[`OPERATOR`](#endstone.permissions.PermissionDefault.OPERATOR)</td>
+        <td><code className="nextra-code">[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code></td>
+        <td></td>
+    </tr>
+    <tr key="TRUE">
+        <td>[`TRUE`](#endstone.permissions.PermissionDefault.TRUE)</td>
+        <td><code className="nextra-code">[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code></td>
+        <td></td>
+    </tr>
+    <tr key="name">
+        <td>[`name`](#endstone.permissions.PermissionDefault.name)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td></td>
+    </tr>
+    <tr key="value">
+        <td>[`value`](#endstone.permissions.PermissionDefault.value)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td></td>
+    </tr></tbody>
+</table>
 
 #### CONSOLE [#endstone.permissions.PermissionDefault.CONSOLE]
 
@@ -342,19 +529,53 @@ value: int
 ### PermissionLevel [#endstone.permissions.PermissionLevel]
 
 ```python
-PermissionLevel(value:int) -> None
+PermissionLevel(value:int)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
 
 **Attributes:**
 
-- [**CONSOLE**](#endstone.permissions.PermissionLevel.CONSOLE) (<code>[PermissionLevel](#endstone._internal.endstone_python.PermissionLevel)</code>) –
-- [**DEFAULT**](#endstone.permissions.PermissionLevel.DEFAULT) (<code>[PermissionLevel](#endstone._internal.endstone_python.PermissionLevel)</code>) –
-- [**OP**](#endstone.permissions.PermissionLevel.OP) (<code>[PermissionLevel](#endstone._internal.endstone_python.PermissionLevel)</code>) –
-- [**OPERATOR**](#endstone.permissions.PermissionLevel.OPERATOR) (<code>[PermissionLevel](#endstone._internal.endstone_python.PermissionLevel)</code>) –
-- [**name**](#endstone.permissions.PermissionLevel.name) (<code>[str](#str)</code>) –
-- [**value**](#endstone.permissions.PermissionLevel.value) (<code>[int](#int)</code>) –
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="CONSOLE">
+        <td>[`CONSOLE`](#endstone.permissions.PermissionLevel.CONSOLE)</td>
+        <td><code className="nextra-code">[PermissionLevel](#endstone._internal.endstone_python.PermissionLevel)</code></td>
+        <td></td>
+    </tr>
+    <tr key="DEFAULT">
+        <td>[`DEFAULT`](#endstone.permissions.PermissionLevel.DEFAULT)</td>
+        <td><code className="nextra-code">[PermissionLevel](#endstone._internal.endstone_python.PermissionLevel)</code></td>
+        <td></td>
+    </tr>
+    <tr key="OP">
+        <td>[`OP`](#endstone.permissions.PermissionLevel.OP)</td>
+        <td><code className="nextra-code">[PermissionLevel](#endstone._internal.endstone_python.PermissionLevel)</code></td>
+        <td></td>
+    </tr>
+    <tr key="OPERATOR">
+        <td>[`OPERATOR`](#endstone.permissions.PermissionLevel.OPERATOR)</td>
+        <td><code className="nextra-code">[PermissionLevel](#endstone._internal.endstone_python.PermissionLevel)</code></td>
+        <td></td>
+    </tr>
+    <tr key="name">
+        <td>[`name`](#endstone.permissions.PermissionLevel.name)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td></td>
+    </tr>
+    <tr key="value">
+        <td>[`value`](#endstone.permissions.PermissionLevel.value)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td></td>
+    </tr></tbody>
+</table>
 
 #### CONSOLE [#endstone.permissions.PermissionLevel.CONSOLE]
 

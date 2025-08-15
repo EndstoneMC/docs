@@ -6,8 +6,10 @@ title: "endstone.lang"
 
 **Classes:**
 
-- [**Language**](#endstone.lang.Language) – Represents the interface for translating text into different languages.
-- [**Translatable**](#endstone.lang.Translatable) – Represents an object with a text representation that can be translated by the Minecraft client.
+Name | Description
+---- | -----------
+[`Language`](#endstone.lang.Language) | Represents the interface for translating text into different languages.
+[`Translatable`](#endstone.lang.Translatable) | Represents an object with a text representation that can be translated by the Minecraft client.
 
 ### Language [#endstone.lang.Language]
 
@@ -17,7 +19,21 @@ Represents the interface for translating text into different languages.
 
 **Attributes:**
 
-- [**locale**](#endstone.lang.Language.locale) (<code>[str](#str)</code>) – Gets the current locale.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="locale">
+        <td>[`locale`](#endstone.lang.Language.locale)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets the current locale.</td>
+    </tr></tbody>
+</table>
 
 #### locale [#endstone.lang.Language.locale]
 
@@ -32,7 +48,7 @@ Gets the current locale.
 ### Translatable [#endstone.lang.Translatable]
 
 ```python
-Translatable(text:str, params:list[str] | None = None) -> None
+Translatable(text:str, params:list[str] | None = None)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
@@ -41,8 +57,26 @@ Represents an object with a text representation that can be translated by the Mi
 
 **Attributes:**
 
-- [**params**](#endstone.lang.Translatable.params) (<code>[list](#list)\[[str](#str)\]</code>) – Get the translation parameters.
-- [**text**](#endstone.lang.Translatable.text) (<code>[str](#str)</code>) – Get the text to be translated.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="params">
+        <td>[`params`](#endstone.lang.Translatable.params)</td>
+        <td><code className="nextra-code">[list](#list)[[str](#str)]</code></td>
+        <td>Get the translation parameters.</td>
+    </tr>
+    <tr key="text">
+        <td>[`text`](#endstone.lang.Translatable.text)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Get the text to be translated.</td>
+    </tr></tbody>
+</table>
 
 #### params [#endstone.lang.Translatable.params]
 

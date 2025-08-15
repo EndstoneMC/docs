@@ -6,26 +6,42 @@ title: "endstone.ban"
 
 **Classes:**
 
-- [**IpBanEntry**](#endstone.ban.IpBanEntry) – Represents a ban entry for an IP address.
-- [**IpBanList**](#endstone.ban.IpBanList) – Represents a ban list containing banned IP addresses.
-- [**PlayerBanEntry**](#endstone.ban.PlayerBanEntry) – Represents a ban entry for a player.
-- [**PlayerBanList**](#endstone.ban.PlayerBanList) – Represents a ban list containing banned players.
+Name | Description
+---- | -----------
+[`IpBanEntry`](#endstone.ban.IpBanEntry) | Represents a ban entry for an IP address.
+[`IpBanList`](#endstone.ban.IpBanList) | Represents a ban list containing banned IP addresses.
+[`PlayerBanEntry`](#endstone.ban.PlayerBanEntry) | Represents a ban entry for a player.
+[`PlayerBanList`](#endstone.ban.PlayerBanList) | Represents a ban list containing banned players.
 
 ### IpBanEntry [#endstone.ban.IpBanEntry]
 
 ```python
-IpBanEntry(address:str) -> None
+IpBanEntry(address:str)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[BanEntry](#endstone._internal.endstone_python.BanEntry)</code>
+Bases: <code className="nextra-code">[BanEntry](#endstone._internal.endstone_python.BanEntry)</code>
 
 Represents a ban entry for an IP address.
 
 **Attributes:**
 
-- [**address**](#endstone.ban.IpBanEntry.address) (<code>[str](#str)</code>) – Gets the banned IP address.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="address">
+        <td>[`address`](#endstone.ban.IpBanEntry.address)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets the banned IP address.</td>
+    </tr></tbody>
+</table>
 
 #### address [#endstone.ban.IpBanEntry.address]
 
@@ -45,14 +61,49 @@ Represents a ban list containing banned IP addresses.
 
 **Methods:**
 
-- [**add_ban**](#endstone.ban.IpBanList.add_ban) – Adds a ban to this list, or updates an existing one.
-- [**get_ban_entry**](#endstone.ban.IpBanList.get_ban_entry) – Gets a BanEntry by IP address.
-- [**is_banned**](#endstone.ban.IpBanList.is_banned) – Checks if a BanEntry exists for the target by IP address.
-- [**remove_ban**](#endstone.ban.IpBanList.remove_ban) – Removes an IP address from the ban list.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="add_ban">
+        <td>[`add_ban`](#endstone.ban.IpBanList.add_ban)</td>
+        <td>Adds a ban to this list, or updates an existing one.</td>
+    </tr>
+    <tr key="get_ban_entry">
+        <td>[`get_ban_entry`](#endstone.ban.IpBanList.get_ban_entry)</td>
+        <td>Gets a BanEntry by IP address.</td>
+    </tr>
+    <tr key="is_banned">
+        <td>[`is_banned`](#endstone.ban.IpBanList.is_banned)</td>
+        <td>Checks if a BanEntry exists for the target by IP address.</td>
+    </tr>
+    <tr key="remove_ban">
+        <td>[`remove_ban`](#endstone.ban.IpBanList.remove_ban)</td>
+        <td>Removes an IP address from the ban list.</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**entries**](#endstone.ban.IpBanList.entries) (<code>[list](#list)\[[IpBanEntry](#endstone._internal.endstone_python.IpBanEntry)\]</code>) – Gets a vector of pointers to entries in the ban list.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="entries">
+        <td>[`entries`](#endstone.ban.IpBanList.entries)</td>
+        <td><code className="nextra-code">[list](#list)[[IpBanEntry](#endstone._internal.endstone_python.IpBanEntry)]</code></td>
+        <td>Gets a vector of pointers to entries in the ban list.</td>
+    </tr></tbody>
+</table>
 
 #### add_ban [#endstone.ban.IpBanList.add_ban]
 
@@ -104,22 +155,42 @@ Removes an IP address from the ban list.
 ### PlayerBanEntry [#endstone.ban.PlayerBanEntry]
 
 ```python
-PlayerBanEntry(
-    name: str, uuid: UUID | None = None, xuid: str | None = None
-) -> None
+PlayerBanEntry(name:str, uuid:UUID | None = None, xuid:str | None = None)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[BanEntry](#endstone._internal.endstone_python.BanEntry)</code>
+Bases: <code className="nextra-code">[BanEntry](#endstone._internal.endstone_python.BanEntry)</code>
 
 Represents a ban entry for a player.
 
 **Attributes:**
 
-- [**name**](#endstone.ban.PlayerBanEntry.name) (<code>[str](#str)</code>) – Gets the banned player's name.
-- [**unique_id**](#endstone.ban.PlayerBanEntry.unique_id) (<code>[UUID](#uuid.UUID) | None</code>) – Gets the banned player's unique ID, or None if not available.
-- [**xuid**](#endstone.ban.PlayerBanEntry.xuid) (<code>[str](#str) | None</code>) – Gets the banned player's Xbox user ID (XUID), or None if not available.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="name">
+        <td>[`name`](#endstone.ban.PlayerBanEntry.name)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets the banned player's name.</td>
+    </tr>
+    <tr key="unique_id">
+        <td>[`unique_id`](#endstone.ban.PlayerBanEntry.unique_id)</td>
+        <td><code className="nextra-code">[UUID](#uuid.UUID) | None</code></td>
+        <td>Gets the banned player's unique ID, or None if not available.</td>
+    </tr>
+    <tr key="xuid">
+        <td>[`xuid`](#endstone.ban.PlayerBanEntry.xuid)</td>
+        <td><code className="nextra-code">[str](#str) | None</code></td>
+        <td>Gets the banned player's Xbox user ID (XUID), or None if not available.</td>
+    </tr></tbody>
+</table>
 
 #### name [#endstone.ban.PlayerBanEntry.name]
 
@@ -155,14 +226,49 @@ Represents a ban list containing banned players.
 
 **Methods:**
 
-- [**add_ban**](#endstone.ban.PlayerBanList.add_ban) – Adds a ban to this list, or updates an existing one.
-- [**get_ban_entry**](#endstone.ban.PlayerBanList.get_ban_entry) – Gets a BanEntry by player name, UUID, or XUID.
-- [**is_banned**](#endstone.ban.PlayerBanList.is_banned) – Checks if a BanEntry exists for the target by name, UUID, or XUID.
-- [**remove_ban**](#endstone.ban.PlayerBanList.remove_ban) – Removes a player from the ban list by name, UUID, or XUID.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="add_ban">
+        <td>[`add_ban`](#endstone.ban.PlayerBanList.add_ban)</td>
+        <td>Adds a ban to this list, or updates an existing one.</td>
+    </tr>
+    <tr key="get_ban_entry">
+        <td>[`get_ban_entry`](#endstone.ban.PlayerBanList.get_ban_entry)</td>
+        <td>Gets a BanEntry by player name, UUID, or XUID.</td>
+    </tr>
+    <tr key="is_banned">
+        <td>[`is_banned`](#endstone.ban.PlayerBanList.is_banned)</td>
+        <td>Checks if a BanEntry exists for the target by name, UUID, or XUID.</td>
+    </tr>
+    <tr key="remove_ban">
+        <td>[`remove_ban`](#endstone.ban.PlayerBanList.remove_ban)</td>
+        <td>Removes a player from the ban list by name, UUID, or XUID.</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**entries**](#endstone.ban.PlayerBanList.entries) (<code>[list](#list)\[[PlayerBanEntry](#endstone._internal.endstone_python.PlayerBanEntry)\]</code>) – Gets a vector of pointers to entries in the ban list.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="entries">
+        <td>[`entries`](#endstone.ban.PlayerBanList.entries)</td>
+        <td><code className="nextra-code">[list](#list)[[PlayerBanEntry](#endstone._internal.endstone_python.PlayerBanEntry)]</code></td>
+        <td>Gets a vector of pointers to entries in the ban list.</td>
+    </tr></tbody>
+</table>
 
 #### add_ban [#endstone.ban.PlayerBanList.add_ban]
 

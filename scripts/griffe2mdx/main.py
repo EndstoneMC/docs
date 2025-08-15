@@ -39,7 +39,7 @@ def main():
             Path(__file__).parent.parent.parent / "content" / "reference" / "python"
     )
     config = griffe2md.rendering.default_config
-    # config["docstring_section_style"] = "table"
+    config["docstring_section_style"] = "table"
     config["inherited_members"] = False
     config["show_root_members_full_path"] = False
     config["show_object_full_path"] = False

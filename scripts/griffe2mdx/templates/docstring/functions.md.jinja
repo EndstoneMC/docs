@@ -2,11 +2,22 @@
 
 **{{ section.title or "Methods:" }}**
 
-Name | Description
----- | -----------
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
 {%- for function in section.value %}
-[`{{ function.name }}`](#{{ obj.path }}.{{ function.name }}) | {{ function.description }}
+    <tr key="{{ function.name }}">
+        <td>[`{{ function.name }}`](#{{ obj.path }}.{{ function.name }})</td>
+        <td>{{ function.description }}</td>
+    </tr>
 {%- endfor -%}
+</tbody>
+</table>
 
 {%- elif config.docstring_section_style == "list" %}
 

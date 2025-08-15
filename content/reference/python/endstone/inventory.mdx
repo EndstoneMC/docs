@@ -6,34 +6,82 @@ title: "endstone.inventory"
 
 **Classes:**
 
-- [**EquipmentSlot**](#endstone.inventory.EquipmentSlot) –
-- [**Inventory**](#endstone.inventory.Inventory) – Interface to the various inventories.
-- [**ItemFactory**](#endstone.inventory.ItemFactory) –
-- [**ItemMeta**](#endstone.inventory.ItemMeta) – Represents the metadata of a generic item.
-- [**ItemStack**](#endstone.inventory.ItemStack) – Represents a stack of items.
-- [**ItemType**](#endstone.inventory.ItemType) – Represents an item type.
-- [**MapMeta**](#endstone.inventory.MapMeta) – Represents the metadata for a map item.
-- [**PlayerInventory**](#endstone.inventory.PlayerInventory) – Interface to the inventory of a Player, including the four armor slots and any extra slots.
+Name | Description
+---- | -----------
+[`EquipmentSlot`](#endstone.inventory.EquipmentSlot) |
+[`Inventory`](#endstone.inventory.Inventory) | Interface to the various inventories.
+[`ItemFactory`](#endstone.inventory.ItemFactory) |
+[`ItemMeta`](#endstone.inventory.ItemMeta) | Represents the metadata of a generic item.
+[`ItemStack`](#endstone.inventory.ItemStack) | Represents a stack of items.
+[`ItemType`](#endstone.inventory.ItemType) | Represents an item type.
+[`MapMeta`](#endstone.inventory.MapMeta) | Represents the metadata for a map item.
+[`PlayerInventory`](#endstone.inventory.PlayerInventory) | Interface to the inventory of a Player, including the four armor slots and any extra slots.
 
 ### EquipmentSlot [#endstone.inventory.EquipmentSlot]
 
 ```python
-EquipmentSlot(value:int) -> None
+EquipmentSlot(value:int)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
 
 **Attributes:**
 
-- [**BODY**](#endstone.inventory.EquipmentSlot.BODY) (<code>[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code>) –
-- [**CHEST**](#endstone.inventory.EquipmentSlot.CHEST) (<code>[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code>) –
-- [**FEET**](#endstone.inventory.EquipmentSlot.FEET) (<code>[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code>) –
-- [**HAND**](#endstone.inventory.EquipmentSlot.HAND) (<code>[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code>) –
-- [**HEAD**](#endstone.inventory.EquipmentSlot.HEAD) (<code>[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code>) –
-- [**LEGS**](#endstone.inventory.EquipmentSlot.LEGS) (<code>[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code>) –
-- [**OFF_HAND**](#endstone.inventory.EquipmentSlot.OFF_HAND) (<code>[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code>) –
-- [**name**](#endstone.inventory.EquipmentSlot.name) (<code>[str](#str)</code>) –
-- [**value**](#endstone.inventory.EquipmentSlot.value) (<code>[int](#int)</code>) –
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="BODY">
+        <td>[`BODY`](#endstone.inventory.EquipmentSlot.BODY)</td>
+        <td><code className="nextra-code">[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code></td>
+        <td></td>
+    </tr>
+    <tr key="CHEST">
+        <td>[`CHEST`](#endstone.inventory.EquipmentSlot.CHEST)</td>
+        <td><code className="nextra-code">[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code></td>
+        <td></td>
+    </tr>
+    <tr key="FEET">
+        <td>[`FEET`](#endstone.inventory.EquipmentSlot.FEET)</td>
+        <td><code className="nextra-code">[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code></td>
+        <td></td>
+    </tr>
+    <tr key="HAND">
+        <td>[`HAND`](#endstone.inventory.EquipmentSlot.HAND)</td>
+        <td><code className="nextra-code">[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code></td>
+        <td></td>
+    </tr>
+    <tr key="HEAD">
+        <td>[`HEAD`](#endstone.inventory.EquipmentSlot.HEAD)</td>
+        <td><code className="nextra-code">[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code></td>
+        <td></td>
+    </tr>
+    <tr key="LEGS">
+        <td>[`LEGS`](#endstone.inventory.EquipmentSlot.LEGS)</td>
+        <td><code className="nextra-code">[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code></td>
+        <td></td>
+    </tr>
+    <tr key="OFF_HAND">
+        <td>[`OFF_HAND`](#endstone.inventory.EquipmentSlot.OFF_HAND)</td>
+        <td><code className="nextra-code">[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code></td>
+        <td></td>
+    </tr>
+    <tr key="name">
+        <td>[`name`](#endstone.inventory.EquipmentSlot.name)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td></td>
+    </tr>
+    <tr key="value">
+        <td>[`value`](#endstone.inventory.EquipmentSlot.value)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td></td>
+    </tr></tbody>
+</table>
 
 #### BODY [#endstone.inventory.EquipmentSlot.BODY]
 
@@ -99,18 +147,69 @@ Interface to the various inventories.
 
 **Methods:**
 
-- [**add_item**](#endstone.inventory.Inventory.add_item) – Stores the given ItemStacks in the inventory.
-- [**get_item**](#endstone.inventory.Inventory.get_item) – Returns the ItemStack found in the slot at the given index
-- [**remove_item**](#endstone.inventory.Inventory.remove_item) – Removes the given ItemStacks from the inventory.
-- [**set_item**](#endstone.inventory.Inventory.set_item) – Stores the ItemStack at the given index of the inventory.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="add_item">
+        <td>[`add_item`](#endstone.inventory.Inventory.add_item)</td>
+        <td>Stores the given ItemStacks in the inventory.</td>
+    </tr>
+    <tr key="get_item">
+        <td>[`get_item`](#endstone.inventory.Inventory.get_item)</td>
+        <td>Returns the ItemStack found in the slot at the given index</td>
+    </tr>
+    <tr key="remove_item">
+        <td>[`remove_item`](#endstone.inventory.Inventory.remove_item)</td>
+        <td>Removes the given ItemStacks from the inventory.</td>
+    </tr>
+    <tr key="set_item">
+        <td>[`set_item`](#endstone.inventory.Inventory.set_item)</td>
+        <td>Stores the ItemStack at the given index of the inventory.</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**contents**](#endstone.inventory.Inventory.contents) (<code>[list](#list)\[[ItemStack](#endstone._internal.endstone_python.ItemStack)\]</code>) – Returns all ItemStacks from the inventory
-- [**first_empty**](#endstone.inventory.Inventory.first_empty) (<code>[int](#int)</code>) – Returns the first empty Slot.
-- [**is_empty**](#endstone.inventory.Inventory.is_empty) (<code>[bool](#bool)</code>) – Check whether this inventory is empty. An inventory is considered to be empty if there are no ItemStacks in any slot of this inventory.
-- [**max_stack_size**](#endstone.inventory.Inventory.max_stack_size) (<code>[int](#int)</code>) – Returns the maximum stack size for an ItemStack in this inventory.
-- [**size**](#endstone.inventory.Inventory.size) (<code>[int](#int)</code>) – Returns the size of the inventory
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="contents">
+        <td>[`contents`](#endstone.inventory.Inventory.contents)</td>
+        <td><code className="nextra-code">[list](#list)[[ItemStack](#endstone._internal.endstone_python.ItemStack)]</code></td>
+        <td>Returns all ItemStacks from the inventory</td>
+    </tr>
+    <tr key="first_empty">
+        <td>[`first_empty`](#endstone.inventory.Inventory.first_empty)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Returns the first empty Slot.</td>
+    </tr>
+    <tr key="is_empty">
+        <td>[`is_empty`](#endstone.inventory.Inventory.is_empty)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Check whether this inventory is empty. An inventory is considered to be empty if there are no ItemStacks in any slot of this inventory.</td>
+    </tr>
+    <tr key="max_stack_size">
+        <td>[`max_stack_size`](#endstone.inventory.Inventory.max_stack_size)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Returns the maximum stack size for an ItemStack in this inventory.</td>
+    </tr>
+    <tr key="size">
+        <td>[`size`](#endstone.inventory.Inventory.size)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Returns the size of the inventory</td>
+    </tr></tbody>
+</table>
 
 #### add_item [#endstone.inventory.Inventory.add_item]
 
@@ -200,10 +299,31 @@ Returns the size of the inventory
 
 **Methods:**
 
-- [**as_meta_for**](#endstone.inventory.ItemFactory.as_meta_for) – Returns an appropriate item meta for the specified item type.
-- [**equals**](#endstone.inventory.ItemFactory.equals) – This method is used to compare two ItemMeta objects.
-- [**get_item_meta**](#endstone.inventory.ItemFactory.get_item_meta) – This creates a new item meta for the item type.
-- [**is_applicable**](#endstone.inventory.ItemFactory.is_applicable) – This method checks the item meta to confirm that it is applicable (no data lost if applied) to the specified ItemStack
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="as_meta_for">
+        <td>[`as_meta_for`](#endstone.inventory.ItemFactory.as_meta_for)</td>
+        <td>Returns an appropriate item meta for the specified item type.</td>
+    </tr>
+    <tr key="equals">
+        <td>[`equals`](#endstone.inventory.ItemFactory.equals)</td>
+        <td>This method is used to compare two ItemMeta objects.</td>
+    </tr>
+    <tr key="get_item_meta">
+        <td>[`get_item_meta`](#endstone.inventory.ItemFactory.get_item_meta)</td>
+        <td>This creates a new item meta for the item type.</td>
+    </tr>
+    <tr key="is_applicable">
+        <td>[`is_applicable`](#endstone.inventory.ItemFactory.is_applicable)</td>
+        <td>This method checks the item meta to confirm that it is applicable (no data lost if applied) to the specified ItemStack</td>
+    </tr></tbody>
+</table>
 
 #### as_meta_for [#endstone.inventory.ItemFactory.as_meta_for]
 
@@ -247,26 +367,107 @@ Represents the metadata of a generic item.
 
 **Methods:**
 
-- [**add_enchant**](#endstone.inventory.ItemMeta.add_enchant) – Adds the specified enchantment to this item meta.
-- [**clone**](#endstone.inventory.ItemMeta.clone) – Creates a clone of the current metadata.
-- [**get_enchant_level**](#endstone.inventory.ItemMeta.get_enchant_level) – Checks for the level of the specified enchantment.
-- [**has_enchant**](#endstone.inventory.ItemMeta.has_enchant) – Checks for existence of the specified enchantment.
-- [**remove_enchant**](#endstone.inventory.ItemMeta.remove_enchant) – Removes the specified enchantment from this item meta.
-- [**remove_enchants**](#endstone.inventory.ItemMeta.remove_enchants) – Removes all enchantments from this item meta.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="add_enchant">
+        <td>[`add_enchant`](#endstone.inventory.ItemMeta.add_enchant)</td>
+        <td>Adds the specified enchantment to this item meta.</td>
+    </tr>
+    <tr key="clone">
+        <td>[`clone`](#endstone.inventory.ItemMeta.clone)</td>
+        <td>Creates a clone of the current metadata.</td>
+    </tr>
+    <tr key="get_enchant_level">
+        <td>[`get_enchant_level`](#endstone.inventory.ItemMeta.get_enchant_level)</td>
+        <td>Checks for the level of the specified enchantment.</td>
+    </tr>
+    <tr key="has_enchant">
+        <td>[`has_enchant`](#endstone.inventory.ItemMeta.has_enchant)</td>
+        <td>Checks for existence of the specified enchantment.</td>
+    </tr>
+    <tr key="remove_enchant">
+        <td>[`remove_enchant`](#endstone.inventory.ItemMeta.remove_enchant)</td>
+        <td>Removes the specified enchantment from this item meta.</td>
+    </tr>
+    <tr key="remove_enchants">
+        <td>[`remove_enchants`](#endstone.inventory.ItemMeta.remove_enchants)</td>
+        <td>Removes all enchantments from this item meta.</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**damage**](#endstone.inventory.ItemMeta.damage) (<code>[int](#int)</code>) – Gets or sets the damage.
-- [**display_name**](#endstone.inventory.ItemMeta.display_name) (<code>[str](#str) | None</code>) – Gets or sets the display name.
-- [**enchants**](#endstone.inventory.ItemMeta.enchants) (<code>[dict](#dict)\[[str](#str), [int](#int)\]</code>) – Returns a copy the enchantments in this ItemMeta.
-- [**has_damage**](#endstone.inventory.ItemMeta.has_damage) (<code>[bool](#bool)</code>) – Checks to see if this item has damage.
-- [**has_display_name**](#endstone.inventory.ItemMeta.has_display_name) (<code>[bool](#bool)</code>) – Checks for existence of a display name.
-- [**has_enchants**](#endstone.inventory.ItemMeta.has_enchants) (<code>[bool](#bool)</code>) – Checks for the existence of any enchantments.
-- [**has_lore**](#endstone.inventory.ItemMeta.has_lore) (<code>[bool](#bool)</code>) – Checks for existence of lore.
-- [**has_repair_cost**](#endstone.inventory.ItemMeta.has_repair_cost) (<code>[bool](#bool)</code>) – Checks to see if this item has a repair penalty.
-- [**is_unbreakable**](#endstone.inventory.ItemMeta.is_unbreakable) (<code>[bool](#bool)</code>) – Gets or sets the unbreakable tag. An unbreakable item will not lose durability.
-- [**lore**](#endstone.inventory.ItemMeta.lore) (<code>[list](#list)\[[str](#str)\] | None</code>) – Gets or sets the lore for this item.
-- [**repair_cost**](#endstone.inventory.ItemMeta.repair_cost) (<code>[int](#int)</code>) – Gets or sets the repair penalty.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="damage">
+        <td>[`damage`](#endstone.inventory.ItemMeta.damage)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets or sets the damage.</td>
+    </tr>
+    <tr key="display_name">
+        <td>[`display_name`](#endstone.inventory.ItemMeta.display_name)</td>
+        <td><code className="nextra-code">[str](#str) | None</code></td>
+        <td>Gets or sets the display name.</td>
+    </tr>
+    <tr key="enchants">
+        <td>[`enchants`](#endstone.inventory.ItemMeta.enchants)</td>
+        <td><code className="nextra-code">[dict](#dict)[[str](#str), [int](#int)]</code></td>
+        <td>Returns a copy the enchantments in this ItemMeta.</td>
+    </tr>
+    <tr key="has_damage">
+        <td>[`has_damage`](#endstone.inventory.ItemMeta.has_damage)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Checks to see if this item has damage.</td>
+    </tr>
+    <tr key="has_display_name">
+        <td>[`has_display_name`](#endstone.inventory.ItemMeta.has_display_name)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Checks for existence of a display name.</td>
+    </tr>
+    <tr key="has_enchants">
+        <td>[`has_enchants`](#endstone.inventory.ItemMeta.has_enchants)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Checks for the existence of any enchantments.</td>
+    </tr>
+    <tr key="has_lore">
+        <td>[`has_lore`](#endstone.inventory.ItemMeta.has_lore)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Checks for existence of lore.</td>
+    </tr>
+    <tr key="has_repair_cost">
+        <td>[`has_repair_cost`](#endstone.inventory.ItemMeta.has_repair_cost)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Checks to see if this item has a repair penalty.</td>
+    </tr>
+    <tr key="is_unbreakable">
+        <td>[`is_unbreakable`](#endstone.inventory.ItemMeta.is_unbreakable)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Gets or sets the unbreakable tag. An unbreakable item will not lose durability.</td>
+    </tr>
+    <tr key="lore">
+        <td>[`lore`](#endstone.inventory.ItemMeta.lore)</td>
+        <td><code className="nextra-code">[list](#list)[[str](#str)] | None</code></td>
+        <td>Gets or sets the lore for this item.</td>
+    </tr>
+    <tr key="repair_cost">
+        <td>[`repair_cost`](#endstone.inventory.ItemMeta.repair_cost)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets or sets the repair penalty.</td>
+    </tr></tbody>
+</table>
 
 #### add_enchant [#endstone.inventory.ItemMeta.add_enchant]
 
@@ -409,7 +610,7 @@ Gets or sets the repair penalty.
 ### ItemStack [#endstone.inventory.ItemStack]
 
 ```python
-ItemStack(type:str, amount:int = 1, data:int = 0) -> None
+ItemStack(type:str, amount:int = 1, data:int = 0)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
@@ -418,16 +619,61 @@ Represents a stack of items.
 
 **Methods:**
 
-- [**is_similar**](#endstone.inventory.ItemStack.is_similar) – Checks if the two stacks are equal, but does not consider stack size (amount).
-- [**set_item_meta**](#endstone.inventory.ItemStack.set_item_meta) – Set the ItemMeta of this ItemStack.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="is_similar">
+        <td>[`is_similar`](#endstone.inventory.ItemStack.is_similar)</td>
+        <td>Checks if the two stacks are equal, but does not consider stack size (amount).</td>
+    </tr>
+    <tr key="set_item_meta">
+        <td>[`set_item_meta`](#endstone.inventory.ItemStack.set_item_meta)</td>
+        <td>Set the ItemMeta of this ItemStack.</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**amount**](#endstone.inventory.ItemStack.amount) (<code>[int](#int)</code>) – Gets or sets the amount of items in this stack.
-- [**data**](#endstone.inventory.ItemStack.data) (<code>[int](#int)</code>) – Gets or sets the data for this stack of items.
-- [**item_meta**](#endstone.inventory.ItemStack.item_meta) (<code>[ItemMeta](#endstone._internal.endstone_python.ItemMeta)</code>) – Gets a copy of the ItemMeta of this ItemStack.
-- [**max_stack_size**](#endstone.inventory.ItemStack.max_stack_size) (<code>[int](#int)</code>) – Get the maximum stack size for this item.
-- [**type**](#endstone.inventory.ItemStack.type) (<code>[str](#str)</code>) – Gets or sets the type of this item.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="amount">
+        <td>[`amount`](#endstone.inventory.ItemStack.amount)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets or sets the amount of items in this stack.</td>
+    </tr>
+    <tr key="data">
+        <td>[`data`](#endstone.inventory.ItemStack.data)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets or sets the data for this stack of items.</td>
+    </tr>
+    <tr key="item_meta">
+        <td>[`item_meta`](#endstone.inventory.ItemStack.item_meta)</td>
+        <td><code className="nextra-code">[ItemMeta](#endstone._internal.endstone_python.ItemMeta)</code></td>
+        <td>Gets a copy of the ItemMeta of this ItemStack.</td>
+    </tr>
+    <tr key="max_stack_size">
+        <td>[`max_stack_size`](#endstone.inventory.ItemStack.max_stack_size)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Get the maximum stack size for this item.</td>
+    </tr>
+    <tr key="type">
+        <td>[`type`](#endstone.inventory.ItemStack.type)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets or sets the type of this item.</td>
+    </tr></tbody>
+</table>
 
 #### amount [#endstone.inventory.ItemStack.amount]
 
@@ -495,15 +741,57 @@ Represents an item type.
 
 **Methods:**
 
-- [**get**](#endstone.inventory.ItemType.get) – Attempts to get the ItemType with the given name.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="get">
+        <td>[`get`](#endstone.inventory.ItemType.get)</td>
+        <td>Attempts to get the ItemType with the given name.</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**id**](#endstone.inventory.ItemType.id) (<code>[str](#str)</code>) – Return the identifier of this item type.
-- [**key**](#endstone.inventory.ItemType.key) (<code>[NamespacedKey](#endstone._internal.endstone_python.NamespacedKey)</code>) – Return the namespaced identifier of this item type.
-- [**max_durability**](#endstone.inventory.ItemType.max_durability) (<code>[int](#int)</code>) – Gets the maximum durability of this item type
-- [**max_stack_size**](#endstone.inventory.ItemType.max_stack_size) (<code>[int](#int)</code>) – Gets the maximum amount of this item type that can be held in a stack.
-- [**translation_key**](#endstone.inventory.ItemType.translation_key) (<code>[str](#str)</code>) – Get the translation key, suitable for use in a translation component.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="id">
+        <td>[`id`](#endstone.inventory.ItemType.id)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Return the identifier of this item type.</td>
+    </tr>
+    <tr key="key">
+        <td>[`key`](#endstone.inventory.ItemType.key)</td>
+        <td><code className="nextra-code">[NamespacedKey](#endstone._internal.endstone_python.NamespacedKey)</code></td>
+        <td>Return the namespaced identifier of this item type.</td>
+    </tr>
+    <tr key="max_durability">
+        <td>[`max_durability`](#endstone.inventory.ItemType.max_durability)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets the maximum durability of this item type</td>
+    </tr>
+    <tr key="max_stack_size">
+        <td>[`max_stack_size`](#endstone.inventory.ItemType.max_stack_size)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets the maximum amount of this item type that can be held in a stack.</td>
+    </tr>
+    <tr key="translation_key">
+        <td>[`translation_key`](#endstone.inventory.ItemType.translation_key)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Get the translation key, suitable for use in a translation component.</td>
+    </tr></tbody>
+</table>
 
 #### get [#endstone.inventory.ItemType.get]
 
@@ -559,7 +847,7 @@ Get the translation key, suitable for use in a translation component.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[ItemMeta](#endstone._internal.endstone_python.ItemMeta)</code>
+Bases: <code className="nextra-code">[ItemMeta](#endstone._internal.endstone_python.ItemMeta)</code>
 
 Represents the metadata for a map item.
 
@@ -569,19 +857,57 @@ Represents the metadata for a map item.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[Inventory](#endstone._internal.endstone_python.Inventory)</code>
+Bases: <code className="nextra-code">[Inventory](#endstone._internal.endstone_python.Inventory)</code>
 
 Interface to the inventory of a Player, including the four armor slots and any extra slots.
 
 **Attributes:**
 
-- [**boots**](#endstone.inventory.PlayerInventory.boots) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Gets or sets the ItemStack in the boots slot
-- [**chestplate**](#endstone.inventory.PlayerInventory.chestplate) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Gets or sets the ItemStack in the chestplate slot
-- [**held_item_slot**](#endstone.inventory.PlayerInventory.held_item_slot) (<code>[int](#int)</code>) – Gets or sets the slot number of the currently held item
-- [**helmet**](#endstone.inventory.PlayerInventory.helmet) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Gets or sets the ItemStack in the helmet slot
-- [**item_in_main_hand**](#endstone.inventory.PlayerInventory.item_in_main_hand) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Gets or sets the item the player is currently holding in their main hand.
-- [**item_in_off_hand**](#endstone.inventory.PlayerInventory.item_in_off_hand) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Gets or sets the item the player is currently holding in their off hand.
-- [**leggings**](#endstone.inventory.PlayerInventory.leggings) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Gets or sets the ItemStack in the leg slot
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="boots">
+        <td>[`boots`](#endstone.inventory.PlayerInventory.boots)</td>
+        <td><code className="nextra-code">[ItemStack](#endstone._internal.endstone_python.ItemStack)</code></td>
+        <td>Gets or sets the ItemStack in the boots slot</td>
+    </tr>
+    <tr key="chestplate">
+        <td>[`chestplate`](#endstone.inventory.PlayerInventory.chestplate)</td>
+        <td><code className="nextra-code">[ItemStack](#endstone._internal.endstone_python.ItemStack)</code></td>
+        <td>Gets or sets the ItemStack in the chestplate slot</td>
+    </tr>
+    <tr key="held_item_slot">
+        <td>[`held_item_slot`](#endstone.inventory.PlayerInventory.held_item_slot)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets or sets the slot number of the currently held item</td>
+    </tr>
+    <tr key="helmet">
+        <td>[`helmet`](#endstone.inventory.PlayerInventory.helmet)</td>
+        <td><code className="nextra-code">[ItemStack](#endstone._internal.endstone_python.ItemStack)</code></td>
+        <td>Gets or sets the ItemStack in the helmet slot</td>
+    </tr>
+    <tr key="item_in_main_hand">
+        <td>[`item_in_main_hand`](#endstone.inventory.PlayerInventory.item_in_main_hand)</td>
+        <td><code className="nextra-code">[ItemStack](#endstone._internal.endstone_python.ItemStack)</code></td>
+        <td>Gets or sets the item the player is currently holding in their main hand.</td>
+    </tr>
+    <tr key="item_in_off_hand">
+        <td>[`item_in_off_hand`](#endstone.inventory.PlayerInventory.item_in_off_hand)</td>
+        <td><code className="nextra-code">[ItemStack](#endstone._internal.endstone_python.ItemStack)</code></td>
+        <td>Gets or sets the item the player is currently holding in their off hand.</td>
+    </tr>
+    <tr key="leggings">
+        <td>[`leggings`](#endstone.inventory.PlayerInventory.leggings)</td>
+        <td><code className="nextra-code">[ItemStack](#endstone._internal.endstone_python.ItemStack)</code></td>
+        <td>Gets or sets the ItemStack in the leg slot</td>
+    </tr></tbody>
+</table>
 
 #### boots [#endstone.inventory.PlayerInventory.boots]
 

@@ -6,8 +6,10 @@ title: "endstone.util"
 
 **Classes:**
 
-- [**SocketAddress**](#endstone.util.SocketAddress) – Represents an IP Socket Address (hostname + port number).
-- [**Vector**](#endstone.util.Vector) – Represents a 3-dimensional vector.
+Name | Description
+---- | -----------
+[`SocketAddress`](#endstone.util.SocketAddress) | Represents an IP Socket Address (hostname + port number).
+[`Vector`](#endstone.util.Vector) | Represents a 3-dimensional vector.
 
 ### SocketAddress [#endstone.util.SocketAddress]
 
@@ -17,8 +19,26 @@ Represents an IP Socket Address (hostname + port number).
 
 **Attributes:**
 
-- [**hostname**](#endstone.util.SocketAddress.hostname) (<code>[str](#str)</code>) – Gets the hostname.
-- [**port**](#endstone.util.SocketAddress.port) (<code>[int](#int)</code>) – Gets the port number.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="hostname">
+        <td>[`hostname`](#endstone.util.SocketAddress.hostname)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets the hostname.</td>
+    </tr>
+    <tr key="port">
+        <td>[`port`](#endstone.util.SocketAddress.port)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets the port number.</td>
+    </tr></tbody>
+</table>
 
 #### hostname [#endstone.util.SocketAddress.hostname]
 
@@ -46,16 +66,61 @@ Represents a 3-dimensional vector.
 
 **Methods:**
 
-- [**distance**](#endstone.util.Vector.distance) – The distance between this Vector and another
-- [**distance_squared**](#endstone.util.Vector.distance_squared) – The squared distance between this Vector and another
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="distance">
+        <td>[`distance`](#endstone.util.Vector.distance)</td>
+        <td>The distance between this Vector and another</td>
+    </tr>
+    <tr key="distance_squared">
+        <td>[`distance_squared`](#endstone.util.Vector.distance_squared)</td>
+        <td>The squared distance between this Vector and another</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**length**](#endstone.util.Vector.length) (<code>[float](#float)</code>) – The magnitude of the Vector
-- [**length_squared**](#endstone.util.Vector.length_squared) (<code>[float](#float)</code>) – The squared magnitude of the Vector
-- [**x**](#endstone.util.Vector.x) (<code>[float](#float)</code>) – The X component of the vector
-- [**y**](#endstone.util.Vector.y) (<code>[float](#float)</code>) – The Y component of the vector
-- [**z**](#endstone.util.Vector.z) (<code>[float](#float)</code>) – The Z component of the vector
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="length">
+        <td>[`length`](#endstone.util.Vector.length)</td>
+        <td><code className="nextra-code">[float](#float)</code></td>
+        <td>The magnitude of the Vector</td>
+    </tr>
+    <tr key="length_squared">
+        <td>[`length_squared`](#endstone.util.Vector.length_squared)</td>
+        <td><code className="nextra-code">[float](#float)</code></td>
+        <td>The squared magnitude of the Vector</td>
+    </tr>
+    <tr key="x">
+        <td>[`x`](#endstone.util.Vector.x)</td>
+        <td><code className="nextra-code">[float](#float)</code></td>
+        <td>The X component of the vector</td>
+    </tr>
+    <tr key="y">
+        <td>[`y`](#endstone.util.Vector.y)</td>
+        <td><code className="nextra-code">[float](#float)</code></td>
+        <td>The Y component of the vector</td>
+    </tr>
+    <tr key="z">
+        <td>[`z`](#endstone.util.Vector.z)</td>
+        <td><code className="nextra-code">[float](#float)</code></td>
+        <td>The Z component of the vector</td>
+    </tr></tbody>
+</table>
 
 #### distance [#endstone.util.Vector.distance]
 

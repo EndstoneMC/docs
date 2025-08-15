@@ -3,7 +3,7 @@ import nextra from 'nextra'
 
 
 const withNextra = nextra({
-  /* Nextra-specific options here */
+  whiteListTagsStyling: ['table', 'thead', 'tbody', 'tr', 'th', 'td']
 })
 
 

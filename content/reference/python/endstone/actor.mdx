@@ -6,46 +6,155 @@ title: "endstone.actor"
 
 **Classes:**
 
-- [**Actor**](#endstone.actor.Actor) – Represents a base actor in the level.
-- [**Item**](#endstone.actor.Item) – Represents a base actor in the level.
-- [**Mob**](#endstone.actor.Mob) – Represents a mobile entity (i.e. living entity), such as a monster or player.
+Name | Description
+---- | -----------
+[`Actor`](#endstone.actor.Actor) | Represents a base actor in the level.
+[`Item`](#endstone.actor.Item) | Represents a base actor in the level.
+[`Mob`](#endstone.actor.Mob) | Represents a mobile entity (i.e. living entity), such as a monster or player.
 
 ### Actor [#endstone.actor.Actor]
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[CommandSender](#endstone._internal.endstone_python.CommandSender)</code>
+Bases: <code className="nextra-code">[CommandSender](#endstone._internal.endstone_python.CommandSender)</code>
 
 Represents a base actor in the level.
 
 **Methods:**
 
-- [**add_scoreboard_tag**](#endstone.actor.Actor.add_scoreboard_tag) – Adds a tag to this actor.
-- [**remove**](#endstone.actor.Actor.remove) – Remove this actor from the level.
-- [**remove_scoreboard_tag**](#endstone.actor.Actor.remove_scoreboard_tag) – Removes a given tag from this actor.
-- [**set_rotation**](#endstone.actor.Actor.set_rotation) – Sets the actor's rotation.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="add_scoreboard_tag">
+        <td>[`add_scoreboard_tag`](#endstone.actor.Actor.add_scoreboard_tag)</td>
+        <td>Adds a tag to this actor.</td>
+    </tr>
+    <tr key="remove">
+        <td>[`remove`](#endstone.actor.Actor.remove)</td>
+        <td>Remove this actor from the level.</td>
+    </tr>
+    <tr key="remove_scoreboard_tag">
+        <td>[`remove_scoreboard_tag`](#endstone.actor.Actor.remove_scoreboard_tag)</td>
+        <td>Removes a given tag from this actor.</td>
+    </tr>
+    <tr key="set_rotation">
+        <td>[`set_rotation`](#endstone.actor.Actor.set_rotation)</td>
+        <td>Sets the actor's rotation.</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**dimension**](#endstone.actor.Actor.dimension) (<code>[Dimension](#endstone._internal.endstone_python.Dimension)</code>) – Gets the current Dimension this actor resides in.
-- [**health**](#endstone.actor.Actor.health) (<code>[int](#int)</code>) – Gets or sets the entity's health from 0 to its max possible value, where 0 is dead.
-- [**id**](#endstone.actor.Actor.id) (<code>[int](#int)</code>) – Returns a unique id for this actor.
-- [**is_dead**](#endstone.actor.Actor.is_dead) (<code>[bool](#bool)</code>) – Returns true if this actor has been marked for removal.
-- [**is_in_lava**](#endstone.actor.Actor.is_in_lava) (<code>[bool](#bool)</code>) – Returns true if the actor is in lava.
-- [**is_in_water**](#endstone.actor.Actor.is_in_water) (<code>[bool](#bool)</code>) – Returns true if the actor is in water.
-- [**is_name_tag_always_visible**](#endstone.actor.Actor.is_name_tag_always_visible) (<code>[bool](#bool)</code>) – Gets or sets if the actor's name tag is always visible or not.
-- [**is_name_tag_visible**](#endstone.actor.Actor.is_name_tag_visible) (<code>[bool](#bool)</code>) – Gets or sets if the actor's name tag is visible or not.
-- [**is_on_ground**](#endstone.actor.Actor.is_on_ground) (<code>[bool](#bool)</code>) – Returns true if the actor is supported by a block, i.e. on ground.
-- [**is_valid**](#endstone.actor.Actor.is_valid) (<code>[bool](#bool)</code>) – Returns false if the entity has died, been despawned for some other reason, or has not been added to the level.
-- [**level**](#endstone.actor.Actor.level) (<code>[Level](#endstone._internal.endstone_python.Level)</code>) – Gets the current Level this actor resides in.
-- [**location**](#endstone.actor.Actor.location) (<code>[Location](#endstone._internal.endstone_python.Location)</code>) – Gets the actor's current position.
-- [**max_health**](#endstone.actor.Actor.max_health) (<code>[int](#int)</code>) – Gets the maximum health this entity has.
-- [**name_tag**](#endstone.actor.Actor.name_tag) (<code>[str](#str)</code>) – Gets or sets the current name tag of the actor.
-- [**runtime_id**](#endstone.actor.Actor.runtime_id) (<code>[int](#int)</code>) – Returns the runtime id for this actor.
-- [**score_tag**](#endstone.actor.Actor.score_tag) (<code>[str](#str)</code>) – Gets or sets the current score tag of the actor.
-- [**scoreboard_tags**](#endstone.actor.Actor.scoreboard_tags) (<code>[list](#list)\[[str](#str)\]</code>) – Returns a list of scoreboard tags for this actor.
-- [**type**](#endstone.actor.Actor.type) (<code>[str](#str)</code>) – Gets the type of the actor.
-- [**velocity**](#endstone.actor.Actor.velocity) (<code>[Vector](#endstone._internal.endstone_python.Vector)</code>) – Gets this actor's current velocity.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="dimension">
+        <td>[`dimension`](#endstone.actor.Actor.dimension)</td>
+        <td><code className="nextra-code">[Dimension](#endstone._internal.endstone_python.Dimension)</code></td>
+        <td>Gets the current Dimension this actor resides in.</td>
+    </tr>
+    <tr key="health">
+        <td>[`health`](#endstone.actor.Actor.health)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets or sets the entity's health from 0 to its max possible value, where 0 is dead.</td>
+    </tr>
+    <tr key="id">
+        <td>[`id`](#endstone.actor.Actor.id)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Returns a unique id for this actor.</td>
+    </tr>
+    <tr key="is_dead">
+        <td>[`is_dead`](#endstone.actor.Actor.is_dead)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Returns true if this actor has been marked for removal.</td>
+    </tr>
+    <tr key="is_in_lava">
+        <td>[`is_in_lava`](#endstone.actor.Actor.is_in_lava)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Returns true if the actor is in lava.</td>
+    </tr>
+    <tr key="is_in_water">
+        <td>[`is_in_water`](#endstone.actor.Actor.is_in_water)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Returns true if the actor is in water.</td>
+    </tr>
+    <tr key="is_name_tag_always_visible">
+        <td>[`is_name_tag_always_visible`](#endstone.actor.Actor.is_name_tag_always_visible)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Gets or sets if the actor's name tag is always visible or not.</td>
+    </tr>
+    <tr key="is_name_tag_visible">
+        <td>[`is_name_tag_visible`](#endstone.actor.Actor.is_name_tag_visible)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Gets or sets if the actor's name tag is visible or not.</td>
+    </tr>
+    <tr key="is_on_ground">
+        <td>[`is_on_ground`](#endstone.actor.Actor.is_on_ground)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Returns true if the actor is supported by a block, i.e. on ground.</td>
+    </tr>
+    <tr key="is_valid">
+        <td>[`is_valid`](#endstone.actor.Actor.is_valid)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Returns false if the entity has died, been despawned for some other reason, or has not been added to the level.</td>
+    </tr>
+    <tr key="level">
+        <td>[`level`](#endstone.actor.Actor.level)</td>
+        <td><code className="nextra-code">[Level](#endstone._internal.endstone_python.Level)</code></td>
+        <td>Gets the current Level this actor resides in.</td>
+    </tr>
+    <tr key="location">
+        <td>[`location`](#endstone.actor.Actor.location)</td>
+        <td><code className="nextra-code">[Location](#endstone._internal.endstone_python.Location)</code></td>
+        <td>Gets the actor's current position.</td>
+    </tr>
+    <tr key="max_health">
+        <td>[`max_health`](#endstone.actor.Actor.max_health)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets the maximum health this entity has.</td>
+    </tr>
+    <tr key="name_tag">
+        <td>[`name_tag`](#endstone.actor.Actor.name_tag)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets or sets the current name tag of the actor.</td>
+    </tr>
+    <tr key="runtime_id">
+        <td>[`runtime_id`](#endstone.actor.Actor.runtime_id)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Returns the runtime id for this actor.</td>
+    </tr>
+    <tr key="score_tag">
+        <td>[`score_tag`](#endstone.actor.Actor.score_tag)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets or sets the current score tag of the actor.</td>
+    </tr>
+    <tr key="scoreboard_tags">
+        <td>[`scoreboard_tags`](#endstone.actor.Actor.scoreboard_tags)</td>
+        <td><code className="nextra-code">[list](#list)[[str](#str)]</code></td>
+        <td>Returns a list of scoreboard tags for this actor.</td>
+    </tr>
+    <tr key="type">
+        <td>[`type`](#endstone.actor.Actor.type)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets the type of the actor.</td>
+    </tr>
+    <tr key="velocity">
+        <td>[`velocity`](#endstone.actor.Actor.velocity)</td>
+        <td><code className="nextra-code">[Vector](#endstone._internal.endstone_python.Vector)</code></td>
+        <td>Gets this actor's current velocity.</td>
+    </tr></tbody>
+</table>
 
 #### add_scoreboard_tag [#endstone.actor.Actor.add_scoreboard_tag]
 
@@ -237,16 +346,42 @@ Gets this actor's current velocity.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[Actor](#endstone._internal.endstone_python.Actor)</code>
+Bases: <code className="nextra-code">[Actor](#endstone._internal.endstone_python.Actor)</code>
 
 Represents a base actor in the level.
 
 **Attributes:**
 
-- [**is_unlimited_lifetime**](#endstone.actor.Item.is_unlimited_lifetime) (<code>[bool](#bool)</code>) – Gets or sets if this Item lives forever
-- [**item_stack**](#endstone.actor.Item.item_stack) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Gets or sets the item stack associated with this item drop.
-- [**pickup_delay**](#endstone.actor.Item.pickup_delay) (<code>[int](#int)</code>) – Gets or sets the delay before this Item is available to be picked up by players.
-- [**thrower**](#endstone.actor.Item.thrower) (<code>[int](#int) | None</code>) – Gets or sets the thrower of this item.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="is_unlimited_lifetime">
+        <td>[`is_unlimited_lifetime`](#endstone.actor.Item.is_unlimited_lifetime)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Gets or sets if this Item lives forever</td>
+    </tr>
+    <tr key="item_stack">
+        <td>[`item_stack`](#endstone.actor.Item.item_stack)</td>
+        <td><code className="nextra-code">[ItemStack](#endstone._internal.endstone_python.ItemStack)</code></td>
+        <td>Gets or sets the item stack associated with this item drop.</td>
+    </tr>
+    <tr key="pickup_delay">
+        <td>[`pickup_delay`](#endstone.actor.Item.pickup_delay)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets or sets the delay before this Item is available to be picked up by players.</td>
+    </tr>
+    <tr key="thrower">
+        <td>[`thrower`](#endstone.actor.Item.thrower)</td>
+        <td><code className="nextra-code">[int](#int) | None</code></td>
+        <td>Gets or sets the thrower of this item.</td>
+    </tr></tbody>
+</table>
 
 #### is_unlimited_lifetime [#endstone.actor.Item.is_unlimited_lifetime]
 
@@ -286,13 +421,27 @@ Gets or sets the thrower of this item.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[Actor](#endstone._internal.endstone_python.Actor)</code>
+Bases: <code className="nextra-code">[Actor](#endstone._internal.endstone_python.Actor)</code>
 
 Represents a mobile entity (i.e. living entity), such as a monster or player.
 
 **Attributes:**
 
-- [**is_gliding**](#endstone.actor.Mob.is_gliding) (<code>[bool](#bool)</code>) – Checks to see if an actor is gliding, such as using an Elytra.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="is_gliding">
+        <td>[`is_gliding`](#endstone.actor.Mob.is_gliding)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Checks to see if an actor is gliding, such as using an Elytra.</td>
+    </tr></tbody>
+</table>
 
 #### is_gliding [#endstone.actor.Mob.is_gliding]
 

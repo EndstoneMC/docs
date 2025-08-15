@@ -6,11 +6,13 @@ title: "endstone.level"
 
 **Classes:**
 
-- [**Chunk**](#endstone.level.Chunk) – Represents a chunk of blocks.
-- [**Dimension**](#endstone.level.Dimension) – Represents a dimension within a Level.
-- [**Level**](#endstone.level.Level) –
-- [**Location**](#endstone.level.Location) – Represents a 3-dimensional location in a dimension within a level.
-- [**Position**](#endstone.level.Position) – Represents a 3-dimensional position in a dimension within a level.
+Name | Description
+---- | -----------
+[`Chunk`](#endstone.level.Chunk) | Represents a chunk of blocks.
+[`Dimension`](#endstone.level.Dimension) | Represents a dimension within a Level.
+[`Level`](#endstone.level.Level) |
+[`Location`](#endstone.level.Location) | Represents a 3-dimensional location in a dimension within a level.
+[`Position`](#endstone.level.Position) | Represents a 3-dimensional position in a dimension within a level.
 
 ### Chunk [#endstone.level.Chunk]
 
@@ -20,10 +22,36 @@ Represents a chunk of blocks.
 
 **Attributes:**
 
-- [**dimension**](#endstone.level.Chunk.dimension) (<code>[Dimension](#endstone._internal.endstone_python.Dimension)</code>) – Gets the dimension containing this chunk
-- [**level**](#endstone.level.Chunk.level) (<code>[Level](#endstone._internal.endstone_python.Level)</code>) – Gets the level containing this chunk
-- [**x**](#endstone.level.Chunk.x) (<code>[int](#int)</code>) – Gets the X-coordinate of this chunk
-- [**z**](#endstone.level.Chunk.z) (<code>[int](#int)</code>) – Gets the Z-coordinate of this chunk
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="dimension">
+        <td>[`dimension`](#endstone.level.Chunk.dimension)</td>
+        <td><code className="nextra-code">[Dimension](#endstone._internal.endstone_python.Dimension)</code></td>
+        <td>Gets the dimension containing this chunk</td>
+    </tr>
+    <tr key="level">
+        <td>[`level`](#endstone.level.Chunk.level)</td>
+        <td><code className="nextra-code">[Level](#endstone._internal.endstone_python.Level)</code></td>
+        <td>Gets the level containing this chunk</td>
+    </tr>
+    <tr key="x">
+        <td>[`x`](#endstone.level.Chunk.x)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets the X-coordinate of this chunk</td>
+    </tr>
+    <tr key="z">
+        <td>[`z`](#endstone.level.Chunk.z)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets the Z-coordinate of this chunk</td>
+    </tr></tbody>
+</table>
 
 #### dimension [#endstone.level.Chunk.dimension]
 
@@ -67,23 +95,82 @@ Represents a dimension within a Level.
 
 **Classes:**
 
-- [**Type**](#endstone.level.Dimension.Type) – Represents various dimension types.
+Name | Description
+---- | -----------
+[`Type`](#endstone.level.Dimension.Type) | Represents various dimension types.
 
 **Methods:**
 
-- [**drop_item**](#endstone.level.Dimension.drop_item) – Drops an item at the specified Location
-- [**get_highest_block_y_at**](#endstone.level.Dimension.get_highest_block_y_at) – Gets the highest non-empty (impassable) coordinate at the given coordinates.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="drop_item">
+        <td>[`drop_item`](#endstone.level.Dimension.drop_item)</td>
+        <td>Drops an item at the specified Location</td>
+    </tr>
+    <tr key="get_highest_block_y_at">
+        <td>[`get_highest_block_y_at`](#endstone.level.Dimension.get_highest_block_y_at)</td>
+        <td>Gets the highest non-empty (impassable) coordinate at the given coordinates.</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**CUSTOM**](#endstone.level.Dimension.CUSTOM) (<code>[Type](#endstone._internal.endstone_python.Dimension.Type)</code>) –
-- [**NETHER**](#endstone.level.Dimension.NETHER) (<code>[Type](#endstone._internal.endstone_python.Dimension.Type)</code>) –
-- [**OVERWORLD**](#endstone.level.Dimension.OVERWORLD) (<code>[Type](#endstone._internal.endstone_python.Dimension.Type)</code>) –
-- [**THE_END**](#endstone.level.Dimension.THE_END) (<code>[Type](#endstone._internal.endstone_python.Dimension.Type)</code>) –
-- [**level**](#endstone.level.Dimension.level) (<code>[Level](#endstone._internal.endstone_python.Level)</code>) – Gets the level to which this dimension belongs
-- [**loaded_chunks**](#endstone.level.Dimension.loaded_chunks) (<code>[list](#list)\[[Chunk](#endstone._internal.endstone_python.Chunk)\]</code>) – Gets a list of all loaded Chunks
-- [**name**](#endstone.level.Dimension.name) (<code>[str](#str)</code>) – Gets the name of this dimension
-- [**type**](#endstone.level.Dimension.type) (<code>[Type](#endstone._internal.endstone_python.Dimension.Type)</code>) – Gets the type of this dimension
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="CUSTOM">
+        <td>[`CUSTOM`](#endstone.level.Dimension.CUSTOM)</td>
+        <td><code className="nextra-code">[Type](#endstone._internal.endstone_python.Dimension.Type)</code></td>
+        <td></td>
+    </tr>
+    <tr key="NETHER">
+        <td>[`NETHER`](#endstone.level.Dimension.NETHER)</td>
+        <td><code className="nextra-code">[Type](#endstone._internal.endstone_python.Dimension.Type)</code></td>
+        <td></td>
+    </tr>
+    <tr key="OVERWORLD">
+        <td>[`OVERWORLD`](#endstone.level.Dimension.OVERWORLD)</td>
+        <td><code className="nextra-code">[Type](#endstone._internal.endstone_python.Dimension.Type)</code></td>
+        <td></td>
+    </tr>
+    <tr key="THE_END">
+        <td>[`THE_END`](#endstone.level.Dimension.THE_END)</td>
+        <td><code className="nextra-code">[Type](#endstone._internal.endstone_python.Dimension.Type)</code></td>
+        <td></td>
+    </tr>
+    <tr key="level">
+        <td>[`level`](#endstone.level.Dimension.level)</td>
+        <td><code className="nextra-code">[Level](#endstone._internal.endstone_python.Level)</code></td>
+        <td>Gets the level to which this dimension belongs</td>
+    </tr>
+    <tr key="loaded_chunks">
+        <td>[`loaded_chunks`](#endstone.level.Dimension.loaded_chunks)</td>
+        <td><code className="nextra-code">[list](#list)[[Chunk](#endstone._internal.endstone_python.Chunk)]</code></td>
+        <td>Gets a list of all loaded Chunks</td>
+    </tr>
+    <tr key="name">
+        <td>[`name`](#endstone.level.Dimension.name)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets the name of this dimension</td>
+    </tr>
+    <tr key="type">
+        <td>[`type`](#endstone.level.Dimension.type)</td>
+        <td><code className="nextra-code">[Type](#endstone._internal.endstone_python.Dimension.Type)</code></td>
+        <td>Gets the type of this dimension</td>
+    </tr></tbody>
+</table>
 
 #### CUSTOM [#endstone.level.Dimension.CUSTOM]
 
@@ -112,7 +199,7 @@ THE_END: Dimension.Type
 #### Type [#endstone.level.Dimension.Type]
 
 ```python
-Type(value:int) -> None
+Type(value:int)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
@@ -121,12 +208,46 @@ Represents various dimension types.
 
 **Attributes:**
 
-- [**CUSTOM**](#endstone.level.Dimension.Type.CUSTOM) (<code>[Type](#endstone._internal.endstone_python.Dimension.Type)</code>) –
-- [**NETHER**](#endstone.level.Dimension.Type.NETHER) (<code>[Type](#endstone._internal.endstone_python.Dimension.Type)</code>) –
-- [**OVERWORLD**](#endstone.level.Dimension.Type.OVERWORLD) (<code>[Type](#endstone._internal.endstone_python.Dimension.Type)</code>) –
-- [**THE_END**](#endstone.level.Dimension.Type.THE_END) (<code>[Type](#endstone._internal.endstone_python.Dimension.Type)</code>) –
-- [**name**](#endstone.level.Dimension.Type.name) (<code>[str](#str)</code>) –
-- [**value**](#endstone.level.Dimension.Type.value) (<code>[int](#int)</code>) –
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="CUSTOM">
+        <td>[`CUSTOM`](#endstone.level.Dimension.Type.CUSTOM)</td>
+        <td><code className="nextra-code">[Type](#endstone._internal.endstone_python.Dimension.Type)</code></td>
+        <td></td>
+    </tr>
+    <tr key="NETHER">
+        <td>[`NETHER`](#endstone.level.Dimension.Type.NETHER)</td>
+        <td><code className="nextra-code">[Type](#endstone._internal.endstone_python.Dimension.Type)</code></td>
+        <td></td>
+    </tr>
+    <tr key="OVERWORLD">
+        <td>[`OVERWORLD`](#endstone.level.Dimension.Type.OVERWORLD)</td>
+        <td><code className="nextra-code">[Type](#endstone._internal.endstone_python.Dimension.Type)</code></td>
+        <td></td>
+    </tr>
+    <tr key="THE_END">
+        <td>[`THE_END`](#endstone.level.Dimension.Type.THE_END)</td>
+        <td><code className="nextra-code">[Type](#endstone._internal.endstone_python.Dimension.Type)</code></td>
+        <td></td>
+    </tr>
+    <tr key="name">
+        <td>[`name`](#endstone.level.Dimension.Type.name)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td></td>
+    </tr>
+    <tr key="value">
+        <td>[`value`](#endstone.level.Dimension.Type.value)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td></td>
+    </tr></tbody>
+</table>
 
 ##### CUSTOM [#endstone.level.Dimension.Type.CUSTOM]
 
@@ -222,14 +343,52 @@ Gets the type of this dimension
 
 **Methods:**
 
-- [**get_dimension**](#endstone.level.Level.get_dimension) – Gets the dimension with the given name.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="get_dimension">
+        <td>[`get_dimension`](#endstone.level.Level.get_dimension)</td>
+        <td>Gets the dimension with the given name.</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**actors**](#endstone.level.Level.actors) (<code>[list](#list)\[[Actor](#endstone._internal.endstone_python.Actor)\]</code>) – Get a list of all actors in this level
-- [**dimensions**](#endstone.level.Level.dimensions) (<code>[list](#list)\[[Dimension](#endstone._internal.endstone_python.Dimension)\]</code>) – Gets a list of all dimensions within this level.
-- [**name**](#endstone.level.Level.name) (<code>[str](#str)</code>) – Gets the unique name of this level
-- [**time**](#endstone.level.Level.time) (<code>[int](#int)</code>) – Gets and sets the relative in-game time on the server
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="actors">
+        <td>[`actors`](#endstone.level.Level.actors)</td>
+        <td><code className="nextra-code">[list](#list)[[Actor](#endstone._internal.endstone_python.Actor)]</code></td>
+        <td>Get a list of all actors in this level</td>
+    </tr>
+    <tr key="dimensions">
+        <td>[`dimensions`](#endstone.level.Level.dimensions)</td>
+        <td><code className="nextra-code">[list](#list)[[Dimension](#endstone._internal.endstone_python.Dimension)]</code></td>
+        <td>Gets a list of all dimensions within this level.</td>
+    </tr>
+    <tr key="name">
+        <td>[`name`](#endstone.level.Level.name)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets the unique name of this level</td>
+    </tr>
+    <tr key="time">
+        <td>[`time`](#endstone.level.Level.time)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets and sets the relative in-game time on the server</td>
+    </tr></tbody>
+</table>
 
 #### actors [#endstone.level.Level.actors]
 
@@ -283,19 +442,37 @@ Location(
     pitch: float = 0.0,
     yaw: float = 0.0,
     dimension: Dimension = None,
-) -> None
+)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[Position](#endstone._internal.endstone_python.Position)</code>
+Bases: <code className="nextra-code">[Position](#endstone._internal.endstone_python.Position)</code>
 
 Represents a 3-dimensional location in a dimension within a level.
 
 **Attributes:**
 
-- [**pitch**](#endstone.level.Location.pitch) (<code>[float](#float)</code>) – The pitch of this location, measured in degrees.
-- [**yaw**](#endstone.level.Location.yaw) (<code>[float](#float)</code>) – The yaw of this location, measured in degrees.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="pitch">
+        <td>[`pitch`](#endstone.level.Location.pitch)</td>
+        <td><code className="nextra-code">[float](#float)</code></td>
+        <td>The pitch of this location, measured in degrees.</td>
+    </tr>
+    <tr key="yaw">
+        <td>[`yaw`](#endstone.level.Location.yaw)</td>
+        <td><code className="nextra-code">[float](#float)</code></td>
+        <td>The yaw of this location, measured in degrees.</td>
+    </tr></tbody>
+</table>
 
 #### pitch [#endstone.level.Location.pitch]
 
@@ -318,21 +495,47 @@ The yaw of this location, measured in degrees.
 ### Position [#endstone.level.Position]
 
 ```python
-Position(x:float, y:float, z:float, dimension:Dimension = None) -> None
+Position(x:float, y:float, z:float, dimension:Dimension = None)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[Vector](#endstone._internal.endstone_python.Vector)</code>
+Bases: <code className="nextra-code">[Vector](#endstone._internal.endstone_python.Vector)</code>
 
 Represents a 3-dimensional position in a dimension within a level.
 
 **Attributes:**
 
-- [**block_x**](#endstone.level.Position.block_x) (<code>[int](#int)</code>) – Gets the floored value of the X component, indicating the block that this location is contained with.
-- [**block_y**](#endstone.level.Position.block_y) (<code>[int](#int)</code>) – Gets the floored value of the Y component, indicating the block that this location is contained with.
-- [**block_z**](#endstone.level.Position.block_z) (<code>[int](#int)</code>) – Gets the floored value of the Z component, indicating the block that this location is contained with.
-- [**dimension**](#endstone.level.Position.dimension) (<code>[Dimension](#endstone._internal.endstone_python.Dimension)</code>) – The Dimension that contains this position
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="block_x">
+        <td>[`block_x`](#endstone.level.Position.block_x)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets the floored value of the X component, indicating the block that this location is contained with.</td>
+    </tr>
+    <tr key="block_y">
+        <td>[`block_y`](#endstone.level.Position.block_y)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets the floored value of the Y component, indicating the block that this location is contained with.</td>
+    </tr>
+    <tr key="block_z">
+        <td>[`block_z`](#endstone.level.Position.block_z)</td>
+        <td><code className="nextra-code">[int](#int)</code></td>
+        <td>Gets the floored value of the Z component, indicating the block that this location is contained with.</td>
+    </tr>
+    <tr key="dimension">
+        <td>[`dimension`](#endstone.level.Position.dimension)</td>
+        <td><code className="nextra-code">[Dimension](#endstone._internal.endstone_python.Dimension)</code></td>
+        <td>The Dimension that contains this position</td>
+    </tr></tbody>
+</table>
 
 #### block_x [#endstone.level.Position.block_x]
 

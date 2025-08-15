@@ -6,24 +6,40 @@ title: "endstone.command"
 
 **Classes:**
 
-- [**BlockCommandSender**](#endstone.command.BlockCommandSender) – Represents a block command sender.
-- [**Command**](#endstone.command.Command) – Represents a Command, which executes various tasks upon user input
-- [**CommandExecutor**](#endstone.command.CommandExecutor) – Represents a class which contains a single method for executing commands
-- [**CommandSender**](#endstone.command.CommandSender) – Represents a command sender.
-- [**CommandSenderWrapper**](#endstone.command.CommandSenderWrapper) – Represents a wrapper that forwards commands to the wrapped CommandSender and captures its output
-- [**ConsoleCommandSender**](#endstone.command.ConsoleCommandSender) – Represents a console command sender.
+Name | Description
+---- | -----------
+[`BlockCommandSender`](#endstone.command.BlockCommandSender) | Represents a block command sender.
+[`Command`](#endstone.command.Command) | Represents a Command, which executes various tasks upon user input
+[`CommandExecutor`](#endstone.command.CommandExecutor) | Represents a class which contains a single method for executing commands
+[`CommandSender`](#endstone.command.CommandSender) | Represents a command sender.
+[`CommandSenderWrapper`](#endstone.command.CommandSenderWrapper) | Represents a wrapper that forwards commands to the wrapped CommandSender and captures its output
+[`ConsoleCommandSender`](#endstone.command.ConsoleCommandSender) | Represents a console command sender.
 
 ### BlockCommandSender [#endstone.command.BlockCommandSender]
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[CommandSender](#endstone._internal.endstone_python.CommandSender)</code>
+Bases: <code className="nextra-code">[CommandSender](#endstone._internal.endstone_python.CommandSender)</code>
 
 Represents a block command sender.
 
 **Attributes:**
 
-- [**block**](#endstone.command.BlockCommandSender.block) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Returns the block this command sender belongs to
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="block">
+        <td>[`block`](#endstone.command.BlockCommandSender.block)</td>
+        <td><code className="nextra-code">[Block](#endstone._internal.endstone_python.Block)</code></td>
+        <td>Returns the block this command sender belongs to</td>
+    </tr></tbody>
+</table>
 
 #### block [#endstone.command.BlockCommandSender.block]
 
@@ -46,7 +62,7 @@ Command(
     permissions: list[str] | None = None,
     *args: list[str] | None,
     **kwargs: list[str] | None
-) -> None
+)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
@@ -55,18 +71,70 @@ Represents a Command, which executes various tasks upon user input
 
 **Methods:**
 
-- [**execute**](#endstone.command.Command.execute) – Executes the command, returning its success
-- [**test_permission**](#endstone.command.Command.test_permission) – Tests the given CommandSender to see if they can perform this command.
-- [**test_permission_silently**](#endstone.command.Command.test_permission_silently) – Tests the given CommandSender to see if they can perform this command. No error is sent to the sender.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="execute">
+        <td>[`execute`](#endstone.command.Command.execute)</td>
+        <td>Executes the command, returning its success</td>
+    </tr>
+    <tr key="test_permission">
+        <td>[`test_permission`](#endstone.command.Command.test_permission)</td>
+        <td>Tests the given CommandSender to see if they can perform this command.</td>
+    </tr>
+    <tr key="test_permission_silently">
+        <td>[`test_permission_silently`](#endstone.command.Command.test_permission_silently)</td>
+        <td>Tests the given CommandSender to see if they can perform this command. No error is sent to the sender.</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**aliases**](#endstone.command.Command.aliases) (<code>[list](#list)\[[str](#str)\]</code>) – List of aliases of this command
-- [**description**](#endstone.command.Command.description) (<code>[str](#str)</code>) – Brief description of this command
-- [**is_registered**](#endstone.command.Command.is_registered) (<code>[bool](#bool)</code>) – Returns the current registered state of this command
-- [**name**](#endstone.command.Command.name) (<code>[str](#str)</code>) – Name of this command.
-- [**permissions**](#endstone.command.Command.permissions) (<code>[list](#list)\[[str](#str)\]</code>) – The permissions required by users to be able to perform this command
-- [**usages**](#endstone.command.Command.usages) (<code>[list](#list)\[[str](#str)\]</code>) – List of usages of this command
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="aliases">
+        <td>[`aliases`](#endstone.command.Command.aliases)</td>
+        <td><code className="nextra-code">[list](#list)[[str](#str)]</code></td>
+        <td>List of aliases of this command</td>
+    </tr>
+    <tr key="description">
+        <td>[`description`](#endstone.command.Command.description)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Brief description of this command</td>
+    </tr>
+    <tr key="is_registered">
+        <td>[`is_registered`](#endstone.command.Command.is_registered)</td>
+        <td><code className="nextra-code">[bool](#bool)</code></td>
+        <td>Returns the current registered state of this command</td>
+    </tr>
+    <tr key="name">
+        <td>[`name`](#endstone.command.Command.name)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Name of this command.</td>
+    </tr>
+    <tr key="permissions">
+        <td>[`permissions`](#endstone.command.Command.permissions)</td>
+        <td><code className="nextra-code">[list](#list)[[str](#str)]</code></td>
+        <td>The permissions required by users to be able to perform this command</td>
+    </tr>
+    <tr key="usages">
+        <td>[`usages`](#endstone.command.Command.usages)</td>
+        <td><code className="nextra-code">[list](#list)[[str](#str)]</code></td>
+        <td>List of usages of this command</td>
+    </tr></tbody>
+</table>
 
 #### aliases [#endstone.command.Command.aliases]
 
@@ -145,7 +213,7 @@ List of usages of this command
 ### CommandExecutor [#endstone.command.CommandExecutor]
 
 ```python
-CommandExecutor() -> None
+CommandExecutor()
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
@@ -154,7 +222,19 @@ Represents a class which contains a single method for executing commands
 
 **Methods:**
 
-- [**on_command**](#endstone.command.CommandExecutor.on_command) – Executes the given command, returning its success.
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="on_command">
+        <td>[`on_command`](#endstone.command.CommandExecutor.on_command)</td>
+        <td>Executes the given command, returning its success.</td>
+    </tr></tbody>
+</table>
 
 #### on_command [#endstone.command.CommandExecutor.on_command]
 
@@ -170,19 +250,52 @@ Executes the given command, returning its success.
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[Permissible](#endstone._internal.endstone_python.Permissible)</code>
+Bases: <code className="nextra-code">[Permissible](#endstone._internal.endstone_python.Permissible)</code>
 
 Represents a command sender.
 
 **Methods:**
 
-- [**send_error_message**](#endstone.command.CommandSender.send_error_message) – Sends this sender an error message
-- [**send_message**](#endstone.command.CommandSender.send_message) – Sends this sender a message
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="send_error_message">
+        <td>[`send_error_message`](#endstone.command.CommandSender.send_error_message)</td>
+        <td>Sends this sender an error message</td>
+    </tr>
+    <tr key="send_message">
+        <td>[`send_message`](#endstone.command.CommandSender.send_message)</td>
+        <td>Sends this sender a message</td>
+    </tr></tbody>
+</table>
 
 **Attributes:**
 
-- [**name**](#endstone.command.CommandSender.name) (<code>[str](#str)</code>) – Gets the name of this command sender
-- [**server**](#endstone.command.CommandSender.server) (<code>[Server](#endstone._internal.endstone_python.Server)</code>) – Returns the server instance that this command is running on
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="name">
+        <td>[`name`](#endstone.command.CommandSender.name)</td>
+        <td><code className="nextra-code">[str](#str)</code></td>
+        <td>Gets the name of this command sender</td>
+    </tr>
+    <tr key="server">
+        <td>[`server`](#endstone.command.CommandSender.server)</td>
+        <td><code className="nextra-code">[Server](#endstone._internal.endstone_python.Server)</code></td>
+        <td>Returns the server instance that this command is running on</td>
+    </tr></tbody>
+</table>
 
 #### name [#endstone.command.CommandSender.name]
 
@@ -225,12 +338,12 @@ CommandSenderWrapper(
     sender: CommandSender,
     on_message: Callable[[str | Translatable], None] = None,
     on_error: Callable[[str | Translatable], None] = None,
-) -> None
+)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[CommandSender](#endstone._internal.endstone_python.CommandSender)</code>
+Bases: <code className="nextra-code">[CommandSender](#endstone._internal.endstone_python.CommandSender)</code>
 
 Represents a wrapper that forwards commands to the wrapped CommandSender and captures its output
 
@@ -240,7 +353,7 @@ Represents a wrapper that forwards commands to the wrapped CommandSender and cap
 
 <div className="pl-[2em] mt-[1.25em]">
 
-Bases: <code>[CommandSender](#endstone._internal.endstone_python.CommandSender)</code>
+Bases: <code className="nextra-code">[CommandSender](#endstone._internal.endstone_python.CommandSender)</code>
 
 Represents a console command sender.
 
