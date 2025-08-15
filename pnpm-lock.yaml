@@ -6,7 +6,7 @@ settings:
 
 patchedDependencies:
   nextra:
-    hash: 4csf44gm5n7yzdohxzy4pia3bq
+    hash: 5f39d599f31ee5e00abc91dcae58da77216d1aa8fcb6bbfd9e7022747ca4cbae
     path: patches/nextra.patch
 
 importers:
@@ -51,10 +51,10 @@ importers:
         version: 0.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       nextra:
         specifier: ^4.3.0
-        version: 4.3.0(patch_hash=4csf44gm5n7yzdohxzy4pia3bq)(acorn@8.15.0)(next@15.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.9.2)
+        version: 4.3.0(patch_hash=5f39d599f31ee5e00abc91dcae58da77216d1aa8fcb6bbfd9e7022747ca4cbae)(acorn@8.15.0)(next@15.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.9.2)
       nextra-theme-docs:
         specifier: ^4.3.0
-        version: 4.3.0(@types/react@19.1.10)(next@15.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(nextra@4.3.0(patch_hash=4csf44gm5n7yzdohxzy4pia3bq)(acorn@8.15.0)(next@15.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.9.2))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(use-sync-external-store@1.5.0(react@19.1.0))
+        version: 4.3.0(@types/react@19.1.10)(next@15.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(nextra@4.3.0(patch_hash=5f39d599f31ee5e00abc91dcae58da77216d1aa8fcb6bbfd9e7022747ca4cbae)(acorn@8.15.0)(next@15.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.9.2))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(use-sync-external-store@1.5.0(react@19.1.0))
       react:
         specifier: 19.1.0
         version: 19.1.0
@@ -7021,13 +7021,13 @@ snapshots:
       - '@babel/core'
       - babel-plugin-macros
 
-  nextra-theme-docs@4.3.0(@types/react@19.1.10)(next@15.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(nextra@4.3.0(patch_hash=4csf44gm5n7yzdohxzy4pia3bq)(acorn@8.15.0)(next@15.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.9.2))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(use-sync-external-store@1.5.0(react@19.1.0)):
+  nextra-theme-docs@4.3.0(@types/react@19.1.10)(next@15.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(nextra@4.3.0(patch_hash=5f39d599f31ee5e00abc91dcae58da77216d1aa8fcb6bbfd9e7022747ca4cbae)(acorn@8.15.0)(next@15.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.9.2))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(use-sync-external-store@1.5.0(react@19.1.0)):
     dependencies:
       '@headlessui/react': 2.2.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       clsx: 2.1.1
       next: 15.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       next-themes: 0.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      nextra: 4.3.0(patch_hash=4csf44gm5n7yzdohxzy4pia3bq)(acorn@8.15.0)(next@15.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.9.2)
+      nextra: 4.3.0(patch_hash=5f39d599f31ee5e00abc91dcae58da77216d1aa8fcb6bbfd9e7022747ca4cbae)(acorn@8.15.0)(next@15.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.9.2)
       react: 19.1.0
       react-compiler-runtime: 19.1.0-rc.2(react@19.1.0)
       react-dom: 19.1.0(react@19.1.0)
@@ -7039,7 +7039,7 @@ snapshots:
       - immer
       - use-sync-external-store
 
-  nextra@4.3.0(patch_hash=4csf44gm5n7yzdohxzy4pia3bq)(acorn@8.15.0)(next@15.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.9.2):
+  nextra@4.3.0(patch_hash=5f39d599f31ee5e00abc91dcae58da77216d1aa8fcb6bbfd9e7022747ca4cbae)(acorn@8.15.0)(next@15.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.9.2):
     dependencies:
       '@formatjs/intl-localematcher': 0.6.1
       '@headlessui/react': 2.2.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
