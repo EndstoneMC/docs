@@ -50,7 +50,7 @@ def main():
     module = loader.load("endstone")
 
     # Handle documentation for the root `endstone` module
-    root_output_path = output_path / "endstone" / "index.mdx"
+    root_output_path = output_path / "index.mdx"
     root_output_path.parent.mkdir(parents=True, exist_ok=True)
 
     with root_output_path.open("w", encoding="utf-8") as f:
@@ -68,7 +68,7 @@ def main():
         if submodule_name.startswith("_"):
             continue
 
-        submodule_output_path = output_path / "endstone" / f"{submodule_name}.mdx"
+        submodule_output_path = output_path / f"{submodule_name}.mdx"
         submodule_output_path.parent.mkdir(parents=True, exist_ok=True)
 
         with submodule_output_path.open("w", encoding="utf-8") as f:
