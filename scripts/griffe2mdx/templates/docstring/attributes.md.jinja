@@ -1,0 +1,30 @@
+{%- if config.docstring_section_style == "table" %}
+
+**{{ section.title or "Attributes:" }}**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+{%- for attribute in section.value %}
+    <tr key="{{ attribute.name }}">
+        <td>[`{{ attribute.name }}`](#{{ obj.path }}.{{ attribute.name }})</td>
+        <td>{% if attribute.annotation -%}{%- with expression = attribute.annotation -%}<code className="nextra-code">{%- include "expression.md.jinja" with context -%}</code>{%- endwith -%}{%- endif %}</td>
+        <td>{{ attribute.description }}</td>
+    </tr>
+{%- endfor -%}
+</tbody>
+</table>
+
+{%- elif config.docstring_section_style == "list" %}
+
+**{{ section.title or "Attributes:" }}**
+{% for attribute in section.value %}
+- [**{{ attribute.name }}**](#{{ obj.path }}.{{ attribute.name }}){%- if attribute.annotation -%}{%- with expression = attribute.annotation %} (<code>{%- include "expression.md.jinja" with context -%}</code>){%- endwith -%}{%- endif %} – {{ attribute.description }}
+{%- endfor -%}
+{%- endif -%}
