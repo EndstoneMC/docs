@@ -74,7 +74,7 @@ export default function Home() {
               Endstone delivers a modern, powerful and familiar API that empowers you to extend, customise, and scale
               your server effortlessly.
             </p>
-            <div className="mt-10 flex items-center gap-x-4">
+            <div className="mt-10 flex items-center gap-x-4 hidden sm:flex">
               <Button className="rounded-xl has-[svg]:pl-4 h-10 group" asChild>
                 <Link href="/docs/getting-started">
                   Getting Started
@@ -86,6 +86,23 @@ export default function Home() {
                 <Link href="https://github.com/EndstoneMC/endstone">
                   <FaGithub className="size-4"/>
                   Star on GitHub <FaStar className="size-4"/>
+                  {!isLoading && !isError && stars > 0 ? (<> {stars}</>) :
+                    <Skeleton className="h-4 w-8 bg-foreground/40"/>}
+                </Link>
+              </Button>
+            </div>
+            <div className="mt-10 flex items-center gap-x-4 sm:hidden grid grid-cols-2">
+              <Button className="rounded-xl has-[svg]:pl-4 h-10 group col-span-1 w-full" asChild>
+                <Link href="/docs/getting-started">
+                  Getting Started
+                  <ChevronRight
+                    className="size-4 shrink-0 transition-all duration-300 ease-out group-hover:translate-x-0.5"/>
+                </Link>
+              </Button>
+              <Button className="rounded-xl h-10 col-span-1 w-full" variant="outline" asChild>
+                <Link href="https://github.com/EndstoneMC/endstone">
+                  <FaGithub className="size-4"/>
+                  GitHub <FaStar className="size-4"/>
                   {!isLoading && !isError && stars > 0 ? (<> {stars}</>) :
                     <Skeleton className="h-4 w-8 bg-foreground/40"/>}
                 </Link>
