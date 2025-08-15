@@ -1,0 +1,297 @@
+---
+title: "endstone.boss"
+---
+
+## endstone.boss [#endstone.boss]
+
+**Classes:**
+
+- [**BarColor**](#endstone.boss.BarColor) –
+- [**BarFlag**](#endstone.boss.BarFlag) –
+- [**BarStyle**](#endstone.boss.BarStyle) –
+- [**BossBar**](#endstone.boss.BossBar) – Represents a boss bar that is displayed to players.
+
+### BarColor [#endstone.boss.BarColor]
+
+```python
+BarColor(value:int) -> None
+```
+
+**Attributes:**
+
+- [**BLUE**](#endstone.boss.BarColor.BLUE) (<code>[BarColor](#endstone._internal.endstone_python.BarColor)</code>) –
+- [**GREEN**](#endstone.boss.BarColor.GREEN) (<code>[BarColor](#endstone._internal.endstone_python.BarColor)</code>) –
+- [**PINK**](#endstone.boss.BarColor.PINK) (<code>[BarColor](#endstone._internal.endstone_python.BarColor)</code>) –
+- [**PURPLE**](#endstone.boss.BarColor.PURPLE) (<code>[BarColor](#endstone._internal.endstone_python.BarColor)</code>) –
+- [**REBECCA_PURPLE**](#endstone.boss.BarColor.REBECCA_PURPLE) (<code>[BarColor](#endstone._internal.endstone_python.BarColor)</code>) –
+- [**RED**](#endstone.boss.BarColor.RED) (<code>[BarColor](#endstone._internal.endstone_python.BarColor)</code>) –
+- [**WHITE**](#endstone.boss.BarColor.WHITE) (<code>[BarColor](#endstone._internal.endstone_python.BarColor)</code>) –
+- [**YELLOW**](#endstone.boss.BarColor.YELLOW) (<code>[BarColor](#endstone._internal.endstone_python.BarColor)</code>) –
+- [**name**](#endstone.boss.BarColor.name) (<code>[str](#str)</code>) –
+- [**value**](#endstone.boss.BarColor.value) (<code>[int](#int)</code>) –
+
+#### BLUE [#endstone.boss.BarColor.BLUE]
+
+```python
+BLUE: BarColor
+```
+
+#### GREEN [#endstone.boss.BarColor.GREEN]
+
+```python
+GREEN: BarColor
+```
+
+#### PINK [#endstone.boss.BarColor.PINK]
+
+```python
+PINK: BarColor
+```
+
+#### PURPLE [#endstone.boss.BarColor.PURPLE]
+
+```python
+PURPLE: BarColor
+```
+
+#### REBECCA_PURPLE [#endstone.boss.BarColor.REBECCA_PURPLE]
+
+```python
+REBECCA_PURPLE: BarColor
+```
+
+#### RED [#endstone.boss.BarColor.RED]
+
+```python
+RED: BarColor
+```
+
+#### WHITE [#endstone.boss.BarColor.WHITE]
+
+```python
+WHITE: BarColor
+```
+
+#### YELLOW [#endstone.boss.BarColor.YELLOW]
+
+```python
+YELLOW: BarColor
+```
+
+#### name [#endstone.boss.BarColor.name]
+
+```python
+name: str
+```
+
+#### value [#endstone.boss.BarColor.value]
+
+```python
+value: int
+```
+
+### BarFlag [#endstone.boss.BarFlag]
+
+```python
+BarFlag(value:int) -> None
+```
+
+**Attributes:**
+
+- [**DARKEN_SKY**](#endstone.boss.BarFlag.DARKEN_SKY) (<code>[BarFlag](#endstone._internal.endstone_python.BarFlag)</code>) –
+- [**name**](#endstone.boss.BarFlag.name) (<code>[str](#str)</code>) –
+- [**value**](#endstone.boss.BarFlag.value) (<code>[int](#int)</code>) –
+
+#### DARKEN_SKY [#endstone.boss.BarFlag.DARKEN_SKY]
+
+```python
+DARKEN_SKY: BarFlag
+```
+
+#### name [#endstone.boss.BarFlag.name]
+
+```python
+name: str
+```
+
+#### value [#endstone.boss.BarFlag.value]
+
+```python
+value: int
+```
+
+### BarStyle [#endstone.boss.BarStyle]
+
+```python
+BarStyle(value:int) -> None
+```
+
+**Attributes:**
+
+- [**SEGMENTED_10**](#endstone.boss.BarStyle.SEGMENTED_10) (<code>[BarStyle](#endstone._internal.endstone_python.BarStyle)</code>) –
+- [**SEGMENTED_12**](#endstone.boss.BarStyle.SEGMENTED_12) (<code>[BarStyle](#endstone._internal.endstone_python.BarStyle)</code>) –
+- [**SEGMENTED_20**](#endstone.boss.BarStyle.SEGMENTED_20) (<code>[BarStyle](#endstone._internal.endstone_python.BarStyle)</code>) –
+- [**SEGMENTED_6**](#endstone.boss.BarStyle.SEGMENTED_6) (<code>[BarStyle](#endstone._internal.endstone_python.BarStyle)</code>) –
+- [**SOLID**](#endstone.boss.BarStyle.SOLID) (<code>[BarStyle](#endstone._internal.endstone_python.BarStyle)</code>) –
+- [**name**](#endstone.boss.BarStyle.name) (<code>[str](#str)</code>) –
+- [**value**](#endstone.boss.BarStyle.value) (<code>[int](#int)</code>) –
+
+#### SEGMENTED_10 [#endstone.boss.BarStyle.SEGMENTED_10]
+
+```python
+SEGMENTED_10: BarStyle
+```
+
+#### SEGMENTED_12 [#endstone.boss.BarStyle.SEGMENTED_12]
+
+```python
+SEGMENTED_12: BarStyle
+```
+
+#### SEGMENTED_20 [#endstone.boss.BarStyle.SEGMENTED_20]
+
+```python
+SEGMENTED_20: BarStyle
+```
+
+#### SEGMENTED_6 [#endstone.boss.BarStyle.SEGMENTED_6]
+
+```python
+SEGMENTED_6: BarStyle
+```
+
+#### SOLID [#endstone.boss.BarStyle.SOLID]
+
+```python
+SOLID: BarStyle
+```
+
+#### name [#endstone.boss.BarStyle.name]
+
+```python
+name: str
+```
+
+#### value [#endstone.boss.BarStyle.value]
+
+```python
+value: int
+```
+
+### BossBar [#endstone.boss.BossBar]
+
+Represents a boss bar that is displayed to players.
+
+**Methods:**
+
+- [**add_flag**](#endstone.boss.BossBar.add_flag) – Adds an optional flag to this boss bar.
+- [**add_player**](#endstone.boss.BossBar.add_player) – Adds the player to this boss bar causing it to display on their screen.
+- [**has_flag**](#endstone.boss.BossBar.has_flag) – Checks whether this boss bar has the passed flag set.
+- [**remove_all**](#endstone.boss.BossBar.remove_all) – Removes all players from this boss bar.
+- [**remove_flag**](#endstone.boss.BossBar.remove_flag) – Removes an existing flag on this boss bar.
+- [**remove_player**](#endstone.boss.BossBar.remove_player) – Removes the player from this boss bar causing it to be removed from their screen.
+
+**Attributes:**
+
+- [**color**](#endstone.boss.BossBar.color) (<code>[BarColor](#endstone._internal.endstone_python.BarColor)</code>) – The color of this boss bar.
+- [**is_visible**](#endstone.boss.BossBar.is_visible) (<code>[bool](#bool)</code>) – If the boss bar is displayed to attached players.
+- [**players**](#endstone.boss.BossBar.players) (<code>[list](#list)\[[Player](#endstone._internal.endstone_python.Player)\]</code>) – Returns all players viewing this boss bar.
+- [**progress**](#endstone.boss.BossBar.progress) (<code>[float](#float)</code>) – The progress of the bar between 0.0 and 1.0.
+- [**style**](#endstone.boss.BossBar.style) (<code>[BarStyle](#endstone._internal.endstone_python.BarStyle)</code>) – The style of this boss bar.
+- [**title**](#endstone.boss.BossBar.title) (<code>[str](#str)</code>) – The title of this boss bar.
+
+#### add_flag [#endstone.boss.BossBar.add_flag]
+
+```python
+add_flag(flag:BarFlag) -> None
+```
+
+Adds an optional flag to this boss bar.
+
+#### add_player [#endstone.boss.BossBar.add_player]
+
+```python
+add_player(player:Player) -> None
+```
+
+Adds the player to this boss bar causing it to display on their screen.
+
+#### color [#endstone.boss.BossBar.color]
+
+```python
+color: BarColor
+```
+
+The color of this boss bar.
+
+#### has_flag [#endstone.boss.BossBar.has_flag]
+
+```python
+has_flag(flag:BarFlag) -> bool
+```
+
+Checks whether this boss bar has the passed flag set.
+
+#### is_visible [#endstone.boss.BossBar.is_visible]
+
+```python
+is_visible: bool
+```
+
+If the boss bar is displayed to attached players.
+
+#### players [#endstone.boss.BossBar.players]
+
+```python
+players: list[Player]
+```
+
+Returns all players viewing this boss bar.
+
+#### progress [#endstone.boss.BossBar.progress]
+
+```python
+progress: float
+```
+
+The progress of the bar between 0.0 and 1.0.
+
+#### remove_all [#endstone.boss.BossBar.remove_all]
+
+```python
+remove_all() -> None
+```
+
+Removes all players from this boss bar.
+
+#### remove_flag [#endstone.boss.BossBar.remove_flag]
+
+```python
+remove_flag(flag:BarFlag) -> None
+```
+
+Removes an existing flag on this boss bar.
+
+#### remove_player [#endstone.boss.BossBar.remove_player]
+
+```python
+remove_player(player:Player) -> None
+```
+
+Removes the player from this boss bar causing it to be removed from their screen.
+
+#### style [#endstone.boss.BossBar.style]
+
+```python
+style: BarStyle
+```
+
+The style of this boss bar.
+
+#### title [#endstone.boss.BossBar.title]
+
+```python
+title: str
+```
+
+The title of this boss bar.

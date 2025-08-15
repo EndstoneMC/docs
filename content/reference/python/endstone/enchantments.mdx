@@ -1,0 +1,73 @@
+---
+title: "endstone.enchantments"
+---
+
+## endstone.enchantments [#endstone.enchantments]
+
+**Classes:**
+
+- [**Enchantment**](#endstone.enchantments.Enchantment) –
+
+### Enchantment [#endstone.enchantments.Enchantment]
+
+**Methods:**
+
+- [**can_enchant_item**](#endstone.enchantments.Enchantment.can_enchant_item) – Checks if this Enchantment may be applied to the given ItemStack.
+- [**conflicts_with**](#endstone.enchantments.Enchantment.conflicts_with) – Check if this enchantment conflicts with another enchantment.
+
+**Attributes:**
+
+- [**key**](#endstone.enchantments.Enchantment.key) (<code>[NamespacedKey](#endstone._internal.endstone_python.NamespacedKey)</code>) – Return the namespaced identifier for this enchantment.
+- [**max_level**](#endstone.enchantments.Enchantment.max_level) (<code>[int](#int)</code>) – Gets the maximum level that this Enchantment may become.
+- [**start_level**](#endstone.enchantments.Enchantment.start_level) (<code>[int](#int)</code>) – Gets the level that this Enchantment should start at (also known as minimum level).
+- [**translation_key**](#endstone.enchantments.Enchantment.translation_key) (<code>[str](#str)</code>) – Get the translation key, suitable for use in a translation component.
+
+#### can_enchant_item [#endstone.enchantments.Enchantment.can_enchant_item]
+
+```python
+can_enchant_item(item:ItemStack) -> bool
+```
+
+Checks if this Enchantment may be applied to the given ItemStack.
+
+This does not check if it conflicts with any enchantments already applied to the item.
+
+#### conflicts_with [#endstone.enchantments.Enchantment.conflicts_with]
+
+```python
+conflicts_with(other:Enchantment) -> bool
+```
+
+Check if this enchantment conflicts with another enchantment.
+
+#### key [#endstone.enchantments.Enchantment.key]
+
+```python
+key: NamespacedKey
+```
+
+Return the namespaced identifier for this enchantment.
+
+#### max_level [#endstone.enchantments.Enchantment.max_level]
+
+```python
+max_level: int
+```
+
+Gets the maximum level that this Enchantment may become.
+
+#### start_level [#endstone.enchantments.Enchantment.start_level]
+
+```python
+start_level: int
+```
+
+Gets the level that this Enchantment should start at (also known as minimum level).
+
+#### translation_key [#endstone.enchantments.Enchantment.translation_key]
+
+```python
+translation_key: str
+```
+
+Get the translation key, suitable for use in a translation component.

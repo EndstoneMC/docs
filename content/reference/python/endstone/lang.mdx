@@ -1,0 +1,55 @@
+---
+title: "endstone.lang"
+---
+
+## endstone.lang [#endstone.lang]
+
+**Classes:**
+
+- [**Language**](#endstone.lang.Language) – Represents the interface for translating text into different languages.
+- [**Translatable**](#endstone.lang.Translatable) – Represents an object with a text representation that can be translated by the Minecraft client.
+
+### Language [#endstone.lang.Language]
+
+Represents the interface for translating text into different languages.
+
+**Attributes:**
+
+- [**locale**](#endstone.lang.Language.locale) (<code>[str](#str)</code>) – Gets the current locale.
+
+#### locale [#endstone.lang.Language.locale]
+
+```python
+locale: str
+```
+
+Gets the current locale.
+
+### Translatable [#endstone.lang.Translatable]
+
+```python
+Translatable(text:str, params:list[str] | None = None) -> None
+```
+
+Represents an object with a text representation that can be translated by the Minecraft client.
+
+**Attributes:**
+
+- [**params**](#endstone.lang.Translatable.params) (<code>[list](#list)\[[str](#str)\]</code>) – Get the translation parameters.
+- [**text**](#endstone.lang.Translatable.text) (<code>[str](#str)</code>) – Get the text to be translated.
+
+#### params [#endstone.lang.Translatable.params]
+
+```python
+params: list[str]
+```
+
+Get the translation parameters.
+
+#### text [#endstone.lang.Translatable.text]
+
+```python
+text: str
+```
+
+Get the text to be translated.

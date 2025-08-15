@@ -1,0 +1,977 @@
+---
+title: "endstone.plugin"
+---
+
+## endstone.plugin [#endstone.plugin]
+
+**Classes:**
+
+- [**Plugin**](#endstone.plugin.Plugin) –
+- [**PluginCommand**](#endstone.plugin.PluginCommand) – Represents a Command belonging to a Plugin
+- [**PluginDescription**](#endstone.plugin.PluginDescription) – Represents the basic information about a plugin that the plugin loader needs to know.
+- [**PluginLoadOrder**](#endstone.plugin.PluginLoadOrder) – Represents the order in which a plugin should be initialized and enabled.
+- [**PluginLoader**](#endstone.plugin.PluginLoader) – Represents a plugin loader, which handles direct access to specific types of plugins
+- [**PluginManager**](#endstone.plugin.PluginManager) – Represents a plugin manager that handles all plugins from the Server
+- [**Service**](#endstone.plugin.Service) – Represents a list of methods.
+- [**ServiceManager**](#endstone.plugin.ServiceManager) – Represent a service manager that manages services and service providers.
+- [**ServicePriority**](#endstone.plugin.ServicePriority) – Represents various priorities of a provider.
+
+### Plugin [#endstone.plugin.Plugin]
+
+```python
+Plugin()
+```
+
+Bases: <code>[Plugin](#endstone._internal.endstone_python.Plugin)</code>
+
+**Methods:**
+
+- [**get_command**](#endstone.plugin.Plugin.get_command) – Gets the command with the given name, specific to this plugin.
+- [**on_command**](#endstone.plugin.Plugin.on_command) – Executes the given command, returning its success.
+- [**on_disable**](#endstone.plugin.Plugin.on_disable) – Called when this plugin is disabled
+- [**on_enable**](#endstone.plugin.Plugin.on_enable) – Called when this plugin is enabled
+- [**on_load**](#endstone.plugin.Plugin.on_load) – Called after a plugin is loaded but before it has been enabled.
+- [**register_events**](#endstone.plugin.Plugin.register_events) –
+- [**reload_config**](#endstone.plugin.Plugin.reload_config) –
+- [**save_config**](#endstone.plugin.Plugin.save_config) –
+- [**save_default_config**](#endstone.plugin.Plugin.save_default_config) –
+- [**save_resources**](#endstone.plugin.Plugin.save_resources) –
+
+**Attributes:**
+
+- [**api_version**](#endstone.plugin.Plugin.api_version) –
+- [**authors**](#endstone.plugin.Plugin.authors) –
+- [**commands**](#endstone.plugin.Plugin.commands) –
+- [**config**](#endstone.plugin.Plugin.config) (<code>[dict](#dict)</code>) –
+- [**contributors**](#endstone.plugin.Plugin.contributors) –
+- [**data_folder**](#endstone.plugin.Plugin.data_folder) (<code>[PathLike](#os.PathLike)</code>) – Returns the folder that the plugin data's files are located in.
+- [**default_permission**](#endstone.plugin.Plugin.default_permission) –
+- [**depend**](#endstone.plugin.Plugin.depend) –
+- [**description**](#endstone.plugin.Plugin.description) –
+- [**is_enabled**](#endstone.plugin.Plugin.is_enabled) (<code>[bool](#bool)</code>) – Returns a value indicating whether this plugin is currently enabled
+- [**load**](#endstone.plugin.Plugin.load) –
+- [**load_before**](#endstone.plugin.Plugin.load_before) –
+- [**logger**](#endstone.plugin.Plugin.logger) (<code>[Logger](#endstone._internal.endstone_python.Logger)</code>) – Returns the plugin logger associated with this server's logger.
+- [**name**](#endstone.plugin.Plugin.name) –
+- [**permissions**](#endstone.plugin.Plugin.permissions) –
+- [**plugin_loader**](#endstone.plugin.Plugin.plugin_loader) (<code>[PluginLoader](#endstone._internal.endstone_python.PluginLoader)</code>) – Gets the associated PluginLoader responsible for this plugin
+- [**prefix**](#endstone.plugin.Plugin.prefix) –
+- [**provides**](#endstone.plugin.Plugin.provides) –
+- [**server**](#endstone.plugin.Plugin.server) (<code>[Server](#endstone._internal.endstone_python.Server)</code>) – Returns the Server instance currently running this plugin
+- [**soft_depend**](#endstone.plugin.Plugin.soft_depend) –
+- [**version**](#endstone.plugin.Plugin.version) –
+- [**website**](#endstone.plugin.Plugin.website) –
+
+#### api_version [#endstone.plugin.Plugin.api_version]
+
+```python
+api_version = None
+```
+
+#### authors [#endstone.plugin.Plugin.authors]
+
+```python
+authors = None
+```
+
+#### commands [#endstone.plugin.Plugin.commands]
+
+```python
+commands = None
+```
+
+#### config [#endstone.plugin.Plugin.config]
+
+```python
+config: dict
+```
+
+#### contributors [#endstone.plugin.Plugin.contributors]
+
+```python
+contributors = None
+```
+
+#### data_folder [#endstone.plugin.Plugin.data_folder]
+
+```python
+data_folder: os.PathLike
+```
+
+Returns the folder that the plugin data's files are located in.
+
+#### default_permission [#endstone.plugin.Plugin.default_permission]
+
+```python
+default_permission = None
+```
+
+#### depend [#endstone.plugin.Plugin.depend]
+
+```python
+depend = None
+```
+
+#### description [#endstone.plugin.Plugin.description]
+
+```python
+description = None
+```
+
+#### get_command [#endstone.plugin.Plugin.get_command]
+
+```python
+get_command(name:str) -> PluginCommand
+```
+
+Gets the command with the given name, specific to this plugin.
+
+#### is_enabled [#endstone.plugin.Plugin.is_enabled]
+
+```python
+is_enabled: bool
+```
+
+Returns a value indicating whether this plugin is currently enabled
+
+#### load [#endstone.plugin.Plugin.load]
+
+```python
+load = None
+```
+
+#### load_before [#endstone.plugin.Plugin.load_before]
+
+```python
+load_before = None
+```
+
+#### logger [#endstone.plugin.Plugin.logger]
+
+```python
+logger: Logger
+```
+
+Returns the plugin logger associated with this server's logger.
+
+#### name [#endstone.plugin.Plugin.name]
+
+```python
+name = None
+```
+
+#### on_command [#endstone.plugin.Plugin.on_command]
+
+```python
+on_command(sender:CommandSender, command:Command, args:list[str]) -> bool
+```
+
+Executes the given command, returning its success.
+
+#### on_disable [#endstone.plugin.Plugin.on_disable]
+
+```python
+on_disable() -> None
+```
+
+Called when this plugin is disabled
+
+#### on_enable [#endstone.plugin.Plugin.on_enable]
+
+```python
+on_enable() -> None
+```
+
+Called when this plugin is enabled
+
+#### on_load [#endstone.plugin.Plugin.on_load]
+
+```python
+on_load() -> None
+```
+
+Called after a plugin is loaded but before it has been enabled.
+
+#### permissions [#endstone.plugin.Plugin.permissions]
+
+```python
+permissions = None
+```
+
+#### plugin_loader [#endstone.plugin.Plugin.plugin_loader]
+
+```python
+plugin_loader: PluginLoader
+```
+
+Gets the associated PluginLoader responsible for this plugin
+
+#### prefix [#endstone.plugin.Plugin.prefix]
+
+```python
+prefix = None
+```
+
+#### provides [#endstone.plugin.Plugin.provides]
+
+```python
+provides = None
+```
+
+#### register_events [#endstone.plugin.Plugin.register_events]
+
+```python
+register_events(listener:object) -> None
+```
+
+#### reload_config [#endstone.plugin.Plugin.reload_config]
+
+```python
+reload_config() -> dict
+```
+
+#### save_config [#endstone.plugin.Plugin.save_config]
+
+```python
+save_config() -> None
+```
+
+#### save_default_config [#endstone.plugin.Plugin.save_default_config]
+
+```python
+save_default_config() -> None
+```
+
+#### save_resources [#endstone.plugin.Plugin.save_resources]
+
+```python
+save_resources(path:str, replace:bool = False) -> None
+```
+
+#### server [#endstone.plugin.Plugin.server]
+
+```python
+server: Server
+```
+
+Returns the Server instance currently running this plugin
+
+#### soft_depend [#endstone.plugin.Plugin.soft_depend]
+
+```python
+soft_depend = None
+```
+
+#### version [#endstone.plugin.Plugin.version]
+
+```python
+version = None
+```
+
+#### website [#endstone.plugin.Plugin.website]
+
+```python
+website = None
+```
+
+### PluginCommand [#endstone.plugin.PluginCommand]
+
+Bases: <code>[Command](#endstone._internal.endstone_python.Command)</code>
+
+Represents a Command belonging to a Plugin
+
+**Methods:**
+
+- [**execute**](#endstone.plugin.PluginCommand.execute) – Executes the command, returning its success
+- [**test_permission**](#endstone.plugin.PluginCommand.test_permission) – Tests the given CommandSender to see if they can perform this command.
+- [**test_permission_silently**](#endstone.plugin.PluginCommand.test_permission_silently) – Tests the given CommandSender to see if they can perform this command. No error is sent to the sender.
+
+**Attributes:**
+
+- [**aliases**](#endstone.plugin.PluginCommand.aliases) (<code>[list](#list)\[[str](#str)\]</code>) – List of aliases of this command
+- [**description**](#endstone.plugin.PluginCommand.description) (<code>[str](#str)</code>) – Brief description of this command
+- [**executor**](#endstone.plugin.PluginCommand.executor) (<code>[CommandExecutor](#endstone._internal.endstone_python.CommandExecutor)</code>) – The CommandExecutor to run when parsing this command
+- [**is_registered**](#endstone.plugin.PluginCommand.is_registered) (<code>[bool](#bool)</code>) – Returns the current registered state of this command
+- [**name**](#endstone.plugin.PluginCommand.name) (<code>[str](#str)</code>) – Name of this command.
+- [**permissions**](#endstone.plugin.PluginCommand.permissions) (<code>[list](#list)\[[str](#str)\]</code>) – The permissions required by users to be able to perform this command
+- [**plugin**](#endstone.plugin.PluginCommand.plugin) (<code>[Plugin](#endstone._internal.endstone_python.Plugin)</code>) – The owner of this PluginCommand
+- [**usages**](#endstone.plugin.PluginCommand.usages) (<code>[list](#list)\[[str](#str)\]</code>) – List of usages of this command
+
+#### aliases [#endstone.plugin.PluginCommand.aliases]
+
+```python
+aliases: list[str]
+```
+
+List of aliases of this command
+
+#### description [#endstone.plugin.PluginCommand.description]
+
+```python
+description: str
+```
+
+Brief description of this command
+
+#### execute [#endstone.plugin.PluginCommand.execute]
+
+```python
+execute(sender:CommandSender, args:list[str]) -> bool
+```
+
+Executes the command, returning its success
+
+#### executor [#endstone.plugin.PluginCommand.executor]
+
+```python
+executor: CommandExecutor
+```
+
+The CommandExecutor to run when parsing this command
+
+#### is_registered [#endstone.plugin.PluginCommand.is_registered]
+
+```python
+is_registered: bool
+```
+
+Returns the current registered state of this command
+
+#### name [#endstone.plugin.PluginCommand.name]
+
+```python
+name: str
+```
+
+Name of this command.
+
+#### permissions [#endstone.plugin.PluginCommand.permissions]
+
+```python
+permissions: list[str]
+```
+
+The permissions required by users to be able to perform this command
+
+#### plugin [#endstone.plugin.PluginCommand.plugin]
+
+```python
+plugin: Plugin
+```
+
+The owner of this PluginCommand
+
+#### test_permission [#endstone.plugin.PluginCommand.test_permission]
+
+```python
+test_permission(target:CommandSender) -> bool
+```
+
+Tests the given CommandSender to see if they can perform this command.
+
+#### test_permission_silently [#endstone.plugin.PluginCommand.test_permission_silently]
+
+```python
+test_permission_silently(target:CommandSender) -> bool
+```
+
+Tests the given CommandSender to see if they can perform this command. No error is sent to the sender.
+
+#### usages [#endstone.plugin.PluginCommand.usages]
+
+```python
+usages: list[str]
+```
+
+List of usages of this command
+
+### PluginDescription [#endstone.plugin.PluginDescription]
+
+```python
+PluginDescription(
+    name: str,
+    version: str,
+    description: str | None = None,
+    load: PluginLoadOrder | None = None,
+    authors: list[str] | None = None,
+    contributors: list[str] | None = None,
+    website: str | None = None,
+    prefix: str | None = None,
+    provides: list[str] | None = None,
+    depend: list[str] | None = None,
+    soft_depend: list[str] | None = None,
+    load_before: list[str] | None = None,
+    default_permission: PermissionDefault | None = None,
+    commands: list[Command] | None = None,
+    permissions: list[Permission] | None = None,
+    *args: list[Permission] | None,
+    **kwargs: list[Permission] | None
+) -> None
+```
+
+Represents the basic information about a plugin that the plugin loader needs to know.
+
+**Attributes:**
+
+- [**api_version**](#endstone.plugin.PluginDescription.api_version) (<code>[str](#str)</code>) – Gives the API version which this plugin is designed to support.
+- [**authors**](#endstone.plugin.PluginDescription.authors) (<code>[list](#list)\[[str](#str)\]</code>) – Gives the list of authors for the plugin.
+- [**commands**](#endstone.plugin.PluginDescription.commands) (<code>[list](#list)\[[Command](#endstone._internal.endstone_python.Command)\]</code>) – Gives the list of commands the plugin will register at runtime.
+- [**contributors**](#endstone.plugin.PluginDescription.contributors) (<code>[list](#list)\[[str](#str)\]</code>) – Gives the list of contributors for the plugin.
+- [**default_permission**](#endstone.plugin.PluginDescription.default_permission) (<code>[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code>) – Gives the default value of permissions registered for the plugin.
+- [**depend**](#endstone.plugin.PluginDescription.depend) (<code>[list](#list)\[[str](#str)\]</code>) – Gives a list of other plugins that the plugin requires.
+- [**description**](#endstone.plugin.PluginDescription.description) (<code>[str](#str)</code>) – Gives a human-friendly description of the functionality the plugin provides.
+- [**full_name**](#endstone.plugin.PluginDescription.full_name) (<code>[str](#str)</code>) – Returns the name of a plugin, including the version.
+- [**load**](#endstone.plugin.PluginDescription.load) (<code>[PluginLoadOrder](#endstone._internal.endstone_python.PluginLoadOrder)</code>) – Gives the phase of server startup that the plugin should be loaded.
+- [**load_before**](#endstone.plugin.PluginDescription.load_before) (<code>[list](#list)\[[str](#str)\]</code>) – Gets the list of plugins that should consider this plugin a soft-dependency.
+- [**name**](#endstone.plugin.PluginDescription.name) (<code>[str](#str)</code>) – Gives the name of the plugin. This name is a unique identifier for plugins.
+- [**permissions**](#endstone.plugin.PluginDescription.permissions) (<code>[list](#list)\[[Permission](#endstone._internal.endstone_python.Permission)\]</code>) – Gives the list of permissions the plugin will register at runtime, immediately proceeding enabling.
+- [**prefix**](#endstone.plugin.PluginDescription.prefix) (<code>[str](#str)</code>) – Gives the token to prefix plugin-specific logging messages with.
+- [**provides**](#endstone.plugin.PluginDescription.provides) (<code>[list](#list)\[[str](#str)\]</code>) – Gives the list of other plugin APIs which this plugin provides. These are usable for other plugins to depend on.
+- [**soft_depend**](#endstone.plugin.PluginDescription.soft_depend) (<code>[list](#list)\[[str](#str)\]</code>) – Gives a list of other plugins that the plugin requires for full functionality.
+- [**version**](#endstone.plugin.PluginDescription.version) (<code>[str](#str)</code>) – Gives the version of the plugin.
+- [**website**](#endstone.plugin.PluginDescription.website) (<code>[str](#str)</code>) – Gives the plugin's or plugin's author's website.
+
+#### api_version [#endstone.plugin.PluginDescription.api_version]
+
+```python
+api_version: str
+```
+
+Gives the API version which this plugin is designed to support.
+
+#### authors [#endstone.plugin.PluginDescription.authors]
+
+```python
+authors: list[str]
+```
+
+Gives the list of authors for the plugin.
+
+#### commands [#endstone.plugin.PluginDescription.commands]
+
+```python
+commands: list[Command]
+```
+
+Gives the list of commands the plugin will register at runtime.
+
+#### contributors [#endstone.plugin.PluginDescription.contributors]
+
+```python
+contributors: list[str]
+```
+
+Gives the list of contributors for the plugin.
+
+#### default_permission [#endstone.plugin.PluginDescription.default_permission]
+
+```python
+default_permission: PermissionDefault
+```
+
+Gives the default value of permissions registered for the plugin.
+
+#### depend [#endstone.plugin.PluginDescription.depend]
+
+```python
+depend: list[str]
+```
+
+Gives a list of other plugins that the plugin requires.
+
+#### description [#endstone.plugin.PluginDescription.description]
+
+```python
+description: str
+```
+
+Gives a human-friendly description of the functionality the plugin provides.
+
+#### full_name [#endstone.plugin.PluginDescription.full_name]
+
+```python
+full_name: str
+```
+
+Returns the name of a plugin, including the version.
+
+#### load [#endstone.plugin.PluginDescription.load]
+
+```python
+load: PluginLoadOrder
+```
+
+Gives the phase of server startup that the plugin should be loaded.
+
+#### load_before [#endstone.plugin.PluginDescription.load_before]
+
+```python
+load_before: list[str]
+```
+
+Gets the list of plugins that should consider this plugin a soft-dependency.
+
+#### name [#endstone.plugin.PluginDescription.name]
+
+```python
+name: str
+```
+
+Gives the name of the plugin. This name is a unique identifier for plugins.
+
+#### permissions [#endstone.plugin.PluginDescription.permissions]
+
+```python
+permissions: list[Permission]
+```
+
+Gives the list of permissions the plugin will register at runtime, immediately proceeding enabling.
+
+#### prefix [#endstone.plugin.PluginDescription.prefix]
+
+```python
+prefix: str
+```
+
+Gives the token to prefix plugin-specific logging messages with.
+
+#### provides [#endstone.plugin.PluginDescription.provides]
+
+```python
+provides: list[str]
+```
+
+Gives the list of other plugin APIs which this plugin provides. These are usable for other plugins to depend on.
+
+#### soft_depend [#endstone.plugin.PluginDescription.soft_depend]
+
+```python
+soft_depend: list[str]
+```
+
+Gives a list of other plugins that the plugin requires for full functionality.
+
+#### version [#endstone.plugin.PluginDescription.version]
+
+```python
+version: str
+```
+
+Gives the version of the plugin.
+
+#### website [#endstone.plugin.PluginDescription.website]
+
+```python
+website: str
+```
+
+Gives the plugin's or plugin's author's website.
+
+### PluginLoadOrder [#endstone.plugin.PluginLoadOrder]
+
+```python
+PluginLoadOrder(value:int) -> None
+```
+
+Represents the order in which a plugin should be initialized and enabled.
+
+**Attributes:**
+
+- [**POSTWORLD**](#endstone.plugin.PluginLoadOrder.POSTWORLD) (<code>[PluginLoadOrder](#endstone._internal.endstone_python.PluginLoadOrder)</code>) –
+- [**STARTUP**](#endstone.plugin.PluginLoadOrder.STARTUP) (<code>[PluginLoadOrder](#endstone._internal.endstone_python.PluginLoadOrder)</code>) –
+- [**name**](#endstone.plugin.PluginLoadOrder.name) (<code>[str](#str)</code>) –
+- [**value**](#endstone.plugin.PluginLoadOrder.value) (<code>[int](#int)</code>) –
+
+#### POSTWORLD [#endstone.plugin.PluginLoadOrder.POSTWORLD]
+
+```python
+POSTWORLD: PluginLoadOrder
+```
+
+#### STARTUP [#endstone.plugin.PluginLoadOrder.STARTUP]
+
+```python
+STARTUP: PluginLoadOrder
+```
+
+#### name [#endstone.plugin.PluginLoadOrder.name]
+
+```python
+name: str
+```
+
+#### value [#endstone.plugin.PluginLoadOrder.value]
+
+```python
+value: int
+```
+
+### PluginLoader [#endstone.plugin.PluginLoader]
+
+```python
+PluginLoader(server:Server) -> None
+```
+
+Represents a plugin loader, which handles direct access to specific types of plugins
+
+**Methods:**
+
+- [**disable_plugin**](#endstone.plugin.PluginLoader.disable_plugin) – Disables the specified plugin
+- [**enable_plugin**](#endstone.plugin.PluginLoader.enable_plugin) – Enables the specified plugin
+- [**load_plugin**](#endstone.plugin.PluginLoader.load_plugin) – Loads the plugin contained in the specified file
+- [**load_plugins**](#endstone.plugin.PluginLoader.load_plugins) – Loads the plugin contained within the specified directory
+
+**Attributes:**
+
+- [**plugin_file_filters**](#endstone.plugin.PluginLoader.plugin_file_filters) (<code>[list](#list)\[[str](#str)\]</code>) – Returns a list of all filename filters expected by this PluginLoader
+- [**server**](#endstone.plugin.PluginLoader.server) (<code>[Server](#endstone._internal.endstone_python.Server)</code>) – Retrieves the Server object associated with the PluginLoader.
+
+#### disable_plugin [#endstone.plugin.PluginLoader.disable_plugin]
+
+```python
+disable_plugin(plugin:Plugin) -> None
+```
+
+Disables the specified plugin
+
+#### enable_plugin [#endstone.plugin.PluginLoader.enable_plugin]
+
+```python
+enable_plugin(plugin:Plugin) -> None
+```
+
+Enables the specified plugin
+
+#### load_plugin [#endstone.plugin.PluginLoader.load_plugin]
+
+```python
+load_plugin(file:str) -> Plugin
+```
+
+Loads the plugin contained in the specified file
+
+#### load_plugins [#endstone.plugin.PluginLoader.load_plugins]
+
+```python
+load_plugins(directory:str) -> list[Plugin]
+```
+
+Loads the plugin contained within the specified directory
+
+#### plugin_file_filters [#endstone.plugin.PluginLoader.plugin_file_filters]
+
+```python
+plugin_file_filters: list[str]
+```
+
+Returns a list of all filename filters expected by this PluginLoader
+
+#### server [#endstone.plugin.PluginLoader.server]
+
+```python
+server: Server
+```
+
+Retrieves the Server object associated with the PluginLoader.
+
+### PluginManager [#endstone.plugin.PluginManager]
+
+Represents a plugin manager that handles all plugins from the Server
+
+**Methods:**
+
+- [**call_event**](#endstone.plugin.PluginManager.call_event) – Calls an event which will be passed to plugins.
+- [**clear_plugins**](#endstone.plugin.PluginManager.clear_plugins) – Disables and removes all plugins
+- [**disable_plugin**](#endstone.plugin.PluginManager.disable_plugin) – Disables the specified plugin
+- [**disable_plugins**](#endstone.plugin.PluginManager.disable_plugins) – Disables all the loaded plugins
+- [**enable_plugin**](#endstone.plugin.PluginManager.enable_plugin) – Enables the specified plugin
+- [**enable_plugins**](#endstone.plugin.PluginManager.enable_plugins) – Enable all the loaded plugins
+- [**get_default_perm_subscriptions**](#endstone.plugin.PluginManager.get_default_perm_subscriptions) – Gets a set containing all subscribed Permissibles to the given default list, by permission level.
+- [**get_default_permissions**](#endstone.plugin.PluginManager.get_default_permissions) – Gets the default permissions for the given permission level.
+- [**get_permission**](#endstone.plugin.PluginManager.get_permission) – Gets a Permission from its fully qualified name.
+- [**get_permission_subscriptions**](#endstone.plugin.PluginManager.get_permission_subscriptions) – Gets a set containing all subscribed Permissibles to the given permission.
+- [**get_plugin**](#endstone.plugin.PluginManager.get_plugin) – Checks if the given plugin is loaded and returns it when applicable.
+- [**load_plugin**](#endstone.plugin.PluginManager.load_plugin) – Loads the plugin in the specified file
+- [**recalculate_permission_defaults**](#endstone.plugin.PluginManager.recalculate_permission_defaults) – Recalculates the defaults for the given Permission.
+- [**register_event**](#endstone.plugin.PluginManager.register_event) – Registers the given event
+- [**subscribe_to_default_perms**](#endstone.plugin.PluginManager.subscribe_to_default_perms) – Subscribes to the given Default permissions by permission level.
+- [**subscribe_to_permission**](#endstone.plugin.PluginManager.subscribe_to_permission) – Subscribes the given Permissible for information about the requested Permission.
+- [**unsubscribe_from_default_perms**](#endstone.plugin.PluginManager.unsubscribe_from_default_perms) – Unsubscribes from the given Default permissions by permission level.
+- [**unsubscribe_from_permission**](#endstone.plugin.PluginManager.unsubscribe_from_permission) – Unsubscribes the given Permissible for information about the requested Permission.
+
+**Attributes:**
+
+- [**permissions**](#endstone.plugin.PluginManager.permissions) (<code>[set](#set)\[[Permission](#endstone._internal.endstone_python.Permission)\]</code>) – Gets a set of all registered permissions.
+- [**plugins**](#endstone.plugin.PluginManager.plugins) (<code>[list](#list)\[[Plugin](#endstone._internal.endstone_python.Plugin)\]</code>) – Gets a list of all currently loaded plugins
+
+#### call_event [#endstone.plugin.PluginManager.call_event]
+
+```python
+call_event(event:Event) -> None
+```
+
+Calls an event which will be passed to plugins.
+
+#### clear_plugins [#endstone.plugin.PluginManager.clear_plugins]
+
+```python
+clear_plugins() -> None
+```
+
+Disables and removes all plugins
+
+#### disable_plugin [#endstone.plugin.PluginManager.disable_plugin]
+
+```python
+disable_plugin(plugin:Plugin) -> None
+```
+
+Disables the specified plugin
+
+#### disable_plugins [#endstone.plugin.PluginManager.disable_plugins]
+
+```python
+disable_plugins() -> None
+```
+
+Disables all the loaded plugins
+
+#### enable_plugin [#endstone.plugin.PluginManager.enable_plugin]
+
+```python
+enable_plugin(plugin:Plugin) -> None
+```
+
+Enables the specified plugin
+
+#### enable_plugins [#endstone.plugin.PluginManager.enable_plugins]
+
+```python
+enable_plugins() -> None
+```
+
+Enable all the loaded plugins
+
+#### get_default_perm_subscriptions [#endstone.plugin.PluginManager.get_default_perm_subscriptions]
+
+```python
+get_default_perm_subscriptions(level:PermissionLevel) -> set[Permissible]
+```
+
+Gets a set containing all subscribed Permissibles to the given default list, by permission level.
+
+#### get_default_permissions [#endstone.plugin.PluginManager.get_default_permissions]
+
+```python
+get_default_permissions(level:PermissionLevel) -> list[Permission]
+```
+
+Gets the default permissions for the given permission level.
+
+#### get_permission [#endstone.plugin.PluginManager.get_permission]
+
+```python
+get_permission(name:str) -> Permission
+```
+
+Gets a Permission from its fully qualified name.
+
+#### get_permission_subscriptions [#endstone.plugin.PluginManager.get_permission_subscriptions]
+
+```python
+get_permission_subscriptions(permission:str) -> set[Permissible]
+```
+
+Gets a set containing all subscribed Permissibles to the given permission.
+
+#### get_plugin [#endstone.plugin.PluginManager.get_plugin]
+
+```python
+get_plugin(name:str) -> Plugin
+```
+
+Checks if the given plugin is loaded and returns it when applicable.
+
+#### load_plugin [#endstone.plugin.PluginManager.load_plugin]
+
+```python
+load_plugin(file:str) -> Plugin
+```
+
+Loads the plugin in the specified file
+
+#### permissions [#endstone.plugin.PluginManager.permissions]
+
+```python
+permissions: set[Permission]
+```
+
+Gets a set of all registered permissions.
+
+#### plugins [#endstone.plugin.PluginManager.plugins]
+
+```python
+plugins: list[Plugin]
+```
+
+Gets a list of all currently loaded plugins
+
+#### recalculate_permission_defaults [#endstone.plugin.PluginManager.recalculate_permission_defaults]
+
+```python
+recalculate_permission_defaults(perm:Permission) -> None
+```
+
+Recalculates the defaults for the given Permission.
+
+#### register_event [#endstone.plugin.PluginManager.register_event]
+
+```python
+register_event(
+    name: str,
+    executor: Callable[[Event], None],
+    priority: EventPriority,
+    plugin: Plugin,
+    ignore_cancelled: bool,
+) -> None
+```
+
+Registers the given event
+
+#### subscribe_to_default_perms [#endstone.plugin.PluginManager.subscribe_to_default_perms]
+
+```python
+subscribe_to_default_perms(
+    level: PermissionLevel, permissible: Permissible
+) -> None
+```
+
+Subscribes to the given Default permissions by permission level.
+
+#### subscribe_to_permission [#endstone.plugin.PluginManager.subscribe_to_permission]
+
+```python
+subscribe_to_permission(permission:str, permissible:Permissible) -> None
+```
+
+Subscribes the given Permissible for information about the requested Permission.
+
+#### unsubscribe_from_default_perms [#endstone.plugin.PluginManager.unsubscribe_from_default_perms]
+
+```python
+unsubscribe_from_default_perms(
+    level: PermissionLevel, permissible: Permissible
+) -> None
+```
+
+Unsubscribes from the given Default permissions by permission level.
+
+#### unsubscribe_from_permission [#endstone.plugin.PluginManager.unsubscribe_from_permission]
+
+```python
+unsubscribe_from_permission(permission:str, permissible:Permissible) -> None
+```
+
+Unsubscribes the given Permissible for information about the requested Permission.
+
+### Service [#endstone.plugin.Service]
+
+```python
+Service() -> None
+```
+
+Represents a list of methods.
+
+### ServiceManager [#endstone.plugin.ServiceManager]
+
+Represent a service manager that manages services and service providers.
+
+**Methods:**
+
+- [**load**](#endstone.plugin.ServiceManager.load) –
+- [**register**](#endstone.plugin.ServiceManager.register) – Register a provider of a service.
+- [**unregister_all**](#endstone.plugin.ServiceManager.unregister_all) – Unregister all the services registered by a particular plugin.
+
+#### load [#endstone.plugin.ServiceManager.load]
+
+```python
+load(name:str) -> Service
+```
+
+#### register [#endstone.plugin.ServiceManager.register]
+
+```python
+register(
+    name: str, provider: Service, plugin: Plugin, priority: ServicePriority
+) -> None
+```
+
+Register a provider of a service.
+
+#### unregister_all [#endstone.plugin.ServiceManager.unregister_all]
+
+```python
+unregister_all(plugin:Plugin) -> None
+```
+
+Unregister all the services registered by a particular plugin.
+
+### ServicePriority [#endstone.plugin.ServicePriority]
+
+```python
+ServicePriority(value:int) -> None
+```
+
+Represents various priorities of a provider.
+
+**Attributes:**
+
+- [**HIGH**](#endstone.plugin.ServicePriority.HIGH) (<code>[ServicePriority](#endstone._internal.endstone_python.ServicePriority)</code>) –
+- [**HIGHEST**](#endstone.plugin.ServicePriority.HIGHEST) (<code>[ServicePriority](#endstone._internal.endstone_python.ServicePriority)</code>) –
+- [**LOW**](#endstone.plugin.ServicePriority.LOW) (<code>[ServicePriority](#endstone._internal.endstone_python.ServicePriority)</code>) –
+- [**LOWEST**](#endstone.plugin.ServicePriority.LOWEST) (<code>[ServicePriority](#endstone._internal.endstone_python.ServicePriority)</code>) –
+- [**NORMAL**](#endstone.plugin.ServicePriority.NORMAL) (<code>[ServicePriority](#endstone._internal.endstone_python.ServicePriority)</code>) –
+- [**name**](#endstone.plugin.ServicePriority.name) (<code>[str](#str)</code>) –
+- [**value**](#endstone.plugin.ServicePriority.value) (<code>[int](#int)</code>) –
+
+#### HIGH [#endstone.plugin.ServicePriority.HIGH]
+
+```python
+HIGH: ServicePriority
+```
+
+#### HIGHEST [#endstone.plugin.ServicePriority.HIGHEST]
+
+```python
+HIGHEST: ServicePriority
+```
+
+#### LOW [#endstone.plugin.ServicePriority.LOW]
+
+```python
+LOW: ServicePriority
+```
+
+#### LOWEST [#endstone.plugin.ServicePriority.LOWEST]
+
+```python
+LOWEST: ServicePriority
+```
+
+#### NORMAL [#endstone.plugin.ServicePriority.NORMAL]
+
+```python
+NORMAL: ServicePriority
+```
+
+#### name [#endstone.plugin.ServicePriority.name]
+
+```python
+name: str
+```
+
+#### value [#endstone.plugin.ServicePriority.value]
+
+```python
+value: int
+```

@@ -1,0 +1,420 @@
+---
+title: "endstone.scoreboard"
+---
+
+## endstone.scoreboard [#endstone.scoreboard]
+
+**Classes:**
+
+- [**Criteria**](#endstone.scoreboard.Criteria) – Represents a scoreboard criteria.
+- [**DisplaySlot**](#endstone.scoreboard.DisplaySlot) – Locations for displaying objectives to the player
+- [**Objective**](#endstone.scoreboard.Objective) – Represents an objective on a scoreboard that can show scores specific to entries.
+- [**ObjectiveSortOrder**](#endstone.scoreboard.ObjectiveSortOrder) – Represents the sort order of objectives on a DisplaySlot.
+- [**Score**](#endstone.scoreboard.Score) – Represents a score for an objective on a scoreboard.
+- [**Scoreboard**](#endstone.scoreboard.Scoreboard) – Represents a scoreboard
+
+### Criteria [#endstone.scoreboard.Criteria]
+
+Represents a scoreboard criteria.
+
+**Classes:**
+
+- [**Type**](#endstone.scoreboard.Criteria.Type) – Represents a scoreboard criteria.
+
+**Attributes:**
+
+- [**DUMMY**](#endstone.scoreboard.Criteria.DUMMY) (<code>[Type](#endstone._internal.endstone_python.Criteria.Type)</code>) –
+- [**default_render_type**](#endstone.scoreboard.Criteria.default_render_type) (<code>[RenderType](#endstone._internal.endstone_python.RenderType)</code>) –
+- [**is_read_only**](#endstone.scoreboard.Criteria.is_read_only) (<code>[bool](#bool)</code>) –
+- [**name**](#endstone.scoreboard.Criteria.name) (<code>[str](#str)</code>) –
+
+#### DUMMY [#endstone.scoreboard.Criteria.DUMMY]
+
+```python
+DUMMY: Criteria.Type
+```
+
+#### Type [#endstone.scoreboard.Criteria.Type]
+
+```python
+Type(value:int) -> None
+```
+
+Represents a scoreboard criteria.
+
+**Attributes:**
+
+- [**DUMMY**](#endstone.scoreboard.Criteria.Type.DUMMY) (<code>[Type](#endstone._internal.endstone_python.Criteria.Type)</code>) –
+- [**name**](#endstone.scoreboard.Criteria.Type.name) (<code>[str](#str)</code>) –
+- [**value**](#endstone.scoreboard.Criteria.Type.value) (<code>[int](#int)</code>) –
+
+##### DUMMY [#endstone.scoreboard.Criteria.Type.DUMMY]
+
+```python
+DUMMY: Criteria.Type
+```
+
+##### name [#endstone.scoreboard.Criteria.Type.name]
+
+```python
+name: str
+```
+
+##### value [#endstone.scoreboard.Criteria.Type.value]
+
+```python
+value: int
+```
+
+#### default_render_type [#endstone.scoreboard.Criteria.default_render_type]
+
+```python
+default_render_type: RenderType
+```
+
+#### is_read_only [#endstone.scoreboard.Criteria.is_read_only]
+
+```python
+is_read_only: bool
+```
+
+#### name [#endstone.scoreboard.Criteria.name]
+
+```python
+name: str
+```
+
+### DisplaySlot [#endstone.scoreboard.DisplaySlot]
+
+```python
+DisplaySlot(value:int) -> None
+```
+
+Locations for displaying objectives to the player
+
+**Attributes:**
+
+- [**BELOW_NAME**](#endstone.scoreboard.DisplaySlot.BELOW_NAME) (<code>[DisplaySlot](#endstone._internal.endstone_python.DisplaySlot)</code>) –
+- [**PLAYER_LIST**](#endstone.scoreboard.DisplaySlot.PLAYER_LIST) (<code>[DisplaySlot](#endstone._internal.endstone_python.DisplaySlot)</code>) –
+- [**SIDE_BAR**](#endstone.scoreboard.DisplaySlot.SIDE_BAR) (<code>[DisplaySlot](#endstone._internal.endstone_python.DisplaySlot)</code>) –
+- [**name**](#endstone.scoreboard.DisplaySlot.name) (<code>[str](#str)</code>) –
+- [**value**](#endstone.scoreboard.DisplaySlot.value) (<code>[int](#int)</code>) –
+
+#### BELOW_NAME [#endstone.scoreboard.DisplaySlot.BELOW_NAME]
+
+```python
+BELOW_NAME: DisplaySlot
+```
+
+#### PLAYER_LIST [#endstone.scoreboard.DisplaySlot.PLAYER_LIST]
+
+```python
+PLAYER_LIST: DisplaySlot
+```
+
+#### SIDE_BAR [#endstone.scoreboard.DisplaySlot.SIDE_BAR]
+
+```python
+SIDE_BAR: DisplaySlot
+```
+
+#### name [#endstone.scoreboard.DisplaySlot.name]
+
+```python
+name: str
+```
+
+#### value [#endstone.scoreboard.DisplaySlot.value]
+
+```python
+value: int
+```
+
+### Objective [#endstone.scoreboard.Objective]
+
+Represents an objective on a scoreboard that can show scores specific to entries.
+
+**Methods:**
+
+- [**get_score**](#endstone.scoreboard.Objective.get_score) – Gets an entry's Score for this objective
+- [**set_display**](#endstone.scoreboard.Objective.set_display) – Sets the display slot and sort order for this objective. This will remove it from any other display slot.
+- [**unregister**](#endstone.scoreboard.Objective.unregister) – Unregisters this objective from the associated Scoreboard.
+
+**Attributes:**
+
+- [**criteria**](#endstone.scoreboard.Objective.criteria) (<code>[Criteria](#endstone._internal.endstone_python.Criteria)</code>) – Gets the criteria this objective tracks
+- [**display_name**](#endstone.scoreboard.Objective.display_name) (<code>[str](#str)</code>) – Gets or sets the name displayed to players for this objective
+- [**display_slot**](#endstone.scoreboard.Objective.display_slot) (<code>[DisplaySlot](#endstone._internal.endstone_python.DisplaySlot) | None</code>) – Gets or sets the display slot this objective is displayed at
+- [**is_displayed**](#endstone.scoreboard.Objective.is_displayed) (<code>[bool](#bool)</code>) – Gets if the objective is currently displayed in a slot.
+- [**is_modifiable**](#endstone.scoreboard.Objective.is_modifiable) (<code>[bool](#bool)</code>) – Gets if the objective's scores can be modified directly by a plugin
+- [**name**](#endstone.scoreboard.Objective.name) (<code>[str](#str)</code>) – Gets the name of this Objective
+- [**render_type**](#endstone.scoreboard.Objective.render_type) (<code>[RenderType](#endstone._internal.endstone_python.RenderType)</code>) – Gets the manner in which this objective will be rendered.
+- [**scoreboard**](#endstone.scoreboard.Objective.scoreboard) (<code>[Scoreboard](#endstone._internal.endstone_python.Scoreboard)</code>) – Gets the scoreboard to which this objective is attached
+- [**sort_order**](#endstone.scoreboard.Objective.sort_order) (<code>[ObjectiveSortOrder](#endstone._internal.endstone_python.ObjectiveSortOrder) | None</code>) – Gets or sets the sort order for this objective
+
+#### criteria [#endstone.scoreboard.Objective.criteria]
+
+```python
+criteria: Criteria
+```
+
+Gets the criteria this objective tracks
+
+#### display_name [#endstone.scoreboard.Objective.display_name]
+
+```python
+display_name: str
+```
+
+Gets or sets the name displayed to players for this objective
+
+#### display_slot [#endstone.scoreboard.Objective.display_slot]
+
+```python
+display_slot: DisplaySlot | None
+```
+
+Gets or sets the display slot this objective is displayed at
+
+#### get_score [#endstone.scoreboard.Objective.get_score]
+
+```python
+get_score(entry:Player | Actor | str) -> Score
+```
+
+Gets an entry's Score for this objective
+
+#### is_displayed [#endstone.scoreboard.Objective.is_displayed]
+
+```python
+is_displayed: bool
+```
+
+Gets if the objective is currently displayed in a slot.
+
+#### is_modifiable [#endstone.scoreboard.Objective.is_modifiable]
+
+```python
+is_modifiable: bool
+```
+
+Gets if the objective's scores can be modified directly by a plugin
+
+#### name [#endstone.scoreboard.Objective.name]
+
+```python
+name: str
+```
+
+Gets the name of this Objective
+
+#### render_type [#endstone.scoreboard.Objective.render_type]
+
+```python
+render_type: RenderType
+```
+
+Gets the manner in which this objective will be rendered.
+
+#### scoreboard [#endstone.scoreboard.Objective.scoreboard]
+
+```python
+scoreboard: Scoreboard
+```
+
+Gets the scoreboard to which this objective is attached
+
+#### set_display [#endstone.scoreboard.Objective.set_display]
+
+```python
+set_display(
+    slot: DisplaySlot | None, order: ObjectiveSortOrder | None = None
+) -> None
+```
+
+Sets the display slot and sort order for this objective. This will remove it from any other display slot.
+
+#### sort_order [#endstone.scoreboard.Objective.sort_order]
+
+```python
+sort_order: ObjectiveSortOrder | None
+```
+
+Gets or sets the sort order for this objective
+
+#### unregister [#endstone.scoreboard.Objective.unregister]
+
+```python
+unregister() -> None
+```
+
+Unregisters this objective from the associated Scoreboard.
+
+### ObjectiveSortOrder [#endstone.scoreboard.ObjectiveSortOrder]
+
+```python
+ObjectiveSortOrder(value:int) -> None
+```
+
+Represents the sort order of objectives on a DisplaySlot.
+
+**Attributes:**
+
+- [**ASCENDING**](#endstone.scoreboard.ObjectiveSortOrder.ASCENDING) (<code>[ObjectiveSortOrder](#endstone._internal.endstone_python.ObjectiveSortOrder)</code>) –
+- [**DESCENDING**](#endstone.scoreboard.ObjectiveSortOrder.DESCENDING) (<code>[ObjectiveSortOrder](#endstone._internal.endstone_python.ObjectiveSortOrder)</code>) –
+- [**name**](#endstone.scoreboard.ObjectiveSortOrder.name) (<code>[str](#str)</code>) –
+- [**value**](#endstone.scoreboard.ObjectiveSortOrder.value) (<code>[int](#int)</code>) –
+
+#### ASCENDING [#endstone.scoreboard.ObjectiveSortOrder.ASCENDING]
+
+```python
+ASCENDING: ObjectiveSortOrder
+```
+
+#### DESCENDING [#endstone.scoreboard.ObjectiveSortOrder.DESCENDING]
+
+```python
+DESCENDING: ObjectiveSortOrder
+```
+
+#### name [#endstone.scoreboard.ObjectiveSortOrder.name]
+
+```python
+name: str
+```
+
+#### value [#endstone.scoreboard.ObjectiveSortOrder.value]
+
+```python
+value: int
+```
+
+### Score [#endstone.scoreboard.Score]
+
+Represents a score for an objective on a scoreboard.
+
+**Attributes:**
+
+- [**entry**](#endstone.scoreboard.Score.entry) (<code>[Player](#endstone._internal.endstone_python.Player) | [Actor](#endstone._internal.endstone_python.Actor) | [str](#str)</code>) – Gets the entry being tracked by this Score
+- [**is_score_set**](#endstone.scoreboard.Score.is_score_set) (<code>[bool](#bool)</code>) – Shows if this score has been set at any point in time.
+- [**objective**](#endstone.scoreboard.Score.objective) (<code>[Objective](#endstone._internal.endstone_python.Objective)</code>) – Gets the Objective being tracked by this Score.
+- [**scoreboard**](#endstone.scoreboard.Score.scoreboard) (<code>[Scoreboard](#endstone._internal.endstone_python.Scoreboard)</code>) – Gets the scoreboard for the associated objective.
+- [**value**](#endstone.scoreboard.Score.value) (<code>[int](#int)</code>) – Gets or sets the current score.
+
+#### entry [#endstone.scoreboard.Score.entry]
+
+```python
+entry: Player | Actor | str
+```
+
+Gets the entry being tracked by this Score
+
+#### is_score_set [#endstone.scoreboard.Score.is_score_set]
+
+```python
+is_score_set: bool
+```
+
+Shows if this score has been set at any point in time.
+
+#### objective [#endstone.scoreboard.Score.objective]
+
+```python
+objective: Objective
+```
+
+Gets the Objective being tracked by this Score.
+
+#### scoreboard [#endstone.scoreboard.Score.scoreboard]
+
+```python
+scoreboard: Scoreboard
+```
+
+Gets the scoreboard for the associated objective.
+
+#### value [#endstone.scoreboard.Score.value]
+
+```python
+value: int
+```
+
+Gets or sets the current score.
+
+### Scoreboard [#endstone.scoreboard.Scoreboard]
+
+Represents a scoreboard
+
+**Methods:**
+
+- [**add_objective**](#endstone.scoreboard.Scoreboard.add_objective) – Registers an Objective on this Scoreboard with a name displayed to players
+- [**clear_slot**](#endstone.scoreboard.Scoreboard.clear_slot) – Clears any objective in the specified slot
+- [**get_objectives_by_criteria**](#endstone.scoreboard.Scoreboard.get_objectives_by_criteria) – Gets all Objectives of a Criteria on the Scoreboard
+- [**get_scores**](#endstone.scoreboard.Scoreboard.get_scores) – Gets all scores for an entry on this Scoreboard
+- [**reset_scores**](#endstone.scoreboard.Scoreboard.reset_scores) – Removes all scores for an entry on this Scoreboard
+
+**Attributes:**
+
+- [**entries**](#endstone.scoreboard.Scoreboard.entries) (<code>[list](#list)\[[Player](#endstone._internal.endstone_python.Player) | [Actor](#endstone._internal.endstone_python.Actor) | [str](#str)\]</code>) – Gets all entries tracked by this Scoreboard
+- [**objectives**](#endstone.scoreboard.Scoreboard.objectives) (<code>[list](#list)\[[Objective](#endstone._internal.endstone_python.Objective)\]</code>) – Gets all Objectives on this Scoreboard
+
+#### add_objective [#endstone.scoreboard.Scoreboard.add_objective]
+
+```python
+add_objective(
+    name: str,
+    criteria: Type,
+    display_name: str | None = None,
+    render_type: RenderType = RenderType.INTEGER,
+) -> Objective
+```
+
+Registers an Objective on this Scoreboard with a name displayed to players
+
+#### clear_slot [#endstone.scoreboard.Scoreboard.clear_slot]
+
+```python
+clear_slot(slot:DisplaySlot) -> None
+```
+
+Clears any objective in the specified slot
+
+#### entries [#endstone.scoreboard.Scoreboard.entries]
+
+```python
+entries: list[Player | Actor | str]
+```
+
+Gets all entries tracked by this Scoreboard
+
+#### get_objectives_by_criteria [#endstone.scoreboard.Scoreboard.get_objectives_by_criteria]
+
+```python
+get_objectives_by_criteria(criteria:Type) -> list[Objective]
+```
+
+Gets all Objectives of a Criteria on the Scoreboard
+
+#### get_scores [#endstone.scoreboard.Scoreboard.get_scores]
+
+```python
+get_scores(entry:Player | Actor | str) -> list[Score]
+```
+
+Gets all scores for an entry on this Scoreboard
+
+#### objectives [#endstone.scoreboard.Scoreboard.objectives]
+
+```python
+objectives: list[Objective]
+```
+
+Gets all Objectives on this Scoreboard
+
+#### reset_scores [#endstone.scoreboard.Scoreboard.reset_scores]
+
+```python
+reset_scores(entry:Player | Actor | str) -> None
+```
+
+Removes all scores for an entry on this Scoreboard

@@ -1,0 +1,108 @@
+---
+title: "endstone.util"
+---
+
+## endstone.util [#endstone.util]
+
+**Classes:**
+
+- [**SocketAddress**](#endstone.util.SocketAddress) – Represents an IP Socket Address (hostname + port number).
+- [**Vector**](#endstone.util.Vector) – Represents a 3-dimensional vector.
+
+### SocketAddress [#endstone.util.SocketAddress]
+
+Represents an IP Socket Address (hostname + port number).
+
+**Attributes:**
+
+- [**hostname**](#endstone.util.SocketAddress.hostname) (<code>[str](#str)</code>) – Gets the hostname.
+- [**port**](#endstone.util.SocketAddress.port) (<code>[int](#int)</code>) – Gets the port number.
+
+#### hostname [#endstone.util.SocketAddress.hostname]
+
+```python
+hostname: str
+```
+
+Gets the hostname.
+
+#### port [#endstone.util.SocketAddress.port]
+
+```python
+port: int
+```
+
+Gets the port number.
+
+### Vector [#endstone.util.Vector]
+
+Represents a 3-dimensional vector.
+
+**Methods:**
+
+- [**distance**](#endstone.util.Vector.distance) – The distance between this Vector and another
+- [**distance_squared**](#endstone.util.Vector.distance_squared) – The squared distance between this Vector and another
+
+**Attributes:**
+
+- [**length**](#endstone.util.Vector.length) (<code>[float](#float)</code>) – The magnitude of the Vector
+- [**length_squared**](#endstone.util.Vector.length_squared) (<code>[float](#float)</code>) – The squared magnitude of the Vector
+- [**x**](#endstone.util.Vector.x) (<code>[float](#float)</code>) – The X component of the vector
+- [**y**](#endstone.util.Vector.y) (<code>[float](#float)</code>) – The Y component of the vector
+- [**z**](#endstone.util.Vector.z) (<code>[float](#float)</code>) – The Z component of the vector
+
+#### distance [#endstone.util.Vector.distance]
+
+```python
+distance(other:Vector) -> float
+```
+
+The distance between this Vector and another
+
+#### distance_squared [#endstone.util.Vector.distance_squared]
+
+```python
+distance_squared(other:Vector) -> float
+```
+
+The squared distance between this Vector and another
+
+#### length [#endstone.util.Vector.length]
+
+```python
+length: float
+```
+
+The magnitude of the Vector
+
+#### length_squared [#endstone.util.Vector.length_squared]
+
+```python
+length_squared: float
+```
+
+The squared magnitude of the Vector
+
+#### x [#endstone.util.Vector.x]
+
+```python
+x: float
+```
+
+The X component of the vector
+
+#### y [#endstone.util.Vector.y]
+
+```python
+y: float
+```
+
+The Y component of the vector
+
+#### z [#endstone.util.Vector.z]
+
+```python
+z: float
+```
+
+The Z component of the vector

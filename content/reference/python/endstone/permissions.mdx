@@ -1,0 +1,371 @@
+---
+title: "endstone.permissions"
+---
+
+## endstone.permissions [#endstone.permissions]
+
+**Classes:**
+
+- [**Permissible**](#endstone.permissions.Permissible) – Represents an object that may become a server operator and can be assigned permissions.
+- [**Permission**](#endstone.permissions.Permission) – Represents a unique permission that may be attached to a Permissible
+- [**PermissionAttachment**](#endstone.permissions.PermissionAttachment) – Holds information about a permission attachment on a Permissible object
+- [**PermissionAttachmentInfo**](#endstone.permissions.PermissionAttachmentInfo) – Holds information on a permission and which PermissionAttachment provides it
+- [**PermissionDefault**](#endstone.permissions.PermissionDefault) – Represents the possible default values for permissions
+- [**PermissionLevel**](#endstone.permissions.PermissionLevel) –
+
+### Permissible [#endstone.permissions.Permissible]
+
+Represents an object that may become a server operator and can be assigned permissions.
+
+**Methods:**
+
+- [**recalculate_permissions**](#endstone.permissions.Permissible.recalculate_permissions) – Recalculates the permissions.
+- [**remove_attachment**](#endstone.permissions.Permissible.remove_attachment) – Removes a given PermissionAttachment.
+
+**Attributes:**
+
+- [**effective_permissions**](#endstone.permissions.Permissible.effective_permissions) (<code>[set](#set)\[[PermissionAttachmentInfo](#endstone._internal.endstone_python.PermissionAttachmentInfo)\]</code>) – Gets effective permissions.
+- [**permission_level**](#endstone.permissions.Permissible.permission_level) (<code>[PermissionLevel](#endstone._internal.endstone_python.PermissionLevel)</code>) – Gets the permission level of this object
+
+#### effective_permissions [#endstone.permissions.Permissible.effective_permissions]
+
+```python
+effective_permissions: set[PermissionAttachmentInfo]
+```
+
+Gets effective permissions.
+
+#### permission_level [#endstone.permissions.Permissible.permission_level]
+
+```python
+permission_level: PermissionLevel
+```
+
+Gets the permission level of this object
+
+#### recalculate_permissions [#endstone.permissions.Permissible.recalculate_permissions]
+
+```python
+recalculate_permissions() -> None
+```
+
+Recalculates the permissions.
+
+#### remove_attachment [#endstone.permissions.Permissible.remove_attachment]
+
+```python
+remove_attachment(attachment:PermissionAttachment) -> None
+```
+
+Removes a given PermissionAttachment.
+
+### Permission [#endstone.permissions.Permission]
+
+```python
+Permission(
+    name: str,
+    description: str | None = None,
+    default: PermissionDefault | None = None,
+    children: dict[str, bool] | None = None,
+    *args: dict[str, bool] | None,
+    **kwargs: dict[str, bool] | None
+) -> None
+```
+
+Represents a unique permission that may be attached to a Permissible
+
+**Methods:**
+
+- [**recalculate_permissibles**](#endstone.permissions.Permission.recalculate_permissibles) – Recalculates all Permissibles that contain this permission.
+
+**Attributes:**
+
+- [**children**](#endstone.permissions.Permission.children) (<code>[dict](#dict)\[[str](#str), [bool](#bool)\]</code>) – Gets the children of this permission.
+- [**default**](#endstone.permissions.Permission.default) (<code>[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code>) – The default value of this permission.
+- [**description**](#endstone.permissions.Permission.description) (<code>[str](#str)</code>) – The brief description of this permission
+- [**name**](#endstone.permissions.Permission.name) (<code>[str](#str)</code>) – Gets the unique fully qualified name of this Permission.
+- [**permissibles**](#endstone.permissions.Permission.permissibles) (<code>[set](#set)\[[Permissible](#endstone._internal.endstone_python.Permissible)\]</code>) – Gets a set containing every Permissible that has this permission.
+
+#### children [#endstone.permissions.Permission.children]
+
+```python
+children: dict[str, bool]
+```
+
+Gets the children of this permission.
+
+#### default [#endstone.permissions.Permission.default]
+
+```python
+default: PermissionDefault
+```
+
+The default value of this permission.
+
+#### description [#endstone.permissions.Permission.description]
+
+```python
+description: str
+```
+
+The brief description of this permission
+
+#### name [#endstone.permissions.Permission.name]
+
+```python
+name: str
+```
+
+Gets the unique fully qualified name of this Permission.
+
+#### permissibles [#endstone.permissions.Permission.permissibles]
+
+```python
+permissibles: set[Permissible]
+```
+
+Gets a set containing every Permissible that has this permission.
+
+#### recalculate_permissibles [#endstone.permissions.Permission.recalculate_permissibles]
+
+```python
+recalculate_permissibles() -> None
+```
+
+Recalculates all Permissibles that contain this permission.
+
+### PermissionAttachment [#endstone.permissions.PermissionAttachment]
+
+```python
+PermissionAttachment(plugin:Plugin, permissible:Permissible) -> None
+```
+
+Holds information about a permission attachment on a Permissible object
+
+**Methods:**
+
+- [**remove**](#endstone.permissions.PermissionAttachment.remove) – Removes this attachment from its registered Permissible.
+
+**Attributes:**
+
+- [**permissible**](#endstone.permissions.PermissionAttachment.permissible) (<code>[Permissible](#endstone._internal.endstone_python.Permissible)</code>) – Gets the Permissible that this is attached to.
+- [**permissions**](#endstone.permissions.PermissionAttachment.permissions) (<code>[dict](#dict)\[[str](#str), [bool](#bool)\]</code>) – Gets a copy of all set permissions and values contained within this attachment.
+- [**plugin**](#endstone.permissions.PermissionAttachment.plugin) (<code>[Plugin](#endstone._internal.endstone_python.Plugin)</code>) – Gets the plugin responsible for this attachment.
+- [**removal_callback**](#endstone.permissions.PermissionAttachment.removal_callback) (<code>[Callable](#typing.Callable)\[\[[PermissionAttachment](#endstone._internal.endstone_python.PermissionAttachment)\], None\]</code>) – The callback to be called when this attachment is removed.
+
+#### permissible [#endstone.permissions.PermissionAttachment.permissible]
+
+```python
+permissible: Permissible
+```
+
+Gets the Permissible that this is attached to.
+
+#### permissions [#endstone.permissions.PermissionAttachment.permissions]
+
+```python
+permissions: dict[str, bool]
+```
+
+Gets a copy of all set permissions and values contained within this attachment.
+
+#### plugin [#endstone.permissions.PermissionAttachment.plugin]
+
+```python
+plugin: Plugin
+```
+
+Gets the plugin responsible for this attachment.
+
+#### removal_callback [#endstone.permissions.PermissionAttachment.removal_callback]
+
+```python
+removal_callback: typing.Callable[[PermissionAttachment], None]
+```
+
+The callback to be called when this attachment is removed.
+
+#### remove [#endstone.permissions.PermissionAttachment.remove]
+
+```python
+remove() -> bool
+```
+
+Removes this attachment from its registered Permissible.
+
+### PermissionAttachmentInfo [#endstone.permissions.PermissionAttachmentInfo]
+
+```python
+PermissionAttachmentInfo(
+    permissible: Permissible,
+    permission: str,
+    attachment: PermissionAttachment,
+    value: bool,
+) -> None
+```
+
+Holds information on a permission and which PermissionAttachment provides it
+
+**Attributes:**
+
+- [**attachment**](#endstone.permissions.PermissionAttachmentInfo.attachment) (<code>[PermissionAttachment](#endstone._internal.endstone_python.PermissionAttachment)</code>) – Gets the attachment providing this permission.
+- [**permissible**](#endstone.permissions.PermissionAttachmentInfo.permissible) (<code>[Permissible](#endstone._internal.endstone_python.Permissible)</code>) – Get the permissible this is attached to
+- [**permission**](#endstone.permissions.PermissionAttachmentInfo.permission) (<code>[str](#str)</code>) – Gets the permission being set
+- [**value**](#endstone.permissions.PermissionAttachmentInfo.value) (<code>[bool](#bool)</code>) – Gets the value of this permission
+
+#### attachment [#endstone.permissions.PermissionAttachmentInfo.attachment]
+
+```python
+attachment: PermissionAttachment
+```
+
+Gets the attachment providing this permission.
+
+#### permissible [#endstone.permissions.PermissionAttachmentInfo.permissible]
+
+```python
+permissible: Permissible
+```
+
+Get the permissible this is attached to
+
+#### permission [#endstone.permissions.PermissionAttachmentInfo.permission]
+
+```python
+permission: str
+```
+
+Gets the permission being set
+
+#### value [#endstone.permissions.PermissionAttachmentInfo.value]
+
+```python
+value: bool
+```
+
+Gets the value of this permission
+
+### PermissionDefault [#endstone.permissions.PermissionDefault]
+
+```python
+PermissionDefault(value:int) -> None
+```
+
+Represents the possible default values for permissions
+
+**Attributes:**
+
+- [**CONSOLE**](#endstone.permissions.PermissionDefault.CONSOLE) (<code>[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code>) –
+- [**FALSE**](#endstone.permissions.PermissionDefault.FALSE) (<code>[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code>) –
+- [**NOT_OP**](#endstone.permissions.PermissionDefault.NOT_OP) (<code>[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code>) –
+- [**NOT_OPERATOR**](#endstone.permissions.PermissionDefault.NOT_OPERATOR) (<code>[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code>) –
+- [**OP**](#endstone.permissions.PermissionDefault.OP) (<code>[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code>) –
+- [**OPERATOR**](#endstone.permissions.PermissionDefault.OPERATOR) (<code>[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code>) –
+- [**TRUE**](#endstone.permissions.PermissionDefault.TRUE) (<code>[PermissionDefault](#endstone._internal.endstone_python.PermissionDefault)</code>) –
+- [**name**](#endstone.permissions.PermissionDefault.name) (<code>[str](#str)</code>) –
+- [**value**](#endstone.permissions.PermissionDefault.value) (<code>[int](#int)</code>) –
+
+#### CONSOLE [#endstone.permissions.PermissionDefault.CONSOLE]
+
+```python
+CONSOLE: PermissionDefault
+```
+
+#### FALSE [#endstone.permissions.PermissionDefault.FALSE]
+
+```python
+FALSE: PermissionDefault
+```
+
+#### NOT_OP [#endstone.permissions.PermissionDefault.NOT_OP]
+
+```python
+NOT_OP: PermissionDefault
+```
+
+#### NOT_OPERATOR [#endstone.permissions.PermissionDefault.NOT_OPERATOR]
+
+```python
+NOT_OPERATOR: PermissionDefault
+```
+
+#### OP [#endstone.permissions.PermissionDefault.OP]
+
+```python
+OP: PermissionDefault
+```
+
+#### OPERATOR [#endstone.permissions.PermissionDefault.OPERATOR]
+
+```python
+OPERATOR: PermissionDefault
+```
+
+#### TRUE [#endstone.permissions.PermissionDefault.TRUE]
+
+```python
+TRUE: PermissionDefault
+```
+
+#### name [#endstone.permissions.PermissionDefault.name]
+
+```python
+name: str
+```
+
+#### value [#endstone.permissions.PermissionDefault.value]
+
+```python
+value: int
+```
+
+### PermissionLevel [#endstone.permissions.PermissionLevel]
+
+```python
+PermissionLevel(value:int) -> None
+```
+
+**Attributes:**
+
+- [**CONSOLE**](#endstone.permissions.PermissionLevel.CONSOLE) (<code>[PermissionLevel](#endstone._internal.endstone_python.PermissionLevel)</code>) –
+- [**DEFAULT**](#endstone.permissions.PermissionLevel.DEFAULT) (<code>[PermissionLevel](#endstone._internal.endstone_python.PermissionLevel)</code>) –
+- [**OP**](#endstone.permissions.PermissionLevel.OP) (<code>[PermissionLevel](#endstone._internal.endstone_python.PermissionLevel)</code>) –
+- [**OPERATOR**](#endstone.permissions.PermissionLevel.OPERATOR) (<code>[PermissionLevel](#endstone._internal.endstone_python.PermissionLevel)</code>) –
+- [**name**](#endstone.permissions.PermissionLevel.name) (<code>[str](#str)</code>) –
+- [**value**](#endstone.permissions.PermissionLevel.value) (<code>[int](#int)</code>) –
+
+#### CONSOLE [#endstone.permissions.PermissionLevel.CONSOLE]
+
+```python
+CONSOLE: PermissionLevel
+```
+
+#### DEFAULT [#endstone.permissions.PermissionLevel.DEFAULT]
+
+```python
+DEFAULT: PermissionLevel
+```
+
+#### OP [#endstone.permissions.PermissionLevel.OP]
+
+```python
+OP: PermissionLevel
+```
+
+#### OPERATOR [#endstone.permissions.PermissionLevel.OPERATOR]
+
+```python
+OPERATOR: PermissionLevel
+```
+
+#### name [#endstone.permissions.PermissionLevel.name]
+
+```python
+name: str
+```
+
+#### value [#endstone.permissions.PermissionLevel.value]
+
+```python
+value: int
+```

@@ -1,0 +1,128 @@
+---
+title: "endstone.scheduler"
+---
+
+## endstone.scheduler [#endstone.scheduler]
+
+**Classes:**
+
+- [**Scheduler**](#endstone.scheduler.Scheduler) – Represents a scheduler that executes various tasks
+- [**Task**](#endstone.scheduler.Task) – Represents a task being executed by the scheduler
+
+### Scheduler [#endstone.scheduler.Scheduler]
+
+Represents a scheduler that executes various tasks
+
+**Methods:**
+
+- [**cancel_task**](#endstone.scheduler.Scheduler.cancel_task) – Removes task from scheduler.
+- [**cancel_tasks**](#endstone.scheduler.Scheduler.cancel_tasks) – Removes all tasks associated with a particular plugin from the scheduler.
+- [**get_pending_tasks**](#endstone.scheduler.Scheduler.get_pending_tasks) – Returns a vector of all pending tasks.
+- [**is_queued**](#endstone.scheduler.Scheduler.is_queued) – Check if the task queued to be run later.
+- [**is_running**](#endstone.scheduler.Scheduler.is_running) – Check if the task currently running.
+- [**run_task**](#endstone.scheduler.Scheduler.run_task) – Returns a task that will be executed synchronously
+
+#### cancel_task [#endstone.scheduler.Scheduler.cancel_task]
+
+```python
+cancel_task(id:int) -> None
+```
+
+Removes task from scheduler.
+
+#### cancel_tasks [#endstone.scheduler.Scheduler.cancel_tasks]
+
+```python
+cancel_tasks(plugin:Plugin) -> None
+```
+
+Removes all tasks associated with a particular plugin from the scheduler.
+
+#### get_pending_tasks [#endstone.scheduler.Scheduler.get_pending_tasks]
+
+```python
+get_pending_tasks() -> list[Task]
+```
+
+Returns a vector of all pending tasks.
+
+#### is_queued [#endstone.scheduler.Scheduler.is_queued]
+
+```python
+is_queued(id:int) -> bool
+```
+
+Check if the task queued to be run later.
+
+#### is_running [#endstone.scheduler.Scheduler.is_running]
+
+```python
+is_running(id:int) -> bool
+```
+
+Check if the task currently running.
+
+#### run_task [#endstone.scheduler.Scheduler.run_task]
+
+```python
+run_task(
+    plugin: Plugin, task: Callable[[], None], delay: int = 0, period: int = 0
+) -> Task
+```
+
+Returns a task that will be executed synchronously
+
+### Task [#endstone.scheduler.Task]
+
+Represents a task being executed by the scheduler
+
+**Methods:**
+
+- [**cancel**](#endstone.scheduler.Task.cancel) – Attempts to cancel this task.
+
+**Attributes:**
+
+- [**is_cancelled**](#endstone.scheduler.Task.is_cancelled) (<code>[bool](#bool)</code>) – Returns true if the task has been cancelled.
+- [**is_sync**](#endstone.scheduler.Task.is_sync) (<code>[bool](#bool)</code>) – Returns true if the task is run by server thread.
+- [**owner**](#endstone.scheduler.Task.owner) (<code>[Plugin](#endstone._internal.endstone_python.Plugin)</code>) – Returns the Plugin that owns the task.
+- [**task_id**](#endstone.scheduler.Task.task_id) (<code>[int](#int)</code>) – Returns the task id.
+
+#### cancel [#endstone.scheduler.Task.cancel]
+
+```python
+cancel() -> None
+```
+
+Attempts to cancel this task.
+
+#### is_cancelled [#endstone.scheduler.Task.is_cancelled]
+
+```python
+is_cancelled: bool
+```
+
+Returns true if the task has been cancelled.
+
+#### is_sync [#endstone.scheduler.Task.is_sync]
+
+```python
+is_sync: bool
+```
+
+Returns true if the task is run by server thread.
+
+#### owner [#endstone.scheduler.Task.owner]
+
+```python
+owner: Plugin
+```
+
+Returns the Plugin that owns the task.
+
+#### task_id [#endstone.scheduler.Task.task_id]
+
+```python
+task_id: int
+```
+
+Returns the task id.

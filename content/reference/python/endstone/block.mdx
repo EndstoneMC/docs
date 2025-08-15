@@ -1,0 +1,302 @@
+---
+title: "endstone.block"
+---
+
+## endstone.block [#endstone.block]
+
+**Classes:**
+
+- [**Block**](#endstone.block.Block) – Represents a block.
+- [**BlockData**](#endstone.block.BlockData) – Represents the data related to a live block
+- [**BlockFace**](#endstone.block.BlockFace) –
+- [**BlockState**](#endstone.block.BlockState) – Represents a captured state of a block, which will not update automatically.
+
+### Block [#endstone.block.Block]
+
+Represents a block.
+
+**Methods:**
+
+- [**capture_state**](#endstone.block.Block.capture_state) – Captures the current state of this block. The returned object will never be updated, and you are not guaranteed that (for example) a sign is still a sign after you capture its state.
+- [**set_data**](#endstone.block.Block.set_data) – Sets the complete data for this block
+- [**set_type**](#endstone.block.Block.set_type) – Sets the type of this block
+
+**Attributes:**
+
+- [**data**](#endstone.block.Block.data) (<code>[BlockData](#endstone._internal.endstone_python.BlockData)</code>) – Gets the complete data for this block
+- [**dimension**](#endstone.block.Block.dimension) (<code>[Dimension](#endstone._internal.endstone_python.Dimension)</code>) – Gets the dimension which contains this Block
+- [**location**](#endstone.block.Block.location) (<code>[Location](#endstone._internal.endstone_python.Location)</code>) – Gets the Location of the block
+- [**type**](#endstone.block.Block.type) (<code>[str](#str)</code>) – Gets or sets the type of the block.
+- [**x**](#endstone.block.Block.x) (<code>[int](#int)</code>) – Gets the x-coordinate of this block
+- [**y**](#endstone.block.Block.y) (<code>[int](#int)</code>) – Gets the y-coordinate of this block
+- [**z**](#endstone.block.Block.z) (<code>[int](#int)</code>) – Gets the z-coordinate of this block
+
+#### capture_state [#endstone.block.Block.capture_state]
+
+```python
+capture_state() -> BlockState
+```
+
+Captures the current state of this block. The returned object will never be updated, and you are not guaranteed that (for example) a sign is still a sign after you capture its state.
+
+#### data [#endstone.block.Block.data]
+
+```python
+data: BlockData
+```
+
+Gets the complete data for this block
+
+#### dimension [#endstone.block.Block.dimension]
+
+```python
+dimension: Dimension
+```
+
+Gets the dimension which contains this Block
+
+#### location [#endstone.block.Block.location]
+
+```python
+location: Location
+```
+
+Gets the Location of the block
+
+#### set_data [#endstone.block.Block.set_data]
+
+```python
+set_data(data:BlockData, apply_physics:bool = True) -> None
+```
+
+Sets the complete data for this block
+
+#### set_type [#endstone.block.Block.set_type]
+
+```python
+set_type(type:str, apply_physics:bool = True) -> None
+```
+
+Sets the type of this block
+
+#### type [#endstone.block.Block.type]
+
+```python
+type: str
+```
+
+Gets or sets the type of the block.
+
+#### x [#endstone.block.Block.x]
+
+```python
+x: int
+```
+
+Gets the x-coordinate of this block
+
+#### y [#endstone.block.Block.y]
+
+```python
+y: int
+```
+
+Gets the y-coordinate of this block
+
+#### z [#endstone.block.Block.z]
+
+```python
+z: int
+```
+
+Gets the z-coordinate of this block
+
+### BlockData [#endstone.block.BlockData]
+
+Represents the data related to a live block
+
+**Attributes:**
+
+- [**block_states**](#endstone.block.BlockData.block_states) (<code>[dict](#dict)\[[str](#str), [bool](#bool) | [str](#str) | [int](#int)\]</code>) – Gets the block states for this block.
+- [**runtime_id**](#endstone.block.BlockData.runtime_id) (<code>[int](#int)</code>) – Gets the runtime id for this block.
+- [**type**](#endstone.block.BlockData.type) (<code>[str](#str)</code>) – Get the block type represented by this block data.
+
+#### block_states [#endstone.block.BlockData.block_states]
+
+```python
+block_states: dict[str, bool | str | int]
+```
+
+Gets the block states for this block.
+
+#### runtime_id [#endstone.block.BlockData.runtime_id]
+
+```python
+runtime_id: int
+```
+
+Gets the runtime id for this block.
+
+#### type [#endstone.block.BlockData.type]
+
+```python
+type: str
+```
+
+Get the block type represented by this block data.
+
+### BlockFace [#endstone.block.BlockFace]
+
+```python
+BlockFace(value:int) -> None
+```
+
+**Attributes:**
+
+- [**DOWN**](#endstone.block.BlockFace.DOWN) (<code>[BlockFace](#endstone._internal.endstone_python.BlockFace)</code>) –
+- [**EAST**](#endstone.block.BlockFace.EAST) (<code>[BlockFace](#endstone._internal.endstone_python.BlockFace)</code>) –
+- [**NORTH**](#endstone.block.BlockFace.NORTH) (<code>[BlockFace](#endstone._internal.endstone_python.BlockFace)</code>) –
+- [**SOUTH**](#endstone.block.BlockFace.SOUTH) (<code>[BlockFace](#endstone._internal.endstone_python.BlockFace)</code>) –
+- [**UP**](#endstone.block.BlockFace.UP) (<code>[BlockFace](#endstone._internal.endstone_python.BlockFace)</code>) –
+- [**WEST**](#endstone.block.BlockFace.WEST) (<code>[BlockFace](#endstone._internal.endstone_python.BlockFace)</code>) –
+- [**name**](#endstone.block.BlockFace.name) (<code>[str](#str)</code>) –
+- [**value**](#endstone.block.BlockFace.value) (<code>[int](#int)</code>) –
+
+#### DOWN [#endstone.block.BlockFace.DOWN]
+
+```python
+DOWN: BlockFace
+```
+
+#### EAST [#endstone.block.BlockFace.EAST]
+
+```python
+EAST: BlockFace
+```
+
+#### NORTH [#endstone.block.BlockFace.NORTH]
+
+```python
+NORTH: BlockFace
+```
+
+#### SOUTH [#endstone.block.BlockFace.SOUTH]
+
+```python
+SOUTH: BlockFace
+```
+
+#### UP [#endstone.block.BlockFace.UP]
+
+```python
+UP: BlockFace
+```
+
+#### WEST [#endstone.block.BlockFace.WEST]
+
+```python
+WEST: BlockFace
+```
+
+#### name [#endstone.block.BlockFace.name]
+
+```python
+name: str
+```
+
+#### value [#endstone.block.BlockFace.value]
+
+```python
+value: int
+```
+
+### BlockState [#endstone.block.BlockState]
+
+Represents a captured state of a block, which will not update automatically.
+
+**Methods:**
+
+- [**update**](#endstone.block.BlockState.update) – Attempts to update the block represented by this state.
+
+**Attributes:**
+
+- [**block**](#endstone.block.BlockState.block) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Gets the block represented by this block state.
+- [**data**](#endstone.block.BlockState.data) (<code>[BlockData](#endstone._internal.endstone_python.BlockData)</code>) – Gets or sets the data for this block state.
+- [**dimension**](#endstone.block.BlockState.dimension) (<code>[Dimension](#endstone._internal.endstone_python.Dimension)</code>) – Gets the dimension which contains the block represented by this block state.
+- [**location**](#endstone.block.BlockState.location) (<code>[Location](#endstone._internal.endstone_python.Location)</code>) – Gets the location of this block state.
+- [**type**](#endstone.block.BlockState.type) (<code>[str](#str)</code>) – Gets or sets the type of this block state.
+- [**x**](#endstone.block.BlockState.x) (<code>[int](#int)</code>) – Gets the x-coordinate of this block state.
+- [**y**](#endstone.block.BlockState.y) (<code>[int](#int)</code>) – Gets the y-coordinate of this block state.
+- [**z**](#endstone.block.BlockState.z) (<code>[int](#int)</code>) – Gets the z-coordinate of this block state.
+
+#### block [#endstone.block.BlockState.block]
+
+```python
+block: Block
+```
+
+Gets the block represented by this block state.
+
+#### data [#endstone.block.BlockState.data]
+
+```python
+data: BlockData
+```
+
+Gets or sets the data for this block state.
+
+#### dimension [#endstone.block.BlockState.dimension]
+
+```python
+dimension: Dimension
+```
+
+Gets the dimension which contains the block represented by this block state.
+
+#### location [#endstone.block.BlockState.location]
+
+```python
+location: Location
+```
+
+Gets the location of this block state.
+
+#### type [#endstone.block.BlockState.type]
+
+```python
+type: str
+```
+
+Gets or sets the type of this block state.
+
+#### update [#endstone.block.BlockState.update]
+
+```python
+update(force:bool = False, apply_physics:bool = True) -> bool
+```
+
+Attempts to update the block represented by this state.
+
+#### x [#endstone.block.BlockState.x]
+
+```python
+x: int
+```
+
+Gets the x-coordinate of this block state.
+
+#### y [#endstone.block.BlockState.y]
+
+```python
+y: int
+```
+
+Gets the y-coordinate of this block state.
+
+#### z [#endstone.block.BlockState.z]
+
+```python
+z: int
+```
+
+Gets the z-coordinate of this block state.

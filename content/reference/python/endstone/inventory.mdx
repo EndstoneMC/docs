@@ -1,0 +1,725 @@
+---
+title: "endstone.inventory"
+---
+
+## endstone.inventory [#endstone.inventory]
+
+**Classes:**
+
+- [**EquipmentSlot**](#endstone.inventory.EquipmentSlot) –
+- [**Inventory**](#endstone.inventory.Inventory) – Interface to the various inventories.
+- [**ItemFactory**](#endstone.inventory.ItemFactory) –
+- [**ItemMeta**](#endstone.inventory.ItemMeta) – Represents the metadata of a generic item.
+- [**ItemStack**](#endstone.inventory.ItemStack) – Represents a stack of items.
+- [**ItemType**](#endstone.inventory.ItemType) – Represents an item type.
+- [**MapMeta**](#endstone.inventory.MapMeta) – Represents the metadata for a map item.
+- [**PlayerInventory**](#endstone.inventory.PlayerInventory) – Interface to the inventory of a Player, including the four armor slots and any extra slots.
+
+### EquipmentSlot [#endstone.inventory.EquipmentSlot]
+
+```python
+EquipmentSlot(value:int) -> None
+```
+
+**Attributes:**
+
+- [**BODY**](#endstone.inventory.EquipmentSlot.BODY) (<code>[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code>) –
+- [**CHEST**](#endstone.inventory.EquipmentSlot.CHEST) (<code>[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code>) –
+- [**FEET**](#endstone.inventory.EquipmentSlot.FEET) (<code>[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code>) –
+- [**HAND**](#endstone.inventory.EquipmentSlot.HAND) (<code>[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code>) –
+- [**HEAD**](#endstone.inventory.EquipmentSlot.HEAD) (<code>[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code>) –
+- [**LEGS**](#endstone.inventory.EquipmentSlot.LEGS) (<code>[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code>) –
+- [**OFF_HAND**](#endstone.inventory.EquipmentSlot.OFF_HAND) (<code>[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code>) –
+- [**name**](#endstone.inventory.EquipmentSlot.name) (<code>[str](#str)</code>) –
+- [**value**](#endstone.inventory.EquipmentSlot.value) (<code>[int](#int)</code>) –
+
+#### BODY [#endstone.inventory.EquipmentSlot.BODY]
+
+```python
+BODY: EquipmentSlot
+```
+
+#### CHEST [#endstone.inventory.EquipmentSlot.CHEST]
+
+```python
+CHEST: EquipmentSlot
+```
+
+#### FEET [#endstone.inventory.EquipmentSlot.FEET]
+
+```python
+FEET: EquipmentSlot
+```
+
+#### HAND [#endstone.inventory.EquipmentSlot.HAND]
+
+```python
+HAND: EquipmentSlot
+```
+
+#### HEAD [#endstone.inventory.EquipmentSlot.HEAD]
+
+```python
+HEAD: EquipmentSlot
+```
+
+#### LEGS [#endstone.inventory.EquipmentSlot.LEGS]
+
+```python
+LEGS: EquipmentSlot
+```
+
+#### OFF_HAND [#endstone.inventory.EquipmentSlot.OFF_HAND]
+
+```python
+OFF_HAND: EquipmentSlot
+```
+
+#### name [#endstone.inventory.EquipmentSlot.name]
+
+```python
+name: str
+```
+
+#### value [#endstone.inventory.EquipmentSlot.value]
+
+```python
+value: int
+```
+
+### Inventory [#endstone.inventory.Inventory]
+
+Interface to the various inventories.
+
+**Methods:**
+
+- [**add_item**](#endstone.inventory.Inventory.add_item) – Stores the given ItemStacks in the inventory.
+- [**get_item**](#endstone.inventory.Inventory.get_item) – Returns the ItemStack found in the slot at the given index
+- [**remove_item**](#endstone.inventory.Inventory.remove_item) – Removes the given ItemStacks from the inventory.
+- [**set_item**](#endstone.inventory.Inventory.set_item) – Stores the ItemStack at the given index of the inventory.
+
+**Attributes:**
+
+- [**contents**](#endstone.inventory.Inventory.contents) (<code>[list](#list)\[[ItemStack](#endstone._internal.endstone_python.ItemStack)\]</code>) – Returns all ItemStacks from the inventory
+- [**first_empty**](#endstone.inventory.Inventory.first_empty) (<code>[int](#int)</code>) – Returns the first empty Slot.
+- [**is_empty**](#endstone.inventory.Inventory.is_empty) (<code>[bool](#bool)</code>) – Check whether this inventory is empty. An inventory is considered to be empty if there are no ItemStacks in any slot of this inventory.
+- [**max_stack_size**](#endstone.inventory.Inventory.max_stack_size) (<code>[int](#int)</code>) – Returns the maximum stack size for an ItemStack in this inventory.
+- [**size**](#endstone.inventory.Inventory.size) (<code>[int](#int)</code>) – Returns the size of the inventory
+
+#### add_item [#endstone.inventory.Inventory.add_item]
+
+```python
+add_item(*args) -> dict[int, ItemStack]
+```
+
+Stores the given ItemStacks in the inventory.
+This will try to fill existing stacks and empty slots as well as it can.
+
+The returned map contains what it couldn't store, where the key is the index, and the value is the ItemStack.
+If all items are stored, it will return an empty dict.
+
+#### contents [#endstone.inventory.Inventory.contents]
+
+```python
+contents: list[ItemStack]
+```
+
+Returns all ItemStacks from the inventory
+
+#### first_empty [#endstone.inventory.Inventory.first_empty]
+
+```python
+first_empty: int
+```
+
+Returns the first empty Slot.
+
+#### get_item [#endstone.inventory.Inventory.get_item]
+
+```python
+get_item(index:int) -> ItemStack
+```
+
+Returns the ItemStack found in the slot at the given index
+
+#### is_empty [#endstone.inventory.Inventory.is_empty]
+
+```python
+is_empty: bool
+```
+
+Check whether this inventory is empty. An inventory is considered to be empty if there are no ItemStacks in any slot of this inventory.
+
+#### max_stack_size [#endstone.inventory.Inventory.max_stack_size]
+
+```python
+max_stack_size: int
+```
+
+Returns the maximum stack size for an ItemStack in this inventory.
+
+#### remove_item [#endstone.inventory.Inventory.remove_item]
+
+```python
+remove_item(*args) -> dict[int, ItemStack]
+```
+
+Removes the given ItemStacks from the inventory.
+It will try to remove 'as much as possible' from the types and amounts you give as arguments.
+
+The returned HashMap contains what it couldn't remove, where the key is the index, and the value is the ItemStack.
+If all the given ItemStacks are removed, it will return an empty dict.
+
+#### set_item [#endstone.inventory.Inventory.set_item]
+
+```python
+set_item(index:int, item:ItemStack) -> None
+```
+
+Stores the ItemStack at the given index of the inventory.
+
+#### size [#endstone.inventory.Inventory.size]
+
+```python
+size: int
+```
+
+Returns the size of the inventory
+
+### ItemFactory [#endstone.inventory.ItemFactory]
+
+**Methods:**
+
+- [**as_meta_for**](#endstone.inventory.ItemFactory.as_meta_for) – Returns an appropriate item meta for the specified item type.
+- [**equals**](#endstone.inventory.ItemFactory.equals) – This method is used to compare two ItemMeta objects.
+- [**get_item_meta**](#endstone.inventory.ItemFactory.get_item_meta) – This creates a new item meta for the item type.
+- [**is_applicable**](#endstone.inventory.ItemFactory.is_applicable) – This method checks the item meta to confirm that it is applicable (no data lost if applied) to the specified ItemStack
+
+#### as_meta_for [#endstone.inventory.ItemFactory.as_meta_for]
+
+```python
+as_meta_for(meta:ItemMeta, type:str) -> ItemMeta
+```
+
+Returns an appropriate item meta for the specified item type.
+
+#### equals [#endstone.inventory.ItemFactory.equals]
+
+```python
+equals(meta1:ItemMeta, meta2:ItemMeta) -> bool
+```
+
+This method is used to compare two ItemMeta objects.
+
+#### get_item_meta [#endstone.inventory.ItemFactory.get_item_meta]
+
+```python
+get_item_meta(type:str) -> ItemMeta
+```
+
+This creates a new item meta for the item type.
+
+#### is_applicable [#endstone.inventory.ItemFactory.is_applicable]
+
+```python
+is_applicable(meta:ItemMeta, type:str) -> bool
+```
+
+This method checks the item meta to confirm that it is applicable (no data lost if applied) to the specified ItemStack
+
+### ItemMeta [#endstone.inventory.ItemMeta]
+
+Represents the metadata of a generic item.
+
+**Methods:**
+
+- [**add_enchant**](#endstone.inventory.ItemMeta.add_enchant) – Adds the specified enchantment to this item meta.
+- [**clone**](#endstone.inventory.ItemMeta.clone) – Creates a clone of the current metadata.
+- [**get_enchant_level**](#endstone.inventory.ItemMeta.get_enchant_level) – Checks for the level of the specified enchantment.
+- [**has_enchant**](#endstone.inventory.ItemMeta.has_enchant) – Checks for existence of the specified enchantment.
+- [**remove_enchant**](#endstone.inventory.ItemMeta.remove_enchant) – Removes the specified enchantment from this item meta.
+- [**remove_enchants**](#endstone.inventory.ItemMeta.remove_enchants) – Removes all enchantments from this item meta.
+
+**Attributes:**
+
+- [**damage**](#endstone.inventory.ItemMeta.damage) (<code>[int](#int)</code>) – Gets or sets the damage.
+- [**display_name**](#endstone.inventory.ItemMeta.display_name) (<code>[str](#str) | None</code>) – Gets or sets the display name.
+- [**enchants**](#endstone.inventory.ItemMeta.enchants) (<code>[dict](#dict)\[[str](#str), [int](#int)\]</code>) – Returns a copy the enchantments in this ItemMeta.
+- [**has_damage**](#endstone.inventory.ItemMeta.has_damage) (<code>[bool](#bool)</code>) – Checks to see if this item has damage.
+- [**has_display_name**](#endstone.inventory.ItemMeta.has_display_name) (<code>[bool](#bool)</code>) – Checks for existence of a display name.
+- [**has_enchants**](#endstone.inventory.ItemMeta.has_enchants) (<code>[bool](#bool)</code>) – Checks for the existence of any enchantments.
+- [**has_lore**](#endstone.inventory.ItemMeta.has_lore) (<code>[bool](#bool)</code>) – Checks for existence of lore.
+- [**has_repair_cost**](#endstone.inventory.ItemMeta.has_repair_cost) (<code>[bool](#bool)</code>) – Checks to see if this item has a repair penalty.
+- [**is_unbreakable**](#endstone.inventory.ItemMeta.is_unbreakable) (<code>[bool](#bool)</code>) – Gets or sets the unbreakable tag. An unbreakable item will not lose durability.
+- [**lore**](#endstone.inventory.ItemMeta.lore) (<code>[list](#list)\[[str](#str)\] | None</code>) – Gets or sets the lore for this item.
+- [**repair_cost**](#endstone.inventory.ItemMeta.repair_cost) (<code>[int](#int)</code>) – Gets or sets the repair penalty.
+
+#### add_enchant [#endstone.inventory.ItemMeta.add_enchant]
+
+```python
+add_enchant(id:str, level:int, force:bool = False) -> bool
+```
+
+Adds the specified enchantment to this item meta.
+
+#### clone [#endstone.inventory.ItemMeta.clone]
+
+```python
+clone() -> ItemMeta
+```
+
+Creates a clone of the current metadata.
+
+#### damage [#endstone.inventory.ItemMeta.damage]
+
+```python
+damage: int
+```
+
+Gets or sets the damage.
+
+#### display_name [#endstone.inventory.ItemMeta.display_name]
+
+```python
+display_name: str | None
+```
+
+Gets or sets the display name.
+
+#### enchants [#endstone.inventory.ItemMeta.enchants]
+
+```python
+enchants: dict[str, int]
+```
+
+Returns a copy the enchantments in this ItemMeta.
+
+#### get_enchant_level [#endstone.inventory.ItemMeta.get_enchant_level]
+
+```python
+get_enchant_level(id:str) -> int
+```
+
+Checks for the level of the specified enchantment.
+
+#### has_damage [#endstone.inventory.ItemMeta.has_damage]
+
+```python
+has_damage: bool
+```
+
+Checks to see if this item has damage.
+
+#### has_display_name [#endstone.inventory.ItemMeta.has_display_name]
+
+```python
+has_display_name: bool
+```
+
+Checks for existence of a display name.
+
+#### has_enchant [#endstone.inventory.ItemMeta.has_enchant]
+
+```python
+has_enchant(id:str) -> bool
+```
+
+Checks for existence of the specified enchantment.
+
+#### has_enchants [#endstone.inventory.ItemMeta.has_enchants]
+
+```python
+has_enchants: bool
+```
+
+Checks for the existence of any enchantments.
+
+#### has_lore [#endstone.inventory.ItemMeta.has_lore]
+
+```python
+has_lore: bool
+```
+
+Checks for existence of lore.
+
+#### has_repair_cost [#endstone.inventory.ItemMeta.has_repair_cost]
+
+```python
+has_repair_cost: bool
+```
+
+Checks to see if this item has a repair penalty.
+
+#### is_unbreakable [#endstone.inventory.ItemMeta.is_unbreakable]
+
+```python
+is_unbreakable: bool
+```
+
+Gets or sets the unbreakable tag. An unbreakable item will not lose durability.
+
+#### lore [#endstone.inventory.ItemMeta.lore]
+
+```python
+lore: list[str] | None
+```
+
+Gets or sets the lore for this item.
+
+#### remove_enchant [#endstone.inventory.ItemMeta.remove_enchant]
+
+```python
+remove_enchant(id:str) -> bool
+```
+
+Removes the specified enchantment from this item meta.
+
+#### remove_enchants [#endstone.inventory.ItemMeta.remove_enchants]
+
+```python
+remove_enchants() -> None
+```
+
+Removes all enchantments from this item meta.
+
+#### repair_cost [#endstone.inventory.ItemMeta.repair_cost]
+
+```python
+repair_cost: int
+```
+
+Gets or sets the repair penalty.
+
+### ItemStack [#endstone.inventory.ItemStack]
+
+```python
+ItemStack(type:str, amount:int = 1, data:int = 0) -> None
+```
+
+Represents a stack of items.
+
+**Methods:**
+
+- [**is_similar**](#endstone.inventory.ItemStack.is_similar) – Checks if the two stacks are equal, but does not consider stack size (amount).
+- [**set_item_meta**](#endstone.inventory.ItemStack.set_item_meta) – Set the ItemMeta of this ItemStack.
+
+**Attributes:**
+
+- [**amount**](#endstone.inventory.ItemStack.amount) (<code>[int](#int)</code>) – Gets or sets the amount of items in this stack.
+- [**data**](#endstone.inventory.ItemStack.data) (<code>[int](#int)</code>) – Gets or sets the data for this stack of items.
+- [**item_meta**](#endstone.inventory.ItemStack.item_meta) (<code>[ItemMeta](#endstone._internal.endstone_python.ItemMeta)</code>) – Gets a copy of the ItemMeta of this ItemStack.
+- [**max_stack_size**](#endstone.inventory.ItemStack.max_stack_size) (<code>[int](#int)</code>) – Get the maximum stack size for this item.
+- [**type**](#endstone.inventory.ItemStack.type) (<code>[str](#str)</code>) – Gets or sets the type of this item.
+
+#### amount [#endstone.inventory.ItemStack.amount]
+
+```python
+amount: int
+```
+
+Gets or sets the amount of items in this stack.
+
+#### data [#endstone.inventory.ItemStack.data]
+
+```python
+data: int
+```
+
+Gets or sets the data for this stack of items.
+
+#### is_similar [#endstone.inventory.ItemStack.is_similar]
+
+```python
+is_similar(other:ItemStack) -> bool
+```
+
+Checks if the two stacks are equal, but does not consider stack size (amount).
+
+#### item_meta [#endstone.inventory.ItemStack.item_meta]
+
+```python
+item_meta: ItemMeta
+```
+
+Gets a copy of the ItemMeta of this ItemStack.
+
+#### max_stack_size [#endstone.inventory.ItemStack.max_stack_size]
+
+```python
+max_stack_size: int
+```
+
+Get the maximum stack size for this item.
+
+#### set_item_meta [#endstone.inventory.ItemStack.set_item_meta]
+
+```python
+set_item_meta(meta:ItemMeta) -> bool
+```
+
+Set the ItemMeta of this ItemStack.
+
+#### type [#endstone.inventory.ItemStack.type]
+
+```python
+type: str
+```
+
+Gets or sets the type of this item.
+
+### ItemType [#endstone.inventory.ItemType]
+
+Represents an item type.
+
+**Methods:**
+
+- [**get**](#endstone.inventory.ItemType.get) – Attempts to get the ItemType with the given name.
+
+**Attributes:**
+
+- [**id**](#endstone.inventory.ItemType.id) (<code>[str](#str)</code>) – Return the identifier of this item type.
+- [**key**](#endstone.inventory.ItemType.key) (<code>[NamespacedKey](#endstone._internal.endstone_python.NamespacedKey)</code>) – Return the namespaced identifier of this item type.
+- [**max_durability**](#endstone.inventory.ItemType.max_durability) (<code>[int](#int)</code>) – Gets the maximum durability of this item type
+- [**max_stack_size**](#endstone.inventory.ItemType.max_stack_size) (<code>[int](#int)</code>) – Gets the maximum amount of this item type that can be held in a stack.
+- [**translation_key**](#endstone.inventory.ItemType.translation_key) (<code>[str](#str)</code>) – Get the translation key, suitable for use in a translation component.
+
+#### get [#endstone.inventory.ItemType.get]
+
+```python
+get(name:str) -> ItemType
+```
+
+Attempts to get the ItemType with the given name.
+
+#### id [#endstone.inventory.ItemType.id]
+
+```python
+id: str
+```
+
+Return the identifier of this item type.
+
+#### key [#endstone.inventory.ItemType.key]
+
+```python
+key: NamespacedKey
+```
+
+Return the namespaced identifier of this item type.
+
+#### max_durability [#endstone.inventory.ItemType.max_durability]
+
+```python
+max_durability: int
+```
+
+Gets the maximum durability of this item type
+
+#### max_stack_size [#endstone.inventory.ItemType.max_stack_size]
+
+```python
+max_stack_size: int
+```
+
+Gets the maximum amount of this item type that can be held in a stack.
+
+#### translation_key [#endstone.inventory.ItemType.translation_key]
+
+```python
+translation_key: str
+```
+
+Get the translation key, suitable for use in a translation component.
+
+### MapMeta [#endstone.inventory.MapMeta]
+
+Bases: <code>[ItemMeta](#endstone._internal.endstone_python.ItemMeta)</code>
+
+Represents the metadata for a map item.
+
+**Methods:**
+
+- [**add_enchant**](#endstone.inventory.MapMeta.add_enchant) – Adds the specified enchantment to this item meta.
+- [**clone**](#endstone.inventory.MapMeta.clone) – Creates a clone of the current metadata.
+- [**get_enchant_level**](#endstone.inventory.MapMeta.get_enchant_level) – Checks for the level of the specified enchantment.
+- [**has_enchant**](#endstone.inventory.MapMeta.has_enchant) – Checks for existence of the specified enchantment.
+- [**remove_enchant**](#endstone.inventory.MapMeta.remove_enchant) – Removes the specified enchantment from this item meta.
+- [**remove_enchants**](#endstone.inventory.MapMeta.remove_enchants) – Removes all enchantments from this item meta.
+
+**Attributes:**
+
+- [**damage**](#endstone.inventory.MapMeta.damage) (<code>[int](#int)</code>) – Gets or sets the damage.
+- [**display_name**](#endstone.inventory.MapMeta.display_name) (<code>[str](#str) | None</code>) – Gets or sets the display name.
+- [**enchants**](#endstone.inventory.MapMeta.enchants) (<code>[dict](#dict)\[[str](#str), [int](#int)\]</code>) – Returns a copy the enchantments in this ItemMeta.
+- [**has_damage**](#endstone.inventory.MapMeta.has_damage) (<code>[bool](#bool)</code>) – Checks to see if this item has damage.
+- [**has_display_name**](#endstone.inventory.MapMeta.has_display_name) (<code>[bool](#bool)</code>) – Checks for existence of a display name.
+- [**has_enchants**](#endstone.inventory.MapMeta.has_enchants) (<code>[bool](#bool)</code>) – Checks for the existence of any enchantments.
+- [**has_lore**](#endstone.inventory.MapMeta.has_lore) (<code>[bool](#bool)</code>) – Checks for existence of lore.
+- [**has_repair_cost**](#endstone.inventory.MapMeta.has_repair_cost) (<code>[bool](#bool)</code>) – Checks to see if this item has a repair penalty.
+- [**is_unbreakable**](#endstone.inventory.MapMeta.is_unbreakable) (<code>[bool](#bool)</code>) – Gets or sets the unbreakable tag. An unbreakable item will not lose durability.
+- [**lore**](#endstone.inventory.MapMeta.lore) (<code>[list](#list)\[[str](#str)\] | None</code>) – Gets or sets the lore for this item.
+- [**repair_cost**](#endstone.inventory.MapMeta.repair_cost) (<code>[int](#int)</code>) – Gets or sets the repair penalty.
+
+### PlayerInventory [#endstone.inventory.PlayerInventory]
+
+Bases: <code>[Inventory](#endstone._internal.endstone_python.Inventory)</code>
+
+Interface to the inventory of a Player, including the four armor slots and any extra slots.
+
+**Methods:**
+
+- [**add_item**](#endstone.inventory.PlayerInventory.add_item) – Stores the given ItemStacks in the inventory.
+- [**get_item**](#endstone.inventory.PlayerInventory.get_item) – Returns the ItemStack found in the slot at the given index
+- [**remove_item**](#endstone.inventory.PlayerInventory.remove_item) – Removes the given ItemStacks from the inventory.
+- [**set_item**](#endstone.inventory.PlayerInventory.set_item) – Stores the ItemStack at the given index of the inventory.
+
+**Attributes:**
+
+- [**boots**](#endstone.inventory.PlayerInventory.boots) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Gets or sets the ItemStack in the boots slot
+- [**chestplate**](#endstone.inventory.PlayerInventory.chestplate) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Gets or sets the ItemStack in the chestplate slot
+- [**contents**](#endstone.inventory.PlayerInventory.contents) (<code>[list](#list)\[[ItemStack](#endstone._internal.endstone_python.ItemStack)\]</code>) – Returns all ItemStacks from the inventory
+- [**first_empty**](#endstone.inventory.PlayerInventory.first_empty) (<code>[int](#int)</code>) – Returns the first empty Slot.
+- [**held_item_slot**](#endstone.inventory.PlayerInventory.held_item_slot) (<code>[int](#int)</code>) – Gets or sets the slot number of the currently held item
+- [**helmet**](#endstone.inventory.PlayerInventory.helmet) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Gets or sets the ItemStack in the helmet slot
+- [**is_empty**](#endstone.inventory.PlayerInventory.is_empty) (<code>[bool](#bool)</code>) – Check whether this inventory is empty. An inventory is considered to be empty if there are no ItemStacks in any slot of this inventory.
+- [**item_in_main_hand**](#endstone.inventory.PlayerInventory.item_in_main_hand) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Gets or sets the item the player is currently holding in their main hand.
+- [**item_in_off_hand**](#endstone.inventory.PlayerInventory.item_in_off_hand) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Gets or sets the item the player is currently holding in their off hand.
+- [**leggings**](#endstone.inventory.PlayerInventory.leggings) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Gets or sets the ItemStack in the leg slot
+- [**max_stack_size**](#endstone.inventory.PlayerInventory.max_stack_size) (<code>[int](#int)</code>) – Returns the maximum stack size for an ItemStack in this inventory.
+- [**size**](#endstone.inventory.PlayerInventory.size) (<code>[int](#int)</code>) – Returns the size of the inventory
+
+#### add_item [#endstone.inventory.PlayerInventory.add_item]
+
+```python
+add_item(*args) -> dict[int, ItemStack]
+```
+
+Stores the given ItemStacks in the inventory.
+This will try to fill existing stacks and empty slots as well as it can.
+
+The returned map contains what it couldn't store, where the key is the index, and the value is the ItemStack.
+If all items are stored, it will return an empty dict.
+
+#### boots [#endstone.inventory.PlayerInventory.boots]
+
+```python
+boots: ItemStack
+```
+
+Gets or sets the ItemStack in the boots slot
+
+#### chestplate [#endstone.inventory.PlayerInventory.chestplate]
+
+```python
+chestplate: ItemStack
+```
+
+Gets or sets the ItemStack in the chestplate slot
+
+#### contents [#endstone.inventory.PlayerInventory.contents]
+
+```python
+contents: list[ItemStack]
+```
+
+Returns all ItemStacks from the inventory
+
+#### first_empty [#endstone.inventory.PlayerInventory.first_empty]
+
+```python
+first_empty: int
+```
+
+Returns the first empty Slot.
+
+#### get_item [#endstone.inventory.PlayerInventory.get_item]
+
+```python
+get_item(index:int) -> ItemStack
+```
+
+Returns the ItemStack found in the slot at the given index
+
+#### held_item_slot [#endstone.inventory.PlayerInventory.held_item_slot]
+
+```python
+held_item_slot: int
+```
+
+Gets or sets the slot number of the currently held item
+
+#### helmet [#endstone.inventory.PlayerInventory.helmet]
+
+```python
+helmet: ItemStack
+```
+
+Gets or sets the ItemStack in the helmet slot
+
+#### is_empty [#endstone.inventory.PlayerInventory.is_empty]
+
+```python
+is_empty: bool
+```
+
+Check whether this inventory is empty. An inventory is considered to be empty if there are no ItemStacks in any slot of this inventory.
+
+#### item_in_main_hand [#endstone.inventory.PlayerInventory.item_in_main_hand]
+
+```python
+item_in_main_hand: ItemStack
+```
+
+Gets or sets the item the player is currently holding in their main hand.
+
+#### item_in_off_hand [#endstone.inventory.PlayerInventory.item_in_off_hand]
+
+```python
+item_in_off_hand: ItemStack
+```
+
+Gets or sets the item the player is currently holding in their off hand.
+
+#### leggings [#endstone.inventory.PlayerInventory.leggings]
+
+```python
+leggings: ItemStack
+```
+
+Gets or sets the ItemStack in the leg slot
+
+#### max_stack_size [#endstone.inventory.PlayerInventory.max_stack_size]
+
+```python
+max_stack_size: int
+```
+
+Returns the maximum stack size for an ItemStack in this inventory.
+
+#### remove_item [#endstone.inventory.PlayerInventory.remove_item]
+
+```python
+remove_item(*args) -> dict[int, ItemStack]
+```
+
+Removes the given ItemStacks from the inventory.
+It will try to remove 'as much as possible' from the types and amounts you give as arguments.
+
+The returned HashMap contains what it couldn't remove, where the key is the index, and the value is the ItemStack.
+If all the given ItemStacks are removed, it will return an empty dict.
+
+#### set_item [#endstone.inventory.PlayerInventory.set_item]
+
+```python
+set_item(index:int, item:ItemStack) -> None
+```
+
+Stores the ItemStack at the given index of the inventory.
+
+#### size [#endstone.inventory.PlayerInventory.size]
+
+```python
+size: int
+```
+
+Returns the size of the inventory

@@ -1,27 +1,645 @@
 ---
-title: endstone.form
+title: "endstone.form"
 ---
 
 ## endstone.form [#endstone.form]
 
-Classes relevant to forms.
-
 **Classes:**
 
-- [**ActionForm**](#endstone.form.ActionForm) - Represents a form with buttons that let the player take action.
-- [**Button**](#endstone.form.Button) - Represents a button with text and an optional icon.
-- [**Divider**](#endstone.form.Divider) - Represents a divider.
-- [**Dropdown**](#endstone.form.Dropdown) - Represents a dropdown with a set of predefined options.
-- [**Header**](#endstone.form.Header) - Represents a header with a label.
-- [**Label**](#endstone.form.Label) - Represents a text label.
-- [**MessageForm**](#endstone.form.MessageForm) - Represents a form with two buttons.
-- [**ModalForm**](#endstone.form.ModalForm) - Represents a modal form with controls.
-- [**Slider**](#endstone.form.Slider) - Represents a slider with a label.
-- [**StepSlider**](#endstone.form.StepSlider) - Represents a step slider with a set of predefined options.
-- [**TextInput**](#endstone.form.TextInput) - Represents a text input field.
-- [**Toggle**](#endstone.form.Toggle) - Represents a toggle button with a label.
+- [**ActionForm**](#endstone.form.ActionForm) – Represents a form with buttons that let the player take action.
+- [**Button**](#endstone.form.Button) – Represents a button with text and an optional icon.
+- [**Divider**](#endstone.form.Divider) – Represents a divider.
+- [**Dropdown**](#endstone.form.Dropdown) – Represents a dropdown with a set of predefined options.
+- [**Header**](#endstone.form.Header) – Represents a header with a label.
+- [**Label**](#endstone.form.Label) – Represents a text label.
+- [**MessageForm**](#endstone.form.MessageForm) – Represents a form with two buttons.
+- [**ModalForm**](#endstone.form.ModalForm) – Represents a modal form with controls.
+- [**Slider**](#endstone.form.Slider) – Represents a slider with a label.
+- [**StepSlider**](#endstone.form.StepSlider) – Represents a step slider with a set of predefined options.
+- [**TextInput**](#endstone.form.TextInput) – Represents a text input field.
+- [**Toggle**](#endstone.form.Toggle) – Represents a toggle button with a label.
 
 ### ActionForm [#endstone.form.ActionForm]
 
+```python
+ActionForm(
+    title: str | Translatable = "",
+    content: str | Translatable = "",
+    buttons: list[Button | Divider | Header | Label] | None = None,
+    on_submit: Callable[[Player, int], None] = None,
+    on_close: Callable[[Player], None] = None,
+) -> None
+```
 
+Represents a form with buttons that let the player take action.
 
+**Methods:**
+
+- [**add_button**](#endstone.form.ActionForm.add_button) – Adds a button to the form.
+- [**add_divider**](#endstone.form.ActionForm.add_divider) – Adds a divider to the form.
+- [**add_header**](#endstone.form.ActionForm.add_header) – Adds a header to the form.
+- [**add_label**](#endstone.form.ActionForm.add_label) – Adds a label to the form.
+
+**Attributes:**
+
+- [**content**](#endstone.form.ActionForm.content) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable)</code>) – Gets or sets the content of the form.
+- [**controls**](#endstone.form.ActionForm.controls) (<code>[list](#list)\[[Button](#endstone._internal.endstone_python.Button) | [Divider](#endstone._internal.endstone_python.Divider) | [Header](#endstone._internal.endstone_python.Header) | [Label](#endstone._internal.endstone_python.Label)\]</code>) – Gets or sets the controls of the action form.
+- [**on_close**](#endstone.form.ActionForm.on_close) (<code>[Callable](#typing.Callable)\[\[[Player](#endstone._internal.endstone_python.Player)\], None\]</code>) – Gets or sets the on close callback.
+- [**on_submit**](#endstone.form.ActionForm.on_submit) (<code>[Callable](#typing.Callable)\[\[[Player](#endstone._internal.endstone_python.Player), [int](#int)\], None\]</code>) – Gets or sets the on submit callback.
+- [**title**](#endstone.form.ActionForm.title) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable)</code>) – Gets or sets the title of the form.
+
+#### add_button [#endstone.form.ActionForm.add_button]
+
+```python
+add_button(
+    text: str | Translatable,
+    icon: str | None = None,
+    on_click: Callable[[Player], None] = None,
+) -> ActionForm
+```
+
+Adds a button to the form.
+
+#### add_divider [#endstone.form.ActionForm.add_divider]
+
+```python
+add_divider() -> ActionForm
+```
+
+Adds a divider to the form.
+
+#### add_header [#endstone.form.ActionForm.add_header]
+
+```python
+add_header(text:str | Translatable) -> ActionForm
+```
+
+Adds a header to the form.
+
+#### add_label [#endstone.form.ActionForm.add_label]
+
+```python
+add_label(text:str | Translatable) -> ActionForm
+```
+
+Adds a label to the form.
+
+#### content [#endstone.form.ActionForm.content]
+
+```python
+content: str | Translatable
+```
+
+Gets or sets the content of the form.
+
+#### controls [#endstone.form.ActionForm.controls]
+
+```python
+controls: list[Button | Divider | Header | Label]
+```
+
+Gets or sets the controls of the action form.
+
+#### on_close [#endstone.form.ActionForm.on_close]
+
+```python
+on_close: typing.Callable[[Player], None]
+```
+
+Gets or sets the on close callback.
+
+#### on_submit [#endstone.form.ActionForm.on_submit]
+
+```python
+on_submit: typing.Callable[[Player, int], None]
+```
+
+Gets or sets the on submit callback.
+
+#### title [#endstone.form.ActionForm.title]
+
+```python
+title: str | Translatable
+```
+
+Gets or sets the title of the form.
+
+### Button [#endstone.form.Button]
+
+```python
+Button(
+    text: str | Translatable = "",
+    icon: str | None = None,
+    on_click: Callable[[Player], None] = None,
+) -> None
+```
+
+Represents a button with text and an optional icon.
+
+**Attributes:**
+
+- [**icon**](#endstone.form.Button.icon) (<code>[str](#str) | None</code>) – Gets or sets the icon path or URL of the button
+- [**on_click**](#endstone.form.Button.on_click) (<code>[Callable](#typing.Callable)\[\[[Player](#endstone._internal.endstone_python.Player)\], None\]</code>) – Gets or sets the on click callback.
+- [**text**](#endstone.form.Button.text) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable)</code>) – Gets or sets the text of the button
+
+#### icon [#endstone.form.Button.icon]
+
+```python
+icon: str | None
+```
+
+Gets or sets the icon path or URL of the button
+
+#### on_click [#endstone.form.Button.on_click]
+
+```python
+on_click: typing.Callable[[Player], None]
+```
+
+Gets or sets the on click callback.
+
+#### text [#endstone.form.Button.text]
+
+```python
+text: str | Translatable
+```
+
+Gets or sets the text of the button
+
+### Divider [#endstone.form.Divider]
+
+```python
+Divider() -> None
+```
+
+Represents a divider.
+
+### Dropdown [#endstone.form.Dropdown]
+
+```python
+Dropdown(
+    label: str | Translatable = "",
+    options: list[str] | None = None,
+    default_index: int | None = None,
+) -> None
+```
+
+Represents a dropdown with a set of predefined options.
+
+**Methods:**
+
+- [**add_option**](#endstone.form.Dropdown.add_option) – Adds a new option to the dropdown.
+
+**Attributes:**
+
+- [**default_index**](#endstone.form.Dropdown.default_index) (<code>[int](#int) | None</code>) – Gets or sets the optional default index of the dropdown.
+- [**label**](#endstone.form.Dropdown.label) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable)</code>) – Gets or sets the label of the dropdown.
+- [**options**](#endstone.form.Dropdown.options) (<code>[list](#list)\[[str](#str)\]</code>) – Gets or sets the options of the dropdown.
+
+#### add_option [#endstone.form.Dropdown.add_option]
+
+```python
+add_option(option:str) -> Dropdown
+```
+
+Adds a new option to the dropdown.
+
+#### default_index [#endstone.form.Dropdown.default_index]
+
+```python
+default_index: int | None
+```
+
+Gets or sets the optional default index of the dropdown.
+
+#### label [#endstone.form.Dropdown.label]
+
+```python
+label: str | Translatable
+```
+
+Gets or sets the label of the dropdown.
+
+#### options [#endstone.form.Dropdown.options]
+
+```python
+options: list[str]
+```
+
+Gets or sets the options of the dropdown.
+
+### Header [#endstone.form.Header]
+
+```python
+Header(label:str | Translatable = '') -> None
+```
+
+Represents a header with a label.
+
+**Attributes:**
+
+- [**label**](#endstone.form.Header.label) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable)</code>) – Gets or sets the label of the header.
+
+#### label [#endstone.form.Header.label]
+
+```python
+label: str | Translatable
+```
+
+Gets or sets the label of the header.
+
+### Label [#endstone.form.Label]
+
+```python
+Label(text:str | Translatable = '') -> None
+```
+
+Represents a text label.
+
+**Attributes:**
+
+- [**text**](#endstone.form.Label.text) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable)</code>) – Gets or sets the text of the label.
+
+#### text [#endstone.form.Label.text]
+
+```python
+text: str | Translatable
+```
+
+Gets or sets the text of the label.
+
+### MessageForm [#endstone.form.MessageForm]
+
+```python
+MessageForm(
+    title: str | Translatable = "",
+    content: str | Translatable = "",
+    button1: str | Translatable = "",
+    button2: str | Translatable = "",
+    on_submit: Callable[[Player, int], None] = None,
+    on_close: Callable[[Player], None] = None,
+) -> None
+```
+
+Represents a form with two buttons.
+
+**Attributes:**
+
+- [**button1**](#endstone.form.MessageForm.button1) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable)</code>) – Gets or sets the text of button1.
+- [**button2**](#endstone.form.MessageForm.button2) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable)</code>) – Gets or sets the text of button2.
+- [**content**](#endstone.form.MessageForm.content) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable)</code>) – Gets or sets the content of the form.
+- [**on_close**](#endstone.form.MessageForm.on_close) (<code>[Callable](#typing.Callable)\[\[[Player](#endstone._internal.endstone_python.Player)\], None\]</code>) – Gets or sets the on close callback.
+- [**on_submit**](#endstone.form.MessageForm.on_submit) (<code>[Callable](#typing.Callable)\[\[[Player](#endstone._internal.endstone_python.Player), [int](#int)\], None\]</code>) – Gets or sets the on submit callback.
+- [**title**](#endstone.form.MessageForm.title) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable)</code>) – Gets or sets the title of the form.
+
+#### button1 [#endstone.form.MessageForm.button1]
+
+```python
+button1: str | Translatable
+```
+
+Gets or sets the text of button1.
+
+#### button2 [#endstone.form.MessageForm.button2]
+
+```python
+button2: str | Translatable
+```
+
+Gets or sets the text of button2.
+
+#### content [#endstone.form.MessageForm.content]
+
+```python
+content: str | Translatable
+```
+
+Gets or sets the content of the form.
+
+#### on_close [#endstone.form.MessageForm.on_close]
+
+```python
+on_close: typing.Callable[[Player], None]
+```
+
+Gets or sets the on close callback.
+
+#### on_submit [#endstone.form.MessageForm.on_submit]
+
+```python
+on_submit: typing.Callable[[Player, int], None]
+```
+
+Gets or sets the on submit callback.
+
+#### title [#endstone.form.MessageForm.title]
+
+```python
+title: str | Translatable
+```
+
+Gets or sets the title of the form.
+
+### ModalForm [#endstone.form.ModalForm]
+
+```python
+ModalForm(
+    title: str | Translatable = "",
+    controls: (
+        list[
+            Dropdown
+            | Label
+            | Slider
+            | StepSlider
+            | TextInput
+            | Toggle
+            | Divider
+            | Header
+        ]
+        | None
+    ) = None,
+    submit_button: str | Translatable | None = None,
+    icon: str | None = None,
+    on_submit: Callable[[Player, str], None] = None,
+    on_close: Callable[[Player], None] = None,
+) -> None
+```
+
+Represents a modal form with controls.
+
+**Methods:**
+
+- [**add_control**](#endstone.form.ModalForm.add_control) – Adds a control to the form.
+
+**Attributes:**
+
+- [**controls**](#endstone.form.ModalForm.controls) (<code>[list](#list)\[[Dropdown](#endstone._internal.endstone_python.Dropdown) | [Label](#endstone._internal.endstone_python.Label) | [Slider](#endstone._internal.endstone_python.Slider) | [StepSlider](#endstone._internal.endstone_python.StepSlider) | [TextInput](#endstone._internal.endstone_python.TextInput) | [Toggle](#endstone._internal.endstone_python.Toggle) | [Divider](#endstone._internal.endstone_python.Divider) | [Header](#endstone._internal.endstone_python.Header)\]</code>) – Gets or sets the controls of the modal form.
+- [**icon**](#endstone.form.ModalForm.icon) (<code>[str](#str) | None</code>) – Gets or sets the icon of the form.
+- [**on_close**](#endstone.form.ModalForm.on_close) (<code>[Callable](#typing.Callable)\[\[[Player](#endstone._internal.endstone_python.Player)\], None\]</code>) – Gets or sets the on close callback.
+- [**on_submit**](#endstone.form.ModalForm.on_submit) (<code>[Callable](#typing.Callable)\[\[[Player](#endstone._internal.endstone_python.Player), [str](#str)\], None\]</code>) – Gets or sets the on submit callback.
+- [**submit_button**](#endstone.form.ModalForm.submit_button) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable) | None</code>) – Gets or sets the submit button message of the form.
+- [**title**](#endstone.form.ModalForm.title) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable)</code>) – Gets or sets the title of the form.
+
+#### add_control [#endstone.form.ModalForm.add_control]
+
+```python
+add_control(
+    control: (
+        Dropdown
+        | Label
+        | Slider
+        | StepSlider
+        | TextInput
+        | Toggle
+        | Divider
+        | Header
+    ),
+) -> ModalForm
+```
+
+Adds a control to the form.
+
+#### controls [#endstone.form.ModalForm.controls]
+
+```python
+controls: list[
+    Dropdown
+    | Label
+    | Slider
+    | StepSlider
+    | TextInput
+    | Toggle
+    | Divider
+    | Header
+]
+
+```
+
+Gets or sets the controls of the modal form.
+
+#### icon [#endstone.form.ModalForm.icon]
+
+```python
+icon: str | None
+```
+
+Gets or sets the icon of the form.
+
+#### on_close [#endstone.form.ModalForm.on_close]
+
+```python
+on_close: typing.Callable[[Player], None]
+```
+
+Gets or sets the on close callback.
+
+#### on_submit [#endstone.form.ModalForm.on_submit]
+
+```python
+on_submit: typing.Callable[[Player, str], None]
+```
+
+Gets or sets the on submit callback.
+
+#### submit_button [#endstone.form.ModalForm.submit_button]
+
+```python
+submit_button: str | Translatable | None
+```
+
+Gets or sets the submit button message of the form.
+
+#### title [#endstone.form.ModalForm.title]
+
+```python
+title: str | Translatable
+```
+
+Gets or sets the title of the form.
+
+### Slider [#endstone.form.Slider]
+
+```python
+Slider(
+    label: str | Translatable = "",
+    min: float = 0,
+    max: float = 100,
+    step: float = 20,
+    default_value: float | None = None,
+) -> None
+```
+
+Represents a slider with a label.
+
+**Attributes:**
+
+- [**default_value**](#endstone.form.Slider.default_value) (<code>[float](#float) | None</code>) – Gets or sets the optional default value of the slider.
+- [**label**](#endstone.form.Slider.label) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable)</code>) – Gets or sets the label of the slider.
+- [**max**](#endstone.form.Slider.max) (<code>[float](#float)</code>) – Gets or sets the maximum value of the slider.
+- [**min**](#endstone.form.Slider.min) (<code>[float](#float)</code>) – Gets or sets the minimum value of the slider.
+- [**step**](#endstone.form.Slider.step) (<code>[float](#float)</code>) – Gets or sets the step size of the slider.
+
+#### default_value [#endstone.form.Slider.default_value]
+
+```python
+default_value: float | None
+```
+
+Gets or sets the optional default value of the slider.
+
+#### label [#endstone.form.Slider.label]
+
+```python
+label: str | Translatable
+```
+
+Gets or sets the label of the slider.
+
+#### max [#endstone.form.Slider.max]
+
+```python
+max: float
+```
+
+Gets or sets the maximum value of the slider.
+
+#### min [#endstone.form.Slider.min]
+
+```python
+min: float
+```
+
+Gets or sets the minimum value of the slider.
+
+#### step [#endstone.form.Slider.step]
+
+```python
+step: float
+```
+
+Gets or sets the step size of the slider.
+
+### StepSlider [#endstone.form.StepSlider]
+
+```python
+StepSlider(
+    label: str | Translatable = "",
+    options: list[str] | None = None,
+    default_index: int | None = None,
+) -> None
+```
+
+Represents a step slider with a set of predefined options.
+
+**Methods:**
+
+- [**add_option**](#endstone.form.StepSlider.add_option) – Adds a new option to the step slider.
+
+**Attributes:**
+
+- [**default_index**](#endstone.form.StepSlider.default_index) (<code>[int](#int) | None</code>) – Gets or sets the optional default index of the step slider.
+- [**label**](#endstone.form.StepSlider.label) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable)</code>) – Gets or sets the label of the step slider.
+- [**options**](#endstone.form.StepSlider.options) (<code>[list](#list)\[[str](#str)\]</code>) – Gets or sets the options of the step slider.
+
+#### add_option [#endstone.form.StepSlider.add_option]
+
+```python
+add_option(option:str) -> Dropdown
+```
+
+Adds a new option to the step slider.
+
+#### default_index [#endstone.form.StepSlider.default_index]
+
+```python
+default_index: int | None
+```
+
+Gets or sets the optional default index of the step slider.
+
+#### label [#endstone.form.StepSlider.label]
+
+```python
+label: str | Translatable
+```
+
+Gets or sets the label of the step slider.
+
+#### options [#endstone.form.StepSlider.options]
+
+```python
+options: list[str]
+```
+
+Gets or sets the options of the step slider.
+
+### TextInput [#endstone.form.TextInput]
+
+```python
+TextInput(
+    label: str | Translatable = "",
+    placeholder: str | Translatable = "",
+    default_value: str | None = None,
+) -> None
+```
+
+Represents a text input field.
+
+**Attributes:**
+
+- [**default_value**](#endstone.form.TextInput.default_value) (<code>[str](#str) | None</code>) – Gets or sets the optional default text of the text input field.
+- [**label**](#endstone.form.TextInput.label) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable)</code>) – Gets or sets the label of the text input field.
+- [**placeholder**](#endstone.form.TextInput.placeholder) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable)</code>) – Gets or sets the placeholder of the text input field.
+
+#### default_value [#endstone.form.TextInput.default_value]
+
+```python
+default_value: str | None
+```
+
+Gets or sets the optional default text of the text input field.
+
+#### label [#endstone.form.TextInput.label]
+
+```python
+label: str | Translatable
+```
+
+Gets or sets the label of the text input field.
+
+#### placeholder [#endstone.form.TextInput.placeholder]
+
+```python
+placeholder: str | Translatable
+```
+
+Gets or sets the placeholder of the text input field.
+
+### Toggle [#endstone.form.Toggle]
+
+```python
+Toggle(label:str | Translatable = '', default_value:bool = False) -> None
+```
+
+Represents a toggle button with a label.
+
+**Attributes:**
+
+- [**default_value**](#endstone.form.Toggle.default_value) (<code>[bool](#bool)</code>) – Gets or sets the value of the toggle.
+- [**label**](#endstone.form.Toggle.label) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable)</code>) – Gets or sets the label of the toggle.
+
+#### default_value [#endstone.form.Toggle.default_value]
+
+```python
+default_value: bool
+```
+
+Gets or sets the value of the toggle.
+
+#### label [#endstone.form.Toggle.label]
+
+```python
+label: str | Translatable
+```
+
+Gets or sets the label of the toggle.

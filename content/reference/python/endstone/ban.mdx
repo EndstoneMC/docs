@@ -1,0 +1,272 @@
+---
+title: "endstone.ban"
+---
+
+## endstone.ban [#endstone.ban]
+
+**Classes:**
+
+- [**IpBanEntry**](#endstone.ban.IpBanEntry) – Represents a ban entry for an IP address.
+- [**IpBanList**](#endstone.ban.IpBanList) – Represents a ban list containing banned IP addresses.
+- [**PlayerBanEntry**](#endstone.ban.PlayerBanEntry) – Represents a ban entry for a player.
+- [**PlayerBanList**](#endstone.ban.PlayerBanList) – Represents a ban list containing banned players.
+
+### IpBanEntry [#endstone.ban.IpBanEntry]
+
+```python
+IpBanEntry(address:str) -> None
+```
+
+Bases: <code>[BanEntry](#endstone._internal.endstone_python.BanEntry)</code>
+
+Represents a ban entry for an IP address.
+
+**Attributes:**
+
+- [**address**](#endstone.ban.IpBanEntry.address) (<code>[str](#str)</code>) – Gets the banned IP address.
+- [**created**](#endstone.ban.IpBanEntry.created) (<code>[datetime](#datetime.datetime)</code>) – Gets or sets the date this ban entry was created.
+- [**expiration**](#endstone.ban.IpBanEntry.expiration) (<code>[datetime](#datetime.datetime) | None</code>) – Gets or sets the date this ban expires on.
+- [**reason**](#endstone.ban.IpBanEntry.reason) (<code>[str](#str)</code>) – Gets or sets the reason for this ban.
+- [**source**](#endstone.ban.IpBanEntry.source) (<code>[str](#str)</code>) – Gets or sets the source of this ban.
+
+#### address [#endstone.ban.IpBanEntry.address]
+
+```python
+address: str
+```
+
+Gets the banned IP address.
+
+#### created [#endstone.ban.IpBanEntry.created]
+
+```python
+created: datetime.datetime
+```
+
+Gets or sets the date this ban entry was created.
+
+#### expiration [#endstone.ban.IpBanEntry.expiration]
+
+```python
+expiration: datetime.datetime | None
+```
+
+Gets or sets the date this ban expires on.
+
+#### reason [#endstone.ban.IpBanEntry.reason]
+
+```python
+reason: str
+```
+
+Gets or sets the reason for this ban.
+
+#### source [#endstone.ban.IpBanEntry.source]
+
+```python
+source: str
+```
+
+Gets or sets the source of this ban.
+
+### IpBanList [#endstone.ban.IpBanList]
+
+Represents a ban list containing banned IP addresses.
+
+**Methods:**
+
+- [**add_ban**](#endstone.ban.IpBanList.add_ban) – Adds a ban to this list, or updates an existing one.
+- [**get_ban_entry**](#endstone.ban.IpBanList.get_ban_entry) – Gets a BanEntry by IP address.
+- [**is_banned**](#endstone.ban.IpBanList.is_banned) – Checks if a BanEntry exists for the target by IP address.
+- [**remove_ban**](#endstone.ban.IpBanList.remove_ban) – Removes an IP address from the ban list.
+
+**Attributes:**
+
+- [**entries**](#endstone.ban.IpBanList.entries) (<code>[list](#list)\[[IpBanEntry](#endstone._internal.endstone_python.IpBanEntry)\]</code>) – Gets a vector of pointers to entries in the ban list.
+
+#### add_ban [#endstone.ban.IpBanList.add_ban]
+
+```python
+add_ban(
+    address: str,
+    reason: str | None = None,
+    expires: datetime | None = None,
+    source: str | None = None,
+) -> IpBanEntry
+```
+
+Adds a ban to this list, or updates an existing one.
+
+#### entries [#endstone.ban.IpBanList.entries]
+
+```python
+entries: list[IpBanEntry]
+```
+
+Gets a vector of pointers to entries in the ban list.
+
+#### get_ban_entry [#endstone.ban.IpBanList.get_ban_entry]
+
+```python
+get_ban_entry(address:str) -> IpBanEntry
+```
+
+Gets a BanEntry by IP address.
+
+#### is_banned [#endstone.ban.IpBanList.is_banned]
+
+```python
+is_banned(address:str) -> bool
+```
+
+Checks if a BanEntry exists for the target by IP address.
+
+#### remove_ban [#endstone.ban.IpBanList.remove_ban]
+
+```python
+remove_ban(address:str) -> None
+```
+
+Removes an IP address from the ban list.
+
+### PlayerBanEntry [#endstone.ban.PlayerBanEntry]
+
+```python
+PlayerBanEntry(
+    name: str, uuid: UUID | None = None, xuid: str | None = None
+) -> None
+```
+
+Bases: <code>[BanEntry](#endstone._internal.endstone_python.BanEntry)</code>
+
+Represents a ban entry for a player.
+
+**Attributes:**
+
+- [**created**](#endstone.ban.PlayerBanEntry.created) (<code>[datetime](#datetime.datetime)</code>) – Gets or sets the date this ban entry was created.
+- [**expiration**](#endstone.ban.PlayerBanEntry.expiration) (<code>[datetime](#datetime.datetime) | None</code>) – Gets or sets the date this ban expires on.
+- [**name**](#endstone.ban.PlayerBanEntry.name) (<code>[str](#str)</code>) – Gets the banned player's name.
+- [**reason**](#endstone.ban.PlayerBanEntry.reason) (<code>[str](#str)</code>) – Gets or sets the reason for this ban.
+- [**source**](#endstone.ban.PlayerBanEntry.source) (<code>[str](#str)</code>) – Gets or sets the source of this ban.
+- [**unique_id**](#endstone.ban.PlayerBanEntry.unique_id) (<code>[UUID](#uuid.UUID) | None</code>) – Gets the banned player's unique ID, or None if not available.
+- [**xuid**](#endstone.ban.PlayerBanEntry.xuid) (<code>[str](#str) | None</code>) – Gets the banned player's Xbox user ID (XUID), or None if not available.
+
+#### created [#endstone.ban.PlayerBanEntry.created]
+
+```python
+created: datetime.datetime
+```
+
+Gets or sets the date this ban entry was created.
+
+#### expiration [#endstone.ban.PlayerBanEntry.expiration]
+
+```python
+expiration: datetime.datetime | None
+```
+
+Gets or sets the date this ban expires on.
+
+#### name [#endstone.ban.PlayerBanEntry.name]
+
+```python
+name: str
+```
+
+Gets the banned player's name.
+
+#### reason [#endstone.ban.PlayerBanEntry.reason]
+
+```python
+reason: str
+```
+
+Gets or sets the reason for this ban.
+
+#### source [#endstone.ban.PlayerBanEntry.source]
+
+```python
+source: str
+```
+
+Gets or sets the source of this ban.
+
+#### unique_id [#endstone.ban.PlayerBanEntry.unique_id]
+
+```python
+unique_id: uuid.UUID | None
+```
+
+Gets the banned player's unique ID, or None if not available.
+
+#### xuid [#endstone.ban.PlayerBanEntry.xuid]
+
+```python
+xuid: str | None
+```
+
+Gets the banned player's Xbox user ID (XUID), or None if not available.
+
+### PlayerBanList [#endstone.ban.PlayerBanList]
+
+Represents a ban list containing banned players.
+
+**Methods:**
+
+- [**add_ban**](#endstone.ban.PlayerBanList.add_ban) – Adds a ban to this list, or updates an existing one.
+- [**get_ban_entry**](#endstone.ban.PlayerBanList.get_ban_entry) – Gets a BanEntry by player name, UUID, or XUID.
+- [**is_banned**](#endstone.ban.PlayerBanList.is_banned) – Checks if a BanEntry exists for the target by name, UUID, or XUID.
+- [**remove_ban**](#endstone.ban.PlayerBanList.remove_ban) – Removes a player from the ban list by name, UUID, or XUID.
+
+**Attributes:**
+
+- [**entries**](#endstone.ban.PlayerBanList.entries) (<code>[list](#list)\[[PlayerBanEntry](#endstone._internal.endstone_python.PlayerBanEntry)\]</code>) – Gets a vector of pointers to entries in the ban list.
+
+#### add_ban [#endstone.ban.PlayerBanList.add_ban]
+
+```python
+add_ban(
+    name: str,
+    uuid: UUID | None = None,
+    xuid: str | None = None,
+    reason: str | None = None,
+    expires: datetime | None = None,
+    source: str | None = None,
+) -> PlayerBanEntry
+```
+
+Adds a ban to this list, or updates an existing one.
+
+#### entries [#endstone.ban.PlayerBanList.entries]
+
+```python
+entries: list[PlayerBanEntry]
+```
+
+Gets a vector of pointers to entries in the ban list.
+
+#### get_ban_entry [#endstone.ban.PlayerBanList.get_ban_entry]
+
+```python
+get_ban_entry(
+    name: str, uuid: UUID | None = None, xuid: str | None = None
+) -> PlayerBanEntry
+```
+
+Gets a BanEntry by player name, UUID, or XUID.
+
+#### is_banned [#endstone.ban.PlayerBanList.is_banned]
+
+```python
+is_banned(name:str, uuid:UUID | None = None, xuid:str | None = None) -> bool
+```
+
+Checks if a BanEntry exists for the target by name, UUID, or XUID.
+
+#### remove_ban [#endstone.ban.PlayerBanList.remove_ban]
+
+```python
+remove_ban(name:str, uuid:UUID | None = None, xuid:str | None = None) -> None
+```
+
+Removes a player from the ban list by name, UUID, or XUID.
