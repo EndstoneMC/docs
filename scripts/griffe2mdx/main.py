@@ -11,6 +11,7 @@ from griffe import GriffeLoader, Object, Parser, Kind
 from griffe2md import rendering
 from griffe2md.main import prepare_context, prepare_env
 from jinja2 import Environment, FileSystemLoader
+from extension import StubOverloadExtension
 
 sys.path.append(r"D:\Projects\CPP\endstone")
 
@@ -29,7 +30,7 @@ def render_object_docs(obj: Object, config: dict | None = None) -> str:
 def render_package_docs(package: str, config: dict | None = None) -> str:
     config = config or dict(rendering.default_config)
     parser = config["docstring_style"] and Parser(config["docstring_style"])
-    extensions = griffe.load_extensions("griffe_endstone")
+    extensions = griffe.load_extensions(StubOverloadExtension)
     loader = GriffeLoader(docstring_parser=parser, extensions=extensions)
     module = loader.load(package, find_stubs_package=True)
     loader.resolve_aliases(external=True)
