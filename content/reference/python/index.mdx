@@ -1531,8 +1531,24 @@ Get the player's skin.
 #### <code className="doc-symbol doc-symbol-method"/> spawn_particle [#endstone.Player.spawn_particle]
 
 ```python
-spawn_particle()
+spawn_particle(
+    name: str, location: Location, molang_variables_json: str | None = None
+) -> None
 ```
+
+Spawns the particle at the target location.
+
+```python
+spawn_particle(
+    name: str,
+    x: float,
+    y: float,
+    z: float,
+    molang_variables_json: str | None = None,
+) -> None
+```
+
+Spawns the particle at the target location.
 
 #### <code className="doc-symbol doc-symbol-method"/> stop_all_sounds [#endstone.Player.stop_all_sounds]
 
@@ -1950,8 +1966,16 @@ Returns the registry for all the enchantments.
 #### <code className="doc-symbol doc-symbol-method"/> get_player [#endstone.Server.get_player]
 
 ```python
-get_player()
+get_player(name:str) -> Player
 ```
+
+Gets the player with the exact given name, case insensitive.
+
+```python
+get_player(unique_id:UUID) -> Player
+```
+
+Gets the player with the given UUID.
 
 #### <code className="doc-symbol doc-symbol-method"/> get_plugin_command [#endstone.Server.get_plugin_command]
 
@@ -2558,8 +2582,16 @@ Sets the actor's rotation.
 ##### <code className="doc-symbol doc-symbol-method"/> teleport [#endstone.actor.Actor.teleport]
 
 ```python
-teleport()
+teleport(location:Location) -> None
 ```
+
+Teleports this actor to the given location.
+
+```python
+teleport(target:Actor) -> None
+```
+
+Teleports this actor to the target Actor.
 
 ##### <code className="doc-symbol doc-symbol-attribute"/> type [#endstone.actor.Actor.type]
 
@@ -3129,8 +3161,16 @@ Gets the dimension which contains this Block
 ##### <code className="doc-symbol doc-symbol-method"/> get_relative [#endstone.block.Block.get_relative]
 
 ```python
-get_relative()
+get_relative(offset_x:int, offset_y:int, offset_z:int) -> Block
 ```
+
+Gets the block at the given offsets
+
+```python
+get_relative(face:BlockFace, distance:int = 1) -> Block
+```
+
+Gets the block at the given distance of the given face
 
 ##### <code className="doc-symbol doc-symbol-attribute"/> location [#endstone.block.Block.location]
 
@@ -8725,26 +8765,69 @@ If all items are stored, it will return an empty dict.
 ##### <code className="doc-symbol doc-symbol-method"/> all [#endstone.inventory.Inventory.all]
 
 ```python
-all()
+all(item:ItemStack) -> dict[int, ItemStack]
 ```
+
+Finds all slots in the inventory containing any ItemStacks with the given ItemStack.
+This will only match slots if both the type and the amount of the stack match
+The returned map contains entries where, the key is the slot index, and the value is the ItemStack in that slot. If no matching ItemStack is found, an empty dict is returned.
+
+```python
+all(type:str) -> dict[int, ItemStack]
+```
+
+Finds all slots in the inventory containing any ItemStacks with the given ItemType.
+The returned map contains entries where, the key is the slot index, and the value is the ItemStack in that slot. If no matching ItemStack is found, an empty dict is returned.
 
 ##### <code className="doc-symbol doc-symbol-method"/> clear [#endstone.inventory.Inventory.clear]
 
 ```python
-clear()
+clear(index:int) -> None
 ```
+
+Clears out a particular slot in the index.
+
+```python
+clear() -> None
+```
+
+Clears out the whole Inventory.
 
 ##### <code className="doc-symbol doc-symbol-method"/> contains [#endstone.inventory.Inventory.contains]
 
 ```python
-contains()
+contains(item:ItemStack, amount:int) -> bool
 ```
+
+Checks if the inventory contains at least the minimum amount specified of exactly matching ItemStacks.
+An ItemStack only counts if both the type and the amount of the stack match.
+
+```python
+contains(item:ItemStack) -> bool
+```
+
+Checks if the inventory contains any ItemStacks with the given ItemStack.
+This will only return true if both the type and the amount of the stack match.
+
+```python
+contains(type:str) -> bool
+```
+
+Checks if the inventory contains any ItemStacks with the given ItemType.
 
 ##### <code className="doc-symbol doc-symbol-method"/> contains_at_least [#endstone.inventory.Inventory.contains_at_least]
 
 ```python
-contains_at_least()
+contains_at_least(item:ItemStack, amount:int) -> bool
 ```
+
+Checks if the inventory contains ItemStacks matching the given ItemStack whose amounts sum to at least the minimum amount specified.
+
+```python
+contains_at_least(type:str, amount:int) -> bool
+```
+
+Checks if the inventory contains any ItemStacks with the given ItemType, adding to at least the minimum amount specified.
 
 ##### <code className="doc-symbol doc-symbol-attribute"/> contents [#endstone.inventory.Inventory.contents]
 
@@ -8757,8 +8840,19 @@ Returns all ItemStacks from the inventory
 ##### <code className="doc-symbol doc-symbol-method"/> first [#endstone.inventory.Inventory.first]
 
 ```python
-first()
+first(item:ItemStack) -> int
 ```
+
+Returns the first slot in the inventory containing an ItemStack with the given stack.
+This will only match slots if both the type and the amount of the stack match
+The returned map contains entries where, the key is the slot index, and the value is the ItemStack in that slot. If no matching ItemStack is found, an empty dict is returned.
+
+```python
+first(type:str) -> int
+```
+
+Finds the first slot in the inventory containing an ItemStack with the given ItemType.
+The returned map contains entries where, the key is the slot index, and the value is the ItemStack in that slot. If no matching ItemStack is found, an empty dict is returned.
 
 ##### <code className="doc-symbol doc-symbol-attribute"/> first_empty [#endstone.inventory.Inventory.first_empty]
 
@@ -8795,8 +8889,17 @@ Returns the maximum stack size for an ItemStack in this inventory.
 ##### <code className="doc-symbol doc-symbol-method"/> remove [#endstone.inventory.Inventory.remove]
 
 ```python
-remove()
+remove(item:ItemStack) -> None
 ```
+
+Removes all stacks in the inventory matching the given stack.
+This will only match a slot if both the type and the amount of the stack match
+
+```python
+remove(type:str) -> None
+```
+
+Removes all stacks in the inventory matching the given ItemType.
 
 ##### <code className="doc-symbol doc-symbol-method"/> remove_item [#endstone.inventory.Inventory.remove_item]
 
@@ -9562,8 +9665,18 @@ Gets the current locale.
 ##### <code className="doc-symbol doc-symbol-method"/> translate [#endstone.lang.Language.translate]
 
 ```python
-translate()
+translate(
+    text: str, params: list[str] | None = None, locale: str | None = None
+) -> str
 ```
+
+Translates a given text using a set of parameters for a specific locale.
+
+```python
+translate(translatable:Translatable, locale:str | None = None) -> str
+```
+
+Translates a Translatable object into a specific locale.
 
 </div>
 
@@ -9922,14 +10035,30 @@ Drops an item at the specified Location
 ##### <code className="doc-symbol doc-symbol-method"/> get_block_at [#endstone.level.Dimension.get_block_at]
 
 ```python
-get_block_at()
+get_block_at(location:Location) -> Block
 ```
+
+Gets the Block at the given Location
+
+```python
+get_block_at(x:int, y:int, z:int) -> Block
+```
+
+Gets the Block at the given coordinates
 
 ##### <code className="doc-symbol doc-symbol-method"/> get_highest_block_at [#endstone.level.Dimension.get_highest_block_at]
 
 ```python
-get_highest_block_at()
+get_highest_block_at(location:Location) -> Block
 ```
+
+Gets the highest non-empty (impassable) block at the given Location.
+
+```python
+get_highest_block_at(x:int, z:int) -> Block
+```
+
+Gets the highest non-empty (impassable) block at the given coordinates.
 
 ##### <code className="doc-symbol doc-symbol-method"/> get_highest_block_y_at [#endstone.level.Dimension.get_highest_block_y_at]
 
@@ -10724,8 +10853,16 @@ Represents an object that may become a server operator and can be assigned permi
 ##### <code className="doc-symbol doc-symbol-method"/> add_attachment [#endstone.permissions.Permissible.add_attachment]
 
 ```python
-add_attachment()
+add_attachment(plugin:Plugin, name:str, value:bool) -> PermissionAttachment
 ```
+
+Adds a new PermissionAttachment.
+
+```python
+add_attachment(plugin:Plugin) -> PermissionAttachment
+```
+
+Adds a new PermissionAttachment.
 
 ##### <code className="doc-symbol doc-symbol-attribute"/> effective_permissions [#endstone.permissions.Permissible.effective_permissions]
 
@@ -10738,14 +10875,30 @@ Gets effective permissions.
 ##### <code className="doc-symbol doc-symbol-method"/> has_permission [#endstone.permissions.Permissible.has_permission]
 
 ```python
-has_permission()
+has_permission(name:str) -> bool
 ```
+
+Checks if a permissions is available by name.
+
+```python
+has_permission(perm:Permission) -> bool
+```
+
+Checks if a permissions is available by permission.
 
 ##### <code className="doc-symbol doc-symbol-method"/> is_permission_set [#endstone.permissions.Permissible.is_permission_set]
 
 ```python
-is_permission_set()
+is_permission_set(name:str) -> bool
 ```
+
+Checks if a permissions is set by name.
+
+```python
+is_permission_set(perm:Permission) -> bool
+```
+
+Checks if a permissions is set by permission.
 
 ##### <code className="doc-symbol doc-symbol-attribute"/> permission_level [#endstone.permissions.Permissible.permission_level]
 
@@ -10851,8 +11004,16 @@ Represents a unique permission that may be attached to a Permissible
 ##### <code className="doc-symbol doc-symbol-method"/> add_parent [#endstone.permissions.Permission.add_parent]
 
 ```python
-add_parent()
+add_parent(name:str, value:bool) -> Permission
 ```
+
+Adds this permission to the specified parent permission.
+
+```python
+add_parent(perm:Permission, value:bool) -> None
+```
+
+Adds this permission to the specified parent permission.
 
 ##### <code className="doc-symbol doc-symbol-attribute"/> children [#endstone.permissions.Permission.children]
 
@@ -11014,14 +11175,30 @@ Removes this attachment from its registered Permissible.
 ##### <code className="doc-symbol doc-symbol-method"/> set_permission [#endstone.permissions.PermissionAttachment.set_permission]
 
 ```python
-set_permission()
+set_permission(name:str, value:bool) -> None
 ```
+
+Sets a permission to the given value, by its fully qualified name.
+
+```python
+set_permission(perm:Permission, value:bool) -> None
+```
+
+Sets a permission to the given value.
 
 ##### <code className="doc-symbol doc-symbol-method"/> unset_permission [#endstone.permissions.PermissionAttachment.unset_permission]
 
 ```python
-unset_permission()
+unset_permission(name:str) -> None
 ```
+
+Removes the specified permission from this attachment by name.
+
+```python
+unset_permission(perm:Permission) -> None
+```
+
+Removes the specified permission from this attachment.
 
 </div>
 
@@ -12319,8 +12496,16 @@ Checks if the given plugin is loaded and returns it when applicable.
 ##### <code className="doc-symbol doc-symbol-method"/> is_plugin_enabled [#endstone.plugin.PluginManager.is_plugin_enabled]
 
 ```python
-is_plugin_enabled()
+is_plugin_enabled(plugin:str) -> bool
 ```
+
+Checks if the given plugin is enabled or not
+
+```python
+is_plugin_enabled(plugin:Plugin) -> bool
+```
+
+Checks if the given plugin is enabled or not
 
 ##### <code className="doc-symbol doc-symbol-method"/> load_plugin [#endstone.plugin.PluginManager.load_plugin]
 
@@ -12333,8 +12518,16 @@ Loads the plugin in the specified file
 ##### <code className="doc-symbol doc-symbol-method"/> load_plugins [#endstone.plugin.PluginManager.load_plugins]
 
 ```python
-load_plugins()
+load_plugins(directory:str) -> list[Plugin]
 ```
+
+Loads the plugin contained within the specified directory
+
+```python
+load_plugins(files:list[str]) -> list[Plugin]
+```
+
+Loads the plugins in the list of the files
 
 ##### <code className="doc-symbol doc-symbol-attribute"/> permissions [#endstone.plugin.PluginManager.permissions]
 
@@ -12377,8 +12570,16 @@ Registers the given event
 ##### <code className="doc-symbol doc-symbol-method"/> remove_permission [#endstone.plugin.PluginManager.remove_permission]
 
 ```python
-remove_permission()
+remove_permission(perm:Permission) -> None
 ```
+
+Removes a Permission registration from this plugin manager by permission object.
+
+```python
+remove_permission(name:str) -> None
+```
+
+Removes a Permission registration from this plugin manager by name.
 
 ##### <code className="doc-symbol doc-symbol-method"/> subscribe_to_default_perms [#endstone.plugin.PluginManager.subscribe_to_default_perms]
 
@@ -12483,8 +12684,16 @@ Register a provider of a service.
 ##### <code className="doc-symbol doc-symbol-method"/> unregister [#endstone.plugin.ServiceManager.unregister]
 
 ```python
-unregister()
+unregister(name:str, provider:Service) -> None
 ```
+
+Unregister a particular provider for a particular service.
+
+```python
+unregister(provider:Service) -> None
+```
+
+Unregister a particular provider.
 
 ##### <code className="doc-symbol doc-symbol-method"/> unregister_all [#endstone.plugin.ServiceManager.unregister_all]
 
@@ -13460,8 +13669,16 @@ Gets all entries tracked by this Scoreboard
 ##### <code className="doc-symbol doc-symbol-method"/> get_objective [#endstone.scoreboard.Scoreboard.get_objective]
 
 ```python
-get_objective()
+get_objective(name:str) -> Objective
 ```
+
+Gets an Objective on this Scoreboard by name
+
+```python
+get_objective(slot:DisplaySlot) -> Objective
+```
+
+Gets the Objective currently displayed in a DisplaySlot on this Scoreboard
 
 ##### <code className="doc-symbol doc-symbol-method"/> get_objectives_by_criteria [#endstone.scoreboard.Scoreboard.get_objectives_by_criteria]
 

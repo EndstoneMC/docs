@@ -62,8 +62,18 @@ Gets the current locale.
 #### <code className="doc-symbol doc-symbol-method"/> translate [#endstone.lang.Language.translate]
 
 ```python
-translate()
+translate(
+    text: str, params: list[str] | None = None, locale: str | None = None
+) -> str
 ```
+
+Translates a given text using a set of parameters for a specific locale.
+
+```python
+translate(translatable:Translatable, locale:str | None = None) -> str
+```
+
+Translates a Translatable object into a specific locale.
 
 </div>
 

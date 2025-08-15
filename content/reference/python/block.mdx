@@ -122,8 +122,16 @@ Gets the dimension which contains this Block
 #### <code className="doc-symbol doc-symbol-method"/> get_relative [#endstone.block.Block.get_relative]
 
 ```python
-get_relative()
+get_relative(offset_x:int, offset_y:int, offset_z:int) -> Block
 ```
+
+Gets the block at the given offsets
+
+```python
+get_relative(face:BlockFace, distance:int = 1) -> Block
+```
+
+Gets the block at the given distance of the given face
 
 #### <code className="doc-symbol doc-symbol-attribute"/> location [#endstone.block.Block.location]
 

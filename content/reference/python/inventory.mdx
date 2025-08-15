@@ -250,26 +250,69 @@ If all items are stored, it will return an empty dict.
 #### <code className="doc-symbol doc-symbol-method"/> all [#endstone.inventory.Inventory.all]
 
 ```python
-all()
+all(item:ItemStack) -> dict[int, ItemStack]
 ```
+
+Finds all slots in the inventory containing any ItemStacks with the given ItemStack.
+This will only match slots if both the type and the amount of the stack match
+The returned map contains entries where, the key is the slot index, and the value is the ItemStack in that slot. If no matching ItemStack is found, an empty dict is returned.
+
+```python
+all(type:str) -> dict[int, ItemStack]
+```
+
+Finds all slots in the inventory containing any ItemStacks with the given ItemType.
+The returned map contains entries where, the key is the slot index, and the value is the ItemStack in that slot. If no matching ItemStack is found, an empty dict is returned.
 
 #### <code className="doc-symbol doc-symbol-method"/> clear [#endstone.inventory.Inventory.clear]
 
 ```python
-clear()
+clear(index:int) -> None
 ```
+
+Clears out a particular slot in the index.
+
+```python
+clear() -> None
+```
+
+Clears out the whole Inventory.
 
 #### <code className="doc-symbol doc-symbol-method"/> contains [#endstone.inventory.Inventory.contains]
 
 ```python
-contains()
+contains(item:ItemStack, amount:int) -> bool
 ```
+
+Checks if the inventory contains at least the minimum amount specified of exactly matching ItemStacks.
+An ItemStack only counts if both the type and the amount of the stack match.
+
+```python
+contains(item:ItemStack) -> bool
+```
+
+Checks if the inventory contains any ItemStacks with the given ItemStack.
+This will only return true if both the type and the amount of the stack match.
+
+```python
+contains(type:str) -> bool
+```
+
+Checks if the inventory contains any ItemStacks with the given ItemType.
 
 #### <code className="doc-symbol doc-symbol-method"/> contains_at_least [#endstone.inventory.Inventory.contains_at_least]
 
 ```python
-contains_at_least()
+contains_at_least(item:ItemStack, amount:int) -> bool
 ```
+
+Checks if the inventory contains ItemStacks matching the given ItemStack whose amounts sum to at least the minimum amount specified.
+
+```python
+contains_at_least(type:str, amount:int) -> bool
+```
+
+Checks if the inventory contains any ItemStacks with the given ItemType, adding to at least the minimum amount specified.
 
 #### <code className="doc-symbol doc-symbol-attribute"/> contents [#endstone.inventory.Inventory.contents]
 
@@ -282,8 +325,19 @@ Returns all ItemStacks from the inventory
 #### <code className="doc-symbol doc-symbol-method"/> first [#endstone.inventory.Inventory.first]
 
 ```python
-first()
+first(item:ItemStack) -> int
 ```
+
+Returns the first slot in the inventory containing an ItemStack with the given stack.
+This will only match slots if both the type and the amount of the stack match
+The returned map contains entries where, the key is the slot index, and the value is the ItemStack in that slot. If no matching ItemStack is found, an empty dict is returned.
+
+```python
+first(type:str) -> int
+```
+
+Finds the first slot in the inventory containing an ItemStack with the given ItemType.
+The returned map contains entries where, the key is the slot index, and the value is the ItemStack in that slot. If no matching ItemStack is found, an empty dict is returned.
 
 #### <code className="doc-symbol doc-symbol-attribute"/> first_empty [#endstone.inventory.Inventory.first_empty]
 
@@ -320,8 +374,17 @@ Returns the maximum stack size for an ItemStack in this inventory.
 #### <code className="doc-symbol doc-symbol-method"/> remove [#endstone.inventory.Inventory.remove]
 
 ```python
-remove()
+remove(item:ItemStack) -> None
 ```
+
+Removes all stacks in the inventory matching the given stack.
+This will only match a slot if both the type and the amount of the stack match
+
+```python
+remove(type:str) -> None
+```
+
+Removes all stacks in the inventory matching the given ItemType.
 
 #### <code className="doc-symbol doc-symbol-method"/> remove_item [#endstone.inventory.Inventory.remove_item]
 

@@ -331,8 +331,16 @@ Sets the actor's rotation.
 #### <code className="doc-symbol doc-symbol-method"/> teleport [#endstone.actor.Actor.teleport]
 
 ```python
-teleport()
+teleport(location:Location) -> None
 ```
+
+Teleports this actor to the given location.
+
+```python
+teleport(target:Actor) -> None
+```
+
+Teleports this actor to the target Actor.
 
 #### <code className="doc-symbol doc-symbol-attribute"/> type [#endstone.actor.Actor.type]
 

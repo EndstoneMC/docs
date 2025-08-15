@@ -1001,8 +1001,16 @@ Checks if the given plugin is loaded and returns it when applicable.
 #### <code className="doc-symbol doc-symbol-method"/> is_plugin_enabled [#endstone.plugin.PluginManager.is_plugin_enabled]
 
 ```python
-is_plugin_enabled()
+is_plugin_enabled(plugin:str) -> bool
 ```
+
+Checks if the given plugin is enabled or not
+
+```python
+is_plugin_enabled(plugin:Plugin) -> bool
+```
+
+Checks if the given plugin is enabled or not
 
 #### <code className="doc-symbol doc-symbol-method"/> load_plugin [#endstone.plugin.PluginManager.load_plugin]
 
@@ -1015,8 +1023,16 @@ Loads the plugin in the specified file
 #### <code className="doc-symbol doc-symbol-method"/> load_plugins [#endstone.plugin.PluginManager.load_plugins]
 
 ```python
-load_plugins()
+load_plugins(directory:str) -> list[Plugin]
 ```
+
+Loads the plugin contained within the specified directory
+
+```python
+load_plugins(files:list[str]) -> list[Plugin]
+```
+
+Loads the plugins in the list of the files
 
 #### <code className="doc-symbol doc-symbol-attribute"/> permissions [#endstone.plugin.PluginManager.permissions]
 
@@ -1059,8 +1075,16 @@ Registers the given event
 #### <code className="doc-symbol doc-symbol-method"/> remove_permission [#endstone.plugin.PluginManager.remove_permission]
 
 ```python
-remove_permission()
+remove_permission(perm:Permission) -> None
 ```
+
+Removes a Permission registration from this plugin manager by permission object.
+
+```python
+remove_permission(name:str) -> None
+```
+
+Removes a Permission registration from this plugin manager by name.
 
 #### <code className="doc-symbol doc-symbol-method"/> subscribe_to_default_perms [#endstone.plugin.PluginManager.subscribe_to_default_perms]
 
@@ -1165,8 +1189,16 @@ Register a provider of a service.
 #### <code className="doc-symbol doc-symbol-method"/> unregister [#endstone.plugin.ServiceManager.unregister]
 
 ```python
-unregister()
+unregister(name:str, provider:Service) -> None
 ```
+
+Unregister a particular provider for a particular service.
+
+```python
+unregister(provider:Service) -> None
+```
+
+Unregister a particular provider.
 
 #### <code className="doc-symbol doc-symbol-method"/> unregister_all [#endstone.plugin.ServiceManager.unregister_all]
 

@@ -664,8 +664,16 @@ Gets all entries tracked by this Scoreboard
 #### <code className="doc-symbol doc-symbol-method"/> get_objective [#endstone.scoreboard.Scoreboard.get_objective]
 
 ```python
-get_objective()
+get_objective(name:str) -> Objective
 ```
+
+Gets an Objective on this Scoreboard by name
+
+```python
+get_objective(slot:DisplaySlot) -> Objective
+```
+
+Gets the Objective currently displayed in a DisplaySlot on this Scoreboard
 
 #### <code className="doc-symbol doc-symbol-method"/> get_objectives_by_criteria [#endstone.scoreboard.Scoreboard.get_objectives_by_criteria]
 

@@ -10,7 +10,6 @@
 
 {%- with obj = function, html_id = function.path, function_name = function.path if show_full_path else function.name -%}
 {%- if not root or config.show_root_heading %}
-
 {% filter heading(heading_level, role="method", id=html_id) -%}
 {{ function_name }}
 {%- if not config.separate_signature -%}
@@ -18,20 +17,32 @@
 {%- endif -%}
 {%- endfilter -%}
 
-{%- if config.separate_signature -%}
+{%- if function.overloads -%}
+{% for overload in function.overloads %}
+```python
+{% filter format_signature(overload, config.line_length, crossrefs=config.signature_crossrefs) -%}
+{{ overload.name }}
+{% endfilter %}
+```
+{%- with docstring_sections = overload.docstring.parsed -%}
+{%- include "docstring.md.jinja" with context -%}
+{%- endwith -%}
+{% endfor %}
+{% endif %}
+
+{%- if config.separate_signature and not function.overloads -%}
 ```python
 {% filter format_signature(function, config.line_length, crossrefs=config.signature_crossrefs) -%}
 {{ function.name }}
 {% endfilter %}
 ```
-
+{%- with docstring_sections = function.docstring.parsed -%}
+{%- include "docstring.md.jinja" with context -%}
+{%- endwith -%}
 {% endif %}
 
 {% else -%}
 {%- set heading_level = heading_level - 1 -%}
 {%- endif -%}
 
-{%- with docstring_sections = function.docstring.parsed -%}
-{%- include "docstring.md.jinja" with context -%}
-{%- endwith -%}
 {%- endwith -%}

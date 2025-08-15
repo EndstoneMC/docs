@@ -306,14 +306,30 @@ Drops an item at the specified Location
 #### <code className="doc-symbol doc-symbol-method"/> get_block_at [#endstone.level.Dimension.get_block_at]
 
 ```python
-get_block_at()
+get_block_at(location:Location) -> Block
 ```
+
+Gets the Block at the given Location
+
+```python
+get_block_at(x:int, y:int, z:int) -> Block
+```
+
+Gets the Block at the given coordinates
 
 #### <code className="doc-symbol doc-symbol-method"/> get_highest_block_at [#endstone.level.Dimension.get_highest_block_at]
 
 ```python
-get_highest_block_at()
+get_highest_block_at(location:Location) -> Block
 ```
+
+Gets the highest non-empty (impassable) block at the given Location.
+
+```python
+get_highest_block_at(x:int, z:int) -> Block
+```
+
+Gets the highest non-empty (impassable) block at the given coordinates.
 
 #### <code className="doc-symbol doc-symbol-method"/> get_highest_block_y_at [#endstone.level.Dimension.get_highest_block_y_at]
 
