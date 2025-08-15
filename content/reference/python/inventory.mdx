@@ -155,71 +155,43 @@ Interface to the various inventories.
    </tr>
 </thead>
 <tbody>
-    <tr key="1-add_item">
+    <tr key="add_item">
         <td>[`add_item`](#endstone.inventory.Inventory.add_item)</td>
         <td>Stores the given ItemStacks in the inventory.</td>
     </tr>
-    <tr key="2-all">
+    <tr key="all">
         <td>[`all`](#endstone.inventory.Inventory.all)</td>
-        <td>Finds all slots in the inventory containing any ItemStacks with the given ItemStack.</td>
+        <td>Finds all slots in the inventory containing any ItemStacks with the given ItemStack.<br/>Finds all slots in the inventory containing any ItemStacks with the given ItemType.</td>
     </tr>
-    <tr key="3-all">
-        <td>[`all`](#endstone.inventory.Inventory.all)</td>
-        <td>Finds all slots in the inventory containing any ItemStacks with the given ItemType.</td>
-    </tr>
-    <tr key="4-clear">
+    <tr key="clear">
         <td>[`clear`](#endstone.inventory.Inventory.clear)</td>
-        <td>Clears out a particular slot in the index.</td>
+        <td>Clears out a particular slot in the index.<br/>Clears out the whole Inventory.</td>
     </tr>
-    <tr key="5-clear">
-        <td>[`clear`](#endstone.inventory.Inventory.clear)</td>
-        <td>Clears out the whole Inventory.</td>
-    </tr>
-    <tr key="6-contains">
+    <tr key="contains">
         <td>[`contains`](#endstone.inventory.Inventory.contains)</td>
-        <td>Checks if the inventory contains at least the minimum amount specified of exactly matching ItemStacks.</td>
+        <td>Checks if the inventory contains at least the minimum amount specified of exactly matching ItemStacks.<br/>Checks if the inventory contains any ItemStacks with the given ItemStack.<br/>Checks if the inventory contains any ItemStacks with the given ItemType.</td>
     </tr>
-    <tr key="7-contains">
-        <td>[`contains`](#endstone.inventory.Inventory.contains)</td>
-        <td>Checks if the inventory contains any ItemStacks with the given ItemStack.</td>
-    </tr>
-    <tr key="8-contains">
-        <td>[`contains`](#endstone.inventory.Inventory.contains)</td>
-        <td>Checks if the inventory contains any ItemStacks with the given ItemType.</td>
-    </tr>
-    <tr key="9-contains_at_least">
+    <tr key="contains_at_least">
         <td>[`contains_at_least`](#endstone.inventory.Inventory.contains_at_least)</td>
-        <td>Checks if the inventory contains ItemStacks matching the given ItemStack whose amounts sum to at least the minimum amount specified.</td>
+        <td>Checks if the inventory contains ItemStacks matching the given ItemStack whose amounts sum to at least the minimum amount specified.<br/>Checks if the inventory contains any ItemStacks with the given ItemType, adding to at least the minimum amount specified.</td>
     </tr>
-    <tr key="10-contains_at_least">
-        <td>[`contains_at_least`](#endstone.inventory.Inventory.contains_at_least)</td>
-        <td>Checks if the inventory contains any ItemStacks with the given ItemType, adding to at least the minimum amount specified.</td>
-    </tr>
-    <tr key="11-first">
+    <tr key="first">
         <td>[`first`](#endstone.inventory.Inventory.first)</td>
-        <td>Returns the first slot in the inventory containing an ItemStack with the given stack.</td>
+        <td>Returns the first slot in the inventory containing an ItemStack with the given stack.<br/>Finds the first slot in the inventory containing an ItemStack with the given ItemType.</td>
     </tr>
-    <tr key="12-first">
-        <td>[`first`](#endstone.inventory.Inventory.first)</td>
-        <td>Finds the first slot in the inventory containing an ItemStack with the given ItemType.</td>
-    </tr>
-    <tr key="13-get_item">
+    <tr key="get_item">
         <td>[`get_item`](#endstone.inventory.Inventory.get_item)</td>
         <td>Returns the ItemStack found in the slot at the given index</td>
     </tr>
-    <tr key="14-remove">
+    <tr key="remove">
         <td>[`remove`](#endstone.inventory.Inventory.remove)</td>
-        <td>Removes all stacks in the inventory matching the given stack.</td>
+        <td>Removes all stacks in the inventory matching the given stack.<br/>Removes all stacks in the inventory matching the given ItemType.</td>
     </tr>
-    <tr key="15-remove">
-        <td>[`remove`](#endstone.inventory.Inventory.remove)</td>
-        <td>Removes all stacks in the inventory matching the given ItemType.</td>
-    </tr>
-    <tr key="16-remove_item">
+    <tr key="remove_item">
         <td>[`remove_item`](#endstone.inventory.Inventory.remove_item)</td>
         <td>Removes the given ItemStacks from the inventory.</td>
     </tr>
-    <tr key="17-set_item">
+    <tr key="set_item">
         <td>[`set_item`](#endstone.inventory.Inventory.set_item)</td>
         <td>Stores the ItemStack at the given index of the inventory.</td>
     </tr></tbody>
@@ -458,19 +430,19 @@ Stores the ItemStack at the given index of the inventory.
    </tr>
 </thead>
 <tbody>
-    <tr key="1-as_meta_for">
+    <tr key="as_meta_for">
         <td>[`as_meta_for`](#endstone.inventory.ItemFactory.as_meta_for)</td>
         <td>Returns an appropriate item meta for the specified item type.</td>
     </tr>
-    <tr key="2-equals">
+    <tr key="equals">
         <td>[`equals`](#endstone.inventory.ItemFactory.equals)</td>
         <td>This method is used to compare two ItemMeta objects.</td>
     </tr>
-    <tr key="3-get_item_meta">
+    <tr key="get_item_meta">
         <td>[`get_item_meta`](#endstone.inventory.ItemFactory.get_item_meta)</td>
         <td>This creates a new item meta for the item type.</td>
     </tr>
-    <tr key="4-is_applicable">
+    <tr key="is_applicable">
         <td>[`is_applicable`](#endstone.inventory.ItemFactory.is_applicable)</td>
         <td>This method checks the item meta to confirm that it is applicable (no data lost if applied) to the specified ItemStack</td>
     </tr></tbody>
@@ -526,27 +498,27 @@ Represents the metadata of a generic item.
    </tr>
 </thead>
 <tbody>
-    <tr key="1-add_enchant">
+    <tr key="add_enchant">
         <td>[`add_enchant`](#endstone.inventory.ItemMeta.add_enchant)</td>
         <td>Adds the specified enchantment to this item meta.</td>
     </tr>
-    <tr key="2-clone">
+    <tr key="clone">
         <td>[`clone`](#endstone.inventory.ItemMeta.clone)</td>
         <td>Creates a clone of the current metadata.</td>
     </tr>
-    <tr key="3-get_enchant_level">
+    <tr key="get_enchant_level">
         <td>[`get_enchant_level`](#endstone.inventory.ItemMeta.get_enchant_level)</td>
         <td>Checks for the level of the specified enchantment.</td>
     </tr>
-    <tr key="4-has_enchant">
+    <tr key="has_enchant">
         <td>[`has_enchant`](#endstone.inventory.ItemMeta.has_enchant)</td>
         <td>Checks for existence of the specified enchantment.</td>
     </tr>
-    <tr key="5-remove_enchant">
+    <tr key="remove_enchant">
         <td>[`remove_enchant`](#endstone.inventory.ItemMeta.remove_enchant)</td>
         <td>Removes the specified enchantment from this item meta.</td>
     </tr>
-    <tr key="6-remove_enchants">
+    <tr key="remove_enchants">
         <td>[`remove_enchants`](#endstone.inventory.ItemMeta.remove_enchants)</td>
         <td>Removes all enchantments from this item meta.</td>
     </tr></tbody>
@@ -778,11 +750,11 @@ Represents a stack of items.
    </tr>
 </thead>
 <tbody>
-    <tr key="1-is_similar">
+    <tr key="is_similar">
         <td>[`is_similar`](#endstone.inventory.ItemStack.is_similar)</td>
         <td>Checks if the two stacks are equal, but does not consider stack size (amount).</td>
     </tr>
-    <tr key="2-set_item_meta">
+    <tr key="set_item_meta">
         <td>[`set_item_meta`](#endstone.inventory.ItemStack.set_item_meta)</td>
         <td>Set the ItemMeta of this ItemStack.</td>
     </tr></tbody>
@@ -900,7 +872,7 @@ Represents an item type.
    </tr>
 </thead>
 <tbody>
-    <tr key="1-get">
+    <tr key="get">
         <td>[`get`](#endstone.inventory.ItemType.get)</td>
         <td>Attempts to get the ItemType with the given name.</td>
     </tr></tbody>

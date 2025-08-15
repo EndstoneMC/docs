@@ -240,15 +240,15 @@ Represents an objective on a scoreboard that can show scores specific to entries
    </tr>
 </thead>
 <tbody>
-    <tr key="1-get_score">
+    <tr key="get_score">
         <td>[`get_score`](#endstone.scoreboard.Objective.get_score)</td>
         <td>Gets an entry's Score for this objective</td>
     </tr>
-    <tr key="2-set_display">
+    <tr key="set_display">
         <td>[`set_display`](#endstone.scoreboard.Objective.set_display)</td>
         <td>Sets the display slot and sort order for this objective. This will remove it from any other display slot.</td>
     </tr>
-    <tr key="3-unregister">
+    <tr key="unregister">
         <td>[`unregister`](#endstone.scoreboard.Objective.unregister)</td>
         <td>Unregisters this objective from the associated Scoreboard.</td>
     </tr></tbody>
@@ -583,31 +583,27 @@ Represents a scoreboard
    </tr>
 </thead>
 <tbody>
-    <tr key="1-add_objective">
+    <tr key="add_objective">
         <td>[`add_objective`](#endstone.scoreboard.Scoreboard.add_objective)</td>
         <td>Registers an Objective on this Scoreboard with a name displayed to players</td>
     </tr>
-    <tr key="2-clear_slot">
+    <tr key="clear_slot">
         <td>[`clear_slot`](#endstone.scoreboard.Scoreboard.clear_slot)</td>
         <td>Clears any objective in the specified slot</td>
     </tr>
-    <tr key="3-get_objective">
+    <tr key="get_objective">
         <td>[`get_objective`](#endstone.scoreboard.Scoreboard.get_objective)</td>
-        <td>Gets an Objective on this Scoreboard by name</td>
+        <td>Gets an Objective on this Scoreboard by name<br/>Gets the Objective currently displayed in a DisplaySlot on this Scoreboard</td>
     </tr>
-    <tr key="4-get_objective">
-        <td>[`get_objective`](#endstone.scoreboard.Scoreboard.get_objective)</td>
-        <td>Gets the Objective currently displayed in a DisplaySlot on this Scoreboard</td>
-    </tr>
-    <tr key="5-get_objectives_by_criteria">
+    <tr key="get_objectives_by_criteria">
         <td>[`get_objectives_by_criteria`](#endstone.scoreboard.Scoreboard.get_objectives_by_criteria)</td>
         <td>Gets all Objectives of a Criteria on the Scoreboard</td>
     </tr>
-    <tr key="6-get_scores">
+    <tr key="get_scores">
         <td>[`get_scores`](#endstone.scoreboard.Scoreboard.get_scores)</td>
         <td>Gets all scores for an entry on this Scoreboard</td>
     </tr>
-    <tr key="7-reset_scores">
+    <tr key="reset_scores">
         <td>[`reset_scores`](#endstone.scoreboard.Scoreboard.reset_scores)</td>
         <td>Removes all scores for an entry on this Scoreboard</td>
     </tr></tbody>

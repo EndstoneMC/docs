@@ -429,11 +429,11 @@ YELLOW: str = '§e'
    </tr>
 </thead>
 <tbody>
-    <tr key="1-get">
+    <tr key="get">
         <td>[`get`](#endstone.EnchantmentRegistry.get)</td>
         <td></td>
     </tr>
-    <tr key="2-get_or_throw">
+    <tr key="get_or_throw">
         <td>[`get_or_throw`](#endstone.EnchantmentRegistry.get_or_throw)</td>
         <td></td>
     </tr></tbody>
@@ -558,11 +558,11 @@ value: int
    </tr>
 </thead>
 <tbody>
-    <tr key="1-get">
+    <tr key="get">
         <td>[`get`](#endstone.ItemRegistry.get)</td>
         <td></td>
     </tr>
-    <tr key="2-get_or_throw">
+    <tr key="get_or_throw">
         <td>[`get_or_throw`](#endstone.ItemRegistry.get_or_throw)</td>
         <td></td>
     </tr></tbody>
@@ -604,35 +604,35 @@ Name | Description
    </tr>
 </thead>
 <tbody>
-    <tr key="1-critical">
+    <tr key="critical">
         <td>[`critical`](#endstone.Logger.critical)</td>
         <td>Log a message at the CRITICAL level.</td>
     </tr>
-    <tr key="2-debug">
+    <tr key="debug">
         <td>[`debug`](#endstone.Logger.debug)</td>
         <td>Log a message at the DEBUG level.</td>
     </tr>
-    <tr key="3-error">
+    <tr key="error">
         <td>[`error`](#endstone.Logger.error)</td>
         <td>Log a message at the ERROR level.</td>
     </tr>
-    <tr key="4-info">
+    <tr key="info">
         <td>[`info`](#endstone.Logger.info)</td>
         <td>Log a message at the INFO level.</td>
     </tr>
-    <tr key="5-is_enabled_for">
+    <tr key="is_enabled_for">
         <td>[`is_enabled_for`](#endstone.Logger.is_enabled_for)</td>
         <td>Check if the Logger instance is enabled for the given log Level.</td>
     </tr>
-    <tr key="6-set_level">
+    <tr key="set_level">
         <td>[`set_level`](#endstone.Logger.set_level)</td>
         <td>Set the logging level for this Logger instance.</td>
     </tr>
-    <tr key="7-trace">
+    <tr key="trace">
         <td>[`trace`](#endstone.Logger.trace)</td>
         <td>Log a message at the TRACE level.</td>
     </tr>
-    <tr key="8-warning">
+    <tr key="warning">
         <td>[`warning`](#endstone.Logger.warning)</td>
         <td>Log a message at the WARNING level.</td>
     </tr></tbody>
@@ -929,7 +929,7 @@ Represents a string-based key which consists of two components - a namespace and
    </tr>
 </thead>
 <tbody>
-    <tr key="1-from_string">
+    <tr key="from_string">
         <td>[`from_string`](#endstone.NamespacedKey.from_string)</td>
         <td>Parses a NamespacedKey from a string.</td>
     </tr></tbody>
@@ -1049,79 +1049,75 @@ Represents a player.
    </tr>
 </thead>
 <tbody>
-    <tr key="1-close_form">
+    <tr key="close_form">
         <td>[`close_form`](#endstone.Player.close_form)</td>
         <td>Closes the forms that are currently open for the player.</td>
     </tr>
-    <tr key="2-give_exp">
+    <tr key="give_exp">
         <td>[`give_exp`](#endstone.Player.give_exp)</td>
         <td>Gives the player the amount of experience specified.</td>
     </tr>
-    <tr key="3-give_exp_levels">
+    <tr key="give_exp_levels">
         <td>[`give_exp_levels`](#endstone.Player.give_exp_levels)</td>
         <td>Gives the player the amount of experience levels specified.</td>
     </tr>
-    <tr key="4-kick">
+    <tr key="kick">
         <td>[`kick`](#endstone.Player.kick)</td>
         <td>Kicks player with custom kick message.</td>
     </tr>
-    <tr key="5-perform_command">
+    <tr key="perform_command">
         <td>[`perform_command`](#endstone.Player.perform_command)</td>
         <td>Makes the player perform the given command.</td>
     </tr>
-    <tr key="6-play_sound">
+    <tr key="play_sound">
         <td>[`play_sound`](#endstone.Player.play_sound)</td>
         <td>Play a sound for a player at the location.</td>
     </tr>
-    <tr key="7-reset_title">
+    <tr key="reset_title">
         <td>[`reset_title`](#endstone.Player.reset_title)</td>
         <td>Resets the title displayed to the player. This will clear the displayed title / subtitle and reset timings to their default values.</td>
     </tr>
-    <tr key="8-send_form">
+    <tr key="send_form">
         <td>[`send_form`](#endstone.Player.send_form)</td>
         <td>Sends a form to the player.</td>
     </tr>
-    <tr key="9-send_packet">
+    <tr key="send_packet">
         <td>[`send_packet`](#endstone.Player.send_packet)</td>
         <td>Sends a packet to the player.</td>
     </tr>
-    <tr key="10-send_popup">
+    <tr key="send_popup">
         <td>[`send_popup`](#endstone.Player.send_popup)</td>
         <td>Sends this player a popup message</td>
     </tr>
-    <tr key="11-send_tip">
+    <tr key="send_tip">
         <td>[`send_tip`](#endstone.Player.send_tip)</td>
         <td>Sends this player a tip message</td>
     </tr>
-    <tr key="12-send_title">
+    <tr key="send_title">
         <td>[`send_title`](#endstone.Player.send_title)</td>
         <td>Sends a title and a subtitle message to the player. If they are empty strings, the display will be updated as such.</td>
     </tr>
-    <tr key="13-send_toast">
+    <tr key="send_toast">
         <td>[`send_toast`](#endstone.Player.send_toast)</td>
         <td>Sends this player a toast notification.</td>
     </tr>
-    <tr key="14-spawn_particle">
+    <tr key="spawn_particle">
         <td>[`spawn_particle`](#endstone.Player.spawn_particle)</td>
         <td>Spawns the particle at the target location.</td>
     </tr>
-    <tr key="15-spawn_particle">
-        <td>[`spawn_particle`](#endstone.Player.spawn_particle)</td>
-        <td>Spawns the particle at the target location.</td>
-    </tr>
-    <tr key="16-stop_all_sounds">
+    <tr key="stop_all_sounds">
         <td>[`stop_all_sounds`](#endstone.Player.stop_all_sounds)</td>
         <td>Stop all sounds from playing.</td>
     </tr>
-    <tr key="17-stop_sound">
+    <tr key="stop_sound">
         <td>[`stop_sound`](#endstone.Player.stop_sound)</td>
         <td>Stop the specified sound from playing.</td>
     </tr>
-    <tr key="18-transfer">
+    <tr key="transfer">
         <td>[`transfer`](#endstone.Player.transfer)</td>
         <td>Transfers the player to another server.</td>
     </tr>
-    <tr key="19-update_commands">
+    <tr key="update_commands">
         <td>[`update_commands`](#endstone.Player.update_commands)</td>
         <td>Send the list of commands to the client.</td>
     </tr></tbody>
@@ -1636,51 +1632,47 @@ Represents a server implementation.
    </tr>
 </thead>
 <tbody>
-    <tr key="1-broadcast">
+    <tr key="broadcast">
         <td>[`broadcast`](#endstone.Server.broadcast)</td>
         <td>Broadcasts the specified message to every user with the given permission name.</td>
     </tr>
-    <tr key="2-broadcast_message">
+    <tr key="broadcast_message">
         <td>[`broadcast_message`](#endstone.Server.broadcast_message)</td>
         <td>Broadcasts the specified message to every user with permission endstone.broadcast.user</td>
     </tr>
-    <tr key="3-create_block_data">
+    <tr key="create_block_data">
         <td>[`create_block_data`](#endstone.Server.create_block_data)</td>
         <td>Creates a new BlockData instance for the specified block type, with all properties initialized to defaults, except for those provided.</td>
     </tr>
-    <tr key="4-create_boss_bar">
+    <tr key="create_boss_bar">
         <td>[`create_boss_bar`](#endstone.Server.create_boss_bar)</td>
         <td>Creates a boss bar instance to display to players. The progress defaults to 1.0.</td>
     </tr>
-    <tr key="5-create_scoreboard">
+    <tr key="create_scoreboard">
         <td>[`create_scoreboard`](#endstone.Server.create_scoreboard)</td>
         <td>Creates a new Scoreboard to be tracked by the server.</td>
     </tr>
-    <tr key="6-dispatch_command">
+    <tr key="dispatch_command">
         <td>[`dispatch_command`](#endstone.Server.dispatch_command)</td>
         <td>Dispatches a command on this server, and executes it if found.</td>
     </tr>
-    <tr key="7-get_player">
+    <tr key="get_player">
         <td>[`get_player`](#endstone.Server.get_player)</td>
-        <td>Gets the player with the exact given name, case insensitive.</td>
+        <td>Gets the player with the exact given name, case insensitive.<br/>Gets the player with the given UUID.</td>
     </tr>
-    <tr key="8-get_player">
-        <td>[`get_player`](#endstone.Server.get_player)</td>
-        <td>Gets the player with the given UUID.</td>
-    </tr>
-    <tr key="9-get_plugin_command">
+    <tr key="get_plugin_command">
         <td>[`get_plugin_command`](#endstone.Server.get_plugin_command)</td>
         <td>Gets a PluginCommand with the given name or alias.</td>
     </tr>
-    <tr key="10-reload">
+    <tr key="reload">
         <td>[`reload`](#endstone.Server.reload)</td>
         <td>Reloads the server configuration, functions, scripts and plugins.</td>
     </tr>
-    <tr key="11-reload_data">
+    <tr key="reload_data">
         <td>[`reload_data`](#endstone.Server.reload_data)</td>
         <td>Reload only the Minecraft data for the server.</td>
     </tr>
-    <tr key="12-shutdown">
+    <tr key="shutdown">
         <td>[`shutdown`](#endstone.Server.shutdown)</td>
         <td>Shutdowns the server, stopping everything.</td>
     </tr></tbody>

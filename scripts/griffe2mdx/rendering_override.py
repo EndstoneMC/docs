@@ -43,12 +43,18 @@ def do_as_functions_section(
     """
     value = []
     for function in functions:
+        if (check_public and not function.is_public) or (function.name == "__init__"):
+            continue
+
         if function.overloads:
-            for overload in function.overloads:
-                value.append(DocstringFunction(
-                    name=overload.name,
-                    description=overload.docstring.value.split("\n", 1)[0] if overload.docstring else "",
-                ))
+            value.append(DocstringFunction(
+                name=function.name,
+                description="\n".join(
+                    list(dict.fromkeys(
+                        [overload.docstring.value.split("\n", 1)[0] if overload.docstring else "" for overload in
+                         function.overloads]))),
+            ))
+
         else:
             value.append(DocstringFunction(
                 name=function.name,

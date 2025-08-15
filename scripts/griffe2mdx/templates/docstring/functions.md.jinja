@@ -11,9 +11,9 @@
 </thead>
 <tbody>
 {%- for function in section.value %}
-    <tr key="{{ loop.index }}-{{ function.name }}">
+    <tr key="{{ function.name }}">
         <td>[`{{ function.name }}`](#{{ obj.path }}.{{ function.name }})</td>
-        <td>{{ function.description }}</td>
+        <td>{{ function.description.replace('\n', '<br/>') }}</td>
     </tr>
 {%- endfor -%}
 </tbody>

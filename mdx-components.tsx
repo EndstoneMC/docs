@@ -63,7 +63,7 @@ export function useMDXComponents<T>(components: T) {
       <div className={cn(className)} {...props} />
     ),
     table: ({className, ...props}: React.ComponentProps<typeof Table>) => {
-      return <Table className={className} {...props} />
+      return <Table className={cn(className, "mt-[0.75em]")} {...props} />
     },
     thead: ({className, ...props}: React.ComponentProps<typeof TableHeader>) => {
       return <TableHeader className={className} {...props} />

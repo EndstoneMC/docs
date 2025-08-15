@@ -31,35 +31,23 @@ Represents an object that may become a server operator and can be assigned permi
    </tr>
 </thead>
 <tbody>
-    <tr key="1-add_attachment">
+    <tr key="add_attachment">
         <td>[`add_attachment`](#endstone.permissions.Permissible.add_attachment)</td>
         <td>Adds a new PermissionAttachment.</td>
     </tr>
-    <tr key="2-add_attachment">
-        <td>[`add_attachment`](#endstone.permissions.Permissible.add_attachment)</td>
-        <td>Adds a new PermissionAttachment.</td>
-    </tr>
-    <tr key="3-has_permission">
+    <tr key="has_permission">
         <td>[`has_permission`](#endstone.permissions.Permissible.has_permission)</td>
-        <td>Checks if a permissions is available by name.</td>
+        <td>Checks if a permissions is available by name.<br/>Checks if a permissions is available by permission.</td>
     </tr>
-    <tr key="4-has_permission">
-        <td>[`has_permission`](#endstone.permissions.Permissible.has_permission)</td>
-        <td>Checks if a permissions is available by permission.</td>
-    </tr>
-    <tr key="5-is_permission_set">
+    <tr key="is_permission_set">
         <td>[`is_permission_set`](#endstone.permissions.Permissible.is_permission_set)</td>
-        <td>Checks if a permissions is set by name.</td>
+        <td>Checks if a permissions is set by name.<br/>Checks if a permissions is set by permission.</td>
     </tr>
-    <tr key="6-is_permission_set">
-        <td>[`is_permission_set`](#endstone.permissions.Permissible.is_permission_set)</td>
-        <td>Checks if a permissions is set by permission.</td>
-    </tr>
-    <tr key="7-recalculate_permissions">
+    <tr key="recalculate_permissions">
         <td>[`recalculate_permissions`](#endstone.permissions.Permissible.recalculate_permissions)</td>
         <td>Recalculates the permissions.</td>
     </tr>
-    <tr key="8-remove_attachment">
+    <tr key="remove_attachment">
         <td>[`remove_attachment`](#endstone.permissions.Permissible.remove_attachment)</td>
         <td>Removes a given PermissionAttachment.</td>
     </tr></tbody>
@@ -191,15 +179,11 @@ Represents a unique permission that may be attached to a Permissible
    </tr>
 </thead>
 <tbody>
-    <tr key="1-add_parent">
+    <tr key="add_parent">
         <td>[`add_parent`](#endstone.permissions.Permission.add_parent)</td>
         <td>Adds this permission to the specified parent permission.</td>
     </tr>
-    <tr key="2-add_parent">
-        <td>[`add_parent`](#endstone.permissions.Permission.add_parent)</td>
-        <td>Adds this permission to the specified parent permission.</td>
-    </tr>
-    <tr key="3-recalculate_permissibles">
+    <tr key="recalculate_permissibles">
         <td>[`recalculate_permissibles`](#endstone.permissions.Permission.recalculate_permissibles)</td>
         <td>Recalculates all Permissibles that contain this permission.</td>
     </tr></tbody>
@@ -327,25 +311,17 @@ Holds information about a permission attachment on a Permissible object
    </tr>
 </thead>
 <tbody>
-    <tr key="1-remove">
+    <tr key="remove">
         <td>[`remove`](#endstone.permissions.PermissionAttachment.remove)</td>
         <td>Removes this attachment from its registered Permissible.</td>
     </tr>
-    <tr key="2-set_permission">
+    <tr key="set_permission">
         <td>[`set_permission`](#endstone.permissions.PermissionAttachment.set_permission)</td>
-        <td>Sets a permission to the given value, by its fully qualified name.</td>
+        <td>Sets a permission to the given value, by its fully qualified name.<br/>Sets a permission to the given value.</td>
     </tr>
-    <tr key="3-set_permission">
-        <td>[`set_permission`](#endstone.permissions.PermissionAttachment.set_permission)</td>
-        <td>Sets a permission to the given value.</td>
-    </tr>
-    <tr key="4-unset_permission">
+    <tr key="unset_permission">
         <td>[`unset_permission`](#endstone.permissions.PermissionAttachment.unset_permission)</td>
-        <td>Removes the specified permission from this attachment by name.</td>
-    </tr>
-    <tr key="5-unset_permission">
-        <td>[`unset_permission`](#endstone.permissions.PermissionAttachment.unset_permission)</td>
-        <td>Removes the specified permission from this attachment.</td>
+        <td>Removes the specified permission from this attachment by name.<br/>Removes the specified permission from this attachment.</td>
     </tr></tbody>
 </table>
 
