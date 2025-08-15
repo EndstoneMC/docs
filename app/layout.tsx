@@ -65,7 +65,7 @@ const navbar = (
 
 const footer = (
   <Footer>
-    <div className="w-full py-12 md:flex md:items-center md:justify-between">
+    <div className="w-full md:flex md:items-center md:justify-between">
       <div className="flex gap-x-2 md:order-2">
         {siteConfig.extra.social.map((item, index) => (
           <Button key={`${index}`} variant="ghost" className="w-12 h-12" asChild>
