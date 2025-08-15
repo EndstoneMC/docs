@@ -845,9 +845,17 @@ Represents a plugin manager that handles all plugins from the Server
         <td>[`get_plugin`](#endstone.plugin.PluginManager.get_plugin)</td>
         <td>Checks if the given plugin is loaded and returns it when applicable.</td>
     </tr>
+    <tr key="is_plugin_enabled">
+        <td>[`is_plugin_enabled`](#endstone.plugin.PluginManager.is_plugin_enabled)</td>
+        <td></td>
+    </tr>
     <tr key="load_plugin">
         <td>[`load_plugin`](#endstone.plugin.PluginManager.load_plugin)</td>
         <td>Loads the plugin in the specified file</td>
+    </tr>
+    <tr key="load_plugins">
+        <td>[`load_plugins`](#endstone.plugin.PluginManager.load_plugins)</td>
+        <td></td>
     </tr>
     <tr key="recalculate_permission_defaults">
         <td>[`recalculate_permission_defaults`](#endstone.plugin.PluginManager.recalculate_permission_defaults)</td>
@@ -856,6 +864,10 @@ Represents a plugin manager that handles all plugins from the Server
     <tr key="register_event">
         <td>[`register_event`](#endstone.plugin.PluginManager.register_event)</td>
         <td>Registers the given event</td>
+    </tr>
+    <tr key="remove_permission">
+        <td>[`remove_permission`](#endstone.plugin.PluginManager.remove_permission)</td>
+        <td></td>
     </tr>
     <tr key="subscribe_to_default_perms">
         <td>[`subscribe_to_default_perms`](#endstone.plugin.PluginManager.subscribe_to_default_perms)</td>
@@ -986,6 +998,12 @@ get_plugin(name:str) -> Plugin
 
 Checks if the given plugin is loaded and returns it when applicable.
 
+#### <code className="doc-symbol doc-symbol-method"/> is_plugin_enabled [#endstone.plugin.PluginManager.is_plugin_enabled]
+
+```python
+is_plugin_enabled()
+```
+
 #### <code className="doc-symbol doc-symbol-method"/> load_plugin [#endstone.plugin.PluginManager.load_plugin]
 
 ```python
@@ -993,6 +1011,12 @@ load_plugin(file:str) -> Plugin
 ```
 
 Loads the plugin in the specified file
+
+#### <code className="doc-symbol doc-symbol-method"/> load_plugins [#endstone.plugin.PluginManager.load_plugins]
+
+```python
+load_plugins()
+```
 
 #### <code className="doc-symbol doc-symbol-attribute"/> permissions [#endstone.plugin.PluginManager.permissions]
 
@@ -1031,6 +1055,12 @@ register_event(
 ```
 
 Registers the given event
+
+#### <code className="doc-symbol doc-symbol-method"/> remove_permission [#endstone.plugin.PluginManager.remove_permission]
+
+```python
+remove_permission()
+```
 
 #### <code className="doc-symbol doc-symbol-method"/> subscribe_to_default_perms [#endstone.plugin.PluginManager.subscribe_to_default_perms]
 
@@ -1106,6 +1136,10 @@ Represent a service manager that manages services and service providers.
         <td>[`register`](#endstone.plugin.ServiceManager.register)</td>
         <td>Register a provider of a service.</td>
     </tr>
+    <tr key="unregister">
+        <td>[`unregister`](#endstone.plugin.ServiceManager.unregister)</td>
+        <td></td>
+    </tr>
     <tr key="unregister_all">
         <td>[`unregister_all`](#endstone.plugin.ServiceManager.unregister_all)</td>
         <td>Unregister all the services registered by a particular plugin.</td>
@@ -1127,6 +1161,12 @@ register(
 ```
 
 Register a provider of a service.
+
+#### <code className="doc-symbol doc-symbol-method"/> unregister [#endstone.plugin.ServiceManager.unregister]
+
+```python
+unregister()
+```
 
 #### <code className="doc-symbol doc-symbol-method"/> unregister_all [#endstone.plugin.ServiceManager.unregister_all]
 

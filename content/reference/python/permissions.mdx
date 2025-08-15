@@ -31,6 +31,18 @@ Represents an object that may become a server operator and can be assigned permi
    </tr>
 </thead>
 <tbody>
+    <tr key="add_attachment">
+        <td>[`add_attachment`](#endstone.permissions.Permissible.add_attachment)</td>
+        <td></td>
+    </tr>
+    <tr key="has_permission">
+        <td>[`has_permission`](#endstone.permissions.Permissible.has_permission)</td>
+        <td></td>
+    </tr>
+    <tr key="is_permission_set">
+        <td>[`is_permission_set`](#endstone.permissions.Permissible.is_permission_set)</td>
+        <td></td>
+    </tr>
     <tr key="recalculate_permissions">
         <td>[`recalculate_permissions`](#endstone.permissions.Permissible.recalculate_permissions)</td>
         <td>Recalculates the permissions.</td>
@@ -64,6 +76,12 @@ Represents an object that may become a server operator and can be assigned permi
     </tr></tbody>
 </table>
 
+#### <code className="doc-symbol doc-symbol-method"/> add_attachment [#endstone.permissions.Permissible.add_attachment]
+
+```python
+add_attachment()
+```
+
 #### <code className="doc-symbol doc-symbol-attribute"/> effective_permissions [#endstone.permissions.Permissible.effective_permissions]
 
 ```python
@@ -71,6 +89,18 @@ effective_permissions: set[PermissionAttachmentInfo]
 ```
 
 Gets effective permissions.
+
+#### <code className="doc-symbol doc-symbol-method"/> has_permission [#endstone.permissions.Permissible.has_permission]
+
+```python
+has_permission()
+```
+
+#### <code className="doc-symbol doc-symbol-method"/> is_permission_set [#endstone.permissions.Permissible.is_permission_set]
+
+```python
+is_permission_set()
+```
 
 #### <code className="doc-symbol doc-symbol-attribute"/> permission_level [#endstone.permissions.Permissible.permission_level]
 
@@ -125,6 +155,10 @@ Represents a unique permission that may be attached to a Permissible
    </tr>
 </thead>
 <tbody>
+    <tr key="add_parent">
+        <td>[`add_parent`](#endstone.permissions.Permission.add_parent)</td>
+        <td></td>
+    </tr>
     <tr key="recalculate_permissibles">
         <td>[`recalculate_permissibles`](#endstone.permissions.Permission.recalculate_permissibles)</td>
         <td>Recalculates all Permissibles that contain this permission.</td>
@@ -168,6 +202,12 @@ Represents a unique permission that may be attached to a Permissible
         <td>Gets a set containing every Permissible that has this permission.</td>
     </tr></tbody>
 </table>
+
+#### <code className="doc-symbol doc-symbol-method"/> add_parent [#endstone.permissions.Permission.add_parent]
+
+```python
+add_parent()
+```
 
 #### <code className="doc-symbol doc-symbol-attribute"/> children [#endstone.permissions.Permission.children]
 
@@ -242,6 +282,14 @@ Holds information about a permission attachment on a Permissible object
     <tr key="remove">
         <td>[`remove`](#endstone.permissions.PermissionAttachment.remove)</td>
         <td>Removes this attachment from its registered Permissible.</td>
+    </tr>
+    <tr key="set_permission">
+        <td>[`set_permission`](#endstone.permissions.PermissionAttachment.set_permission)</td>
+        <td></td>
+    </tr>
+    <tr key="unset_permission">
+        <td>[`unset_permission`](#endstone.permissions.PermissionAttachment.unset_permission)</td>
+        <td></td>
     </tr></tbody>
 </table>
 
@@ -317,6 +365,18 @@ remove() -> bool
 ```
 
 Removes this attachment from its registered Permissible.
+
+#### <code className="doc-symbol doc-symbol-method"/> set_permission [#endstone.permissions.PermissionAttachment.set_permission]
+
+```python
+set_permission()
+```
+
+#### <code className="doc-symbol doc-symbol-method"/> unset_permission [#endstone.permissions.PermissionAttachment.unset_permission]
+
+```python
+unset_permission()
+```
 
 </div>
 

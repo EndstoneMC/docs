@@ -3,6 +3,7 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
+import griffe
 import griffe2md.rendering
 import mdformat
 import rendering_override
@@ -28,7 +29,8 @@ def render_object_docs(obj: Object, config: dict | None = None) -> str:
 def render_package_docs(package: str, config: dict | None = None) -> str:
     config = config or dict(rendering.default_config)
     parser = config["docstring_style"] and Parser(config["docstring_style"])
-    loader = GriffeLoader(docstring_parser=parser)
+    extensions = griffe.load_extensions("griffe_endstone")
+    loader = GriffeLoader(docstring_parser=parser, extensions=extensions)
     module = loader.load(package, find_stubs_package=True)
     loader.resolve_aliases(external=True)
     return render_object_docs(module, config)  # type: ignore[arg-type]

@@ -1101,6 +1101,10 @@ Represents a player.
         <td>[`send_toast`](#endstone.Player.send_toast)</td>
         <td>Sends this player a toast notification.</td>
     </tr>
+    <tr key="spawn_particle">
+        <td>[`spawn_particle`](#endstone.Player.spawn_particle)</td>
+        <td></td>
+    </tr>
     <tr key="stop_all_sounds">
         <td>[`stop_all_sounds`](#endstone.Player.stop_all_sounds)</td>
         <td>Stop all sounds from playing.</td>
@@ -1524,6 +1528,12 @@ skin: Skin
 
 Get the player's skin.
 
+#### <code className="doc-symbol doc-symbol-method"/> spawn_particle [#endstone.Player.spawn_particle]
+
+```python
+spawn_particle()
+```
+
 #### <code className="doc-symbol doc-symbol-method"/> stop_all_sounds [#endstone.Player.stop_all_sounds]
 
 ```python
@@ -1629,6 +1639,10 @@ Represents a server implementation.
     <tr key="dispatch_command">
         <td>[`dispatch_command`](#endstone.Server.dispatch_command)</td>
         <td>Dispatches a command on this server, and executes it if found.</td>
+    </tr>
+    <tr key="get_player">
+        <td>[`get_player`](#endstone.Server.get_player)</td>
+        <td></td>
     </tr>
     <tr key="get_plugin_command">
         <td>[`get_plugin_command`](#endstone.Server.get_plugin_command)</td>
@@ -1932,6 +1946,12 @@ enchantment_registry: EnchantmentRegistry
 ```
 
 Returns the registry for all the enchantments.
+
+#### <code className="doc-symbol doc-symbol-method"/> get_player [#endstone.Server.get_player]
+
+```python
+get_player()
+```
 
 #### <code className="doc-symbol doc-symbol-method"/> get_plugin_command [#endstone.Server.get_plugin_command]
 
@@ -2252,6 +2272,10 @@ Represents a base actor in the level.
     <tr key="set_rotation">
         <td>[`set_rotation`](#endstone.actor.Actor.set_rotation)</td>
         <td>Sets the actor's rotation.</td>
+    </tr>
+    <tr key="teleport">
+        <td>[`teleport`](#endstone.actor.Actor.teleport)</td>
+        <td></td>
     </tr></tbody>
 </table>
 
@@ -2530,6 +2554,12 @@ set_rotation(yaw:float, pitch:float) -> None
 ```
 
 Sets the actor's rotation.
+
+##### <code className="doc-symbol doc-symbol-method"/> teleport [#endstone.actor.Actor.teleport]
+
+```python
+teleport()
+```
 
 ##### <code className="doc-symbol doc-symbol-attribute"/> type [#endstone.actor.Actor.type]
 
@@ -3010,6 +3040,10 @@ Represents a block.
         <td>[`capture_state`](#endstone.block.Block.capture_state)</td>
         <td>Captures the current state of this block. The returned object will never be updated, and you are not guaranteed that (for example) a sign is still a sign after you capture its state.</td>
     </tr>
+    <tr key="get_relative">
+        <td>[`get_relative`](#endstone.block.Block.get_relative)</td>
+        <td></td>
+    </tr>
     <tr key="set_data">
         <td>[`set_data`](#endstone.block.Block.set_data)</td>
         <td>Sets the complete data for this block</td>
@@ -3091,6 +3125,12 @@ dimension: Dimension
 ```
 
 Gets the dimension which contains this Block
+
+##### <code className="doc-symbol doc-symbol-method"/> get_relative [#endstone.block.Block.get_relative]
+
+```python
+get_relative()
+```
 
 ##### <code className="doc-symbol doc-symbol-attribute"/> location [#endstone.block.Block.location]
 
@@ -8594,9 +8634,33 @@ Interface to the various inventories.
         <td>[`add_item`](#endstone.inventory.Inventory.add_item)</td>
         <td>Stores the given ItemStacks in the inventory.</td>
     </tr>
+    <tr key="all">
+        <td>[`all`](#endstone.inventory.Inventory.all)</td>
+        <td></td>
+    </tr>
+    <tr key="clear">
+        <td>[`clear`](#endstone.inventory.Inventory.clear)</td>
+        <td></td>
+    </tr>
+    <tr key="contains">
+        <td>[`contains`](#endstone.inventory.Inventory.contains)</td>
+        <td></td>
+    </tr>
+    <tr key="contains_at_least">
+        <td>[`contains_at_least`](#endstone.inventory.Inventory.contains_at_least)</td>
+        <td></td>
+    </tr>
+    <tr key="first">
+        <td>[`first`](#endstone.inventory.Inventory.first)</td>
+        <td></td>
+    </tr>
     <tr key="get_item">
         <td>[`get_item`](#endstone.inventory.Inventory.get_item)</td>
         <td>Returns the ItemStack found in the slot at the given index</td>
+    </tr>
+    <tr key="remove">
+        <td>[`remove`](#endstone.inventory.Inventory.remove)</td>
+        <td></td>
     </tr>
     <tr key="remove_item">
         <td>[`remove_item`](#endstone.inventory.Inventory.remove_item)</td>
@@ -8658,6 +8722,30 @@ This will try to fill existing stacks and empty slots as well as it can.
 The returned map contains what it couldn't store, where the key is the index, and the value is the ItemStack.
 If all items are stored, it will return an empty dict.
 
+##### <code className="doc-symbol doc-symbol-method"/> all [#endstone.inventory.Inventory.all]
+
+```python
+all()
+```
+
+##### <code className="doc-symbol doc-symbol-method"/> clear [#endstone.inventory.Inventory.clear]
+
+```python
+clear()
+```
+
+##### <code className="doc-symbol doc-symbol-method"/> contains [#endstone.inventory.Inventory.contains]
+
+```python
+contains()
+```
+
+##### <code className="doc-symbol doc-symbol-method"/> contains_at_least [#endstone.inventory.Inventory.contains_at_least]
+
+```python
+contains_at_least()
+```
+
 ##### <code className="doc-symbol doc-symbol-attribute"/> contents [#endstone.inventory.Inventory.contents]
 
 ```python
@@ -8665,6 +8753,12 @@ contents: list[ItemStack]
 ```
 
 Returns all ItemStacks from the inventory
+
+##### <code className="doc-symbol doc-symbol-method"/> first [#endstone.inventory.Inventory.first]
+
+```python
+first()
+```
 
 ##### <code className="doc-symbol doc-symbol-attribute"/> first_empty [#endstone.inventory.Inventory.first_empty]
 
@@ -8697,6 +8791,12 @@ max_stack_size: int
 ```
 
 Returns the maximum stack size for an ItemStack in this inventory.
+
+##### <code className="doc-symbol doc-symbol-method"/> remove [#endstone.inventory.Inventory.remove]
+
+```python
+remove()
+```
 
 ##### <code className="doc-symbol doc-symbol-method"/> remove_item [#endstone.inventory.Inventory.remove_item]
 
@@ -9417,6 +9517,22 @@ Name | Description
 
 Represents the interface for translating text into different languages.
 
+**Methods:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+    <tr key="translate">
+        <td>[`translate`](#endstone.lang.Language.translate)</td>
+        <td></td>
+    </tr></tbody>
+</table>
+
 **Attributes:**
 
 <table>
@@ -9442,6 +9558,12 @@ locale: str
 ```
 
 Gets the current locale.
+
+##### <code className="doc-symbol doc-symbol-method"/> translate [#endstone.lang.Language.translate]
+
+```python
+translate()
+```
 
 </div>
 
@@ -9606,6 +9728,14 @@ Name | Description
     <tr key="drop_item">
         <td>[`drop_item`](#endstone.level.Dimension.drop_item)</td>
         <td>Drops an item at the specified Location</td>
+    </tr>
+    <tr key="get_block_at">
+        <td>[`get_block_at`](#endstone.level.Dimension.get_block_at)</td>
+        <td></td>
+    </tr>
+    <tr key="get_highest_block_at">
+        <td>[`get_highest_block_at`](#endstone.level.Dimension.get_highest_block_at)</td>
+        <td></td>
     </tr>
     <tr key="get_highest_block_y_at">
         <td>[`get_highest_block_y_at`](#endstone.level.Dimension.get_highest_block_y_at)</td>
@@ -9788,6 +9918,18 @@ drop_item(location:Location, item:ItemStack) -> Item
 ```
 
 Drops an item at the specified Location
+
+##### <code className="doc-symbol doc-symbol-method"/> get_block_at [#endstone.level.Dimension.get_block_at]
+
+```python
+get_block_at()
+```
+
+##### <code className="doc-symbol doc-symbol-method"/> get_highest_block_at [#endstone.level.Dimension.get_highest_block_at]
+
+```python
+get_highest_block_at()
+```
 
 ##### <code className="doc-symbol doc-symbol-method"/> get_highest_block_y_at [#endstone.level.Dimension.get_highest_block_y_at]
 
@@ -10534,6 +10676,18 @@ Represents an object that may become a server operator and can be assigned permi
    </tr>
 </thead>
 <tbody>
+    <tr key="add_attachment">
+        <td>[`add_attachment`](#endstone.permissions.Permissible.add_attachment)</td>
+        <td></td>
+    </tr>
+    <tr key="has_permission">
+        <td>[`has_permission`](#endstone.permissions.Permissible.has_permission)</td>
+        <td></td>
+    </tr>
+    <tr key="is_permission_set">
+        <td>[`is_permission_set`](#endstone.permissions.Permissible.is_permission_set)</td>
+        <td></td>
+    </tr>
     <tr key="recalculate_permissions">
         <td>[`recalculate_permissions`](#endstone.permissions.Permissible.recalculate_permissions)</td>
         <td>Recalculates the permissions.</td>
@@ -10567,6 +10721,12 @@ Represents an object that may become a server operator and can be assigned permi
     </tr></tbody>
 </table>
 
+##### <code className="doc-symbol doc-symbol-method"/> add_attachment [#endstone.permissions.Permissible.add_attachment]
+
+```python
+add_attachment()
+```
+
 ##### <code className="doc-symbol doc-symbol-attribute"/> effective_permissions [#endstone.permissions.Permissible.effective_permissions]
 
 ```python
@@ -10574,6 +10734,18 @@ effective_permissions: set[PermissionAttachmentInfo]
 ```
 
 Gets effective permissions.
+
+##### <code className="doc-symbol doc-symbol-method"/> has_permission [#endstone.permissions.Permissible.has_permission]
+
+```python
+has_permission()
+```
+
+##### <code className="doc-symbol doc-symbol-method"/> is_permission_set [#endstone.permissions.Permissible.is_permission_set]
+
+```python
+is_permission_set()
+```
 
 ##### <code className="doc-symbol doc-symbol-attribute"/> permission_level [#endstone.permissions.Permissible.permission_level]
 
@@ -10628,6 +10800,10 @@ Represents a unique permission that may be attached to a Permissible
    </tr>
 </thead>
 <tbody>
+    <tr key="add_parent">
+        <td>[`add_parent`](#endstone.permissions.Permission.add_parent)</td>
+        <td></td>
+    </tr>
     <tr key="recalculate_permissibles">
         <td>[`recalculate_permissibles`](#endstone.permissions.Permission.recalculate_permissibles)</td>
         <td>Recalculates all Permissibles that contain this permission.</td>
@@ -10671,6 +10847,12 @@ Represents a unique permission that may be attached to a Permissible
         <td>Gets a set containing every Permissible that has this permission.</td>
     </tr></tbody>
 </table>
+
+##### <code className="doc-symbol doc-symbol-method"/> add_parent [#endstone.permissions.Permission.add_parent]
+
+```python
+add_parent()
+```
 
 ##### <code className="doc-symbol doc-symbol-attribute"/> children [#endstone.permissions.Permission.children]
 
@@ -10745,6 +10927,14 @@ Holds information about a permission attachment on a Permissible object
     <tr key="remove">
         <td>[`remove`](#endstone.permissions.PermissionAttachment.remove)</td>
         <td>Removes this attachment from its registered Permissible.</td>
+    </tr>
+    <tr key="set_permission">
+        <td>[`set_permission`](#endstone.permissions.PermissionAttachment.set_permission)</td>
+        <td></td>
+    </tr>
+    <tr key="unset_permission">
+        <td>[`unset_permission`](#endstone.permissions.PermissionAttachment.unset_permission)</td>
+        <td></td>
     </tr></tbody>
 </table>
 
@@ -10820,6 +11010,18 @@ remove() -> bool
 ```
 
 Removes this attachment from its registered Permissible.
+
+##### <code className="doc-symbol doc-symbol-method"/> set_permission [#endstone.permissions.PermissionAttachment.set_permission]
+
+```python
+set_permission()
+```
+
+##### <code className="doc-symbol doc-symbol-method"/> unset_permission [#endstone.permissions.PermissionAttachment.unset_permission]
+
+```python
+unset_permission()
+```
 
 </div>
 
@@ -11961,9 +12163,17 @@ Represents a plugin manager that handles all plugins from the Server
         <td>[`get_plugin`](#endstone.plugin.PluginManager.get_plugin)</td>
         <td>Checks if the given plugin is loaded and returns it when applicable.</td>
     </tr>
+    <tr key="is_plugin_enabled">
+        <td>[`is_plugin_enabled`](#endstone.plugin.PluginManager.is_plugin_enabled)</td>
+        <td></td>
+    </tr>
     <tr key="load_plugin">
         <td>[`load_plugin`](#endstone.plugin.PluginManager.load_plugin)</td>
         <td>Loads the plugin in the specified file</td>
+    </tr>
+    <tr key="load_plugins">
+        <td>[`load_plugins`](#endstone.plugin.PluginManager.load_plugins)</td>
+        <td></td>
     </tr>
     <tr key="recalculate_permission_defaults">
         <td>[`recalculate_permission_defaults`](#endstone.plugin.PluginManager.recalculate_permission_defaults)</td>
@@ -11972,6 +12182,10 @@ Represents a plugin manager that handles all plugins from the Server
     <tr key="register_event">
         <td>[`register_event`](#endstone.plugin.PluginManager.register_event)</td>
         <td>Registers the given event</td>
+    </tr>
+    <tr key="remove_permission">
+        <td>[`remove_permission`](#endstone.plugin.PluginManager.remove_permission)</td>
+        <td></td>
     </tr>
     <tr key="subscribe_to_default_perms">
         <td>[`subscribe_to_default_perms`](#endstone.plugin.PluginManager.subscribe_to_default_perms)</td>
@@ -12102,6 +12316,12 @@ get_plugin(name:str) -> Plugin
 
 Checks if the given plugin is loaded and returns it when applicable.
 
+##### <code className="doc-symbol doc-symbol-method"/> is_plugin_enabled [#endstone.plugin.PluginManager.is_plugin_enabled]
+
+```python
+is_plugin_enabled()
+```
+
 ##### <code className="doc-symbol doc-symbol-method"/> load_plugin [#endstone.plugin.PluginManager.load_plugin]
 
 ```python
@@ -12109,6 +12329,12 @@ load_plugin(file:str) -> Plugin
 ```
 
 Loads the plugin in the specified file
+
+##### <code className="doc-symbol doc-symbol-method"/> load_plugins [#endstone.plugin.PluginManager.load_plugins]
+
+```python
+load_plugins()
+```
 
 ##### <code className="doc-symbol doc-symbol-attribute"/> permissions [#endstone.plugin.PluginManager.permissions]
 
@@ -12147,6 +12373,12 @@ register_event(
 ```
 
 Registers the given event
+
+##### <code className="doc-symbol doc-symbol-method"/> remove_permission [#endstone.plugin.PluginManager.remove_permission]
+
+```python
+remove_permission()
+```
 
 ##### <code className="doc-symbol doc-symbol-method"/> subscribe_to_default_perms [#endstone.plugin.PluginManager.subscribe_to_default_perms]
 
@@ -12222,6 +12454,10 @@ Represent a service manager that manages services and service providers.
         <td>[`register`](#endstone.plugin.ServiceManager.register)</td>
         <td>Register a provider of a service.</td>
     </tr>
+    <tr key="unregister">
+        <td>[`unregister`](#endstone.plugin.ServiceManager.unregister)</td>
+        <td></td>
+    </tr>
     <tr key="unregister_all">
         <td>[`unregister_all`](#endstone.plugin.ServiceManager.unregister_all)</td>
         <td>Unregister all the services registered by a particular plugin.</td>
@@ -12243,6 +12479,12 @@ register(
 ```
 
 Register a provider of a service.
+
+##### <code className="doc-symbol doc-symbol-method"/> unregister [#endstone.plugin.ServiceManager.unregister]
+
+```python
+unregister()
+```
 
 ##### <code className="doc-symbol doc-symbol-method"/> unregister_all [#endstone.plugin.ServiceManager.unregister_all]
 
@@ -13145,6 +13387,10 @@ Represents a scoreboard
         <td>[`clear_slot`](#endstone.scoreboard.Scoreboard.clear_slot)</td>
         <td>Clears any objective in the specified slot</td>
     </tr>
+    <tr key="get_objective">
+        <td>[`get_objective`](#endstone.scoreboard.Scoreboard.get_objective)</td>
+        <td></td>
+    </tr>
     <tr key="get_objectives_by_criteria">
         <td>[`get_objectives_by_criteria`](#endstone.scoreboard.Scoreboard.get_objectives_by_criteria)</td>
         <td>Gets all Objectives of a Criteria on the Scoreboard</td>
@@ -13211,6 +13457,12 @@ entries: list[Player | Actor | str]
 
 Gets all entries tracked by this Scoreboard
 
+##### <code className="doc-symbol doc-symbol-method"/> get_objective [#endstone.scoreboard.Scoreboard.get_objective]
+
+```python
+get_objective()
+```
+
 ##### <code className="doc-symbol doc-symbol-method"/> get_objectives_by_criteria [#endstone.scoreboard.Scoreboard.get_objectives_by_criteria]
 
 ```python
@@ -13255,6 +13507,10 @@ Name | Description
 [`Vector`](#endstone.util.Vector) | Represents a 3-dimensional vector.
 
 #### <code className="doc-symbol doc-symbol-class"/> SocketAddress [#endstone.util.SocketAddress]
+
+```python
+SocketAddress()
+```
 
 <div className="pl-[2em] mt-[1.25em]">
 
@@ -13302,6 +13558,10 @@ Gets the port number.
 </div>
 
 #### <code className="doc-symbol doc-symbol-class"/> Vector [#endstone.util.Vector]
+
+```python
+Vector()
+```
 
 <div className="pl-[2em] mt-[1.25em]">
 

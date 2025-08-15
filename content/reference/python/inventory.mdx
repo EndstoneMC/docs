@@ -159,9 +159,33 @@ Interface to the various inventories.
         <td>[`add_item`](#endstone.inventory.Inventory.add_item)</td>
         <td>Stores the given ItemStacks in the inventory.</td>
     </tr>
+    <tr key="all">
+        <td>[`all`](#endstone.inventory.Inventory.all)</td>
+        <td></td>
+    </tr>
+    <tr key="clear">
+        <td>[`clear`](#endstone.inventory.Inventory.clear)</td>
+        <td></td>
+    </tr>
+    <tr key="contains">
+        <td>[`contains`](#endstone.inventory.Inventory.contains)</td>
+        <td></td>
+    </tr>
+    <tr key="contains_at_least">
+        <td>[`contains_at_least`](#endstone.inventory.Inventory.contains_at_least)</td>
+        <td></td>
+    </tr>
+    <tr key="first">
+        <td>[`first`](#endstone.inventory.Inventory.first)</td>
+        <td></td>
+    </tr>
     <tr key="get_item">
         <td>[`get_item`](#endstone.inventory.Inventory.get_item)</td>
         <td>Returns the ItemStack found in the slot at the given index</td>
+    </tr>
+    <tr key="remove">
+        <td>[`remove`](#endstone.inventory.Inventory.remove)</td>
+        <td></td>
     </tr>
     <tr key="remove_item">
         <td>[`remove_item`](#endstone.inventory.Inventory.remove_item)</td>
@@ -223,6 +247,30 @@ This will try to fill existing stacks and empty slots as well as it can.
 The returned map contains what it couldn't store, where the key is the index, and the value is the ItemStack.
 If all items are stored, it will return an empty dict.
 
+#### <code className="doc-symbol doc-symbol-method"/> all [#endstone.inventory.Inventory.all]
+
+```python
+all()
+```
+
+#### <code className="doc-symbol doc-symbol-method"/> clear [#endstone.inventory.Inventory.clear]
+
+```python
+clear()
+```
+
+#### <code className="doc-symbol doc-symbol-method"/> contains [#endstone.inventory.Inventory.contains]
+
+```python
+contains()
+```
+
+#### <code className="doc-symbol doc-symbol-method"/> contains_at_least [#endstone.inventory.Inventory.contains_at_least]
+
+```python
+contains_at_least()
+```
+
 #### <code className="doc-symbol doc-symbol-attribute"/> contents [#endstone.inventory.Inventory.contents]
 
 ```python
@@ -230,6 +278,12 @@ contents: list[ItemStack]
 ```
 
 Returns all ItemStacks from the inventory
+
+#### <code className="doc-symbol doc-symbol-method"/> first [#endstone.inventory.Inventory.first]
+
+```python
+first()
+```
 
 #### <code className="doc-symbol doc-symbol-attribute"/> first_empty [#endstone.inventory.Inventory.first_empty]
 
@@ -262,6 +316,12 @@ max_stack_size: int
 ```
 
 Returns the maximum stack size for an ItemStack in this inventory.
+
+#### <code className="doc-symbol doc-symbol-method"/> remove [#endstone.inventory.Inventory.remove]
+
+```python
+remove()
+```
 
 #### <code className="doc-symbol doc-symbol-method"/> remove_item [#endstone.inventory.Inventory.remove_item]
 
