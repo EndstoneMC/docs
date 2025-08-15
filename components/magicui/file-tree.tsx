@@ -1,7 +1,7 @@
 "use client";
 
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { FileIcon, FolderIcon, FolderOpenIcon } from "lucide-react";
+import {FileIcon, FolderIcon, FolderOpenIcon} from "lucide-react";
 import React, {
   createContext,
   forwardRef,
@@ -11,9 +11,9 @@ import React, {
   useState,
 } from "react";
 
-import { Button } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { cn } from "@/lib/utils";
+import {Button} from "@/components/ui/button";
+import {ScrollArea} from "@/components/ui/scroll-area";
+import {cn} from "@/lib/utils";
 
 type TreeViewElement = {
   id: string;
@@ -44,7 +44,7 @@ const useTree = () => {
   return context;
 };
 
-interface TreeViewComponentProps extends React.HTMLAttributes<HTMLDivElement> {}
+type TreeViewComponentProps = React.HTMLAttributes<HTMLDivElement>
 
 type Direction = "rtl" | "ltr" | undefined;
 
@@ -183,8 +183,8 @@ Tree.displayName = "Tree";
 const TreeIndicator = forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
-  const { direction } = useTree();
+>(({className, ...props}, ref) => {
+  const {direction} = useTree();
 
   return (
     <div
@@ -201,8 +201,7 @@ const TreeIndicator = forwardRef<
 
 TreeIndicator.displayName = "TreeIndicator";
 
-interface FolderComponentProps
-  extends React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item> {}
+type FolderComponentProps = React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 
 type FolderProps = {
   expandedItems?: string[];
@@ -257,12 +256,13 @@ const Folder = forwardRef<
           onClick={() => handleExpand(value)}
         >
           {expandedItems?.includes(value)
-            ? (openIcon ?? <FolderOpenIcon className="size-4" />)
-            : (closeIcon ?? <FolderIcon className="size-4" />)}
+            ? (openIcon ?? <FolderOpenIcon className="size-4"/>)
+            : (closeIcon ?? <FolderIcon className="size-4"/>)}
           <span>{element}</span>
         </AccordionPrimitive.Trigger>
-        <AccordionPrimitive.Content className="relative h-full overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
-          {element && indicator && <TreeIndicator aria-hidden="true" />}
+        <AccordionPrimitive.Content
+          className="relative h-full overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
+          {element && indicator && <TreeIndicator aria-hidden="true"/>}
           <AccordionPrimitive.Root
             dir={direction}
             type="multiple"
@@ -306,7 +306,7 @@ const File = forwardRef<
     },
     ref,
   ) => {
-    const { direction, selectedId, selectItem } = useTree();
+    const {direction, selectedId, selectItem} = useTree();
     const isSelected = isSelect ?? selectedId === value;
     return (
       <button
@@ -325,7 +325,7 @@ const File = forwardRef<
         onClick={() => selectItem(value)}
         {...props}
       >
-        {fileIcon ?? <FileIcon className="size-4" />}
+        {fileIcon ?? <FileIcon className="size-4"/>}
         {children}
       </button>
     );
@@ -340,8 +340,8 @@ const CollapseButton = forwardRef<
     elements: TreeViewElement[];
     expandAll?: boolean;
   } & React.HTMLAttributes<HTMLButtonElement>
->(({ className, elements, expandAll = false, children, ...props }, ref) => {
-  const { expandedItems, setExpandedItems } = useTree();
+>(({className, elements, expandAll = false, children, ...props}, ref) => {
+  const {expandedItems, setExpandedItems} = useTree();
 
   const expendAllTree = useCallback((elements: TreeViewElement[]) => {
     const expandTree = (element: TreeViewElement) => {
@@ -386,4 +386,4 @@ const CollapseButton = forwardRef<
 
 CollapseButton.displayName = "CollapseButton";
 
-export { CollapseButton, File, Folder, Tree, type TreeViewElement };
+export {CollapseButton, File, Folder, Tree, type TreeViewElement};
