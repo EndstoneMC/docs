@@ -55,7 +55,6 @@ def main():
 
     with root_output_path.open("w", encoding="utf-8") as f:
         f.write('---\n')
-        f.write('asIndexPage: true\n')
         f.write('title: "endstone"\n')
         f.write('---\n\n')
         f.write(render_package_docs("endstone", config))
