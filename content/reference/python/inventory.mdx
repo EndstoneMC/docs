@@ -155,43 +155,71 @@ Interface to the various inventories.
    </tr>
 </thead>
 <tbody>
-    <tr key="add_item">
+    <tr key="1-add_item">
         <td>[`add_item`](#endstone.inventory.Inventory.add_item)</td>
         <td>Stores the given ItemStacks in the inventory.</td>
     </tr>
-    <tr key="all">
+    <tr key="2-all">
         <td>[`all`](#endstone.inventory.Inventory.all)</td>
-        <td></td>
+        <td>Finds all slots in the inventory containing any ItemStacks with the given ItemStack.</td>
     </tr>
-    <tr key="clear">
+    <tr key="3-all">
+        <td>[`all`](#endstone.inventory.Inventory.all)</td>
+        <td>Finds all slots in the inventory containing any ItemStacks with the given ItemType.</td>
+    </tr>
+    <tr key="4-clear">
         <td>[`clear`](#endstone.inventory.Inventory.clear)</td>
-        <td></td>
+        <td>Clears out a particular slot in the index.</td>
     </tr>
-    <tr key="contains">
+    <tr key="5-clear">
+        <td>[`clear`](#endstone.inventory.Inventory.clear)</td>
+        <td>Clears out the whole Inventory.</td>
+    </tr>
+    <tr key="6-contains">
         <td>[`contains`](#endstone.inventory.Inventory.contains)</td>
-        <td></td>
+        <td>Checks if the inventory contains at least the minimum amount specified of exactly matching ItemStacks.</td>
     </tr>
-    <tr key="contains_at_least">
+    <tr key="7-contains">
+        <td>[`contains`](#endstone.inventory.Inventory.contains)</td>
+        <td>Checks if the inventory contains any ItemStacks with the given ItemStack.</td>
+    </tr>
+    <tr key="8-contains">
+        <td>[`contains`](#endstone.inventory.Inventory.contains)</td>
+        <td>Checks if the inventory contains any ItemStacks with the given ItemType.</td>
+    </tr>
+    <tr key="9-contains_at_least">
         <td>[`contains_at_least`](#endstone.inventory.Inventory.contains_at_least)</td>
-        <td></td>
+        <td>Checks if the inventory contains ItemStacks matching the given ItemStack whose amounts sum to at least the minimum amount specified.</td>
     </tr>
-    <tr key="first">
+    <tr key="10-contains_at_least">
+        <td>[`contains_at_least`](#endstone.inventory.Inventory.contains_at_least)</td>
+        <td>Checks if the inventory contains any ItemStacks with the given ItemType, adding to at least the minimum amount specified.</td>
+    </tr>
+    <tr key="11-first">
         <td>[`first`](#endstone.inventory.Inventory.first)</td>
-        <td></td>
+        <td>Returns the first slot in the inventory containing an ItemStack with the given stack.</td>
     </tr>
-    <tr key="get_item">
+    <tr key="12-first">
+        <td>[`first`](#endstone.inventory.Inventory.first)</td>
+        <td>Finds the first slot in the inventory containing an ItemStack with the given ItemType.</td>
+    </tr>
+    <tr key="13-get_item">
         <td>[`get_item`](#endstone.inventory.Inventory.get_item)</td>
         <td>Returns the ItemStack found in the slot at the given index</td>
     </tr>
-    <tr key="remove">
+    <tr key="14-remove">
         <td>[`remove`](#endstone.inventory.Inventory.remove)</td>
-        <td></td>
+        <td>Removes all stacks in the inventory matching the given stack.</td>
     </tr>
-    <tr key="remove_item">
+    <tr key="15-remove">
+        <td>[`remove`](#endstone.inventory.Inventory.remove)</td>
+        <td>Removes all stacks in the inventory matching the given ItemType.</td>
+    </tr>
+    <tr key="16-remove_item">
         <td>[`remove_item`](#endstone.inventory.Inventory.remove_item)</td>
         <td>Removes the given ItemStacks from the inventory.</td>
     </tr>
-    <tr key="set_item">
+    <tr key="17-set_item">
         <td>[`set_item`](#endstone.inventory.Inventory.set_item)</td>
         <td>Stores the ItemStack at the given index of the inventory.</td>
     </tr></tbody>
@@ -234,6 +262,46 @@ Interface to the various inventories.
         <td>Returns the size of the inventory</td>
     </tr></tbody>
 </table>
+
+#### <code className="doc-symbol doc-symbol-attribute"/> contents [#endstone.inventory.Inventory.contents]
+
+```python
+contents: list[ItemStack]
+```
+
+Returns all ItemStacks from the inventory
+
+#### <code className="doc-symbol doc-symbol-attribute"/> first_empty [#endstone.inventory.Inventory.first_empty]
+
+```python
+first_empty: int
+```
+
+Returns the first empty Slot.
+
+#### <code className="doc-symbol doc-symbol-attribute"/> is_empty [#endstone.inventory.Inventory.is_empty]
+
+```python
+is_empty: bool
+```
+
+Check whether this inventory is empty. An inventory is considered to be empty if there are no ItemStacks in any slot of this inventory.
+
+#### <code className="doc-symbol doc-symbol-attribute"/> max_stack_size [#endstone.inventory.Inventory.max_stack_size]
+
+```python
+max_stack_size: int
+```
+
+Returns the maximum stack size for an ItemStack in this inventory.
+
+#### <code className="doc-symbol doc-symbol-attribute"/> size [#endstone.inventory.Inventory.size]
+
+```python
+size: int
+```
+
+Returns the size of the inventory
 
 #### <code className="doc-symbol doc-symbol-method"/> add_item [#endstone.inventory.Inventory.add_item]
 
@@ -314,14 +382,6 @@ contains_at_least(type:str, amount:int) -> bool
 
 Checks if the inventory contains any ItemStacks with the given ItemType, adding to at least the minimum amount specified.
 
-#### <code className="doc-symbol doc-symbol-attribute"/> contents [#endstone.inventory.Inventory.contents]
-
-```python
-contents: list[ItemStack]
-```
-
-Returns all ItemStacks from the inventory
-
 #### <code className="doc-symbol doc-symbol-method"/> first [#endstone.inventory.Inventory.first]
 
 ```python
@@ -339,14 +399,6 @@ first(type:str) -> int
 Finds the first slot in the inventory containing an ItemStack with the given ItemType.
 The returned map contains entries where, the key is the slot index, and the value is the ItemStack in that slot. If no matching ItemStack is found, an empty dict is returned.
 
-#### <code className="doc-symbol doc-symbol-attribute"/> first_empty [#endstone.inventory.Inventory.first_empty]
-
-```python
-first_empty: int
-```
-
-Returns the first empty Slot.
-
 #### <code className="doc-symbol doc-symbol-method"/> get_item [#endstone.inventory.Inventory.get_item]
 
 ```python
@@ -354,22 +406,6 @@ get_item(index:int) -> ItemStack
 ```
 
 Returns the ItemStack found in the slot at the given index
-
-#### <code className="doc-symbol doc-symbol-attribute"/> is_empty [#endstone.inventory.Inventory.is_empty]
-
-```python
-is_empty: bool
-```
-
-Check whether this inventory is empty. An inventory is considered to be empty if there are no ItemStacks in any slot of this inventory.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> max_stack_size [#endstone.inventory.Inventory.max_stack_size]
-
-```python
-max_stack_size: int
-```
-
-Returns the maximum stack size for an ItemStack in this inventory.
 
 #### <code className="doc-symbol doc-symbol-method"/> remove [#endstone.inventory.Inventory.remove]
 
@@ -406,14 +442,6 @@ set_item(index:int, item:ItemStack) -> None
 
 Stores the ItemStack at the given index of the inventory.
 
-#### <code className="doc-symbol doc-symbol-attribute"/> size [#endstone.inventory.Inventory.size]
-
-```python
-size: int
-```
-
-Returns the size of the inventory
-
 </div>
 
 ### <code className="doc-symbol doc-symbol-class"/> ItemFactory [#endstone.inventory.ItemFactory]
@@ -430,19 +458,19 @@ Returns the size of the inventory
    </tr>
 </thead>
 <tbody>
-    <tr key="as_meta_for">
+    <tr key="1-as_meta_for">
         <td>[`as_meta_for`](#endstone.inventory.ItemFactory.as_meta_for)</td>
         <td>Returns an appropriate item meta for the specified item type.</td>
     </tr>
-    <tr key="equals">
+    <tr key="2-equals">
         <td>[`equals`](#endstone.inventory.ItemFactory.equals)</td>
         <td>This method is used to compare two ItemMeta objects.</td>
     </tr>
-    <tr key="get_item_meta">
+    <tr key="3-get_item_meta">
         <td>[`get_item_meta`](#endstone.inventory.ItemFactory.get_item_meta)</td>
         <td>This creates a new item meta for the item type.</td>
     </tr>
-    <tr key="is_applicable">
+    <tr key="4-is_applicable">
         <td>[`is_applicable`](#endstone.inventory.ItemFactory.is_applicable)</td>
         <td>This method checks the item meta to confirm that it is applicable (no data lost if applied) to the specified ItemStack</td>
     </tr></tbody>
@@ -498,27 +526,27 @@ Represents the metadata of a generic item.
    </tr>
 </thead>
 <tbody>
-    <tr key="add_enchant">
+    <tr key="1-add_enchant">
         <td>[`add_enchant`](#endstone.inventory.ItemMeta.add_enchant)</td>
         <td>Adds the specified enchantment to this item meta.</td>
     </tr>
-    <tr key="clone">
+    <tr key="2-clone">
         <td>[`clone`](#endstone.inventory.ItemMeta.clone)</td>
         <td>Creates a clone of the current metadata.</td>
     </tr>
-    <tr key="get_enchant_level">
+    <tr key="3-get_enchant_level">
         <td>[`get_enchant_level`](#endstone.inventory.ItemMeta.get_enchant_level)</td>
         <td>Checks for the level of the specified enchantment.</td>
     </tr>
-    <tr key="has_enchant">
+    <tr key="4-has_enchant">
         <td>[`has_enchant`](#endstone.inventory.ItemMeta.has_enchant)</td>
         <td>Checks for existence of the specified enchantment.</td>
     </tr>
-    <tr key="remove_enchant">
+    <tr key="5-remove_enchant">
         <td>[`remove_enchant`](#endstone.inventory.ItemMeta.remove_enchant)</td>
         <td>Removes the specified enchantment from this item meta.</td>
     </tr>
-    <tr key="remove_enchants">
+    <tr key="6-remove_enchants">
         <td>[`remove_enchants`](#endstone.inventory.ItemMeta.remove_enchants)</td>
         <td>Removes all enchantments from this item meta.</td>
     </tr></tbody>
@@ -592,22 +620,6 @@ Represents the metadata of a generic item.
     </tr></tbody>
 </table>
 
-#### <code className="doc-symbol doc-symbol-method"/> add_enchant [#endstone.inventory.ItemMeta.add_enchant]
-
-```python
-add_enchant(id:str, level:int, force:bool = False) -> bool
-```
-
-Adds the specified enchantment to this item meta.
-
-#### <code className="doc-symbol doc-symbol-method"/> clone [#endstone.inventory.ItemMeta.clone]
-
-```python
-clone() -> ItemMeta
-```
-
-Creates a clone of the current metadata.
-
 #### <code className="doc-symbol doc-symbol-attribute"/> damage [#endstone.inventory.ItemMeta.damage]
 
 ```python
@@ -632,14 +644,6 @@ enchants: dict[str, int]
 
 Returns a copy the enchantments in this ItemMeta.
 
-#### <code className="doc-symbol doc-symbol-method"/> get_enchant_level [#endstone.inventory.ItemMeta.get_enchant_level]
-
-```python
-get_enchant_level(id:str) -> int
-```
-
-Checks for the level of the specified enchantment.
-
 #### <code className="doc-symbol doc-symbol-attribute"/> has_damage [#endstone.inventory.ItemMeta.has_damage]
 
 ```python
@@ -655,14 +659,6 @@ has_display_name: bool
 ```
 
 Checks for existence of a display name.
-
-#### <code className="doc-symbol doc-symbol-method"/> has_enchant [#endstone.inventory.ItemMeta.has_enchant]
-
-```python
-has_enchant(id:str) -> bool
-```
-
-Checks for existence of the specified enchantment.
 
 #### <code className="doc-symbol doc-symbol-attribute"/> has_enchants [#endstone.inventory.ItemMeta.has_enchants]
 
@@ -704,6 +700,46 @@ lore: list[str] | None
 
 Gets or sets the lore for this item.
 
+#### <code className="doc-symbol doc-symbol-attribute"/> repair_cost [#endstone.inventory.ItemMeta.repair_cost]
+
+```python
+repair_cost: int
+```
+
+Gets or sets the repair penalty.
+
+#### <code className="doc-symbol doc-symbol-method"/> add_enchant [#endstone.inventory.ItemMeta.add_enchant]
+
+```python
+add_enchant(id:str, level:int, force:bool = False) -> bool
+```
+
+Adds the specified enchantment to this item meta.
+
+#### <code className="doc-symbol doc-symbol-method"/> clone [#endstone.inventory.ItemMeta.clone]
+
+```python
+clone() -> ItemMeta
+```
+
+Creates a clone of the current metadata.
+
+#### <code className="doc-symbol doc-symbol-method"/> get_enchant_level [#endstone.inventory.ItemMeta.get_enchant_level]
+
+```python
+get_enchant_level(id:str) -> int
+```
+
+Checks for the level of the specified enchantment.
+
+#### <code className="doc-symbol doc-symbol-method"/> has_enchant [#endstone.inventory.ItemMeta.has_enchant]
+
+```python
+has_enchant(id:str) -> bool
+```
+
+Checks for existence of the specified enchantment.
+
 #### <code className="doc-symbol doc-symbol-method"/> remove_enchant [#endstone.inventory.ItemMeta.remove_enchant]
 
 ```python
@@ -719,14 +755,6 @@ remove_enchants() -> None
 ```
 
 Removes all enchantments from this item meta.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> repair_cost [#endstone.inventory.ItemMeta.repair_cost]
-
-```python
-repair_cost: int
-```
-
-Gets or sets the repair penalty.
 
 </div>
 
@@ -750,11 +778,11 @@ Represents a stack of items.
    </tr>
 </thead>
 <tbody>
-    <tr key="is_similar">
+    <tr key="1-is_similar">
         <td>[`is_similar`](#endstone.inventory.ItemStack.is_similar)</td>
         <td>Checks if the two stacks are equal, but does not consider stack size (amount).</td>
     </tr>
-    <tr key="set_item_meta">
+    <tr key="2-set_item_meta">
         <td>[`set_item_meta`](#endstone.inventory.ItemStack.set_item_meta)</td>
         <td>Set the ItemMeta of this ItemStack.</td>
     </tr></tbody>
@@ -814,14 +842,6 @@ data: int
 
 Gets or sets the data for this stack of items.
 
-#### <code className="doc-symbol doc-symbol-method"/> is_similar [#endstone.inventory.ItemStack.is_similar]
-
-```python
-is_similar(other:ItemStack) -> bool
-```
-
-Checks if the two stacks are equal, but does not consider stack size (amount).
-
 #### <code className="doc-symbol doc-symbol-attribute"/> item_meta [#endstone.inventory.ItemStack.item_meta]
 
 ```python
@@ -838,14 +858,6 @@ max_stack_size: int
 
 Get the maximum stack size for this item.
 
-#### <code className="doc-symbol doc-symbol-method"/> set_item_meta [#endstone.inventory.ItemStack.set_item_meta]
-
-```python
-set_item_meta(meta:ItemMeta) -> bool
-```
-
-Set the ItemMeta of this ItemStack.
-
 #### <code className="doc-symbol doc-symbol-attribute"/> type [#endstone.inventory.ItemStack.type]
 
 ```python
@@ -853,6 +865,22 @@ type: str
 ```
 
 Gets or sets the type of this item.
+
+#### <code className="doc-symbol doc-symbol-method"/> is_similar [#endstone.inventory.ItemStack.is_similar]
+
+```python
+is_similar(other:ItemStack) -> bool
+```
+
+Checks if the two stacks are equal, but does not consider stack size (amount).
+
+#### <code className="doc-symbol doc-symbol-method"/> set_item_meta [#endstone.inventory.ItemStack.set_item_meta]
+
+```python
+set_item_meta(meta:ItemMeta) -> bool
+```
+
+Set the ItemMeta of this ItemStack.
 
 </div>
 
@@ -872,7 +900,7 @@ Represents an item type.
    </tr>
 </thead>
 <tbody>
-    <tr key="get">
+    <tr key="1-get">
         <td>[`get`](#endstone.inventory.ItemType.get)</td>
         <td>Attempts to get the ItemType with the given name.</td>
     </tr></tbody>
@@ -916,14 +944,6 @@ Represents an item type.
     </tr></tbody>
 </table>
 
-#### <code className="doc-symbol doc-symbol-method"/> get [#endstone.inventory.ItemType.get]
-
-```python
-get(name:str) -> ItemType
-```
-
-Attempts to get the ItemType with the given name.
-
 #### <code className="doc-symbol doc-symbol-attribute"/> id [#endstone.inventory.ItemType.id]
 
 ```python
@@ -963,6 +983,14 @@ translation_key: str
 ```
 
 Get the translation key, suitable for use in a translation component.
+
+#### <code className="doc-symbol doc-symbol-method"/> get [#endstone.inventory.ItemType.get]
+
+```python
+get(name:str) -> ItemType
+```
+
+Attempts to get the ItemType with the given name.
 
 </div>
 

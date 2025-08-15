@@ -429,11 +429,11 @@ YELLOW: str = '§e'
    </tr>
 </thead>
 <tbody>
-    <tr key="get">
+    <tr key="1-get">
         <td>[`get`](#endstone.EnchantmentRegistry.get)</td>
         <td></td>
     </tr>
-    <tr key="get_or_throw">
+    <tr key="2-get_or_throw">
         <td>[`get_or_throw`](#endstone.EnchantmentRegistry.get_or_throw)</td>
         <td></td>
     </tr></tbody>
@@ -558,11 +558,11 @@ value: int
    </tr>
 </thead>
 <tbody>
-    <tr key="get">
+    <tr key="1-get">
         <td>[`get`](#endstone.ItemRegistry.get)</td>
         <td></td>
     </tr>
-    <tr key="get_or_throw">
+    <tr key="2-get_or_throw">
         <td>[`get_or_throw`](#endstone.ItemRegistry.get_or_throw)</td>
         <td></td>
     </tr></tbody>
@@ -604,35 +604,35 @@ Name | Description
    </tr>
 </thead>
 <tbody>
-    <tr key="critical">
+    <tr key="1-critical">
         <td>[`critical`](#endstone.Logger.critical)</td>
         <td>Log a message at the CRITICAL level.</td>
     </tr>
-    <tr key="debug">
+    <tr key="2-debug">
         <td>[`debug`](#endstone.Logger.debug)</td>
         <td>Log a message at the DEBUG level.</td>
     </tr>
-    <tr key="error">
+    <tr key="3-error">
         <td>[`error`](#endstone.Logger.error)</td>
         <td>Log a message at the ERROR level.</td>
     </tr>
-    <tr key="info">
+    <tr key="4-info">
         <td>[`info`](#endstone.Logger.info)</td>
         <td>Log a message at the INFO level.</td>
     </tr>
-    <tr key="is_enabled_for">
+    <tr key="5-is_enabled_for">
         <td>[`is_enabled_for`](#endstone.Logger.is_enabled_for)</td>
         <td>Check if the Logger instance is enabled for the given log Level.</td>
     </tr>
-    <tr key="set_level">
+    <tr key="6-set_level">
         <td>[`set_level`](#endstone.Logger.set_level)</td>
         <td>Set the logging level for this Logger instance.</td>
     </tr>
-    <tr key="trace">
+    <tr key="7-trace">
         <td>[`trace`](#endstone.Logger.trace)</td>
         <td>Log a message at the TRACE level.</td>
     </tr>
-    <tr key="warning">
+    <tr key="8-warning">
         <td>[`warning`](#endstone.Logger.warning)</td>
         <td>Log a message at the WARNING level.</td>
     </tr></tbody>
@@ -709,6 +709,26 @@ ERROR: Logger.Level
 ```python
 INFO: Logger.Level
 ```
+
+#### <code className="doc-symbol doc-symbol-attribute"/> TRACE [#endstone.Logger.TRACE]
+
+```python
+TRACE: Logger.Level
+```
+
+#### <code className="doc-symbol doc-symbol-attribute"/> WARNING [#endstone.Logger.WARNING]
+
+```python
+WARNING: Logger.Level
+```
+
+#### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.Logger.name]
+
+```python
+name: str
+```
+
+Get the name of this Logger instance.
 
 #### <code className="doc-symbol doc-symbol-class"/> Level [#endstone.Logger.Level]
 
@@ -823,18 +843,6 @@ value: int
 
 </div>
 
-#### <code className="doc-symbol doc-symbol-attribute"/> TRACE [#endstone.Logger.TRACE]
-
-```python
-TRACE: Logger.Level
-```
-
-#### <code className="doc-symbol doc-symbol-attribute"/> WARNING [#endstone.Logger.WARNING]
-
-```python
-WARNING: Logger.Level
-```
-
 #### <code className="doc-symbol doc-symbol-method"/> critical [#endstone.Logger.critical]
 
 ```python
@@ -874,14 +882,6 @@ is_enabled_for(level:Level) -> bool
 ```
 
 Check if the Logger instance is enabled for the given log Level.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.Logger.name]
-
-```python
-name: str
-```
-
-Get the name of this Logger instance.
 
 #### <code className="doc-symbol doc-symbol-method"/> set_level [#endstone.Logger.set_level]
 
@@ -929,7 +929,7 @@ Represents a string-based key which consists of two components - a namespace and
    </tr>
 </thead>
 <tbody>
-    <tr key="from_string">
+    <tr key="1-from_string">
         <td>[`from_string`](#endstone.NamespacedKey.from_string)</td>
         <td>Parses a NamespacedKey from a string.</td>
     </tr></tbody>
@@ -958,14 +958,6 @@ Represents a string-based key which consists of two components - a namespace and
     </tr></tbody>
 </table>
 
-#### <code className="doc-symbol doc-symbol-method"/> from_string [#endstone.NamespacedKey.from_string]
-
-```python
-from_string(input:str, plugin:Plugin = None) -> NamespacedKey
-```
-
-Parses a NamespacedKey from a string.
-
 #### <code className="doc-symbol doc-symbol-attribute"/> key [#endstone.NamespacedKey.key]
 
 ```python
@@ -981,6 +973,14 @@ namespace: str
 ```
 
 Returns the namespace of the NamespacedKey.
+
+#### <code className="doc-symbol doc-symbol-method"/> from_string [#endstone.NamespacedKey.from_string]
+
+```python
+from_string(input:str, plugin:Plugin = None) -> NamespacedKey
+```
+
+Parses a NamespacedKey from a string.
 
 </div>
 
@@ -1049,75 +1049,79 @@ Represents a player.
    </tr>
 </thead>
 <tbody>
-    <tr key="close_form">
+    <tr key="1-close_form">
         <td>[`close_form`](#endstone.Player.close_form)</td>
         <td>Closes the forms that are currently open for the player.</td>
     </tr>
-    <tr key="give_exp">
+    <tr key="2-give_exp">
         <td>[`give_exp`](#endstone.Player.give_exp)</td>
         <td>Gives the player the amount of experience specified.</td>
     </tr>
-    <tr key="give_exp_levels">
+    <tr key="3-give_exp_levels">
         <td>[`give_exp_levels`](#endstone.Player.give_exp_levels)</td>
         <td>Gives the player the amount of experience levels specified.</td>
     </tr>
-    <tr key="kick">
+    <tr key="4-kick">
         <td>[`kick`](#endstone.Player.kick)</td>
         <td>Kicks player with custom kick message.</td>
     </tr>
-    <tr key="perform_command">
+    <tr key="5-perform_command">
         <td>[`perform_command`](#endstone.Player.perform_command)</td>
         <td>Makes the player perform the given command.</td>
     </tr>
-    <tr key="play_sound">
+    <tr key="6-play_sound">
         <td>[`play_sound`](#endstone.Player.play_sound)</td>
         <td>Play a sound for a player at the location.</td>
     </tr>
-    <tr key="reset_title">
+    <tr key="7-reset_title">
         <td>[`reset_title`](#endstone.Player.reset_title)</td>
         <td>Resets the title displayed to the player. This will clear the displayed title / subtitle and reset timings to their default values.</td>
     </tr>
-    <tr key="send_form">
+    <tr key="8-send_form">
         <td>[`send_form`](#endstone.Player.send_form)</td>
         <td>Sends a form to the player.</td>
     </tr>
-    <tr key="send_packet">
+    <tr key="9-send_packet">
         <td>[`send_packet`](#endstone.Player.send_packet)</td>
         <td>Sends a packet to the player.</td>
     </tr>
-    <tr key="send_popup">
+    <tr key="10-send_popup">
         <td>[`send_popup`](#endstone.Player.send_popup)</td>
         <td>Sends this player a popup message</td>
     </tr>
-    <tr key="send_tip">
+    <tr key="11-send_tip">
         <td>[`send_tip`](#endstone.Player.send_tip)</td>
         <td>Sends this player a tip message</td>
     </tr>
-    <tr key="send_title">
+    <tr key="12-send_title">
         <td>[`send_title`](#endstone.Player.send_title)</td>
         <td>Sends a title and a subtitle message to the player. If they are empty strings, the display will be updated as such.</td>
     </tr>
-    <tr key="send_toast">
+    <tr key="13-send_toast">
         <td>[`send_toast`](#endstone.Player.send_toast)</td>
         <td>Sends this player a toast notification.</td>
     </tr>
-    <tr key="spawn_particle">
+    <tr key="14-spawn_particle">
         <td>[`spawn_particle`](#endstone.Player.spawn_particle)</td>
-        <td></td>
+        <td>Spawns the particle at the target location.</td>
     </tr>
-    <tr key="stop_all_sounds">
+    <tr key="15-spawn_particle">
+        <td>[`spawn_particle`](#endstone.Player.spawn_particle)</td>
+        <td>Spawns the particle at the target location.</td>
+    </tr>
+    <tr key="16-stop_all_sounds">
         <td>[`stop_all_sounds`](#endstone.Player.stop_all_sounds)</td>
         <td>Stop all sounds from playing.</td>
     </tr>
-    <tr key="stop_sound">
+    <tr key="17-stop_sound">
         <td>[`stop_sound`](#endstone.Player.stop_sound)</td>
         <td>Stop the specified sound from playing.</td>
     </tr>
-    <tr key="transfer">
+    <tr key="18-transfer">
         <td>[`transfer`](#endstone.Player.transfer)</td>
         <td>Transfers the player to another server.</td>
     </tr>
-    <tr key="update_commands">
+    <tr key="19-update_commands">
         <td>[`update_commands`](#endstone.Player.update_commands)</td>
         <td>Send the list of commands to the client.</td>
     </tr></tbody>
@@ -1272,14 +1276,6 @@ allow_flight: bool
 
 If the Player is allowed to fly via jump key double-tap.
 
-#### <code className="doc-symbol doc-symbol-method"/> close_form [#endstone.Player.close_form]
-
-```python
-close_form() -> None
-```
-
-Closes the forms that are currently open for the player.
-
 #### <code className="doc-symbol doc-symbol-attribute"/> device_id [#endstone.Player.device_id]
 
 ```python
@@ -1344,22 +1340,6 @@ game_version: str
 
 Get the player's current game version.
 
-#### <code className="doc-symbol doc-symbol-method"/> give_exp [#endstone.Player.give_exp]
-
-```python
-give_exp(amount:int) -> None
-```
-
-Gives the player the amount of experience specified.
-
-#### <code className="doc-symbol doc-symbol-method"/> give_exp_levels [#endstone.Player.give_exp_levels]
-
-```python
-give_exp_levels(amount:int) -> None
-```
-
-Gives the player the amount of experience levels specified.
-
 #### <code className="doc-symbol doc-symbol-attribute"/> inventory [#endstone.Player.inventory]
 
 ```python
@@ -1400,14 +1380,6 @@ is_sprinting: bool
 
 Gets or sets whether the player is sprinting or not.
 
-#### <code className="doc-symbol doc-symbol-method"/> kick [#endstone.Player.kick]
-
-```python
-kick(message:str) -> None
-```
-
-Kicks player with custom kick message.
-
 #### <code className="doc-symbol doc-symbol-attribute"/> locale [#endstone.Player.locale]
 
 ```python
@@ -1424,14 +1396,6 @@ name: str
 
 Returns the name of this player
 
-#### <code className="doc-symbol doc-symbol-method"/> perform_command [#endstone.Player.perform_command]
-
-```python
-perform_command(command:str) -> bool
-```
-
-Makes the player perform the given command.
-
 #### <code className="doc-symbol doc-symbol-attribute"/> ping [#endstone.Player.ping]
 
 ```python
@@ -1439,6 +1403,94 @@ ping: int
 ```
 
 Gets the player's average ping in milliseconds.
+
+#### <code className="doc-symbol doc-symbol-attribute"/> scoreboard [#endstone.Player.scoreboard]
+
+```python
+scoreboard: Scoreboard
+```
+
+Gets or sets the player's visible Scoreboard.
+
+#### <code className="doc-symbol doc-symbol-attribute"/> skin [#endstone.Player.skin]
+
+```python
+skin: Skin
+```
+
+Get the player's skin.
+
+#### <code className="doc-symbol doc-symbol-attribute"/> total_exp [#endstone.Player.total_exp]
+
+```python
+total_exp: int
+```
+
+Gets the players total experience points.
+
+#### <code className="doc-symbol doc-symbol-attribute"/> unique_id [#endstone.Player.unique_id]
+
+```python
+unique_id: uuid.UUID
+```
+
+Returns the UUID of this player
+
+#### <code className="doc-symbol doc-symbol-attribute"/> walk_speed [#endstone.Player.walk_speed]
+
+```python
+walk_speed: float
+```
+
+Gets or sets the current allowed speed that a client can walk.
+
+#### <code className="doc-symbol doc-symbol-attribute"/> xuid [#endstone.Player.xuid]
+
+```python
+xuid: str
+```
+
+Returns the Xbox User ID (XUID) of this player
+
+#### <code className="doc-symbol doc-symbol-method"/> close_form [#endstone.Player.close_form]
+
+```python
+close_form() -> None
+```
+
+Closes the forms that are currently open for the player.
+
+#### <code className="doc-symbol doc-symbol-method"/> give_exp [#endstone.Player.give_exp]
+
+```python
+give_exp(amount:int) -> None
+```
+
+Gives the player the amount of experience specified.
+
+#### <code className="doc-symbol doc-symbol-method"/> give_exp_levels [#endstone.Player.give_exp_levels]
+
+```python
+give_exp_levels(amount:int) -> None
+```
+
+Gives the player the amount of experience levels specified.
+
+#### <code className="doc-symbol doc-symbol-method"/> kick [#endstone.Player.kick]
+
+```python
+kick(message:str) -> None
+```
+
+Kicks player with custom kick message.
+
+#### <code className="doc-symbol doc-symbol-method"/> perform_command [#endstone.Player.perform_command]
+
+```python
+perform_command(command:str) -> bool
+```
+
+Makes the player perform the given command.
 
 #### <code className="doc-symbol doc-symbol-method"/> play_sound [#endstone.Player.play_sound]
 
@@ -1457,14 +1509,6 @@ reset_title() -> None
 ```
 
 Resets the title displayed to the player. This will clear the displayed title / subtitle and reset timings to their default values.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> scoreboard [#endstone.Player.scoreboard]
-
-```python
-scoreboard: Scoreboard
-```
-
-Gets or sets the player's visible Scoreboard.
 
 #### <code className="doc-symbol doc-symbol-method"/> send_form [#endstone.Player.send_form]
 
@@ -1520,14 +1564,6 @@ send_toast(title:str, content:str) -> None
 
 Sends this player a toast notification.
 
-#### <code className="doc-symbol doc-symbol-attribute"/> skin [#endstone.Player.skin]
-
-```python
-skin: Skin
-```
-
-Get the player's skin.
-
 #### <code className="doc-symbol doc-symbol-method"/> spawn_particle [#endstone.Player.spawn_particle]
 
 ```python
@@ -1566,14 +1602,6 @@ stop_sound(sound:str) -> None
 
 Stop the specified sound from playing.
 
-#### <code className="doc-symbol doc-symbol-attribute"/> total_exp [#endstone.Player.total_exp]
-
-```python
-total_exp: int
-```
-
-Gets the players total experience points.
-
 #### <code className="doc-symbol doc-symbol-method"/> transfer [#endstone.Player.transfer]
 
 ```python
@@ -1582,14 +1610,6 @@ transfer(host:str, port:int = 19132) -> None
 
 Transfers the player to another server.
 
-#### <code className="doc-symbol doc-symbol-attribute"/> unique_id [#endstone.Player.unique_id]
-
-```python
-unique_id: uuid.UUID
-```
-
-Returns the UUID of this player
-
 #### <code className="doc-symbol doc-symbol-method"/> update_commands [#endstone.Player.update_commands]
 
 ```python
@@ -1597,22 +1617,6 @@ update_commands() -> None
 ```
 
 Send the list of commands to the client.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> walk_speed [#endstone.Player.walk_speed]
-
-```python
-walk_speed: float
-```
-
-Gets or sets the current allowed speed that a client can walk.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> xuid [#endstone.Player.xuid]
-
-```python
-xuid: str
-```
-
-Returns the Xbox User ID (XUID) of this player
 
 </div>
 
@@ -1632,47 +1636,51 @@ Represents a server implementation.
    </tr>
 </thead>
 <tbody>
-    <tr key="broadcast">
+    <tr key="1-broadcast">
         <td>[`broadcast`](#endstone.Server.broadcast)</td>
         <td>Broadcasts the specified message to every user with the given permission name.</td>
     </tr>
-    <tr key="broadcast_message">
+    <tr key="2-broadcast_message">
         <td>[`broadcast_message`](#endstone.Server.broadcast_message)</td>
         <td>Broadcasts the specified message to every user with permission endstone.broadcast.user</td>
     </tr>
-    <tr key="create_block_data">
+    <tr key="3-create_block_data">
         <td>[`create_block_data`](#endstone.Server.create_block_data)</td>
         <td>Creates a new BlockData instance for the specified block type, with all properties initialized to defaults, except for those provided.</td>
     </tr>
-    <tr key="create_boss_bar">
+    <tr key="4-create_boss_bar">
         <td>[`create_boss_bar`](#endstone.Server.create_boss_bar)</td>
         <td>Creates a boss bar instance to display to players. The progress defaults to 1.0.</td>
     </tr>
-    <tr key="create_scoreboard">
+    <tr key="5-create_scoreboard">
         <td>[`create_scoreboard`](#endstone.Server.create_scoreboard)</td>
         <td>Creates a new Scoreboard to be tracked by the server.</td>
     </tr>
-    <tr key="dispatch_command">
+    <tr key="6-dispatch_command">
         <td>[`dispatch_command`](#endstone.Server.dispatch_command)</td>
         <td>Dispatches a command on this server, and executes it if found.</td>
     </tr>
-    <tr key="get_player">
+    <tr key="7-get_player">
         <td>[`get_player`](#endstone.Server.get_player)</td>
-        <td></td>
+        <td>Gets the player with the exact given name, case insensitive.</td>
     </tr>
-    <tr key="get_plugin_command">
+    <tr key="8-get_player">
+        <td>[`get_player`](#endstone.Server.get_player)</td>
+        <td>Gets the player with the given UUID.</td>
+    </tr>
+    <tr key="9-get_plugin_command">
         <td>[`get_plugin_command`](#endstone.Server.get_plugin_command)</td>
         <td>Gets a PluginCommand with the given name or alias.</td>
     </tr>
-    <tr key="reload">
+    <tr key="10-reload">
         <td>[`reload`](#endstone.Server.reload)</td>
         <td>Reloads the server configuration, functions, scripts and plugins.</td>
     </tr>
-    <tr key="reload_data">
+    <tr key="11-reload_data">
         <td>[`reload_data`](#endstone.Server.reload_data)</td>
         <td>Reload only the Minecraft data for the server.</td>
     </tr>
-    <tr key="shutdown">
+    <tr key="12-shutdown">
         <td>[`shutdown`](#endstone.Server.shutdown)</td>
         <td>Shutdowns the server, stopping everything.</td>
     </tr></tbody>
@@ -1868,22 +1876,6 @@ ban_list: PlayerBanList
 
 Gets the player ban list.
 
-#### <code className="doc-symbol doc-symbol-method"/> broadcast [#endstone.Server.broadcast]
-
-```python
-broadcast(message:str | Translatable, permission:str) -> None
-```
-
-Broadcasts the specified message to every user with the given permission name.
-
-#### <code className="doc-symbol doc-symbol-method"/> broadcast_message [#endstone.Server.broadcast_message]
-
-```python
-broadcast_message(message:str | Translatable) -> None
-```
-
-Broadcasts the specified message to every user with permission endstone.broadcast.user
-
 #### <code className="doc-symbol doc-symbol-attribute"/> command_sender [#endstone.Server.command_sender]
 
 ```python
@@ -1891,37 +1883,6 @@ command_sender: ConsoleCommandSender
 ```
 
 Gets a CommandSender for this server.
-
-#### <code className="doc-symbol doc-symbol-method"/> create_block_data [#endstone.Server.create_block_data]
-
-```python
-create_block_data(
-    type: str, block_states: dict[str, bool | str | int] | None = None
-) -> BlockData
-```
-
-Creates a new BlockData instance for the specified block type, with all properties initialized to defaults, except for those provided.
-
-#### <code className="doc-symbol doc-symbol-method"/> create_boss_bar [#endstone.Server.create_boss_bar]
-
-```python
-create_boss_bar(
-    title: str,
-    color: BarColor,
-    style: BarStyle,
-    flags: list[BarFlag] | None = None,
-) -> BossBar
-```
-
-Creates a boss bar instance to display to players. The progress defaults to 1.0.
-
-#### <code className="doc-symbol doc-symbol-method"/> create_scoreboard [#endstone.Server.create_scoreboard]
-
-```python
-create_scoreboard() -> Scoreboard
-```
-
-Creates a new Scoreboard to be tracked by the server.
 
 #### <code className="doc-symbol doc-symbol-attribute"/> current_mspt [#endstone.Server.current_mspt]
 
@@ -1947,14 +1908,6 @@ current_tps: float
 
 Gets the current ticks per second (TPS).
 
-#### <code className="doc-symbol doc-symbol-method"/> dispatch_command [#endstone.Server.dispatch_command]
-
-```python
-dispatch_command(sender:CommandSender, command_line:str) -> bool
-```
-
-Dispatches a command on this server, and executes it if found.
-
 #### <code className="doc-symbol doc-symbol-attribute"/> enchantment_registry [#endstone.Server.enchantment_registry]
 
 ```python
@@ -1962,28 +1915,6 @@ enchantment_registry: EnchantmentRegistry
 ```
 
 Returns the registry for all the enchantments.
-
-#### <code className="doc-symbol doc-symbol-method"/> get_player [#endstone.Server.get_player]
-
-```python
-get_player(name:str) -> Player
-```
-
-Gets the player with the exact given name, case insensitive.
-
-```python
-get_player(unique_id:UUID) -> Player
-```
-
-Gets the player with the given UUID.
-
-#### <code className="doc-symbol doc-symbol-method"/> get_plugin_command [#endstone.Server.get_plugin_command]
-
-```python
-get_plugin_command(name:str) -> PluginCommand
-```
-
-Gets a PluginCommand with the given name or alias.
 
 #### <code className="doc-symbol doc-symbol-attribute"/> ip_ban_list [#endstone.Server.ip_ban_list]
 
@@ -2105,22 +2036,6 @@ protocol_version: int
 
 Gets the network protocol version that this server supports.
 
-#### <code className="doc-symbol doc-symbol-method"/> reload [#endstone.Server.reload]
-
-```python
-reload() -> None
-```
-
-Reloads the server configuration, functions, scripts and plugins.
-
-#### <code className="doc-symbol doc-symbol-method"/> reload_data [#endstone.Server.reload_data]
-
-```python
-reload_data() -> None
-```
-
-Reload only the Minecraft data for the server.
-
 #### <code className="doc-symbol doc-symbol-attribute"/> scheduler [#endstone.Server.scheduler]
 
 ```python
@@ -2145,14 +2060,6 @@ service_manager: ServiceManager
 
 Gets the service manager.
 
-#### <code className="doc-symbol doc-symbol-method"/> shutdown [#endstone.Server.shutdown]
-
-```python
-shutdown() -> None
-```
-
-Shutdowns the server, stopping everything.
-
 #### <code className="doc-symbol doc-symbol-attribute"/> start_time [#endstone.Server.start_time]
 
 ```python
@@ -2168,6 +2075,107 @@ version: str
 ```
 
 Gets the version of this server implementation.
+
+#### <code className="doc-symbol doc-symbol-method"/> broadcast [#endstone.Server.broadcast]
+
+```python
+broadcast(message:str | Translatable, permission:str) -> None
+```
+
+Broadcasts the specified message to every user with the given permission name.
+
+#### <code className="doc-symbol doc-symbol-method"/> broadcast_message [#endstone.Server.broadcast_message]
+
+```python
+broadcast_message(message:str | Translatable) -> None
+```
+
+Broadcasts the specified message to every user with permission endstone.broadcast.user
+
+#### <code className="doc-symbol doc-symbol-method"/> create_block_data [#endstone.Server.create_block_data]
+
+```python
+create_block_data(
+    type: str, block_states: dict[str, bool | str | int] | None = None
+) -> BlockData
+```
+
+Creates a new BlockData instance for the specified block type, with all properties initialized to defaults, except for those provided.
+
+#### <code className="doc-symbol doc-symbol-method"/> create_boss_bar [#endstone.Server.create_boss_bar]
+
+```python
+create_boss_bar(
+    title: str,
+    color: BarColor,
+    style: BarStyle,
+    flags: list[BarFlag] | None = None,
+) -> BossBar
+```
+
+Creates a boss bar instance to display to players. The progress defaults to 1.0.
+
+#### <code className="doc-symbol doc-symbol-method"/> create_scoreboard [#endstone.Server.create_scoreboard]
+
+```python
+create_scoreboard() -> Scoreboard
+```
+
+Creates a new Scoreboard to be tracked by the server.
+
+#### <code className="doc-symbol doc-symbol-method"/> dispatch_command [#endstone.Server.dispatch_command]
+
+```python
+dispatch_command(sender:CommandSender, command_line:str) -> bool
+```
+
+Dispatches a command on this server, and executes it if found.
+
+#### <code className="doc-symbol doc-symbol-method"/> get_player [#endstone.Server.get_player]
+
+```python
+get_player(name:str) -> Player
+```
+
+Gets the player with the exact given name, case insensitive.
+
+```python
+get_player(unique_id:UUID) -> Player
+```
+
+Gets the player with the given UUID.
+
+#### <code className="doc-symbol doc-symbol-method"/> get_plugin_command [#endstone.Server.get_plugin_command]
+
+```python
+get_plugin_command(name:str) -> PluginCommand
+```
+
+Gets a PluginCommand with the given name or alias.
+
+#### <code className="doc-symbol doc-symbol-method"/> reload [#endstone.Server.reload]
+
+```python
+reload() -> None
+```
+
+Reloads the server configuration, functions, scripts and plugins.
+
+#### <code className="doc-symbol doc-symbol-method"/> reload_data [#endstone.Server.reload_data]
+
+```python
+reload_data() -> None
+```
+
+Reload only the Minecraft data for the server.
+
+#### <code className="doc-symbol doc-symbol-method"/> shutdown [#endstone.Server.shutdown]
+
+```python
+shutdown() -> None
+```
+
+Shutdowns the server, stopping everything.
 
 </div>
 

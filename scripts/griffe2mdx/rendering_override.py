@@ -1,3 +1,8 @@
+from typing import Sequence
+
+from griffe import Function, DocstringSectionFunctions, DocstringFunction
+
+
 def do_heading(content: str, heading_level: int, role: str | None = None, **attributes: str) -> str:
     """Render a Markdown heading.
 
@@ -20,3 +25,34 @@ def do_heading(content: str, heading_level: int, role: str | None = None, **attr
 
     heading += "\n\n"
     return heading
+
+
+def do_as_functions_section(
+        functions: Sequence[Function],
+        *,
+        check_public: bool = True,
+) -> DocstringSectionFunctions:
+    """Build a functions section from a list of functions.
+
+    Parameters:
+        functions: The functions to build the section from.
+        check_public: Whether to check if the function is public.
+
+    Returns:
+        A functions docstring section.
+    """
+    value = []
+    for function in functions:
+        if function.overloads:
+            for overload in function.overloads:
+                value.append(DocstringFunction(
+                    name=overload.name,
+                    description=overload.docstring.value.split("\n", 1)[0] if overload.docstring else "",
+                ))
+        else:
+            value.append(DocstringFunction(
+                name=function.name,
+                description=function.docstring.value.split("\n", 1)[0] if function.docstring else "",
+            ))
+
+    return DocstringSectionFunctions(value)

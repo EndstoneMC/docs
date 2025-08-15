@@ -28,19 +28,19 @@ Represents a canvas for drawing to a map. Each canvas is associated with a speci
    </tr>
 </thead>
 <tbody>
-    <tr key="draw_image">
+    <tr key="1-draw_image">
         <td>[`draw_image`](#endstone.map.MapCanvas.draw_image)</td>
         <td>Draw an image to the map. The image will be clipped if necessary.</td>
     </tr>
-    <tr key="get_base_pixel_color">
+    <tr key="2-get_base_pixel_color">
         <td>[`get_base_pixel_color`](#endstone.map.MapCanvas.get_base_pixel_color)</td>
         <td>Get a pixel from the layers below this canvas.</td>
     </tr>
-    <tr key="get_pixel_color">
+    <tr key="3-get_pixel_color">
         <td>[`get_pixel_color`](#endstone.map.MapCanvas.get_pixel_color)</td>
         <td>Get a pixel from the canvas.</td>
     </tr>
-    <tr key="set_pixel_color">
+    <tr key="4-set_pixel_color">
         <td>[`set_pixel_color`](#endstone.map.MapCanvas.set_pixel_color)</td>
         <td>Draw a pixel to the canvas.</td>
     </tr></tbody>
@@ -63,6 +63,14 @@ Represents a canvas for drawing to a map. Each canvas is associated with a speci
         <td>Get the map this canvas is attached to.</td>
     </tr></tbody>
 </table>
+
+#### <code className="doc-symbol doc-symbol-attribute"/> map_view [#endstone.map.MapCanvas.map_view]
+
+```python
+map_view: MapView
+```
+
+Get the map this canvas is attached to.
 
 #### <code className="doc-symbol doc-symbol-method"/> draw_image [#endstone.map.MapCanvas.draw_image]
 
@@ -89,14 +97,6 @@ get_pixel_color(x:int, y:int) -> tuple[int, ...] | None
 Get a pixel from the canvas.
 
 If no color is set at the given position for this canvas, then None is returned and the color returned by get_base_pixel_color() is shown on the map
-
-#### <code className="doc-symbol doc-symbol-attribute"/> map_view [#endstone.map.MapCanvas.map_view]
-
-```python
-map_view: MapView
-```
-
-Get the map this canvas is attached to.
 
 #### <code className="doc-symbol doc-symbol-method"/> set_pixel_color [#endstone.map.MapCanvas.set_pixel_color]
 
@@ -130,11 +130,11 @@ Represents a renderer for a map.
    </tr>
 </thead>
 <tbody>
-    <tr key="initialize">
+    <tr key="1-initialize">
         <td>[`initialize`](#endstone.map.MapRenderer.initialize)</td>
         <td>Initialize this MapRenderer for the given map.</td>
     </tr>
-    <tr key="render">
+    <tr key="2-render">
         <td>[`render`](#endstone.map.MapRenderer.render)</td>
         <td>Render to the given map.</td>
     </tr></tbody>
@@ -182,11 +182,11 @@ Name | Description
    </tr>
 </thead>
 <tbody>
-    <tr key="add_renderer">
+    <tr key="1-add_renderer">
         <td>[`add_renderer`](#endstone.map.MapView.add_renderer)</td>
         <td>Add a renderer to this map.</td>
     </tr>
-    <tr key="remove_renderer">
+    <tr key="2-remove_renderer">
         <td>[`remove_renderer`](#endstone.map.MapView.remove_renderer)</td>
         <td>Remove a renderer from this map.</td>
     </tr></tbody>
@@ -249,6 +249,78 @@ Name | Description
         <td>Get or set the scale of this map.</td>
     </tr></tbody>
 </table>
+
+#### <code className="doc-symbol doc-symbol-attribute"/> center_x [#endstone.map.MapView.center_x]
+
+```python
+center_x: int
+```
+
+Get or set the center X position of this map.
+
+#### <code className="doc-symbol doc-symbol-attribute"/> center_z [#endstone.map.MapView.center_z]
+
+```python
+center_z: int
+```
+
+Get or set the center Z position of this map.
+
+#### <code className="doc-symbol doc-symbol-attribute"/> dimension [#endstone.map.MapView.dimension]
+
+```python
+dimension: Dimension
+```
+
+Get or set the dimension that this map is associated with.
+
+#### <code className="doc-symbol doc-symbol-attribute"/> id [#endstone.map.MapView.id]
+
+```python
+id: int
+```
+
+Get the ID of this map item for use with MapMeta.
+
+#### <code className="doc-symbol doc-symbol-attribute"/> is_unlimited_tracking [#endstone.map.MapView.is_unlimited_tracking]
+
+```python
+is_unlimited_tracking: bool
+```
+
+Whether the map will show a smaller position cursor (true), or no position cursor (false) when cursor is outside of map's range.
+
+#### <code className="doc-symbol doc-symbol-attribute"/> is_virtual [#endstone.map.MapView.is_virtual]
+
+```python
+is_virtual: bool
+```
+
+Check whether this map is virtual.
+
+#### <code className="doc-symbol doc-symbol-attribute"/> locked [#endstone.map.MapView.locked]
+
+```python
+locked: bool
+```
+
+Whether the map is locked or not. A locked map may not be explored further.
+
+#### <code className="doc-symbol doc-symbol-attribute"/> renderers [#endstone.map.MapView.renderers]
+
+```python
+renderers: list[MapRenderer]
+```
+
+Get a copied list of MapRenderers currently in effect.
+
+#### <code className="doc-symbol doc-symbol-attribute"/> scale [#endstone.map.MapView.scale]
+
+```python
+scale: MapView.Scale
+```
+
+Get or set the scale of this map.
 
 #### <code className="doc-symbol doc-symbol-class"/> Scale [#endstone.map.MapView.Scale]
 
@@ -360,62 +432,6 @@ add_renderer(renderer:MapRenderer) -> None
 
 Add a renderer to this map.
 
-#### <code className="doc-symbol doc-symbol-attribute"/> center_x [#endstone.map.MapView.center_x]
-
-```python
-center_x: int
-```
-
-Get or set the center X position of this map.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> center_z [#endstone.map.MapView.center_z]
-
-```python
-center_z: int
-```
-
-Get or set the center Z position of this map.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> dimension [#endstone.map.MapView.dimension]
-
-```python
-dimension: Dimension
-```
-
-Get or set the dimension that this map is associated with.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> id [#endstone.map.MapView.id]
-
-```python
-id: int
-```
-
-Get the ID of this map item for use with MapMeta.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> is_unlimited_tracking [#endstone.map.MapView.is_unlimited_tracking]
-
-```python
-is_unlimited_tracking: bool
-```
-
-Whether the map will show a smaller position cursor (true), or no position cursor (false) when cursor is outside of map's range.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> is_virtual [#endstone.map.MapView.is_virtual]
-
-```python
-is_virtual: bool
-```
-
-Check whether this map is virtual.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> locked [#endstone.map.MapView.locked]
-
-```python
-locked: bool
-```
-
-Whether the map is locked or not. A locked map may not be explored further.
-
 #### <code className="doc-symbol doc-symbol-method"/> remove_renderer [#endstone.map.MapView.remove_renderer]
 
 ```python
@@ -423,21 +439,5 @@ remove_renderer(renderer:MapRenderer) -> bool
 ```
 
 Remove a renderer from this map.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> renderers [#endstone.map.MapView.renderers]
-
-```python
-renderers: list[MapRenderer]
-```
-
-Get a copied list of MapRenderers currently in effect.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> scale [#endstone.map.MapView.scale]
-
-```python
-scale: MapView.Scale
-```
-
-Get or set the scale of this map.
 
 </div>

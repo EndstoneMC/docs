@@ -24,11 +24,11 @@ Name | Description
    </tr>
 </thead>
 <tbody>
-    <tr key="can_enchant_item">
+    <tr key="1-can_enchant_item">
         <td>[`can_enchant_item`](#endstone.enchantments.Enchantment.can_enchant_item)</td>
         <td>Checks if this Enchantment may be applied to the given ItemStack.</td>
     </tr>
-    <tr key="conflicts_with">
+    <tr key="2-conflicts_with">
         <td>[`conflicts_with`](#endstone.enchantments.Enchantment.conflicts_with)</td>
         <td>Check if this enchantment conflicts with another enchantment.</td>
     </tr></tbody>
@@ -67,24 +67,6 @@ Name | Description
     </tr></tbody>
 </table>
 
-#### <code className="doc-symbol doc-symbol-method"/> can_enchant_item [#endstone.enchantments.Enchantment.can_enchant_item]
-
-```python
-can_enchant_item(item:ItemStack) -> bool
-```
-
-Checks if this Enchantment may be applied to the given ItemStack.
-
-This does not check if it conflicts with any enchantments already applied to the item.
-
-#### <code className="doc-symbol doc-symbol-method"/> conflicts_with [#endstone.enchantments.Enchantment.conflicts_with]
-
-```python
-conflicts_with(other:Enchantment) -> bool
-```
-
-Check if this enchantment conflicts with another enchantment.
-
 #### <code className="doc-symbol doc-symbol-attribute"/> key [#endstone.enchantments.Enchantment.key]
 
 ```python
@@ -116,5 +98,23 @@ translation_key: str
 ```
 
 Get the translation key, suitable for use in a translation component.
+
+#### <code className="doc-symbol doc-symbol-method"/> can_enchant_item [#endstone.enchantments.Enchantment.can_enchant_item]
+
+```python
+can_enchant_item(item:ItemStack) -> bool
+```
+
+Checks if this Enchantment may be applied to the given ItemStack.
+
+This does not check if it conflicts with any enchantments already applied to the item.
+
+#### <code className="doc-symbol doc-symbol-method"/> conflicts_with [#endstone.enchantments.Enchantment.conflicts_with]
+
+```python
+conflicts_with(other:Enchantment) -> bool
+```
+
+Check if this enchantment conflicts with another enchantment.
 
 </div>

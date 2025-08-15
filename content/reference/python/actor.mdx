@@ -30,25 +30,29 @@ Represents a base actor in the level.
    </tr>
 </thead>
 <tbody>
-    <tr key="add_scoreboard_tag">
+    <tr key="1-add_scoreboard_tag">
         <td>[`add_scoreboard_tag`](#endstone.actor.Actor.add_scoreboard_tag)</td>
         <td>Adds a tag to this actor.</td>
     </tr>
-    <tr key="remove">
+    <tr key="2-remove">
         <td>[`remove`](#endstone.actor.Actor.remove)</td>
         <td>Remove this actor from the level.</td>
     </tr>
-    <tr key="remove_scoreboard_tag">
+    <tr key="3-remove_scoreboard_tag">
         <td>[`remove_scoreboard_tag`](#endstone.actor.Actor.remove_scoreboard_tag)</td>
         <td>Removes a given tag from this actor.</td>
     </tr>
-    <tr key="set_rotation">
+    <tr key="4-set_rotation">
         <td>[`set_rotation`](#endstone.actor.Actor.set_rotation)</td>
         <td>Sets the actor's rotation.</td>
     </tr>
-    <tr key="teleport">
+    <tr key="5-teleport">
         <td>[`teleport`](#endstone.actor.Actor.teleport)</td>
-        <td></td>
+        <td>Teleports this actor to the given location.</td>
+    </tr>
+    <tr key="6-teleport">
+        <td>[`teleport`](#endstone.actor.Actor.teleport)</td>
+        <td>Teleports this actor to the target Actor.</td>
     </tr></tbody>
 </table>
 
@@ -159,14 +163,6 @@ Represents a base actor in the level.
         <td>Gets this actor's current velocity.</td>
     </tr></tbody>
 </table>
-
-#### <code className="doc-symbol doc-symbol-method"/> add_scoreboard_tag [#endstone.actor.Actor.add_scoreboard_tag]
-
-```python
-add_scoreboard_tag(tag:str) -> bool
-```
-
-Adds a tag to this actor.
 
 #### <code className="doc-symbol doc-symbol-attribute"/> dimension [#endstone.actor.Actor.dimension]
 
@@ -280,22 +276,6 @@ name_tag: str
 
 Gets or sets the current name tag of the actor.
 
-#### <code className="doc-symbol doc-symbol-method"/> remove [#endstone.actor.Actor.remove]
-
-```python
-remove() -> None
-```
-
-Remove this actor from the level.
-
-#### <code className="doc-symbol doc-symbol-method"/> remove_scoreboard_tag [#endstone.actor.Actor.remove_scoreboard_tag]
-
-```python
-remove_scoreboard_tag(tag:str) -> bool
-```
-
-Removes a given tag from this actor.
-
 #### <code className="doc-symbol doc-symbol-attribute"/> runtime_id [#endstone.actor.Actor.runtime_id]
 
 ```python
@@ -320,6 +300,46 @@ scoreboard_tags: list[str]
 
 Returns a list of scoreboard tags for this actor.
 
+#### <code className="doc-symbol doc-symbol-attribute"/> type [#endstone.actor.Actor.type]
+
+```python
+type: str
+```
+
+Gets the type of the actor.
+
+#### <code className="doc-symbol doc-symbol-attribute"/> velocity [#endstone.actor.Actor.velocity]
+
+```python
+velocity: Vector
+```
+
+Gets this actor's current velocity.
+
+#### <code className="doc-symbol doc-symbol-method"/> add_scoreboard_tag [#endstone.actor.Actor.add_scoreboard_tag]
+
+```python
+add_scoreboard_tag(tag:str) -> bool
+```
+
+Adds a tag to this actor.
+
+#### <code className="doc-symbol doc-symbol-method"/> remove [#endstone.actor.Actor.remove]
+
+```python
+remove() -> None
+```
+
+Remove this actor from the level.
+
+#### <code className="doc-symbol doc-symbol-method"/> remove_scoreboard_tag [#endstone.actor.Actor.remove_scoreboard_tag]
+
+```python
+remove_scoreboard_tag(tag:str) -> bool
+```
+
+Removes a given tag from this actor.
+
 #### <code className="doc-symbol doc-symbol-method"/> set_rotation [#endstone.actor.Actor.set_rotation]
 
 ```python
@@ -341,22 +361,6 @@ teleport(target:Actor) -> None
 ```
 
 Teleports this actor to the target Actor.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> type [#endstone.actor.Actor.type]
-
-```python
-type: str
-```
-
-Gets the type of the actor.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> velocity [#endstone.actor.Actor.velocity]
-
-```python
-velocity: Vector
-```
-
-Gets this actor's current velocity.
 
 </div>
 

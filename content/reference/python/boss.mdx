@@ -318,27 +318,27 @@ Represents a boss bar that is displayed to players.
    </tr>
 </thead>
 <tbody>
-    <tr key="add_flag">
+    <tr key="1-add_flag">
         <td>[`add_flag`](#endstone.boss.BossBar.add_flag)</td>
         <td>Adds an optional flag to this boss bar.</td>
     </tr>
-    <tr key="add_player">
+    <tr key="2-add_player">
         <td>[`add_player`](#endstone.boss.BossBar.add_player)</td>
         <td>Adds the player to this boss bar causing it to display on their screen.</td>
     </tr>
-    <tr key="has_flag">
+    <tr key="3-has_flag">
         <td>[`has_flag`](#endstone.boss.BossBar.has_flag)</td>
         <td>Checks whether this boss bar has the passed flag set.</td>
     </tr>
-    <tr key="remove_all">
+    <tr key="4-remove_all">
         <td>[`remove_all`](#endstone.boss.BossBar.remove_all)</td>
         <td>Removes all players from this boss bar.</td>
     </tr>
-    <tr key="remove_flag">
+    <tr key="5-remove_flag">
         <td>[`remove_flag`](#endstone.boss.BossBar.remove_flag)</td>
         <td>Removes an existing flag on this boss bar.</td>
     </tr>
-    <tr key="remove_player">
+    <tr key="6-remove_player">
         <td>[`remove_player`](#endstone.boss.BossBar.remove_player)</td>
         <td>Removes the player from this boss bar causing it to be removed from their screen.</td>
     </tr></tbody>
@@ -387,22 +387,6 @@ Represents a boss bar that is displayed to players.
     </tr></tbody>
 </table>
 
-#### <code className="doc-symbol doc-symbol-method"/> add_flag [#endstone.boss.BossBar.add_flag]
-
-```python
-add_flag(flag:BarFlag) -> None
-```
-
-Adds an optional flag to this boss bar.
-
-#### <code className="doc-symbol doc-symbol-method"/> add_player [#endstone.boss.BossBar.add_player]
-
-```python
-add_player(player:Player) -> None
-```
-
-Adds the player to this boss bar causing it to display on their screen.
-
 #### <code className="doc-symbol doc-symbol-attribute"/> color [#endstone.boss.BossBar.color]
 
 ```python
@@ -410,14 +394,6 @@ color: BarColor
 ```
 
 The color of this boss bar.
-
-#### <code className="doc-symbol doc-symbol-method"/> has_flag [#endstone.boss.BossBar.has_flag]
-
-```python
-has_flag(flag:BarFlag) -> bool
-```
-
-Checks whether this boss bar has the passed flag set.
 
 #### <code className="doc-symbol doc-symbol-attribute"/> is_visible [#endstone.boss.BossBar.is_visible]
 
@@ -443,6 +419,46 @@ progress: float
 
 The progress of the bar between 0.0 and 1.0.
 
+#### <code className="doc-symbol doc-symbol-attribute"/> style [#endstone.boss.BossBar.style]
+
+```python
+style: BarStyle
+```
+
+The style of this boss bar.
+
+#### <code className="doc-symbol doc-symbol-attribute"/> title [#endstone.boss.BossBar.title]
+
+```python
+title: str
+```
+
+The title of this boss bar.
+
+#### <code className="doc-symbol doc-symbol-method"/> add_flag [#endstone.boss.BossBar.add_flag]
+
+```python
+add_flag(flag:BarFlag) -> None
+```
+
+Adds an optional flag to this boss bar.
+
+#### <code className="doc-symbol doc-symbol-method"/> add_player [#endstone.boss.BossBar.add_player]
+
+```python
+add_player(player:Player) -> None
+```
+
+Adds the player to this boss bar causing it to display on their screen.
+
+#### <code className="doc-symbol doc-symbol-method"/> has_flag [#endstone.boss.BossBar.has_flag]
+
+```python
+has_flag(flag:BarFlag) -> bool
+```
+
+Checks whether this boss bar has the passed flag set.
+
 #### <code className="doc-symbol doc-symbol-method"/> remove_all [#endstone.boss.BossBar.remove_all]
 
 ```python
@@ -466,21 +482,5 @@ remove_player(player:Player) -> None
 ```
 
 Removes the player from this boss bar causing it to be removed from their screen.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> style [#endstone.boss.BossBar.style]
-
-```python
-style: BarStyle
-```
-
-The style of this boss bar.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> title [#endstone.boss.BossBar.title]
-
-```python
-title: str
-```
-
-The title of this boss bar.
 
 </div>

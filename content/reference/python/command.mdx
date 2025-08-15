@@ -79,15 +79,15 @@ Represents a Command, which executes various tasks upon user input
    </tr>
 </thead>
 <tbody>
-    <tr key="execute">
+    <tr key="1-execute">
         <td>[`execute`](#endstone.command.Command.execute)</td>
         <td>Executes the command, returning its success</td>
     </tr>
-    <tr key="test_permission">
+    <tr key="2-test_permission">
         <td>[`test_permission`](#endstone.command.Command.test_permission)</td>
         <td>Tests the given CommandSender to see if they can perform this command.</td>
     </tr>
-    <tr key="test_permission_silently">
+    <tr key="3-test_permission_silently">
         <td>[`test_permission_silently`](#endstone.command.Command.test_permission_silently)</td>
         <td>Tests the given CommandSender to see if they can perform this command. No error is sent to the sender.</td>
     </tr></tbody>
@@ -152,14 +152,6 @@ description: str
 
 Brief description of this command
 
-#### <code className="doc-symbol doc-symbol-method"/> execute [#endstone.command.Command.execute]
-
-```python
-execute(sender:CommandSender, args:list[str]) -> bool
-```
-
-Executes the command, returning its success
-
 #### <code className="doc-symbol doc-symbol-attribute"/> is_registered [#endstone.command.Command.is_registered]
 
 ```python
@@ -184,6 +176,22 @@ permissions: list[str]
 
 The permissions required by users to be able to perform this command
 
+#### <code className="doc-symbol doc-symbol-attribute"/> usages [#endstone.command.Command.usages]
+
+```python
+usages: list[str]
+```
+
+List of usages of this command
+
+#### <code className="doc-symbol doc-symbol-method"/> execute [#endstone.command.Command.execute]
+
+```python
+execute(sender:CommandSender, args:list[str]) -> bool
+```
+
+Executes the command, returning its success
+
 #### <code className="doc-symbol doc-symbol-method"/> test_permission [#endstone.command.Command.test_permission]
 
 ```python
@@ -199,14 +207,6 @@ test_permission_silently(target:CommandSender) -> bool
 ```
 
 Tests the given CommandSender to see if they can perform this command. No error is sent to the sender.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> usages [#endstone.command.Command.usages]
-
-```python
-usages: list[str]
-```
-
-List of usages of this command
 
 </div>
 
@@ -230,7 +230,7 @@ Represents a class which contains a single method for executing commands
    </tr>
 </thead>
 <tbody>
-    <tr key="on_command">
+    <tr key="1-on_command">
         <td>[`on_command`](#endstone.command.CommandExecutor.on_command)</td>
         <td>Executes the given command, returning its success.</td>
     </tr></tbody>
@@ -264,11 +264,11 @@ Represents a command sender.
    </tr>
 </thead>
 <tbody>
-    <tr key="send_error_message">
+    <tr key="1-send_error_message">
         <td>[`send_error_message`](#endstone.command.CommandSender.send_error_message)</td>
         <td>Sends this sender an error message</td>
     </tr>
-    <tr key="send_message">
+    <tr key="2-send_message">
         <td>[`send_message`](#endstone.command.CommandSender.send_message)</td>
         <td>Sends this sender a message</td>
     </tr></tbody>
@@ -305,6 +305,14 @@ name: str
 
 Gets the name of this command sender
 
+#### <code className="doc-symbol doc-symbol-attribute"/> server [#endstone.command.CommandSender.server]
+
+```python
+server: Server
+```
+
+Returns the server instance that this command is running on
+
 #### <code className="doc-symbol doc-symbol-method"/> send_error_message [#endstone.command.CommandSender.send_error_message]
 
 ```python
@@ -320,14 +328,6 @@ send_message(message:str | Translatable) -> None
 ```
 
 Sends this sender a message
-
-#### <code className="doc-symbol doc-symbol-attribute"/> server [#endstone.command.CommandSender.server]
-
-```python
-server: Server
-```
-
-Returns the server instance that this command is running on
 
 </div>
 

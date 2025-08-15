@@ -27,27 +27,27 @@ Represents a scheduler that executes various tasks
    </tr>
 </thead>
 <tbody>
-    <tr key="cancel_task">
+    <tr key="1-cancel_task">
         <td>[`cancel_task`](#endstone.scheduler.Scheduler.cancel_task)</td>
         <td>Removes task from scheduler.</td>
     </tr>
-    <tr key="cancel_tasks">
+    <tr key="2-cancel_tasks">
         <td>[`cancel_tasks`](#endstone.scheduler.Scheduler.cancel_tasks)</td>
         <td>Removes all tasks associated with a particular plugin from the scheduler.</td>
     </tr>
-    <tr key="get_pending_tasks">
+    <tr key="3-get_pending_tasks">
         <td>[`get_pending_tasks`](#endstone.scheduler.Scheduler.get_pending_tasks)</td>
         <td>Returns a vector of all pending tasks.</td>
     </tr>
-    <tr key="is_queued">
+    <tr key="4-is_queued">
         <td>[`is_queued`](#endstone.scheduler.Scheduler.is_queued)</td>
         <td>Check if the task queued to be run later.</td>
     </tr>
-    <tr key="is_running">
+    <tr key="5-is_running">
         <td>[`is_running`](#endstone.scheduler.Scheduler.is_running)</td>
         <td>Check if the task currently running.</td>
     </tr>
-    <tr key="run_task">
+    <tr key="6-run_task">
         <td>[`run_task`](#endstone.scheduler.Scheduler.run_task)</td>
         <td>Returns a task that will be executed synchronously</td>
     </tr></tbody>
@@ -121,7 +121,7 @@ Represents a task being executed by the scheduler
    </tr>
 </thead>
 <tbody>
-    <tr key="cancel">
+    <tr key="1-cancel">
         <td>[`cancel`](#endstone.scheduler.Task.cancel)</td>
         <td>Attempts to cancel this task.</td>
     </tr></tbody>
@@ -160,14 +160,6 @@ Represents a task being executed by the scheduler
     </tr></tbody>
 </table>
 
-#### <code className="doc-symbol doc-symbol-method"/> cancel [#endstone.scheduler.Task.cancel]
-
-```python
-cancel() -> None
-```
-
-Attempts to cancel this task.
-
 #### <code className="doc-symbol doc-symbol-attribute"/> is_cancelled [#endstone.scheduler.Task.is_cancelled]
 
 ```python
@@ -199,5 +191,13 @@ task_id: int
 ```
 
 Returns the task id.
+
+#### <code className="doc-symbol doc-symbol-method"/> cancel [#endstone.scheduler.Task.cancel]
+
+```python
+cancel() -> None
+```
+
+Attempts to cancel this task.
 
 </div>

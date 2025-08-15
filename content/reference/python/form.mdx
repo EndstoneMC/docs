@@ -47,19 +47,19 @@ Represents a form with buttons that let the player take action.
    </tr>
 </thead>
 <tbody>
-    <tr key="add_button">
+    <tr key="1-add_button">
         <td>[`add_button`](#endstone.form.ActionForm.add_button)</td>
         <td>Adds a button to the form.</td>
     </tr>
-    <tr key="add_divider">
+    <tr key="2-add_divider">
         <td>[`add_divider`](#endstone.form.ActionForm.add_divider)</td>
         <td>Adds a divider to the form.</td>
     </tr>
-    <tr key="add_header">
+    <tr key="3-add_header">
         <td>[`add_header`](#endstone.form.ActionForm.add_header)</td>
         <td>Adds a header to the form.</td>
     </tr>
-    <tr key="add_label">
+    <tr key="4-add_label">
         <td>[`add_label`](#endstone.form.ActionForm.add_label)</td>
         <td>Adds a label to the form.</td>
     </tr></tbody>
@@ -103,42 +103,6 @@ Represents a form with buttons that let the player take action.
     </tr></tbody>
 </table>
 
-#### <code className="doc-symbol doc-symbol-method"/> add_button [#endstone.form.ActionForm.add_button]
-
-```python
-add_button(
-    text: str | Translatable,
-    icon: str | None = None,
-    on_click: Callable[[Player], None] = None,
-) -> ActionForm
-```
-
-Adds a button to the form.
-
-#### <code className="doc-symbol doc-symbol-method"/> add_divider [#endstone.form.ActionForm.add_divider]
-
-```python
-add_divider() -> ActionForm
-```
-
-Adds a divider to the form.
-
-#### <code className="doc-symbol doc-symbol-method"/> add_header [#endstone.form.ActionForm.add_header]
-
-```python
-add_header(text:str | Translatable) -> ActionForm
-```
-
-Adds a header to the form.
-
-#### <code className="doc-symbol doc-symbol-method"/> add_label [#endstone.form.ActionForm.add_label]
-
-```python
-add_label(text:str | Translatable) -> ActionForm
-```
-
-Adds a label to the form.
-
 #### <code className="doc-symbol doc-symbol-attribute"/> content [#endstone.form.ActionForm.content]
 
 ```python
@@ -178,6 +142,42 @@ title: str | Translatable
 ```
 
 Gets or sets the title of the form.
+
+#### <code className="doc-symbol doc-symbol-method"/> add_button [#endstone.form.ActionForm.add_button]
+
+```python
+add_button(
+    text: str | Translatable,
+    icon: str | None = None,
+    on_click: Callable[[Player], None] = None,
+) -> ActionForm
+```
+
+Adds a button to the form.
+
+#### <code className="doc-symbol doc-symbol-method"/> add_divider [#endstone.form.ActionForm.add_divider]
+
+```python
+add_divider() -> ActionForm
+```
+
+Adds a divider to the form.
+
+#### <code className="doc-symbol doc-symbol-method"/> add_header [#endstone.form.ActionForm.add_header]
+
+```python
+add_header(text:str | Translatable) -> ActionForm
+```
+
+Adds a header to the form.
+
+#### <code className="doc-symbol doc-symbol-method"/> add_label [#endstone.form.ActionForm.add_label]
+
+```python
+add_label(text:str | Translatable) -> ActionForm
+```
+
+Adds a label to the form.
 
 </div>
 
@@ -285,7 +285,7 @@ Represents a dropdown with a set of predefined options.
    </tr>
 </thead>
 <tbody>
-    <tr key="add_option">
+    <tr key="1-add_option">
         <td>[`add_option`](#endstone.form.Dropdown.add_option)</td>
         <td>Adds a new option to the dropdown.</td>
     </tr></tbody>
@@ -319,14 +319,6 @@ Represents a dropdown with a set of predefined options.
     </tr></tbody>
 </table>
 
-#### <code className="doc-symbol doc-symbol-method"/> add_option [#endstone.form.Dropdown.add_option]
-
-```python
-add_option(option:str) -> Dropdown
-```
-
-Adds a new option to the dropdown.
-
 #### <code className="doc-symbol doc-symbol-attribute"/> default_index [#endstone.form.Dropdown.default_index]
 
 ```python
@@ -350,6 +342,14 @@ options: list[str]
 ```
 
 Gets or sets the options of the dropdown.
+
+#### <code className="doc-symbol doc-symbol-method"/> add_option [#endstone.form.Dropdown.add_option]
+
+```python
+add_option(option:str) -> Dropdown
+```
+
+Adds a new option to the dropdown.
 
 </div>
 
@@ -578,7 +578,7 @@ Represents a modal form with controls.
    </tr>
 </thead>
 <tbody>
-    <tr key="add_control">
+    <tr key="1-add_control">
         <td>[`add_control`](#endstone.form.ModalForm.add_control)</td>
         <td>Adds a control to the form.</td>
     </tr></tbody>
@@ -626,25 +626,6 @@ Represents a modal form with controls.
         <td>Gets or sets the title of the form.</td>
     </tr></tbody>
 </table>
-
-#### <code className="doc-symbol doc-symbol-method"/> add_control [#endstone.form.ModalForm.add_control]
-
-```python
-add_control(
-    control: (
-        Dropdown
-        | Label
-        | Slider
-        | StepSlider
-        | TextInput
-        | Toggle
-        | Divider
-        | Header
-    ),
-) -> ModalForm
-```
-
-Adds a control to the form.
 
 #### <code className="doc-symbol doc-symbol-attribute"/> controls [#endstone.form.ModalForm.controls]
 
@@ -703,6 +684,25 @@ title: str | Translatable
 ```
 
 Gets or sets the title of the form.
+
+#### <code className="doc-symbol doc-symbol-method"/> add_control [#endstone.form.ModalForm.add_control]
+
+```python
+add_control(
+    control: (
+        Dropdown
+        | Label
+        | Slider
+        | StepSlider
+        | TextInput
+        | Toggle
+        | Divider
+        | Header
+    ),
+) -> ModalForm
+```
+
+Adds a control to the form.
 
 </div>
 
@@ -826,7 +826,7 @@ Represents a step slider with a set of predefined options.
    </tr>
 </thead>
 <tbody>
-    <tr key="add_option">
+    <tr key="1-add_option">
         <td>[`add_option`](#endstone.form.StepSlider.add_option)</td>
         <td>Adds a new option to the step slider.</td>
     </tr></tbody>
@@ -860,14 +860,6 @@ Represents a step slider with a set of predefined options.
     </tr></tbody>
 </table>
 
-#### <code className="doc-symbol doc-symbol-method"/> add_option [#endstone.form.StepSlider.add_option]
-
-```python
-add_option(option:str) -> Dropdown
-```
-
-Adds a new option to the step slider.
-
 #### <code className="doc-symbol doc-symbol-attribute"/> default_index [#endstone.form.StepSlider.default_index]
 
 ```python
@@ -891,6 +883,14 @@ options: list[str]
 ```
 
 Gets or sets the options of the step slider.
+
+#### <code className="doc-symbol doc-symbol-method"/> add_option [#endstone.form.StepSlider.add_option]
+
+```python
+add_option(option:str) -> Dropdown
+```
+
+Adds a new option to the step slider.
 
 </div>
 

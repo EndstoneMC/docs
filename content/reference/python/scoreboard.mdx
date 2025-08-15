@@ -66,6 +66,24 @@ Name | Description
 DUMMY: Criteria.Type
 ```
 
+#### <code className="doc-symbol doc-symbol-attribute"/> default_render_type [#endstone.scoreboard.Criteria.default_render_type]
+
+```python
+default_render_type: RenderType
+```
+
+#### <code className="doc-symbol doc-symbol-attribute"/> is_read_only [#endstone.scoreboard.Criteria.is_read_only]
+
+```python
+is_read_only: bool
+```
+
+#### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.scoreboard.Criteria.name]
+
+```python
+name: str
+```
+
 #### <code className="doc-symbol doc-symbol-class"/> Type [#endstone.scoreboard.Criteria.Type]
 
 ```python
@@ -123,24 +141,6 @@ value: int
 ```
 
 </div>
-
-#### <code className="doc-symbol doc-symbol-attribute"/> default_render_type [#endstone.scoreboard.Criteria.default_render_type]
-
-```python
-default_render_type: RenderType
-```
-
-#### <code className="doc-symbol doc-symbol-attribute"/> is_read_only [#endstone.scoreboard.Criteria.is_read_only]
-
-```python
-is_read_only: bool
-```
-
-#### <code className="doc-symbol doc-symbol-attribute"/> name [#endstone.scoreboard.Criteria.name]
-
-```python
-name: str
-```
 
 </div>
 
@@ -240,15 +240,15 @@ Represents an objective on a scoreboard that can show scores specific to entries
    </tr>
 </thead>
 <tbody>
-    <tr key="get_score">
+    <tr key="1-get_score">
         <td>[`get_score`](#endstone.scoreboard.Objective.get_score)</td>
         <td>Gets an entry's Score for this objective</td>
     </tr>
-    <tr key="set_display">
+    <tr key="2-set_display">
         <td>[`set_display`](#endstone.scoreboard.Objective.set_display)</td>
         <td>Sets the display slot and sort order for this objective. This will remove it from any other display slot.</td>
     </tr>
-    <tr key="unregister">
+    <tr key="3-unregister">
         <td>[`unregister`](#endstone.scoreboard.Objective.unregister)</td>
         <td>Unregisters this objective from the associated Scoreboard.</td>
     </tr></tbody>
@@ -336,14 +336,6 @@ display_slot: DisplaySlot | None
 
 Gets or sets the display slot this objective is displayed at
 
-#### <code className="doc-symbol doc-symbol-method"/> get_score [#endstone.scoreboard.Objective.get_score]
-
-```python
-get_score(entry:Player | Actor | str) -> Score
-```
-
-Gets an entry's Score for this objective
-
 #### <code className="doc-symbol doc-symbol-attribute"/> is_displayed [#endstone.scoreboard.Objective.is_displayed]
 
 ```python
@@ -384,6 +376,22 @@ scoreboard: Scoreboard
 
 Gets the scoreboard to which this objective is attached
 
+#### <code className="doc-symbol doc-symbol-attribute"/> sort_order [#endstone.scoreboard.Objective.sort_order]
+
+```python
+sort_order: ObjectiveSortOrder | None
+```
+
+Gets or sets the sort order for this objective
+
+#### <code className="doc-symbol doc-symbol-method"/> get_score [#endstone.scoreboard.Objective.get_score]
+
+```python
+get_score(entry:Player | Actor | str) -> Score
+```
+
+Gets an entry's Score for this objective
+
 #### <code className="doc-symbol doc-symbol-method"/> set_display [#endstone.scoreboard.Objective.set_display]
 
 ```python
@@ -393,14 +401,6 @@ set_display(
 ```
 
 Sets the display slot and sort order for this objective. This will remove it from any other display slot.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> sort_order [#endstone.scoreboard.Objective.sort_order]
-
-```python
-sort_order: ObjectiveSortOrder | None
-```
-
-Gets or sets the sort order for this objective
 
 #### <code className="doc-symbol doc-symbol-method"/> unregister [#endstone.scoreboard.Objective.unregister]
 
@@ -583,27 +583,31 @@ Represents a scoreboard
    </tr>
 </thead>
 <tbody>
-    <tr key="add_objective">
+    <tr key="1-add_objective">
         <td>[`add_objective`](#endstone.scoreboard.Scoreboard.add_objective)</td>
         <td>Registers an Objective on this Scoreboard with a name displayed to players</td>
     </tr>
-    <tr key="clear_slot">
+    <tr key="2-clear_slot">
         <td>[`clear_slot`](#endstone.scoreboard.Scoreboard.clear_slot)</td>
         <td>Clears any objective in the specified slot</td>
     </tr>
-    <tr key="get_objective">
+    <tr key="3-get_objective">
         <td>[`get_objective`](#endstone.scoreboard.Scoreboard.get_objective)</td>
-        <td></td>
+        <td>Gets an Objective on this Scoreboard by name</td>
     </tr>
-    <tr key="get_objectives_by_criteria">
+    <tr key="4-get_objective">
+        <td>[`get_objective`](#endstone.scoreboard.Scoreboard.get_objective)</td>
+        <td>Gets the Objective currently displayed in a DisplaySlot on this Scoreboard</td>
+    </tr>
+    <tr key="5-get_objectives_by_criteria">
         <td>[`get_objectives_by_criteria`](#endstone.scoreboard.Scoreboard.get_objectives_by_criteria)</td>
         <td>Gets all Objectives of a Criteria on the Scoreboard</td>
     </tr>
-    <tr key="get_scores">
+    <tr key="6-get_scores">
         <td>[`get_scores`](#endstone.scoreboard.Scoreboard.get_scores)</td>
         <td>Gets all scores for an entry on this Scoreboard</td>
     </tr>
-    <tr key="reset_scores">
+    <tr key="7-reset_scores">
         <td>[`reset_scores`](#endstone.scoreboard.Scoreboard.reset_scores)</td>
         <td>Removes all scores for an entry on this Scoreboard</td>
     </tr></tbody>
@@ -632,6 +636,22 @@ Represents a scoreboard
     </tr></tbody>
 </table>
 
+#### <code className="doc-symbol doc-symbol-attribute"/> entries [#endstone.scoreboard.Scoreboard.entries]
+
+```python
+entries: list[Player | Actor | str]
+```
+
+Gets all entries tracked by this Scoreboard
+
+#### <code className="doc-symbol doc-symbol-attribute"/> objectives [#endstone.scoreboard.Scoreboard.objectives]
+
+```python
+objectives: list[Objective]
+```
+
+Gets all Objectives on this Scoreboard
+
 #### <code className="doc-symbol doc-symbol-method"/> add_objective [#endstone.scoreboard.Scoreboard.add_objective]
 
 ```python
@@ -652,14 +672,6 @@ clear_slot(slot:DisplaySlot) -> None
 ```
 
 Clears any objective in the specified slot
-
-#### <code className="doc-symbol doc-symbol-attribute"/> entries [#endstone.scoreboard.Scoreboard.entries]
-
-```python
-entries: list[Player | Actor | str]
-```
-
-Gets all entries tracked by this Scoreboard
 
 #### <code className="doc-symbol doc-symbol-method"/> get_objective [#endstone.scoreboard.Scoreboard.get_objective]
 
@@ -690,14 +702,6 @@ get_scores(entry:Player | Actor | str) -> list[Score]
 ```
 
 Gets all scores for an entry on this Scoreboard
-
-#### <code className="doc-symbol doc-symbol-attribute"/> objectives [#endstone.scoreboard.Scoreboard.objectives]
-
-```python
-objectives: list[Objective]
-```
-
-Gets all Objectives on this Scoreboard
 
 #### <code className="doc-symbol doc-symbol-method"/> reset_scores [#endstone.scoreboard.Scoreboard.reset_scores]
 

@@ -81,7 +81,7 @@ Name | Description
    </tr>
 </thead>
 <tbody>
-    <tr key="event_handler">
+    <tr key="1-event_handler">
         <td>[`event_handler`](#endstone.event.event_handler)</td>
         <td></td>
     </tr></tbody>
@@ -692,7 +692,7 @@ Represents an event that may be cancelled by a plugin or the server.
    </tr>
 </thead>
 <tbody>
-    <tr key="cancel">
+    <tr key="1-cancel">
         <td>[`cancel`](#endstone.event.Cancellable.cancel)</td>
         <td>Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.</td>
     </tr></tbody>
@@ -721,14 +721,6 @@ Represents an event that may be cancelled by a plugin or the server.
     </tr></tbody>
 </table>
 
-#### <code className="doc-symbol doc-symbol-method"/> cancel [#endstone.event.Cancellable.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 #### <code className="doc-symbol doc-symbol-attribute"/> cancelled [#endstone.event.Cancellable.cancelled]
 
 ```python
@@ -744,6 +736,14 @@ is_cancelled: bool
 ```
 
 Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
+
+#### <code className="doc-symbol doc-symbol-method"/> cancel [#endstone.event.Cancellable.cancel]
+
+```python
+cancel() -> None
+```
+
+Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 
 </div>
 
@@ -1773,6 +1773,62 @@ Name | Description
     </tr></tbody>
 </table>
 
+#### <code className="doc-symbol doc-symbol-attribute"/> action [#endstone.event.PlayerInteractEvent.action]
+
+```python
+action: PlayerInteractEvent.Action
+```
+
+Returns the action type of interaction
+
+#### <code className="doc-symbol doc-symbol-attribute"/> block [#endstone.event.PlayerInteractEvent.block]
+
+```python
+block: Block
+```
+
+Returns the clicked block
+
+#### <code className="doc-symbol doc-symbol-attribute"/> block_face [#endstone.event.PlayerInteractEvent.block_face]
+
+```python
+block_face: BlockFace
+```
+
+Returns the face of the block that was clicked
+
+#### <code className="doc-symbol doc-symbol-attribute"/> clicked_position [#endstone.event.PlayerInteractEvent.clicked_position]
+
+```python
+clicked_position: Vector | None
+```
+
+Gets the exact position on the block the player interacted with.
+
+#### <code className="doc-symbol doc-symbol-attribute"/> has_block [#endstone.event.PlayerInteractEvent.has_block]
+
+```python
+has_block: bool
+```
+
+Check if this event involved a block
+
+#### <code className="doc-symbol doc-symbol-attribute"/> has_item [#endstone.event.PlayerInteractEvent.has_item]
+
+```python
+has_item: bool
+```
+
+Check if this event involved an item
+
+#### <code className="doc-symbol doc-symbol-attribute"/> item [#endstone.event.PlayerInteractEvent.item]
+
+```python
+item: ItemStack
+```
+
+Returns the item in hand represented by this event
+
 #### <code className="doc-symbol doc-symbol-class"/> Action [#endstone.event.PlayerInteractEvent.Action]
 
 ```python
@@ -1861,62 +1917,6 @@ value: int
 ```
 
 </div>
-
-#### <code className="doc-symbol doc-symbol-attribute"/> action [#endstone.event.PlayerInteractEvent.action]
-
-```python
-action: PlayerInteractEvent.Action
-```
-
-Returns the action type of interaction
-
-#### <code className="doc-symbol doc-symbol-attribute"/> block [#endstone.event.PlayerInteractEvent.block]
-
-```python
-block: Block
-```
-
-Returns the clicked block
-
-#### <code className="doc-symbol doc-symbol-attribute"/> block_face [#endstone.event.PlayerInteractEvent.block_face]
-
-```python
-block_face: BlockFace
-```
-
-Returns the face of the block that was clicked
-
-#### <code className="doc-symbol doc-symbol-attribute"/> clicked_position [#endstone.event.PlayerInteractEvent.clicked_position]
-
-```python
-clicked_position: Vector | None
-```
-
-Gets the exact position on the block the player interacted with.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> has_block [#endstone.event.PlayerInteractEvent.has_block]
-
-```python
-has_block: bool
-```
-
-Check if this event involved a block
-
-#### <code className="doc-symbol doc-symbol-attribute"/> has_item [#endstone.event.PlayerInteractEvent.has_item]
-
-```python
-has_item: bool
-```
-
-Check if this event involved an item
-
-#### <code className="doc-symbol doc-symbol-attribute"/> item [#endstone.event.PlayerInteractEvent.item]
-
-```python
-item: ItemStack
-```
-
-Returns the item in hand represented by this event
 
 </div>
 
@@ -2731,6 +2731,18 @@ Name | Description
     </tr></tbody>
 </table>
 
+#### <code className="doc-symbol doc-symbol-attribute"/> STARTUP [#endstone.event.ServerLoadEvent.STARTUP]
+
+```python
+STARTUP: ServerLoadEvent.LoadType
+```
+
+#### <code className="doc-symbol doc-symbol-attribute"/> type [#endstone.event.ServerLoadEvent.type]
+
+```python
+type: ServerLoadEvent.LoadType
+```
+
 #### <code className="doc-symbol doc-symbol-class"/> LoadType [#endstone.event.ServerLoadEvent.LoadType]
 
 ```python
@@ -2786,18 +2798,6 @@ value: int
 ```
 
 </div>
-
-#### <code className="doc-symbol doc-symbol-attribute"/> STARTUP [#endstone.event.ServerLoadEvent.STARTUP]
-
-```python
-STARTUP: ServerLoadEvent.LoadType
-```
-
-#### <code className="doc-symbol doc-symbol-attribute"/> type [#endstone.event.ServerLoadEvent.type]
-
-```python
-type: ServerLoadEvent.LoadType
-```
 
 </div>
 

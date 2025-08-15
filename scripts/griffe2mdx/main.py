@@ -22,6 +22,7 @@ def render_object_docs(obj: Object, config: dict | None = None) -> str:
     loader: FileSystemLoader = env.loader
     loader.searchpath.insert(0, str(Path(__file__).parent / "templates"))
     env.filters["heading"] = rendering_override.do_heading
+    env.filters["as_functions_section"] = rendering_override.do_as_functions_section
     context = prepare_context(obj, config)
     rendered = env.get_template(f"{obj.kind.value}.md.jinja").render(**context)
     return mdformat.text(rendered)
@@ -48,6 +49,8 @@ def main():
     config["show_object_full_path"] = False
     config["show_signature_annotations"] = True
     config["signature_crossrefs"] = True
+    config["show_submodules"] = False
+    config["group_by_category"] = True
 
     loader = GriffeLoader()
     module = loader.load("endstone")

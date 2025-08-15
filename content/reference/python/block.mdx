@@ -29,19 +29,23 @@ Represents a block.
    </tr>
 </thead>
 <tbody>
-    <tr key="capture_state">
+    <tr key="1-capture_state">
         <td>[`capture_state`](#endstone.block.Block.capture_state)</td>
         <td>Captures the current state of this block. The returned object will never be updated, and you are not guaranteed that (for example) a sign is still a sign after you capture its state.</td>
     </tr>
-    <tr key="get_relative">
+    <tr key="2-get_relative">
         <td>[`get_relative`](#endstone.block.Block.get_relative)</td>
-        <td></td>
+        <td>Gets the block at the given offsets</td>
     </tr>
-    <tr key="set_data">
+    <tr key="3-get_relative">
+        <td>[`get_relative`](#endstone.block.Block.get_relative)</td>
+        <td>Gets the block at the given distance of the given face</td>
+    </tr>
+    <tr key="4-set_data">
         <td>[`set_data`](#endstone.block.Block.set_data)</td>
         <td>Sets the complete data for this block</td>
     </tr>
-    <tr key="set_type">
+    <tr key="5-set_type">
         <td>[`set_type`](#endstone.block.Block.set_type)</td>
         <td>Sets the type of this block</td>
     </tr></tbody>
@@ -95,14 +99,6 @@ Represents a block.
     </tr></tbody>
 </table>
 
-#### <code className="doc-symbol doc-symbol-method"/> capture_state [#endstone.block.Block.capture_state]
-
-```python
-capture_state() -> BlockState
-```
-
-Captures the current state of this block. The returned object will never be updated, and you are not guaranteed that (for example) a sign is still a sign after you capture its state.
-
 #### <code className="doc-symbol doc-symbol-attribute"/> data [#endstone.block.Block.data]
 
 ```python
@@ -119,20 +115,6 @@ dimension: Dimension
 
 Gets the dimension which contains this Block
 
-#### <code className="doc-symbol doc-symbol-method"/> get_relative [#endstone.block.Block.get_relative]
-
-```python
-get_relative(offset_x:int, offset_y:int, offset_z:int) -> Block
-```
-
-Gets the block at the given offsets
-
-```python
-get_relative(face:BlockFace, distance:int = 1) -> Block
-```
-
-Gets the block at the given distance of the given face
-
 #### <code className="doc-symbol doc-symbol-attribute"/> location [#endstone.block.Block.location]
 
 ```python
@@ -140,22 +122,6 @@ location: Location
 ```
 
 Gets the Location of the block
-
-#### <code className="doc-symbol doc-symbol-method"/> set_data [#endstone.block.Block.set_data]
-
-```python
-set_data(data:BlockData, apply_physics:bool = True) -> None
-```
-
-Sets the complete data for this block
-
-#### <code className="doc-symbol doc-symbol-method"/> set_type [#endstone.block.Block.set_type]
-
-```python
-set_type(type:str, apply_physics:bool = True) -> None
-```
-
-Sets the type of this block
 
 #### <code className="doc-symbol doc-symbol-attribute"/> type [#endstone.block.Block.type]
 
@@ -188,6 +154,44 @@ z: int
 ```
 
 Gets the z-coordinate of this block
+
+#### <code className="doc-symbol doc-symbol-method"/> capture_state [#endstone.block.Block.capture_state]
+
+```python
+capture_state() -> BlockState
+```
+
+Captures the current state of this block. The returned object will never be updated, and you are not guaranteed that (for example) a sign is still a sign after you capture its state.
+
+#### <code className="doc-symbol doc-symbol-method"/> get_relative [#endstone.block.Block.get_relative]
+
+```python
+get_relative(offset_x:int, offset_y:int, offset_z:int) -> Block
+```
+
+Gets the block at the given offsets
+
+```python
+get_relative(face:BlockFace, distance:int = 1) -> Block
+```
+
+Gets the block at the given distance of the given face
+
+#### <code className="doc-symbol doc-symbol-method"/> set_data [#endstone.block.Block.set_data]
+
+```python
+set_data(data:BlockData, apply_physics:bool = True) -> None
+```
+
+Sets the complete data for this block
+
+#### <code className="doc-symbol doc-symbol-method"/> set_type [#endstone.block.Block.set_type]
+
+```python
+set_type(type:str, apply_physics:bool = True) -> None
+```
+
+Sets the type of this block
 
 </div>
 
@@ -378,7 +382,7 @@ Represents a captured state of a block, which will not update automatically.
    </tr>
 </thead>
 <tbody>
-    <tr key="update">
+    <tr key="1-update">
         <td>[`update`](#endstone.block.BlockState.update)</td>
         <td>Attempts to update the block represented by this state.</td>
     </tr></tbody>
@@ -477,14 +481,6 @@ type: str
 
 Gets or sets the type of this block state.
 
-#### <code className="doc-symbol doc-symbol-method"/> update [#endstone.block.BlockState.update]
-
-```python
-update(force:bool = False, apply_physics:bool = True) -> bool
-```
-
-Attempts to update the block represented by this state.
-
 #### <code className="doc-symbol doc-symbol-attribute"/> x [#endstone.block.BlockState.x]
 
 ```python
@@ -508,5 +504,13 @@ z: int
 ```
 
 Gets the z-coordinate of this block state.
+
+#### <code className="doc-symbol doc-symbol-method"/> update [#endstone.block.BlockState.update]
+
+```python
+update(force:bool = False, apply_physics:bool = True) -> bool
+```
+
+Attempts to update the block represented by this state.
 
 </div>

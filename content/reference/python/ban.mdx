@@ -69,19 +69,19 @@ Represents a ban list containing banned IP addresses.
    </tr>
 </thead>
 <tbody>
-    <tr key="add_ban">
+    <tr key="1-add_ban">
         <td>[`add_ban`](#endstone.ban.IpBanList.add_ban)</td>
         <td>Adds a ban to this list, or updates an existing one.</td>
     </tr>
-    <tr key="get_ban_entry">
+    <tr key="2-get_ban_entry">
         <td>[`get_ban_entry`](#endstone.ban.IpBanList.get_ban_entry)</td>
         <td>Gets a BanEntry by IP address.</td>
     </tr>
-    <tr key="is_banned">
+    <tr key="3-is_banned">
         <td>[`is_banned`](#endstone.ban.IpBanList.is_banned)</td>
         <td>Checks if a BanEntry exists for the target by IP address.</td>
     </tr>
-    <tr key="remove_ban">
+    <tr key="4-remove_ban">
         <td>[`remove_ban`](#endstone.ban.IpBanList.remove_ban)</td>
         <td>Removes an IP address from the ban list.</td>
     </tr></tbody>
@@ -105,6 +105,14 @@ Represents a ban list containing banned IP addresses.
     </tr></tbody>
 </table>
 
+#### <code className="doc-symbol doc-symbol-attribute"/> entries [#endstone.ban.IpBanList.entries]
+
+```python
+entries: list[IpBanEntry]
+```
+
+Gets a vector of pointers to entries in the ban list.
+
 #### <code className="doc-symbol doc-symbol-method"/> add_ban [#endstone.ban.IpBanList.add_ban]
 
 ```python
@@ -117,14 +125,6 @@ add_ban(
 ```
 
 Adds a ban to this list, or updates an existing one.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> entries [#endstone.ban.IpBanList.entries]
-
-```python
-entries: list[IpBanEntry]
-```
-
-Gets a vector of pointers to entries in the ban list.
 
 #### <code className="doc-symbol doc-symbol-method"/> get_ban_entry [#endstone.ban.IpBanList.get_ban_entry]
 
@@ -234,19 +234,19 @@ Represents a ban list containing banned players.
    </tr>
 </thead>
 <tbody>
-    <tr key="add_ban">
+    <tr key="1-add_ban">
         <td>[`add_ban`](#endstone.ban.PlayerBanList.add_ban)</td>
         <td>Adds a ban to this list, or updates an existing one.</td>
     </tr>
-    <tr key="get_ban_entry">
+    <tr key="2-get_ban_entry">
         <td>[`get_ban_entry`](#endstone.ban.PlayerBanList.get_ban_entry)</td>
         <td>Gets a BanEntry by player name, UUID, or XUID.</td>
     </tr>
-    <tr key="is_banned">
+    <tr key="3-is_banned">
         <td>[`is_banned`](#endstone.ban.PlayerBanList.is_banned)</td>
         <td>Checks if a BanEntry exists for the target by name, UUID, or XUID.</td>
     </tr>
-    <tr key="remove_ban">
+    <tr key="4-remove_ban">
         <td>[`remove_ban`](#endstone.ban.PlayerBanList.remove_ban)</td>
         <td>Removes a player from the ban list by name, UUID, or XUID.</td>
     </tr></tbody>
@@ -270,6 +270,14 @@ Represents a ban list containing banned players.
     </tr></tbody>
 </table>
 
+#### <code className="doc-symbol doc-symbol-attribute"/> entries [#endstone.ban.PlayerBanList.entries]
+
+```python
+entries: list[PlayerBanEntry]
+```
+
+Gets a vector of pointers to entries in the ban list.
+
 #### <code className="doc-symbol doc-symbol-method"/> add_ban [#endstone.ban.PlayerBanList.add_ban]
 
 ```python
@@ -284,14 +292,6 @@ add_ban(
 ```
 
 Adds a ban to this list, or updates an existing one.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> entries [#endstone.ban.PlayerBanList.entries]
-
-```python
-entries: list[PlayerBanEntry]
-```
-
-Gets a vector of pointers to entries in the ban list.
 
 #### <code className="doc-symbol doc-symbol-method"/> get_ban_entry [#endstone.ban.PlayerBanList.get_ban_entry]
 

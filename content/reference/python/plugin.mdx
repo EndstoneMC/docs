@@ -38,23 +38,23 @@ Bases: <code className="nextra-code">[Plugin](#endstone._internal.endstone_pytho
    </tr>
 </thead>
 <tbody>
-    <tr key="register_events">
+    <tr key="1-register_events">
         <td>[`register_events`](#endstone.plugin.Plugin.register_events)</td>
         <td></td>
     </tr>
-    <tr key="reload_config">
+    <tr key="2-reload_config">
         <td>[`reload_config`](#endstone.plugin.Plugin.reload_config)</td>
         <td></td>
     </tr>
-    <tr key="save_config">
+    <tr key="3-save_config">
         <td>[`save_config`](#endstone.plugin.Plugin.save_config)</td>
         <td></td>
     </tr>
-    <tr key="save_default_config">
+    <tr key="4-save_default_config">
         <td>[`save_default_config`](#endstone.plugin.Plugin.save_default_config)</td>
         <td></td>
     </tr>
-    <tr key="save_resources">
+    <tr key="5-save_resources">
         <td>[`save_resources`](#endstone.plugin.Plugin.save_resources)</td>
         <td></td>
     </tr></tbody>
@@ -242,6 +242,24 @@ prefix = None
 provides = None
 ```
 
+#### <code className="doc-symbol doc-symbol-attribute"/> soft_depend [#endstone.plugin.Plugin.soft_depend]
+
+```python
+soft_depend = None
+```
+
+#### <code className="doc-symbol doc-symbol-attribute"/> version [#endstone.plugin.Plugin.version]
+
+```python
+version = None
+```
+
+#### <code className="doc-symbol doc-symbol-attribute"/> website [#endstone.plugin.Plugin.website]
+
+```python
+website = None
+```
+
 #### <code className="doc-symbol doc-symbol-method"/> register_events [#endstone.plugin.Plugin.register_events]
 
 ```python
@@ -270,24 +288,6 @@ save_default_config() -> None
 
 ```python
 save_resources(path:str, replace:bool = False) -> None
-```
-
-#### <code className="doc-symbol doc-symbol-attribute"/> soft_depend [#endstone.plugin.Plugin.soft_depend]
-
-```python
-soft_depend = None
-```
-
-#### <code className="doc-symbol doc-symbol-attribute"/> version [#endstone.plugin.Plugin.version]
-
-```python
-version = None
-```
-
-#### <code className="doc-symbol doc-symbol-attribute"/> website [#endstone.plugin.Plugin.website]
-
-```python
-website = None
 ```
 
 </div>
@@ -694,19 +694,19 @@ Represents a plugin loader, which handles direct access to specific types of plu
    </tr>
 </thead>
 <tbody>
-    <tr key="disable_plugin">
+    <tr key="1-disable_plugin">
         <td>[`disable_plugin`](#endstone.plugin.PluginLoader.disable_plugin)</td>
         <td>Disables the specified plugin</td>
     </tr>
-    <tr key="enable_plugin">
+    <tr key="2-enable_plugin">
         <td>[`enable_plugin`](#endstone.plugin.PluginLoader.enable_plugin)</td>
         <td>Enables the specified plugin</td>
     </tr>
-    <tr key="load_plugin">
+    <tr key="3-load_plugin">
         <td>[`load_plugin`](#endstone.plugin.PluginLoader.load_plugin)</td>
         <td>Loads the plugin contained in the specified file</td>
     </tr>
-    <tr key="load_plugins">
+    <tr key="4-load_plugins">
         <td>[`load_plugins`](#endstone.plugin.PluginLoader.load_plugins)</td>
         <td>Loads the plugin contained within the specified directory</td>
     </tr></tbody>
@@ -734,6 +734,22 @@ Represents a plugin loader, which handles direct access to specific types of plu
         <td>Retrieves the Server object associated with the PluginLoader.</td>
     </tr></tbody>
 </table>
+
+#### <code className="doc-symbol doc-symbol-attribute"/> plugin_file_filters [#endstone.plugin.PluginLoader.plugin_file_filters]
+
+```python
+plugin_file_filters: list[str]
+```
+
+Returns a list of all filename filters expected by this PluginLoader
+
+#### <code className="doc-symbol doc-symbol-attribute"/> server [#endstone.plugin.PluginLoader.server]
+
+```python
+server: Server
+```
+
+Retrieves the Server object associated with the PluginLoader.
 
 #### <code className="doc-symbol doc-symbol-method"/> disable_plugin [#endstone.plugin.PluginLoader.disable_plugin]
 
@@ -767,22 +783,6 @@ load_plugins(directory:str) -> list[Plugin]
 
 Loads the plugin contained within the specified directory
 
-#### <code className="doc-symbol doc-symbol-attribute"/> plugin_file_filters [#endstone.plugin.PluginLoader.plugin_file_filters]
-
-```python
-plugin_file_filters: list[str]
-```
-
-Returns a list of all filename filters expected by this PluginLoader
-
-#### <code className="doc-symbol doc-symbol-attribute"/> server [#endstone.plugin.PluginLoader.server]
-
-```python
-server: Server
-```
-
-Retrieves the Server object associated with the PluginLoader.
-
 </div>
 
 ### <code className="doc-symbol doc-symbol-class"/> PluginManager [#endstone.plugin.PluginManager]
@@ -801,87 +801,99 @@ Represents a plugin manager that handles all plugins from the Server
    </tr>
 </thead>
 <tbody>
-    <tr key="call_event">
+    <tr key="1-call_event">
         <td>[`call_event`](#endstone.plugin.PluginManager.call_event)</td>
         <td>Calls an event which will be passed to plugins.</td>
     </tr>
-    <tr key="clear_plugins">
+    <tr key="2-clear_plugins">
         <td>[`clear_plugins`](#endstone.plugin.PluginManager.clear_plugins)</td>
         <td>Disables and removes all plugins</td>
     </tr>
-    <tr key="disable_plugin">
+    <tr key="3-disable_plugin">
         <td>[`disable_plugin`](#endstone.plugin.PluginManager.disable_plugin)</td>
         <td>Disables the specified plugin</td>
     </tr>
-    <tr key="disable_plugins">
+    <tr key="4-disable_plugins">
         <td>[`disable_plugins`](#endstone.plugin.PluginManager.disable_plugins)</td>
         <td>Disables all the loaded plugins</td>
     </tr>
-    <tr key="enable_plugin">
+    <tr key="5-enable_plugin">
         <td>[`enable_plugin`](#endstone.plugin.PluginManager.enable_plugin)</td>
         <td>Enables the specified plugin</td>
     </tr>
-    <tr key="enable_plugins">
+    <tr key="6-enable_plugins">
         <td>[`enable_plugins`](#endstone.plugin.PluginManager.enable_plugins)</td>
         <td>Enable all the loaded plugins</td>
     </tr>
-    <tr key="get_default_perm_subscriptions">
+    <tr key="7-get_default_perm_subscriptions">
         <td>[`get_default_perm_subscriptions`](#endstone.plugin.PluginManager.get_default_perm_subscriptions)</td>
         <td>Gets a set containing all subscribed Permissibles to the given default list, by permission level.</td>
     </tr>
-    <tr key="get_default_permissions">
+    <tr key="8-get_default_permissions">
         <td>[`get_default_permissions`](#endstone.plugin.PluginManager.get_default_permissions)</td>
         <td>Gets the default permissions for the given permission level.</td>
     </tr>
-    <tr key="get_permission">
+    <tr key="9-get_permission">
         <td>[`get_permission`](#endstone.plugin.PluginManager.get_permission)</td>
         <td>Gets a Permission from its fully qualified name.</td>
     </tr>
-    <tr key="get_permission_subscriptions">
+    <tr key="10-get_permission_subscriptions">
         <td>[`get_permission_subscriptions`](#endstone.plugin.PluginManager.get_permission_subscriptions)</td>
         <td>Gets a set containing all subscribed Permissibles to the given permission.</td>
     </tr>
-    <tr key="get_plugin">
+    <tr key="11-get_plugin">
         <td>[`get_plugin`](#endstone.plugin.PluginManager.get_plugin)</td>
         <td>Checks if the given plugin is loaded and returns it when applicable.</td>
     </tr>
-    <tr key="is_plugin_enabled">
+    <tr key="12-is_plugin_enabled">
         <td>[`is_plugin_enabled`](#endstone.plugin.PluginManager.is_plugin_enabled)</td>
-        <td></td>
+        <td>Checks if the given plugin is enabled or not</td>
     </tr>
-    <tr key="load_plugin">
+    <tr key="13-is_plugin_enabled">
+        <td>[`is_plugin_enabled`](#endstone.plugin.PluginManager.is_plugin_enabled)</td>
+        <td>Checks if the given plugin is enabled or not</td>
+    </tr>
+    <tr key="14-load_plugin">
         <td>[`load_plugin`](#endstone.plugin.PluginManager.load_plugin)</td>
         <td>Loads the plugin in the specified file</td>
     </tr>
-    <tr key="load_plugins">
+    <tr key="15-load_plugins">
         <td>[`load_plugins`](#endstone.plugin.PluginManager.load_plugins)</td>
-        <td></td>
+        <td>Loads the plugin contained within the specified directory</td>
     </tr>
-    <tr key="recalculate_permission_defaults">
+    <tr key="16-load_plugins">
+        <td>[`load_plugins`](#endstone.plugin.PluginManager.load_plugins)</td>
+        <td>Loads the plugins in the list of the files</td>
+    </tr>
+    <tr key="17-recalculate_permission_defaults">
         <td>[`recalculate_permission_defaults`](#endstone.plugin.PluginManager.recalculate_permission_defaults)</td>
         <td>Recalculates the defaults for the given Permission.</td>
     </tr>
-    <tr key="register_event">
+    <tr key="18-register_event">
         <td>[`register_event`](#endstone.plugin.PluginManager.register_event)</td>
         <td>Registers the given event</td>
     </tr>
-    <tr key="remove_permission">
+    <tr key="19-remove_permission">
         <td>[`remove_permission`](#endstone.plugin.PluginManager.remove_permission)</td>
-        <td></td>
+        <td>Removes a Permission registration from this plugin manager by permission object.</td>
     </tr>
-    <tr key="subscribe_to_default_perms">
+    <tr key="20-remove_permission">
+        <td>[`remove_permission`](#endstone.plugin.PluginManager.remove_permission)</td>
+        <td>Removes a Permission registration from this plugin manager by name.</td>
+    </tr>
+    <tr key="21-subscribe_to_default_perms">
         <td>[`subscribe_to_default_perms`](#endstone.plugin.PluginManager.subscribe_to_default_perms)</td>
         <td>Subscribes to the given Default permissions by permission level.</td>
     </tr>
-    <tr key="subscribe_to_permission">
+    <tr key="22-subscribe_to_permission">
         <td>[`subscribe_to_permission`](#endstone.plugin.PluginManager.subscribe_to_permission)</td>
         <td>Subscribes the given Permissible for information about the requested Permission.</td>
     </tr>
-    <tr key="unsubscribe_from_default_perms">
+    <tr key="23-unsubscribe_from_default_perms">
         <td>[`unsubscribe_from_default_perms`](#endstone.plugin.PluginManager.unsubscribe_from_default_perms)</td>
         <td>Unsubscribes from the given Default permissions by permission level.</td>
     </tr>
-    <tr key="unsubscribe_from_permission">
+    <tr key="24-unsubscribe_from_permission">
         <td>[`unsubscribe_from_permission`](#endstone.plugin.PluginManager.unsubscribe_from_permission)</td>
         <td>Unsubscribes the given Permissible for information about the requested Permission.</td>
     </tr></tbody>
@@ -909,6 +921,22 @@ Represents a plugin manager that handles all plugins from the Server
         <td>Gets a list of all currently loaded plugins</td>
     </tr></tbody>
 </table>
+
+#### <code className="doc-symbol doc-symbol-attribute"/> permissions [#endstone.plugin.PluginManager.permissions]
+
+```python
+permissions: set[Permission]
+```
+
+Gets a set of all registered permissions.
+
+#### <code className="doc-symbol doc-symbol-attribute"/> plugins [#endstone.plugin.PluginManager.plugins]
+
+```python
+plugins: list[Plugin]
+```
+
+Gets a list of all currently loaded plugins
 
 #### <code className="doc-symbol doc-symbol-method"/> call_event [#endstone.plugin.PluginManager.call_event]
 
@@ -1034,22 +1062,6 @@ load_plugins(files:list[str]) -> list[Plugin]
 
 Loads the plugins in the list of the files
 
-#### <code className="doc-symbol doc-symbol-attribute"/> permissions [#endstone.plugin.PluginManager.permissions]
-
-```python
-permissions: set[Permission]
-```
-
-Gets a set of all registered permissions.
-
-#### <code className="doc-symbol doc-symbol-attribute"/> plugins [#endstone.plugin.PluginManager.plugins]
-
-```python
-plugins: list[Plugin]
-```
-
-Gets a list of all currently loaded plugins
-
 #### <code className="doc-symbol doc-symbol-method"/> recalculate_permission_defaults [#endstone.plugin.PluginManager.recalculate_permission_defaults]
 
 ```python
@@ -1152,19 +1164,23 @@ Represent a service manager that manages services and service providers.
    </tr>
 </thead>
 <tbody>
-    <tr key="load">
+    <tr key="1-load">
         <td>[`load`](#endstone.plugin.ServiceManager.load)</td>
         <td></td>
     </tr>
-    <tr key="register">
+    <tr key="2-register">
         <td>[`register`](#endstone.plugin.ServiceManager.register)</td>
         <td>Register a provider of a service.</td>
     </tr>
-    <tr key="unregister">
+    <tr key="3-unregister">
         <td>[`unregister`](#endstone.plugin.ServiceManager.unregister)</td>
-        <td></td>
+        <td>Unregister a particular provider for a particular service.</td>
     </tr>
-    <tr key="unregister_all">
+    <tr key="4-unregister">
+        <td>[`unregister`](#endstone.plugin.ServiceManager.unregister)</td>
+        <td>Unregister a particular provider.</td>
+    </tr>
+    <tr key="5-unregister_all">
         <td>[`unregister_all`](#endstone.plugin.ServiceManager.unregister_all)</td>
         <td>Unregister all the services registered by a particular plugin.</td>
     </tr></tbody>
