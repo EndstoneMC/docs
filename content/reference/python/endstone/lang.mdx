@@ -11,6 +11,8 @@ title: "endstone.lang"
 
 ### Language [#endstone.lang.Language]
 
+<div className="pl-[2em] mt-[1.25em]">
+
 Represents the interface for translating text into different languages.
 
 **Attributes:**
@@ -25,11 +27,15 @@ locale: str
 
 Gets the current locale.
 
+</div>
+
 ### Translatable [#endstone.lang.Translatable]
 
 ```python
 Translatable(text:str, params:list[str] | None = None) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents an object with a text representation that can be translated by the Minecraft client.
 
@@ -53,3 +59,5 @@ text: str
 ```
 
 Get the text to be translated.
+
+</div>

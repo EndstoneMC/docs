@@ -31,6 +31,8 @@ ActionForm(
 ) -> None
 ```
 
+<div className="pl-[2em] mt-[1.25em]">
+
 Represents a form with buttons that let the player take action.
 
 **Methods:**
@@ -124,6 +126,8 @@ title: str | Translatable
 
 Gets or sets the title of the form.
 
+</div>
+
 ### Button [#endstone.form.Button]
 
 ```python
@@ -133,6 +137,8 @@ Button(
     on_click: Callable[[Player], None] = None,
 ) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a button with text and an optional icon.
 
@@ -166,13 +172,19 @@ text: str | Translatable
 
 Gets or sets the text of the button
 
+</div>
+
 ### Divider [#endstone.form.Divider]
 
 ```python
 Divider() -> None
 ```
 
+<div className="pl-[2em] mt-[1.25em]">
+
 Represents a divider.
+
+</div>
 
 ### Dropdown [#endstone.form.Dropdown]
 
@@ -183,6 +195,8 @@ Dropdown(
     default_index: int | None = None,
 ) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a dropdown with a set of predefined options.
 
@@ -228,11 +242,15 @@ options: list[str]
 
 Gets or sets the options of the dropdown.
 
+</div>
+
 ### Header [#endstone.form.Header]
 
 ```python
 Header(label:str | Translatable = '') -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a header with a label.
 
@@ -248,11 +266,15 @@ label: str | Translatable
 
 Gets or sets the label of the header.
 
+</div>
+
 ### Label [#endstone.form.Label]
 
 ```python
 Label(text:str | Translatable = '') -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a text label.
 
@@ -268,6 +290,8 @@ text: str | Translatable
 
 Gets or sets the text of the label.
 
+</div>
+
 ### MessageForm [#endstone.form.MessageForm]
 
 ```python
@@ -280,6 +304,8 @@ MessageForm(
     on_close: Callable[[Player], None] = None,
 ) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a form with two buttons.
 
@@ -340,6 +366,8 @@ title: str | Translatable
 
 Gets or sets the title of the form.
 
+</div>
+
 ### ModalForm [#endstone.form.ModalForm]
 
 ```python
@@ -364,6 +392,8 @@ ModalForm(
     on_close: Callable[[Player], None] = None,
 ) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a modal form with controls.
 
@@ -457,6 +487,8 @@ title: str | Translatable
 
 Gets or sets the title of the form.
 
+</div>
+
 ### Slider [#endstone.form.Slider]
 
 ```python
@@ -468,6 +500,8 @@ Slider(
     default_value: float | None = None,
 ) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a slider with a label.
 
@@ -519,6 +553,8 @@ step: float
 
 Gets or sets the step size of the slider.
 
+</div>
+
 ### StepSlider [#endstone.form.StepSlider]
 
 ```python
@@ -528,6 +564,8 @@ StepSlider(
     default_index: int | None = None,
 ) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a step slider with a set of predefined options.
 
@@ -573,6 +611,8 @@ options: list[str]
 
 Gets or sets the options of the step slider.
 
+</div>
+
 ### TextInput [#endstone.form.TextInput]
 
 ```python
@@ -582,6 +622,8 @@ TextInput(
     default_value: str | None = None,
 ) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a text input field.
 
@@ -615,11 +657,15 @@ placeholder: str | Translatable
 
 Gets or sets the placeholder of the text input field.
 
+</div>
+
 ### Toggle [#endstone.form.Toggle]
 
 ```python
 Toggle(label:str | Translatable = '', default_value:bool = False) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a toggle button with a label.
 
@@ -643,3 +689,5 @@ label: str | Translatable
 ```
 
 Gets or sets the label of the toggle.
+
+</div>

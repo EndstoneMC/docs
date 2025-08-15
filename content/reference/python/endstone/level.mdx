@@ -14,6 +14,8 @@ title: "endstone.level"
 
 ### Chunk [#endstone.level.Chunk]
 
+<div className="pl-[2em] mt-[1.25em]">
+
 Represents a chunk of blocks.
 
 **Attributes:**
@@ -55,7 +57,11 @@ z: int
 
 Gets the Z-coordinate of this chunk
 
+</div>
+
 ### Dimension [#endstone.level.Dimension]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a dimension within a Level.
 
@@ -109,6 +115,8 @@ THE_END: Dimension.Type
 Type(value:int) -> None
 ```
 
+<div className="pl-[2em] mt-[1.25em]">
+
 Represents various dimension types.
 
 **Attributes:**
@@ -155,6 +163,8 @@ name: str
 ```python
 value: int
 ```
+
+</div>
 
 #### drop_item [#endstone.level.Dimension.drop_item]
 
@@ -204,7 +214,11 @@ type: Dimension.Type
 
 Gets the type of this dimension
 
+</div>
+
 ### Level [#endstone.level.Level]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 **Methods:**
 
@@ -257,6 +271,8 @@ time: int
 
 Gets and sets the relative in-game time on the server
 
+</div>
+
 ### Location [#endstone.level.Location]
 
 ```python
@@ -270,92 +286,16 @@ Location(
 ) -> None
 ```
 
+<div className="pl-[2em] mt-[1.25em]">
+
 Bases: <code>[Position](#endstone._internal.endstone_python.Position)</code>
 
 Represents a 3-dimensional location in a dimension within a level.
 
-**Methods:**
-
-- [**distance**](#endstone.level.Location.distance) – The distance between this Vector and another
-- [**distance_squared**](#endstone.level.Location.distance_squared) – The squared distance between this Vector and another
-
 **Attributes:**
 
-- [**block_x**](#endstone.level.Location.block_x) (<code>[int](#int)</code>) – Gets the floored value of the X component, indicating the block that this location is contained with.
-- [**block_y**](#endstone.level.Location.block_y) (<code>[int](#int)</code>) – Gets the floored value of the Y component, indicating the block that this location is contained with.
-- [**block_z**](#endstone.level.Location.block_z) (<code>[int](#int)</code>) – Gets the floored value of the Z component, indicating the block that this location is contained with.
-- [**dimension**](#endstone.level.Location.dimension) (<code>[Dimension](#endstone._internal.endstone_python.Dimension)</code>) – The Dimension that contains this position
-- [**length**](#endstone.level.Location.length) (<code>[float](#float)</code>) – The magnitude of the Vector
-- [**length_squared**](#endstone.level.Location.length_squared) (<code>[float](#float)</code>) – The squared magnitude of the Vector
 - [**pitch**](#endstone.level.Location.pitch) (<code>[float](#float)</code>) – The pitch of this location, measured in degrees.
-- [**x**](#endstone.level.Location.x) (<code>[float](#float)</code>) – The X component of the vector
-- [**y**](#endstone.level.Location.y) (<code>[float](#float)</code>) – The Y component of the vector
 - [**yaw**](#endstone.level.Location.yaw) (<code>[float](#float)</code>) – The yaw of this location, measured in degrees.
-- [**z**](#endstone.level.Location.z) (<code>[float](#float)</code>) – The Z component of the vector
-
-#### block_x [#endstone.level.Location.block_x]
-
-```python
-block_x: int
-```
-
-Gets the floored value of the X component, indicating the block that this location is contained with.
-
-#### block_y [#endstone.level.Location.block_y]
-
-```python
-block_y: int
-```
-
-Gets the floored value of the Y component, indicating the block that this location is contained with.
-
-#### block_z [#endstone.level.Location.block_z]
-
-```python
-block_z: int
-```
-
-Gets the floored value of the Z component, indicating the block that this location is contained with.
-
-#### dimension [#endstone.level.Location.dimension]
-
-```python
-dimension: Dimension
-```
-
-The Dimension that contains this position
-
-#### distance [#endstone.level.Location.distance]
-
-```python
-distance(other:Vector) -> float
-```
-
-The distance between this Vector and another
-
-#### distance_squared [#endstone.level.Location.distance_squared]
-
-```python
-distance_squared(other:Vector) -> float
-```
-
-The squared distance between this Vector and another
-
-#### length [#endstone.level.Location.length]
-
-```python
-length: float
-```
-
-The magnitude of the Vector
-
-#### length_squared [#endstone.level.Location.length_squared]
-
-```python
-length_squared: float
-```
-
-The squared magnitude of the Vector
 
 #### pitch [#endstone.level.Location.pitch]
 
@@ -365,22 +305,6 @@ pitch: float
 
 The pitch of this location, measured in degrees.
 
-#### x [#endstone.level.Location.x]
-
-```python
-x: float
-```
-
-The X component of the vector
-
-#### y [#endstone.level.Location.y]
-
-```python
-y: float
-```
-
-The Y component of the vector
-
 #### yaw [#endstone.level.Location.yaw]
 
 ```python
@@ -389,13 +313,7 @@ yaw: float
 
 The yaw of this location, measured in degrees.
 
-#### z [#endstone.level.Location.z]
-
-```python
-z: float
-```
-
-The Z component of the vector
+</div>
 
 ### Position [#endstone.level.Position]
 
@@ -403,14 +321,11 @@ The Z component of the vector
 Position(x:float, y:float, z:float, dimension:Dimension = None) -> None
 ```
 
+<div className="pl-[2em] mt-[1.25em]">
+
 Bases: <code>[Vector](#endstone._internal.endstone_python.Vector)</code>
 
 Represents a 3-dimensional position in a dimension within a level.
-
-**Methods:**
-
-- [**distance**](#endstone.level.Position.distance) – The distance between this Vector and another
-- [**distance_squared**](#endstone.level.Position.distance_squared) – The squared distance between this Vector and another
 
 **Attributes:**
 
@@ -418,11 +333,6 @@ Represents a 3-dimensional position in a dimension within a level.
 - [**block_y**](#endstone.level.Position.block_y) (<code>[int](#int)</code>) – Gets the floored value of the Y component, indicating the block that this location is contained with.
 - [**block_z**](#endstone.level.Position.block_z) (<code>[int](#int)</code>) – Gets the floored value of the Z component, indicating the block that this location is contained with.
 - [**dimension**](#endstone.level.Position.dimension) (<code>[Dimension](#endstone._internal.endstone_python.Dimension)</code>) – The Dimension that contains this position
-- [**length**](#endstone.level.Position.length) (<code>[float](#float)</code>) – The magnitude of the Vector
-- [**length_squared**](#endstone.level.Position.length_squared) (<code>[float](#float)</code>) – The squared magnitude of the Vector
-- [**x**](#endstone.level.Position.x) (<code>[float](#float)</code>) – The X component of the vector
-- [**y**](#endstone.level.Position.y) (<code>[float](#float)</code>) – The Y component of the vector
-- [**z**](#endstone.level.Position.z) (<code>[float](#float)</code>) – The Z component of the vector
 
 #### block_x [#endstone.level.Position.block_x]
 
@@ -456,58 +366,4 @@ dimension: Dimension
 
 The Dimension that contains this position
 
-#### distance [#endstone.level.Position.distance]
-
-```python
-distance(other:Vector) -> float
-```
-
-The distance between this Vector and another
-
-#### distance_squared [#endstone.level.Position.distance_squared]
-
-```python
-distance_squared(other:Vector) -> float
-```
-
-The squared distance between this Vector and another
-
-#### length [#endstone.level.Position.length]
-
-```python
-length: float
-```
-
-The magnitude of the Vector
-
-#### length_squared [#endstone.level.Position.length_squared]
-
-```python
-length_squared: float
-```
-
-The squared magnitude of the Vector
-
-#### x [#endstone.level.Position.x]
-
-```python
-x: float
-```
-
-The X component of the vector
-
-#### y [#endstone.level.Position.y]
-
-```python
-y: float
-```
-
-The Y component of the vector
-
-#### z [#endstone.level.Position.z]
-
-```python
-z: float
-```
-
-The Z component of the vector
+</div>

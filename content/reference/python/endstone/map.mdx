@@ -12,6 +12,8 @@ title: "endstone.map"
 
 ### MapCanvas [#endstone.map.MapCanvas]
 
+<div className="pl-[2em] mt-[1.25em]">
+
 Represents a canvas for drawing to a map. Each canvas is associated with a specific MapRenderer and represents that renderer's layer on the map.
 
 **Methods:**
@@ -69,11 +71,15 @@ Draw a pixel to the canvas.
 
 If None is used as color, then the color returned by get_base_pixel_color() is shown on the map.
 
+</div>
+
 ### MapRenderer [#endstone.map.MapRenderer]
 
 ```python
 MapRenderer(is_contextual:bool = False) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a renderer for a map.
 
@@ -100,7 +106,11 @@ render(map:MapView, canvas:MapCanvas, player:Player) -> None
 
 Render to the given map.
 
+</div>
+
 ### MapView [#endstone.map.MapView]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a map item.
 
@@ -130,6 +140,8 @@ Represents a map item.
 ```python
 Scale(value:int) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 An enum representing all possible scales a map can be set to.
 
@@ -184,6 +196,8 @@ name: str
 ```python
 value: int
 ```
+
+</div>
 
 #### add_renderer [#endstone.map.MapView.add_renderer]
 
@@ -272,3 +286,5 @@ scale: MapView.Scale
 ```
 
 Get or set the scale of this map.
+
+</div>

@@ -15,6 +15,8 @@ title: "endstone.scoreboard"
 
 ### Criteria [#endstone.scoreboard.Criteria]
 
+<div className="pl-[2em] mt-[1.25em]">
+
 Represents a scoreboard criteria.
 
 **Classes:**
@@ -39,6 +41,8 @@ DUMMY: Criteria.Type
 ```python
 Type(value:int) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a scoreboard criteria.
 
@@ -66,6 +70,8 @@ name: str
 value: int
 ```
 
+</div>
+
 #### default_render_type [#endstone.scoreboard.Criteria.default_render_type]
 
 ```python
@@ -84,11 +90,15 @@ is_read_only: bool
 name: str
 ```
 
+</div>
+
 ### DisplaySlot [#endstone.scoreboard.DisplaySlot]
 
 ```python
 DisplaySlot(value:int) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Locations for displaying objectives to the player
 
@@ -130,7 +140,11 @@ name: str
 value: int
 ```
 
+</div>
+
 ### Objective [#endstone.scoreboard.Objective]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents an objective on a scoreboard that can show scores specific to entries.
 
@@ -250,11 +264,15 @@ unregister() -> None
 
 Unregisters this objective from the associated Scoreboard.
 
+</div>
+
 ### ObjectiveSortOrder [#endstone.scoreboard.ObjectiveSortOrder]
 
 ```python
 ObjectiveSortOrder(value:int) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents the sort order of objectives on a DisplaySlot.
 
@@ -289,7 +307,11 @@ name: str
 value: int
 ```
 
+</div>
+
 ### Score [#endstone.scoreboard.Score]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a score for an objective on a scoreboard.
 
@@ -341,7 +363,11 @@ value: int
 
 Gets or sets the current score.
 
+</div>
+
 ### Scoreboard [#endstone.scoreboard.Scoreboard]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a scoreboard
 
@@ -418,3 +444,5 @@ reset_scores(entry:Player | Actor | str) -> None
 ```
 
 Removes all scores for an entry on this Scoreboard
+
+</div>

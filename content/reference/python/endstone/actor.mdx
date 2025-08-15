@@ -12,6 +12,8 @@ title: "endstone.actor"
 
 ### Actor [#endstone.actor.Actor]
 
+<div className="pl-[2em] mt-[1.25em]">
+
 Bases: <code>[CommandSender](#endstone._internal.endstone_python.CommandSender)</code>
 
 Represents a base actor in the level.
@@ -19,18 +21,13 @@ Represents a base actor in the level.
 **Methods:**
 
 - [**add_scoreboard_tag**](#endstone.actor.Actor.add_scoreboard_tag) – Adds a tag to this actor.
-- [**recalculate_permissions**](#endstone.actor.Actor.recalculate_permissions) – Recalculates the permissions.
 - [**remove**](#endstone.actor.Actor.remove) – Remove this actor from the level.
-- [**remove_attachment**](#endstone.actor.Actor.remove_attachment) – Removes a given PermissionAttachment.
 - [**remove_scoreboard_tag**](#endstone.actor.Actor.remove_scoreboard_tag) – Removes a given tag from this actor.
-- [**send_error_message**](#endstone.actor.Actor.send_error_message) – Sends this sender an error message
-- [**send_message**](#endstone.actor.Actor.send_message) – Sends this sender a message
 - [**set_rotation**](#endstone.actor.Actor.set_rotation) – Sets the actor's rotation.
 
 **Attributes:**
 
 - [**dimension**](#endstone.actor.Actor.dimension) (<code>[Dimension](#endstone._internal.endstone_python.Dimension)</code>) – Gets the current Dimension this actor resides in.
-- [**effective_permissions**](#endstone.actor.Actor.effective_permissions) (<code>[set](#set)\[[PermissionAttachmentInfo](#endstone._internal.endstone_python.PermissionAttachmentInfo)\]</code>) – Gets effective permissions.
 - [**health**](#endstone.actor.Actor.health) (<code>[int](#int)</code>) – Gets or sets the entity's health from 0 to its max possible value, where 0 is dead.
 - [**id**](#endstone.actor.Actor.id) (<code>[int](#int)</code>) – Returns a unique id for this actor.
 - [**is_dead**](#endstone.actor.Actor.is_dead) (<code>[bool](#bool)</code>) – Returns true if this actor has been marked for removal.
@@ -43,13 +40,10 @@ Represents a base actor in the level.
 - [**level**](#endstone.actor.Actor.level) (<code>[Level](#endstone._internal.endstone_python.Level)</code>) – Gets the current Level this actor resides in.
 - [**location**](#endstone.actor.Actor.location) (<code>[Location](#endstone._internal.endstone_python.Location)</code>) – Gets the actor's current position.
 - [**max_health**](#endstone.actor.Actor.max_health) (<code>[int](#int)</code>) – Gets the maximum health this entity has.
-- [**name**](#endstone.actor.Actor.name) (<code>[str](#str)</code>) – Gets the name of this command sender
 - [**name_tag**](#endstone.actor.Actor.name_tag) (<code>[str](#str)</code>) – Gets or sets the current name tag of the actor.
-- [**permission_level**](#endstone.actor.Actor.permission_level) (<code>[PermissionLevel](#endstone._internal.endstone_python.PermissionLevel)</code>) – Gets the permission level of this object
 - [**runtime_id**](#endstone.actor.Actor.runtime_id) (<code>[int](#int)</code>) – Returns the runtime id for this actor.
 - [**score_tag**](#endstone.actor.Actor.score_tag) (<code>[str](#str)</code>) – Gets or sets the current score tag of the actor.
 - [**scoreboard_tags**](#endstone.actor.Actor.scoreboard_tags) (<code>[list](#list)\[[str](#str)\]</code>) – Returns a list of scoreboard tags for this actor.
-- [**server**](#endstone.actor.Actor.server) (<code>[Server](#endstone._internal.endstone_python.Server)</code>) – Returns the server instance that this command is running on
 - [**type**](#endstone.actor.Actor.type) (<code>[str](#str)</code>) – Gets the type of the actor.
 - [**velocity**](#endstone.actor.Actor.velocity) (<code>[Vector](#endstone._internal.endstone_python.Vector)</code>) – Gets this actor's current velocity.
 
@@ -68,14 +62,6 @@ dimension: Dimension
 ```
 
 Gets the current Dimension this actor resides in.
-
-#### effective_permissions [#endstone.actor.Actor.effective_permissions]
-
-```python
-effective_permissions: set[PermissionAttachmentInfo]
-```
-
-Gets effective permissions.
 
 #### health [#endstone.actor.Actor.health]
 
@@ -173,14 +159,6 @@ max_health: int
 
 Gets the maximum health this entity has.
 
-#### name [#endstone.actor.Actor.name]
-
-```python
-name: str
-```
-
-Gets the name of this command sender
-
 #### name_tag [#endstone.actor.Actor.name_tag]
 
 ```python
@@ -189,22 +167,6 @@ name_tag: str
 
 Gets or sets the current name tag of the actor.
 
-#### permission_level [#endstone.actor.Actor.permission_level]
-
-```python
-permission_level: PermissionLevel
-```
-
-Gets the permission level of this object
-
-#### recalculate_permissions [#endstone.actor.Actor.recalculate_permissions]
-
-```python
-recalculate_permissions() -> None
-```
-
-Recalculates the permissions.
-
 #### remove [#endstone.actor.Actor.remove]
 
 ```python
@@ -212,14 +174,6 @@ remove() -> None
 ```
 
 Remove this actor from the level.
-
-#### remove_attachment [#endstone.actor.Actor.remove_attachment]
-
-```python
-remove_attachment(attachment:PermissionAttachment) -> None
-```
-
-Removes a given PermissionAttachment.
 
 #### remove_scoreboard_tag [#endstone.actor.Actor.remove_scoreboard_tag]
 
@@ -253,30 +207,6 @@ scoreboard_tags: list[str]
 
 Returns a list of scoreboard tags for this actor.
 
-#### send_error_message [#endstone.actor.Actor.send_error_message]
-
-```python
-send_error_message(message:str | Translatable) -> None
-```
-
-Sends this sender an error message
-
-#### send_message [#endstone.actor.Actor.send_message]
-
-```python
-send_message(message:str | Translatable) -> None
-```
-
-Sends this sender a message
-
-#### server [#endstone.actor.Actor.server]
-
-```python
-server: Server
-```
-
-Returns the server instance that this command is running on
-
 #### set_rotation [#endstone.actor.Actor.set_rotation]
 
 ```python
@@ -301,140 +231,22 @@ velocity: Vector
 
 Gets this actor's current velocity.
 
+</div>
+
 ### Item [#endstone.actor.Item]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[Actor](#endstone._internal.endstone_python.Actor)</code>
 
 Represents a base actor in the level.
 
-**Methods:**
-
-- [**add_scoreboard_tag**](#endstone.actor.Item.add_scoreboard_tag) – Adds a tag to this actor.
-- [**recalculate_permissions**](#endstone.actor.Item.recalculate_permissions) – Recalculates the permissions.
-- [**remove**](#endstone.actor.Item.remove) – Remove this actor from the level.
-- [**remove_attachment**](#endstone.actor.Item.remove_attachment) – Removes a given PermissionAttachment.
-- [**remove_scoreboard_tag**](#endstone.actor.Item.remove_scoreboard_tag) – Removes a given tag from this actor.
-- [**send_error_message**](#endstone.actor.Item.send_error_message) – Sends this sender an error message
-- [**send_message**](#endstone.actor.Item.send_message) – Sends this sender a message
-- [**set_rotation**](#endstone.actor.Item.set_rotation) – Sets the actor's rotation.
-
 **Attributes:**
 
-- [**dimension**](#endstone.actor.Item.dimension) (<code>[Dimension](#endstone._internal.endstone_python.Dimension)</code>) – Gets the current Dimension this actor resides in.
-- [**effective_permissions**](#endstone.actor.Item.effective_permissions) (<code>[set](#set)\[[PermissionAttachmentInfo](#endstone._internal.endstone_python.PermissionAttachmentInfo)\]</code>) – Gets effective permissions.
-- [**health**](#endstone.actor.Item.health) (<code>[int](#int)</code>) – Gets or sets the entity's health from 0 to its max possible value, where 0 is dead.
-- [**id**](#endstone.actor.Item.id) (<code>[int](#int)</code>) – Returns a unique id for this actor.
-- [**is_dead**](#endstone.actor.Item.is_dead) (<code>[bool](#bool)</code>) – Returns true if this actor has been marked for removal.
-- [**is_in_lava**](#endstone.actor.Item.is_in_lava) (<code>[bool](#bool)</code>) – Returns true if the actor is in lava.
-- [**is_in_water**](#endstone.actor.Item.is_in_water) (<code>[bool](#bool)</code>) – Returns true if the actor is in water.
-- [**is_name_tag_always_visible**](#endstone.actor.Item.is_name_tag_always_visible) (<code>[bool](#bool)</code>) – Gets or sets if the actor's name tag is always visible or not.
-- [**is_name_tag_visible**](#endstone.actor.Item.is_name_tag_visible) (<code>[bool](#bool)</code>) – Gets or sets if the actor's name tag is visible or not.
-- [**is_on_ground**](#endstone.actor.Item.is_on_ground) (<code>[bool](#bool)</code>) – Returns true if the actor is supported by a block, i.e. on ground.
 - [**is_unlimited_lifetime**](#endstone.actor.Item.is_unlimited_lifetime) (<code>[bool](#bool)</code>) – Gets or sets if this Item lives forever
-- [**is_valid**](#endstone.actor.Item.is_valid) (<code>[bool](#bool)</code>) – Returns false if the entity has died, been despawned for some other reason, or has not been added to the level.
 - [**item_stack**](#endstone.actor.Item.item_stack) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Gets or sets the item stack associated with this item drop.
-- [**level**](#endstone.actor.Item.level) (<code>[Level](#endstone._internal.endstone_python.Level)</code>) – Gets the current Level this actor resides in.
-- [**location**](#endstone.actor.Item.location) (<code>[Location](#endstone._internal.endstone_python.Location)</code>) – Gets the actor's current position.
-- [**max_health**](#endstone.actor.Item.max_health) (<code>[int](#int)</code>) – Gets the maximum health this entity has.
-- [**name**](#endstone.actor.Item.name) (<code>[str](#str)</code>) – Gets the name of this command sender
-- [**name_tag**](#endstone.actor.Item.name_tag) (<code>[str](#str)</code>) – Gets or sets the current name tag of the actor.
-- [**permission_level**](#endstone.actor.Item.permission_level) (<code>[PermissionLevel](#endstone._internal.endstone_python.PermissionLevel)</code>) – Gets the permission level of this object
 - [**pickup_delay**](#endstone.actor.Item.pickup_delay) (<code>[int](#int)</code>) – Gets or sets the delay before this Item is available to be picked up by players.
-- [**runtime_id**](#endstone.actor.Item.runtime_id) (<code>[int](#int)</code>) – Returns the runtime id for this actor.
-- [**score_tag**](#endstone.actor.Item.score_tag) (<code>[str](#str)</code>) – Gets or sets the current score tag of the actor.
-- [**scoreboard_tags**](#endstone.actor.Item.scoreboard_tags) (<code>[list](#list)\[[str](#str)\]</code>) – Returns a list of scoreboard tags for this actor.
-- [**server**](#endstone.actor.Item.server) (<code>[Server](#endstone._internal.endstone_python.Server)</code>) – Returns the server instance that this command is running on
 - [**thrower**](#endstone.actor.Item.thrower) (<code>[int](#int) | None</code>) – Gets or sets the thrower of this item.
-- [**type**](#endstone.actor.Item.type) (<code>[str](#str)</code>) – Gets the type of the actor.
-- [**velocity**](#endstone.actor.Item.velocity) (<code>[Vector](#endstone._internal.endstone_python.Vector)</code>) – Gets this actor's current velocity.
-
-#### add_scoreboard_tag [#endstone.actor.Item.add_scoreboard_tag]
-
-```python
-add_scoreboard_tag(tag:str) -> bool
-```
-
-Adds a tag to this actor.
-
-#### dimension [#endstone.actor.Item.dimension]
-
-```python
-dimension: Dimension
-```
-
-Gets the current Dimension this actor resides in.
-
-#### effective_permissions [#endstone.actor.Item.effective_permissions]
-
-```python
-effective_permissions: set[PermissionAttachmentInfo]
-```
-
-Gets effective permissions.
-
-#### health [#endstone.actor.Item.health]
-
-```python
-health: int
-```
-
-Gets or sets the entity's health from 0 to its max possible value, where 0 is dead.
-
-#### id [#endstone.actor.Item.id]
-
-```python
-id: int
-```
-
-Returns a unique id for this actor.
-
-#### is_dead [#endstone.actor.Item.is_dead]
-
-```python
-is_dead: bool
-```
-
-Returns true if this actor has been marked for removal.
-
-#### is_in_lava [#endstone.actor.Item.is_in_lava]
-
-```python
-is_in_lava: bool
-```
-
-Returns true if the actor is in lava.
-
-#### is_in_water [#endstone.actor.Item.is_in_water]
-
-```python
-is_in_water: bool
-```
-
-Returns true if the actor is in water.
-
-#### is_name_tag_always_visible [#endstone.actor.Item.is_name_tag_always_visible]
-
-```python
-is_name_tag_always_visible: bool
-```
-
-Gets or sets if the actor's name tag is always visible or not.
-
-#### is_name_tag_visible [#endstone.actor.Item.is_name_tag_visible]
-
-```python
-is_name_tag_visible: bool
-```
-
-Gets or sets if the actor's name tag is visible or not.
-
-#### is_on_ground [#endstone.actor.Item.is_on_ground]
-
-```python
-is_on_ground: bool
-```
-
-Returns true if the actor is supported by a block, i.e. on ground.
 
 #### is_unlimited_lifetime [#endstone.actor.Item.is_unlimited_lifetime]
 
@@ -444,14 +256,6 @@ is_unlimited_lifetime: bool
 
 Gets or sets if this Item lives forever
 
-#### is_valid [#endstone.actor.Item.is_valid]
-
-```python
-is_valid: bool
-```
-
-Returns false if the entity has died, been despawned for some other reason, or has not been added to the level.
-
 #### item_stack [#endstone.actor.Item.item_stack]
 
 ```python
@@ -459,54 +263,6 @@ item_stack: ItemStack
 ```
 
 Gets or sets the item stack associated with this item drop.
-
-#### level [#endstone.actor.Item.level]
-
-```python
-level: Level
-```
-
-Gets the current Level this actor resides in.
-
-#### location [#endstone.actor.Item.location]
-
-```python
-location: Location
-```
-
-Gets the actor's current position.
-
-#### max_health [#endstone.actor.Item.max_health]
-
-```python
-max_health: int
-```
-
-Gets the maximum health this entity has.
-
-#### name [#endstone.actor.Item.name]
-
-```python
-name: str
-```
-
-Gets the name of this command sender
-
-#### name_tag [#endstone.actor.Item.name_tag]
-
-```python
-name_tag: str
-```
-
-Gets or sets the current name tag of the actor.
-
-#### permission_level [#endstone.actor.Item.permission_level]
-
-```python
-permission_level: PermissionLevel
-```
-
-Gets the permission level of this object
 
 #### pickup_delay [#endstone.actor.Item.pickup_delay]
 
@@ -516,94 +272,6 @@ pickup_delay: int
 
 Gets or sets the delay before this Item is available to be picked up by players.
 
-#### recalculate_permissions [#endstone.actor.Item.recalculate_permissions]
-
-```python
-recalculate_permissions() -> None
-```
-
-Recalculates the permissions.
-
-#### remove [#endstone.actor.Item.remove]
-
-```python
-remove() -> None
-```
-
-Remove this actor from the level.
-
-#### remove_attachment [#endstone.actor.Item.remove_attachment]
-
-```python
-remove_attachment(attachment:PermissionAttachment) -> None
-```
-
-Removes a given PermissionAttachment.
-
-#### remove_scoreboard_tag [#endstone.actor.Item.remove_scoreboard_tag]
-
-```python
-remove_scoreboard_tag(tag:str) -> bool
-```
-
-Removes a given tag from this actor.
-
-#### runtime_id [#endstone.actor.Item.runtime_id]
-
-```python
-runtime_id: int
-```
-
-Returns the runtime id for this actor.
-
-#### score_tag [#endstone.actor.Item.score_tag]
-
-```python
-score_tag: str
-```
-
-Gets or sets the current score tag of the actor.
-
-#### scoreboard_tags [#endstone.actor.Item.scoreboard_tags]
-
-```python
-scoreboard_tags: list[str]
-```
-
-Returns a list of scoreboard tags for this actor.
-
-#### send_error_message [#endstone.actor.Item.send_error_message]
-
-```python
-send_error_message(message:str | Translatable) -> None
-```
-
-Sends this sender an error message
-
-#### send_message [#endstone.actor.Item.send_message]
-
-```python
-send_message(message:str | Translatable) -> None
-```
-
-Sends this sender a message
-
-#### server [#endstone.actor.Item.server]
-
-```python
-server: Server
-```
-
-Returns the server instance that this command is running on
-
-#### set_rotation [#endstone.actor.Item.set_rotation]
-
-```python
-set_rotation(yaw:float, pitch:float) -> None
-```
-
-Sets the actor's rotation.
-
 #### thrower [#endstone.actor.Item.thrower]
 
 ```python
@@ -612,113 +280,19 @@ thrower: int | None
 
 Gets or sets the thrower of this item.
 
-#### type [#endstone.actor.Item.type]
-
-```python
-type: str
-```
-
-Gets the type of the actor.
-
-#### velocity [#endstone.actor.Item.velocity]
-
-```python
-velocity: Vector
-```
-
-Gets this actor's current velocity.
+</div>
 
 ### Mob [#endstone.actor.Mob]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[Actor](#endstone._internal.endstone_python.Actor)</code>
 
 Represents a mobile entity (i.e. living entity), such as a monster or player.
 
-**Methods:**
-
-- [**add_scoreboard_tag**](#endstone.actor.Mob.add_scoreboard_tag) – Adds a tag to this actor.
-- [**recalculate_permissions**](#endstone.actor.Mob.recalculate_permissions) – Recalculates the permissions.
-- [**remove**](#endstone.actor.Mob.remove) – Remove this actor from the level.
-- [**remove_attachment**](#endstone.actor.Mob.remove_attachment) – Removes a given PermissionAttachment.
-- [**remove_scoreboard_tag**](#endstone.actor.Mob.remove_scoreboard_tag) – Removes a given tag from this actor.
-- [**send_error_message**](#endstone.actor.Mob.send_error_message) – Sends this sender an error message
-- [**send_message**](#endstone.actor.Mob.send_message) – Sends this sender a message
-- [**set_rotation**](#endstone.actor.Mob.set_rotation) – Sets the actor's rotation.
-
 **Attributes:**
 
-- [**dimension**](#endstone.actor.Mob.dimension) (<code>[Dimension](#endstone._internal.endstone_python.Dimension)</code>) – Gets the current Dimension this actor resides in.
-- [**effective_permissions**](#endstone.actor.Mob.effective_permissions) (<code>[set](#set)\[[PermissionAttachmentInfo](#endstone._internal.endstone_python.PermissionAttachmentInfo)\]</code>) – Gets effective permissions.
-- [**health**](#endstone.actor.Mob.health) (<code>[int](#int)</code>) – Gets or sets the entity's health from 0 to its max possible value, where 0 is dead.
-- [**id**](#endstone.actor.Mob.id) (<code>[int](#int)</code>) – Returns a unique id for this actor.
-- [**is_dead**](#endstone.actor.Mob.is_dead) (<code>[bool](#bool)</code>) – Returns true if this actor has been marked for removal.
 - [**is_gliding**](#endstone.actor.Mob.is_gliding) (<code>[bool](#bool)</code>) – Checks to see if an actor is gliding, such as using an Elytra.
-- [**is_in_lava**](#endstone.actor.Mob.is_in_lava) (<code>[bool](#bool)</code>) – Returns true if the actor is in lava.
-- [**is_in_water**](#endstone.actor.Mob.is_in_water) (<code>[bool](#bool)</code>) – Returns true if the actor is in water.
-- [**is_name_tag_always_visible**](#endstone.actor.Mob.is_name_tag_always_visible) (<code>[bool](#bool)</code>) – Gets or sets if the actor's name tag is always visible or not.
-- [**is_name_tag_visible**](#endstone.actor.Mob.is_name_tag_visible) (<code>[bool](#bool)</code>) – Gets or sets if the actor's name tag is visible or not.
-- [**is_on_ground**](#endstone.actor.Mob.is_on_ground) (<code>[bool](#bool)</code>) – Returns true if the actor is supported by a block, i.e. on ground.
-- [**is_valid**](#endstone.actor.Mob.is_valid) (<code>[bool](#bool)</code>) – Returns false if the entity has died, been despawned for some other reason, or has not been added to the level.
-- [**level**](#endstone.actor.Mob.level) (<code>[Level](#endstone._internal.endstone_python.Level)</code>) – Gets the current Level this actor resides in.
-- [**location**](#endstone.actor.Mob.location) (<code>[Location](#endstone._internal.endstone_python.Location)</code>) – Gets the actor's current position.
-- [**max_health**](#endstone.actor.Mob.max_health) (<code>[int](#int)</code>) – Gets the maximum health this entity has.
-- [**name**](#endstone.actor.Mob.name) (<code>[str](#str)</code>) – Gets the name of this command sender
-- [**name_tag**](#endstone.actor.Mob.name_tag) (<code>[str](#str)</code>) – Gets or sets the current name tag of the actor.
-- [**permission_level**](#endstone.actor.Mob.permission_level) (<code>[PermissionLevel](#endstone._internal.endstone_python.PermissionLevel)</code>) – Gets the permission level of this object
-- [**runtime_id**](#endstone.actor.Mob.runtime_id) (<code>[int](#int)</code>) – Returns the runtime id for this actor.
-- [**score_tag**](#endstone.actor.Mob.score_tag) (<code>[str](#str)</code>) – Gets or sets the current score tag of the actor.
-- [**scoreboard_tags**](#endstone.actor.Mob.scoreboard_tags) (<code>[list](#list)\[[str](#str)\]</code>) – Returns a list of scoreboard tags for this actor.
-- [**server**](#endstone.actor.Mob.server) (<code>[Server](#endstone._internal.endstone_python.Server)</code>) – Returns the server instance that this command is running on
-- [**type**](#endstone.actor.Mob.type) (<code>[str](#str)</code>) – Gets the type of the actor.
-- [**velocity**](#endstone.actor.Mob.velocity) (<code>[Vector](#endstone._internal.endstone_python.Vector)</code>) – Gets this actor's current velocity.
-
-#### add_scoreboard_tag [#endstone.actor.Mob.add_scoreboard_tag]
-
-```python
-add_scoreboard_tag(tag:str) -> bool
-```
-
-Adds a tag to this actor.
-
-#### dimension [#endstone.actor.Mob.dimension]
-
-```python
-dimension: Dimension
-```
-
-Gets the current Dimension this actor resides in.
-
-#### effective_permissions [#endstone.actor.Mob.effective_permissions]
-
-```python
-effective_permissions: set[PermissionAttachmentInfo]
-```
-
-Gets effective permissions.
-
-#### health [#endstone.actor.Mob.health]
-
-```python
-health: int
-```
-
-Gets or sets the entity's health from 0 to its max possible value, where 0 is dead.
-
-#### id [#endstone.actor.Mob.id]
-
-```python
-id: int
-```
-
-Returns a unique id for this actor.
-
-#### is_dead [#endstone.actor.Mob.is_dead]
-
-```python
-is_dead: bool
-```
-
-Returns true if this actor has been marked for removal.
 
 #### is_gliding [#endstone.actor.Mob.is_gliding]
 
@@ -728,202 +302,4 @@ is_gliding: bool
 
 Checks to see if an actor is gliding, such as using an Elytra.
 
-#### is_in_lava [#endstone.actor.Mob.is_in_lava]
-
-```python
-is_in_lava: bool
-```
-
-Returns true if the actor is in lava.
-
-#### is_in_water [#endstone.actor.Mob.is_in_water]
-
-```python
-is_in_water: bool
-```
-
-Returns true if the actor is in water.
-
-#### is_name_tag_always_visible [#endstone.actor.Mob.is_name_tag_always_visible]
-
-```python
-is_name_tag_always_visible: bool
-```
-
-Gets or sets if the actor's name tag is always visible or not.
-
-#### is_name_tag_visible [#endstone.actor.Mob.is_name_tag_visible]
-
-```python
-is_name_tag_visible: bool
-```
-
-Gets or sets if the actor's name tag is visible or not.
-
-#### is_on_ground [#endstone.actor.Mob.is_on_ground]
-
-```python
-is_on_ground: bool
-```
-
-Returns true if the actor is supported by a block, i.e. on ground.
-
-#### is_valid [#endstone.actor.Mob.is_valid]
-
-```python
-is_valid: bool
-```
-
-Returns false if the entity has died, been despawned for some other reason, or has not been added to the level.
-
-#### level [#endstone.actor.Mob.level]
-
-```python
-level: Level
-```
-
-Gets the current Level this actor resides in.
-
-#### location [#endstone.actor.Mob.location]
-
-```python
-location: Location
-```
-
-Gets the actor's current position.
-
-#### max_health [#endstone.actor.Mob.max_health]
-
-```python
-max_health: int
-```
-
-Gets the maximum health this entity has.
-
-#### name [#endstone.actor.Mob.name]
-
-```python
-name: str
-```
-
-Gets the name of this command sender
-
-#### name_tag [#endstone.actor.Mob.name_tag]
-
-```python
-name_tag: str
-```
-
-Gets or sets the current name tag of the actor.
-
-#### permission_level [#endstone.actor.Mob.permission_level]
-
-```python
-permission_level: PermissionLevel
-```
-
-Gets the permission level of this object
-
-#### recalculate_permissions [#endstone.actor.Mob.recalculate_permissions]
-
-```python
-recalculate_permissions() -> None
-```
-
-Recalculates the permissions.
-
-#### remove [#endstone.actor.Mob.remove]
-
-```python
-remove() -> None
-```
-
-Remove this actor from the level.
-
-#### remove_attachment [#endstone.actor.Mob.remove_attachment]
-
-```python
-remove_attachment(attachment:PermissionAttachment) -> None
-```
-
-Removes a given PermissionAttachment.
-
-#### remove_scoreboard_tag [#endstone.actor.Mob.remove_scoreboard_tag]
-
-```python
-remove_scoreboard_tag(tag:str) -> bool
-```
-
-Removes a given tag from this actor.
-
-#### runtime_id [#endstone.actor.Mob.runtime_id]
-
-```python
-runtime_id: int
-```
-
-Returns the runtime id for this actor.
-
-#### score_tag [#endstone.actor.Mob.score_tag]
-
-```python
-score_tag: str
-```
-
-Gets or sets the current score tag of the actor.
-
-#### scoreboard_tags [#endstone.actor.Mob.scoreboard_tags]
-
-```python
-scoreboard_tags: list[str]
-```
-
-Returns a list of scoreboard tags for this actor.
-
-#### send_error_message [#endstone.actor.Mob.send_error_message]
-
-```python
-send_error_message(message:str | Translatable) -> None
-```
-
-Sends this sender an error message
-
-#### send_message [#endstone.actor.Mob.send_message]
-
-```python
-send_message(message:str | Translatable) -> None
-```
-
-Sends this sender a message
-
-#### server [#endstone.actor.Mob.server]
-
-```python
-server: Server
-```
-
-Returns the server instance that this command is running on
-
-#### set_rotation [#endstone.actor.Mob.set_rotation]
-
-```python
-set_rotation(yaw:float, pitch:float) -> None
-```
-
-Sets the actor's rotation.
-
-#### type [#endstone.actor.Mob.type]
-
-```python
-type: str
-```
-
-Gets the type of the actor.
-
-#### velocity [#endstone.actor.Mob.velocity]
-
-```python
-velocity: Vector
-```
-
-Gets this actor's current velocity.
+</div>

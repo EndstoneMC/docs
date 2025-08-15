@@ -75,47 +75,16 @@ title: "endstone.event"
 
 ### ActorDamageEvent [#endstone.event.ActorDamageEvent]
 
+<div className="pl-[2em] mt-[1.25em]">
+
 Bases: <code>[MobEvent](#endstone._internal.endstone_python.MobEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when an Actor is damaged.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.ActorDamageEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**actor**](#endstone.event.ActorDamageEvent.actor) (<code>[Mob](#endstone._internal.endstone_python.Mob)</code>) – Returns the Mob involved in this event
-- [**cancelled**](#endstone.event.ActorDamageEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
 - [**damage**](#endstone.event.ActorDamageEvent.damage) (<code>[float](#float)</code>) – Gets or sets the amount of damage caused by the event
 - [**damage_source**](#endstone.event.ActorDamageEvent.damage_source) (<code>[DamageSource](#endstone._internal.endstone_python.DamageSource)</code>) – Gets the source of damage.
-- [**event_name**](#endstone.event.ActorDamageEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.ActorDamageEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.ActorDamageEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### actor [#endstone.event.ActorDamageEvent.actor]
-
-```python
-actor: Mob
-```
-
-Returns the Mob involved in this event
-
-#### cancel [#endstone.event.ActorDamageEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.ActorDamageEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
 
 #### damage [#endstone.event.ActorDamageEvent.damage]
 
@@ -133,31 +102,11 @@ damage_source: DamageSource
 
 Gets the source of damage.
 
-#### event_name [#endstone.event.ActorDamageEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.ActorDamageEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.ActorDamageEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
+</div>
 
 ### ActorDeathEvent [#endstone.event.ActorDeathEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[MobEvent](#endstone._internal.endstone_python.MobEvent)</code>
 
@@ -165,18 +114,7 @@ Called when an Actor dies.
 
 **Attributes:**
 
-- [**actor**](#endstone.event.ActorDeathEvent.actor) (<code>[Mob](#endstone._internal.endstone_python.Mob)</code>) – Returns the Mob involved in this event
 - [**damage_source**](#endstone.event.ActorDeathEvent.damage_source) (<code>[DamageSource](#endstone._internal.endstone_python.DamageSource)</code>) – Gets the source of damage which caused the death.
-- [**event_name**](#endstone.event.ActorDeathEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.ActorDeathEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-
-#### actor [#endstone.event.ActorDeathEvent.actor]
-
-```python
-actor: Mob
-```
-
-Returns the Mob involved in this event
 
 #### damage_source [#endstone.event.ActorDeathEvent.damage_source]
 
@@ -186,23 +124,11 @@ damage_source: DamageSource
 
 Gets the source of damage which caused the death.
 
-#### event_name [#endstone.event.ActorDeathEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.ActorDeathEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
+</div>
 
 ### ActorEvent [#endstone.event.ActorEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[Event](#endstone._internal.endstone_python.Event)</code>
 
@@ -211,8 +137,6 @@ Represents an Actor-related event.
 **Attributes:**
 
 - [**actor**](#endstone.event.ActorEvent.actor) (<code>[Actor](#endstone._internal.endstone_python.Actor)</code>) – Returns the Actor involved in this event
-- [**event_name**](#endstone.event.ActorEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.ActorEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
 
 #### actor [#endstone.event.ActorEvent.actor]
 
@@ -222,49 +146,20 @@ actor: Actor
 
 Returns the Actor involved in this event
 
-#### event_name [#endstone.event.ActorEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.ActorEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
+</div>
 
 ### ActorExplodeEvent [#endstone.event.ActorExplodeEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[ActorEvent](#endstone._internal.endstone_python.ActorEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when an Actor explodes.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.ActorExplodeEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**actor**](#endstone.event.ActorExplodeEvent.actor) (<code>[Actor](#endstone._internal.endstone_python.Actor)</code>) – Returns the Actor involved in this event
 - [**block_list**](#endstone.event.ActorExplodeEvent.block_list) (<code>[list](#list)\[[Block](#endstone._internal.endstone_python.Block)\]</code>) – Gets or sets the list of blocks that would have been removed or were removed from the explosion event.
-- [**cancelled**](#endstone.event.ActorExplodeEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.ActorExplodeEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.ActorExplodeEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.ActorExplodeEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 - [**location**](#endstone.event.ActorExplodeEvent.location) (<code>[Location](#endstone._internal.endstone_python.Location)</code>) – Returns the location where the explosion happened.
-
-#### actor [#endstone.event.ActorExplodeEvent.actor]
-
-```python
-actor: Actor
-```
-
-Returns the Actor involved in this event
 
 #### block_list [#endstone.event.ActorExplodeEvent.block_list]
 
@@ -274,46 +169,6 @@ block_list: list[Block]
 
 Gets or sets the list of blocks that would have been removed or were removed from the explosion event.
 
-#### cancel [#endstone.event.ActorExplodeEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.ActorExplodeEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.ActorExplodeEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.ActorExplodeEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.ActorExplodeEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 #### location [#endstone.event.ActorExplodeEvent.location]
 
 ```python
@@ -322,73 +177,20 @@ location: Location
 
 Returns the location where the explosion happened.
 
+</div>
+
 ### ActorKnockbackEvent [#endstone.event.ActorKnockbackEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[MobEvent](#endstone._internal.endstone_python.MobEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a living entity receives knockback.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.ActorKnockbackEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**actor**](#endstone.event.ActorKnockbackEvent.actor) (<code>[Mob](#endstone._internal.endstone_python.Mob)</code>) – Returns the Mob involved in this event
-- [**cancelled**](#endstone.event.ActorKnockbackEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.ActorKnockbackEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.ActorKnockbackEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.ActorKnockbackEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 - [**knockback**](#endstone.event.ActorKnockbackEvent.knockback) (<code>[Vector](#endstone._internal.endstone_python.Vector)</code>) – Gets or sets the knockback that will be applied to the entity.
 - [**source**](#endstone.event.ActorKnockbackEvent.source) (<code>[Actor](#endstone._internal.endstone_python.Actor)</code>) – Get the source actor that has caused knockback to the defender, if exists.
-
-#### actor [#endstone.event.ActorKnockbackEvent.actor]
-
-```python
-actor: Mob
-```
-
-Returns the Mob involved in this event
-
-#### cancel [#endstone.event.ActorKnockbackEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.ActorKnockbackEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.ActorKnockbackEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.ActorKnockbackEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.ActorKnockbackEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 
 #### knockback [#endstone.event.ActorKnockbackEvent.knockback]
 
@@ -406,87 +208,40 @@ source: Actor
 
 Get the source actor that has caused knockback to the defender, if exists.
 
+</div>
+
 ### ActorRemoveEvent [#endstone.event.ActorRemoveEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[ActorEvent](#endstone._internal.endstone_python.ActorEvent)</code>
 
 Called when an Actor is removed.
 
-**Attributes:**
-
-- [**actor**](#endstone.event.ActorRemoveEvent.actor) (<code>[Actor](#endstone._internal.endstone_python.Actor)</code>) – Returns the Actor involved in this event
-- [**event_name**](#endstone.event.ActorRemoveEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.ActorRemoveEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
+</div>
 
 ### ActorSpawnEvent [#endstone.event.ActorSpawnEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[ActorEvent](#endstone._internal.endstone_python.ActorEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when an Actor is spawned into a world.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.ActorSpawnEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-**Attributes:**
-
-- [**actor**](#endstone.event.ActorSpawnEvent.actor) (<code>[Actor](#endstone._internal.endstone_python.Actor)</code>) – Returns the Actor involved in this event
-- [**cancelled**](#endstone.event.ActorSpawnEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.ActorSpawnEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.ActorSpawnEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.ActorSpawnEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
+</div>
 
 ### ActorTeleportEvent [#endstone.event.ActorTeleportEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[ActorEvent](#endstone._internal.endstone_python.ActorEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a non-player entity is teleported from one location to another.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.ActorTeleportEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**actor**](#endstone.event.ActorTeleportEvent.actor) (<code>[Actor](#endstone._internal.endstone_python.Actor)</code>) – Returns the Actor involved in this event
-- [**cancelled**](#endstone.event.ActorTeleportEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.ActorTeleportEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
 - [**from_location**](#endstone.event.ActorTeleportEvent.from_location) (<code>[Location](#endstone._internal.endstone_python.Location)</code>) – Gets or sets the location that this actor moved from.
-- [**is_asynchronous**](#endstone.event.ActorTeleportEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.ActorTeleportEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 - [**to_location**](#endstone.event.ActorTeleportEvent.to_location) (<code>[Location](#endstone._internal.endstone_python.Location)</code>) – Gets or sets the location that this actor moved to.
-
-#### actor [#endstone.event.ActorTeleportEvent.actor]
-
-```python
-actor: Actor
-```
-
-Returns the Actor involved in this event
-
-#### cancel [#endstone.event.ActorTeleportEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.ActorTeleportEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.ActorTeleportEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
 
 #### from_location [#endstone.event.ActorTeleportEvent.from_location]
 
@@ -496,22 +251,6 @@ from_location: Location
 
 Gets or sets the location that this actor moved from.
 
-#### is_asynchronous [#endstone.event.ActorTeleportEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.ActorTeleportEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 #### to_location [#endstone.event.ActorTeleportEvent.to_location]
 
 ```python
@@ -520,72 +259,19 @@ to_location: Location
 
 Gets or sets the location that this actor moved to.
 
+</div>
+
 ### BlockBreakEvent [#endstone.event.BlockBreakEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[BlockEvent](#endstone._internal.endstone_python.BlockEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a block is broken by a player.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.BlockBreakEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**block**](#endstone.event.BlockBreakEvent.block) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Gets the block involved in this event.
-- [**cancelled**](#endstone.event.BlockBreakEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.BlockBreakEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.BlockBreakEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.BlockBreakEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 - [**player**](#endstone.event.BlockBreakEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Gets the Player that is breaking the block involved in this event.
-
-#### block [#endstone.event.BlockBreakEvent.block]
-
-```python
-block: Block
-```
-
-Gets the block involved in this event.
-
-#### cancel [#endstone.event.BlockBreakEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.BlockBreakEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.BlockBreakEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.BlockBreakEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.BlockBreakEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 
 #### player [#endstone.event.BlockBreakEvent.player]
 
@@ -595,73 +281,20 @@ player: Player
 
 Gets the Player that is breaking the block involved in this event.
 
+</div>
+
 ### BlockCookEvent [#endstone.event.BlockCookEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[BlockEvent](#endstone._internal.endstone_python.BlockEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when an ItemStack is successfully cooked in a block.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.BlockCookEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**block**](#endstone.event.BlockCookEvent.block) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Gets the block involved in this event.
-- [**cancelled**](#endstone.event.BlockCookEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.BlockCookEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.BlockCookEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.BlockCookEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 - [**result**](#endstone.event.BlockCookEvent.result) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Gets or sets the resultant ItemStack for this event
 - [**source**](#endstone.event.BlockCookEvent.source) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Gets the smelted ItemStack for this event
-
-#### block [#endstone.event.BlockCookEvent.block]
-
-```python
-block: Block
-```
-
-Gets the block involved in this event.
-
-#### cancel [#endstone.event.BlockCookEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.BlockCookEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.BlockCookEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.BlockCookEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.BlockCookEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 
 #### result [#endstone.event.BlockCookEvent.result]
 
@@ -679,7 +312,11 @@ source: ItemStack
 
 Gets the smelted ItemStack for this event
 
+</div>
+
 ### BlockEvent [#endstone.event.BlockEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[Event](#endstone._internal.endstone_python.Event)</code>
 
@@ -688,8 +325,6 @@ Represents an Block-related event
 **Attributes:**
 
 - [**block**](#endstone.event.BlockEvent.block) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Gets the block involved in this event.
-- [**event_name**](#endstone.event.BlockEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.BlockEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
 
 #### block [#endstone.event.BlockEvent.block]
 
@@ -699,64 +334,19 @@ block: Block
 
 Gets the block involved in this event.
 
-#### event_name [#endstone.event.BlockEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.BlockEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
+</div>
 
 ### BlockPistonEvent [#endstone.event.BlockPistonEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[BlockEvent](#endstone._internal.endstone_python.BlockEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a piston block is triggered
 
-**Methods:**
-
-- [**cancel**](#endstone.event.BlockPistonEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**block**](#endstone.event.BlockPistonEvent.block) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Gets the block involved in this event.
-- [**cancelled**](#endstone.event.BlockPistonEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
 - [**direction**](#endstone.event.BlockPistonEvent.direction) (<code>[BlockFace](#endstone._internal.endstone_python.BlockFace)</code>) – Return the direction in which the piston will operate.
-- [**event_name**](#endstone.event.BlockPistonEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.BlockPistonEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.BlockPistonEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### block [#endstone.event.BlockPistonEvent.block]
-
-```python
-block: Block
-```
-
-Gets the block involved in this event.
-
-#### cancel [#endstone.event.BlockPistonEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.BlockPistonEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
 
 #### direction [#endstone.event.BlockPistonEvent.direction]
 
@@ -766,97 +356,42 @@ direction: BlockFace
 
 Return the direction in which the piston will operate.
 
-#### event_name [#endstone.event.BlockPistonEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.BlockPistonEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.BlockPistonEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
+</div>
 
 ### BlockPistonExtendEvent [#endstone.event.BlockPistonExtendEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[BlockPistonEvent](#endstone._internal.endstone_python.BlockPistonEvent)</code>
 
 Called when a piston extends.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.BlockPistonExtendEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-**Attributes:**
-
-- [**block**](#endstone.event.BlockPistonExtendEvent.block) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Gets the block involved in this event.
-- [**cancelled**](#endstone.event.BlockPistonExtendEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**direction**](#endstone.event.BlockPistonExtendEvent.direction) (<code>[BlockFace](#endstone._internal.endstone_python.BlockFace)</code>) – Return the direction in which the piston will operate.
-- [**event_name**](#endstone.event.BlockPistonExtendEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.BlockPistonExtendEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.BlockPistonExtendEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
+</div>
 
 ### BlockPistonRetractEvent [#endstone.event.BlockPistonRetractEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[BlockPistonEvent](#endstone._internal.endstone_python.BlockPistonEvent)</code>
 
 Called when a piston retracts.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.BlockPistonRetractEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-**Attributes:**
-
-- [**block**](#endstone.event.BlockPistonRetractEvent.block) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Gets the block involved in this event.
-- [**cancelled**](#endstone.event.BlockPistonRetractEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**direction**](#endstone.event.BlockPistonRetractEvent.direction) (<code>[BlockFace](#endstone._internal.endstone_python.BlockFace)</code>) – Return the direction in which the piston will operate.
-- [**event_name**](#endstone.event.BlockPistonRetractEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.BlockPistonRetractEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.BlockPistonRetractEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
+</div>
 
 ### BlockPlaceEvent [#endstone.event.BlockPlaceEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[BlockEvent](#endstone._internal.endstone_python.BlockEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a block is placed by a player.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.BlockPlaceEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**block**](#endstone.event.BlockPlaceEvent.block) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Gets the block involved in this event.
 - [**block_against**](#endstone.event.BlockPlaceEvent.block_against) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Gets the block that this block was placed against
 - [**block_placed_state**](#endstone.event.BlockPlaceEvent.block_placed_state) (<code>[BlockState](#endstone._internal.endstone_python.BlockState)</code>) – Gets the BlockState for the block which was placed.
 - [**block_replaced**](#endstone.event.BlockPlaceEvent.block_replaced) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Gets the block which was replaced.
-- [**cancelled**](#endstone.event.BlockPlaceEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.BlockPlaceEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.BlockPlaceEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.BlockPlaceEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 - [**player**](#endstone.event.BlockPlaceEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Gets the player who placed the block involved in this event.
-
-#### block [#endstone.event.BlockPlaceEvent.block]
-
-```python
-block: Block
-```
-
-Gets the block involved in this event.
 
 #### block_against [#endstone.event.BlockPlaceEvent.block_against]
 
@@ -882,46 +417,6 @@ block_replaced: Block
 
 Gets the block which was replaced.
 
-#### cancel [#endstone.event.BlockPlaceEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.BlockPlaceEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.BlockPlaceEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.BlockPlaceEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.BlockPlaceEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 #### player [#endstone.event.BlockPlaceEvent.player]
 
 ```python
@@ -930,64 +425,20 @@ player: Player
 
 Gets the player who placed the block involved in this event.
 
+</div>
+
 ### BroadcastMessageEvent [#endstone.event.BroadcastMessageEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Event triggered for server broadcast messages such as from Server.broadcast
 
-**Methods:**
-
-- [**cancel**](#endstone.event.BroadcastMessageEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**cancelled**](#endstone.event.BroadcastMessageEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.BroadcastMessageEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.BroadcastMessageEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.BroadcastMessageEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 - [**message**](#endstone.event.BroadcastMessageEvent.message) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable)</code>) – Gets or sets the message to broadcast.
 - [**recipients**](#endstone.event.BroadcastMessageEvent.recipients) (<code>[set](#set)\[[CommandSender](#endstone._internal.endstone_python.CommandSender)\]</code>) – Gets a set of recipients that this broadcast message will be displayed to.
-
-#### cancel [#endstone.event.BroadcastMessageEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.BroadcastMessageEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.BroadcastMessageEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.BroadcastMessageEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.BroadcastMessageEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 
 #### message [#endstone.event.BroadcastMessageEvent.message]
 
@@ -1005,7 +456,11 @@ recipients: set[CommandSender]
 
 Gets a set of recipients that this broadcast message will be displayed to.
 
+</div>
+
 ### Cancellable [#endstone.event.Cancellable]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents an event that may be cancelled by a plugin or the server.
 
@@ -1042,7 +497,11 @@ is_cancelled: bool
 
 Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 
+</div>
+
 ### ChunkEvent [#endstone.event.ChunkEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[DimensionEvent](#endstone._internal.endstone_python.DimensionEvent)</code>
 
@@ -1051,10 +510,6 @@ Represents a Chunk related event
 **Attributes:**
 
 - [**chunk**](#endstone.event.ChunkEvent.chunk) (<code>[Chunk](#endstone._internal.endstone_python.Chunk)</code>) – Gets the chunk being loaded/unloaded
-- [**dimension**](#endstone.event.ChunkEvent.dimension) (<code>[Dimension](#endstone._internal.endstone_python.Dimension)</code>) – Gets the dimension primarily involved with this event
-- [**event_name**](#endstone.event.ChunkEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.ChunkEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**level**](#endstone.event.ChunkEvent.level) (<code>[Level](#endstone._internal.endstone_python.Level)</code>) – Gets the level primarily involved with this event
 
 #### chunk [#endstone.event.ChunkEvent.chunk]
 
@@ -1064,67 +519,31 @@ chunk: Chunk
 
 Gets the chunk being loaded/unloaded
 
-#### dimension [#endstone.event.ChunkEvent.dimension]
-
-```python
-dimension: Dimension
-```
-
-Gets the dimension primarily involved with this event
-
-#### event_name [#endstone.event.ChunkEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.ChunkEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### level [#endstone.event.ChunkEvent.level]
-
-```python
-level: Level
-```
-
-Gets the level primarily involved with this event
+</div>
 
 ### ChunkLoadEvent [#endstone.event.ChunkLoadEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[ChunkEvent](#endstone._internal.endstone_python.ChunkEvent)</code>
 
 Called when a chunk is loaded
 
-**Attributes:**
-
-- [**chunk**](#endstone.event.ChunkLoadEvent.chunk) (<code>[Chunk](#endstone._internal.endstone_python.Chunk)</code>) – Gets the chunk being loaded/unloaded
-- [**dimension**](#endstone.event.ChunkLoadEvent.dimension) (<code>[Dimension](#endstone._internal.endstone_python.Dimension)</code>) – Gets the dimension primarily involved with this event
-- [**event_name**](#endstone.event.ChunkLoadEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.ChunkLoadEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**level**](#endstone.event.ChunkLoadEvent.level) (<code>[Level](#endstone._internal.endstone_python.Level)</code>) – Gets the level primarily involved with this event
+</div>
 
 ### ChunkUnloadEvent [#endstone.event.ChunkUnloadEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[ChunkEvent](#endstone._internal.endstone_python.ChunkEvent)</code>
 
 Called when a chunk is unloaded
 
-**Attributes:**
-
-- [**chunk**](#endstone.event.ChunkUnloadEvent.chunk) (<code>[Chunk](#endstone._internal.endstone_python.Chunk)</code>) – Gets the chunk being loaded/unloaded
-- [**dimension**](#endstone.event.ChunkUnloadEvent.dimension) (<code>[Dimension](#endstone._internal.endstone_python.Dimension)</code>) – Gets the dimension primarily involved with this event
-- [**event_name**](#endstone.event.ChunkUnloadEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.ChunkUnloadEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**level**](#endstone.event.ChunkUnloadEvent.level) (<code>[Level](#endstone._internal.endstone_python.Level)</code>) – Gets the level primarily involved with this event
+</div>
 
 ### DimensionEvent [#endstone.event.DimensionEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[LevelEvent](#endstone._internal.endstone_python.LevelEvent)</code>
 
@@ -1133,9 +552,6 @@ Represents events within a dimension
 **Attributes:**
 
 - [**dimension**](#endstone.event.DimensionEvent.dimension) (<code>[Dimension](#endstone._internal.endstone_python.Dimension)</code>) – Gets the dimension primarily involved with this event
-- [**event_name**](#endstone.event.DimensionEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.DimensionEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**level**](#endstone.event.DimensionEvent.level) (<code>[Level](#endstone._internal.endstone_python.Level)</code>) – Gets the level primarily involved with this event
 
 #### dimension [#endstone.event.DimensionEvent.dimension]
 
@@ -1145,31 +561,11 @@ dimension: Dimension
 
 Gets the dimension primarily involved with this event
 
-#### event_name [#endstone.event.DimensionEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.DimensionEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### level [#endstone.event.DimensionEvent.level]
-
-```python
-level: Level
-```
-
-Gets the level primarily involved with this event
+</div>
 
 ### Event [#endstone.event.Event]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents an event.
 
@@ -1194,11 +590,15 @@ is_asynchronous: bool
 
 Whether the event fires asynchronously.
 
+</div>
+
 ### EventPriority [#endstone.event.EventPriority]
 
 ```python
 EventPriority(value:int) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Listeners are called in following order: LOWEST -> LOW -> NORMAL -> HIGH -> HIGHEST -> MONITOR
 
@@ -1261,11 +661,15 @@ name: str
 value: int
 ```
 
+</div>
+
 ### EventResult [#endstone.event.EventResult]
 
 ```python
 EventResult(value:int) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 **Attributes:**
 
@@ -1305,26 +709,22 @@ name: str
 value: int
 ```
 
+</div>
+
 ### LeavesDecayEvent [#endstone.event.LeavesDecayEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[BlockEvent](#endstone._internal.endstone_python.BlockEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when leaves are decaying naturally.
 If a Leaves Decay event is cancelled, the leaves will not decay.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.LeavesDecayEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-**Attributes:**
-
-- [**block**](#endstone.event.LeavesDecayEvent.block) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Gets the block involved in this event.
-- [**cancelled**](#endstone.event.LeavesDecayEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.LeavesDecayEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.LeavesDecayEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.LeavesDecayEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
+</div>
 
 ### LevelEvent [#endstone.event.LevelEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[Event](#endstone._internal.endstone_python.Event)</code>
 
@@ -1332,25 +732,7 @@ Represents events within a level
 
 **Attributes:**
 
-- [**event_name**](#endstone.event.LevelEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.LevelEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
 - [**level**](#endstone.event.LevelEvent.level) (<code>[Level](#endstone._internal.endstone_python.Level)</code>) – Gets the level primarily involved with this event
-
-#### event_name [#endstone.event.LevelEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.LevelEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
 
 #### level [#endstone.event.LevelEvent.level]
 
@@ -1360,7 +742,11 @@ level: Level
 
 Gets the level primarily involved with this event
 
+</div>
+
 ### MobEvent [#endstone.event.MobEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[Event](#endstone._internal.endstone_python.Event)</code>
 
@@ -1369,8 +755,6 @@ Represents an Mob-related event.
 **Attributes:**
 
 - [**actor**](#endstone.event.MobEvent.actor) (<code>[Mob](#endstone._internal.endstone_python.Mob)</code>) – Returns the Mob involved in this event
-- [**event_name**](#endstone.event.MobEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.MobEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
 
 #### actor [#endstone.event.MobEvent.actor]
 
@@ -1380,39 +764,19 @@ actor: Mob
 
 Returns the Mob involved in this event
 
-#### event_name [#endstone.event.MobEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.MobEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
+</div>
 
 ### PacketReceiveEvent [#endstone.event.PacketReceiveEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when the server receives a packet from a connected client.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.PacketReceiveEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
 - [**address**](#endstone.event.PacketReceiveEvent.address) (<code>[SocketAddress](#endstone._internal.endstone_python.SocketAddress)</code>) – Gets the network address to which this packet is being sent.
-- [**cancelled**](#endstone.event.PacketReceiveEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.PacketReceiveEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.PacketReceiveEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.PacketReceiveEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 - [**packet_id**](#endstone.event.PacketReceiveEvent.packet_id) (<code>[int](#int)</code>) – Gets the ID of the packet.
 - [**payload**](#endstone.event.PacketReceiveEvent.payload) (<code>[bytes](#bytes)</code>) – Gets or sets the raw packet data **excluding** the header.
 - [**player**](#endstone.event.PacketReceiveEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Gets the player involved in this event
@@ -1425,46 +789,6 @@ address: SocketAddress
 ```
 
 Gets the network address to which this packet is being sent.
-
-#### cancel [#endstone.event.PacketReceiveEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.PacketReceiveEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.PacketReceiveEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.PacketReceiveEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.PacketReceiveEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 
 #### packet_id [#endstone.event.PacketReceiveEvent.packet_id]
 
@@ -1499,23 +823,19 @@ sub_client_id: int
 
 Gets the SubClient ID (0 = primary client; 1-3 = split-screen clients).
 
+</div>
+
 ### PacketSendEvent [#endstone.event.PacketSendEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when the server sends a packet to a connected client.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.PacketSendEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
 - [**address**](#endstone.event.PacketSendEvent.address) (<code>[SocketAddress](#endstone._internal.endstone_python.SocketAddress)</code>) – Gets the network address to which this packet is being sent.
-- [**cancelled**](#endstone.event.PacketSendEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.PacketSendEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.PacketSendEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.PacketSendEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 - [**packet_id**](#endstone.event.PacketSendEvent.packet_id) (<code>[int](#int)</code>) – Gets the ID of the packet.
 - [**payload**](#endstone.event.PacketSendEvent.payload) (<code>[bytes](#bytes)</code>) – Gets or sets the raw packet data **excluding** the header.
 - [**player**](#endstone.event.PacketSendEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Gets the player involved in this event
@@ -1528,46 +848,6 @@ address: SocketAddress
 ```
 
 Gets the network address to which this packet is being sent.
-
-#### cancel [#endstone.event.PacketSendEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.PacketSendEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.PacketSendEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.PacketSendEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.PacketSendEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 
 #### packet_id [#endstone.event.PacketSendEvent.packet_id]
 
@@ -1602,24 +882,19 @@ sub_client_id: int
 
 Gets the SubClient ID (0 = primary client; 1-3 = split-screen clients).
 
+</div>
+
 ### PlayerBedEnterEvent [#endstone.event.PlayerBedEnterEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a player is almost about to enter the bed.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.PlayerBedEnterEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
 - [**bed**](#endstone.event.PlayerBedEnterEvent.bed) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Returns the bed block involved in this event.
-- [**cancelled**](#endstone.event.PlayerBedEnterEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.PlayerBedEnterEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.PlayerBedEnterEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.PlayerBedEnterEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-- [**player**](#endstone.event.PlayerBedEnterEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
 
 #### bed [#endstone.event.PlayerBedEnterEvent.bed]
 
@@ -1629,55 +904,11 @@ bed: Block
 
 Returns the bed block involved in this event.
 
-#### cancel [#endstone.event.PlayerBedEnterEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.PlayerBedEnterEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.PlayerBedEnterEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.PlayerBedEnterEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.PlayerBedEnterEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### player [#endstone.event.PlayerBedEnterEvent.player]
-
-```python
-player: Player
-```
-
-Returns the player involved in this event.
+</div>
 
 ### PlayerBedLeaveEvent [#endstone.event.PlayerBedLeaveEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>
 
@@ -1686,9 +917,6 @@ Called when a player is leaving a bed.
 **Attributes:**
 
 - [**bed**](#endstone.event.PlayerBedLeaveEvent.bed) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Returns the bed block involved in this event.
-- [**event_name**](#endstone.event.PlayerBedLeaveEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.PlayerBedLeaveEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**player**](#endstone.event.PlayerBedLeaveEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
 
 #### bed [#endstone.event.PlayerBedLeaveEvent.bed]
 
@@ -1698,88 +926,19 @@ bed: Block
 
 Returns the bed block involved in this event.
 
-#### event_name [#endstone.event.PlayerBedLeaveEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.PlayerBedLeaveEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### player [#endstone.event.PlayerBedLeaveEvent.player]
-
-```python
-player: Player
-```
-
-Returns the player involved in this event.
+</div>
 
 ### PlayerChatEvent [#endstone.event.PlayerChatEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a player sends a chat message.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.PlayerChatEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**cancelled**](#endstone.event.PlayerChatEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.PlayerChatEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.PlayerChatEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.PlayerChatEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 - [**message**](#endstone.event.PlayerChatEvent.message) (<code>[str](#str)</code>) – Gets or sets the message that the player will send.
-- [**player**](#endstone.event.PlayerChatEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
-
-#### cancel [#endstone.event.PlayerChatEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.PlayerChatEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.PlayerChatEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.PlayerChatEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.PlayerChatEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 
 #### message [#endstone.event.PlayerChatEvent.message]
 
@@ -1789,48 +948,19 @@ message: str
 
 Gets or sets the message that the player will send.
 
-#### player [#endstone.event.PlayerChatEvent.player]
-
-```python
-player: Player
-```
-
-Returns the player involved in this event.
+</div>
 
 ### PlayerCommandEvent [#endstone.event.PlayerCommandEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called whenever a player runs a command.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.PlayerCommandEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**cancelled**](#endstone.event.PlayerCommandEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
 - [**command**](#endstone.event.PlayerCommandEvent.command) (<code>[str](#str)</code>) – Gets or sets the command that the player will send.
-- [**event_name**](#endstone.event.PlayerCommandEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.PlayerCommandEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.PlayerCommandEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-- [**player**](#endstone.event.PlayerCommandEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
-
-#### cancel [#endstone.event.PlayerCommandEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.PlayerCommandEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
 
 #### command [#endstone.event.PlayerCommandEvent.command]
 
@@ -1840,39 +970,11 @@ command: str
 
 Gets or sets the command that the player will send.
 
-#### event_name [#endstone.event.PlayerCommandEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.PlayerCommandEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.PlayerCommandEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### player [#endstone.event.PlayerCommandEvent.player]
-
-```python
-player: Player
-```
-
-Returns the player involved in this event.
+</div>
 
 ### PlayerDeathEvent [#endstone.event.PlayerDeathEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[ActorDeathEvent](#endstone._internal.endstone_python.ActorDeathEvent)</code>, <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>
 
@@ -1880,28 +982,7 @@ Called when a player dies
 
 **Attributes:**
 
-- [**actor**](#endstone.event.PlayerDeathEvent.actor) (<code>[Mob](#endstone._internal.endstone_python.Mob)</code>) – Returns the Mob involved in this event
-- [**damage_source**](#endstone.event.PlayerDeathEvent.damage_source) (<code>[DamageSource](#endstone._internal.endstone_python.DamageSource)</code>) – Gets the source of damage which caused the death.
 - [**death_message**](#endstone.event.PlayerDeathEvent.death_message) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable) | None</code>) – Gets or sets the death message that will appear to everyone on the server.
-- [**event_name**](#endstone.event.PlayerDeathEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.PlayerDeathEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**player**](#endstone.event.PlayerDeathEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
-
-#### actor [#endstone.event.PlayerDeathEvent.actor]
-
-```python
-actor: Mob
-```
-
-Returns the Mob involved in this event
-
-#### damage_source [#endstone.event.PlayerDeathEvent.damage_source]
-
-```python
-damage_source: DamageSource
-```
-
-Gets the source of damage which caused the death.
 
 #### death_message [#endstone.event.PlayerDeathEvent.death_message]
 
@@ -1911,88 +992,19 @@ death_message: str | Translatable | None
 
 Gets or sets the death message that will appear to everyone on the server.
 
-#### event_name [#endstone.event.PlayerDeathEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.PlayerDeathEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### player [#endstone.event.PlayerDeathEvent.player]
-
-```python
-player: Player
-```
-
-Returns the player involved in this event.
+</div>
 
 ### PlayerDropItemEvent [#endstone.event.PlayerDropItemEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a player drops an item from their inventory
 
-**Methods:**
-
-- [**cancel**](#endstone.event.PlayerDropItemEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**cancelled**](#endstone.event.PlayerDropItemEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.PlayerDropItemEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.PlayerDropItemEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.PlayerDropItemEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 - [**item**](#endstone.event.PlayerDropItemEvent.item) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Gets the ItemStack dropped by the player
-- [**player**](#endstone.event.PlayerDropItemEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
-
-#### cancel [#endstone.event.PlayerDropItemEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.PlayerDropItemEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.PlayerDropItemEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.PlayerDropItemEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.PlayerDropItemEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 
 #### item [#endstone.event.PlayerDropItemEvent.item]
 
@@ -2002,49 +1014,20 @@ item: ItemStack
 
 Gets the ItemStack dropped by the player
 
-#### player [#endstone.event.PlayerDropItemEvent.player]
-
-```python
-player: Player
-```
-
-Returns the player involved in this event.
+</div>
 
 ### PlayerEmoteEvent [#endstone.event.PlayerEmoteEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a player uses and emote
 
-**Methods:**
-
-- [**cancel**](#endstone.event.PlayerEmoteEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**cancelled**](#endstone.event.PlayerEmoteEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
 - [**emote_id**](#endstone.event.PlayerEmoteEvent.emote_id) (<code>[str](#str)</code>) – Gets the emote piece ID
-- [**event_name**](#endstone.event.PlayerEmoteEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.PlayerEmoteEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.PlayerEmoteEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 - [**is_muted**](#endstone.event.PlayerEmoteEvent.is_muted) (<code>[bool](#bool)</code>) – Gets or sets the muted state for the emote.
-- [**player**](#endstone.event.PlayerEmoteEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
-
-#### cancel [#endstone.event.PlayerEmoteEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.PlayerEmoteEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
 
 #### emote_id [#endstone.event.PlayerEmoteEvent.emote_id]
 
@@ -2054,30 +1037,6 @@ emote_id: str
 
 Gets the emote piece ID
 
-#### event_name [#endstone.event.PlayerEmoteEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.PlayerEmoteEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.PlayerEmoteEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 #### is_muted [#endstone.event.PlayerEmoteEvent.is_muted]
 
 ```python
@@ -2086,15 +1045,11 @@ is_muted: bool
 
 Gets or sets the muted state for the emote.
 
-#### player [#endstone.event.PlayerEmoteEvent.player]
-
-```python
-player: Player
-```
-
-Returns the player involved in this event.
+</div>
 
 ### PlayerEvent [#endstone.event.PlayerEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[Event](#endstone._internal.endstone_python.Event)</code>
 
@@ -2102,25 +1057,7 @@ Represents a player related event
 
 **Attributes:**
 
-- [**event_name**](#endstone.event.PlayerEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.PlayerEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
 - [**player**](#endstone.event.PlayerEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
-
-#### event_name [#endstone.event.PlayerEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.PlayerEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
 
 #### player [#endstone.event.PlayerEvent.player]
 
@@ -2130,64 +1067,19 @@ player: Player
 
 Returns the player involved in this event.
 
+</div>
+
 ### PlayerGameModeChangeEvent [#endstone.event.PlayerGameModeChangeEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when the GameMode of the player is changed.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.PlayerGameModeChangeEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**cancelled**](#endstone.event.PlayerGameModeChangeEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.PlayerGameModeChangeEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.PlayerGameModeChangeEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.PlayerGameModeChangeEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 - [**new_game_mode**](#endstone.event.PlayerGameModeChangeEvent.new_game_mode) (<code>[GameMode](#endstone._internal.endstone_python.GameMode)</code>) – Gets the GameMode the player is switched to.
-- [**player**](#endstone.event.PlayerGameModeChangeEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
-
-#### cancel [#endstone.event.PlayerGameModeChangeEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.PlayerGameModeChangeEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.PlayerGameModeChangeEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.PlayerGameModeChangeEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.PlayerGameModeChangeEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 
 #### new_game_mode [#endstone.event.PlayerGameModeChangeEvent.new_game_mode]
 
@@ -2197,32 +1089,19 @@ new_game_mode: GameMode
 
 Gets the GameMode the player is switched to.
 
-#### player [#endstone.event.PlayerGameModeChangeEvent.player]
-
-```python
-player: Player
-```
-
-Returns the player involved in this event.
+</div>
 
 ### PlayerInteractActorEvent [#endstone.event.PlayerInteractActorEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Represents an event that is called when a player right-clicks an actor.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.PlayerInteractActorEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
 - [**actor**](#endstone.event.PlayerInteractActorEvent.actor) (<code>[Actor](#endstone._internal.endstone_python.Actor)</code>) – Gets the actor that was right-clicked by the player.
-- [**cancelled**](#endstone.event.PlayerInteractActorEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.PlayerInteractActorEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.PlayerInteractActorEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.PlayerInteractActorEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-- [**player**](#endstone.event.PlayerInteractActorEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
 
 #### actor [#endstone.event.PlayerInteractActorEvent.actor]
 
@@ -2232,55 +1111,11 @@ actor: Actor
 
 Gets the actor that was right-clicked by the player.
 
-#### cancel [#endstone.event.PlayerInteractActorEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.PlayerInteractActorEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.PlayerInteractActorEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.PlayerInteractActorEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.PlayerInteractActorEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### player [#endstone.event.PlayerInteractActorEvent.player]
-
-```python
-player: Player
-```
-
-Returns the player involved in this event.
+</div>
 
 ### PlayerInteractEvent [#endstone.event.PlayerInteractEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
@@ -2290,30 +1125,23 @@ Represents an event that is called when a player right-clicks a block.
 
 - [**Action**](#endstone.event.PlayerInteractEvent.Action) –
 
-**Methods:**
-
-- [**cancel**](#endstone.event.PlayerInteractEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
 - [**action**](#endstone.event.PlayerInteractEvent.action) (<code>[Action](#endstone._internal.endstone_python.PlayerInteractEvent.Action)</code>) – Returns the action type of interaction
 - [**block**](#endstone.event.PlayerInteractEvent.block) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Returns the clicked block
 - [**block_face**](#endstone.event.PlayerInteractEvent.block_face) (<code>[BlockFace](#endstone._internal.endstone_python.BlockFace)</code>) – Returns the face of the block that was clicked
-- [**cancelled**](#endstone.event.PlayerInteractEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
 - [**clicked_position**](#endstone.event.PlayerInteractEvent.clicked_position) (<code>[Vector](#endstone._internal.endstone_python.Vector) | None</code>) – Gets the exact position on the block the player interacted with.
-- [**event_name**](#endstone.event.PlayerInteractEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
 - [**has_block**](#endstone.event.PlayerInteractEvent.has_block) (<code>[bool](#bool)</code>) – Check if this event involved a block
 - [**has_item**](#endstone.event.PlayerInteractEvent.has_item) (<code>[bool](#bool)</code>) – Check if this event involved an item
-- [**is_asynchronous**](#endstone.event.PlayerInteractEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.PlayerInteractEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 - [**item**](#endstone.event.PlayerInteractEvent.item) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Returns the item in hand represented by this event
-- [**player**](#endstone.event.PlayerInteractEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
 
 #### Action [#endstone.event.PlayerInteractEvent.Action]
 
 ```python
 Action(value:int) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 **Attributes:**
 
@@ -2360,6 +1188,8 @@ name: str
 value: int
 ```
 
+</div>
+
 #### action [#endstone.event.PlayerInteractEvent.action]
 
 ```python
@@ -2384,22 +1214,6 @@ block_face: BlockFace
 
 Returns the face of the block that was clicked
 
-#### cancel [#endstone.event.PlayerInteractEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.PlayerInteractEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
 #### clicked_position [#endstone.event.PlayerInteractEvent.clicked_position]
 
 ```python
@@ -2407,14 +1221,6 @@ clicked_position: Vector | None
 ```
 
 Gets the exact position on the block the player interacted with.
-
-#### event_name [#endstone.event.PlayerInteractEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
 
 #### has_block [#endstone.event.PlayerInteractEvent.has_block]
 
@@ -2432,22 +1238,6 @@ has_item: bool
 
 Check if this event involved an item
 
-#### is_asynchronous [#endstone.event.PlayerInteractEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.PlayerInteractEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 #### item [#endstone.event.PlayerInteractEvent.item]
 
 ```python
@@ -2456,57 +1246,20 @@ item: ItemStack
 
 Returns the item in hand represented by this event
 
-#### player [#endstone.event.PlayerInteractEvent.player]
-
-```python
-player: Player
-```
-
-Returns the player involved in this event.
+</div>
 
 ### PlayerItemConsumeEvent [#endstone.event.PlayerItemConsumeEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a player is finishing consuming an item (food, potion, milk bucket).
 
-**Methods:**
-
-- [**cancel**](#endstone.event.PlayerItemConsumeEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**cancelled**](#endstone.event.PlayerItemConsumeEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.PlayerItemConsumeEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
 - [**hand**](#endstone.event.PlayerItemConsumeEvent.hand) (<code>[EquipmentSlot](#endstone._internal.endstone_python.EquipmentSlot)</code>) – Get the hand used to consume the item.
-- [**is_asynchronous**](#endstone.event.PlayerItemConsumeEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.PlayerItemConsumeEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 - [**item**](#endstone.event.PlayerItemConsumeEvent.item) (<code>[ItemStack](#endstone._internal.endstone_python.ItemStack)</code>) – Gets or sets the item that is being consumed.
-- [**player**](#endstone.event.PlayerItemConsumeEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
-
-#### cancel [#endstone.event.PlayerItemConsumeEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.PlayerItemConsumeEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.PlayerItemConsumeEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
 
 #### hand [#endstone.event.PlayerItemConsumeEvent.hand]
 
@@ -2516,22 +1269,6 @@ hand: EquipmentSlot
 
 Get the hand used to consume the item.
 
-#### is_asynchronous [#endstone.event.PlayerItemConsumeEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.PlayerItemConsumeEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 #### item [#endstone.event.PlayerItemConsumeEvent.item]
 
 ```python
@@ -2540,73 +1277,20 @@ item: ItemStack
 
 Gets or sets the item that is being consumed.
 
-#### player [#endstone.event.PlayerItemConsumeEvent.player]
-
-```python
-player: Player
-```
-
-Returns the player involved in this event.
+</div>
 
 ### PlayerItemHeldEvent [#endstone.event.PlayerItemHeldEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a player changes their currently held item.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.PlayerItemHeldEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**cancelled**](#endstone.event.PlayerItemHeldEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.PlayerItemHeldEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.PlayerItemHeldEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.PlayerItemHeldEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 - [**new_slot**](#endstone.event.PlayerItemHeldEvent.new_slot) (<code>[int](#int)</code>) – Gets the new held slot index
-- [**player**](#endstone.event.PlayerItemHeldEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
 - [**previous_slot**](#endstone.event.PlayerItemHeldEvent.previous_slot) (<code>[int](#int)</code>) – Gets the previous held slot index.
-
-#### cancel [#endstone.event.PlayerItemHeldEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.PlayerItemHeldEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.PlayerItemHeldEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.PlayerItemHeldEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.PlayerItemHeldEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 
 #### new_slot [#endstone.event.PlayerItemHeldEvent.new_slot]
 
@@ -2616,14 +1300,6 @@ new_slot: int
 
 Gets the new held slot index
 
-#### player [#endstone.event.PlayerItemHeldEvent.player]
-
-```python
-player: Player
-```
-
-Returns the player involved in this event.
-
 #### previous_slot [#endstone.event.PlayerItemHeldEvent.previous_slot]
 
 ```python
@@ -2632,7 +1308,11 @@ previous_slot: int
 
 Gets the previous held slot index.
 
+</div>
+
 ### PlayerJoinEvent [#endstone.event.PlayerJoinEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>
 
@@ -2640,26 +1320,7 @@ Called when a player joins a server
 
 **Attributes:**
 
-- [**event_name**](#endstone.event.PlayerJoinEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.PlayerJoinEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
 - [**join_message**](#endstone.event.PlayerJoinEvent.join_message) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable) | None</code>) – Gets or sets the join message to send to all online players.
-- [**player**](#endstone.event.PlayerJoinEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
-
-#### event_name [#endstone.event.PlayerJoinEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.PlayerJoinEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
 
 #### join_message [#endstone.event.PlayerJoinEvent.join_message]
 
@@ -2669,100 +1330,29 @@ join_message: str | Translatable | None
 
 Gets or sets the join message to send to all online players.
 
-#### player [#endstone.event.PlayerJoinEvent.player]
-
-```python
-player: Player
-```
-
-Returns the player involved in this event.
+</div>
 
 ### PlayerJumpEvent [#endstone.event.PlayerJumpEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[PlayerMoveEvent](#endstone._internal.endstone_python.PlayerMoveEvent)</code>
 
 Called when a player jumps.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.PlayerJumpEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-**Attributes:**
-
-- [**cancelled**](#endstone.event.PlayerJumpEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.PlayerJumpEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**from_location**](#endstone.event.PlayerJumpEvent.from_location) (<code>[Location](#endstone._internal.endstone_python.Location)</code>) – Gets or sets the location that this player moved from.
-- [**is_asynchronous**](#endstone.event.PlayerJumpEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.PlayerJumpEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-- [**player**](#endstone.event.PlayerJumpEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
-- [**to_location**](#endstone.event.PlayerJumpEvent.to_location) (<code>[Location](#endstone._internal.endstone_python.Location)</code>) – Gets or sets the location that this player moved to.
+</div>
 
 ### PlayerKickEvent [#endstone.event.PlayerKickEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a player gets kicked from the server
 
-**Methods:**
-
-- [**cancel**](#endstone.event.PlayerKickEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**cancelled**](#endstone.event.PlayerKickEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.PlayerKickEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.PlayerKickEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.PlayerKickEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-- [**player**](#endstone.event.PlayerKickEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
 - [**reason**](#endstone.event.PlayerKickEvent.reason) (<code>[str](#str)</code>) – Gets or sets the reason why the player is getting kicked
-
-#### cancel [#endstone.event.PlayerKickEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.PlayerKickEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.PlayerKickEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.PlayerKickEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.PlayerKickEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### player [#endstone.event.PlayerKickEvent.player]
-
-```python
-player: Player
-```
-
-Returns the player involved in this event.
 
 #### reason [#endstone.event.PlayerKickEvent.reason]
 
@@ -2772,64 +1362,19 @@ reason: str
 
 Gets or sets the reason why the player is getting kicked
 
+</div>
+
 ### PlayerLoginEvent [#endstone.event.PlayerLoginEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a player attempts to login in.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.PlayerLoginEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**cancelled**](#endstone.event.PlayerLoginEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.PlayerLoginEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.PlayerLoginEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.PlayerLoginEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 - [**kick_message**](#endstone.event.PlayerLoginEvent.kick_message) (<code>[str](#str)</code>) – Gets or sets kick message to display if event is cancelled
-- [**player**](#endstone.event.PlayerLoginEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
-
-#### cancel [#endstone.event.PlayerLoginEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.PlayerLoginEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.PlayerLoginEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.PlayerLoginEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.PlayerLoginEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 
 #### kick_message [#endstone.event.PlayerLoginEvent.kick_message]
 
@@ -2839,57 +1384,20 @@ kick_message: str
 
 Gets or sets kick message to display if event is cancelled
 
-#### player [#endstone.event.PlayerLoginEvent.player]
-
-```python
-player: Player
-```
-
-Returns the player involved in this event.
+</div>
 
 ### PlayerMoveEvent [#endstone.event.PlayerMoveEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a player moves.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.PlayerMoveEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**cancelled**](#endstone.event.PlayerMoveEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.PlayerMoveEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
 - [**from_location**](#endstone.event.PlayerMoveEvent.from_location) (<code>[Location](#endstone._internal.endstone_python.Location)</code>) – Gets or sets the location that this player moved from.
-- [**is_asynchronous**](#endstone.event.PlayerMoveEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.PlayerMoveEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-- [**player**](#endstone.event.PlayerMoveEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
 - [**to_location**](#endstone.event.PlayerMoveEvent.to_location) (<code>[Location](#endstone._internal.endstone_python.Location)</code>) – Gets or sets the location that this player moved to.
-
-#### cancel [#endstone.event.PlayerMoveEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.PlayerMoveEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.PlayerMoveEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
 
 #### from_location [#endstone.event.PlayerMoveEvent.from_location]
 
@@ -2899,30 +1407,6 @@ from_location: Location
 
 Gets or sets the location that this player moved from.
 
-#### is_asynchronous [#endstone.event.PlayerMoveEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.PlayerMoveEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### player [#endstone.event.PlayerMoveEvent.player]
-
-```python
-player: Player
-```
-
-Returns the player involved in this event.
-
 #### to_location [#endstone.event.PlayerMoveEvent.to_location]
 
 ```python
@@ -2931,64 +1415,19 @@ to_location: Location
 
 Gets or sets the location that this player moved to.
 
+</div>
+
 ### PlayerPickupItemEvent [#endstone.event.PlayerPickupItemEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a player picks an item up from the ground.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.PlayerPickupItemEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**cancelled**](#endstone.event.PlayerPickupItemEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.PlayerPickupItemEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.PlayerPickupItemEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.PlayerPickupItemEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 - [**item**](#endstone.event.PlayerPickupItemEvent.item) (<code>[Item](#endstone._internal.endstone_python.Item)</code>) – Gets the Item picked up by the entity.
-- [**player**](#endstone.event.PlayerPickupItemEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
-
-#### cancel [#endstone.event.PlayerPickupItemEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.PlayerPickupItemEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.PlayerPickupItemEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.PlayerPickupItemEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.PlayerPickupItemEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 
 #### item [#endstone.event.PlayerPickupItemEvent.item]
 
@@ -2998,15 +1437,11 @@ item: Item
 
 Gets the Item picked up by the entity.
 
-#### player [#endstone.event.PlayerPickupItemEvent.player]
-
-```python
-player: Player
-```
-
-Returns the player involved in this event.
+</div>
 
 ### PlayerQuitEvent [#endstone.event.PlayerQuitEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>
 
@@ -3014,34 +1449,7 @@ Called when a player leaves a server.
 
 **Attributes:**
 
-- [**event_name**](#endstone.event.PlayerQuitEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.PlayerQuitEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**player**](#endstone.event.PlayerQuitEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
 - [**quit_message**](#endstone.event.PlayerQuitEvent.quit_message) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable) | None</code>) – Gets or sets the quit message to send to all online players.
-
-#### event_name [#endstone.event.PlayerQuitEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.PlayerQuitEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### player [#endstone.event.PlayerQuitEvent.player]
-
-```python
-player: Player
-```
-
-Returns the player involved in this event.
 
 #### quit_message [#endstone.event.PlayerQuitEvent.quit_message]
 
@@ -3051,77 +1459,30 @@ quit_message: str | Translatable | None
 
 Gets or sets the quit message to send to all online players.
 
+</div>
+
 ### PlayerRespawnEvent [#endstone.event.PlayerRespawnEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>
 
 Called when a player respawns.
 
-**Attributes:**
-
-- [**event_name**](#endstone.event.PlayerRespawnEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.PlayerRespawnEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**player**](#endstone.event.PlayerRespawnEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
+</div>
 
 ### PlayerSkinChangeEvent [#endstone.event.PlayerSkinChangeEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[PlayerEvent](#endstone._internal.endstone_python.PlayerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a player changes their skin.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.PlayerSkinChangeEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**cancelled**](#endstone.event.PlayerSkinChangeEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.PlayerSkinChangeEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.PlayerSkinChangeEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.PlayerSkinChangeEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 - [**new_skin**](#endstone.event.PlayerSkinChangeEvent.new_skin) (<code>[Skin](#endstone._internal.endstone_python.Skin)</code>) – Gets the player's new skin.
-- [**player**](#endstone.event.PlayerSkinChangeEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
 - [**skin_change_message**](#endstone.event.PlayerSkinChangeEvent.skin_change_message) (<code>[str](#str) | [Translatable](#endstone._internal.endstone_python.Translatable) | None</code>) – Gets or sets the message to send to all online players for this skin change.
-
-#### cancel [#endstone.event.PlayerSkinChangeEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.PlayerSkinChangeEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.PlayerSkinChangeEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.PlayerSkinChangeEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.PlayerSkinChangeEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 
 #### new_skin [#endstone.event.PlayerSkinChangeEvent.new_skin]
 
@@ -3131,14 +1492,6 @@ new_skin: Skin
 
 Gets the player's new skin.
 
-#### player [#endstone.event.PlayerSkinChangeEvent.player]
-
-```python
-player: Player
-```
-
-Returns the player involved in this event.
-
 #### skin_change_message [#endstone.event.PlayerSkinChangeEvent.skin_change_message]
 
 ```python
@@ -3147,27 +1500,21 @@ skin_change_message: str | Translatable | None
 
 Gets or sets the message to send to all online players for this skin change.
 
+</div>
+
 ### PlayerTeleportEvent [#endstone.event.PlayerTeleportEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[PlayerMoveEvent](#endstone._internal.endstone_python.PlayerMoveEvent)</code>
 
 Called when a player is teleported from one location to another.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.PlayerTeleportEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-**Attributes:**
-
-- [**cancelled**](#endstone.event.PlayerTeleportEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.PlayerTeleportEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**from_location**](#endstone.event.PlayerTeleportEvent.from_location) (<code>[Location](#endstone._internal.endstone_python.Location)</code>) – Gets or sets the location that this player moved from.
-- [**is_asynchronous**](#endstone.event.PlayerTeleportEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.PlayerTeleportEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-- [**player**](#endstone.event.PlayerTeleportEvent.player) (<code>[Player](#endstone._internal.endstone_python.Player)</code>) – Returns the player involved in this event.
-- [**to_location**](#endstone.event.PlayerTeleportEvent.to_location) (<code>[Location](#endstone._internal.endstone_python.Location)</code>) – Gets or sets the location that this player moved to.
+</div>
 
 ### PluginDisableEvent [#endstone.event.PluginDisableEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>
 
@@ -3175,25 +1522,7 @@ Called when a plugin is disabled.
 
 **Attributes:**
 
-- [**event_name**](#endstone.event.PluginDisableEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.PluginDisableEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
 - [**plugin**](#endstone.event.PluginDisableEvent.plugin) (<code>[Plugin](#endstone._internal.endstone_python.Plugin)</code>) –
-
-#### event_name [#endstone.event.PluginDisableEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.PluginDisableEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
 
 #### plugin [#endstone.event.PluginDisableEvent.plugin]
 
@@ -3201,7 +1530,11 @@ Whether the event fires asynchronously.
 plugin: Plugin
 ```
 
+</div>
+
 ### PluginEnableEvent [#endstone.event.PluginEnableEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>
 
@@ -3209,25 +1542,7 @@ Called when a plugin is enabled.
 
 **Attributes:**
 
-- [**event_name**](#endstone.event.PluginEnableEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.PluginEnableEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
 - [**plugin**](#endstone.event.PluginEnableEvent.plugin) (<code>[Plugin](#endstone._internal.endstone_python.Plugin)</code>) –
-
-#### event_name [#endstone.event.PluginEnableEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.PluginEnableEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
 
 #### plugin [#endstone.event.PluginEnableEvent.plugin]
 
@@ -3235,65 +1550,21 @@ Whether the event fires asynchronously.
 plugin: Plugin
 ```
 
+</div>
+
 ### ScriptMessageEvent [#endstone.event.ScriptMessageEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a message is sent by `/scriptevent` command
 
-**Methods:**
-
-- [**cancel**](#endstone.event.ScriptMessageEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**cancelled**](#endstone.event.ScriptMessageEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.ScriptMessageEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.ScriptMessageEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.ScriptMessageEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 - [**message**](#endstone.event.ScriptMessageEvent.message) (<code>[str](#str)</code>) – Get the message to send.
 - [**message_id**](#endstone.event.ScriptMessageEvent.message_id) (<code>[str](#str)</code>) – Get the message id to send.
 - [**sender**](#endstone.event.ScriptMessageEvent.sender) (<code>[CommandSender](#endstone._internal.endstone_python.CommandSender)</code>) – Gets the command sender who initiated the command.
-
-#### cancel [#endstone.event.ScriptMessageEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.ScriptMessageEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.ScriptMessageEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.ScriptMessageEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.ScriptMessageEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 
 #### message [#endstone.event.ScriptMessageEvent.message]
 
@@ -3319,40 +1590,20 @@ sender: CommandSender
 
 Gets the command sender who initiated the command.
 
+</div>
+
 ### ServerCommandEvent [#endstone.event.ServerCommandEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when the console runs a command, early in the process.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.ServerCommandEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**cancelled**](#endstone.event.ServerCommandEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
 - [**command**](#endstone.event.ServerCommandEvent.command) (<code>[str](#str)</code>) – Gets or sets the command that the server will execute
-- [**event_name**](#endstone.event.ServerCommandEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.ServerCommandEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.ServerCommandEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 - [**sender**](#endstone.event.ServerCommandEvent.sender) (<code>[CommandSender](#endstone._internal.endstone_python.CommandSender)</code>) – Get the command sender.
-
-#### cancel [#endstone.event.ServerCommandEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.ServerCommandEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
 
 #### command [#endstone.event.ServerCommandEvent.command]
 
@@ -3362,30 +1613,6 @@ command: str
 
 Gets or sets the command that the server will execute
 
-#### event_name [#endstone.event.ServerCommandEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.ServerCommandEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.ServerCommandEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 #### sender [#endstone.event.ServerCommandEvent.sender]
 
 ```python
@@ -3394,34 +1621,29 @@ sender: CommandSender
 
 Get the command sender.
 
+</div>
+
 ### ServerEvent [#endstone.event.ServerEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[Event](#endstone._internal.endstone_python.Event)</code>
 
 Represents a server-related event
 
-**Attributes:**
-
-- [**event_name**](#endstone.event.ServerEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.ServerEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
+</div>
 
 ### ServerListPingEvent [#endstone.event.ServerListPingEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[ServerEvent](#endstone._internal.endstone_python.ServerEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when a server ping is coming in.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.ServerListPingEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**cancelled**](#endstone.event.ServerListPingEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.ServerListPingEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
 - [**game_mode**](#endstone.event.ServerListPingEvent.game_mode) (<code>[GameMode](#endstone._internal.endstone_python.GameMode)</code>) – Gets or sets the current game mode.
-- [**is_asynchronous**](#endstone.event.ServerListPingEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.ServerListPingEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 - [**level_name**](#endstone.event.ServerListPingEvent.level_name) (<code>[str](#str)</code>) – Gets or sets the level name.
 - [**local_port**](#endstone.event.ServerListPingEvent.local_port) (<code>[int](#int)</code>) – Get or set the local port of the server.
 - [**local_port_v6**](#endstone.event.ServerListPingEvent.local_port_v6) (<code>[int](#int)</code>) – Get or set the local port of the server for IPv6 support
@@ -3434,30 +1656,6 @@ Called when a server ping is coming in.
 - [**remote_port**](#endstone.event.ServerListPingEvent.remote_port) (<code>[int](#int)</code>) – Get the port the ping is coming from.
 - [**server_guid**](#endstone.event.ServerListPingEvent.server_guid) (<code>[str](#str)</code>) – Get or set the unique identifier of the server.
 
-#### cancel [#endstone.event.ServerListPingEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.ServerListPingEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.ServerListPingEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
 #### game_mode [#endstone.event.ServerListPingEvent.game_mode]
 
 ```python
@@ -3465,22 +1663,6 @@ game_mode: GameMode
 ```
 
 Gets or sets the current game mode.
-
-#### is_asynchronous [#endstone.event.ServerListPingEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.ServerListPingEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
 
 #### level_name [#endstone.event.ServerListPingEvent.level_name]
 
@@ -3570,7 +1752,11 @@ server_guid: str
 
 Get or set the unique identifier of the server.
 
+</div>
+
 ### ServerLoadEvent [#endstone.event.ServerLoadEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[Event](#endstone._internal.endstone_python.Event)</code>
 
@@ -3583,8 +1769,6 @@ Called when either the server startup or reload has completed.
 **Attributes:**
 
 - [**STARTUP**](#endstone.event.ServerLoadEvent.STARTUP) (<code>[LoadType](#endstone._internal.endstone_python.ServerLoadEvent.LoadType)</code>) –
-- [**event_name**](#endstone.event.ServerLoadEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.ServerLoadEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
 - [**type**](#endstone.event.ServerLoadEvent.type) (<code>[LoadType](#endstone._internal.endstone_python.ServerLoadEvent.LoadType)</code>) –
 
 #### LoadType [#endstone.event.ServerLoadEvent.LoadType]
@@ -3592,6 +1776,8 @@ Called when either the server startup or reload has completed.
 ```python
 LoadType(value:int) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 **Attributes:**
 
@@ -3617,27 +1803,13 @@ name: str
 value: int
 ```
 
+</div>
+
 #### STARTUP [#endstone.event.ServerLoadEvent.STARTUP]
 
 ```python
 STARTUP: ServerLoadEvent.LoadType
 ```
-
-#### event_name [#endstone.event.ServerLoadEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.ServerLoadEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
 
 #### type [#endstone.event.ServerLoadEvent.type]
 
@@ -3645,72 +1817,19 @@ Whether the event fires asynchronously.
 type: ServerLoadEvent.LoadType
 ```
 
+</div>
+
 ### ThunderChangeEvent [#endstone.event.ThunderChangeEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[WeatherEvent](#endstone._internal.endstone_python.WeatherEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when the thunder state in a world is changing.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.ThunderChangeEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**cancelled**](#endstone.event.ThunderChangeEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.ThunderChangeEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.ThunderChangeEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.ThunderChangeEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-- [**level**](#endstone.event.ThunderChangeEvent.level) (<code>[Level](#endstone._internal.endstone_python.Level)</code>) – Returns the Level where this event is occurring
 - [**to_thunder_state**](#endstone.event.ThunderChangeEvent.to_thunder_state) (<code>[bool](#bool)</code>) – Gets the state of thunder that the world is being set to
-
-#### cancel [#endstone.event.ThunderChangeEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.ThunderChangeEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.ThunderChangeEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.ThunderChangeEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.ThunderChangeEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### level [#endstone.event.ThunderChangeEvent.level]
-
-```python
-level: Level
-```
-
-Returns the Level where this event is occurring
 
 #### to_thunder_state [#endstone.event.ThunderChangeEvent.to_thunder_state]
 
@@ -3720,72 +1839,19 @@ to_thunder_state: bool
 
 Gets the state of thunder that the world is being set to
 
+</div>
+
 ### WeatherChangeEvent [#endstone.event.WeatherChangeEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[WeatherEvent](#endstone._internal.endstone_python.WeatherEvent)</code>, <code>[Cancellable](#endstone._internal.endstone_python.Cancellable)</code>
 
 Called when the weather (rain) state in a world is changing.
 
-**Methods:**
-
-- [**cancel**](#endstone.event.WeatherChangeEvent.cancel) – Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
 **Attributes:**
 
-- [**cancelled**](#endstone.event.WeatherChangeEvent.cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-- [**event_name**](#endstone.event.WeatherChangeEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.WeatherChangeEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
-- [**is_cancelled**](#endstone.event.WeatherChangeEvent.is_cancelled) (<code>[bool](#bool)</code>) – Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-- [**level**](#endstone.event.WeatherChangeEvent.level) (<code>[Level](#endstone._internal.endstone_python.Level)</code>) – Returns the Level where this event is occurring
 - [**to_weather_state**](#endstone.event.WeatherChangeEvent.to_weather_state) (<code>[bool](#bool)</code>) – Gets the state of weather that the world is being set to
-
-#### cancel [#endstone.event.WeatherChangeEvent.cancel]
-
-```python
-cancel() -> None
-```
-
-Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### cancelled [#endstone.event.WeatherChangeEvent.cancelled]
-
-```python
-cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins. [Warning] Deprecated: Use is_cancelled instead.
-
-#### event_name [#endstone.event.WeatherChangeEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.WeatherChangeEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
-
-#### is_cancelled [#endstone.event.WeatherChangeEvent.is_cancelled]
-
-```python
-is_cancelled: bool
-```
-
-Gets or sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
-
-#### level [#endstone.event.WeatherChangeEvent.level]
-
-```python
-level: Level
-```
-
-Returns the Level where this event is occurring
 
 #### to_weather_state [#endstone.event.WeatherChangeEvent.to_weather_state]
 
@@ -3795,7 +1861,11 @@ to_weather_state: bool
 
 Gets the state of weather that the world is being set to
 
+</div>
+
 ### WeatherEvent [#endstone.event.WeatherEvent]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[Event](#endstone._internal.endstone_python.Event)</code>
 
@@ -3803,25 +1873,7 @@ Represents a weather-related event
 
 **Attributes:**
 
-- [**event_name**](#endstone.event.WeatherEvent.event_name) (<code>[str](#str)</code>) – Gets a user-friendly identifier for this event.
-- [**is_asynchronous**](#endstone.event.WeatherEvent.is_asynchronous) (<code>[bool](#bool)</code>) – Whether the event fires asynchronously.
 - [**level**](#endstone.event.WeatherEvent.level) (<code>[Level](#endstone._internal.endstone_python.Level)</code>) – Returns the Level where this event is occurring
-
-#### event_name [#endstone.event.WeatherEvent.event_name]
-
-```python
-event_name: str
-```
-
-Gets a user-friendly identifier for this event.
-
-#### is_asynchronous [#endstone.event.WeatherEvent.is_asynchronous]
-
-```python
-is_asynchronous: bool
-```
-
-Whether the event fires asynchronously.
 
 #### level [#endstone.event.WeatherEvent.level]
 
@@ -3830,6 +1882,8 @@ level: Level
 ```
 
 Returns the Level where this event is occurring
+
+</div>
 
 ### event_handler [#endstone.event.event_handler]
 

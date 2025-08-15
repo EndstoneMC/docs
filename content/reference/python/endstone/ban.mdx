@@ -17,6 +17,8 @@ title: "endstone.ban"
 IpBanEntry(address:str) -> None
 ```
 
+<div className="pl-[2em] mt-[1.25em]">
+
 Bases: <code>[BanEntry](#endstone._internal.endstone_python.BanEntry)</code>
 
 Represents a ban entry for an IP address.
@@ -24,10 +26,6 @@ Represents a ban entry for an IP address.
 **Attributes:**
 
 - [**address**](#endstone.ban.IpBanEntry.address) (<code>[str](#str)</code>) – Gets the banned IP address.
-- [**created**](#endstone.ban.IpBanEntry.created) (<code>[datetime](#datetime.datetime)</code>) – Gets or sets the date this ban entry was created.
-- [**expiration**](#endstone.ban.IpBanEntry.expiration) (<code>[datetime](#datetime.datetime) | None</code>) – Gets or sets the date this ban expires on.
-- [**reason**](#endstone.ban.IpBanEntry.reason) (<code>[str](#str)</code>) – Gets or sets the reason for this ban.
-- [**source**](#endstone.ban.IpBanEntry.source) (<code>[str](#str)</code>) – Gets or sets the source of this ban.
 
 #### address [#endstone.ban.IpBanEntry.address]
 
@@ -37,39 +35,11 @@ address: str
 
 Gets the banned IP address.
 
-#### created [#endstone.ban.IpBanEntry.created]
-
-```python
-created: datetime.datetime
-```
-
-Gets or sets the date this ban entry was created.
-
-#### expiration [#endstone.ban.IpBanEntry.expiration]
-
-```python
-expiration: datetime.datetime | None
-```
-
-Gets or sets the date this ban expires on.
-
-#### reason [#endstone.ban.IpBanEntry.reason]
-
-```python
-reason: str
-```
-
-Gets or sets the reason for this ban.
-
-#### source [#endstone.ban.IpBanEntry.source]
-
-```python
-source: str
-```
-
-Gets or sets the source of this ban.
+</div>
 
 ### IpBanList [#endstone.ban.IpBanList]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a ban list containing banned IP addresses.
 
@@ -129,6 +99,8 @@ remove_ban(address:str) -> None
 
 Removes an IP address from the ban list.
 
+</div>
+
 ### PlayerBanEntry [#endstone.ban.PlayerBanEntry]
 
 ```python
@@ -137,35 +109,17 @@ PlayerBanEntry(
 ) -> None
 ```
 
+<div className="pl-[2em] mt-[1.25em]">
+
 Bases: <code>[BanEntry](#endstone._internal.endstone_python.BanEntry)</code>
 
 Represents a ban entry for a player.
 
 **Attributes:**
 
-- [**created**](#endstone.ban.PlayerBanEntry.created) (<code>[datetime](#datetime.datetime)</code>) – Gets or sets the date this ban entry was created.
-- [**expiration**](#endstone.ban.PlayerBanEntry.expiration) (<code>[datetime](#datetime.datetime) | None</code>) – Gets or sets the date this ban expires on.
 - [**name**](#endstone.ban.PlayerBanEntry.name) (<code>[str](#str)</code>) – Gets the banned player's name.
-- [**reason**](#endstone.ban.PlayerBanEntry.reason) (<code>[str](#str)</code>) – Gets or sets the reason for this ban.
-- [**source**](#endstone.ban.PlayerBanEntry.source) (<code>[str](#str)</code>) – Gets or sets the source of this ban.
 - [**unique_id**](#endstone.ban.PlayerBanEntry.unique_id) (<code>[UUID](#uuid.UUID) | None</code>) – Gets the banned player's unique ID, or None if not available.
 - [**xuid**](#endstone.ban.PlayerBanEntry.xuid) (<code>[str](#str) | None</code>) – Gets the banned player's Xbox user ID (XUID), or None if not available.
-
-#### created [#endstone.ban.PlayerBanEntry.created]
-
-```python
-created: datetime.datetime
-```
-
-Gets or sets the date this ban entry was created.
-
-#### expiration [#endstone.ban.PlayerBanEntry.expiration]
-
-```python
-expiration: datetime.datetime | None
-```
-
-Gets or sets the date this ban expires on.
 
 #### name [#endstone.ban.PlayerBanEntry.name]
 
@@ -174,22 +128,6 @@ name: str
 ```
 
 Gets the banned player's name.
-
-#### reason [#endstone.ban.PlayerBanEntry.reason]
-
-```python
-reason: str
-```
-
-Gets or sets the reason for this ban.
-
-#### source [#endstone.ban.PlayerBanEntry.source]
-
-```python
-source: str
-```
-
-Gets or sets the source of this ban.
 
 #### unique_id [#endstone.ban.PlayerBanEntry.unique_id]
 
@@ -207,7 +145,11 @@ xuid: str | None
 
 Gets the banned player's Xbox user ID (XUID), or None if not available.
 
+</div>
+
 ### PlayerBanList [#endstone.ban.PlayerBanList]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a ban list containing banned players.
 
@@ -270,3 +212,5 @@ remove_ban(name:str, uuid:UUID | None = None, xuid:str | None = None) -> None
 ```
 
 Removes a player from the ban list by name, UUID, or XUID.
+
+</div>

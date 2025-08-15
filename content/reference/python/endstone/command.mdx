@@ -15,24 +15,15 @@ title: "endstone.command"
 
 ### BlockCommandSender [#endstone.command.BlockCommandSender]
 
+<div className="pl-[2em] mt-[1.25em]">
+
 Bases: <code>[CommandSender](#endstone._internal.endstone_python.CommandSender)</code>
 
 Represents a block command sender.
 
-**Methods:**
-
-- [**recalculate_permissions**](#endstone.command.BlockCommandSender.recalculate_permissions) – Recalculates the permissions.
-- [**remove_attachment**](#endstone.command.BlockCommandSender.remove_attachment) – Removes a given PermissionAttachment.
-- [**send_error_message**](#endstone.command.BlockCommandSender.send_error_message) – Sends this sender an error message
-- [**send_message**](#endstone.command.BlockCommandSender.send_message) – Sends this sender a message
-
 **Attributes:**
 
 - [**block**](#endstone.command.BlockCommandSender.block) (<code>[Block](#endstone._internal.endstone_python.Block)</code>) – Returns the block this command sender belongs to
-- [**effective_permissions**](#endstone.command.BlockCommandSender.effective_permissions) (<code>[set](#set)\[[PermissionAttachmentInfo](#endstone._internal.endstone_python.PermissionAttachmentInfo)\]</code>) – Gets effective permissions.
-- [**name**](#endstone.command.BlockCommandSender.name) (<code>[str](#str)</code>) – Gets the name of this command sender
-- [**permission_level**](#endstone.command.BlockCommandSender.permission_level) (<code>[PermissionLevel](#endstone._internal.endstone_python.PermissionLevel)</code>) – Gets the permission level of this object
-- [**server**](#endstone.command.BlockCommandSender.server) (<code>[Server](#endstone._internal.endstone_python.Server)</code>) – Returns the server instance that this command is running on
 
 #### block [#endstone.command.BlockCommandSender.block]
 
@@ -42,69 +33,7 @@ block: Block
 
 Returns the block this command sender belongs to
 
-#### effective_permissions [#endstone.command.BlockCommandSender.effective_permissions]
-
-```python
-effective_permissions: set[PermissionAttachmentInfo]
-```
-
-Gets effective permissions.
-
-#### name [#endstone.command.BlockCommandSender.name]
-
-```python
-name: str
-```
-
-Gets the name of this command sender
-
-#### permission_level [#endstone.command.BlockCommandSender.permission_level]
-
-```python
-permission_level: PermissionLevel
-```
-
-Gets the permission level of this object
-
-#### recalculate_permissions [#endstone.command.BlockCommandSender.recalculate_permissions]
-
-```python
-recalculate_permissions() -> None
-```
-
-Recalculates the permissions.
-
-#### remove_attachment [#endstone.command.BlockCommandSender.remove_attachment]
-
-```python
-remove_attachment(attachment:PermissionAttachment) -> None
-```
-
-Removes a given PermissionAttachment.
-
-#### send_error_message [#endstone.command.BlockCommandSender.send_error_message]
-
-```python
-send_error_message(message:str | Translatable) -> None
-```
-
-Sends this sender an error message
-
-#### send_message [#endstone.command.BlockCommandSender.send_message]
-
-```python
-send_message(message:str | Translatable) -> None
-```
-
-Sends this sender a message
-
-#### server [#endstone.command.BlockCommandSender.server]
-
-```python
-server: Server
-```
-
-Returns the server instance that this command is running on
+</div>
 
 ### Command [#endstone.command.Command]
 
@@ -119,6 +48,8 @@ Command(
     **kwargs: list[str] | None
 ) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a Command, which executes various tasks upon user input
 
@@ -209,11 +140,15 @@ usages: list[str]
 
 List of usages of this command
 
+</div>
+
 ### CommandExecutor [#endstone.command.CommandExecutor]
 
 ```python
 CommandExecutor() -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a class which contains a single method for executing commands
 
@@ -229,7 +164,11 @@ on_command(sender:CommandSender, command:Command, args:list[str]) -> bool
 
 Executes the given command, returning its success.
 
+</div>
+
 ### CommandSender [#endstone.command.CommandSender]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[Permissible](#endstone._internal.endstone_python.Permissible)</code>
 
@@ -237,25 +176,13 @@ Represents a command sender.
 
 **Methods:**
 
-- [**recalculate_permissions**](#endstone.command.CommandSender.recalculate_permissions) – Recalculates the permissions.
-- [**remove_attachment**](#endstone.command.CommandSender.remove_attachment) – Removes a given PermissionAttachment.
 - [**send_error_message**](#endstone.command.CommandSender.send_error_message) – Sends this sender an error message
 - [**send_message**](#endstone.command.CommandSender.send_message) – Sends this sender a message
 
 **Attributes:**
 
-- [**effective_permissions**](#endstone.command.CommandSender.effective_permissions) (<code>[set](#set)\[[PermissionAttachmentInfo](#endstone._internal.endstone_python.PermissionAttachmentInfo)\]</code>) – Gets effective permissions.
 - [**name**](#endstone.command.CommandSender.name) (<code>[str](#str)</code>) – Gets the name of this command sender
-- [**permission_level**](#endstone.command.CommandSender.permission_level) (<code>[PermissionLevel](#endstone._internal.endstone_python.PermissionLevel)</code>) – Gets the permission level of this object
 - [**server**](#endstone.command.CommandSender.server) (<code>[Server](#endstone._internal.endstone_python.Server)</code>) – Returns the server instance that this command is running on
-
-#### effective_permissions [#endstone.command.CommandSender.effective_permissions]
-
-```python
-effective_permissions: set[PermissionAttachmentInfo]
-```
-
-Gets effective permissions.
 
 #### name [#endstone.command.CommandSender.name]
 
@@ -264,30 +191,6 @@ name: str
 ```
 
 Gets the name of this command sender
-
-#### permission_level [#endstone.command.CommandSender.permission_level]
-
-```python
-permission_level: PermissionLevel
-```
-
-Gets the permission level of this object
-
-#### recalculate_permissions [#endstone.command.CommandSender.recalculate_permissions]
-
-```python
-recalculate_permissions() -> None
-```
-
-Recalculates the permissions.
-
-#### remove_attachment [#endstone.command.CommandSender.remove_attachment]
-
-```python
-remove_attachment(attachment:PermissionAttachment) -> None
-```
-
-Removes a given PermissionAttachment.
 
 #### send_error_message [#endstone.command.CommandSender.send_error_message]
 
@@ -313,6 +216,8 @@ server: Server
 
 Returns the server instance that this command is running on
 
+</div>
+
 ### CommandSenderWrapper [#endstone.command.CommandSenderWrapper]
 
 ```python
@@ -323,104 +228,20 @@ CommandSenderWrapper(
 ) -> None
 ```
 
+<div className="pl-[2em] mt-[1.25em]">
+
 Bases: <code>[CommandSender](#endstone._internal.endstone_python.CommandSender)</code>
 
 Represents a wrapper that forwards commands to the wrapped CommandSender and captures its output
 
-**Methods:**
-
-- [**recalculate_permissions**](#endstone.command.CommandSenderWrapper.recalculate_permissions) – Recalculates the permissions.
-- [**remove_attachment**](#endstone.command.CommandSenderWrapper.remove_attachment) – Removes a given PermissionAttachment.
-- [**send_error_message**](#endstone.command.CommandSenderWrapper.send_error_message) – Sends this sender an error message
-- [**send_message**](#endstone.command.CommandSenderWrapper.send_message) – Sends this sender a message
-
-**Attributes:**
-
-- [**effective_permissions**](#endstone.command.CommandSenderWrapper.effective_permissions) (<code>[set](#set)\[[PermissionAttachmentInfo](#endstone._internal.endstone_python.PermissionAttachmentInfo)\]</code>) – Gets effective permissions.
-- [**name**](#endstone.command.CommandSenderWrapper.name) (<code>[str](#str)</code>) – Gets the name of this command sender
-- [**permission_level**](#endstone.command.CommandSenderWrapper.permission_level) (<code>[PermissionLevel](#endstone._internal.endstone_python.PermissionLevel)</code>) – Gets the permission level of this object
-- [**server**](#endstone.command.CommandSenderWrapper.server) (<code>[Server](#endstone._internal.endstone_python.Server)</code>) – Returns the server instance that this command is running on
-
-#### effective_permissions [#endstone.command.CommandSenderWrapper.effective_permissions]
-
-```python
-effective_permissions: set[PermissionAttachmentInfo]
-```
-
-Gets effective permissions.
-
-#### name [#endstone.command.CommandSenderWrapper.name]
-
-```python
-name: str
-```
-
-Gets the name of this command sender
-
-#### permission_level [#endstone.command.CommandSenderWrapper.permission_level]
-
-```python
-permission_level: PermissionLevel
-```
-
-Gets the permission level of this object
-
-#### recalculate_permissions [#endstone.command.CommandSenderWrapper.recalculate_permissions]
-
-```python
-recalculate_permissions() -> None
-```
-
-Recalculates the permissions.
-
-#### remove_attachment [#endstone.command.CommandSenderWrapper.remove_attachment]
-
-```python
-remove_attachment(attachment:PermissionAttachment) -> None
-```
-
-Removes a given PermissionAttachment.
-
-#### send_error_message [#endstone.command.CommandSenderWrapper.send_error_message]
-
-```python
-send_error_message(message:str | Translatable) -> None
-```
-
-Sends this sender an error message
-
-#### send_message [#endstone.command.CommandSenderWrapper.send_message]
-
-```python
-send_message(message:str | Translatable) -> None
-```
-
-Sends this sender a message
-
-#### server [#endstone.command.CommandSenderWrapper.server]
-
-```python
-server: Server
-```
-
-Returns the server instance that this command is running on
+</div>
 
 ### ConsoleCommandSender [#endstone.command.ConsoleCommandSender]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[CommandSender](#endstone._internal.endstone_python.CommandSender)</code>
 
 Represents a console command sender.
 
-**Methods:**
-
-- [**recalculate_permissions**](#endstone.command.ConsoleCommandSender.recalculate_permissions) – Recalculates the permissions.
-- [**remove_attachment**](#endstone.command.ConsoleCommandSender.remove_attachment) – Removes a given PermissionAttachment.
-- [**send_error_message**](#endstone.command.ConsoleCommandSender.send_error_message) – Sends this sender an error message
-- [**send_message**](#endstone.command.ConsoleCommandSender.send_message) – Sends this sender a message
-
-**Attributes:**
-
-- [**effective_permissions**](#endstone.command.ConsoleCommandSender.effective_permissions) (<code>[set](#set)\[[PermissionAttachmentInfo](#endstone._internal.endstone_python.PermissionAttachmentInfo)\]</code>) – Gets effective permissions.
-- [**name**](#endstone.command.ConsoleCommandSender.name) (<code>[str](#str)</code>) – Gets the name of this command sender
-- [**permission_level**](#endstone.command.ConsoleCommandSender.permission_level) (<code>[PermissionLevel](#endstone._internal.endstone_python.PermissionLevel)</code>) – Gets the permission level of this object
-- [**server**](#endstone.command.ConsoleCommandSender.server) (<code>[Server](#endstone._internal.endstone_python.Server)</code>) – Returns the server instance that this command is running on
+</div>

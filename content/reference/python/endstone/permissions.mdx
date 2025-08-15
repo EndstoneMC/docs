@@ -15,6 +15,8 @@ title: "endstone.permissions"
 
 ### Permissible [#endstone.permissions.Permissible]
 
+<div className="pl-[2em] mt-[1.25em]">
+
 Represents an object that may become a server operator and can be assigned permissions.
 
 **Methods:**
@@ -59,6 +61,8 @@ remove_attachment(attachment:PermissionAttachment) -> None
 
 Removes a given PermissionAttachment.
 
+</div>
+
 ### Permission [#endstone.permissions.Permission]
 
 ```python
@@ -71,6 +75,8 @@ Permission(
     **kwargs: dict[str, bool] | None
 ) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a unique permission that may be attached to a Permissible
 
@@ -134,11 +140,15 @@ recalculate_permissibles() -> None
 
 Recalculates all Permissibles that contain this permission.
 
+</div>
+
 ### PermissionAttachment [#endstone.permissions.PermissionAttachment]
 
 ```python
 PermissionAttachment(plugin:Plugin, permissible:Permissible) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Holds information about a permission attachment on a Permissible object
 
@@ -193,6 +203,8 @@ remove() -> bool
 
 Removes this attachment from its registered Permissible.
 
+</div>
+
 ### PermissionAttachmentInfo [#endstone.permissions.PermissionAttachmentInfo]
 
 ```python
@@ -203,6 +215,8 @@ PermissionAttachmentInfo(
     value: bool,
 ) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Holds information on a permission and which PermissionAttachment provides it
 
@@ -245,11 +259,15 @@ value: bool
 
 Gets the value of this permission
 
+</div>
+
 ### PermissionDefault [#endstone.permissions.PermissionDefault]
 
 ```python
 PermissionDefault(value:int) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents the possible default values for permissions
 
@@ -319,11 +337,15 @@ name: str
 value: int
 ```
 
+</div>
+
 ### PermissionLevel [#endstone.permissions.PermissionLevel]
 
 ```python
 PermissionLevel(value:int) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 **Attributes:**
 
@@ -369,3 +391,5 @@ name: str
 ```python
 value: int
 ```
+
+</div>

@@ -22,15 +22,12 @@ title: "endstone.plugin"
 Plugin()
 ```
 
+<div className="pl-[2em] mt-[1.25em]">
+
 Bases: <code>[Plugin](#endstone._internal.endstone_python.Plugin)</code>
 
 **Methods:**
 
-- [**get_command**](#endstone.plugin.Plugin.get_command) – Gets the command with the given name, specific to this plugin.
-- [**on_command**](#endstone.plugin.Plugin.on_command) – Executes the given command, returning its success.
-- [**on_disable**](#endstone.plugin.Plugin.on_disable) – Called when this plugin is disabled
-- [**on_enable**](#endstone.plugin.Plugin.on_enable) – Called when this plugin is enabled
-- [**on_load**](#endstone.plugin.Plugin.on_load) – Called after a plugin is loaded but before it has been enabled.
 - [**register_events**](#endstone.plugin.Plugin.register_events) –
 - [**reload_config**](#endstone.plugin.Plugin.reload_config) –
 - [**save_config**](#endstone.plugin.Plugin.save_config) –
@@ -44,20 +41,15 @@ Bases: <code>[Plugin](#endstone._internal.endstone_python.Plugin)</code>
 - [**commands**](#endstone.plugin.Plugin.commands) –
 - [**config**](#endstone.plugin.Plugin.config) (<code>[dict](#dict)</code>) –
 - [**contributors**](#endstone.plugin.Plugin.contributors) –
-- [**data_folder**](#endstone.plugin.Plugin.data_folder) (<code>[PathLike](#os.PathLike)</code>) – Returns the folder that the plugin data's files are located in.
 - [**default_permission**](#endstone.plugin.Plugin.default_permission) –
 - [**depend**](#endstone.plugin.Plugin.depend) –
 - [**description**](#endstone.plugin.Plugin.description) –
-- [**is_enabled**](#endstone.plugin.Plugin.is_enabled) (<code>[bool](#bool)</code>) – Returns a value indicating whether this plugin is currently enabled
 - [**load**](#endstone.plugin.Plugin.load) –
 - [**load_before**](#endstone.plugin.Plugin.load_before) –
-- [**logger**](#endstone.plugin.Plugin.logger) (<code>[Logger](#endstone._internal.endstone_python.Logger)</code>) – Returns the plugin logger associated with this server's logger.
 - [**name**](#endstone.plugin.Plugin.name) –
 - [**permissions**](#endstone.plugin.Plugin.permissions) –
-- [**plugin_loader**](#endstone.plugin.Plugin.plugin_loader) (<code>[PluginLoader](#endstone._internal.endstone_python.PluginLoader)</code>) – Gets the associated PluginLoader responsible for this plugin
 - [**prefix**](#endstone.plugin.Plugin.prefix) –
 - [**provides**](#endstone.plugin.Plugin.provides) –
-- [**server**](#endstone.plugin.Plugin.server) (<code>[Server](#endstone._internal.endstone_python.Server)</code>) – Returns the Server instance currently running this plugin
 - [**soft_depend**](#endstone.plugin.Plugin.soft_depend) –
 - [**version**](#endstone.plugin.Plugin.version) –
 - [**website**](#endstone.plugin.Plugin.website) –
@@ -92,14 +84,6 @@ config: dict
 contributors = None
 ```
 
-#### data_folder [#endstone.plugin.Plugin.data_folder]
-
-```python
-data_folder: os.PathLike
-```
-
-Returns the folder that the plugin data's files are located in.
-
 #### default_permission [#endstone.plugin.Plugin.default_permission]
 
 ```python
@@ -118,22 +102,6 @@ depend = None
 description = None
 ```
 
-#### get_command [#endstone.plugin.Plugin.get_command]
-
-```python
-get_command(name:str) -> PluginCommand
-```
-
-Gets the command with the given name, specific to this plugin.
-
-#### is_enabled [#endstone.plugin.Plugin.is_enabled]
-
-```python
-is_enabled: bool
-```
-
-Returns a value indicating whether this plugin is currently enabled
-
 #### load [#endstone.plugin.Plugin.load]
 
 ```python
@@ -146,65 +114,17 @@ load = None
 load_before = None
 ```
 
-#### logger [#endstone.plugin.Plugin.logger]
-
-```python
-logger: Logger
-```
-
-Returns the plugin logger associated with this server's logger.
-
 #### name [#endstone.plugin.Plugin.name]
 
 ```python
 name = None
 ```
 
-#### on_command [#endstone.plugin.Plugin.on_command]
-
-```python
-on_command(sender:CommandSender, command:Command, args:list[str]) -> bool
-```
-
-Executes the given command, returning its success.
-
-#### on_disable [#endstone.plugin.Plugin.on_disable]
-
-```python
-on_disable() -> None
-```
-
-Called when this plugin is disabled
-
-#### on_enable [#endstone.plugin.Plugin.on_enable]
-
-```python
-on_enable() -> None
-```
-
-Called when this plugin is enabled
-
-#### on_load [#endstone.plugin.Plugin.on_load]
-
-```python
-on_load() -> None
-```
-
-Called after a plugin is loaded but before it has been enabled.
-
 #### permissions [#endstone.plugin.Plugin.permissions]
 
 ```python
 permissions = None
 ```
-
-#### plugin_loader [#endstone.plugin.Plugin.plugin_loader]
-
-```python
-plugin_loader: PluginLoader
-```
-
-Gets the associated PluginLoader responsible for this plugin
 
 #### prefix [#endstone.plugin.Plugin.prefix]
 
@@ -248,14 +168,6 @@ save_default_config() -> None
 save_resources(path:str, replace:bool = False) -> None
 ```
 
-#### server [#endstone.plugin.Plugin.server]
-
-```python
-server: Server
-```
-
-Returns the Server instance currently running this plugin
-
 #### soft_depend [#endstone.plugin.Plugin.soft_depend]
 
 ```python
@@ -274,52 +186,20 @@ version = None
 website = None
 ```
 
+</div>
+
 ### PluginCommand [#endstone.plugin.PluginCommand]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Bases: <code>[Command](#endstone._internal.endstone_python.Command)</code>
 
 Represents a Command belonging to a Plugin
 
-**Methods:**
-
-- [**execute**](#endstone.plugin.PluginCommand.execute) – Executes the command, returning its success
-- [**test_permission**](#endstone.plugin.PluginCommand.test_permission) – Tests the given CommandSender to see if they can perform this command.
-- [**test_permission_silently**](#endstone.plugin.PluginCommand.test_permission_silently) – Tests the given CommandSender to see if they can perform this command. No error is sent to the sender.
-
 **Attributes:**
 
-- [**aliases**](#endstone.plugin.PluginCommand.aliases) (<code>[list](#list)\[[str](#str)\]</code>) – List of aliases of this command
-- [**description**](#endstone.plugin.PluginCommand.description) (<code>[str](#str)</code>) – Brief description of this command
 - [**executor**](#endstone.plugin.PluginCommand.executor) (<code>[CommandExecutor](#endstone._internal.endstone_python.CommandExecutor)</code>) – The CommandExecutor to run when parsing this command
-- [**is_registered**](#endstone.plugin.PluginCommand.is_registered) (<code>[bool](#bool)</code>) – Returns the current registered state of this command
-- [**name**](#endstone.plugin.PluginCommand.name) (<code>[str](#str)</code>) – Name of this command.
-- [**permissions**](#endstone.plugin.PluginCommand.permissions) (<code>[list](#list)\[[str](#str)\]</code>) – The permissions required by users to be able to perform this command
 - [**plugin**](#endstone.plugin.PluginCommand.plugin) (<code>[Plugin](#endstone._internal.endstone_python.Plugin)</code>) – The owner of this PluginCommand
-- [**usages**](#endstone.plugin.PluginCommand.usages) (<code>[list](#list)\[[str](#str)\]</code>) – List of usages of this command
-
-#### aliases [#endstone.plugin.PluginCommand.aliases]
-
-```python
-aliases: list[str]
-```
-
-List of aliases of this command
-
-#### description [#endstone.plugin.PluginCommand.description]
-
-```python
-description: str
-```
-
-Brief description of this command
-
-#### execute [#endstone.plugin.PluginCommand.execute]
-
-```python
-execute(sender:CommandSender, args:list[str]) -> bool
-```
-
-Executes the command, returning its success
 
 #### executor [#endstone.plugin.PluginCommand.executor]
 
@@ -329,30 +209,6 @@ executor: CommandExecutor
 
 The CommandExecutor to run when parsing this command
 
-#### is_registered [#endstone.plugin.PluginCommand.is_registered]
-
-```python
-is_registered: bool
-```
-
-Returns the current registered state of this command
-
-#### name [#endstone.plugin.PluginCommand.name]
-
-```python
-name: str
-```
-
-Name of this command.
-
-#### permissions [#endstone.plugin.PluginCommand.permissions]
-
-```python
-permissions: list[str]
-```
-
-The permissions required by users to be able to perform this command
-
 #### plugin [#endstone.plugin.PluginCommand.plugin]
 
 ```python
@@ -361,29 +217,7 @@ plugin: Plugin
 
 The owner of this PluginCommand
 
-#### test_permission [#endstone.plugin.PluginCommand.test_permission]
-
-```python
-test_permission(target:CommandSender) -> bool
-```
-
-Tests the given CommandSender to see if they can perform this command.
-
-#### test_permission_silently [#endstone.plugin.PluginCommand.test_permission_silently]
-
-```python
-test_permission_silently(target:CommandSender) -> bool
-```
-
-Tests the given CommandSender to see if they can perform this command. No error is sent to the sender.
-
-#### usages [#endstone.plugin.PluginCommand.usages]
-
-```python
-usages: list[str]
-```
-
-List of usages of this command
+</div>
 
 ### PluginDescription [#endstone.plugin.PluginDescription]
 
@@ -408,6 +242,8 @@ PluginDescription(
     **kwargs: list[Permission] | None
 ) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents the basic information about a plugin that the plugin loader needs to know.
 
@@ -567,11 +403,15 @@ website: str
 
 Gives the plugin's or plugin's author's website.
 
+</div>
+
 ### PluginLoadOrder [#endstone.plugin.PluginLoadOrder]
 
 ```python
 PluginLoadOrder(value:int) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents the order in which a plugin should be initialized and enabled.
 
@@ -606,11 +446,15 @@ name: str
 value: int
 ```
 
+</div>
+
 ### PluginLoader [#endstone.plugin.PluginLoader]
 
 ```python
 PluginLoader(server:Server) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a plugin loader, which handles direct access to specific types of plugins
 
@@ -674,7 +518,11 @@ server: Server
 
 Retrieves the Server object associated with the PluginLoader.
 
+</div>
+
 ### PluginManager [#endstone.plugin.PluginManager]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents a plugin manager that handles all plugins from the Server
 
@@ -874,15 +722,23 @@ unsubscribe_from_permission(permission:str, permissible:Permissible) -> None
 
 Unsubscribes the given Permissible for information about the requested Permission.
 
+</div>
+
 ### Service [#endstone.plugin.Service]
 
 ```python
 Service() -> None
 ```
 
+<div className="pl-[2em] mt-[1.25em]">
+
 Represents a list of methods.
 
+</div>
+
 ### ServiceManager [#endstone.plugin.ServiceManager]
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represent a service manager that manages services and service providers.
 
@@ -916,11 +772,15 @@ unregister_all(plugin:Plugin) -> None
 
 Unregister all the services registered by a particular plugin.
 
+</div>
+
 ### ServicePriority [#endstone.plugin.ServicePriority]
 
 ```python
 ServicePriority(value:int) -> None
 ```
+
+<div className="pl-[2em] mt-[1.25em]">
 
 Represents various priorities of a provider.
 
@@ -975,3 +835,5 @@ name: str
 ```python
 value: int
 ```
+
+</div>

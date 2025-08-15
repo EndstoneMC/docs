@@ -41,6 +41,11 @@
 {%- set heading_level = heading_level - 1 -%}
 {%- endif -%}
 
+{% raw %}
+<div className="pl-[2em] mt-[1.25em]">
+
+{% endraw %}
+
 {%- if config.show_bases and class.bases -%}
 Bases: {% for expression in class.bases -%}
 <code>{%- include "expression.md.jinja" with context -%}</code>{%- if not loop.last -%}, {% endif -%}
@@ -66,3 +71,8 @@ Bases: {% for expression in class.bases -%}
 {%- set heading_level = heading_level + 1 -%}
 {%- include "children.md.jinja" with context -%}
 {%- endwith -%}
+
+{% raw %}
+
+</div>
+{% endraw %}
