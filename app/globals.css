@@ -159,6 +159,10 @@
 }
 
 @layer components {
+    .nextra-toc li a:has(.doc-symbol) {
+       @apply truncate;
+    }
+
     .doc-symbol::after {
         @apply inline-block align-middle font-medium rounded text-center w-7 h-7 leading-7 text-lg mr-1;
     }
