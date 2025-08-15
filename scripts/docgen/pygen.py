@@ -6,30 +6,28 @@ from pathlib import Path
 import griffe
 import griffe2md.rendering
 import mdformat
-import rendering_override
+import _rendering
 from griffe import GriffeLoader, Object, Parser, Kind
 from griffe2md import rendering
 from griffe2md.main import prepare_context, prepare_env
-from jinja2 import Environment, FileSystemLoader
+from jinja2 import FileSystemLoader
 from extension import StubOverloadExtension
-
-sys.path.append(r"D:\Projects\CPP\endstone")
 
 
 def render_object_docs(obj: Object, config: dict | None = None) -> str:
     env = prepare_env()
     assert isinstance(env.loader, FileSystemLoader)
     loader: FileSystemLoader = env.loader
-    loader.searchpath.insert(0, str(Path(__file__).parent / "templates"))
-    env.filters["heading"] = rendering_override.do_heading
-    env.filters["as_functions_section"] = rendering_override.do_as_functions_section
+    loader.searchpath.insert(0, str(Path(__file__).parent / "templates" / "griffe2md"))
+    env.filters["heading"] = _rendering.do_heading
+    env.filters["as_functions_section"] = _rendering.do_as_functions_section
     context = prepare_context(obj, config)
     rendered = env.get_template(f"{obj.kind.value}.md.jinja").render(**context)
     return mdformat.text(rendered)
 
 
 def render_package_docs(package: str, config: dict | None = None) -> str:
-    config = config or dict(rendering.default_config)
+    config = config or dict(_rendering.default_config)
     parser = config["docstring_style"] and Parser(config["docstring_style"])
     extensions = griffe.load_extensions(StubOverloadExtension)
     loader = GriffeLoader(docstring_parser=parser, extensions=extensions)
@@ -38,7 +36,8 @@ def render_package_docs(package: str, config: dict | None = None) -> str:
     return render_object_docs(module, config)  # type: ignore[arg-type]
 
 
-def main():
+def generate(base_dir: Path):
+    sys.path.append(str(base_dir.absolute()))
     output_path = (
             Path(__file__).parent.parent.parent / "content" / "reference" / "python"
     )
@@ -81,7 +80,3 @@ def main():
             f.write(f'title: "endstone.{submodule_name}"\n')  # Dynamic title
             f.write('---\n\n')
             f.write(render_package_docs(f"endstone.{submodule_name}", config))
-
-
-if __name__ == "__main__":
-    main()

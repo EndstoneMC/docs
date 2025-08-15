@@ -15,7 +15,7 @@ log: logging.Logger = logging.getLogger("mkdocs")
 log.setLevel(logging.DEBUG)
 
 
-def main(base_dir: Path, debug: bool = True):
+def generate(base_dir: Path, debug: bool = True):
     temp_dir = Path(__file__).parent.parent.parent / ".doxygen"
     temp_dir.mkdir(parents=True, exist_ok=True)
 
@@ -26,7 +26,7 @@ def main(base_dir: Path, debug: bool = True):
         "FILE_PATTERNS": "*.h",
         "EXCLUDE_PATTERNS": "*/detail/*",
         "RECURSIVE": True,
-        "STRIP_FROM_INC_PATH": "include/",
+        "STRIP_FROM_INC_PATH": str(base_dir / "include"),
     }
 
     runner = DoxygenRun('doxygen', str(base_dir / "include" / "endstone"), str(temp_dir), config, "")
@@ -74,8 +74,4 @@ def main(base_dir: Path, debug: bool = True):
         log.info(file)
 
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("base_dir", type=Path)
-    args = parser.parse_args()
-    main(args.base_dir, debug=True)
+
