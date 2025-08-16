@@ -27,7 +27,7 @@ def render_object_docs(obj: Object, config: dict | None = None) -> str:
 
 
 def render_package_docs(package: str, config: dict | None = None) -> str:
-    config = config or dict(_rendering.default_config)
+    config = config or dict(rendering.default_config)
     parser = config["docstring_style"] and Parser(config["docstring_style"])
     extensions = griffe.load_extensions(StubOverloadExtension)
     loader = GriffeLoader(docstring_parser=parser, extensions=extensions)

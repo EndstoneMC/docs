@@ -16,7 +16,11 @@ class Generator(GeneratorAuto):
     def member(self, node: Node, config: dict = None):
         path = inflection.underscore(node.name_short) + ".md"
 
-        output = self.generatorBase.member(node, config)
+        output = ""
+        output += '---\n'
+        output += f'title: "{node.name_short}"\n'
+        output += '---\n\n'
+        output += self.generatorBase.member(node, config)
         self.save(path, output)
 
         if node.is_language or node.is_group or node.is_file or node.is_dir:

@@ -47,7 +47,8 @@ def generate(base_dir: Path, debug: bool = True):
     #     doxygen.printStructure()
 
     # Prepare generator for future use (GeneratorAuto, SnippetGenerator)
-    base_generator = GeneratorBase("", ignore_errors=False, debug=debug)
+    template_dir = str(Path(__file__).parent / "templates" / "mkdoxy")
+    base_generator = GeneratorBase(template_dir, ignore_errors=False, debug=debug)
 
     generator = Generator(
         generatorBase=base_generator,
@@ -69,9 +70,3 @@ def generate(base_dir: Path, debug: bool = True):
     nodes = [node for node in root_node.children if node.kind == Kind.CLASS]
     generator.members(nodes, template_config)
     generator.classes(nodes, template_config)
-
-    for file in generator.fullDocFiles:
-        log.info(file)
-
-
-
