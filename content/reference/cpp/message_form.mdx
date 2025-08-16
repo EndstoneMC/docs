@@ -1,0 +1,278 @@
+---
+title: "MessageForm"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::MessageForm
+
+Bases: [`endstone::Form`](classendstone_1_1_form.md)
+
+
+
+
+
+
+**Types:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_message_form_1ae80b40d9e184bdb006df4227c18bc7a0">
+    <td>[`OnSubmitCallback`](#typedef-onsubmitcallback)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_message_form_1ab6620076abada4c6e93bbc1bc24ce62f">
+    <td>[`getButton1`](#function-getbutton1)</td>
+    <td>Get the text of button1.</td>
+</tr>
+<tr key="classendstone_1_1_message_form_1ac7b3d87630849182d65b4ae83ab6b0f8">
+    <td>[`getButton2`](#function-getbutton2)</td>
+    <td>Get the text of button2.</td>
+</tr>
+<tr key="classendstone_1_1_message_form_1a3eeebb5301611304a07f8a10d558ca04">
+    <td>[`getContent`](#function-getcontent)</td>
+    <td>Get the content of the form.</td>
+</tr>
+<tr key="classendstone_1_1_message_form_1a4d5cabc83f65da661374a2699e56e8a4">
+    <td>[`getOnSubmit`](#function-getonsubmit)</td>
+    <td>Gets the on submit callback of the form.</td>
+</tr>
+<tr key="classendstone_1_1_message_form_1a664b192faeebdf01185ac6e2d9a7573a">
+    <td>[`setButton1`](#function-setbutton1)</td>
+    <td>Set the text of button1.</td>
+</tr>
+<tr key="classendstone_1_1_message_form_1a99a1ad7984440fd680b036a1ea32e246">
+    <td>[`setButton2`](#function-setbutton2)</td>
+    <td>Set the text of button2.</td>
+</tr>
+<tr key="classendstone_1_1_message_form_1a12684fb2175d884fdd98b85f085c71e1">
+    <td>[`setContent`](#function-setcontent)</td>
+    <td>Set the content of the form.</td>
+</tr>
+<tr key="classendstone_1_1_message_form_1a32ad03e1b55f5a98009d34d5f442c248">
+    <td>[`setOnSubmit`](#function-setonsubmit)</td>
+    <td>Sets the on submit callback of the form.</td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-typedef"/> OnSubmitCallback
+
+```cpp
+using endstone::MessageForm::OnSubmitCallback =  std::function<void(Player *, int)>;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getButton1
+
+```cpp
+inline Message endstone::MessageForm::getButton1 () const
+```
+
+Get the text of button1.
+
+
+
+**Returns:**
+
+The text of button1. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getButton2
+
+```cpp
+inline Message endstone::MessageForm::getButton2 () const
+```
+
+Get the text of button2.
+
+
+
+**Returns:**
+
+The text of button2. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getContent
+
+```cpp
+inline Message endstone::MessageForm::getContent () const
+```
+
+Get the content of the form.
+
+
+
+**Returns:**
+
+The content of the form. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getOnSubmit
+
+```cpp
+inline OnSubmitCallback endstone::MessageForm::getOnSubmit () const
+```
+
+Gets the on submit callback of the form.
+
+
+
+**Returns:**
+
+The on submit callback of the form. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setButton1
+
+```cpp
+inline MessageForm & endstone::MessageForm::setButton1 (
+    Message text
+) 
+```
+
+Set the text of button1.
+
+
+
+**Parameters:**
+
+
+* `text` The text to set as the button1 text. 
+
+
+
+**Returns:**
+
+A reference to the current form. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setButton2
+
+```cpp
+inline MessageForm & endstone::MessageForm::setButton2 (
+    Message text
+) 
+```
+
+Set the text of button2.
+
+
+
+**Parameters:**
+
+
+* `text` The text to set as the button2 text. 
+
+
+
+**Returns:**
+
+A reference to the current form. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setContent
+
+```cpp
+inline MessageForm & endstone::MessageForm::setContent (
+    Message text
+) 
+```
+
+Set the content of the form.
+
+
+
+**Parameters:**
+
+
+* `text` The text to set as the content. 
+
+
+
+**Returns:**
+
+A reference to the current form. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setOnSubmit
+
+```cpp
+inline MessageForm & endstone::MessageForm::setOnSubmit (
+    OnSubmitCallback on_submit
+) 
+```
+
+Sets the on submit callback of the form.
+
+
+
+**Parameters:**
+
+
+* `on_submit` The callback to be set. 
+
+
+
+**Returns:**
+
+A reference to the current form. 
+
+
+
+
+
+        

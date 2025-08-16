@@ -1,0 +1,171 @@
+---
+title: "ActorDamageEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::ActorDamageEvent
+
+Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+
+
+
+
+
+
+
+
+
+**Attributes:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_actor_damage_event_1a319f71e214cfbb92d77667fc03583b2a">
+    <td>[`NAME`](#variable-name)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_actor_damage_event_1a663583a9e7ec44a0b01a04dce342296f">
+    <td>[`ActorDamageEvent`](#function-actordamageevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_damage_event_1a44564e018ef4caa37965500a468026e6">
+    <td>[`getDamage`](#function-getdamage)</td>
+    <td>Gets the raw amount of damage caused by the event.</td>
+</tr>
+<tr key="classendstone_1_1_actor_damage_event_1a538c8cedc5f6f72088aaf4351d9e32f4">
+    <td>[`getDamageSource`](#function-getdamagesource)</td>
+    <td>Get the source of damage.</td>
+</tr>
+<tr key="classendstone_1_1_actor_damage_event_1adc39392f2370363313d09e4dde688e08">
+    <td>[`getEventName`](#function-geteventname)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_damage_event_1a077458e25c7329f2cb4c02a2b0ed0bde">
+    <td>[`setDamage`](#function-setdamage)</td>
+    <td>Sets the raw amount of damage caused by the event.</td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-variable"/> NAME
+
+```cpp
+const std::string endstone::ActorDamageEvent::NAME;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> ActorDamageEvent
+
+```cpp
+inline endstone::ActorDamageEvent::ActorDamageEvent (
+    Mob & actor,
+    std::unique_ptr< DamageSource > damage_source,
+    const float damage
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getDamage
+
+```cpp
+inline float endstone::ActorDamageEvent::getDamage () const
+```
+
+Gets the raw amount of damage caused by the event.
+
+
+
+**Returns:**
+
+The raw amount of damage caused by the event 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getDamageSource
+
+```cpp
+inline DamageSource & endstone::ActorDamageEvent::getDamageSource () const
+```
+
+Get the source of damage.
+
+
+
+**Returns:**
+
+a [**DamageSource**](classendstone_1_1_damage_source.md) detailing the source of the damage. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getEventName
+
+```cpp
+inline virtual std::string endstone::ActorDamageEvent::getEventName () override const
+```
+
+
+Gets a user-friendly identifier for this event.
+
+
+
+
+**Returns:**
+
+name of this event 
+
+
+
+
+
+        
+Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
+
+### <code className="doc-symbol doc-symbol-function"/> setDamage
+
+```cpp
+inline void endstone::ActorDamageEvent::setDamage (
+    const float damage
+) 
+```
+
+Sets the raw amount of damage caused by the event.
+
+
+
+**Parameters:**
+
+
+* `damage` The raw amount of damage caused by the event 
+
+
+
+
+        

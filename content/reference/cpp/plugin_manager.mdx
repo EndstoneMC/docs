@@ -1,0 +1,909 @@
+---
+title: "PluginManager"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::PluginManager
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_plugin_manager_1a281ccb3de8a92c07a4e29f7ad2156424">
+    <td>[`PluginManager`](#function-pluginmanager-12)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1a9abdd544558986b3037204b669bd3753">
+    <td>[`PluginManager`](#function-pluginmanager-22)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1adf54011d2e7f3b831a1d9276119946a1">
+    <td>[`addPermission`](#function-addpermission)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1a4dfe6ff074c30ba3055cdd8e81fc724c">
+    <td>[`callEvent`](#function-callevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1a14a15ef4e634b7109ef923c4dc84b64d">
+    <td>[`clearPlugins`](#function-clearplugins)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1a590c1e061513b9431b20d62bee105d8e">
+    <td>[`disablePlugin`](#function-disableplugin)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1ab56ff89a7ecf2d6b912f95c77c1508d9">
+    <td>[`disablePlugins`](#function-disableplugins)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1aa4ba7ce935f60390b5522a2bdb41a37b">
+    <td>[`enablePlugin`](#function-enableplugin)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1a2f0223eca4a793a2265d943b0d8347f4">
+    <td>[`enablePlugins`](#function-enableplugins)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1a9a414d170b547bce47ac00933a4f1020">
+    <td>[`getDefaultPermSubscriptions`](#function-getdefaultpermsubscriptions)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1a2a17944a7454c57e59e24d9da35c2603">
+    <td>[`getDefaultPermissions`](#function-getdefaultpermissions)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1a6eec3de712d8eb401cba594c25702a6b">
+    <td>[`getPermission`](#function-getpermission)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1a51aaf24ca653d67c3ea010637ecca94d">
+    <td>[`getPermissionSubscriptions`](#function-getpermissionsubscriptions)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1ad2545d188bff41477fe3fd5264251cfc">
+    <td>[`getPermissions`](#function-getpermissions)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1a156155bc2b7611c66b63822501d3e426">
+    <td>[`getPlugin`](#function-getplugin)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1aa91ce71b20fd55f651b2a9adad8e1533">
+    <td>[`getPlugins`](#function-getplugins)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1a4727c832fc835f645d111ce008a7c9d0">
+    <td>[`isPluginEnabled`](#function-ispluginenabled-12)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1af271c20893989ead66a7b2b65d2067fa">
+    <td>[`isPluginEnabled`](#function-ispluginenabled-22)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1a7f21fe6870ae38c909691398863ea6e9">
+    <td>[`loadPlugin`](#function-loadplugin)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1a7955f44204bab938fb2647fa717d5405">
+    <td>[`loadPlugins`](#function-loadplugins-12)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1ae31db542d6a5f82c406bf3e23d6ef2d7">
+    <td>[`loadPlugins`](#function-loadplugins-22)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1a773e9898c1364422297e68b04877ded6">
+    <td>[`operator=`](#function-operator)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1a6b871de71ea1884cf526b4c5880e732e">
+    <td>[`recalculatePermissionDefaults`](#function-recalculatepermissiondefaults)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1a3f7b1b0a5e838c7b299a93e12a816ea6">
+    <td>[`registerEvent`](#function-registerevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1ac8aee762e697dfff805f6fcba27d973b">
+    <td>[`registerLoader`](#function-registerloader)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1a8e228f95cb9ae2fa7691a0bab7a4ab15">
+    <td>[`removePermission`](#function-removepermission-12)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1a88d24d0be87c7a5905c69638c667e324">
+    <td>[`removePermission`](#function-removepermission-22)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1ad6f9c928e31f02639e0f2bc39a97bd96">
+    <td>[`subscribeToDefaultPerms`](#function-subscribetodefaultperms)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1a368d558addb19a455e0616a134a32e51">
+    <td>[`subscribeToPermission`](#function-subscribetopermission)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1a933fe9395fb93db5bcad5e687523ccbc">
+    <td>[`unsubscribeFromDefaultPerms`](#function-unsubscribefromdefaultperms)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1a701f8e4b82cf233b04a0aeb5f9fba330">
+    <td>[`unsubscribeFromPermission`](#function-unsubscribefrompermission)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_manager_1a648f03d094a5d49c697c6dbd3a94b9a8">
+    <td>[`~PluginManager`](#function-pluginmanager)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> PluginManager
+
+```cpp
+endstone::PluginManager::PluginManager () = default
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> PluginManager
+
+```cpp
+endstone::PluginManager::PluginManager (
+    PluginManager const &
+) = delete
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> addPermission
+
+```cpp
+virtual Permission * endstone::PluginManager::addPermission (
+    std::unique_ptr< Permission > perm
+) = 0
+```
+
+
+Adds a [**Permission**](classendstone_1_1_permission.md) to this plugin manager.
+
+
+
+
+**Parameters:**
+
+
+* `perm` [**Permission**](classendstone_1_1_permission.md) to add 
+
+
+
+**Returns:**
+
+[**Permission**](classendstone_1_1_permission.md), or nullptr if a permission is already defined with the given name of the new permission 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> callEvent
+
+```cpp
+virtual void endstone::PluginManager::callEvent (
+    Event & event
+) = 0
+```
+
+
+Calls an event which will be passed to plugins.
+
+
+
+
+**Parameters:**
+
+
+* `event` [**Event**](classendstone_1_1_event.md) to be called 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> clearPlugins
+
+```cpp
+virtual void endstone::PluginManager::clearPlugins () = 0
+```
+
+
+Disables and removes all plugins 
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> disablePlugin
+
+```cpp
+virtual void endstone::PluginManager::disablePlugin (
+    Plugin & plugin
+) = 0
+```
+
+
+Disables the specified plugin Attempting to disable a plugin that is not enabled will have no effect
+
+
+
+
+**Parameters:**
+
+
+* `plugin` [**Plugin**](classendstone_1_1_plugin.md) to disable 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> disablePlugins
+
+```cpp
+virtual void endstone::PluginManager::disablePlugins () = 0
+```
+
+
+Disables all the loaded plugins 
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> enablePlugin
+
+```cpp
+virtual void endstone::PluginManager::enablePlugin (
+    Plugin & plugin
+) const = 0
+```
+
+
+Enables the specified plugin Attempting to enable a plugin that is already enabled will have no effect
+
+
+
+
+**Parameters:**
+
+
+* `plugin` [**Plugin**](classendstone_1_1_plugin.md) to enable 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> enablePlugins
+
+```cpp
+virtual void endstone::PluginManager::enablePlugins () const = 0
+```
+
+
+Enable all the loaded plugins 
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getDefaultPermSubscriptions
+
+```cpp
+virtual std::unordered_set< Permissible * > endstone::PluginManager::getDefaultPermSubscriptions (
+    PermissionLevel level
+) const = 0
+```
+
+
+Gets a set containing all subscribed Permissibles to the given default list, by permission level
+
+
+
+
+**Parameters:**
+
+
+* `level` Default list to query for 
+
+
+
+**Returns:**
+
+Set containing all subscribed permissions 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getDefaultPermissions
+
+```cpp
+virtual std::vector< Permission * > endstone::PluginManager::getDefaultPermissions (
+    PermissionLevel level
+) const = 0
+```
+
+
+Gets the default permissions for the given permission level
+
+
+
+
+**Parameters:**
+
+
+* `level` Which set of default permissions to get 
+
+
+
+**Returns:**
+
+The default permissions 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPermission
+
+```cpp
+virtual Permission * endstone::PluginManager::getPermission (
+    std::string name
+) const = 0
+```
+
+
+Gets a [**Permission**](classendstone_1_1_permission.md) from its fully qualified name
+
+
+
+
+**Parameters:**
+
+
+* `name` Name of the permission 
+
+
+
+**Returns:**
+
+[**Permission**](classendstone_1_1_permission.md), or null if none 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPermissionSubscriptions
+
+```cpp
+virtual std::unordered_set< Permissible * > endstone::PluginManager::getPermissionSubscriptions (
+    std::string permission
+) const = 0
+```
+
+
+Gets a set containing all subscribed Permissibles to the given permission, by name
+
+
+
+
+**Parameters:**
+
+
+* `permission` [**Permission**](classendstone_1_1_permission.md) to query for 
+
+
+
+**Returns:**
+
+Set containing all subscribed permissions 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPermissions
+
+```cpp
+virtual std::unordered_set< Permission * > endstone::PluginManager::getPermissions () const = 0
+```
+
+
+Gets a set of all registered permissions.
+
+
+This set is a copy and will not be modified live.
+
+
+
+
+**Returns:**
+
+Set containing all current registered permissions 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPlugin
+
+```cpp
+virtual Plugin * endstone::PluginManager::getPlugin (
+    const std::string & name
+) const = 0
+```
+
+
+Checks if the given plugin is loaded and returns it when applicable. Please note that the name of the plugin is case-sensitive
+
+
+
+
+**Parameters:**
+
+
+* `name` Name of the plugin to check 
+
+
+
+**Returns:**
+
+[**Plugin**](classendstone_1_1_plugin.md) if it exists, otherwise nullptr 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPlugins
+
+```cpp
+virtual std::vector< Plugin * > endstone::PluginManager::getPlugins () const = 0
+```
+
+
+Gets a list of all currently loaded plugins
+
+
+
+
+**Returns:**
+
+List of Plugins 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isPluginEnabled
+
+```cpp
+virtual bool endstone::PluginManager::isPluginEnabled (
+    const std::string & name
+) const = 0
+```
+
+
+Checks if the given plugin is enabled or not Please note that the name of the plugin is case-sensitive.
+
+
+
+
+**Parameters:**
+
+
+* `name` Name of the plugin to check 
+
+
+
+**Returns:**
+
+true if the plugin is enabled, otherwise false 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isPluginEnabled
+
+```cpp
+virtual bool endstone::PluginManager::isPluginEnabled (
+    Plugin * plugin
+) const = 0
+```
+
+
+Checks if the given plugin is enabled or not
+
+
+
+
+**Parameters:**
+
+
+* `plugin` [**Plugin**](classendstone_1_1_plugin.md) to check 
+
+
+
+**Returns:**
+
+true if the plugin is enabled, otherwise false 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> loadPlugin
+
+```cpp
+virtual Plugin * endstone::PluginManager::loadPlugin (
+    std::string file
+) = 0
+```
+
+
+Loads the plugin in the specified file
+
+
+File must be valid according to the current enabled [**Plugin**](classendstone_1_1_plugin.md) interfaces
+
+
+
+
+**Parameters:**
+
+
+* `file` File containing the plugin to load 
+
+
+
+**Returns:**
+
+The [**Plugin**](classendstone_1_1_plugin.md) loaded, or nullptr if it was invalid 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> loadPlugins
+
+```cpp
+virtual std::vector< Plugin * > endstone::PluginManager::loadPlugins (
+    std::string directory
+) = 0
+```
+
+
+Loads the plugin contained within the specified directory
+
+
+
+
+**Parameters:**
+
+
+* `directory` Directory to check for plugins 
+
+
+
+**Returns:**
+
+A list of all plugins loaded 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> loadPlugins
+
+```cpp
+virtual std::vector< Plugin * > endstone::PluginManager::loadPlugins (
+    std::vector< std::string > files
+) = 0
+```
+
+
+Loads the plugins in the list of the files
+
+
+
+
+**Parameters:**
+
+
+* `files` List of files containing plugins to load 
+
+
+
+**Returns:**
+
+A list of all plugins loaded 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> operator=
+
+```cpp
+PluginManager & endstone::PluginManager::operator= (
+    PluginManager const &
+) = delete
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> recalculatePermissionDefaults
+
+```cpp
+virtual void endstone::PluginManager::recalculatePermissionDefaults (
+    Permission & perm
+) = 0
+```
+
+
+Recalculates the defaults for the given `Permission`.
+
+
+This will have no effect if the specified permission is not registered here.
+
+
+
+
+**Parameters:**
+
+
+* `perm` [**Permission**](classendstone_1_1_permission.md) to recalculate 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> registerEvent
+
+```cpp
+virtual void endstone::PluginManager::registerEvent (
+    std::string event,
+    std::function< void( Event &)> executor,
+    EventPriority priority,
+    Plugin & plugin,
+    bool ignore_cancelled
+) = 0
+```
+
+
+Registers the given event
+
+
+
+
+**Parameters:**
+
+
+* `event` [**Event**](classendstone_1_1_event.md) name to register 
+* `executor` EventExecutor to register 
+* `priority` Priority of this event 
+* `plugin` [**Plugin**](classendstone_1_1_plugin.md) to register 
+* `ignore_cancelled` Do not call executor if event was already cancelled 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> registerLoader
+
+```cpp
+virtual void endstone::PluginManager::registerLoader (
+    std::unique_ptr< PluginLoader > loader
+) = 0
+```
+
+
+Registers the specified plugin loader
+
+
+
+
+**Parameters:**
+
+
+* `loader` [**PluginLoader**](classendstone_1_1_plugin_loader.md) to register 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> removePermission
+
+```cpp
+virtual void endstone::PluginManager::removePermission (
+    Permission & perm
+) = 0
+```
+
+
+Removes a [**Permission**](classendstone_1_1_permission.md) registration from this plugin manager.
+
+
+If the specified permission does not exist in this plugin manager, nothing will happen. Removing a permission registration will **not** remove the permission from any Permissibles that have it.
+
+
+
+
+**Parameters:**
+
+
+* `perm` [**Permission**](classendstone_1_1_permission.md) to remove 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> removePermission
+
+```cpp
+virtual void endstone::PluginManager::removePermission (
+    std::string name
+) = 0
+```
+
+
+Removes a [**Permission**](classendstone_1_1_permission.md) registration from this plugin manager.
+
+
+If the specified permission does not exist in this plugin manager, nothing will happen. Removing a permission registration will **not** remove the permission from any Permissibles that have it.
+
+
+
+
+**Parameters:**
+
+
+* `name` [**Permission**](classendstone_1_1_permission.md) to remove 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> subscribeToDefaultPerms
+
+```cpp
+virtual void endstone::PluginManager::subscribeToDefaultPerms (
+    PermissionLevel level,
+    Permissible & permissible
+) = 0
+```
+
+
+Subscribes to the given Default permissions by permission level
+
+
+If the specified defaults change in any form, the [**Permissible**](classendstone_1_1_permissible.md) will be asked to recalculate.
+
+
+
+
+**Parameters:**
+
+
+* `level` Default list to subscribe to 
+* `permissible` [**Permissible**](classendstone_1_1_permissible.md) subscribing 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> subscribeToPermission
+
+```cpp
+virtual void endstone::PluginManager::subscribeToPermission (
+    std::string permission,
+    Permissible & permissible
+) = 0
+```
+
+
+Subscribes the given [**Permissible**](classendstone_1_1_permissible.md) for information about the requested [**Permission**](classendstone_1_1_permission.md), by name. If the specified [**Permission**](classendstone_1_1_permission.md) changes in any form, the [**Permissible**](classendstone_1_1_permissible.md) will be asked to recalculate.
+
+
+
+
+**Parameters:**
+
+
+* `permission` [**Permission**](classendstone_1_1_permission.md) to subscribe to 
+* `permissible` [**Permissible**](classendstone_1_1_permissible.md) subscribing 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> unsubscribeFromDefaultPerms
+
+```cpp
+virtual void endstone::PluginManager::unsubscribeFromDefaultPerms (
+    PermissionLevel level,
+    Permissible & permissible
+) = 0
+```
+
+
+Unsubscribes from the given Default permissions by permission level
+
+
+
+
+**Parameters:**
+
+
+* `level` Default list to unsubscribe from 
+* `permissible` [**Permissible**](classendstone_1_1_permissible.md) subscribing 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> unsubscribeFromPermission
+
+```cpp
+virtual void endstone::PluginManager::unsubscribeFromPermission (
+    std::string permission,
+    Permissible & permissible
+) = 0
+```
+
+
+Unsubscribes the given [**Permissible**](classendstone_1_1_permissible.md) for information about the requested [**Permission**](classendstone_1_1_permission.md), by name.
+
+
+
+
+**Parameters:**
+
+
+* `permission` [**Permission**](classendstone_1_1_permission.md) to unsubscribe from 
+* `permissible` [**Permissible**](classendstone_1_1_permissible.md) subscribing 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~PluginManager
+
+```cpp
+virtual endstone::PluginManager::~PluginManager () = default
+```
+

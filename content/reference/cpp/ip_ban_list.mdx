@@ -1,0 +1,306 @@
+---
+title: "IpBanList"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::IpBanList
+
+Bases: [`endstone::BanList`](classendstone_1_1_ban_list.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_ip_ban_list_1afde472cd99b074a0ec4505553f7f802a">
+    <td>[`addBan`](#function-addban-12)</td>
+    <td>Adds a ban to this list. If a previous ban exists, this will update the previous entry.</td>
+</tr>
+<tr key="classendstone_1_1_ip_ban_list_1a15ee4a9797be0ac051cc86f629d60b80">
+    <td>[`addBan`](#function-addban-22)</td>
+    <td>Adds a ban to this list. If a previous ban exists, this will update the previous entry.</td>
+</tr>
+<tr key="classendstone_1_1_ip_ban_list_1a678a7ab4ceb5e63143c54252faeabe32">
+    <td>[`getBanEntry`](#function-getbanentry-12)</td>
+    <td>Gets a BanEntry by IP address.</td>
+</tr>
+<tr key="classendstone_1_1_ip_ban_list_1af23bb688379d3798109d109a481e088c">
+    <td>[`getBanEntry`](#function-getbanentry-22)</td>
+    <td>Gets a BanEntry by IP address.</td>
+</tr>
+<tr key="classendstone_1_1_ip_ban_list_1adc3cf9740eeadb29579c8f7b5f4ec2c2">
+    <td>[`getEntries`](#function-getentries-12)</td>
+    <td>Gets a vector containing pointers to every BanEntry in this list.</td>
+</tr>
+<tr key="classendstone_1_1_ip_ban_list_1a92dc2f845462160a98a86112dafd73ff">
+    <td>[`getEntries`](#function-getentries-22)</td>
+    <td>Gets a vector containing pointers to every BanEntry in this list.</td>
+</tr>
+<tr key="classendstone_1_1_ip_ban_list_1a65ab85f06f3522ee90ec267859db0054">
+    <td>[`isBanned`](#function-isbanned)</td>
+    <td>Checks if a BanEntry exists for the target, indicating an active ban status.</td>
+</tr>
+<tr key="classendstone_1_1_ip_ban_list_1ac87901f151c53c57c5ae8267c7b7d601">
+    <td>[`removeBan`](#function-removeban)</td>
+    <td>Removes the specified IP address from this list, therefore indicating a "not banned" status.</td>
+</tr>
+<tr key="classendstone_1_1_ip_ban_list_1a99859c818b01e6685f3326e4ee0e0cf3">
+    <td>[`~IpBanList`](#function-ipbanlist)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> addBan
+
+```cpp
+virtual IpBanEntry & endstone::IpBanList::addBan (
+    std::string address,
+    std::optional< std::string > reason,
+    std::optional< BanEntry::Date > expires,
+    std::optional< std::string > source
+) override = 0
+```
+
+Adds a ban to this list. If a previous ban exists, this will update the previous entry.
+
+
+
+**Parameters:**
+
+
+* `address` The IP address of the target. 
+* `reason` The reason for the ban, std::nullopt indicates implementation default. 
+* `expires` The date for the ban's expiration (unban), or std::nullopt to imply forever. 
+* `source` The source of the ban, std::nullopt indicates implementation default. 
+
+
+
+**Returns:**
+
+[**IpBanEntry**](classendstone_1_1_ip_ban_entry.md)& The entry for the newly created ban, or the entry for the (updated) previous ban. 
+
+
+
+
+
+        
+Implements [*endstone::BanList::addBan*](classendstone_1_1_ban_list.md#function-addban-12)
+
+### <code className="doc-symbol doc-symbol-function"/> addBan
+
+```cpp
+virtual IpBanEntry & endstone::IpBanList::addBan (
+    std::string address,
+    std::optional< std::string > reason,
+    std::chrono::seconds duration,
+    std::optional< std::string > source
+) override = 0
+```
+
+Adds a ban to this list. If a previous ban exists, this will update the previous entry.
+
+
+
+**Parameters:**
+
+
+* `address` The IP address of the target. 
+* `reason` The reason for the ban, std::nullopt indicates implementation default. 
+* `duration` The duration of the ban 
+* `source` The source of the ban, std::nullopt indicates implementation default. 
+
+
+
+**Returns:**
+
+[**IpBanEntry**](classendstone_1_1_ip_ban_entry.md)& The entry for the newly created ban, or the entry for the (updated) previous ban. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getBanEntry
+
+```cpp
+virtual const IpBanEntry * endstone::IpBanList::getBanEntry (
+    std::string address
+) override const = 0
+```
+
+Gets a BanEntry by IP address.
+
+
+
+**Parameters:**
+
+
+* `address` The IP address to search for. 
+
+
+
+**Returns:**
+
+IpBanEntry\* The corresponding entry, or nullptr if none found. 
+
+
+
+
+
+        
+Implements [*endstone::BanList::getBanEntry*](classendstone_1_1_ban_list.md#function-getbanentry-12)
+
+### <code className="doc-symbol doc-symbol-function"/> getBanEntry
+
+```cpp
+virtual IpBanEntry * endstone::IpBanList::getBanEntry (
+    std::string address
+) override = 0
+```
+
+Gets a BanEntry by IP address.
+
+
+
+**Parameters:**
+
+
+* `address` The IP address to search for. 
+
+
+
+**Returns:**
+
+IpBanEntry\* The corresponding entry, or nullptr if none found. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getEntries
+
+```cpp
+virtual std::vector< const IpBanEntry * > endstone::IpBanList::getEntries () override const = 0
+```
+
+Gets a vector containing pointers to every BanEntry in this list.
+
+
+
+**Returns:**
+
+A vector containing pointers to every entry tracked by this list. 
+
+
+
+
+
+        
+Implements [*endstone::BanList::getEntries*](classendstone_1_1_ban_list.md#function-getentries-12)
+
+### <code className="doc-symbol doc-symbol-function"/> getEntries
+
+```cpp
+virtual std::vector< IpBanEntry * > endstone::IpBanList::getEntries () override = 0
+```
+
+Gets a vector containing pointers to every BanEntry in this list.
+
+
+
+**Returns:**
+
+A vector containing pointers to every entry tracked by this list. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isBanned
+
+```cpp
+virtual bool endstone::IpBanList::isBanned (
+    std::string address
+) override const = 0
+```
+
+Checks if a BanEntry exists for the target, indicating an active ban status.
+
+
+
+**Parameters:**
+
+
+* `address` The IP address to find. 
+
+
+
+**Returns:**
+
+true If a [**BanEntry**](classendstone_1_1_ban_entry.md) exists for the target, indicating an active ban status. 
+
+
+
+
+**Returns:**
+
+false Otherwise. 
+
+
+
+
+
+        
+Implements [*endstone::BanList::isBanned*](classendstone_1_1_ban_list.md#function-isbanned)
+
+### <code className="doc-symbol doc-symbol-function"/> removeBan
+
+```cpp
+virtual void endstone::IpBanList::removeBan (
+    std::string address
+) override = 0
+```
+
+Removes the specified IP address from this list, therefore indicating a "not banned" status.
+
+
+
+**Parameters:**
+
+
+* `address` The IP address to remove from this list. 
+
+
+
+
+        
+Implements [*endstone::BanList::removeBan*](classendstone_1_1_ban_list.md#function-removeban)
+
+### <code className="doc-symbol doc-symbol-function"/> ~IpBanList
+
+```cpp
+endstone::IpBanList::~IpBanList () override
+```
+

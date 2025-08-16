@@ -1,0 +1,225 @@
+---
+title: "CommandMap"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::CommandMap
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_command_map_1a25331c5810be15454974aaefe3fbc68b">
+    <td>[`CommandMap`](#function-commandmap-13)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_command_map_1afc2b0e7676d5d23fffb429c5910a1645">
+    <td>[`CommandMap`](#function-commandmap-23)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_command_map_1a4ebefdf37ff6f59a731c03217fe4bb9c">
+    <td>[`CommandMap`](#function-commandmap-33)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_command_map_1a668e38f90aad2458f33563f84d87c95a">
+    <td>[`clearCommands`](#function-clearcommands)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_command_map_1a4f06f0f67a32638079499c1b8bbc8dbc">
+    <td>[`dispatch`](#function-dispatch)</td>
+    <td>Looks for the requested command and executes it if found.</td>
+</tr>
+<tr key="classendstone_1_1_command_map_1a8b44b32258c2a2d0dabfcc3618f1f383">
+    <td>[`getCommand`](#function-getcommand)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_command_map_1af84987985d1b5dd0dcd0c14840dae7da">
+    <td>[`operator=`](#function-operator)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_command_map_1a71900d4f6d83ea0a21f9b2dbddcae322">
+    <td>[`operator=`](#function-operator_1)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_command_map_1a5b3beafddf2091946afee009ae1cf5de">
+    <td>[`registerCommand`](#function-registercommand)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_command_map_1abc727aa73950b67e85315d0fa0317c9d">
+    <td>[`~CommandMap`](#function-commandmap)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> CommandMap
+
+```cpp
+endstone::CommandMap::CommandMap () = default
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> CommandMap
+
+```cpp
+endstone::CommandMap::CommandMap (
+    const CommandMap &
+) = delete
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> CommandMap
+
+```cpp
+endstone::CommandMap::CommandMap (
+    CommandMap &&
+) = default
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> clearCommands
+
+```cpp
+virtual void endstone::CommandMap::clearCommands () = 0
+```
+
+
+Clears all registered commands. 
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> dispatch
+
+```cpp
+virtual bool endstone::CommandMap::dispatch (
+    CommandSender & sender,
+    std::string command_line
+) const = 0
+```
+
+Looks for the requested command and executes it if found.
+
+
+
+**Parameters:**
+
+
+* `sender` The command's sender 
+* `command_line` command + arguments. Example: "/test abc 123" 
+
+
+
+**Returns:**
+
+true if execution is successful, false otherwise 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getCommand
+
+```cpp
+virtual std::shared_ptr< Command > endstone::CommandMap::getCommand (
+    std::string name
+) const = 0
+```
+
+
+Gets the command registered to the specified name
+
+
+
+
+**Parameters:**
+
+
+* `name` Name of the command to retrieve 
+
+
+
+**Returns:**
+
+[**Command**](classendstone_1_1_command.md) with the specified name or nullptr if a command with that label doesn't exist 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> operator=
+
+```cpp
+CommandMap & endstone::CommandMap::operator= (
+    const CommandMap &
+) = delete
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> operator=
+
+```cpp
+CommandMap & endstone::CommandMap::operator= (
+    CommandMap &&
+) = default
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> registerCommand
+
+```cpp
+virtual bool endstone::CommandMap::registerCommand (
+    std::shared_ptr< Command > command
+) = 0
+```
+
+
+Registers a command.
+
+
+
+
+**Parameters:**
+
+
+* `command` the command to register 
+
+
+
+**Returns:**
+
+true on success, false if a command with the same name is already registered 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~CommandMap
+
+```cpp
+virtual endstone::CommandMap::~CommandMap () = default
+```
+

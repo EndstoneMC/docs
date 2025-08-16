@@ -1,0 +1,148 @@
+---
+title: "PlayerBedEnterEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerBedEnterEvent
+
+Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_player_bed_enter_event_1af989cb5f5f3c58103e7eb2083977d31c">
+    <td>[`PlayerBedEnterEvent`](#function-playerbedenterevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_bed_enter_event_1a5e4bf0d94da73a970c346f33e9cae394">
+    <td>[`getBed`](#function-getbed)</td>
+    <td>Represents the default possible outcomes of this event.</td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> PlayerBedEnterEvent
+
+```cpp
+inline explicit endstone::PlayerBedEnterEvent::PlayerBedEnterEvent (
+    Player & player,
+    Block & bed
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getBed
+
+```cpp
+inline Block & endstone::PlayerBedEnterEvent::getBed () const
+```
+
+Represents the default possible outcomes of this event.
+
+The player will enter the bed. The dimension doesn't allow sleeping or saving the spawn point (eg,Nether, The End). Entering the bed is prevented due to it not being night nor thundering currently. Entering the bed is prevented due to the player being too far away. Entering the bed is prevented due to there being monsters nearby. Entering the bed is prevented due to there being some other problem.
+
+
+This describes the default outcome of this event.
+
+
+
+
+**Returns:**
+
+The bed enter result representing the default outcome of this event
+
+
+This controls the action to take with the bed that was clicked on.
+
+
+
+
+**Returns:**
+
+the action to take with the interacted bed
+
+
+Sets the action to take with the interacted bed.
+
+
+
+* Result::Allow will result in the player sleeping, regardless of the default outcome described by getBedEnterResult().
+* Result::Deny will prevent the player from sleeping. This has the same effect as canceling the event
+* Result::Default will result in the outcome described by getBedEnterResult().
+
+
+
+
+
+
+**Parameters:**
+
+
+* `use_bed` the action to take with the interacted bed
+
+Gets the cancellation state of this event. Set to true if you want to prevent the player from sleeping.
+
+
+
+
+**Note:**
+
+Canceling the event has the same effect as setting useBed() to Result::Deny.
+
+
+
+
+**Returns:**
+
+boolean cancellation state  will still pass to other plugins.
+
+
+
+
+**Note:**
+
+Canceling this event will prevent use of the bed.
+
+
+
+
+**Parameters:**
+
+
+* `cancel` true if you wish to cancel this event
+
+Returns the bed block involved in this event.
+
+
+
+
+**Returns:**
+
+The bed block involved in this event. 
+
+
+
+
+
+        

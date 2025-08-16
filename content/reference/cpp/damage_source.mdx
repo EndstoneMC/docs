@@ -1,0 +1,146 @@
+---
+title: "DamageSource"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::DamageSource
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_damage_source_1aa918ccf5242cf6d8ed707457c227f9c5">
+    <td>[`getActor`](#function-getactor)</td>
+    <td>Get the actor that caused the damage to occur.</td>
+</tr>
+<tr key="classendstone_1_1_damage_source_1a022af0acc2aab4bd95e5ce916186a4ff">
+    <td>[`getDamagingActor`](#function-getdamagingactor)</td>
+    <td>Get the actor that directly caused the damage.</td>
+</tr>
+<tr key="classendstone_1_1_damage_source_1a545bb2e2d0cbf576bd70595194e88a74">
+    <td>[`getType`](#function-gettype)</td>
+    <td>Get the damage type.</td>
+</tr>
+<tr key="classendstone_1_1_damage_source_1ab078db3a18d08b41dd6c73de066c2b02">
+    <td>[`isIndirect`](#function-isindirect)</td>
+    <td>Get if this damage is indirect.</td>
+</tr>
+<tr key="classendstone_1_1_damage_source_1ad7317c28b8853f400f518106f3f9d659">
+    <td>[`~DamageSource`](#function-damagesource)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> getActor
+
+```cpp
+virtual Actor * endstone::DamageSource::getActor () const = 0
+```
+
+Get the actor that caused the damage to occur.
+
+Not to be confused with [**DamageSource::getDamagingActor()**](classendstone_1_1_damage_source.md#function-getdamagingactor), the returned actor is the actor to which the damage is ultimately attributed if the receiver is killed. If, for example, the receiver was damaged by a projectile, the shooter/thrower would be returned.
+
+
+
+
+**Returns:**
+
+an [**Actor**](classendstone_1_1_actor.md) or null 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getDamagingActor
+
+```cpp
+virtual Actor * endstone::DamageSource::getDamagingActor () const = 0
+```
+
+Get the actor that directly caused the damage.
+
+Not to be confused with [**DamageSource::getActor()**](classendstone_1_1_damage_source.md#function-getactor), the returned actor is the actor that actually inflicted the damage. If, for example, the receiver was damaged by a projectile, the projectile would be returned.
+
+
+
+
+**Returns:**
+
+an [**Actor**](classendstone_1_1_actor.md) or null 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getType
+
+```cpp
+virtual std::string_view endstone::DamageSource::getType () const = 0
+```
+
+Get the damage type.
+
+
+
+**Returns:**
+
+the damage type 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isIndirect
+
+```cpp
+virtual bool endstone::DamageSource::isIndirect () const = 0
+```
+
+Get if this damage is indirect.
+
+Damage is considered indirect if [**DamageSource::getActor()**](classendstone_1_1_damage_source.md#function-getactor) is not equal to [**DamageSource::getDamagingActor()**](classendstone_1_1_damage_source.md#function-getdamagingactor). This will be the case, for example, if a skeleton shot an arrow or a player threw a potion.
+
+
+
+
+**Returns:**
+
+true if is indirect, false otherwise. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~DamageSource
+
+```cpp
+virtual endstone::DamageSource::~DamageSource () = default
+```
+

@@ -1,0 +1,97 @@
+---
+title: "PlayerItemHeldEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerItemHeldEvent
+
+Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_player_item_held_event_1a7eec5505b61ad5165f902c407721f5bb">
+    <td>[`PlayerItemHeldEvent`](#function-playeritemheldevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_item_held_event_1a73d70b44a39f70b1a253d4f4ff3a4b7f">
+    <td>[`getNewSlot`](#function-getnewslot)</td>
+    <td>Gets the new held slot index.</td>
+</tr>
+<tr key="classendstone_1_1_player_item_held_event_1afd86e8a183c753785358dc92841d4d78">
+    <td>[`getPreviousSlot`](#function-getpreviousslot)</td>
+    <td>Gets the previous held slot index.</td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> PlayerItemHeldEvent
+
+```cpp
+inline explicit endstone::PlayerItemHeldEvent::PlayerItemHeldEvent (
+    Player & player,
+    const int previous,
+    const int current
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getNewSlot
+
+```cpp
+inline int endstone::PlayerItemHeldEvent::getNewSlot () const
+```
+
+Gets the new held slot index.
+
+
+
+**Returns:**
+
+New slot index 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPreviousSlot
+
+```cpp
+inline int endstone::PlayerItemHeldEvent::getPreviousSlot () const
+```
+
+Gets the previous held slot index.
+
+
+
+**Returns:**
+
+Previous slot index 
+
+
+
+
+
+        

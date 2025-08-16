@@ -1,0 +1,665 @@
+---
+title: "ServerListPingEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::ServerListPingEvent
+
+Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+
+
+
+
+
+
+
+
+
+**Attributes:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_server_list_ping_event_1ae55998c5fdb4e0e4fa0d2e62df282878">
+    <td>[`NAME`](#variable-name)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_server_list_ping_event_1a668a2d7aa1363a13b32877e094cda4ba">
+    <td>[`ServerListPingEvent`](#function-serverlistpingevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1ae265a4c31a93093c1b216e2bef2903b5">
+    <td>[`deserialize`](#function-deserialize)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1ad7a1dfe69b843c7b20cb52a4a3bea3e5">
+    <td>[`getEventName`](#function-geteventname)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1a931195e8a6f00198331002fb62cbdea1">
+    <td>[`getGameMode`](#function-getgamemode)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1a2d880ee3bdebe42c0fcbdc6bf3642a00">
+    <td>[`getLevelName`](#function-getlevelname)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1ad7e01f29129c5e342a38ad8a8732c96a">
+    <td>[`getLocalPort`](#function-getlocalport)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1aa68b81ed4b1a3fd074213be9c8ce9f9c">
+    <td>[`getLocalPortV6`](#function-getlocalportv6)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1a835fd5622ee6629d48045756a06ce3b2">
+    <td>[`getMaxPlayers`](#function-getmaxplayers)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1acb182fef4c35c59a0892be887503e20e">
+    <td>[`getMinecraftVersionNetwork`](#function-getminecraftversionnetwork)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1a6815d44f4a92512b6af951ffeb540c01">
+    <td>[`getMotd`](#function-getmotd)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1a9855e0851bdc24a5329ab6dfebd8fb52">
+    <td>[`getNetworkProtocolVersion`](#function-getnetworkprotocolversion)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1a72696b407d7f2d0402bd50870c3791f5">
+    <td>[`getNumPlayers`](#function-getnumplayers)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1a0e6c471cdd050f14c86f1c216d44f377">
+    <td>[`getRemoteHost`](#function-getremotehost)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1a96dbff8031414d99f72fc62eb208c7fd">
+    <td>[`getRemotePort`](#function-getremoteport)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1aa6a64659d29e47acf3af3e860c1d16da">
+    <td>[`getServerGuid`](#function-getserverguid)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1a8f98acd60d3bc56c5bfec18ce06b9649">
+    <td>[`serialize`](#function-serialize)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1a49e07d699cfebca6d747c7e0b4495920">
+    <td>[`setGameMode`](#function-setgamemode)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1acd8b497f6d642a9fcda052788b0d3087">
+    <td>[`setLevelName`](#function-setlevelname)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1a5da7cb54f3d9d5a97a5c9696a5a7123a">
+    <td>[`setLocalPort`](#function-setlocalport)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1a831630406c4b0d3c92fa914a26251953">
+    <td>[`setLocalPortV6`](#function-setlocalportv6)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1ac03b3d5005e7902a308c24e7b1a11784">
+    <td>[`setMaxPlayers`](#function-setmaxplayers)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1a2ae26402d0a7eb479d0e015af980dce9">
+    <td>[`setMinecraftVersionNetwork`](#function-setminecraftversionnetwork)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1ad534cad4e5f078d2a49c2ece69503239">
+    <td>[`setMotd`](#function-setmotd)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1ac75b1c0ba407c0d7fa8dc21e3b9cebb8">
+    <td>[`setNumPlayers`](#function-setnumplayers)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_list_ping_event_1a7398713547a0938d75954d29da7b8aba">
+    <td>[`setServerGuid`](#function-setserverguid)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-variable"/> NAME
+
+```cpp
+const std::string endstone::ServerListPingEvent::NAME;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> ServerListPingEvent
+
+```cpp
+inline endstone::ServerListPingEvent::ServerListPingEvent (
+    std::string remote_host,
+    int remote_port,
+    std::string ping_response
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> deserialize
+
+```cpp
+bool endstone::ServerListPingEvent::deserialize () 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getEventName
+
+```cpp
+inline virtual std::string endstone::ServerListPingEvent::getEventName () override const
+```
+
+
+Gets a user-friendly identifier for this event.
+
+
+
+
+**Returns:**
+
+name of this event 
+
+
+
+
+
+        
+Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
+
+### <code className="doc-symbol doc-symbol-function"/> getGameMode
+
+```cpp
+inline GameMode endstone::ServerListPingEvent::getGameMode () const
+```
+
+
+Get the current game mode.
+
+
+
+
+**Returns:**
+
+the game mode 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getLevelName
+
+```cpp
+inline std::string endstone::ServerListPingEvent::getLevelName () const
+```
+
+
+Get the level name.
+
+
+
+
+**Returns:**
+
+the level name 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getLocalPort
+
+```cpp
+inline int endstone::ServerListPingEvent::getLocalPort () const
+```
+
+
+Get the local port of the server.
+
+
+
+
+**Returns:**
+
+The local port 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getLocalPortV6
+
+```cpp
+inline int endstone::ServerListPingEvent::getLocalPortV6 () const
+```
+
+
+Get the local port of the server for IPv6 support
+
+
+
+
+**Returns:**
+
+The local port for IPv6 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getMaxPlayers
+
+```cpp
+inline int endstone::ServerListPingEvent::getMaxPlayers () const
+```
+
+
+Get the maximum number of players allowed.
+
+
+
+
+**Returns:**
+
+the maximum number of players 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getMinecraftVersionNetwork
+
+```cpp
+inline std::string endstone::ServerListPingEvent::getMinecraftVersionNetwork () const
+```
+
+
+Get the network version of Minecraft that is supported by this server
+
+
+
+
+**Returns:**
+
+the network version of Minecraft 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getMotd
+
+```cpp
+inline std::string endstone::ServerListPingEvent::getMotd () const
+```
+
+
+Get the message of the day message.
+
+
+
+
+**Returns:**
+
+the message of the day 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getNetworkProtocolVersion
+
+```cpp
+inline int endstone::ServerListPingEvent::getNetworkProtocolVersion () const
+```
+
+
+Get the network protocol version of this server
+
+
+
+
+**Returns:**
+
+the network protocol version 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getNumPlayers
+
+```cpp
+inline int endstone::ServerListPingEvent::getNumPlayers () const
+```
+
+
+Get the number of players online
+
+
+
+
+**Returns:**
+
+the number of players 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getRemoteHost
+
+```cpp
+inline std::string endstone::ServerListPingEvent::getRemoteHost () const
+```
+
+
+Get the host the ping is coming from.
+
+
+
+
+**Returns:**
+
+The host 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getRemotePort
+
+```cpp
+inline int endstone::ServerListPingEvent::getRemotePort () const
+```
+
+
+Get the port the ping is coming from.
+
+
+
+
+**Returns:**
+
+The port 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getServerGuid
+
+```cpp
+inline std::string endstone::ServerListPingEvent::getServerGuid () const
+```
+
+
+Get the unique identifier of the server.
+
+
+
+
+**Returns:**
+
+The server guid 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> serialize
+
+```cpp
+std::string endstone::ServerListPingEvent::serialize () 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> setGameMode
+
+```cpp
+inline void endstone::ServerListPingEvent::setGameMode (
+    GameMode game_mode
+) 
+```
+
+
+Set the current game mode.
+
+
+
+
+**Parameters:**
+
+
+* `game_mode` the game mode 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setLevelName
+
+```cpp
+inline void endstone::ServerListPingEvent::setLevelName (
+    std::string level_name
+) 
+```
+
+
+Set the level name.
+
+
+
+
+**Parameters:**
+
+
+* `level_name` the level name 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setLocalPort
+
+```cpp
+inline void endstone::ServerListPingEvent::setLocalPort (
+    int port
+) 
+```
+
+
+Set the local port of the server.
+
+
+
+
+**Parameters:**
+
+
+* `port` the local port 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setLocalPortV6
+
+```cpp
+inline void endstone::ServerListPingEvent::setLocalPortV6 (
+    int port
+) 
+```
+
+
+Set the local port of the server for IPv6 support.
+
+
+
+
+**Parameters:**
+
+
+* `port` the local port for IPv6 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setMaxPlayers
+
+```cpp
+inline void endstone::ServerListPingEvent::setMaxPlayers (
+    int max_players
+) 
+```
+
+
+Set the maximum number of players allowed.
+
+
+
+
+**Parameters:**
+
+
+* `max_players` the maximum number of players 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setMinecraftVersionNetwork
+
+```cpp
+inline void endstone::ServerListPingEvent::setMinecraftVersionNetwork (
+    std::string minecraft_version_network
+) 
+```
+
+
+Set the network version of Minecraft that is supported by this server
+
+
+
+
+**Parameters:**
+
+
+* `minecraft_version_network` the network version of Minecraft 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setMotd
+
+```cpp
+inline void endstone::ServerListPingEvent::setMotd (
+    std::string motd
+) 
+```
+
+
+Change the message of the day message.
+
+
+
+
+**Parameters:**
+
+
+* `motd` the message of the day 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setNumPlayers
+
+```cpp
+inline void endstone::ServerListPingEvent::setNumPlayers (
+    int num_players
+) 
+```
+
+
+Set the number of players online.
+
+
+
+
+**Parameters:**
+
+
+* `num_players` the number of players 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setServerGuid
+
+```cpp
+inline void endstone::ServerListPingEvent::setServerGuid (
+    std::string guid
+) 
+```
+
+
+Set the unique identifier of the server.
+
+
+
+
+**Parameters:**
+
+
+* `guid` the server guid 
+
+
+
+
+        

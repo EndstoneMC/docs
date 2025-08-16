@@ -1,0 +1,161 @@
+---
+title: "PlayerChatEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerChatEvent
+
+Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+
+
+
+
+
+
+
+
+
+**Attributes:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_player_chat_event_1a06ce04642473d0eeff2bac22d3319d87">
+    <td>[`NAME`](#variable-name)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_player_chat_event_1ae0ef119ee5dd4d80ba0db94d7927e011">
+    <td>[`PlayerChatEvent`](#function-playerchatevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_chat_event_1ac7473c18e7328d7fa402d49c143c152a">
+    <td>[`getEventName`](#function-geteventname)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_chat_event_1a6aaa932d6bf8d004a1aa67f9332587e3">
+    <td>[`getMessage`](#function-getmessage)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_chat_event_1a6911b50e5f63878d746bdda07d8fcd58">
+    <td>[`setMessage`](#function-setmessage)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_chat_event_1a84de57a1184f0d6384f32ac95c21864e">
+    <td>[`~PlayerChatEvent`](#function-playerchatevent)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-variable"/> NAME
+
+```cpp
+const std::string endstone::PlayerChatEvent::NAME;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> PlayerChatEvent
+
+```cpp
+inline explicit endstone::PlayerChatEvent::PlayerChatEvent (
+    Player & player,
+    std::string message
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getEventName
+
+```cpp
+inline virtual std::string endstone::PlayerChatEvent::getEventName () override const
+```
+
+
+Gets a user-friendly identifier for this event.
+
+
+
+
+**Returns:**
+
+name of this event 
+
+
+
+
+
+        
+Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
+
+### <code className="doc-symbol doc-symbol-function"/> getMessage
+
+```cpp
+inline std::string endstone::PlayerChatEvent::getMessage () const
+```
+
+
+Gets the message that the player is attempting to send.
+
+
+
+
+**Returns:**
+
+Message the player is attempting to send 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setMessage
+
+```cpp
+inline void endstone::PlayerChatEvent::setMessage (
+    std::string message
+) 
+```
+
+
+Sets the message that the player will send.
+
+
+
+
+**Parameters:**
+
+
+* `message` New message that the player will send 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~PlayerChatEvent
+
+```cpp
+endstone::PlayerChatEvent::~PlayerChatEvent () override
+```
+

@@ -1,0 +1,597 @@
+---
+title: "Color"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::Color
+
+
+
+
+
+
+
+
+
+
+**Attributes:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_color_1a7c5e7653a0ede9a6e5da415ac93bcf51">
+    <td>[`BIT\_MASK`](#variable-bit_mask)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_color_1a3c2563e89f8f1961ce3a41fa99f5f637">
+    <td>[`DEFAULT\_ALPHA`](#variable-default_alpha)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_color_1a17541893a7122663b91e49f77f828475">
+    <td>[`Color`](#function-color)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_color_1a49132ac0dcd6eb30d0c88b060e2145aa">
+    <td>[`asBGR`](#function-asbgr)</td>
+    <td>Gets the color as an BGR integer.</td>
+</tr>
+<tr key="classendstone_1_1_color_1ae79fd7ce5bc89837d82073ffdb7fab65">
+    <td>[`asRGB`](#function-asrgb)</td>
+    <td>Gets the color as an RGB integer.</td>
+</tr>
+<tr key="classendstone_1_1_color_1aafd4045f6c816b868c35dc494c2713b0">
+    <td>[`asRGBA`](#function-asrgba)</td>
+    <td>Gets the color as an RGBA integer.</td>
+</tr>
+<tr key="classendstone_1_1_color_1a6696f9d17391d894745ddc0c202707b1">
+    <td>[`getAlpha`](#function-getalpha)</td>
+    <td>Gets the alpha component of the color.</td>
+</tr>
+<tr key="classendstone_1_1_color_1a9ed18343f473ed0a5b69a34040c9c6ce">
+    <td>[`getBlue`](#function-getblue)</td>
+    <td>Gets the blue component of the color.</td>
+</tr>
+<tr key="classendstone_1_1_color_1a301d32f39f8cffa44020cc9a62212ea1">
+    <td>[`getGreen`](#function-getgreen)</td>
+    <td>Gets the green component of the color.</td>
+</tr>
+<tr key="classendstone_1_1_color_1a0ba516557cf1a2286149c620d95e00c4">
+    <td>[`getRed`](#function-getred)</td>
+    <td>Gets the red component of the color.</td>
+</tr>
+<tr key="classendstone_1_1_color_1a4748a2087280419ccb2fda334d14c1a7">
+    <td>[`operator!=`](#function-operator)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_color_1aba327588593d6e8fd59114d831fb0b60">
+    <td>[`operator==`](#function-operator_1)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_color_1a90d9dc03bed7fd437a864b5a3a2e597e">
+    <td>[`setAlpha`](#function-setalpha)</td>
+    <td>Creates a new Color object with specified component.</td>
+</tr>
+<tr key="classendstone_1_1_color_1af05e9817b91e4f72624a42f42cbe055f">
+    <td>[`setBlue`](#function-setblue)</td>
+    <td>Creates a new Color object with specified component.</td>
+</tr>
+<tr key="classendstone_1_1_color_1add7da4ae942f6368453e8136b4a08d96">
+    <td>[`setGreen`](#function-setgreen)</td>
+    <td>Creates a new Color object with specified component.</td>
+</tr>
+<tr key="classendstone_1_1_color_1ad40dfce4204a27c04c55b5ea0de9cc73">
+    <td>[`setRed`](#function-setred)</td>
+    <td>Creates a new Color object with specified component.</td>
+</tr>
+</tbody>
+</table>
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_color_1a9e54364845addf34dbc1641265479a50">
+    <td>[`fromBGR`](#function-frombgr-12)</td>
+    <td>Creates a new Color object from a blue, green, and red.</td>
+</tr>
+<tr key="classendstone_1_1_color_1a15c60c7b1d2e5c368c9595a83429f1fd">
+    <td>[`fromBGR`](#function-frombgr-22)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_color_1ab5bdb830e17b94e429c36e519ba5d08f">
+    <td>[`fromRGB`](#function-fromrgb-12)</td>
+    <td>Creates a new Color object from a red, green, and blue.</td>
+</tr>
+<tr key="classendstone_1_1_color_1a9bdf55abfb01aabe84e04b3e72da5ebe">
+    <td>[`fromRGB`](#function-fromrgb-22)</td>
+    <td>Creates a new color object from an integer that contains the red, green, and blue bytes in the lowest order 24 bits.</td>
+</tr>
+<tr key="classendstone_1_1_color_1aa2f1bbfb5aa8fc939583d9d7c454651b">
+    <td>[`fromRGBA`](#function-fromrgba-12)</td>
+    <td>Creates a new Color object from a red, green, blue, and alpha.</td>
+</tr>
+<tr key="classendstone_1_1_color_1a09bbf9dd83f827588692890fe9d4ebf7">
+    <td>[`fromRGBA`](#function-fromrgba-22)</td>
+    <td>Creates a new color object from an integer that contains the red, green, blue, and alpha bytes.</td>
+</tr>
+</tbody>
+</table>
+### <code className="doc-symbol doc-symbol-variable"/> BIT\_MASK
+
+```cpp
+int endstone::Color::BIT_MASK;
+```
+
+
+### <code className="doc-symbol doc-symbol-variable"/> DEFAULT\_ALPHA
+
+```cpp
+int endstone::Color::DEFAULT_ALPHA;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> Color
+
+```cpp
+inline constexpr endstone::Color::Color (
+    const std::uint8_t red,
+    const std::uint8_t green,
+    const std::uint8_t blue,
+    const std::uint8_t alpha=DEFAULT_ALPHA
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> asBGR
+
+```cpp
+inline int endstone::Color::asBGR () const
+```
+
+Gets the color as an BGR integer.
+
+
+
+**Returns:**
+
+An integer representation of this color, as 0xBBGGRR 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> asRGB
+
+```cpp
+inline int endstone::Color::asRGB () const
+```
+
+Gets the color as an RGB integer.
+
+
+
+**Returns:**
+
+An integer representation of this color, as 0xRRGGBB 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> asRGBA
+
+```cpp
+inline int endstone::Color::asRGBA () const
+```
+
+Gets the color as an RGBA integer.
+
+
+
+**Returns:**
+
+An integer representation of this color, as 0xRRGGBBAA 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getAlpha
+
+```cpp
+inline int endstone::Color::getAlpha () const
+```
+
+Gets the alpha component of the color.
+
+
+
+**Returns:**
+
+The alpha component (0–255) of the color. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getBlue
+
+```cpp
+inline int endstone::Color::getBlue () const
+```
+
+Gets the blue component of the color.
+
+
+
+**Returns:**
+
+The blue component (0–255) of the color. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getGreen
+
+```cpp
+inline int endstone::Color::getGreen () const
+```
+
+Gets the green component of the color.
+
+
+
+**Returns:**
+
+The green component (0–255) of the color. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getRed
+
+```cpp
+inline int endstone::Color::getRed () const
+```
+
+Gets the red component of the color.
+
+
+
+**Returns:**
+
+The red component (0–255) of the color. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> operator!=
+
+```cpp
+inline bool endstone::Color::operator!= (
+    const Color & other
+) const
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> operator==
+
+```cpp
+inline bool endstone::Color::operator== (
+    const Color & other
+) const
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> setAlpha
+
+```cpp
+inline Result< Color > endstone::Color::setAlpha (
+    const int alpha
+) const
+```
+
+Creates a new Color object with specified component.
+
+
+
+**Parameters:**
+
+
+* `alpha` the alpha component, from 0 to 255
+
+
+
+**Returns:**
+
+a new color object with the alpha component 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setBlue
+
+```cpp
+inline Result< Color > endstone::Color::setBlue (
+    const int blue
+) const
+```
+
+Creates a new Color object with specified component.
+
+
+
+**Parameters:**
+
+
+* `blue` the blue component, from 0 to 255
+
+
+
+**Returns:**
+
+a new color object with the blue component 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setGreen
+
+```cpp
+inline Result< Color > endstone::Color::setGreen (
+    const int green
+) const
+```
+
+Creates a new Color object with specified component.
+
+
+
+**Parameters:**
+
+
+* `green` the green component, from 0 to 255
+
+
+
+**Returns:**
+
+a new color object with the green component 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setRed
+
+```cpp
+inline Result< Color > endstone::Color::setRed (
+    const int red
+) const
+```
+
+Creates a new Color object with specified component.
+
+
+
+**Parameters:**
+
+
+* `red` the red component, from 0 to 255
+
+
+
+**Returns:**
+
+a new color object with the red component 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> fromBGR
+
+```cpp
+static inline Result< Color > endstone::Color::fromBGR (
+    const int blue,
+    const int green,
+    const int red
+) 
+```
+
+Creates a new Color object from a blue, green, and red.
+
+
+
+**Parameters:**
+
+
+* `blue` integer from 0-255 
+* `green` integer from 0-255 
+* `red` integer from 0-255
+
+
+
+**Returns:**
+
+a new [**Color**](classendstone_1_1_color.md) object for the red, green, blue 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> fromBGR
+
+```cpp
+static inline Result< Color > endstone::Color::fromBGR (
+    const int bgr
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> fromRGB
+
+```cpp
+static inline Result< Color > endstone::Color::fromRGB (
+    const int red,
+    const int green,
+    const int blue
+) 
+```
+
+Creates a new Color object from a red, green, and blue.
+
+
+
+**Parameters:**
+
+
+* `red` integer from 0-255 
+* `green` integer from 0-255 
+* `blue` integer from 0-255
+
+
+
+**Returns:**
+
+a new [**Color**](classendstone_1_1_color.md) object for the red, green, blue 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> fromRGB
+
+```cpp
+static inline Result< Color > endstone::Color::fromRGB (
+    const int rgb
+) 
+```
+
+Creates a new color object from an integer that contains the red, green, and blue bytes in the lowest order 24 bits.
+
+
+
+**Parameters:**
+
+
+* `rgb` the integer storing the red, green, and blue values
+
+
+
+**Returns:**
+
+a new color object for specified values 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> fromRGBA
+
+```cpp
+static inline Result< Color > endstone::Color::fromRGBA (
+    int red,
+    int green,
+    int blue,
+    int alpha
+) 
+```
+
+Creates a new Color object from a red, green, blue, and alpha.
+
+
+
+**Parameters:**
+
+
+* `red` integer from 0-255 
+* `green` integer from 0-255 
+* `blue` integer from 0-255 
+* `alpha` integer from 0-255
+
+
+
+**Returns:**
+
+a new [**Color**](classendstone_1_1_color.md) object for the red, green, blue, alpha 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> fromRGBA
+
+```cpp
+static inline Result< Color > endstone::Color::fromRGBA (
+    const int rgba
+) 
+```
+
+Creates a new color object from an integer that contains the red, green, blue, and alpha bytes.
+
+
+
+**Parameters:**
+
+
+* `rgba` the integer storing the red, green, blue, and alpha values
+
+
+
+**Returns:**
+
+a new color object for specified values 
+
+
+
+
+
+        

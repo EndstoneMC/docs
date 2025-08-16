@@ -1,0 +1,357 @@
+---
+title: "Permission"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::Permission
+
+
+
+
+
+
+
+
+
+
+**Attributes:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_permission_1a385c02996be80249d7de305f42f92924">
+    <td>[`DefaultPermission`](#variable-defaultpermission)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_permission_1a74535a5712de35b6a88927ac33f0b25b">
+    <td>[`Permission`](#function-permission)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_permission_1a44cb16b9597c2e9a2b6ef6f3a3332344">
+    <td>[`addParent`](#function-addparent-12)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_permission_1abce4255512cee5e3a6c8932cece8aa0a">
+    <td>[`addParent`](#function-addparent-22)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_permission_1a00a4dae7f788d5974d87b7b5c296e819">
+    <td>[`getChildren`](#function-getchildren)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_permission_1ab667964641734328e6882b4391d0b5d1">
+    <td>[`getDefault`](#function-getdefault)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_permission_1a8760bb7006bbd320ee75f80c786f414c">
+    <td>[`getDescription`](#function-getdescription)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_permission_1ad3c9f16d5737c0bd1ffca96d069eb18e">
+    <td>[`getName`](#function-getname)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_permission_1a61a4cbfb72b192e44a695e268c7e6aa6">
+    <td>[`getPermissibles`](#function-getpermissibles)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_permission_1a53ca57f91063211ddebc05e1ea97c26d">
+    <td>[`init`](#function-init)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_permission_1ab086181413bdb79b6eefe7848a65300e">
+    <td>[`recalculatePermissibles`](#function-recalculatepermissibles)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_permission_1af76b08d0dd8fea2f839e5e5da221c651">
+    <td>[`setDefault`](#function-setdefault)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_permission_1ad758e85f89650756e9782677de269edd">
+    <td>[`setDescription`](#function-setdescription)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-variable"/> DefaultPermission
+
+```cpp
+const PermissionDefault endstone::Permission::DefaultPermission;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> Permission
+
+```cpp
+inline explicit endstone::Permission::Permission (
+    std::string name,
+    std::string description="",
+    PermissionDefault default_value=DefaultPermission,
+    std::unordered_map< std::string, bool > children={}
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> addParent
+
+```cpp
+inline Permission * endstone::Permission::addParent (
+    std::string name,
+    bool value
+) 
+```
+
+
+Adds this permission to the specified parent permission.
+
+
+If the parent permission does not exist, it will be created and registered.
+
+
+
+
+**Parameters:**
+
+
+* `name` Name of the parent permission 
+* `value` The value to set this permission to 
+
+
+
+**Returns:**
+
+Parent permission it created or loaded 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> addParent
+
+```cpp
+inline void endstone::Permission::addParent (
+    Permission & perm,
+    bool value
+) const
+```
+
+
+Adds this permission to the specified parent permission.
+
+
+
+
+**Parameters:**
+
+
+* `perm` Parent permission to register with 
+* `value` The value to set this permission to 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getChildren
+
+```cpp
+inline std::unordered_map< std::string, bool > & endstone::Permission::getChildren () 
+```
+
+
+Gets the children of this permission. If you change this map in any form, you must call [**recalculatePermissibles()**](classendstone_1_1_permission.md#function-recalculatepermissibles) to recalculate all Permissibles
+
+
+
+
+**Returns:**
+
+[**Permission**](classendstone_1_1_permission.md) children 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getDefault
+
+```cpp
+inline PermissionDefault endstone::Permission::getDefault () const
+```
+
+
+Gets the default value of this permission.
+
+
+
+
+**Returns:**
+
+Default value of this permission. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getDescription
+
+```cpp
+inline std::string endstone::Permission::getDescription () const
+```
+
+
+Gets a brief description of this permission, may be empty
+
+
+
+
+**Returns:**
+
+Brief description of this permission 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getName
+
+```cpp
+inline std::string endstone::Permission::getName () const
+```
+
+
+Returns the unique fully qualified name of this [**Permission**](classendstone_1_1_permission.md)
+
+
+
+
+**Returns:**
+
+Fully qualified name 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPermissibles
+
+```cpp
+inline std::unordered_set< Permissible * > endstone::Permission::getPermissibles () const
+```
+
+
+Gets a set containing every [**Permissible**](classendstone_1_1_permissible.md) that has this permission. This set cannot be modified.
+
+
+
+
+**Returns:**
+
+Set containing permissibles with this permission 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> init
+
+```cpp
+inline void endstone::Permission::init (
+    PluginManager & plugin_manager
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> recalculatePermissibles
+
+```cpp
+inline void endstone::Permission::recalculatePermissibles () 
+```
+
+
+Recalculates all Permissibles that contain this permission.
+
+
+This should be called after modifying the children, and is automatically called after modifying the default value 
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setDefault
+
+```cpp
+inline void endstone::Permission::setDefault (
+    PermissionDefault value
+) 
+```
+
+
+Sets the default value of this permission.
+
+
+This will not be saved to disk, and is a temporary operation until the server reloads permissions. Changing this default will cause all Permissibles that contain this permission to recalculate their permissions
+
+
+
+
+**Parameters:**
+
+
+* `value` The new default to set 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setDescription
+
+```cpp
+inline void endstone::Permission::setDescription (
+    std::string value
+) 
+```
+
+
+Sets the description of this permission.
+
+
+This will not be saved to disk, and is a temporary operation until the server reloads permissions.
+
+
+
+
+**Parameters:**
+
+
+* `value` The new description to set 
+
+
+
+
+        

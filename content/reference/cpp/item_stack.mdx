@@ -1,0 +1,394 @@
+---
+title: "ItemStack"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::ItemStack
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_item_stack_1a461336ebca90be761e3d5316621ec234">
+    <td>[`ItemStack`](#function-itemstack-12)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_item_stack_1ad3c33286ebce8800dcf0285a6f0e301a">
+    <td>[`ItemStack`](#function-itemstack-22)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_item_stack_1a2c8607d72960a4ac9189ad25eb1fd8a0">
+    <td>[`clone`](#function-clone)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_item_stack_1a0dd7a79674dcefdf8255ed48bc88de4a">
+    <td>[`getAmount`](#function-getamount)</td>
+    <td>Gets the amount of items in this stack.</td>
+</tr>
+<tr key="classendstone_1_1_item_stack_1a3f2c4792c2ddb697945ad8458a41e319">
+    <td>[`getData`](#function-getdata)</td>
+    <td>Gets the data for this stack of items.</td>
+</tr>
+<tr key="classendstone_1_1_item_stack_1adb74392c2405e46b8c61aedd3bccb5f8">
+    <td>[`getItemMeta`](#function-getitemmeta)</td>
+    <td>Gets a copy of this ItemStack 's ItemMeta .</td>
+</tr>
+<tr key="classendstone_1_1_item_stack_1add1c91b0b2f804dbe72efd6991a61b36">
+    <td>[`getMaxStackSize`](#function-getmaxstacksize)</td>
+    <td>Get the maximum stack size for this item.</td>
+</tr>
+<tr key="classendstone_1_1_item_stack_1afe762ec02731da9569f15eb3ecc4e0f8">
+    <td>[`getType`](#function-gettype)</td>
+    <td>Gets the type of this item.</td>
+</tr>
+<tr key="classendstone_1_1_item_stack_1a5b24b8e07a34c657516340bf8c5b59ed">
+    <td>[`hasItemMeta`](#function-hasitemmeta)</td>
+    <td>Checks to see if any metadata has been defined.</td>
+</tr>
+<tr key="classendstone_1_1_item_stack_1aeb93a9a474a043a67738f0838d79c2b4">
+    <td>[`isSimilar`](#function-issimilar)</td>
+    <td>Checks if the two stacks are equal, but does not consider stack size (amount).</td>
+</tr>
+<tr key="classendstone_1_1_item_stack_1a4f314fd80081b60546b282bee4d255ed">
+    <td>[`operator!=`](#function-operator)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_item_stack_1a6bacc04cea58d3b47668b78973af287d">
+    <td>[`operator==`](#function-operator_1)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_item_stack_1afd9e055aeb937c5b3da9ecc2cf9baecc">
+    <td>[`setAmount`](#function-setamount)</td>
+    <td>Sets the amount of items in this stack.</td>
+</tr>
+<tr key="classendstone_1_1_item_stack_1a319d00f3ef1c99fed2b9366a7519e482">
+    <td>[`setData`](#function-setdata)</td>
+    <td>Sets the data for this stack of items.</td>
+</tr>
+<tr key="classendstone_1_1_item_stack_1a71ae31684a695fc854a2df838cefa02b">
+    <td>[`setItemMeta`](#function-setitemmeta)</td>
+    <td>Set the ItemMeta of this ItemStack .</td>
+</tr>
+<tr key="classendstone_1_1_item_stack_1a5e9d312e084681c548c2260f2a1f32ce">
+    <td>[`setType`](#function-settype)</td>
+    <td>Sets the type of this item.</td>
+</tr>
+<tr key="classendstone_1_1_item_stack_1a3d5879ba64ad7afe47d3c7726f276d52">
+    <td>[`~ItemStack`](#function-itemstack)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> ItemStack
+
+```cpp
+inline explicit endstone::ItemStack::ItemStack (
+    const std::string & type="minecraft:air",
+    const int amount=1,
+    const int data=0
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> ItemStack
+
+```cpp
+inline endstone::ItemStack::ItemStack (
+    const ItemStack & stack
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> clone
+
+```cpp
+inline virtual std::unique_ptr< ItemStack > endstone::ItemStack::clone () const
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getAmount
+
+```cpp
+inline virtual int endstone::ItemStack::getAmount () const
+```
+
+Gets the amount of items in this stack.
+
+
+
+**Returns:**
+
+Amount of items in this stack 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getData
+
+```cpp
+inline virtual int endstone::ItemStack::getData () const
+```
+
+Gets the data for this stack of items.
+
+
+
+**Returns:**
+
+Data for this item 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getItemMeta
+
+```cpp
+inline virtual std::unique_ptr< ItemMeta > endstone::ItemStack::getItemMeta () const
+```
+
+Gets a copy of this ItemStack 's ItemMeta .
+
+
+
+**Returns:**
+
+a copy of the current [**ItemStack**](classendstone_1_1_item_stack.md)'s [**ItemMeta**](classendstone_1_1_item_meta.md) 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getMaxStackSize
+
+```cpp
+inline virtual int endstone::ItemStack::getMaxStackSize () const
+```
+
+Get the maximum stack size for this item.
+
+
+
+**Returns:**
+
+The maximum you can stack this item to. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getType
+
+```cpp
+inline virtual std::string endstone::ItemStack::getType () const
+```
+
+Gets the type of this item.
+
+
+
+**Returns:**
+
+Type of the items in this stack 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> hasItemMeta
+
+```cpp
+inline virtual bool endstone::ItemStack::hasItemMeta () const
+```
+
+Checks to see if any metadata has been defined.
+
+
+
+**Returns:**
+
+Returns true if some metadata has been set for this item 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isSimilar
+
+```cpp
+inline virtual bool endstone::ItemStack::isSimilar (
+    const ItemStack & other
+) const
+```
+
+Checks if the two stacks are equal, but does not consider stack size (amount).
+
+
+
+**Parameters:**
+
+
+* `other` the item stack to compare to 
+
+
+
+**Returns:**
+
+true if the two stacks are equal, ignoring the amount 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> operator!=
+
+```cpp
+inline bool endstone::ItemStack::operator!= (
+    const ItemStack & other
+) const
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> operator==
+
+```cpp
+inline bool endstone::ItemStack::operator== (
+    const ItemStack & other
+) const
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> setAmount
+
+```cpp
+inline virtual void endstone::ItemStack::setAmount (
+    const int amount
+) 
+```
+
+Sets the amount of items in this stack.
+
+
+
+**Parameters:**
+
+
+* `amount` New amount of items in this stack 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setData
+
+```cpp
+inline virtual void endstone::ItemStack::setData (
+    const int data
+) 
+```
+
+Sets the data for this stack of items.
+
+
+
+**Parameters:**
+
+
+* `data` New data for this item 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setItemMeta
+
+```cpp
+inline virtual bool endstone::ItemStack::setItemMeta (
+    ItemMeta * meta
+) 
+```
+
+Set the ItemMeta of this ItemStack .
+
+
+
+**Parameters:**
+
+
+* `meta` new [**ItemMeta**](classendstone_1_1_item_meta.md), or null to indicate meta data be cleared. 
+
+
+
+**Returns:**
+
+True if successfully applied [**ItemMeta**](classendstone_1_1_item_meta.md) 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setType
+
+```cpp
+inline virtual void endstone::ItemStack::setType (
+    const std::string & type
+) 
+```
+
+Sets the type of this item.
+
+
+
+**Parameters:**
+
+
+* `type` New type to set the items in this stack to 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~ItemStack
+
+```cpp
+virtual endstone::ItemStack::~ItemStack () = default
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> isEndstoneItemStack
+
+```cpp
+inline virtual bool endstone::ItemStack::isEndstoneItemStack () const
+```
+

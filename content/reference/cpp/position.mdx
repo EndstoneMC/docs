@@ -1,0 +1,190 @@
+---
+title: "Position"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::Position
+
+Bases: [`endstone::Vector`](classendstone_1_1_vector.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_position_1afd7f8dbb082f27f480135d4ba430bdaa">
+    <td>[`Position`](#function-position-12)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_position_1a4d254166aee4f58209134e7e56c16597">
+    <td>[`Position`](#function-position-22)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_position_1aabcabab4d69b6bdbe11300ff3265e09c">
+    <td>[`getBlockX`](#function-getblockx)</td>
+    <td>Gets the floored value of the X component, indicating the block that this location is contained with.</td>
+</tr>
+<tr key="classendstone_1_1_position_1aba9ba0d20087e330bb959116d13c463a">
+    <td>[`getBlockY`](#function-getblocky)</td>
+    <td>Gets the floored value of the Y component, indicating the block that this location is contained with.</td>
+</tr>
+<tr key="classendstone_1_1_position_1a07caf1676929d3673b2507a1ccc7a9af">
+    <td>[`getBlockZ`](#function-getblockz)</td>
+    <td>Gets the floored value of the Z component, indicating the block that this location is contained with.</td>
+</tr>
+<tr key="classendstone_1_1_position_1a02a939bf78aa4870eec36ec10e2757da">
+    <td>[`getDimension`](#function-getdimension)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_position_1a5e78451e64148519d4a771b0d849605d">
+    <td>[`setDimension`](#function-setdimension)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> Position
+
+```cpp
+template<typename T, typename>
+inline endstone::Position::Position (
+    T x,
+    T y,
+    T z
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> Position
+
+```cpp
+template<typename T, typename>
+inline endstone::Position::Position (
+    T x,
+    T y,
+    T z,
+    Dimension & dimension
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getBlockX
+
+```cpp
+inline int endstone::Position::getBlockX () const
+```
+
+Gets the floored value of the X component, indicating the block that this location is contained with.
+
+
+
+**Returns:**
+
+block X 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getBlockY
+
+```cpp
+inline int endstone::Position::getBlockY () const
+```
+
+Gets the floored value of the Y component, indicating the block that this location is contained with.
+
+
+
+**Returns:**
+
+block Y 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getBlockZ
+
+```cpp
+inline int endstone::Position::getBlockZ () const
+```
+
+Gets the floored value of the Z component, indicating the block that this location is contained with.
+
+
+
+**Returns:**
+
+block Z 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getDimension
+
+```cpp
+inline Dimension * endstone::Position::getDimension () const
+```
+
+
+Gets the dimension that this position resides in
+
+
+
+
+**Returns:**
+
+[**Dimension**](classendstone_1_1_dimension.md) that contains this position, or nullptr if the dimension is not set. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setDimension
+
+```cpp
+inline void endstone::Position::setDimension (
+    Dimension & dimension
+) 
+```
+
+
+Sets the dimension that this position resides in
+
+
+
+
+**Parameters:**
+
+
+* `dimension` New dimension that this position resides in 
+
+
+
+
+        

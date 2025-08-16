@@ -1,0 +1,194 @@
+---
+title: "Level"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::Level
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_level_1a6eac0b57be7148b605cbe9961261a833">
+    <td>[`getActors`](#function-getactors)</td>
+    <td>Get a list of all actors in this level.</td>
+</tr>
+<tr key="classendstone_1_1_level_1ad688e6ab223f171816d8ed7956075c7e">
+    <td>[`getDimension`](#function-getdimension)</td>
+    <td>Gets the dimension with the given name.</td>
+</tr>
+<tr key="classendstone_1_1_level_1ac4329b1323d1e61be61c1efeb4e8ecd9">
+    <td>[`getDimensions`](#function-getdimensions)</td>
+    <td>Gets a list of all dimensions within this level.</td>
+</tr>
+<tr key="classendstone_1_1_level_1aa55eace2debac6499fd261db27a260bf">
+    <td>[`getName`](#function-getname)</td>
+    <td>Gets the unique name of this level.</td>
+</tr>
+<tr key="classendstone_1_1_level_1a2a0a6904b53c1d0952c6bdcfce91d0cd">
+    <td>[`getTime`](#function-gettime)</td>
+    <td>Gets the relative in-game time of this level.</td>
+</tr>
+<tr key="classendstone_1_1_level_1a52d11546e286762d10b7c2a523fd2dd7">
+    <td>[`setTime`](#function-settime)</td>
+    <td>Sets the relative in-game time on the server.</td>
+</tr>
+<tr key="classendstone_1_1_level_1ac053439dfd214fde2596aecbd158cb97">
+    <td>[`~Level`](#function-level)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> getActors
+
+```cpp
+virtual std::vector< Actor * > endstone::Level::getActors () const = 0
+```
+
+Get a list of all actors in this level.
+
+
+
+**Returns:**
+
+A List of all actors currently residing in this level 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getDimension
+
+```cpp
+virtual Dimension * endstone::Level::getDimension (
+    std::string name
+) const = 0
+```
+
+Gets the dimension with the given name.
+
+
+
+**Parameters:**
+
+
+* `name` the name of the dimension to retrieve. For example, "overworld", "nether" or "the\_end".
+
+
+
+**Returns:**
+
+The [**Dimension**](classendstone_1_1_dimension.md) with the given name, or nullptr if none exists 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getDimensions
+
+```cpp
+virtual std::vector< Dimension * > endstone::Level::getDimensions () const = 0
+```
+
+Gets a list of all dimensions within this level.
+
+
+
+**Returns:**
+
+a list of dimensions 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getName
+
+```cpp
+virtual std::string endstone::Level::getName () const = 0
+```
+
+Gets the unique name of this level.
+
+
+
+**Returns:**
+
+Name of this level 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getTime
+
+```cpp
+virtual int endstone::Level::getTime () const = 0
+```
+
+Gets the relative in-game time of this level.
+
+
+
+**Returns:**
+
+The current relative time 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setTime
+
+```cpp
+virtual void endstone::Level::setTime (
+    int time
+) = 0
+```
+
+Sets the relative in-game time on the server.
+
+
+
+**Parameters:**
+
+
+* `time` The new relative time to set the in-game time to 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~Level
+
+```cpp
+virtual endstone::Level::~Level () = default
+```
+

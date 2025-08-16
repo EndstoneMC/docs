@@ -1,0 +1,248 @@
+---
+title: "Button"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::Button
+
+
+
+
+
+
+
+**Types:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_button_1a52b4d719bc268f8d3543c83a3bf429ea">
+    <td>[`OnClickCallback`](#typedef-onclickcallback)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_button_1aa7bd604170d6b66a289e1fb1326605fd">
+    <td>[`Button`](#function-button-12)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_button_1ac605e37f08b850a6e997525b57da9912">
+    <td>[`Button`](#function-button-22)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_button_1a51ef57a2817568eba3b565c04b409b3b">
+    <td>[`getIcon`](#function-geticon)</td>
+    <td>Get the icon of the button.</td>
+</tr>
+<tr key="classendstone_1_1_button_1a60036ee46a14e1782aa4a9ae1623a823">
+    <td>[`getOnClick`](#function-getonclick)</td>
+    <td>Gets the on click callback of the button.</td>
+</tr>
+<tr key="classendstone_1_1_button_1a9f4197b42dd6f09b47e77ed083a69b2b">
+    <td>[`getText`](#function-gettext)</td>
+    <td>Gets the text of the button.</td>
+</tr>
+<tr key="classendstone_1_1_button_1a5b8b26c09fd84d50e501f66bc2340727">
+    <td>[`setIcon`](#function-seticon)</td>
+    <td>Sets the icon for the button.</td>
+</tr>
+<tr key="classendstone_1_1_button_1a06e11b2cc8acd773c5fd6e1d482255c0">
+    <td>[`setOnClick`](#function-setonclick)</td>
+    <td>Sets the on click callback of the button.</td>
+</tr>
+<tr key="classendstone_1_1_button_1a81e95408c4c135c0e0a14693b5285f51">
+    <td>[`setText`](#function-settext)</td>
+    <td>Sets the text of the button.</td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-typedef"/> OnClickCallback
+
+```cpp
+using endstone::Button::OnClickCallback =  std::function<void(Player *)>;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> Button
+
+```cpp
+endstone::Button::Button () = default
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> Button
+
+```cpp
+inline explicit endstone::Button::Button (
+    Message text,
+    std::optional< std::string > icon=std::nullopt,
+    OnClickCallback on_click={}
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getIcon
+
+```cpp
+inline std::optional< std::string > endstone::Button::getIcon () const
+```
+
+Get the icon of the button.
+
+
+
+**Returns:**
+
+The path or URL to the icon file 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getOnClick
+
+```cpp
+inline OnClickCallback endstone::Button::getOnClick () const
+```
+
+Gets the on click callback of the button.
+
+
+
+**Returns:**
+
+The on click callback of the button. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getText
+
+```cpp
+inline Message endstone::Button::getText () const
+```
+
+Gets the text of the button.
+
+
+
+**Returns:**
+
+The text. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setIcon
+
+```cpp
+inline Button & endstone::Button::setIcon (
+    std::string icon
+) 
+```
+
+Sets the icon for the button.
+
+
+
+**Parameters:**
+
+
+* `icon` The path or URL to the icon file. 
+
+
+
+**Returns:**
+
+A reference to the current button. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setOnClick
+
+```cpp
+inline Button & endstone::Button::setOnClick (
+    OnClickCallback on_click
+) 
+```
+
+Sets the on click callback of the button.
+
+
+
+**Parameters:**
+
+
+* `on_click` The callback to be set. 
+
+
+
+**Returns:**
+
+A reference to the current button. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setText
+
+```cpp
+inline Button & endstone::Button::setText (
+    Message text
+) 
+```
+
+Sets the text of the button.
+
+
+
+**Parameters:**
+
+
+* `text` The new text for the button. 
+
+
+
+**Returns:**
+
+A reference to the current button. 
+
+
+
+
+
+        

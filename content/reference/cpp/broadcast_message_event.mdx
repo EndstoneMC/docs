@@ -1,0 +1,177 @@
+---
+title: "BroadcastMessageEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::BroadcastMessageEvent
+
+Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+
+
+
+
+
+
+
+
+
+**Attributes:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_broadcast_message_event_1a46c6014d11f209582bf2839fec0dea35">
+    <td>[`NAME`](#variable-name)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_broadcast_message_event_1a30af9de400fa866509e535893d1fce33">
+    <td>[`BroadcastMessageEvent`](#function-broadcastmessageevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_broadcast_message_event_1aecff22889cac261fc45bc6126e32dbf4">
+    <td>[`getEventName`](#function-geteventname)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_broadcast_message_event_1abded73e5b43b74bb3e0698691e4e34e6">
+    <td>[`getMessage`](#function-getmessage)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_broadcast_message_event_1a32bd00d3d3836b81cef9852f7ace5a36">
+    <td>[`getRecipients`](#function-getrecipients)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_broadcast_message_event_1a38fe78c4c7758c30f1e08d930417c276">
+    <td>[`setMessage`](#function-setmessage)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-variable"/> NAME
+
+```cpp
+const std::string endstone::BroadcastMessageEvent::NAME;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> BroadcastMessageEvent
+
+```cpp
+inline endstone::BroadcastMessageEvent::BroadcastMessageEvent (
+    bool async,
+    Message message,
+    std::unordered_set< const CommandSender * > recipients
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getEventName
+
+```cpp
+inline virtual std::string endstone::BroadcastMessageEvent::getEventName () override const
+```
+
+
+Gets a user-friendly identifier for this event.
+
+
+
+
+**Returns:**
+
+name of this event 
+
+
+
+
+
+        
+Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
+
+### <code className="doc-symbol doc-symbol-function"/> getMessage
+
+```cpp
+inline const Message & endstone::BroadcastMessageEvent::getMessage () const
+```
+
+
+Get the message to broadcast.
+
+
+
+
+**Returns:**
+
+Message to broadcast 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getRecipients
+
+```cpp
+inline const std::unordered_set< const CommandSender * > & endstone::BroadcastMessageEvent::getRecipients () const
+```
+
+
+Gets a set of recipients that this broadcast message will be displayed to.
+
+
+
+
+**Returns:**
+
+All CommandSenders who will see this broadcast message 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setMessage
+
+```cpp
+inline void endstone::BroadcastMessageEvent::setMessage (
+    Message message
+) 
+```
+
+
+Set the message to broadcast.
+
+
+
+
+**Parameters:**
+
+
+* `message` New message to broadcast 
+
+
+
+
+        

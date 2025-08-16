@@ -1,0 +1,182 @@
+---
+title: "ActorExplodeEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::ActorExplodeEvent
+
+Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+
+
+
+
+
+
+
+
+
+**Attributes:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_actor_explode_event_1a538b328811580be48ba12a6e72d81f63">
+    <td>[`NAME`](#variable-name)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_actor_explode_event_1a6351fdf619ffc0dbdc147eab56f716a9">
+    <td>[`ActorExplodeEvent`](#function-actorexplodeevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_explode_event_1a0b009ccfd36dbb770f245f1d30d4e348">
+    <td>[`getBlockList`](#function-getblocklist-12)</td>
+    <td>Returns the list of blocks that would have been removed or were removed from the explosion event.</td>
+</tr>
+<tr key="classendstone_1_1_actor_explode_event_1a1a6ba8571a20ec1325ec4a9aa45a1a0a">
+    <td>[`getBlockList`](#function-getblocklist-22)</td>
+    <td>Returns the list of blocks that would have been removed or were removed from the explosion event.</td>
+</tr>
+<tr key="classendstone_1_1_actor_explode_event_1a5cc3e0325db3f67173ae516314fae999">
+    <td>[`getEventName`](#function-geteventname)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_explode_event_1a503cfca64807cacb36ca3c41de78be28">
+    <td>[`getLocation`](#function-getlocation)</td>
+    <td>Returns the location where the explosion happened.</td>
+</tr>
+<tr key="classendstone_1_1_actor_explode_event_1aeb8f75b17f04f27c4e4e64cd1f56d2f2">
+    <td>[`~ActorExplodeEvent`](#function-actorexplodeevent)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-variable"/> NAME
+
+```cpp
+const std::string endstone::ActorExplodeEvent::NAME;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> ActorExplodeEvent
+
+```cpp
+inline explicit endstone::ActorExplodeEvent::ActorExplodeEvent (
+    Actor & actor,
+    Location location,
+    BlockList blocks
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getBlockList
+
+```cpp
+inline const BlockList & endstone::ActorExplodeEvent::getBlockList () const
+```
+
+Returns the list of blocks that would have been removed or were removed from the explosion event.
+
+
+
+**Returns:**
+
+All blown-up blocks 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getBlockList
+
+```cpp
+inline BlockList & endstone::ActorExplodeEvent::getBlockList () 
+```
+
+Returns the list of blocks that would have been removed or were removed from the explosion event.
+
+
+
+**Returns:**
+
+All blown-up blocks 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getEventName
+
+```cpp
+inline virtual std::string endstone::ActorExplodeEvent::getEventName () override const
+```
+
+
+Gets a user-friendly identifier for this event.
+
+
+
+
+**Returns:**
+
+name of this event 
+
+
+
+
+
+        
+Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
+
+### <code className="doc-symbol doc-symbol-function"/> getLocation
+
+```cpp
+inline const Location & endstone::ActorExplodeEvent::getLocation () const
+```
+
+Returns the location where the explosion happened.
+
+It is not possible to get this value from the Entity as the Entity no longer exists in the world.
+
+
+
+
+**Returns:**
+
+The location of the explosion 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~ActorExplodeEvent
+
+```cpp
+endstone::ActorExplodeEvent::~ActorExplodeEvent () override
+```
+

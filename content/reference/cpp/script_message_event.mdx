@@ -1,0 +1,175 @@
+---
+title: "ScriptMessageEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::ScriptMessageEvent
+
+Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+
+
+
+
+
+
+
+
+
+**Attributes:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_script_message_event_1a640a9ad1b0b372ef2c0abc125e49bc04">
+    <td>[`NAME`](#variable-name)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_script_message_event_1a5ca8c894f05907c46541fdd1546ec1b7">
+    <td>[`ScriptMessageEvent`](#function-scriptmessageevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_script_message_event_1a23b45d138202bb0494068a76a775d703">
+    <td>[`getEventName`](#function-geteventname)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_script_message_event_1a55b3bd04740ef0190905a76341117530">
+    <td>[`getMessage`](#function-getmessage)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_script_message_event_1ab02541c1eb8d43ffb49c7a0fd11bd1bf">
+    <td>[`getMessageId`](#function-getmessageid)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_script_message_event_1af4876c77b5ba5b1a898318cc2fd71fe9">
+    <td>[`getSender`](#function-getsender)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-variable"/> NAME
+
+```cpp
+const std::string endstone::ScriptMessageEvent::NAME;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> ScriptMessageEvent
+
+```cpp
+inline endstone::ScriptMessageEvent::ScriptMessageEvent (
+    std::string message_id,
+    std::string message,
+    const CommandSender & sender
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getEventName
+
+```cpp
+inline virtual std::string endstone::ScriptMessageEvent::getEventName () override const
+```
+
+
+Gets a user-friendly identifier for this event.
+
+
+
+
+**Returns:**
+
+name of this event 
+
+
+
+
+
+        
+Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
+
+### <code className="doc-symbol doc-symbol-function"/> getMessage
+
+```cpp
+inline const std::string & endstone::ScriptMessageEvent::getMessage () const
+```
+
+
+Get the message to send.
+
+
+
+
+**Returns:**
+
+Message to send 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getMessageId
+
+```cpp
+inline const std::string & endstone::ScriptMessageEvent::getMessageId () const
+```
+
+
+Get the message id to send.
+
+
+
+
+**Returns:**
+
+Message id to send 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getSender
+
+```cpp
+inline const CommandSender & endstone::ScriptMessageEvent::getSender () const
+```
+
+
+Gets the command sender who initiated the command
+
+
+
+
+**Returns:**
+
+[**Command**](classendstone_1_1_command.md) sender who initiated the command 
+
+
+
+
+
+        

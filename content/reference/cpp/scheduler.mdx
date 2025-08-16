@@ -1,0 +1,438 @@
+---
+title: "Scheduler"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::Scheduler
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_scheduler_1ae1d4003f6f8035f2679b91c09441d53a">
+    <td>[`cancelTask`](#function-canceltask)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_scheduler_1aff8ea940f0038a278a0d5f230280398c">
+    <td>[`cancelTasks`](#function-canceltasks)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_scheduler_1a990deb156627e87b5e35ade1b72a58e4">
+    <td>[`getPendingTasks`](#function-getpendingtasks)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_scheduler_1ae47c4d2e864c797a41d33be6982e9a43">
+    <td>[`isQueued`](#function-isqueued)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_scheduler_1a8b427434811562ba2b4a49f1bd2e3e82">
+    <td>[`isRunning`](#function-isrunning)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_scheduler_1a9f4787f0c3bcbd771935a8a58fb40198">
+    <td>[`runTask`](#function-runtask)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_scheduler_1a00bc012bc77248bfe0334f0e7b3020a2">
+    <td>[`runTaskAsync`](#function-runtaskasync)</td>
+    <td>Returns a task that will be executed asynchronously on the next server tick.</td>
+</tr>
+<tr key="classendstone_1_1_scheduler_1a756a006b06a7ceca85281bf4b1928631">
+    <td>[`runTaskLater`](#function-runtasklater)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_scheduler_1aa025f22de368fa7a952d874e6c47af6e">
+    <td>[`runTaskLaterAsync`](#function-runtasklaterasync)</td>
+    <td>Returns a task that will be executed asynchronously after the specified number of server ticks.</td>
+</tr>
+<tr key="classendstone_1_1_scheduler_1a5e51e79411db6d37584d8ef311c34d16">
+    <td>[`runTaskTimer`](#function-runtasktimer)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_scheduler_1ace8829c467271bbf23c72ebfb821aca2">
+    <td>[`runTaskTimerAsync`](#function-runtasktimerasync)</td>
+    <td>Returns a task that will be executed repeatedly (and asynchronously) until cancelled, starting after the specified number of server ticks.</td>
+</tr>
+<tr key="classendstone_1_1_scheduler_1a869448c7e94100977f5c3026c6a16a45">
+    <td>[`~Scheduler`](#function-scheduler)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> cancelTask
+
+```cpp
+virtual void endstone::Scheduler::cancelTask (
+    TaskId id
+) = 0
+```
+
+
+Removes task from scheduler.
+
+
+
+
+**Parameters:**
+
+
+* `taskId` Id number of task to be removed 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> cancelTasks
+
+```cpp
+virtual void endstone::Scheduler::cancelTasks (
+    Plugin & plugin
+) = 0
+```
+
+
+Removes all tasks associated with a particular plugin from the scheduler.
+
+
+
+
+**Parameters:**
+
+
+* `plugin` Owner of tasks to be removed 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPendingTasks
+
+```cpp
+virtual std::vector< Task * > endstone::Scheduler::getPendingTasks () = 0
+```
+
+
+Returns a vector of all pending tasks.
+
+
+The ordering of the tasks is NOT related to their order of execution.
+
+
+
+
+**Returns:**
+
+Pending tasks 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isQueued
+
+```cpp
+virtual bool endstone::Scheduler::isQueued (
+    TaskId id
+) = 0
+```
+
+
+Check if the task queued to be run later.
+
+
+
+
+**Parameters:**
+
+
+* `taskId` The task to check.
+
+
+
+**Returns:**
+
+If the task is queued to be run. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isRunning
+
+```cpp
+virtual bool endstone::Scheduler::isRunning (
+    TaskId id
+) = 0
+```
+
+
+Check if the task currently running.
+
+
+
+
+**Parameters:**
+
+
+* `taskId` The task to check.
+
+
+
+**Returns:**
+
+If the task is currently running. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> runTask
+
+```cpp
+virtual std::shared_ptr< Task > endstone::Scheduler::runTask (
+    Plugin & plugin,
+    std::function< void()> task
+) = 0
+```
+
+
+Returns a task that will be executed synchronously on the next server tick.
+
+
+
+
+**Parameters:**
+
+
+* `plugin` the reference to the plugin scheduling task 
+* `task` the task to be run 
+
+
+
+**Returns:**
+
+a [**Task**](classendstone_1_1_task.md) that contains the id number (nullptr if task is empty) 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> runTaskAsync
+
+```cpp
+virtual std::shared_ptr< Task > endstone::Scheduler::runTaskAsync (
+    Plugin & plugin,
+    std::function< void()> task
+) = 0
+```
+
+Returns a task that will be executed asynchronously on the next server tick.
+
+
+
+**Remark:**
+
+Asynchronous tasks should never access any Endstone API
+
+
+
+
+**Parameters:**
+
+
+* `plugin` the reference to the plugin scheduling task 
+* `task` the task to be run 
+
+
+
+**Returns:**
+
+a [**Task**](classendstone_1_1_task.md) that contains the id number (nullptr if task is empty) 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> runTaskLater
+
+```cpp
+virtual std::shared_ptr< Task > endstone::Scheduler::runTaskLater (
+    Plugin & plugin,
+    std::function< void()> task,
+    std::uint64_t delay
+) = 0
+```
+
+
+Returns a task that will be executed synchronously after the specified number of server ticks.
+
+
+
+
+**Parameters:**
+
+
+* `plugin` the reference to the plugin scheduling task 
+* `task` the task to be run 
+* `delay` the ticks to wait before running the task 
+
+
+
+**Returns:**
+
+a [**Task**](classendstone_1_1_task.md) that contains the id number (nullptr if task is empty) 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> runTaskLaterAsync
+
+```cpp
+virtual std::shared_ptr< Task > endstone::Scheduler::runTaskLaterAsync (
+    Plugin & plugin,
+    std::function< void()> task,
+    std::uint64_t delay
+) = 0
+```
+
+Returns a task that will be executed asynchronously after the specified number of server ticks.
+
+
+
+**Remark:**
+
+Asynchronous tasks should never access any Endstone API
+
+
+
+
+**Parameters:**
+
+
+* `plugin` the reference to the plugin scheduling task 
+* `task` the task to be run 
+* `delay` the ticks to wait before running the task 
+
+
+
+**Returns:**
+
+a [**Task**](classendstone_1_1_task.md) that contains the id number (nullptr if task is empty) 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> runTaskTimer
+
+```cpp
+virtual std::shared_ptr< Task > endstone::Scheduler::runTaskTimer (
+    Plugin & plugin,
+    std::function< void()> task,
+    std::uint64_t delay,
+    std::uint64_t period
+) = 0
+```
+
+
+Returns a task that will be executed repeatedly (and synchronously) until cancelled, starting after the specified number of server ticks.
+
+
+
+
+**Parameters:**
+
+
+* `plugin` the reference to the plugin scheduling task 
+* `task` the task to be run 
+* `delay` the ticks to wait before running the task 
+* `period` the ticks to wait between runs 
+
+
+
+**Returns:**
+
+a [**Task**](classendstone_1_1_task.md) that contains the id number (nullptr if task is empty) 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> runTaskTimerAsync
+
+```cpp
+virtual std::shared_ptr< Task > endstone::Scheduler::runTaskTimerAsync (
+    Plugin & plugin,
+    std::function< void()> task,
+    std::uint64_t delay,
+    std::uint64_t period
+) = 0
+```
+
+Returns a task that will be executed repeatedly (and asynchronously) until cancelled, starting after the specified number of server ticks.
+
+
+
+**Remark:**
+
+Asynchronous tasks should never access any Endstone API
+
+
+
+
+**Parameters:**
+
+
+* `plugin` the reference to the plugin scheduling task 
+* `task` the task to be run 
+* `delay` the ticks to wait before running the task 
+* `period` the ticks to wait between runs 
+
+
+
+**Returns:**
+
+a [**Task**](classendstone_1_1_task.md) that contains the id number (nullptr if task is empty) 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~Scheduler
+
+```cpp
+virtual endstone::Scheduler::~Scheduler () = default
+```
+

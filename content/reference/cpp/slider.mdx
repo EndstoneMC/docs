@@ -1,0 +1,338 @@
+---
+title: "Slider"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::Slider
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_slider_1a9747b93fdcc402378699b5d3d69dc81b">
+    <td>[`Slider`](#function-slider-12)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_slider_1aa4e6a206a483a5e859ea69a4b4c8e798">
+    <td>[`Slider`](#function-slider-22)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_slider_1a40402a633fa41306b80e4da2cd84b99a">
+    <td>[`getDefaultValue`](#function-getdefaultvalue)</td>
+    <td>Gets the default value of the slider.</td>
+</tr>
+<tr key="classendstone_1_1_slider_1ab8e94955a47d5eaedac0e06ab350f7f2">
+    <td>[`getLabel`](#function-getlabel)</td>
+    <td>Gets the label of the toggle.</td>
+</tr>
+<tr key="classendstone_1_1_slider_1a678964a83e4820871d4b99dd2c7a1b45">
+    <td>[`getMax`](#function-getmax)</td>
+    <td>Gets the maximum value of the slider.</td>
+</tr>
+<tr key="classendstone_1_1_slider_1a888e209ddf6c3e769b319e9728843a63">
+    <td>[`getMin`](#function-getmin)</td>
+    <td>Gets the minimum value of the slider.</td>
+</tr>
+<tr key="classendstone_1_1_slider_1acc5394db6cb1a0c2750702f2473163ce">
+    <td>[`getStep`](#function-getstep)</td>
+    <td>Gets the step size of the slider.</td>
+</tr>
+<tr key="classendstone_1_1_slider_1a72c66f99531b81c256375d5d530d058c">
+    <td>[`setDefaultValue`](#function-setdefaultvalue)</td>
+    <td>Sets the default value of the slider.</td>
+</tr>
+<tr key="classendstone_1_1_slider_1acf2217bdc5441b3cbe9a0716fca0f2f9">
+    <td>[`setLabel`](#function-setlabel)</td>
+    <td>Sets the label of the toggle.</td>
+</tr>
+<tr key="classendstone_1_1_slider_1a22f05a1703d94aa0a797e73d202bce5f">
+    <td>[`setMax`](#function-setmax)</td>
+    <td>Sets the maximum value of the slider.</td>
+</tr>
+<tr key="classendstone_1_1_slider_1ae07e1917f5f43db8cb19858ff92cde24">
+    <td>[`setMin`](#function-setmin)</td>
+    <td>Sets the minimum value of the slider.</td>
+</tr>
+<tr key="classendstone_1_1_slider_1afe6aff5dcd3a303663266990ee107cd8">
+    <td>[`setStep`](#function-setstep)</td>
+    <td>Sets the step size of the slider.</td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> Slider
+
+```cpp
+endstone::Slider::Slider () = default
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> Slider
+
+```cpp
+inline explicit endstone::Slider::Slider (
+    Message label,
+    float min,
+    float max,
+    float step,
+    std::optional< float > default_value=std::nullopt
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getDefaultValue
+
+```cpp
+inline std::optional< float > endstone::Slider::getDefaultValue () const
+```
+
+Gets the default value of the slider.
+
+
+
+**Returns:**
+
+The default value of the slider. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getLabel
+
+```cpp
+inline Message endstone::Slider::getLabel () const
+```
+
+Gets the label of the toggle.
+
+
+
+**Returns:**
+
+The label of the toggle. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getMax
+
+```cpp
+inline float endstone::Slider::getMax () const
+```
+
+Gets the maximum value of the slider.
+
+
+
+**Returns:**
+
+The maximum value of the slider. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getMin
+
+```cpp
+inline float endstone::Slider::getMin () const
+```
+
+Gets the minimum value of the slider.
+
+
+
+**Returns:**
+
+The minimum value of the slider. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getStep
+
+```cpp
+inline float endstone::Slider::getStep () const
+```
+
+Gets the step size of the slider.
+
+
+
+**Returns:**
+
+The step size of the slider. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setDefaultValue
+
+```cpp
+inline Slider & endstone::Slider::setDefaultValue (
+    std::optional< float > default_value
+) 
+```
+
+Sets the default value of the slider.
+
+
+
+**Parameters:**
+
+
+* `default_value` The new default value for the slider. 
+
+
+
+**Returns:**
+
+A reference to the current slider, for function chaining. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setLabel
+
+```cpp
+inline Slider & endstone::Slider::setLabel (
+    Message label
+) 
+```
+
+Sets the label of the toggle.
+
+
+
+**Parameters:**
+
+
+* `label` The new label for the toggle. 
+
+
+
+**Returns:**
+
+A reference to the current toggle. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setMax
+
+```cpp
+inline Slider & endstone::Slider::setMax (
+    float max
+) 
+```
+
+Sets the maximum value of the slider.
+
+
+
+**Parameters:**
+
+
+* `max` The new maximum value for the slider. 
+
+
+
+**Returns:**
+
+A reference to the current slider, for function chaining. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setMin
+
+```cpp
+inline Slider & endstone::Slider::setMin (
+    float min
+) 
+```
+
+Sets the minimum value of the slider.
+
+
+
+**Parameters:**
+
+
+* `min` The new minimum value for the slider. 
+
+
+
+**Returns:**
+
+A reference to the current slider, for function chaining. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setStep
+
+```cpp
+inline Slider & endstone::Slider::setStep (
+    float step
+) 
+```
+
+Sets the step size of the slider.
+
+
+
+**Parameters:**
+
+
+* `step` The new step size for the slider. 
+
+
+
+**Returns:**
+
+A reference to the current slider, for function chaining. 
+
+
+
+
+
+        

@@ -1,0 +1,297 @@
+---
+title: "MapCanvas"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::MapCanvas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_map_canvas_1a6baa558e589385df3cdd52691c4628a6">
+    <td>[`drawImage`](#function-drawimage)</td>
+    <td>Draw an image to the map. The image will be clipped if necessary.</td>
+</tr>
+<tr key="classendstone_1_1_map_canvas_1a6fa7b6cbe5a37fc5784491b64f83c3cb">
+    <td>[`getBasePixel`](#function-getbasepixel)</td>
+    <td>Get a pixel from the layers below this canvas.</td>
+</tr>
+<tr key="classendstone_1_1_map_canvas_1a90d6935c9d5923cadaec20284eefd1ee">
+    <td>[`getBasePixelColor`](#function-getbasepixelcolor)</td>
+    <td>Get a pixel from the layers below this canvas.</td>
+</tr>
+<tr key="classendstone_1_1_map_canvas_1a49128d914ad9dd72f7c10231ea91b613">
+    <td>[`getMapView`](#function-getmapview)</td>
+    <td>Get the map this canvas is attached to.</td>
+</tr>
+<tr key="classendstone_1_1_map_canvas_1ac89828d05275822fc1d4f22abb556f76">
+    <td>[`getPixel`](#function-getpixel)</td>
+    <td>Get a pixel from the canvas.</td>
+</tr>
+<tr key="classendstone_1_1_map_canvas_1a62449e7abb0b7fe0fb4c6913aba65409">
+    <td>[`getPixelColor`](#function-getpixelcolor)</td>
+    <td>Get a pixel from the canvas.</td>
+</tr>
+<tr key="classendstone_1_1_map_canvas_1aeda347adb5b53f59d6a06288fecd8e03">
+    <td>[`setPixel`](#function-setpixel)</td>
+    <td>Draw a pixel to the canvas.</td>
+</tr>
+<tr key="classendstone_1_1_map_canvas_1a78d8511f22478ee4d575b2386dd04f2b">
+    <td>[`setPixelColor`](#function-setpixelcolor)</td>
+    <td>Draw a pixel to the canvas.</td>
+</tr>
+<tr key="classendstone_1_1_map_canvas_1a5130d9187ef7596b7fa535241dd0b8d6">
+    <td>[`~MapCanvas`](#function-mapcanvas)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> drawImage
+
+```cpp
+virtual void endstone::MapCanvas::drawImage (
+    int x,
+    int y,
+    const Image & image
+) = 0
+```
+
+Draw an image to the map. The image will be clipped if necessary.
+
+
+
+**Parameters:**
+
+
+* `x` The x coordinate of the image. 
+* `y` The y coordinate of the image. 
+* `image` The [**Image**](classendstone_1_1_image.md) to draw. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getBasePixel
+
+```cpp
+virtual int endstone::MapCanvas::getBasePixel (
+    int x,
+    int y
+) const = 0
+```
+
+Get a pixel from the layers below this canvas.
+
+
+
+**Parameters:**
+
+
+* `x` The x coordinate, from 0 to 127. 
+* `y` The y coordinate, from 0 to 127. 
+
+
+
+**Returns:**
+
+The color. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getBasePixelColor
+
+```cpp
+virtual Color endstone::MapCanvas::getBasePixelColor (
+    int x,
+    int y
+) const = 0
+```
+
+Get a pixel from the layers below this canvas.
+
+
+
+**Parameters:**
+
+
+* `x` The x coordinate, from 0 to 127.
+* `y` The y coordinate, from 0 to 127. 
+
+
+
+**Returns:**
+
+The color. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getMapView
+
+```cpp
+virtual MapView & endstone::MapCanvas::getMapView () const = 0
+```
+
+Get the map this canvas is attached to.
+
+
+
+**Returns:**
+
+The [**MapView**](classendstone_1_1_map_view.md) this canvas is attached to. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPixel
+
+```cpp
+virtual int endstone::MapCanvas::getPixel (
+    int x,
+    int y
+) const = 0
+```
+
+Get a pixel from the canvas.
+
+
+
+**Parameters:**
+
+
+* `x` The x coordinate, from 0 to 127. 
+* `y` The y coordinate, from 0 to 127. 
+
+
+
+**Returns:**
+
+The color. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPixelColor
+
+```cpp
+virtual std::optional< Color > endstone::MapCanvas::getPixelColor (
+    int x,
+    int y
+) const = 0
+```
+
+Get a pixel from the canvas.
+
+If no color is set at the given position for this canvas, then std::nullopt is returned and the color returned by [**getBasePixelColor()**](classendstone_1_1_map_canvas.md#function-getbasepixelcolor) is shown on the map.
+
+
+
+
+**Parameters:**
+
+
+* `x` The x coordinate, from 0 to 127. 
+* `y` The y coordinate, from 0 to 127. 
+
+
+
+**Returns:**
+
+The color, or std::nullopt if no color is set. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setPixel
+
+```cpp
+virtual void endstone::MapCanvas::setPixel (
+    int x,
+    int y,
+    int color
+) = 0
+```
+
+Draw a pixel to the canvas.
+
+
+
+**Parameters:**
+
+
+* `x` The x coordinate, from 0 to 127. 
+* `y` The y coordinate, from 0 to 127. 
+* `color` The color. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setPixelColor
+
+```cpp
+virtual void endstone::MapCanvas::setPixelColor (
+    int x,
+    int y,
+    std::optional< Color > color
+) = 0
+```
+
+Draw a pixel to the canvas.
+
+If std::nullopt is used as color, then the color returned by [**getBasePixelColor()**](classendstone_1_1_map_canvas.md#function-getbasepixelcolor) is shown on the map.
+
+
+
+
+**Parameters:**
+
+
+* `x` The x coordinate, from 0 to 127. 
+* `y` The y coordinate, from 0 to 127. 
+* `color` The color, or std::nullopt for base color. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~MapCanvas
+
+```cpp
+virtual endstone::MapCanvas::~MapCanvas () = default
+```
+

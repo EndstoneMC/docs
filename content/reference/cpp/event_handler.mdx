@@ -1,0 +1,179 @@
+---
+title: "EventHandler"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::EventHandler
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_event_handler_1a3b68b55031268b92cbbf29b9fb3695c7">
+    <td>[`EventHandler`](#function-eventhandler)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_event_handler_1a9f180123779aa67ed32f51753a40290c">
+    <td>[`callEvent`](#function-callevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_event_handler_1aa8bc3d7f90a485cefdf0cbae3f95ffc0">
+    <td>[`getEventType`](#function-geteventtype)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_event_handler_1a6347792cee5b002974bdf1f612d015aa">
+    <td>[`getPlugin`](#function-getplugin)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_event_handler_1ae71bf36fa904b1810f5560cdc149b474">
+    <td>[`getPriority`](#function-getpriority)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_event_handler_1a09736eece61298b452a850f687b9a8ff">
+    <td>[`isIgnoreCancelled`](#function-isignorecancelled)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> EventHandler
+
+```cpp
+inline endstone::EventHandler::EventHandler (
+    std::string event,
+    std::function< void( Event &)> executor,
+    EventPriority priority,
+    Plugin & plugin,
+    bool ignore_cancelled
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> callEvent
+
+```cpp
+inline void endstone::EventHandler::callEvent (
+    Event & event
+) const
+```
+
+
+Calls the event executor
+
+
+
+
+**Parameters:**
+
+
+* `event` The event 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getEventType
+
+```cpp
+inline std::string endstone::EventHandler::getEventType () const
+```
+
+
+Gets the event type for this registration
+
+
+
+
+**Returns:**
+
+Registered event type 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPlugin
+
+```cpp
+inline Plugin & endstone::EventHandler::getPlugin () const
+```
+
+
+Gets the plugin for this registration
+
+
+
+
+**Returns:**
+
+Registered [**Plugin**](classendstone_1_1_plugin.md) 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPriority
+
+```cpp
+inline EventPriority endstone::EventHandler::getPriority () const
+```
+
+
+Gets the priority for this registration
+
+
+
+
+**Returns:**
+
+Registered Priority 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isIgnoreCancelled
+
+```cpp
+inline bool endstone::EventHandler::isIgnoreCancelled () const
+```
+
+
+Whether this listener accepts cancelled events
+
+
+
+
+**Returns:**
+
+True when ignoring cancelled events 
+
+
+
+
+
+        

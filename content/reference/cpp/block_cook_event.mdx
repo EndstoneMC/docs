@@ -1,0 +1,135 @@
+---
+title: "BlockCookEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::BlockCookEvent
+
+Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_block_cook_event_1a75e3ce9d305c7273ddadd7cb345a5259">
+    <td>[`BlockCookEvent`](#function-blockcookevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_block_cook_event_1a0c022b567cdab73d5f74da17326cd88e">
+    <td>[`ENDSTONE\_EVENT`](#function-endstone_event)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_block_cook_event_1a0b7b3c972fa4056c0598cba0a6259b1a">
+    <td>[`getResult`](#function-getresult)</td>
+    <td>Gets the resultant ItemStack for this event.</td>
+</tr>
+<tr key="classendstone_1_1_block_cook_event_1a48bbbed0ceebb9f258cb7386ad47b15e">
+    <td>[`getSource`](#function-getsource)</td>
+    <td>Gets the smelted ItemStack for this event.</td>
+</tr>
+<tr key="classendstone_1_1_block_cook_event_1abba7e5e677bb7f21a49ebcbf84a0aa2f">
+    <td>[`setResult`](#function-setresult)</td>
+    <td>Sets the resultant ItemStack for this event.</td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> BlockCookEvent
+
+```cpp
+inline endstone::BlockCookEvent::BlockCookEvent (
+    std::unique_ptr< Block > block,
+    std::unique_ptr< ItemStack > source,
+    std::unique_ptr< ItemStack > result
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> ENDSTONE\_EVENT
+
+```cpp
+endstone::BlockCookEvent::ENDSTONE_EVENT (
+    BlockCookEvent
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getResult
+
+```cpp
+inline const ItemStack & endstone::BlockCookEvent::getResult () const
+```
+
+Gets the resultant ItemStack for this event.
+
+
+
+**Returns:**
+
+smelting result [**ItemStack**](classendstone_1_1_item_stack.md) 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getSource
+
+```cpp
+inline const ItemStack & endstone::BlockCookEvent::getSource () const
+```
+
+Gets the smelted ItemStack for this event.
+
+
+
+**Returns:**
+
+smelting source [**ItemStack**](classendstone_1_1_item_stack.md) 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setResult
+
+```cpp
+inline void endstone::BlockCookEvent::setResult (
+    std::unique_ptr< ItemStack > result
+) 
+```
+
+Sets the resultant ItemStack for this event.
+
+
+
+**Parameters:**
+
+
+* `result` new result [**ItemStack**](classendstone_1_1_item_stack.md) 
+
+
+
+
+        

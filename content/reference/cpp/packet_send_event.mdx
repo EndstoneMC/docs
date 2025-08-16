@@ -1,0 +1,220 @@
+---
+title: "PacketSendEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::PacketSendEvent
+
+Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_packet_send_event_1a0dd456687bcaac313777f30cfd48ded0">
+    <td>[`ENDSTONE\_EVENT`](#function-endstone_event)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_packet_send_event_1a5d4752bfb59aa606b2a92c577f1ca251">
+    <td>[`PacketSendEvent`](#function-packetsendevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_packet_send_event_1ada748078e0707514545961d6bd837060">
+    <td>[`getAddress`](#function-getaddress)</td>
+    <td>Gets the network address to which this packet is being sent.</td>
+</tr>
+<tr key="classendstone_1_1_packet_send_event_1a09a905e5a99059f865bcdb931bf7f230">
+    <td>[`getPacketId`](#function-getpacketid)</td>
+    <td>Gets the ID of the packet.</td>
+</tr>
+<tr key="classendstone_1_1_packet_send_event_1a5742091cbd6fd1a5883567f4509693a8">
+    <td>[`getPayload`](#function-getpayload)</td>
+    <td>Gets the raw packet data excluding the header.</td>
+</tr>
+<tr key="classendstone_1_1_packet_send_event_1ae40aec395d824f1d5759d9aff77ea4d2">
+    <td>[`getPlayer`](#function-getplayer)</td>
+    <td>Returns the player involved in this event.</td>
+</tr>
+<tr key="classendstone_1_1_packet_send_event_1a7521c9aa7ee4395b01ae312d7a14b65b">
+    <td>[`getSubClientId`](#function-getsubclientid)</td>
+    <td>Gets the SubClient ID.</td>
+</tr>
+<tr key="classendstone_1_1_packet_send_event_1a7388ad0e80c62aaf7a5d01a4e0974345">
+    <td>[`setPayload`](#function-setpayload)</td>
+    <td>Sets the raw packet data excluding the header.</td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> ENDSTONE\_EVENT
+
+```cpp
+endstone::PacketSendEvent::ENDSTONE_EVENT (
+    PacketSendEvent
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> PacketSendEvent
+
+```cpp
+inline endstone::PacketSendEvent::PacketSendEvent (
+    Player * player,
+    const int packet_id,
+    std::string_view payload,
+    SocketAddress address,
+    const int sub_client_id
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getAddress
+
+```cpp
+inline SocketAddress endstone::PacketSendEvent::getAddress () const
+```
+
+Gets the network address to which this packet is being sent.
+
+
+
+**Returns:**
+
+The [**SocketAddress**](classendstone_1_1_socket_address.md) of the destination client. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPacketId
+
+```cpp
+inline int endstone::PacketSendEvent::getPacketId () const
+```
+
+Gets the ID of the packet.
+
+
+
+**Returns:**
+
+The packet ID. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPayload
+
+```cpp
+inline std::string_view endstone::PacketSendEvent::getPayload () const
+```
+
+Gets the raw packet data excluding the header.
+
+
+
+**Returns:**
+
+The packet payload data. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPlayer
+
+```cpp
+inline Player * endstone::PacketSendEvent::getPlayer () const
+```
+
+Returns the player involved in this event.
+
+
+
+**Note:**
+
+This may return nullptr if the packet is sent before the player completes the login process.
+
+
+
+
+**Returns:**
+
+[**Player**](classendstone_1_1_player.md) who is involved in this event 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getSubClientId
+
+```cpp
+inline int endstone::PacketSendEvent::getSubClientId () const
+```
+
+Gets the SubClient ID.
+
+
+
+**Note:**
+
+Range is 0 to 3 (0 = primary client; 1-3 = split-screen clients).
+
+
+
+
+**Returns:**
+
+The SubClient ID. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setPayload
+
+```cpp
+inline void endstone::PacketSendEvent::setPayload (
+    std::string_view payload
+) 
+```
+
+Sets the raw packet data excluding the header.
+
+
+
+**Returns:**
+
+The packet payload data. 
+
+
+
+
+
+        

@@ -1,0 +1,378 @@
+---
+title: "Logger"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::Logger
+
+
+
+
+
+
+
+**Types:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_logger_1a3dbfb0b3c4c4412231d66eb623b9f144">
+    <td>[`Level`](#enum-level)</td>
+    <td>Specifies the log level.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_logger_1af01bc59b42b754ba5b7ccb19838763da">
+    <td>[`Logger`](#function-logger)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_logger_1a799b52643e31638b0e9ea99ba238dc96">
+    <td>[`critical`](#function-critical-12)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_logger_1a25c768637a0f06c9fbdfc11454cc7c3c">
+    <td>[`critical`](#function-critical-22)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_logger_1ac1666731787d092e739d07b2807929e2">
+    <td>[`debug`](#function-debug-12)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_logger_1aa0310f46bc7bd059293f61551de8dfee">
+    <td>[`debug`](#function-debug-22)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_logger_1a8537f43ecc79575866258125aa874394">
+    <td>[`error`](#function-error-12)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_logger_1a60381ba750ad53b817e80acecfd7afac">
+    <td>[`error`](#function-error-22)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_logger_1a129515baf5eca9a21431973581919acb">
+    <td>[`getName`](#function-getname)</td>
+    <td>Get the name of this Logger instance.</td>
+</tr>
+<tr key="classendstone_1_1_logger_1a1ec8137441e804605aab3bc15569ce92">
+    <td>[`info`](#function-info-12)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_logger_1a703d225d19d4d328636283bfac36c09c">
+    <td>[`info`](#function-info-22)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_logger_1a6985fcd498c81e1cf5c68bebd6f41df3">
+    <td>[`isEnabledFor`](#function-isenabledfor)</td>
+    <td>Check if the Logger instance is enabled for the given log Level .</td>
+</tr>
+<tr key="classendstone_1_1_logger_1a6e50e094bca4b5102bc61a41fe32195e">
+    <td>[`log`](#function-log-12)</td>
+    <td>Log a message at the given level.</td>
+</tr>
+<tr key="classendstone_1_1_logger_1a33cdaa9d51325eed160f1859284b6b31">
+    <td>[`log`](#function-log-22)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_logger_1a310b9bd648301066760d387ca2fe7e2a">
+    <td>[`setLevel`](#function-setlevel)</td>
+    <td>Set the logging level for this Logger instance.</td>
+</tr>
+<tr key="classendstone_1_1_logger_1a1850152708633dc08fc18d605b19371e">
+    <td>[`trace`](#function-trace-12)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_logger_1a4fb072ea887b7b9f8b423477568176bd">
+    <td>[`trace`](#function-trace-22)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_logger_1a371caa58890632671d272beaffbd7bc6">
+    <td>[`warning`](#function-warning-12)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_logger_1ae936f35dee496e1ea3a893cf6eac1bab">
+    <td>[`warning`](#function-warning-22)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_logger_1a44faaf98cb5398fbb95d7a81228caa2f">
+    <td>[`~Logger`](#function-logger)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-enum"/> Level
+
+```cpp
+enum endstone::Logger::Level {
+    Trace = 0,
+    Debug = 1,
+    Info = 2,
+    Warning = 3,
+    Error = 4,
+    Critical = 5,
+    Off = 6
+};
+```
+
+Specifies the log level.
+
+### <code className="doc-symbol doc-symbol-function"/> Logger
+
+```cpp
+endstone::Logger::Logger () = default
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> critical
+
+```cpp
+inline void endstone::Logger::critical (
+    const std::string_view message
+) const
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> critical
+
+```cpp
+template<typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int >>
+inline void endstone::Logger::critical (
+    const fmt::format_string< Args... > format,
+    Args &&... args
+) const
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> debug
+
+```cpp
+inline void endstone::Logger::debug (
+    const std::string_view message
+) const
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> debug
+
+```cpp
+template<typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int >>
+inline void endstone::Logger::debug (
+    const fmt::format_string< Args... > format,
+    Args &&... args
+) const
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> error
+
+```cpp
+inline void endstone::Logger::error (
+    const std::string_view message
+) const
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> error
+
+```cpp
+template<typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int >>
+inline void endstone::Logger::error (
+    const fmt::format_string< Args... > format,
+    Args &&... args
+) const
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getName
+
+```cpp
+virtual std::string_view endstone::Logger::getName () const = 0
+```
+
+Get the name of this Logger instance.
+
+
+
+**Returns:**
+
+The name of this [**Logger**](classendstone_1_1_logger.md) instance. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> info
+
+```cpp
+inline void endstone::Logger::info (
+    const std::string_view message
+) const
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> info
+
+```cpp
+template<typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int >>
+inline void endstone::Logger::info (
+    const fmt::format_string< Args... > format,
+    Args &&... args
+) const
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> isEnabledFor
+
+```cpp
+virtual bool endstone::Logger::isEnabledFor (
+    Level level
+) const = 0
+```
+
+Check if the Logger instance is enabled for the given log Level .
+
+
+
+**Parameters:**
+
+
+* `level` The log level to check 
+
+
+
+**Returns:**
+
+true if the logger is enabled for the [**Level**](classendstone_1_1_level.md), false otherwise. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> log
+
+```cpp
+virtual void endstone::Logger::log (
+    Level level,
+    std::string_view message
+) const = 0
+```
+
+Log a message at the given level.
+
+
+
+**Parameters:**
+
+
+* `level` The level at which the message should be logged. 
+* `message` The message to log. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> log
+
+```cpp
+template<typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int >>
+inline void endstone::Logger::log (
+    Level level,
+    const fmt::format_string< Args... > format,
+    Args &&... args
+) const
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> setLevel
+
+```cpp
+virtual void endstone::Logger::setLevel (
+    Level level
+) = 0
+```
+
+Set the logging level for this Logger instance.
+
+
+
+**Parameters:**
+
+
+* `level` The desired log level 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> trace
+
+```cpp
+inline void endstone::Logger::trace (
+    const std::string_view message
+) const
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> trace
+
+```cpp
+template<typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int >>
+inline void endstone::Logger::trace (
+    const fmt::format_string< Args... > format,
+    Args &&... args
+) const
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> warning
+
+```cpp
+inline void endstone::Logger::warning (
+    const std::string_view message
+) const
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> warning
+
+```cpp
+template<typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int >>
+inline void endstone::Logger::warning (
+    const fmt::format_string< Args... > format,
+    Args &&... args
+) const
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> ~Logger
+
+```cpp
+virtual endstone::Logger::~Logger () = default
+```
+

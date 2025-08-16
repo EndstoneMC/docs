@@ -1,0 +1,192 @@
+---
+title: "Form"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::Form
+
+**template &lt;typename T&gt;**
+
+
+
+
+
+
+**Types:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_form_1a2aa24725e41a18e53dc651e46e279e28">
+    <td>[`OnCloseCallback`](#typedef-onclosecallback)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_form_1a77028f5b2f946a921e9e118da00dbe3a">
+    <td>[`Form`](#function-form)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_form_1ad0a5721b99d2d9bd30eec414d9c218b6">
+    <td>[`getOnClose`](#function-getonclose)</td>
+    <td>Gets the on close callback of the form.</td>
+</tr>
+<tr key="classendstone_1_1_form_1a08c5096cfa0a1fb79c160d3bd0890679">
+    <td>[`getTitle`](#function-gettitle)</td>
+    <td>Gets the title of the form.</td>
+</tr>
+<tr key="classendstone_1_1_form_1aff78b36d4798b8185ea1ff93f6260f63">
+    <td>[`setOnClose`](#function-setonclose)</td>
+    <td>Sets the on close callback of the form.</td>
+</tr>
+<tr key="classendstone_1_1_form_1a85daf37f20cdd2ce9e5eff9a2179a7e0">
+    <td>[`setTitle`](#function-settitle)</td>
+    <td>Sets the title of the form.</td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-typedef"/> OnCloseCallback
+
+```cpp
+using endstone::Form< T >::OnCloseCallback =  std::function<void(Player *)>;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> Form
+
+```cpp
+explicit endstone::Form::Form () = default
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getOnClose
+
+```cpp
+inline OnCloseCallback endstone::Form::getOnClose () const
+```
+
+Gets the on close callback of the form.
+
+
+
+**Returns:**
+
+The on close callback of the form. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getTitle
+
+```cpp
+inline Message endstone::Form::getTitle () const
+```
+
+Gets the title of the form.
+
+
+
+**Returns:**
+
+The title of the form. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setOnClose
+
+```cpp
+inline T & endstone::Form::setOnClose (
+    OnCloseCallback on_close
+) 
+```
+
+Sets the on close callback of the form.
+
+
+
+**Parameters:**
+
+
+* `on_close` The callback to be set. 
+
+
+
+**Returns:**
+
+A reference to the current form. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setTitle
+
+```cpp
+inline T & endstone::Form::setTitle (
+    Message title
+) 
+```
+
+Sets the title of the form.
+
+
+
+**Parameters:**
+
+
+* `title` The title of the form to be set. 
+
+
+
+**Returns:**
+
+A reference to the current form. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-variable"/> on\_close\_
+
+```cpp
+OnCloseCallback endstone::Form< T >::on_close_;
+```
+
+
+### <code className="doc-symbol doc-symbol-variable"/> title\_
+
+```cpp
+Message endstone::Form< T >::title_;
+```
+

@@ -1,0 +1,182 @@
+---
+title: "ItemFactory"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::ItemFactory
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_item_factory_1ae0dbbe25981c64f3d65e770cc72bf6c5">
+    <td>[`asMetaFor`](#function-asmetafor)</td>
+    <td>Returns an appropriate item meta for the specified item type.</td>
+</tr>
+<tr key="classendstone_1_1_item_factory_1a3addbbc69664b64ec93e2a0ceb8b7217">
+    <td>[`equals`](#function-equals)</td>
+    <td>This method is used to compare two ItemMeta objects.</td>
+</tr>
+<tr key="classendstone_1_1_item_factory_1afb7e6bf34ea8428da0faa4b49ec70f6e">
+    <td>[`getItemMeta`](#function-getitemmeta)</td>
+    <td>This creates a new item meta for the item type.</td>
+</tr>
+<tr key="classendstone_1_1_item_factory_1ad23cc36994459bd2182ff507d30e760c">
+    <td>[`isApplicable`](#function-isapplicable)</td>
+    <td>This method checks the item meta to confirm that it is applicable (no data lost if applied) to the specified ItemStack .</td>
+</tr>
+<tr key="classendstone_1_1_item_factory_1aad09d9483ab4cada38c27ef7b735f6da">
+    <td>[`~ItemFactory`](#function-itemfactory)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> asMetaFor
+
+```cpp
+virtual std::unique_ptr< ItemMeta > endstone::ItemFactory::asMetaFor (
+    const ItemMeta * meta,
+    const std::string & type
+) const = 0
+```
+
+Returns an appropriate item meta for the specified item type.
+
+The item meta returned will always be a valid meta for a given [**ItemStack**](classendstone_1_1_item_stack.md) of the specified item type. It may be a more or less specific meta, and could also be the same meta or meta type as the parameter. The item meta returned will also always be the most appropriate meta.
+
+
+
+
+**Parameters:**
+
+
+* `meta` the meta to convert 
+* `type` the item type to convert the meta for 
+
+
+
+**Returns:**
+
+An appropriate item meta for the specified item type. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> equals
+
+```cpp
+virtual bool endstone::ItemFactory::equals (
+    const ItemMeta * meta1,
+    const ItemMeta * meta2
+) const = 0
+```
+
+This method is used to compare two ItemMeta objects.
+
+
+
+**Parameters:**
+
+
+* `meta1` First meta to compare, and may be null to indicate no data 
+* `meta2` Second meta to compare, and may be null to indicate no data 
+
+
+
+**Returns:**
+
+false if one of the meta has data the other does not, otherwise true 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getItemMeta
+
+```cpp
+virtual std::unique_ptr< ItemMeta > endstone::ItemFactory::getItemMeta (
+    const std::string & type
+) const = 0
+```
+
+This creates a new item meta for the item type.
+
+
+
+**Parameters:**
+
+
+* `type` The item type to consider as base for the meta 
+
+
+
+**Returns:**
+
+a new [**ItemMeta**](classendstone_1_1_item_meta.md) that could be applied to an item stack of the specified item type 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isApplicable
+
+```cpp
+virtual bool endstone::ItemFactory::isApplicable (
+    const ItemMeta * meta,
+    const std::string & type
+) const = 0
+```
+
+This method checks the item meta to confirm that it is applicable (no data lost if applied) to the specified ItemStack .
+
+
+
+**Parameters:**
+
+
+* `meta` Meta to check 
+* `type` The item type that meta will be applied to 
+
+
+
+**Returns:**
+
+true if the meta can be applied without losing data, false otherwise 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~ItemFactory
+
+```cpp
+virtual endstone::ItemFactory::~ItemFactory () = default
+```
+

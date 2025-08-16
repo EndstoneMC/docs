@@ -1,0 +1,140 @@
+---
+title: "Criteria"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::Criteria
+
+
+
+
+
+
+
+**Types:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_criteria_1a31b8a6a25a4c37fa964fc34563a882d1">
+    <td>[`Type`](#enum-type)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_criteria_1a62d2a81d1b34cb0c271bdf470b0064de">
+    <td>[`getDefaultRenderType`](#function-getdefaultrendertype)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_criteria_1a0b64daff057e51e6c0ad4ca8ff404d21">
+    <td>[`getName`](#function-getname)</td>
+    <td>Get the name of this criteria (its unique id).</td>
+</tr>
+<tr key="classendstone_1_1_criteria_1a41b262cc7d4029a58773d1fa1e5c0eab">
+    <td>[`isReadOnly`](#function-isreadonly)</td>
+    <td>Get whether or not this criteria is read only. If read only, scoreboards with this criteria cannot have their scores changed.</td>
+</tr>
+<tr key="classendstone_1_1_criteria_1a126b4b11c3322654f2e334c892a843ff">
+    <td>[`~Criteria`](#function-criteria)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-enum"/> Type
+
+```cpp
+enum endstone::Criteria::Type {
+    Dummy
+};
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getDefaultRenderType
+
+```cpp
+virtual RenderType endstone::Criteria::getDefaultRenderType () const = 0
+```
+
+
+Get the [**RenderType**](namespaceendstone.md#enum-rendertype) used by default for this criteria.
+
+
+
+
+**Returns:**
+
+the default render type 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getName
+
+```cpp
+virtual std::string endstone::Criteria::getName () const = 0
+```
+
+Get the name of this criteria (its unique id).
+
+
+
+**Returns:**
+
+the name 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isReadOnly
+
+```cpp
+virtual bool endstone::Criteria::isReadOnly () const = 0
+```
+
+Get whether or not this criteria is read only. If read only, scoreboards with this criteria cannot have their scores changed.
+
+
+
+**Returns:**
+
+true if read only, false otherwise 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~Criteria
+
+```cpp
+virtual endstone::Criteria::~Criteria () = default
+```
+

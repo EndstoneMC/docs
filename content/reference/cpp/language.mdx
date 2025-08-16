@@ -1,0 +1,270 @@
+---
+title: "Language"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::Language
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_language_1a4a6fdc89482f25a189791fda12b083e6">
+    <td>[`getLocale`](#function-getlocale)</td>
+    <td>Gets the current locale.</td>
+</tr>
+<tr key="classendstone_1_1_language_1a0bc2d7dd2a9b9b43aeb57f5278a4cb7e">
+    <td>[`translate`](#function-translate-16)</td>
+    <td>Translates a given text into the current locale.</td>
+</tr>
+<tr key="classendstone_1_1_language_1aed24e5f934caf4816cb8471818ee2335">
+    <td>[`translate`](#function-translate-26)</td>
+    <td>Translates a given text into a specific locale.</td>
+</tr>
+<tr key="classendstone_1_1_language_1acbd599919da84faee5aa55eaf8440d6c">
+    <td>[`translate`](#function-translate-36)</td>
+    <td>Translates a given text using a set of parameters for the current locale.</td>
+</tr>
+<tr key="classendstone_1_1_language_1a8a6cde954fdb3b2b623f68346c2906e1">
+    <td>[`translate`](#function-translate-46)</td>
+    <td>Translates a given text using a set of parameters for a specific locale.</td>
+</tr>
+<tr key="classendstone_1_1_language_1a633b4bcff201523d59123b7da61ab324">
+    <td>[`translate`](#function-translate-56)</td>
+    <td>Translates a Translatable object into the current locale.</td>
+</tr>
+<tr key="classendstone_1_1_language_1a41d81b4bfb0d53c5aae61c7312b8a11c">
+    <td>[`translate`](#function-translate-66)</td>
+    <td>Translates a Translatable object into a specific locale.</td>
+</tr>
+<tr key="classendstone_1_1_language_1a62acb7590ea7237ef734b6c98b585c0b">
+    <td>[`~Language`](#function-language)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> getLocale
+
+```cpp
+virtual std::string endstone::Language::getLocale () const = 0
+```
+
+Gets the current locale.
+
+
+
+**Returns:**
+
+A string representing the current locale (e.g., "en\_US"). 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> translate
+
+```cpp
+virtual std::string endstone::Language::translate (
+    std::string text
+) const = 0
+```
+
+Translates a given text into the current locale.
+
+
+
+**Parameters:**
+
+
+* `text` The text to be translated. 
+
+
+
+**Returns:**
+
+The translated text in the current locale. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> translate
+
+```cpp
+virtual std::string endstone::Language::translate (
+    std::string text,
+    std::string locale
+) const = 0
+```
+
+Translates a given text into a specific locale.
+
+
+
+**Parameters:**
+
+
+* `text` The text to be translated. 
+* `locale` The locale identifier for the desired translation (e.g., "en\_US"). 
+
+
+
+**Returns:**
+
+The translated text in the specified locale. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> translate
+
+```cpp
+virtual std::string endstone::Language::translate (
+    std::string text,
+    std::vector< std::string > params
+) const = 0
+```
+
+Translates a given text using a set of parameters for the current locale.
+
+
+
+**Parameters:**
+
+
+* `text` The text to be translated. 
+* `params` A list of parameters to be used in the translation. 
+
+
+
+**Returns:**
+
+The translated text in the current locale, with parameters applied. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> translate
+
+```cpp
+virtual std::string endstone::Language::translate (
+    std::string text,
+    std::vector< std::string > params,
+    std::string locale
+) const = 0
+```
+
+Translates a given text using a set of parameters for a specific locale.
+
+
+
+**Parameters:**
+
+
+* `text` The text to be translated. 
+* `params` A list of parameters to be used in the translation. 
+* `locale` The locale identifier for the desired translation (e.g., "en\_US"). 
+
+
+
+**Returns:**
+
+The translated text in the specified locale, with parameters applied. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> translate
+
+```cpp
+virtual std::string endstone::Language::translate (
+    Translatable translatable
+) const = 0
+```
+
+Translates a Translatable object into the current locale.
+
+
+
+**Parameters:**
+
+
+* `translatable` A [**Translatable**](classendstone_1_1_translatable.md) object containing text and parameters. 
+
+
+
+**Returns:**
+
+The translated text in the current locale. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> translate
+
+```cpp
+virtual std::string endstone::Language::translate (
+    Translatable translatable,
+    std::string locale
+) const = 0
+```
+
+Translates a Translatable object into a specific locale.
+
+
+
+**Parameters:**
+
+
+* `translatable` A [**Translatable**](classendstone_1_1_translatable.md) object containing text and parameters. 
+* `locale` The locale identifier for the desired translation (e.g., "en\_US"). 
+
+
+
+**Returns:**
+
+The translated text in the specified locale. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~Language
+
+```cpp
+virtual endstone::Language::~Language () = default
+```
+

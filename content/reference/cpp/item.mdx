@@ -1,0 +1,242 @@
+---
+title: "Item"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::Item
+
+Bases: [`endstone::Actor`](classendstone_1_1_actor.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_item_1a7a898259f1715a166bfdd5ac7300cab8">
+    <td>[`getItemStack`](#function-getitemstack)</td>
+    <td>Gets the item stack associated with this item drop.</td>
+</tr>
+<tr key="classendstone_1_1_item_1a3256b7b25cc3a2e8a59a18ea471c386d">
+    <td>[`getPickupDelay`](#function-getpickupdelay)</td>
+    <td>Gets the delay before this Item is available to be picked up by players.</td>
+</tr>
+<tr key="classendstone_1_1_item_1ab8e408c96b5ddb96277d89bdebf186ae">
+    <td>[`getThrower`](#function-getthrower)</td>
+    <td>Get the thrower of this item.</td>
+</tr>
+<tr key="classendstone_1_1_item_1ae9d1acdd426e2abdaa9a7d0772e013a9">
+    <td>[`isUnlimitedLifetime`](#function-isunlimitedlifetime)</td>
+    <td>Gets if this Item lives forever.</td>
+</tr>
+<tr key="classendstone_1_1_item_1af161f37341629c74503408f7ebfeb0e1">
+    <td>[`setItemStack`](#function-setitemstack)</td>
+    <td>Sets the item stack associated with this item drop.</td>
+</tr>
+<tr key="classendstone_1_1_item_1a9ecb3d011f118920d313d406b0e1f7cf">
+    <td>[`setPickupDelay`](#function-setpickupdelay)</td>
+    <td>Sets the delay before this Item is available to be picked up by players.</td>
+</tr>
+<tr key="classendstone_1_1_item_1a76a67449432660c8c549c9e578fbf549">
+    <td>[`setThrower`](#function-setthrower)</td>
+    <td>Set the thrower of this item.</td>
+</tr>
+<tr key="classendstone_1_1_item_1aa75743e9275be2335852f72f8e77a879">
+    <td>[`setUnlimitedLifetime`](#function-setunlimitedlifetime)</td>
+    <td>Sets if this Item should live forever.</td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> getItemStack
+
+```cpp
+virtual std::unique_ptr< ItemStack > endstone::Item::getItemStack () const = 0
+```
+
+Gets the item stack associated with this item drop.
+
+
+
+**Returns:**
+
+An item stack. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPickupDelay
+
+```cpp
+virtual int endstone::Item::getPickupDelay () const = 0
+```
+
+Gets the delay before this Item is available to be picked up by players.
+
+
+
+**Returns:**
+
+Remaining delay 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getThrower
+
+```cpp
+virtual std::optional< std::int64_t > endstone::Item::getThrower () const = 0
+```
+
+Get the thrower of this item.
+
+
+
+**Note:**
+
+The thrower is the entity which dropped the item.
+
+
+
+
+**Returns:**
+
+unique id of thrower 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isUnlimitedLifetime
+
+```cpp
+virtual bool endstone::Item::isUnlimitedLifetime () const = 0
+```
+
+Gets if this Item lives forever.
+
+
+
+**Returns:**
+
+true if the lifetime is unlimited 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setItemStack
+
+```cpp
+virtual void endstone::Item::setItemStack (
+    const ItemStack & stack
+) = 0
+```
+
+Sets the item stack associated with this item drop.
+
+
+
+**Parameters:**
+
+
+* `stack` An item stack. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setPickupDelay
+
+```cpp
+virtual void endstone::Item::setPickupDelay (
+    int delay
+) = 0
+```
+
+Sets the delay before this Item is available to be picked up by players.
+
+
+
+**Parameters:**
+
+
+* `delay` New delay 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setThrower
+
+```cpp
+virtual void endstone::Item::setThrower (
+    std::optional< std::int64_t > thrower
+) = 0
+```
+
+Set the thrower of this item.
+
+
+
+**Note:**
+
+The thrower is the entity which dropped the item.
+
+
+
+
+**Parameters:**
+
+
+* `thrower` unique id of thrower 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setUnlimitedLifetime
+
+```cpp
+virtual void endstone::Item::setUnlimitedLifetime (
+    bool unlimited
+) = 0
+```
+
+Sets if this Item should live forever.
+
+
+
+**Parameters:**
+
+
+* `unlimited` true if the lifetime is unlimited 
+
+
+
+
+        

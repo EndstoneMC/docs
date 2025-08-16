@@ -1,0 +1,147 @@
+---
+title: "MapRenderer"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::MapRenderer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_map_renderer_1ac44bbcfebbdd168c39e5653ab03805ba">
+    <td>[`MapRenderer`](#function-maprenderer)</td>
+    <td>Initialize the map renderer base with the given contextual status.</td>
+</tr>
+<tr key="classendstone_1_1_map_renderer_1aa373a4708be2892341831df75a246bfc">
+    <td>[`initialize`](#function-initialize)</td>
+    <td>Initialize this MapRenderer for the given map.</td>
+</tr>
+<tr key="classendstone_1_1_map_renderer_1a2b1e4003332c6d6d04cb86417f857fd3">
+    <td>[`isContextual`](#function-iscontextual)</td>
+    <td>Get whether the renderer is contextual, i.e. has different canvases for different players.</td>
+</tr>
+<tr key="classendstone_1_1_map_renderer_1a2ffd5d14ab9ff49f698f187b14159778">
+    <td>[`render`](#function-render)</td>
+    <td>Render to the given map.</td>
+</tr>
+<tr key="classendstone_1_1_map_renderer_1a8772440cd8520c99a6ab6b3c5f4d1cbc">
+    <td>[`~MapRenderer`](#function-maprenderer)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> MapRenderer
+
+```cpp
+inline explicit endstone::MapRenderer::MapRenderer (
+    const bool is_contextual=false
+) 
+```
+
+Initialize the map renderer base with the given contextual status.
+
+
+
+**Parameters:**
+
+
+* `is_contextual` Whether the renderer is contextual. See [**isContextual()**](classendstone_1_1_map_renderer.md#function-iscontextual). 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> initialize
+
+```cpp
+inline virtual void endstone::MapRenderer::initialize (
+    MapView & map
+) 
+```
+
+Initialize this MapRenderer for the given map.
+
+
+
+**Parameters:**
+
+
+* `map` The [**MapView**](classendstone_1_1_map_view.md) being initialized. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isContextual
+
+```cpp
+inline bool endstone::MapRenderer::isContextual () const
+```
+
+Get whether the renderer is contextual, i.e. has different canvases for different players.
+
+
+
+**Returns:**
+
+true if contextual, false otherwise. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> render
+
+```cpp
+virtual void endstone::MapRenderer::render (
+    MapView & map,
+    MapCanvas & canvas,
+    Player & player
+) = 0
+```
+
+Render to the given map.
+
+
+
+**Parameters:**
+
+
+* `map` The [**MapView**](classendstone_1_1_map_view.md) being rendered to. 
+* `canvas` The canvas to use for rendering. 
+* `player` The player who triggered the rendering. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~MapRenderer
+
+```cpp
+virtual endstone::MapRenderer::~MapRenderer () = default
+```
+

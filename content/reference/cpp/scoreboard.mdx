@@ -1,0 +1,378 @@
+---
+title: "Scoreboard"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::Scoreboard
+
+Bases: `std::enable_shared_from_this< Scoreboard >`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_scoreboard_1a976b553199b897c81f0a4bf94c1b6d87">
+    <td>[`addObjective`](#function-addobjective-13)</td>
+    <td>Registers an Objective on this Scoreboard .</td>
+</tr>
+<tr key="classendstone_1_1_scoreboard_1ab92d0159661bb6de8a205e4103ffd6df">
+    <td>[`addObjective`](#function-addobjective-23)</td>
+    <td>Registers an Objective on this Scoreboard .</td>
+</tr>
+<tr key="classendstone_1_1_scoreboard_1ac5629c3d5278cce109f3ed84264d0b8b">
+    <td>[`addObjective`](#function-addobjective-33)</td>
+    <td>Registers an Objective on this Scoreboard .</td>
+</tr>
+<tr key="classendstone_1_1_scoreboard_1ab2486b647e947f8f0a87350fda36a786">
+    <td>[`clearSlot`](#function-clearslot)</td>
+    <td>Clears any objective in the specified slot.</td>
+</tr>
+<tr key="classendstone_1_1_scoreboard_1a22601ed4eb51f01df4d0548a0c4f872a">
+    <td>[`getEntries`](#function-getentries)</td>
+    <td>Gets all entries tracked by this Scoreboard .</td>
+</tr>
+<tr key="classendstone_1_1_scoreboard_1a357630b4e626f6f2d9901760321afcf4">
+    <td>[`getObjective`](#function-getobjective-12)</td>
+    <td>Gets an Objective on this Scoreboard by name.</td>
+</tr>
+<tr key="classendstone_1_1_scoreboard_1acee5ad9e97be89dad847471119ea9364">
+    <td>[`getObjective`](#function-getobjective-22)</td>
+    <td>Gets the Objective currently displayed in a DisplaySlot on this Scoreboard .</td>
+</tr>
+<tr key="classendstone_1_1_scoreboard_1acc056af206abc1d9f79f2d7d742608dd">
+    <td>[`getObjectives`](#function-getobjectives)</td>
+    <td>Gets all Objectives on this Scoreboard .</td>
+</tr>
+<tr key="classendstone_1_1_scoreboard_1a02db6d0230c7c663d03a8ce7272319a9">
+    <td>[`getObjectivesByCriteria`](#function-getobjectivesbycriteria)</td>
+    <td>Gets all Objectives of a Criteria on the Scoreboard .</td>
+</tr>
+<tr key="classendstone_1_1_scoreboard_1ac07821df6300c8f2ef9a986cabd1e00f">
+    <td>[`getScores`](#function-getscores)</td>
+    <td>Gets all scores for an entry on this Scoreboard .</td>
+</tr>
+<tr key="classendstone_1_1_scoreboard_1a4fccb1898db7abf83738d9c2ffce27ba">
+    <td>[`resetScores`](#function-resetscores)</td>
+    <td>Removes all scores for an entry on this Scoreboard .</td>
+</tr>
+<tr key="classendstone_1_1_scoreboard_1a3353d465636fad59aab0c4656f80ff37">
+    <td>[`~Scoreboard`](#function-scoreboard)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> addObjective
+
+```cpp
+virtual Result< std::unique_ptr< Objective > > endstone::Scoreboard::addObjective (
+    std::string name,
+    Criteria::Type criteria
+) = 0
+```
+
+Registers an Objective on this Scoreboard .
+
+
+
+**Parameters:**
+
+
+* `name` Name of the [**Objective**](classendstone_1_1_objective.md) 
+* `criteria` [**Criteria**](classendstone_1_1_criteria.md) for the [**Objective**](classendstone_1_1_objective.md) 
+
+
+
+**Returns:**
+
+A reference to the newly registered [**Objective**](classendstone_1_1_objective.md). 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> addObjective
+
+```cpp
+virtual Result< std::unique_ptr< Objective > > endstone::Scoreboard::addObjective (
+    std::string name,
+    Criteria::Type criteria,
+    std::string display_name
+) = 0
+```
+
+Registers an Objective on this Scoreboard .
+
+
+
+**Parameters:**
+
+
+* `name` Name of the [**Objective**](classendstone_1_1_objective.md) 
+* `criteria` [**Criteria**](classendstone_1_1_criteria.md) type for the [**Objective**](classendstone_1_1_objective.md) 
+* `display_name` Name displayed to players for the [**Objective**](classendstone_1_1_objective.md). 
+
+
+
+**Returns:**
+
+A reference to the newly registered [**Objective**](classendstone_1_1_objective.md). 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> addObjective
+
+```cpp
+virtual Result< std::unique_ptr< Objective > > endstone::Scoreboard::addObjective (
+    std::string name,
+    Criteria::Type criteria,
+    std::string display_name,
+    RenderType render_type
+) = 0
+```
+
+Registers an Objective on this Scoreboard .
+
+
+
+**Parameters:**
+
+
+* `name` Name of the [**Objective**](classendstone_1_1_objective.md) 
+* `criteria` [**Criteria**](classendstone_1_1_criteria.md) type for the [**Objective**](classendstone_1_1_objective.md) 
+* `display_name` Name displayed to players for the [**Objective**](classendstone_1_1_objective.md). 
+* `render_type` Manner of rendering the [**Objective**](classendstone_1_1_objective.md) 
+
+
+
+**Returns:**
+
+A reference to the newly registered [**Objective**](classendstone_1_1_objective.md). 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> clearSlot
+
+```cpp
+virtual void endstone::Scoreboard::clearSlot (
+    DisplaySlot slot
+) = 0
+```
+
+Clears any objective in the specified slot.
+
+
+
+**Parameters:**
+
+
+* `slot` the slot to remove objectives 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getEntries
+
+```cpp
+virtual std::vector< ScoreEntry > endstone::Scoreboard::getEntries () const = 0
+```
+
+Gets all entries tracked by this Scoreboard .
+
+
+
+**Returns:**
+
+A list of all tracked entries 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getObjective
+
+```cpp
+virtual std::unique_ptr< Objective > endstone::Scoreboard::getObjective (
+    std::string name
+) const = 0
+```
+
+Gets an Objective on this Scoreboard by name.
+
+
+
+**Parameters:**
+
+
+* `name` Name of the [**Objective**](classendstone_1_1_objective.md) 
+
+
+
+**Returns:**
+
+the [**Objective**](classendstone_1_1_objective.md) or `nullptr` if it does not exist 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getObjective
+
+```cpp
+virtual std::unique_ptr< Objective > endstone::Scoreboard::getObjective (
+    DisplaySlot slot
+) const = 0
+```
+
+Gets the Objective currently displayed in a DisplaySlot on this Scoreboard .
+
+
+
+**Parameters:**
+
+
+* `slot` The [**DisplaySlot**](namespaceendstone.md#enum-displayslot) 
+
+
+
+**Returns:**
+
+the [**Objective**](classendstone_1_1_objective.md) currently displayed or `nullptr` if nothing is displayed in that [**DisplaySlot**](namespaceendstone.md#enum-displayslot) 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getObjectives
+
+```cpp
+virtual std::vector< std::unique_ptr< Objective > > endstone::Scoreboard::getObjectives () const = 0
+```
+
+Gets all Objectives on this Scoreboard .
+
+
+
+**Returns:**
+
+A list of all Objectives on this [**Scoreboard**](classendstone_1_1_scoreboard.md) 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getObjectivesByCriteria
+
+```cpp
+virtual std::vector< std::unique_ptr< Objective > > endstone::Scoreboard::getObjectivesByCriteria (
+    Criteria::Type criteria
+) const = 0
+```
+
+Gets all Objectives of a Criteria on the Scoreboard .
+
+
+
+**Parameters:**
+
+
+* `criteria` [**Criteria**](classendstone_1_1_criteria.md) type to search by 
+
+
+
+**Returns:**
+
+A list of Objectives using the specified [**Criteria**](classendstone_1_1_criteria.md) 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getScores
+
+```cpp
+virtual std::vector< std::unique_ptr< Score > > endstone::Scoreboard::getScores (
+    ScoreEntry entry
+) const = 0
+```
+
+Gets all scores for an entry on this Scoreboard .
+
+
+
+**Parameters:**
+
+
+* `entry` the entry whose scores are being retrieved 
+
+
+
+**Returns:**
+
+a list of all scores tracked for the entry 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> resetScores
+
+```cpp
+virtual void endstone::Scoreboard::resetScores (
+    ScoreEntry entry
+) = 0
+```
+
+Removes all scores for an entry on this Scoreboard .
+
+
+
+**Parameters:**
+
+
+* `entry` the entry to drop all current scores for 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~Scoreboard
+
+```cpp
+virtual endstone::Scoreboard::~Scoreboard () = default
+```
+

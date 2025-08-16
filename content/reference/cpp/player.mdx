@@ -1,0 +1,1414 @@
+---
+title: "Player"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::Player
+
+Bases: [`endstone::Mob`](classendstone_1_1_mob.md),  [`endstone::OfflinePlayer`](classendstone_1_1_offline_player.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_player_1a7487bdbd73d71e461239d377790d377c">
+    <td>[`closeForm`](#function-closeform)</td>
+    <td>Closes the forms that are currently open for the player.</td>
+</tr>
+<tr key="classendstone_1_1_player_1ae4202aac53995316c87c800d8dc900a6">
+    <td>[`getAddress`](#function-getaddress)</td>
+    <td>Gets the socket address of this player.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a981dfc3f6b3fd184569c64904401300f">
+    <td>[`getAllowFlight`](#function-getallowflight)</td>
+    <td>Determines if the Player is allowed to fly via jump key double-tap.</td>
+</tr>
+<tr key="classendstone_1_1_player_1ab370677b653ca04c9c9bab16703521f8">
+    <td>[`getDeviceId`](#function-getdeviceid)</td>
+    <td>Gets the player's current device id.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a1113f3095eaadb6a4d207033d3eca8d5">
+    <td>[`getDeviceOS`](#function-getdeviceos)</td>
+    <td>Gets the player's current device's operation system (OS).</td>
+</tr>
+<tr key="classendstone_1_1_player_1ad9d170fdff4261ba963e5c006e317831">
+    <td>[`getEnderChest`](#function-getenderchest)</td>
+    <td>Get the player's EnderChest inventory.</td>
+</tr>
+<tr key="classendstone_1_1_player_1af38317c0a52ffc820eb751388ebbb7b3">
+    <td>[`getExpLevel`](#function-getexplevel)</td>
+    <td>Gets the players current experience level.</td>
+</tr>
+<tr key="classendstone_1_1_player_1aefef97a98e1c193a0eeaf710f417b835">
+    <td>[`getExpProgress`](#function-getexpprogress)</td>
+    <td>Gets the players current experience progress towards the next level.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a9ee0dac306f3c2a8da7441d2f5bf5850">
+    <td>[`getFlySpeed`](#function-getflyspeed)</td>
+    <td>Gets the current allowed speed that a client can fly.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a9e1a2ff2d70cb6595962047f17bcb798">
+    <td>[`getGameMode`](#function-getgamemode)</td>
+    <td>Gets this player's current GameMode .</td>
+</tr>
+<tr key="classendstone_1_1_player_1af27fa164812bf2653148836631b98732">
+    <td>[`getGameVersion`](#function-getgameversion)</td>
+    <td>Gets the player's current game version.</td>
+</tr>
+<tr key="classendstone_1_1_player_1aad8a415455bf2fc1aff188329c311eea">
+    <td>[`getInventory`](#function-getinventory)</td>
+    <td>Get the player's inventory.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a8ffda8f3cdcb8d689f55821a1006dc05">
+    <td>[`getLocale`](#function-getlocale)</td>
+    <td>Gets the player's current locale.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a03b944357fe64bdbb905d0b65695a9af">
+    <td>[`getName`](#function-getname)</td>
+    <td>Returns the name of this player.</td>
+</tr>
+<tr key="classendstone_1_1_player_1ac05782597079f4b556eba2f0ef2d592f">
+    <td>[`getPing`](#function-getping)</td>
+    <td>Gets the player's average ping.</td>
+</tr>
+<tr key="classendstone_1_1_player_1ae04868c49c3dc7236adea90083ab7351">
+    <td>[`getScoreboard`](#function-getscoreboard)</td>
+    <td>Gets the Scoreboard displayed to this player.</td>
+</tr>
+<tr key="classendstone_1_1_player_1ad4ba000ca191ec1f66d75839c7bfe109">
+    <td>[`getSkin`](#function-getskin)</td>
+    <td>Gets the player's skin.</td>
+</tr>
+<tr key="classendstone_1_1_player_1ad91364e3a8a8a33750d38970626646fc">
+    <td>[`getTotalExp`](#function-gettotalexp)</td>
+    <td>Gets the players total experience points.</td>
+</tr>
+<tr key="classendstone_1_1_player_1af8f804891833ccea4e124df9390557b6">
+    <td>[`getWalkSpeed`](#function-getwalkspeed)</td>
+    <td>Gets the current allowed speed that a client can walk.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a47c04697994e74cdac0e8b7c4d6b09c7">
+    <td>[`getXuid`](#function-getxuid)</td>
+    <td>Returns the Xbox User ID (XUID) of this player.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a1b4b6ce04b9dc31318a3d81144c85692">
+    <td>[`giveExp`](#function-giveexp)</td>
+    <td>Gives the player the amount of experience specified.</td>
+</tr>
+<tr key="classendstone_1_1_player_1aed4057a9b18e9a6a6413acf3e6aa0d07">
+    <td>[`giveExpLevels`](#function-giveexplevels)</td>
+    <td>Gives the player the amount of experience levels specified.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a269a96d6e70d265860c915b80acce853">
+    <td>[`isFlying`](#function-isflying)</td>
+    <td>Checks to see if this player is currently flying or not.</td>
+</tr>
+<tr key="classendstone_1_1_player_1abac4577ca5fcd890b21f148b3df1e441">
+    <td>[`isOp`](#function-isop)</td>
+    <td>Checks if this player is a server operator.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a5cdb79fdd152c6c6ed8f251bd1e31523">
+    <td>[`isSneaking`](#function-issneaking)</td>
+    <td>Returns if the player is in sneak mode.</td>
+</tr>
+<tr key="classendstone_1_1_player_1abb2a1b9ae99b24fc1e80ed5f73d55646">
+    <td>[`isSprinting`](#function-issprinting)</td>
+    <td>Gets whether the player is sprinting or not.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a6dbf34f6330cf0c9e17872426e1c2eb0">
+    <td>[`kick`](#function-kick)</td>
+    <td>Kicks player with custom kick message.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a9484ec57ceb309acfcfe4b2d61026f56">
+    <td>[`performCommand`](#function-performcommand)</td>
+    <td>Makes the player perform the given command.</td>
+</tr>
+<tr key="classendstone_1_1_player_1aa1ceee8a331905251a258d2a81df0120">
+    <td>[`playSound`](#function-playsound)</td>
+    <td>Play a sound for a player at the location.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a95e6751b89ba7f4572997bf0d315c82a">
+    <td>[`resetTitle`](#function-resettitle)</td>
+    <td>Resets the title displayed to the player. This will clear the displayed title / subtitle and reset timings to their default values.</td>
+</tr>
+<tr key="classendstone_1_1_player_1acfa7b2445c386d21b05ee441c614cf9e">
+    <td>[`sendForm`](#function-sendform)</td>
+    <td>Sends a form to the player.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a68b095f25d166158a3e03d1840194896">
+    <td>[`sendPacket`](#function-sendpacket)</td>
+    <td>Sends a packet to the player.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a57b35a3e8772c746590f3331bd41fab2">
+    <td>[`sendPopup`](#function-sendpopup)</td>
+    <td>Sends this player a popup message.</td>
+</tr>
+<tr key="classendstone_1_1_player_1ace6a01c98934469d0d7a1d3c61f444be">
+    <td>[`sendTip`](#function-sendtip)</td>
+    <td>Sends this player a tip message.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a8d5283dfea450c42458778ee059ccfe6">
+    <td>[`sendTitle`](#function-sendtitle-12)</td>
+    <td>Sends a title and a subtitle message to the player. If they are empty strings, the display will be updated as such. The titles will be displayed with the default timings.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a8294c943551a0e2fa0e31362d332f41e">
+    <td>[`sendTitle`](#function-sendtitle-22)</td>
+    <td>Sends a title and a subtitle message to the player. If they are empty strings, the display will be updated as such.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a2558a7cac1d76547e05eee61db8cc1ea">
+    <td>[`sendToast`](#function-sendtoast)</td>
+    <td>Sends this player a toast notification.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a7fa8057141ec4e2a2f7f7191f0d063a3">
+    <td>[`setAllowFlight`](#function-setallowflight)</td>
+    <td>Sets if the Player is allowed to fly via jump key double-tap.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a272713ff7d75ac8baae498e0ffb4a764">
+    <td>[`setExpLevel`](#function-setexplevel)</td>
+    <td>Sets the players current experience level.</td>
+</tr>
+<tr key="classendstone_1_1_player_1af8eae30043e68aa0bc8dc28e55fa7005">
+    <td>[`setExpProgress`](#function-setexpprogress)</td>
+    <td>Sets the players current experience progress towards the next level.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a36fe0a887b27ac602c0392cc0154001b">
+    <td>[`setFlySpeed`](#function-setflyspeed)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_1aab226c60567a1904fe77765659a82e05">
+    <td>[`setFlying`](#function-setflying)</td>
+    <td>Makes this player start or stop flying.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a7ba5aa570e0cf9e5c41dcc8b1602f76e">
+    <td>[`setGameMode`](#function-setgamemode)</td>
+    <td>Sets this player's current GameMode .</td>
+</tr>
+<tr key="classendstone_1_1_player_1ab0988eb2cd4067117f2419a5a06fcedb">
+    <td>[`setOp`](#function-setop)</td>
+    <td>Sets the operator status of this player.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a90d8066d7e5715f245ab270bac8cb3ce">
+    <td>[`setScoreboard`](#function-setscoreboard)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_1a23622b02f067bad332947a0b9459fd0a">
+    <td>[`setSneaking`](#function-setsneaking)</td>
+    <td>Sets the sneak mode of the player.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a605f8e9b23c3d73b187c7eeb3959d8e4">
+    <td>[`setSprinting`](#function-setsprinting)</td>
+    <td>Sets whether the player is sprinting or not.</td>
+</tr>
+<tr key="classendstone_1_1_player_1ae06900ef1cc1453b40f6af3c8c22a28f">
+    <td>[`setWalkSpeed`](#function-setwalkspeed)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_1a296b131565af237f3942bb932d26f15e">
+    <td>[`spawnParticle`](#function-spawnparticle-14)</td>
+    <td>Spawns the particle at the target location.</td>
+</tr>
+<tr key="classendstone_1_1_player_1adb0ea6e6f598df36802fa507051fa017">
+    <td>[`spawnParticle`](#function-spawnparticle-24)</td>
+    <td>Spawns the particle at the target location.</td>
+</tr>
+<tr key="classendstone_1_1_player_1aa0489a19f104d571d9bc991c6a7b318c">
+    <td>[`spawnParticle`](#function-spawnparticle-34)</td>
+    <td>Spawns the particle at the target location.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a91fd4054da2dc306633023de123a94cf">
+    <td>[`spawnParticle`](#function-spawnparticle-44)</td>
+    <td>Spawns the particle at the target location.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a413039a8c159c88eb8d9aa4923a08521">
+    <td>[`stopAllSounds`](#function-stopallsounds)</td>
+    <td>Stop all sounds from playing.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a3cb05d6341f6edc50f3fe6d519cc82d9">
+    <td>[`stopSound`](#function-stopsound)</td>
+    <td>Stop the specified sound from playing.</td>
+</tr>
+<tr key="classendstone_1_1_player_1a1eb6fe0de5da814e8d7467817e935603">
+    <td>[`transfer`](#function-transfer)</td>
+    <td>Transfers the player to another server.</td>
+</tr>
+<tr key="classendstone_1_1_player_1ae89a62a763f1109d05e7718ae7ff9750">
+    <td>[`updateCommands`](#function-updatecommands)</td>
+    <td>Send the list of commands to the client.</td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> closeForm
+
+```cpp
+virtual void endstone::Player::closeForm () = 0
+```
+
+Closes the forms that are currently open for the player.
+
+### <code className="doc-symbol doc-symbol-function"/> getAddress
+
+```cpp
+virtual SocketAddress endstone::Player::getAddress () const = 0
+```
+
+Gets the socket address of this player.
+
+
+
+**Returns:**
+
+the player's socket address 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getAllowFlight
+
+```cpp
+virtual bool endstone::Player::getAllowFlight () const = 0
+```
+
+Determines if the Player is allowed to fly via jump key double-tap.
+
+
+
+**Returns:**
+
+True if the player is allowed to fly. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getDeviceId
+
+```cpp
+virtual std::string endstone::Player::getDeviceId () const = 0
+```
+
+Gets the player's current device id.
+
+
+
+**Returns:**
+
+the player's device id 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getDeviceOS
+
+```cpp
+virtual std::string endstone::Player::getDeviceOS () const = 0
+```
+
+Gets the player's current device's operation system (OS).
+
+
+
+**Returns:**
+
+the player's device OS 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getEnderChest
+
+```cpp
+virtual Inventory & endstone::Player::getEnderChest () const = 0
+```
+
+Get the player's EnderChest inventory.
+
+
+
+**Returns:**
+
+The EnderChest of the player 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getExpLevel
+
+```cpp
+virtual int endstone::Player::getExpLevel () const = 0
+```
+
+Gets the players current experience level.
+
+
+
+**Returns:**
+
+Current experience level 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getExpProgress
+
+```cpp
+virtual float endstone::Player::getExpProgress () const = 0
+```
+
+Gets the players current experience progress towards the next level.
+
+This is a percentage value. 0.0 is "no progress" and 1.0 is "next level".
+
+
+
+
+**Returns:**
+
+Current experience points 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getFlySpeed
+
+```cpp
+virtual float endstone::Player::getFlySpeed () const = 0
+```
+
+Gets the current allowed speed that a client can fly.
+
+
+
+**Returns:**
+
+The current allowed speed, default is 0.05. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getGameMode
+
+```cpp
+virtual GameMode endstone::Player::getGameMode () const = 0
+```
+
+Gets this player's current GameMode .
+
+
+
+**Returns:**
+
+Current game mode 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getGameVersion
+
+```cpp
+virtual std::string endstone::Player::getGameVersion () const = 0
+```
+
+Gets the player's current game version.
+
+
+
+**Returns:**
+
+the player's game version 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getInventory
+
+```cpp
+virtual PlayerInventory & endstone::Player::getInventory () const = 0
+```
+
+Get the player's inventory.
+
+
+
+**Returns:**
+
+The inventory of the player, this also contains the armor slots. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getLocale
+
+```cpp
+virtual std::string endstone::Player::getLocale () const = 0
+```
+
+Gets the player's current locale.
+
+
+
+**Returns:**
+
+the player's locale 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getName
+
+```cpp
+virtual std::string endstone::Player::getName () override const = 0
+```
+
+Returns the name of this player.
+
+
+
+**Returns:**
+
+[**Player**](classendstone_1_1_player.md) name or null if we have not seen a name for this player yet 
+
+
+
+
+
+        
+Implements [*endstone::CommandSender::getName*](classendstone_1_1_command_sender.md#function-getname)
+
+### <code className="doc-symbol doc-symbol-function"/> getPing
+
+```cpp
+virtual std::chrono::milliseconds endstone::Player::getPing () const = 0
+```
+
+Gets the player's average ping.
+
+
+
+**Returns:**
+
+player ping 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getScoreboard
+
+```cpp
+virtual Scoreboard & endstone::Player::getScoreboard () const = 0
+```
+
+Gets the Scoreboard displayed to this player.
+
+
+
+**Returns:**
+
+The current scoreboard seen by this player 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getSkin
+
+```cpp
+virtual Skin endstone::Player::getSkin () const = 0
+```
+
+Gets the player's skin.
+
+
+
+**Returns:**
+
+the player's skin 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getTotalExp
+
+```cpp
+virtual int endstone::Player::getTotalExp () const = 0
+```
+
+Gets the players total experience points.
+
+This refers to the total amount of experience the player has collected over time and is not currently displayed to the client.
+
+
+
+
+**Returns:**
+
+Current total experience points 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getWalkSpeed
+
+```cpp
+virtual float endstone::Player::getWalkSpeed () const = 0
+```
+
+Gets the current allowed speed that a client can walk.
+
+
+
+**Returns:**
+
+The current allowed speed, default is 0.10. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getXuid
+
+```cpp
+virtual std::string endstone::Player::getXuid () const = 0
+```
+
+Returns the Xbox User ID (XUID) of this player.
+
+
+
+**Returns:**
+
+[**Player**](classendstone_1_1_player.md) XUID 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> giveExp
+
+```cpp
+virtual void endstone::Player::giveExp (
+    int amount
+) = 0
+```
+
+Gives the player the amount of experience specified.
+
+
+
+**Parameters:**
+
+
+* `amount` Exp amount to give 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> giveExpLevels
+
+```cpp
+virtual void endstone::Player::giveExpLevels (
+    int amount
+) = 0
+```
+
+Gives the player the amount of experience levels specified.
+
+
+
+**Parameters:**
+
+
+* `amount` amount of experience levels to give or take 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isFlying
+
+```cpp
+virtual bool endstone::Player::isFlying () const = 0
+```
+
+Checks to see if this player is currently flying or not.
+
+
+
+**Returns:**
+
+True if the player is flying, else false. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isOp
+
+```cpp
+virtual bool endstone::Player::isOp () const = 0
+```
+
+Checks if this player is a server operator.
+
+
+
+**Returns:**
+
+true if this is an operator, otherwise false 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isSneaking
+
+```cpp
+virtual bool endstone::Player::isSneaking () const = 0
+```
+
+Returns if the player is in sneak mode.
+
+
+
+**Returns:**
+
+true if player is in sneak mode 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isSprinting
+
+```cpp
+virtual bool endstone::Player::isSprinting () const = 0
+```
+
+Gets whether the player is sprinting or not.
+
+
+
+**Returns:**
+
+true if player is sprinting. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> kick
+
+```cpp
+virtual void endstone::Player::kick (
+    std::string message
+) const = 0
+```
+
+Kicks player with custom kick message.
+
+
+
+**Parameters:**
+
+
+* `message` kick message 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> performCommand
+
+```cpp
+virtual bool endstone::Player::performCommand (
+    std::string command
+) const = 0
+```
+
+Makes the player perform the given command.
+
+
+
+**Parameters:**
+
+
+* `command` [**Command**](classendstone_1_1_command.md) to perform 
+
+
+
+**Returns:**
+
+true if the command was successful, otherwise false 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> playSound
+
+```cpp
+virtual void endstone::Player::playSound (
+    Location location,
+    std::string sound,
+    float volume,
+    float pitch
+) = 0
+```
+
+Play a sound for a player at the location.
+
+
+
+**Parameters:**
+
+
+* `location` The location to play the sound 
+* `sound` The internal sound name to play 
+* `volume` The volume of the sound 
+* `pitch` The pitch of the sound 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> resetTitle
+
+```cpp
+virtual void endstone::Player::resetTitle () const = 0
+```
+
+Resets the title displayed to the player. This will clear the displayed title / subtitle and reset timings to their default values.
+
+### <code className="doc-symbol doc-symbol-function"/> sendForm
+
+```cpp
+virtual void endstone::Player::sendForm (
+    FormVariant form
+) = 0
+```
+
+Sends a form to the player.
+
+
+
+**Parameters:**
+
+
+* `form` The form to send 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> sendPacket
+
+```cpp
+virtual void endstone::Player::sendPacket (
+    int packet_id,
+    std::string_view payload
+) const = 0
+```
+
+Sends a packet to the player.
+
+
+
+**Parameters:**
+
+
+* `packet_id` The packet ID to be sent. 
+* `payload` The payload of the packet to be transmitted. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> sendPopup
+
+```cpp
+virtual void endstone::Player::sendPopup (
+    std::string message
+) const = 0
+```
+
+Sends this player a popup message.
+
+
+
+**Parameters:**
+
+
+* `message` Message to be displayed 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> sendTip
+
+```cpp
+virtual void endstone::Player::sendTip (
+    std::string message
+) const = 0
+```
+
+Sends this player a tip message.
+
+
+
+**Parameters:**
+
+
+* `message` Message to be displayed 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> sendTitle
+
+```cpp
+virtual void endstone::Player::sendTitle (
+    std::string title,
+    std::string subtitle
+) const = 0
+```
+
+Sends a title and a subtitle message to the player. If they are empty strings, the display will be updated as such. The titles will be displayed with the default timings.
+
+
+
+**Parameters:**
+
+
+* `title` Title text 
+* `subtitle` Subtitle text 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> sendTitle
+
+```cpp
+virtual void endstone::Player::sendTitle (
+    std::string title,
+    std::string subtitle,
+    int fade_in,
+    int stay,
+    int fade_out
+) const = 0
+```
+
+Sends a title and a subtitle message to the player. If they are empty strings, the display will be updated as such.
+
+
+
+**Parameters:**
+
+
+* `title` Title text 
+* `subtitle` Subtitle text 
+* `fade_in` time in ticks for titles to fade in. Defaults to 10. 
+* `stay` time in ticks for titles to stay. Defaults to 70. 
+* `fade_out` time in ticks for titles to fade out. Defaults to 20. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> sendToast
+
+```cpp
+virtual void endstone::Player::sendToast (
+    std::string title,
+    std::string content
+) const = 0
+```
+
+Sends this player a toast notification.
+
+
+
+**Parameters:**
+
+
+* `title` The title of the toast notification. 
+* `content` The content of the toast notification. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setAllowFlight
+
+```cpp
+virtual void endstone::Player::setAllowFlight (
+    bool flight
+) = 0
+```
+
+Sets if the Player is allowed to fly via jump key double-tap.
+
+
+
+**Parameters:**
+
+
+* `flight` If flight should be allowed. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setExpLevel
+
+```cpp
+virtual Result< void > endstone::Player::setExpLevel (
+    int level
+) = 0
+```
+
+Sets the players current experience level.
+
+
+
+**Parameters:**
+
+
+* `level` New experience level 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setExpProgress
+
+```cpp
+virtual Result< void > endstone::Player::setExpProgress (
+    float progress
+) = 0
+```
+
+Sets the players current experience progress towards the next level.
+
+This is a percentage value. 0.0 is "no progress" and 1.0 is "next level".
+
+
+
+
+**Parameters:**
+
+
+* `progress` New experience progress 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setFlySpeed
+
+```cpp
+virtual void endstone::Player::setFlySpeed (
+    float value
+) const = 0
+```
+
+
+Sets the speed at which a client will fly.
+
+
+
+
+**Parameters:**
+
+
+* `value` The new speed. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setFlying
+
+```cpp
+virtual Result< void > endstone::Player::setFlying (
+    bool value
+) = 0
+```
+
+Makes this player start or stop flying.
+
+
+
+**Parameters:**
+
+
+* `value` True to fly. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setGameMode
+
+```cpp
+virtual void endstone::Player::setGameMode (
+    GameMode mode
+) = 0
+```
+
+Sets this player's current GameMode .
+
+
+
+**Parameters:**
+
+
+* `mode` New game mode 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setOp
+
+```cpp
+virtual void endstone::Player::setOp (
+    bool value
+) = 0
+```
+
+Sets the operator status of this player.
+
+
+
+**Parameters:**
+
+
+* `value` New operator value 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setScoreboard
+
+```cpp
+virtual void endstone::Player::setScoreboard (
+    Scoreboard & scoreboard
+) = 0
+```
+
+
+@breif Sets the player's visible [**Scoreboard**](classendstone_1_1_scoreboard.md).
+
+
+
+
+**Parameters:**
+
+
+* `scoreboard` New [**Scoreboard**](classendstone_1_1_scoreboard.md) for the player 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setSneaking
+
+```cpp
+virtual void endstone::Player::setSneaking (
+    bool sneak
+) = 0
+```
+
+Sets the sneak mode of the player.
+
+
+
+**Parameters:**
+
+
+* `sneak` true if player should appear sneaking 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setSprinting
+
+```cpp
+virtual void endstone::Player::setSprinting (
+    bool sprinting
+) = 0
+```
+
+Sets whether the player is sprinting or not.
+
+
+
+**Parameters:**
+
+
+* `sprinting` true if the player should be sprinting 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setWalkSpeed
+
+```cpp
+virtual void endstone::Player::setWalkSpeed (
+    float value
+) const = 0
+```
+
+
+Sets the speed at which a client will walk.
+
+
+
+
+**Parameters:**
+
+
+* `value` The new speed. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> spawnParticle
+
+```cpp
+virtual void endstone::Player::spawnParticle (
+    std::string name,
+    Location location
+) const = 0
+```
+
+Spawns the particle at the target location.
+
+
+
+**Parameters:**
+
+
+* `name` the name of the particle effect to spawn 
+* `location` the location to spawn at 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> spawnParticle
+
+```cpp
+virtual void endstone::Player::spawnParticle (
+    std::string name,
+    float x,
+    float y,
+    float z
+) const = 0
+```
+
+Spawns the particle at the target location.
+
+
+
+**Parameters:**
+
+
+* `name` the name of the particle effect to spawn 
+* `x` the position on the x axis to spawn at 
+* `y` the position on the y axis to spawn at 
+* `z` the position on the z axis to spawn at 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> spawnParticle
+
+```cpp
+virtual void endstone::Player::spawnParticle (
+    std::string name,
+    Location location,
+    std::optional< std::string > molang_variables_json
+) const = 0
+```
+
+Spawns the particle at the target location.
+
+
+
+**Parameters:**
+
+
+* `name` the name of the particle effect to spawn 
+* `location` the location to spawn at 
+* `molang_variables_json` the customizable molang variables that can be adjusted for this particle, in json 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> spawnParticle
+
+```cpp
+virtual void endstone::Player::spawnParticle (
+    std::string name,
+    float x,
+    float y,
+    float z,
+    std::optional< std::string > molang_variables_json
+) const = 0
+```
+
+Spawns the particle at the target location.
+
+
+
+**Parameters:**
+
+
+* `name` the name of the particle effect to spawn 
+* `x` the position on the x axis to spawn at 
+* `y` the position on the y axis to spawn at 
+* `z` the position on the z axis to spawn at 
+* `molang_variables_json` the customizable molang variables that can be adjusted for this particle, in json 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> stopAllSounds
+
+```cpp
+virtual void endstone::Player::stopAllSounds () = 0
+```
+
+Stop all sounds from playing.
+
+### <code className="doc-symbol doc-symbol-function"/> stopSound
+
+```cpp
+virtual void endstone::Player::stopSound (
+    std::string sound
+) = 0
+```
+
+Stop the specified sound from playing.
+
+
+
+**Parameters:**
+
+
+* `sound` the sound to stop 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> transfer
+
+```cpp
+virtual void endstone::Player::transfer (
+    std::string host,
+    int port
+) const = 0
+```
+
+Transfers the player to another server.
+
+
+
+**Parameters:**
+
+
+* `host` [**Server**](classendstone_1_1_server.md) address to transfer the player to. 
+* `port` [**Server**](classendstone_1_1_server.md) port to transfer the player to 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> updateCommands
+
+```cpp
+virtual void endstone::Player::updateCommands () const = 0
+```
+
+Send the list of commands to the client.
+
+Generally useful to ensure the client has a complete list of commands after permission changes are done. 
+
+
+        
+### <code className="doc-symbol doc-symbol-typedef"/> FormVariant
+
+```cpp
+using endstone::Player::FormVariant =  std::variant<MessageForm, ActionForm, ModalForm>;
+```
+

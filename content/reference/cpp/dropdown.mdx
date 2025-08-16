@@ -1,0 +1,258 @@
+---
+title: "Dropdown"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::Dropdown
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_dropdown_1ad095868e59dd8f5cac7ce788c7038977">
+    <td>[`Dropdown`](#function-dropdown-12)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_dropdown_1ac91f43ee6f2a4a562564a4fa09d4090a">
+    <td>[`Dropdown`](#function-dropdown-22)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_dropdown_1a76a20ab311120e240b6d552ef2741061">
+    <td>[`addOption`](#function-addoption)</td>
+    <td>Adds a new option to the dropdown.</td>
+</tr>
+<tr key="classendstone_1_1_dropdown_1a2783fb46d09ac9838ffbc1064c8b79e8">
+    <td>[`getDefaultIndex`](#function-getdefaultindex)</td>
+    <td>Gets the default index of the dropdown.</td>
+</tr>
+<tr key="classendstone_1_1_dropdown_1a424095abea8be681ef3ebc756663b879">
+    <td>[`getLabel`](#function-getlabel)</td>
+    <td>Gets the label of the dropdown.</td>
+</tr>
+<tr key="classendstone_1_1_dropdown_1a3ff3209113ca1d2d2794290e7da8a595">
+    <td>[`getOptions`](#function-getoptions)</td>
+    <td>Gets the options of the dropdown.</td>
+</tr>
+<tr key="classendstone_1_1_dropdown_1a370ff769dafb86ac4ed83ddef6e3b4b4">
+    <td>[`setDefaultIndex`](#function-setdefaultindex)</td>
+    <td>Sets the default index of the dropdown.</td>
+</tr>
+<tr key="classendstone_1_1_dropdown_1aaa0a076f154e39e44f50e958e8f78190">
+    <td>[`setLabel`](#function-setlabel)</td>
+    <td>Sets the label of the dropdown.</td>
+</tr>
+<tr key="classendstone_1_1_dropdown_1a18413db278b9d46f4d56e3db0b11520c">
+    <td>[`setOptions`](#function-setoptions)</td>
+    <td>Sets the options of the dropdown.</td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> Dropdown
+
+```cpp
+endstone::Dropdown::Dropdown () = default
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> Dropdown
+
+```cpp
+inline explicit endstone::Dropdown::Dropdown (
+    Message label,
+    std::vector< std::string > options,
+    std::optional< int > default_index=std::nullopt
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> addOption
+
+```cpp
+inline Dropdown & endstone::Dropdown::addOption (
+    const std::string & option
+) 
+```
+
+Adds a new option to the dropdown.
+
+
+
+**Parameters:**
+
+
+* `option` The new option for the dropdown. 
+
+
+
+**Returns:**
+
+A reference to the dropdown itself. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getDefaultIndex
+
+```cpp
+inline std::optional< int > endstone::Dropdown::getDefaultIndex () const
+```
+
+Gets the default index of the dropdown.
+
+
+
+**Returns:**
+
+The default index of the dropdown. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getLabel
+
+```cpp
+inline Message endstone::Dropdown::getLabel () const
+```
+
+Gets the label of the dropdown.
+
+
+
+**Returns:**
+
+The label of the dropdown. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getOptions
+
+```cpp
+inline std::vector< std::string > endstone::Dropdown::getOptions () const
+```
+
+Gets the options of the dropdown.
+
+
+
+**Returns:**
+
+The options of the dropdown. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setDefaultIndex
+
+```cpp
+inline Dropdown & endstone::Dropdown::setDefaultIndex (
+    std::optional< int > default_index
+) 
+```
+
+Sets the default index of the dropdown.
+
+
+
+**Parameters:**
+
+
+* `default_index` The new default index for the dropdown. 
+
+
+
+**Returns:**
+
+A reference to the dropdown itself. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setLabel
+
+```cpp
+inline Dropdown & endstone::Dropdown::setLabel (
+    Message label
+) 
+```
+
+Sets the label of the dropdown.
+
+
+
+**Parameters:**
+
+
+* `label` The new label for the dropdown. 
+
+
+
+**Returns:**
+
+A reference to the dropdown itself. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setOptions
+
+```cpp
+inline Dropdown & endstone::Dropdown::setOptions (
+    std::vector< std::string > options
+) 
+```
+
+Sets the options of the dropdown.
+
+
+
+**Parameters:**
+
+
+* `options` The new options for the dropdown. 
+
+
+
+**Returns:**
+
+A reference to the dropdown itself. 
+
+
+
+
+
+        

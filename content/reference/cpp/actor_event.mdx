@@ -1,0 +1,83 @@
+---
+title: "ActorEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::ActorEvent
+
+**template &lt;typename ActorType&gt;**
+Bases: [`endstone::Event`](classendstone_1_1_event.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_actor_event_1a07f53f59692095b4a31a6e3d95128015">
+    <td>[`ActorEvent`](#function-actorevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_event_1a49c459c96e831dbab2333ec2187ea552">
+    <td>[`getActor`](#function-getactor)</td>
+    <td>Returns the Actor involved in this event.</td>
+</tr>
+<tr key="classendstone_1_1_actor_event_1a9fff5524effc04e99bb28d49a9b37b6f">
+    <td>[`~ActorEvent`](#function-actorevent)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> ActorEvent
+
+```cpp
+inline explicit endstone::ActorEvent::ActorEvent (
+    ActorType & actor
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getActor
+
+```cpp
+inline ActorType & endstone::ActorEvent::getActor () const
+```
+
+Returns the Actor involved in this event.
+
+
+
+**Returns:**
+
+[**Actor**](classendstone_1_1_actor.md) which is involved in this event 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~ActorEvent
+
+```cpp
+endstone::ActorEvent::~ActorEvent () override
+```
+

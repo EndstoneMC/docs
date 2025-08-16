@@ -1,0 +1,666 @@
+---
+title: "ItemMeta"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::ItemMeta
+
+
+
+
+
+
+
+**Types:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_item_meta_1a138046832c99ba93e098144fc295e044">
+    <td>[`Type`](#enum-type)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_item_meta_1afb4069c0b6aa2dfd4780a9b149c8d858">
+    <td>[`addEnchant`](#function-addenchant)</td>
+    <td>Adds the specified enchantment to this item meta.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1a6e2422771cf3c695b96dfbf279e17b4d">
+    <td>[`clone`](#function-clone)</td>
+    <td>Creates a clone of the current metadata.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1a3892649cd822bf85b603d6a2b64b7ebd">
+    <td>[`getDamage`](#function-getdamage)</td>
+    <td>Gets the damage.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1a55b51dde197c33d2e3b122e549982afb">
+    <td>[`getDisplayName`](#function-getdisplayname)</td>
+    <td>Gets the display name that is set.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1ad09d9608afdae3454a7c9c57fd382924">
+    <td>[`getEnchantLevel`](#function-getenchantlevel)</td>
+    <td>Checks for the level of the specified enchantment.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1ae56eecf8308719f9a2571088c956981f">
+    <td>[`getEnchants`](#function-getenchants)</td>
+    <td>Returns a copy the enchantments in this ItemMeta .</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1a69e7e1109f273d57b6fce553eec88fa9">
+    <td>[`getLore`](#function-getlore)</td>
+    <td>Gets the lore that is set.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1ad8d3243a6a5621568ef2f4ce505c42d7">
+    <td>[`getRepairCost`](#function-getrepaircost)</td>
+    <td>Gets the repair penalty.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1a56697c8ef6a8e62f40571cbc7632ef95">
+    <td>[`getType`](#function-gettype)</td>
+    <td>Gets the type of this item meta.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1ae2ded35522da3ad4a77ca127cd78d938">
+    <td>[`hasDamage`](#function-hasdamage)</td>
+    <td>Checks to see if this item has damage.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1a0a8bf5690f51d5e1438308d1858a1df4">
+    <td>[`hasDisplayName`](#function-hasdisplayname)</td>
+    <td>Checks for existence of a display name.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1aea1b811b5bbed2237fe390ef5048e2f2">
+    <td>[`hasEnchant`](#function-hasenchant)</td>
+    <td>Checks for existence of the specified enchantment.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1ac43230ac05adb1a16d1d6d60049dc010">
+    <td>[`hasEnchants`](#function-hasenchants)</td>
+    <td>Checks for the existence of any enchantments.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1a52d6ef7084538f60809b6baff98afdfa">
+    <td>[`hasLore`](#function-haslore)</td>
+    <td>Checks for existence of lore.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1a90cfeecd88da173df9c5b06a731ec6ed">
+    <td>[`hasRepairCost`](#function-hasrepaircost)</td>
+    <td>Checks to see if this has a repair penalty.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1a43a0aa639900616ec5235f9ece8592e7">
+    <td>[`isEmpty`](#function-isempty)</td>
+    <td>Checks if the item metadata is empty.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1a6b272eb7b84e7cdce4c161402d9531fe">
+    <td>[`isUnbreakable`](#function-isunbreakable)</td>
+    <td>Return if the unbreakable tag is true. An unbreakable item will not lose durability.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1a2349b16d2c1414811c1c8f36dc19452c">
+    <td>[`removeEnchant`](#function-removeenchant)</td>
+    <td>Removes the specified enchantment from this item meta.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1ada041111e07c6434bc9ac04a0b82cd61">
+    <td>[`removeEnchants`](#function-removeenchants)</td>
+    <td>Removes all enchantments from this item meta.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1a65cb98d0b4ad3842775aeea2fb7900cc">
+    <td>[`setDamage`](#function-setdamage)</td>
+    <td>Sets the damage.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1a282788eea1a8f607e7fcf4cbc181951f">
+    <td>[`setDisplayName`](#function-setdisplayname)</td>
+    <td>Sets the display name.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1ae2d1ff3f93a5fe805dd0a74bbcfaf028">
+    <td>[`setLore`](#function-setlore)</td>
+    <td>Sets the lore for this item or removes lore when given std::nullopt.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1a5377c0928c991a4e9ea1294b1f38bc1d">
+    <td>[`setRepairCost`](#function-setrepaircost)</td>
+    <td>Sets the repair penalty.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1a4cd10bea89892329e54fec6ffc67a137">
+    <td>[`setUnbreakable`](#function-setunbreakable)</td>
+    <td>Sets the unbreakable tag. An unbreakable item will not lose durability.</td>
+</tr>
+<tr key="classendstone_1_1_item_meta_1ad87efd61083beac19969df0c0dcacff7">
+    <td>[`~ItemMeta`](#function-itemmeta)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-enum"/> Type
+
+```cpp
+enum endstone::ItemMeta::Type {
+    Item = 0,
+    Map = 1,
+    Count,
+    None = Item
+};
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> addEnchant
+
+```cpp
+virtual bool endstone::ItemMeta::addEnchant (
+    const std::string & id,
+    int level,
+    bool force
+) = 0
+```
+
+Adds the specified enchantment to this item meta.
+
+
+
+**Parameters:**
+
+
+* `id` [**Enchantment**](classendstone_1_1_enchantment.md) id to add 
+* `level` [**Level**](classendstone_1_1_level.md) for the enchantment 
+* `force` this indicates the enchantment should be applied, ignoring the level limit 
+
+
+
+**Returns:**
+
+true if the item meta changed as a result of this call, false otherwise 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> clone
+
+```cpp
+virtual std::unique_ptr< ItemMeta > endstone::ItemMeta::clone () const = 0
+```
+
+Creates a clone of the current metadata.
+
+
+
+**Returns:**
+
+A copy of the metadata containing the same state as the original. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getDamage
+
+```cpp
+virtual int endstone::ItemMeta::getDamage () const = 0
+```
+
+Gets the damage.
+
+
+
+**Returns:**
+
+the damage 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getDisplayName
+
+```cpp
+virtual std::optional< std::string > endstone::ItemMeta::getDisplayName () const = 0
+```
+
+Gets the display name that is set.
+
+
+
+**Returns:**
+
+the display name that is set 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getEnchantLevel
+
+```cpp
+virtual int endstone::ItemMeta::getEnchantLevel (
+    const std::string & id
+) const = 0
+```
+
+Checks for the level of the specified enchantment.
+
+
+
+**Parameters:**
+
+
+* `id` enchantment id to check 
+
+
+
+**Returns:**
+
+The level that the specified enchantment has, or 0 if none 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getEnchants
+
+```cpp
+virtual std::unordered_map< std::string, int > endstone::ItemMeta::getEnchants () const = 0
+```
+
+Returns a copy the enchantments in this ItemMeta .
+
+Returns an empty map if none.
+
+
+
+
+**Returns:**
+
+An immutable copy of the enchantments 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getLore
+
+```cpp
+virtual std::optional< std::vector< std::string > > endstone::ItemMeta::getLore () const = 0
+```
+
+Gets the lore that is set.
+
+
+
+**Returns:**
+
+a list of lore that is set 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getRepairCost
+
+```cpp
+virtual int endstone::ItemMeta::getRepairCost () const = 0
+```
+
+Gets the repair penalty.
+
+
+
+**Returns:**
+
+the repair penalty 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getType
+
+```cpp
+virtual Type endstone::ItemMeta::getType () const = 0
+```
+
+Gets the type of this item meta.
+
+
+
+**Returns:**
+
+type of this item meta 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> hasDamage
+
+```cpp
+virtual bool endstone::ItemMeta::hasDamage () const = 0
+```
+
+Checks to see if this item has damage.
+
+
+
+**Returns:**
+
+true if this has damage 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> hasDisplayName
+
+```cpp
+virtual bool endstone::ItemMeta::hasDisplayName () const = 0
+```
+
+Checks for existence of a display name.
+
+
+
+**Returns:**
+
+true if this has a display name 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> hasEnchant
+
+```cpp
+virtual bool endstone::ItemMeta::hasEnchant (
+    const std::string & id
+) const = 0
+```
+
+Checks for existence of the specified enchantment.
+
+
+
+**Parameters:**
+
+
+* `id` enchantment id to check 
+
+
+
+**Returns:**
+
+true if this enchantment exists for this meta 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> hasEnchants
+
+```cpp
+virtual bool endstone::ItemMeta::hasEnchants () const = 0
+```
+
+Checks for the existence of any enchantments.
+
+
+
+**Returns:**
+
+true if an enchantment exists on this meta 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> hasLore
+
+```cpp
+virtual bool endstone::ItemMeta::hasLore () const = 0
+```
+
+Checks for existence of lore.
+
+
+
+**Returns:**
+
+true if this has lore 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> hasRepairCost
+
+```cpp
+virtual bool endstone::ItemMeta::hasRepairCost () const = 0
+```
+
+Checks to see if this has a repair penalty.
+
+
+
+**Returns:**
+
+true if this has a repair penalty 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isEmpty
+
+```cpp
+virtual bool endstone::ItemMeta::isEmpty () const = 0
+```
+
+Checks if the item metadata is empty.
+
+
+
+**Returns:**
+
+true if the metadata is empty, false otherwise. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isUnbreakable
+
+```cpp
+virtual bool endstone::ItemMeta::isUnbreakable () const = 0
+```
+
+Return if the unbreakable tag is true. An unbreakable item will not lose durability.
+
+
+
+**Returns:**
+
+true if the unbreakable tag is true 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> removeEnchant
+
+```cpp
+virtual bool endstone::ItemMeta::removeEnchant (
+    const std::string & id
+) = 0
+```
+
+Removes the specified enchantment from this item meta.
+
+
+
+**Parameters:**
+
+
+* `id` [**Enchantment**](classendstone_1_1_enchantment.md) id to remove 
+
+
+
+**Returns:**
+
+true if the item meta changed as a result of this call, false otherwise 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> removeEnchants
+
+```cpp
+virtual void endstone::ItemMeta::removeEnchants () = 0
+```
+
+Removes all enchantments from this item meta.
+
+### <code className="doc-symbol doc-symbol-function"/> setDamage
+
+```cpp
+virtual void endstone::ItemMeta::setDamage (
+    int damage
+) = 0
+```
+
+Sets the damage.
+
+
+
+**Parameters:**
+
+
+* `damage` item damage 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setDisplayName
+
+```cpp
+virtual void endstone::ItemMeta::setDisplayName (
+    std::optional< std::string > name
+) = 0
+```
+
+Sets the display name.
+
+
+
+**Parameters:**
+
+
+* `name` the name to set 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setLore
+
+```cpp
+virtual void endstone::ItemMeta::setLore (
+    std::optional< std::vector< std::string > > lore
+) = 0
+```
+
+Sets the lore for this item or removes lore when given std::nullopt.
+
+
+
+**Parameters:**
+
+
+* `lore` the lore that will be set 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setRepairCost
+
+```cpp
+virtual void endstone::ItemMeta::setRepairCost (
+    int cost
+) = 0
+```
+
+Sets the repair penalty.
+
+
+
+**Parameters:**
+
+
+* `cost` repair penalty 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setUnbreakable
+
+```cpp
+virtual void endstone::ItemMeta::setUnbreakable (
+    bool unbreakable
+) = 0
+```
+
+Sets the unbreakable tag. An unbreakable item will not lose durability.
+
+
+
+**Parameters:**
+
+
+* `unbreakable` true if set unbreakable 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~ItemMeta
+
+```cpp
+virtual endstone::ItemMeta::~ItemMeta () = default
+```
+

@@ -1,0 +1,73 @@
+---
+title: "PlayerDropItemEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerDropItemEvent
+
+Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_player_drop_item_event_1a01a17624816e0ff3d957f3f10102b433">
+    <td>[`PlayerDropItemEvent`](#function-playerdropitemevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_drop_item_event_1a40ad469ac2c8a5035ba526833ca3c638">
+    <td>[`getItem`](#function-getitem)</td>
+    <td>Gets the ItemStack dropped by the player.</td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> PlayerDropItemEvent
+
+```cpp
+inline explicit endstone::PlayerDropItemEvent::PlayerDropItemEvent (
+    Player & player,
+    const ItemStack & drop
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getItem
+
+```cpp
+inline const ItemStack & endstone::PlayerDropItemEvent::getItem () const
+```
+
+Gets the ItemStack dropped by the player.
+
+
+
+**Returns:**
+
+ItemDrop dropped by the player 
+
+
+
+
+
+        

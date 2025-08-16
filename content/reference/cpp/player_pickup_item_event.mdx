@@ -1,0 +1,86 @@
+---
+title: "PlayerPickupItemEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerPickupItemEvent
+
+Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_player_pickup_item_event_1af8d09456f82338437efebcc77773909b">
+    <td>[`ENDSTONE\_EVENT`](#function-endstone_event)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_pickup_item_event_1a2ffe5a51d8b0c22799ba4db466fc6f91">
+    <td>[`PlayerPickupItemEvent`](#function-playerpickupitemevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_pickup_item_event_1af2e2a3c35dde44219709a5303569979c">
+    <td>[`getItem`](#function-getitem)</td>
+    <td>Gets the Item picked up by the entity.</td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> ENDSTONE\_EVENT
+
+```cpp
+endstone::PlayerPickupItemEvent::ENDSTONE_EVENT (
+    PlayerPickupItemEvent
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> PlayerPickupItemEvent
+
+```cpp
+inline explicit endstone::PlayerPickupItemEvent::PlayerPickupItemEvent (
+    Player & player,
+    Item & item
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getItem
+
+```cpp
+inline Item & endstone::PlayerPickupItemEvent::getItem () const
+```
+
+Gets the Item picked up by the entity.
+
+
+
+**Returns:**
+
+[**Item**](classendstone_1_1_item.md) 
+
+
+
+
+
+        

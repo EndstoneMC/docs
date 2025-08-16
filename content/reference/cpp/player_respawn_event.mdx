@@ -1,0 +1,108 @@
+---
+title: "PlayerRespawnEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerRespawnEvent
+
+Bases: [`endstone::PlayerEvent`](classendstone_1_1_player_event.md)
+
+
+
+
+
+
+
+
+
+**Attributes:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_player_respawn_event_1ab47c1f5797bfb607b21b5fdbd1e35336">
+    <td>[`NAME`](#variable-name)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_player_respawn_event_1abb6a9abde0432b56b4ce24b1ebfdbcbb">
+    <td>[`PlayerRespawnEvent`](#function-playerrespawnevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_respawn_event_1a0b74630548cc0c5d82b0ba24a915e8d8">
+    <td>[`getEventName`](#function-geteventname)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_respawn_event_1a6d85e0d878c46548c97daab6e89bad91">
+    <td>[`~PlayerRespawnEvent`](#function-playerrespawnevent)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-variable"/> NAME
+
+```cpp
+const std::string endstone::PlayerRespawnEvent::NAME;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> PlayerRespawnEvent
+
+```cpp
+inline explicit endstone::PlayerRespawnEvent::PlayerRespawnEvent (
+    Player & player
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getEventName
+
+```cpp
+inline virtual std::string endstone::PlayerRespawnEvent::getEventName () override const
+```
+
+
+Gets a user-friendly identifier for this event.
+
+
+
+
+**Returns:**
+
+name of this event 
+
+
+
+
+
+        
+Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
+
+### <code className="doc-symbol doc-symbol-function"/> ~PlayerRespawnEvent
+
+```cpp
+endstone::PlayerRespawnEvent::~PlayerRespawnEvent () override
+```
+

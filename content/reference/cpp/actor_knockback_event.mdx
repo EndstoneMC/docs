@@ -1,0 +1,186 @@
+---
+title: "ActorKnockbackEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::ActorKnockbackEvent
+
+Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+
+
+
+
+
+
+
+
+
+**Attributes:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_actor_knockback_event_1a3612ace20ee9b1d15cc5d3f65aef90a0">
+    <td>[`NAME`](#variable-name)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_actor_knockback_event_1acd617a2d1ffb56c3b9a479d4ddb080a5">
+    <td>[`ActorKnockbackEvent`](#function-actorknockbackevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_knockback_event_1a6b3eee184de0d29360031cf48680c25a">
+    <td>[`getEventName`](#function-geteventname)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_knockback_event_1a7ec5c1018eb0c66d7143796837ebfff0">
+    <td>[`getKnockback`](#function-getknockback)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_knockback_event_1a4dc601b2fc54d46ef20821a75035cd2e">
+    <td>[`getSource`](#function-getsource)</td>
+    <td>Get the source actor that has caused knockback to the defender, if exists.</td>
+</tr>
+<tr key="classendstone_1_1_actor_knockback_event_1a17876ee6a06028878ff098bec3bb20f1">
+    <td>[`setKnockback`](#function-setknockback)</td>
+    <td>Sets the knockback that will be applied to the entity.</td>
+</tr>
+<tr key="classendstone_1_1_actor_knockback_event_1a2c59d36dbcf12d782d927acc211ef292">
+    <td>[`~ActorKnockbackEvent`](#function-actorknockbackevent)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-variable"/> NAME
+
+```cpp
+const std::string endstone::ActorKnockbackEvent::NAME;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> ActorKnockbackEvent
+
+```cpp
+inline explicit endstone::ActorKnockbackEvent::ActorKnockbackEvent (
+    Mob & mob,
+    Actor * source,
+    Vector < float > knockback
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getEventName
+
+```cpp
+inline virtual std::string endstone::ActorKnockbackEvent::getEventName () override const
+```
+
+
+Gets a user-friendly identifier for this event.
+
+
+
+
+**Returns:**
+
+name of this event 
+
+
+
+
+
+        
+Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
+
+### <code className="doc-symbol doc-symbol-function"/> getKnockback
+
+```cpp
+inline Vector < float > endstone::ActorKnockbackEvent::getKnockback () const
+```
+
+
+Gets the knockback that will be applied to the entity.
+
+
+**Note:** this method returns a copy, changes must be applied with setKnockback(Vector)
+
+
+
+
+**Returns:**
+
+the knockback 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getSource
+
+```cpp
+inline Actor * endstone::ActorKnockbackEvent::getSource () const
+```
+
+Get the source actor that has caused knockback to the defender, if exists.
+
+
+
+**Returns:**
+
+actor that caused knockback, or nullptr if the knockback is not caused by an actor. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setKnockback
+
+```cpp
+inline void endstone::ActorKnockbackEvent::setKnockback (
+    Vector < float > knockback
+) 
+```
+
+Sets the knockback that will be applied to the entity.
+
+
+
+**Parameters:**
+
+
+* `knockback` the knockback to apply 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~ActorKnockbackEvent
+
+```cpp
+endstone::ActorKnockbackEvent::~ActorKnockbackEvent () override
+```
+

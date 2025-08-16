@@ -1,0 +1,161 @@
+---
+title: "PlayerCommandEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerCommandEvent
+
+Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+
+
+
+
+
+
+
+
+
+**Attributes:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_player_command_event_1a847453583d9293cfc93634b9e75ac377">
+    <td>[`NAME`](#variable-name)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_player_command_event_1aab55ef626bb9b1d60352ce8d56c8703a">
+    <td>[`PlayerCommandEvent`](#function-playercommandevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_command_event_1a4096e979a5e327ddecdd9328f087d57b">
+    <td>[`getCommand`](#function-getcommand)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_command_event_1a64066f629ce1473239141c71c1177010">
+    <td>[`getEventName`](#function-geteventname)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_command_event_1a6d2c4a174ce786fc8a1cd6cd8f9ca7c5">
+    <td>[`setCommand`](#function-setcommand)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_command_event_1aceec4542ce0df6900c30921cfd78fe87">
+    <td>[`~PlayerCommandEvent`](#function-playercommandevent)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-variable"/> NAME
+
+```cpp
+const std::string endstone::PlayerCommandEvent::NAME;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> PlayerCommandEvent
+
+```cpp
+inline explicit endstone::PlayerCommandEvent::PlayerCommandEvent (
+    Player & player,
+    std::string command
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getCommand
+
+```cpp
+inline std::string endstone::PlayerCommandEvent::getCommand () const
+```
+
+
+Gets the command that the player is attempting to send.
+
+
+
+
+**Returns:**
+
+[**Command**](classendstone_1_1_command.md) the player is attempting to send 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getEventName
+
+```cpp
+inline virtual std::string endstone::PlayerCommandEvent::getEventName () override const
+```
+
+
+Gets a user-friendly identifier for this event.
+
+
+
+
+**Returns:**
+
+name of this event 
+
+
+
+
+
+        
+Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
+
+### <code className="doc-symbol doc-symbol-function"/> setCommand
+
+```cpp
+inline void endstone::PlayerCommandEvent::setCommand (
+    std::string command
+) 
+```
+
+
+Sets the command that the player will send.
+
+
+
+
+**Parameters:**
+
+
+* `command` New command that the player will send 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~PlayerCommandEvent
+
+```cpp
+endstone::PlayerCommandEvent::~PlayerCommandEvent () override
+```
+

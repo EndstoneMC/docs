@@ -1,0 +1,160 @@
+---
+title: "Task"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::Task
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_task_1a3455812d65cf5c8f173e5cf5ab8a1fd0">
+    <td>[`cancel`](#function-cancel)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_task_1a2e9cdffd945930487342851df0a54b06">
+    <td>[`getOwner`](#function-getowner)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_task_1ab08c9a5deee528abf87f8e827c420e30">
+    <td>[`getTaskId`](#function-gettaskid)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_task_1ab758d7bc88367c07f090b758496daada">
+    <td>[`isCancelled`](#function-iscancelled)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_task_1ad091016fe3fae7796852709bade2c079">
+    <td>[`isSync`](#function-issync)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_task_1ae40a9449683399a480b757911fb30ef4">
+    <td>[`~Task`](#function-task)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> cancel
+
+```cpp
+virtual void endstone::Task::cancel () = 0
+```
+
+
+Attempts to cancel this task. 
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getOwner
+
+```cpp
+virtual Plugin * endstone::Task::getOwner () const = 0
+```
+
+
+Returns the [**Plugin**](classendstone_1_1_plugin.md) that owns this task.
+
+
+
+
+**Returns:**
+
+The [**Plugin**](classendstone_1_1_plugin.md) that owns the task 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getTaskId
+
+```cpp
+virtual TaskId endstone::Task::getTaskId () const = 0
+```
+
+
+Returns the taskId for the task.
+
+
+
+
+**Returns:**
+
+[**Task**](classendstone_1_1_task.md) id number 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isCancelled
+
+```cpp
+virtual bool endstone::Task::isCancelled () const = 0
+```
+
+
+Returns true if this task has been cancelled.
+
+
+
+
+**Returns:**
+
+true if the task has been cancelled 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isSync
+
+```cpp
+virtual bool endstone::Task::isSync () const = 0
+```
+
+
+Returns true if the [**Task**](classendstone_1_1_task.md) is a sync task.
+
+
+
+
+**Returns:**
+
+true if the task is run by server thread 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~Task
+
+```cpp
+virtual endstone::Task::~Task () = default
+```
+

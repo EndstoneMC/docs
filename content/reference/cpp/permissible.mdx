@@ -1,0 +1,354 @@
+---
+title: "Permissible"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::Permissible
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_permissible_1a08be02debf01b55544c4566931ed98fc">
+    <td>[`addAttachment`](#function-addattachment-12)</td>
+    <td>Adds a new PermissionAttachment with a single permission by name and value.</td>
+</tr>
+<tr key="classendstone_1_1_permissible_1ab1adef2b8d0494a9bfcd9c9ffb995f2b">
+    <td>[`addAttachment`](#function-addattachment-22)</td>
+    <td>Adds a new empty PermissionAttachment to this object.</td>
+</tr>
+<tr key="classendstone_1_1_permissible_1a49323c37f310044720678e27513b44dc">
+    <td>[`asCommandSender`](#function-ascommandsender)</td>
+    <td>Casts a Permissible as CommandSender .</td>
+</tr>
+<tr key="classendstone_1_1_permissible_1ad9307f3eef07e6e03a55b4fe9aab9be6">
+    <td>[`getEffectivePermissions`](#function-geteffectivepermissions)</td>
+    <td>Gets a set containing all the permissions currently in effect by this object.</td>
+</tr>
+<tr key="classendstone_1_1_permissible_1a6d78baa46215c951dc25cb5e55af085c">
+    <td>[`getPermissionLevel`](#function-getpermissionlevel)</td>
+    <td>Gets the permission level of this object.</td>
+</tr>
+<tr key="classendstone_1_1_permissible_1ade03215666f81be410f2b058fa2c158b">
+    <td>[`hasPermission`](#function-haspermission-12)</td>
+    <td>Gets the value of the specified permission, if set. If a permission override is not set on this object, the default value of the permission will be returned.</td>
+</tr>
+<tr key="classendstone_1_1_permissible_1ae3da30350acda91f5a007e15fc783ae6">
+    <td>[`hasPermission`](#function-haspermission-22)</td>
+    <td>Gets the value of the specified permission, if set. If a permission override is not set on this object, the default value of the permission will be returned.</td>
+</tr>
+<tr key="classendstone_1_1_permissible_1ae625f98f57116c559dc35a6cfce960d9">
+    <td>[`isPermissionSet`](#function-ispermissionset-12)</td>
+    <td>Checks if this object contains an override for the specified permission, by fully qualified name.</td>
+</tr>
+<tr key="classendstone_1_1_permissible_1af40d6121208b293a05abf56c47792995">
+    <td>[`isPermissionSet`](#function-ispermissionset-22)</td>
+    <td>Checks if this object contains an override for the specified Permission .</td>
+</tr>
+<tr key="classendstone_1_1_permissible_1acbd0e4c4815db28b66ef14976f110af5">
+    <td>[`recalculatePermissions`](#function-recalculatepermissions)</td>
+    <td>Recalculates the permissions for this object, if the attachments have changed values. This should very rarely need to be called from a plugin.</td>
+</tr>
+<tr key="classendstone_1_1_permissible_1a29dd5407f2c750a9b267f335d47aad29">
+    <td>[`removeAttachment`](#function-removeattachment)</td>
+    <td>Removes the given PermissionAttachment from this object.</td>
+</tr>
+<tr key="classendstone_1_1_permissible_1afd630275e217c42932d29208712fe438">
+    <td>[`~Permissible`](#function-permissible)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> addAttachment
+
+```cpp
+virtual PermissionAttachment * endstone::Permissible::addAttachment (
+    Plugin & plugin,
+    const std::string & name,
+    bool value
+) = 0
+```
+
+Adds a new PermissionAttachment with a single permission by name and value.
+
+
+
+**Parameters:**
+
+
+* `plugin` [**Plugin**](classendstone_1_1_plugin.md) responsible for this attachment, may not be null or disabled 
+* `name` Name of the permission to attach 
+* `value` Value of the permission 
+
+
+
+**Returns:**
+
+The [**PermissionAttachment**](classendstone_1_1_permission_attachment.md) that was just created 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> addAttachment
+
+```cpp
+virtual PermissionAttachment * endstone::Permissible::addAttachment (
+    Plugin & plugin
+) = 0
+```
+
+Adds a new empty PermissionAttachment to this object.
+
+
+
+**Parameters:**
+
+
+* `plugin` [**Plugin**](classendstone_1_1_plugin.md) responsible for this attachment, may not be null or disabled 
+
+
+
+**Returns:**
+
+The [**PermissionAttachment**](classendstone_1_1_permission_attachment.md) that was just created 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> asCommandSender
+
+```cpp
+virtual CommandSender * endstone::Permissible::asCommandSender () const = 0
+```
+
+Casts a Permissible as CommandSender .
+
+
+
+**Returns:**
+
+[**CommandSender**](classendstone_1_1_command_sender.md), nullptr if not a [**CommandSender**](classendstone_1_1_command_sender.md) 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getEffectivePermissions
+
+```cpp
+virtual std::unordered_set< PermissionAttachmentInfo * > endstone::Permissible::getEffectivePermissions () const = 0
+```
+
+Gets a set containing all the permissions currently in effect by this object.
+
+
+
+**Returns:**
+
+Set of currently effective permissions 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPermissionLevel
+
+```cpp
+virtual PermissionLevel endstone::Permissible::getPermissionLevel () const = 0
+```
+
+Gets the permission level of this object.
+
+
+
+**Returns:**
+
+The permission level 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> hasPermission
+
+```cpp
+virtual bool endstone::Permissible::hasPermission (
+    std::string name
+) const = 0
+```
+
+Gets the value of the specified permission, if set. If a permission override is not set on this object, the default value of the permission will be returned.
+
+
+
+**Parameters:**
+
+
+* `name` Name of the permission 
+
+
+
+**Returns:**
+
+Value of the permission 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> hasPermission
+
+```cpp
+virtual bool endstone::Permissible::hasPermission (
+    const Permission & perm
+) const = 0
+```
+
+Gets the value of the specified permission, if set. If a permission override is not set on this object, the default value of the permission will be returned.
+
+
+
+**Parameters:**
+
+
+* `perm` [**Permission**](classendstone_1_1_permission.md) to get 
+
+
+
+**Returns:**
+
+Value of the permission 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isPermissionSet
+
+```cpp
+virtual bool endstone::Permissible::isPermissionSet (
+    std::string name
+) const = 0
+```
+
+Checks if this object contains an override for the specified permission, by fully qualified name.
+
+
+
+**Parameters:**
+
+
+* `name` Name of the permission 
+
+
+
+**Returns:**
+
+true if the permission is set, otherwise false 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isPermissionSet
+
+```cpp
+virtual bool endstone::Permissible::isPermissionSet (
+    const Permission & perm
+) const = 0
+```
+
+Checks if this object contains an override for the specified Permission .
+
+
+
+**Parameters:**
+
+
+* `perm` [**Permission**](classendstone_1_1_permission.md) to check 
+
+
+
+**Returns:**
+
+true if the permission is set, otherwise false 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> recalculatePermissions
+
+```cpp
+virtual void endstone::Permissible::recalculatePermissions () = 0
+```
+
+Recalculates the permissions for this object, if the attachments have changed values. This should very rarely need to be called from a plugin.
+
+### <code className="doc-symbol doc-symbol-function"/> removeAttachment
+
+```cpp
+virtual Result< void > endstone::Permissible::removeAttachment (
+    PermissionAttachment & attachment
+) = 0
+```
+
+Removes the given PermissionAttachment from this object.
+
+
+
+**Parameters:**
+
+
+* `attachment` Attachment to remove 
+
+
+
+**Returns:**
+
+true if the specified attachment was removed successfully, false when it isn't part of this object 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~Permissible
+
+```cpp
+virtual endstone::Permissible::~Permissible () = default
+```
+

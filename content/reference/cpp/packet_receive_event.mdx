@@ -1,0 +1,256 @@
+---
+title: "PacketReceiveEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::PacketReceiveEvent
+
+Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+
+
+
+
+
+
+
+
+
+**Attributes:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_packet_receive_event_1a218801638ce951b0f39ba49d6a99e159">
+    <td>[`NAME`](#variable-name)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_packet_receive_event_1aadc6685d7ad9177fb9f9175f58088345">
+    <td>[`PacketReceiveEvent`](#function-packetreceiveevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_packet_receive_event_1ab5fe2e62cbedfbe4312c442b1a774b10">
+    <td>[`getAddress`](#function-getaddress)</td>
+    <td>Gets the network address to which this packet is being sent.</td>
+</tr>
+<tr key="classendstone_1_1_packet_receive_event_1ade14c9698e182f8c468ff220fdce7eb3">
+    <td>[`getEventName`](#function-geteventname)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_packet_receive_event_1a55fbf8774d4f1a7d069e542c685fdd48">
+    <td>[`getPacketId`](#function-getpacketid)</td>
+    <td>Gets the ID of the packet.</td>
+</tr>
+<tr key="classendstone_1_1_packet_receive_event_1a518168db89685906e59159d8fde84006">
+    <td>[`getPayload`](#function-getpayload)</td>
+    <td>Gets the raw packet data excluding the header.</td>
+</tr>
+<tr key="classendstone_1_1_packet_receive_event_1aad07dd636d8b60d143ea65a0d4ed47bc">
+    <td>[`getPlayer`](#function-getplayer)</td>
+    <td>Returns the player involved in this event.</td>
+</tr>
+<tr key="classendstone_1_1_packet_receive_event_1af975d7e890536043acb7213e7b2e0923">
+    <td>[`getSubClientId`](#function-getsubclientid)</td>
+    <td>Gets the SubClient ID.</td>
+</tr>
+<tr key="classendstone_1_1_packet_receive_event_1a38da3d7aa9ee5431efbf9ef500b1df56">
+    <td>[`setPayload`](#function-setpayload)</td>
+    <td>Sets the raw packet data excluding the header.</td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-variable"/> NAME
+
+```cpp
+const std::string endstone::PacketReceiveEvent::NAME;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> PacketReceiveEvent
+
+```cpp
+inline endstone::PacketReceiveEvent::PacketReceiveEvent (
+    Player * player,
+    const int packet_id,
+    std::string_view payload,
+    SocketAddress address,
+    const int sub_client_id
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getAddress
+
+```cpp
+inline SocketAddress endstone::PacketReceiveEvent::getAddress () const
+```
+
+Gets the network address to which this packet is being sent.
+
+
+
+**Returns:**
+
+The [**SocketAddress**](classendstone_1_1_socket_address.md) of the destination client. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getEventName
+
+```cpp
+inline virtual std::string endstone::PacketReceiveEvent::getEventName () override const
+```
+
+
+Gets a user-friendly identifier for this event.
+
+
+
+
+**Returns:**
+
+name of this event 
+
+
+
+
+
+        
+Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
+
+### <code className="doc-symbol doc-symbol-function"/> getPacketId
+
+```cpp
+inline int endstone::PacketReceiveEvent::getPacketId () const
+```
+
+Gets the ID of the packet.
+
+
+
+**Returns:**
+
+The packet ID. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPayload
+
+```cpp
+inline std::string_view endstone::PacketReceiveEvent::getPayload () const
+```
+
+Gets the raw packet data excluding the header.
+
+
+
+**Returns:**
+
+The packet payload data. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPlayer
+
+```cpp
+inline Player * endstone::PacketReceiveEvent::getPlayer () const
+```
+
+Returns the player involved in this event.
+
+
+
+**Note:**
+
+This may return nullptr if the packet is sent before the player completes the login process.
+
+
+
+
+**Returns:**
+
+[**Player**](classendstone_1_1_player.md) who is involved in this event 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getSubClientId
+
+```cpp
+inline int endstone::PacketReceiveEvent::getSubClientId () const
+```
+
+Gets the SubClient ID.
+
+
+
+**Note:**
+
+Range is 0 to 3 (0 = primary client; 1-3 = split-screen clients).
+
+
+
+
+**Returns:**
+
+The SubClient ID. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setPayload
+
+```cpp
+inline void endstone::PacketReceiveEvent::setPayload (
+    std::string_view payload
+) 
+```
+
+Sets the raw packet data excluding the header.
+
+
+
+**Returns:**
+
+The packet payload data. 
+
+
+
+
+
+        

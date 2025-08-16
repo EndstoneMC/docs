@@ -1,0 +1,226 @@
+---
+title: "TextInput"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::TextInput
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_text_input_1aea76fc3cb5e535cda7b7539d5ce486cf">
+    <td>[`TextInput`](#function-textinput-12)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_text_input_1ad58d0a3a7dd465cf7a4aa9054dc14167">
+    <td>[`TextInput`](#function-textinput-22)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_text_input_1ab24213ee14ce543cb7bf0ebd23fdbf4d">
+    <td>[`getDefaultValue`](#function-getdefaultvalue)</td>
+    <td>Gets the default text of the text input field.</td>
+</tr>
+<tr key="classendstone_1_1_text_input_1ad71cdf754913ee542a4ba0149824e214">
+    <td>[`getLabel`](#function-getlabel)</td>
+    <td>Gets the label of the text input field.</td>
+</tr>
+<tr key="classendstone_1_1_text_input_1aca59bfd3c2b319af6e30336193dcf025">
+    <td>[`getPlaceholder`](#function-getplaceholder)</td>
+    <td>Gets the placeholder of the text input field.</td>
+</tr>
+<tr key="classendstone_1_1_text_input_1a2bf266925a2e5a753d556cbe18e429d8">
+    <td>[`setDefaultValue`](#function-setdefaultvalue)</td>
+    <td>Sets the default text of the text input field.</td>
+</tr>
+<tr key="classendstone_1_1_text_input_1a0d2843a5fffa953b6aa5e74a6cc0ac08">
+    <td>[`setLabel`](#function-setlabel)</td>
+    <td>Sets the label of the text input field.</td>
+</tr>
+<tr key="classendstone_1_1_text_input_1ae28e7f3a57e8dd27e23d0b9480bb2393">
+    <td>[`setPlaceholder`](#function-setplaceholder)</td>
+    <td>Sets the placeholder of the text input field.</td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> TextInput
+
+```cpp
+endstone::TextInput::TextInput () = default
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> TextInput
+
+```cpp
+inline explicit endstone::TextInput::TextInput (
+    Message label,
+    Message placeholder,
+    std::optional< std::string > default_text=std::nullopt
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getDefaultValue
+
+```cpp
+inline std::optional< std::string > endstone::TextInput::getDefaultValue () const
+```
+
+Gets the default text of the text input field.
+
+
+
+**Returns:**
+
+The default text of the text input field. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getLabel
+
+```cpp
+inline Message endstone::TextInput::getLabel () const
+```
+
+Gets the label of the text input field.
+
+
+
+**Returns:**
+
+The label of the text input field. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPlaceholder
+
+```cpp
+inline Message endstone::TextInput::getPlaceholder () const
+```
+
+Gets the placeholder of the text input field.
+
+
+
+**Returns:**
+
+The placeholder of the text input field. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setDefaultValue
+
+```cpp
+inline TextInput & endstone::TextInput::setDefaultValue (
+    std::optional< std::string > text
+) 
+```
+
+Sets the default text of the text input field.
+
+
+
+**Parameters:**
+
+
+* `text` The new default text for the text input field. 
+
+
+
+**Returns:**
+
+A reference to the text input field itself. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setLabel
+
+```cpp
+inline TextInput & endstone::TextInput::setLabel (
+    Message label
+) 
+```
+
+Sets the label of the text input field.
+
+
+
+**Parameters:**
+
+
+* `label` The new label for the text input field. 
+
+
+
+**Returns:**
+
+A reference to the text input field itself. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setPlaceholder
+
+```cpp
+inline TextInput & endstone::TextInput::setPlaceholder (
+    Message placeholder
+) 
+```
+
+Sets the placeholder of the text input field.
+
+
+
+**Parameters:**
+
+
+* `placeholder` The new placeholder for the text input field. 
+
+
+
+**Returns:**
+
+A reference to the text input field itself. 
+
+
+
+
+
+        

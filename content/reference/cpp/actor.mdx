@@ -1,0 +1,843 @@
+---
+title: "Actor"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::Actor
+
+Bases: [`endstone::CommandSender`](classendstone_1_1_command_sender.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_actor_1a7df17ed4f47907e5022b1eff1f306271">
+    <td>[`addScoreboardTag`](#function-addscoreboardtag)</td>
+    <td>Adds a tag to this actor.</td>
+</tr>
+<tr key="classendstone_1_1_actor_1a6c81fe219b046d28cdf13c5c400793c6">
+    <td>[`asItem`](#function-asitem)</td>
+    <td>Gets an Actor as Item .</td>
+</tr>
+<tr key="classendstone_1_1_actor_1acbd7afe34e58507083765ae5d27ff9c0">
+    <td>[`asMob`](#function-asmob)</td>
+    <td>Gets an Actor as Mob .</td>
+</tr>
+<tr key="classendstone_1_1_actor_1ab4562c41d071b945338d742ac8d1e639">
+    <td>[`getDimension`](#function-getdimension)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_1a547e0f2ecb4be6edb82f909f48946031">
+    <td>[`getHealth`](#function-gethealth)</td>
+    <td>Gets the entity's health from 0 to its max possible value, where 0 is dead.</td>
+</tr>
+<tr key="classendstone_1_1_actor_1a78059bed5b1a6b23bfb2be9ac6ae81a3">
+    <td>[`getId`](#function-getid)</td>
+    <td>Returns a unique id for this actor.</td>
+</tr>
+<tr key="classendstone_1_1_actor_1aff1ed8218696acc7009bf7ce5a5069a2">
+    <td>[`getLevel`](#function-getlevel)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_1a32d24d587443d4107786096fda5322fb">
+    <td>[`getLocation`](#function-getlocation)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_1a612dffb2563ce0535c0e2d7214c6254b">
+    <td>[`getMaxHealth`](#function-getmaxhealth)</td>
+    <td>Gets the maximum health this entity has.</td>
+</tr>
+<tr key="classendstone_1_1_actor_1a7bac2e604ceb3d48c3fbc6a628f6eaec">
+    <td>[`getNameTag`](#function-getnametag)</td>
+    <td>Gets the current name tag of the actor.</td>
+</tr>
+<tr key="classendstone_1_1_actor_1ab2848bd47a25fce207a1a4e6b1783ce3">
+    <td>[`getRuntimeId`](#function-getruntimeid)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_1a29bb3fe504b2b2bffd749a0d9ef1ed92">
+    <td>[`getScoreTag`](#function-getscoretag)</td>
+    <td>Gets the current score tag of the actor.</td>
+</tr>
+<tr key="classendstone_1_1_actor_1aab1b3bf14d77e70515a6afacb3219e86">
+    <td>[`getScoreboardTags`](#function-getscoreboardtags)</td>
+    <td>Returns a list of scoreboard tags for this actor.</td>
+</tr>
+<tr key="classendstone_1_1_actor_1a35dbee5875715f9edd8be8b117377129">
+    <td>[`getType`](#function-gettype)</td>
+    <td>Get the type of the actor.</td>
+</tr>
+<tr key="classendstone_1_1_actor_1a0f73b7b1bcc0f18ce4cc238fdcea69b4">
+    <td>[`getVelocity`](#function-getvelocity)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_1aa099af11ae3053289f31c65c9126b50a">
+    <td>[`isDead`](#function-isdead)</td>
+    <td>Returns true if this actor has been marked for removal.</td>
+</tr>
+<tr key="classendstone_1_1_actor_1a876f9f220c4628b15556f2b50b103928">
+    <td>[`isInLava`](#function-isinlava)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_1a07d1ec2bc5458fbd0c4d60711e4ddcd1">
+    <td>[`isInWater`](#function-isinwater)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_1a26211c565a42de6f28565bed6d3c854b">
+    <td>[`isNameTagAlwaysVisible`](#function-isnametagalwaysvisible)</td>
+    <td>Checks if the actor's name tag is always visible.</td>
+</tr>
+<tr key="classendstone_1_1_actor_1ada87051d8b64c9df5cab73732bddf710">
+    <td>[`isNameTagVisible`](#function-isnametagvisible)</td>
+    <td>Checks if the actor's name tag is currently visible.</td>
+</tr>
+<tr key="classendstone_1_1_actor_1a7cfff436cf3ddabdb1f28f744234f218">
+    <td>[`isOnGround`](#function-isonground)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_1a5b744893654143e1d8a1f03b1d3cc459">
+    <td>[`isValid`](#function-isvalid)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_1a896dcb16d037d3591b0d39480521a193">
+    <td>[`remove`](#function-remove)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_1a6f068c4612aa487ba76d3a4c3e3b1033">
+    <td>[`removeScoreboardTag`](#function-removescoreboardtag)</td>
+    <td>Removes a given tag from this actor.</td>
+</tr>
+<tr key="classendstone_1_1_actor_1a39c0d4e763cafb181f1071de2c31b647">
+    <td>[`setHealth`](#function-sethealth)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_1afa33b47ae91605841f0c4ef5ec127ac7">
+    <td>[`setNameTag`](#function-setnametag)</td>
+    <td>Sets the name tag for the actor.</td>
+</tr>
+<tr key="classendstone_1_1_actor_1a6c7dc2e5a9b99db8b000e84e4eba5822">
+    <td>[`setNameTagAlwaysVisible`](#function-setnametagalwaysvisible)</td>
+    <td>Sets whether the actor's name tag should always be visible.</td>
+</tr>
+<tr key="classendstone_1_1_actor_1a81d7145659190f3419446959641b4989">
+    <td>[`setNameTagVisible`](#function-setnametagvisible)</td>
+    <td>Sets if the actor's name tag is visible or not.</td>
+</tr>
+<tr key="classendstone_1_1_actor_1a857512cc626e30cb57d03cacae88dd9f">
+    <td>[`setRotation`](#function-setrotation)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_1adeec376304cd5900f6c848f9e946320e">
+    <td>[`setScoreTag`](#function-setscoretag)</td>
+    <td>Sets the score tag for the actor.</td>
+</tr>
+<tr key="classendstone_1_1_actor_1aa012c328995d90d51c31bb2116bf6eb5">
+    <td>[`teleport`](#function-teleport-12)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_1a17192ce29b31550384e64a68e37e2af9">
+    <td>[`teleport`](#function-teleport-22)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> addScoreboardTag
+
+```cpp
+virtual bool endstone::Actor::addScoreboardTag (
+    std::string tag
+) const = 0
+```
+
+Adds a tag to this actor.
+
+
+
+**Parameters:**
+
+
+* `tag` the tag to add 
+
+
+
+**Returns:**
+
+true if the tag was successfully added, false if the tag already exists. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> asItem
+
+```cpp
+virtual Item * endstone::Actor::asItem () const = 0
+```
+
+Gets an Actor as Item .
+
+
+
+**Returns:**
+
+[**Item**](classendstone_1_1_item.md), nullptr if not an [**Item**](classendstone_1_1_item.md) 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> asMob
+
+```cpp
+virtual Mob * endstone::Actor::asMob () const = 0
+```
+
+Gets an Actor as Mob .
+
+
+
+**Returns:**
+
+[**Mob**](classendstone_1_1_mob.md), nullptr if not an [**Mob**](classendstone_1_1_mob.md) 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getDimension
+
+```cpp
+virtual Dimension & endstone::Actor::getDimension () const = 0
+```
+
+
+Gets the current [**Dimension**](classendstone_1_1_dimension.md) this actor resides in
+
+
+
+
+**Returns:**
+
+The current [**Dimension**](classendstone_1_1_dimension.md) this actor resides in 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getHealth
+
+```cpp
+virtual int endstone::Actor::getHealth () const = 0
+```
+
+Gets the entity's health from 0 to its max possible value, where 0 is dead.
+
+
+
+**Returns:**
+
+Health represented from 0 to max 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getId
+
+```cpp
+virtual std::int64_t endstone::Actor::getId () const = 0
+```
+
+Returns a unique id for this actor.
+
+
+
+**Returns:**
+
+[**Actor**](classendstone_1_1_actor.md) id 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getLevel
+
+```cpp
+virtual Level & endstone::Actor::getLevel () const = 0
+```
+
+
+Gets the current [**Level**](classendstone_1_1_level.md) this actor resides in
+
+
+
+
+**Returns:**
+
+The current [**Level**](classendstone_1_1_level.md) this actor resides in 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getLocation
+
+```cpp
+virtual Location endstone::Actor::getLocation () const = 0
+```
+
+
+Gets the actor's current position
+
+
+
+
+**Returns:**
+
+a new copy of [**Location**](classendstone_1_1_location.md) containing the position of this actor 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getMaxHealth
+
+```cpp
+virtual int endstone::Actor::getMaxHealth () const = 0
+```
+
+Gets the maximum health this entity has.
+
+
+
+**Returns:**
+
+Maximum health 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getNameTag
+
+```cpp
+virtual std::string endstone::Actor::getNameTag () const = 0
+```
+
+Gets the current name tag of the actor.
+
+
+
+**Returns:**
+
+The name tag. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getRuntimeId
+
+```cpp
+virtual std::uint64_t endstone::Actor::getRuntimeId () const = 0
+```
+
+
+Returns the runtime id for this actor
+
+
+
+
+**Returns:**
+
+Runtime id for this actor 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getScoreTag
+
+```cpp
+virtual std::string endstone::Actor::getScoreTag () const = 0
+```
+
+Gets the current score tag of the actor.
+
+
+
+**Returns:**
+
+The score tag. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getScoreboardTags
+
+```cpp
+virtual std::vector< std::string > endstone::Actor::getScoreboardTags () const = 0
+```
+
+Returns a list of scoreboard tags for this actor.
+
+
+
+**Returns:**
+
+a list of scoreboard tags for this actor 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getType
+
+```cpp
+virtual std::string endstone::Actor::getType () const = 0
+```
+
+Get the type of the actor.
+
+This method returns the type of the actor as a string, for example, minecraft:pig.
+
+
+
+
+**Returns:**
+
+The type of the actor. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getVelocity
+
+```cpp
+virtual Vector < float > endstone::Actor::getVelocity () const = 0
+```
+
+
+Gets this actor's current velocity
+
+
+
+
+**Returns:**
+
+Current traveling velocity of this actor 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isDead
+
+```cpp
+virtual bool endstone::Actor::isDead () const = 0
+```
+
+Returns true if this actor has been marked for removal.
+
+
+
+**Returns:**
+
+True if it is dead. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isInLava
+
+```cpp
+virtual bool endstone::Actor::isInLava () const = 0
+```
+
+
+Returns true if the actor is in lava.
+
+
+
+
+**Returns:**
+
+True if the actor is in lava. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isInWater
+
+```cpp
+virtual bool endstone::Actor::isInWater () const = 0
+```
+
+
+Returns true if the actor is in water.
+
+
+
+
+**Returns:**
+
+True if the actor is in water. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isNameTagAlwaysVisible
+
+```cpp
+virtual bool endstone::Actor::isNameTagAlwaysVisible () const = 0
+```
+
+Checks if the actor's name tag is always visible.
+
+
+
+**Returns:**
+
+True if the name tag is always visible, false otherwise. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isNameTagVisible
+
+```cpp
+virtual bool endstone::Actor::isNameTagVisible () const = 0
+```
+
+Checks if the actor's name tag is currently visible.
+
+
+
+**Returns:**
+
+True if the name tag is visible, false otherwise. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isOnGround
+
+```cpp
+virtual bool endstone::Actor::isOnGround () const = 0
+```
+
+
+Returns true if the actor is supported by a block.
+
+
+
+
+**Returns:**
+
+True if actor is on ground. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isValid
+
+```cpp
+virtual bool endstone::Actor::isValid () const = 0
+```
+
+
+Returns false if the entity has died, been despawned for some other reason, or has not been added to the level.
+
+
+
+
+**Returns:**
+
+True if valid. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> remove
+
+```cpp
+virtual void endstone::Actor::remove () = 0
+```
+
+
+Remove this actor from the level.
+
+
+If you are trying to remove a [**Player**](classendstone_1_1_player.md), use [**Player::kick**](classendstone_1_1_player.md#function-kick) instead. 
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> removeScoreboardTag
+
+```cpp
+virtual bool endstone::Actor::removeScoreboardTag (
+    std::string tag
+) const = 0
+```
+
+Removes a given tag from this actor.
+
+
+
+**Parameters:**
+
+
+* `tag` the tag to remove 
+
+
+
+**Returns:**
+
+true if the tag was successfully removed, false if the tag does not exist. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setHealth
+
+```cpp
+virtual Result< void > endstone::Actor::setHealth (
+    int health
+) const = 0
+```
+
+
+Sets the entity's health from 0 to its possible value, where 0 is dead.
+
+
+
+
+**Parameters:**
+
+
+* `health` New health represented from 0 to max 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setNameTag
+
+```cpp
+virtual void endstone::Actor::setNameTag (
+    std::string name
+) = 0
+```
+
+Sets the name tag for the actor.
+
+
+
+**Parameters:**
+
+
+* `name` The new name tag to set. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setNameTagAlwaysVisible
+
+```cpp
+virtual void endstone::Actor::setNameTagAlwaysVisible (
+    bool visible
+) = 0
+```
+
+Sets whether the actor's name tag should always be visible.
+
+
+
+**Parameters:**
+
+
+* `visible` True to make the name tag always visible, false to disable always visibility. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setNameTagVisible
+
+```cpp
+virtual void endstone::Actor::setNameTagVisible (
+    bool visible
+) = 0
+```
+
+Sets if the actor's name tag is visible or not.
+
+
+
+**Parameters:**
+
+
+* `visible` True to make the name tag visible, false to hide it. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setRotation
+
+```cpp
+virtual void endstone::Actor::setRotation (
+    float yaw,
+    float pitch
+) = 0
+```
+
+
+
+
+**Returns:**
+
+Sets the actor's rotation. 
+
+
+Note that if the actor is affected by AI, it may override this rotation.
+
+
+
+
+**Parameters:**
+
+
+* `yaw` Rotation around the up axis (Y axis) 
+* `pitch` Rotation around the right axis (X axis) 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setScoreTag
+
+```cpp
+virtual void endstone::Actor::setScoreTag (
+    std::string score
+) = 0
+```
+
+Sets the score tag for the actor.
+
+
+
+**Parameters:**
+
+
+* `score` The new score tag to set. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> teleport
+
+```cpp
+virtual void endstone::Actor::teleport (
+    Location location
+) = 0
+```
+
+
+
+
+**Returns:**
+
+Teleports this actor to the given location.
+
+
+
+
+**Parameters:**
+
+
+* `location` New location to teleport this actor to 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> teleport
+
+```cpp
+virtual void endstone::Actor::teleport (
+    Actor & target
+) = 0
+```
+
+
+Teleports this actor to the target [**Actor**](classendstone_1_1_actor.md).
+
+
+
+
+**Parameters:**
+
+
+* `target` [**Actor**](classendstone_1_1_actor.md) to teleport this actor to 
+
+
+
+
+        

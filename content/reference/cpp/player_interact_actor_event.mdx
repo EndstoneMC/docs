@@ -1,0 +1,132 @@
+---
+title: "PlayerInteractActorEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerInteractActorEvent
+
+Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+
+
+
+
+
+
+
+
+
+**Attributes:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_player_interact_actor_event_1af02113ba1da41c5c5f0bbd22de0a09e7">
+    <td>[`NAME`](#variable-name)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_player_interact_actor_event_1a1af16e0f6a9d70259c6befb7b873592c">
+    <td>[`PlayerInteractActorEvent`](#function-playerinteractactorevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_interact_actor_event_1ac803fcee5b9b5980b8d1db566b1f3a29">
+    <td>[`getActor`](#function-getactor)</td>
+    <td>Gets the actor that was right-clicked by the player.</td>
+</tr>
+<tr key="classendstone_1_1_player_interact_actor_event_1ab38b49eafd6046d3baf2d147d2dd6f29">
+    <td>[`getEventName`](#function-geteventname)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_interact_actor_event_1a3223c9370df9d9354fd174dd1918cd07">
+    <td>[`~PlayerInteractActorEvent`](#function-playerinteractactorevent)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-variable"/> NAME
+
+```cpp
+const std::string endstone::PlayerInteractActorEvent::NAME;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> PlayerInteractActorEvent
+
+```cpp
+inline explicit endstone::PlayerInteractActorEvent::PlayerInteractActorEvent (
+    Player & player,
+    Actor & actor
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getActor
+
+```cpp
+inline Actor & endstone::PlayerInteractActorEvent::getActor () const
+```
+
+Gets the actor that was right-clicked by the player.
+
+
+
+**Returns:**
+
+actor right-clicked by player 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getEventName
+
+```cpp
+inline virtual std::string endstone::PlayerInteractActorEvent::getEventName () override const
+```
+
+
+Gets a user-friendly identifier for this event.
+
+
+
+
+**Returns:**
+
+name of this event 
+
+
+
+
+
+        
+Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
+
+### <code className="doc-symbol doc-symbol-function"/> ~PlayerInteractActorEvent
+
+```cpp
+endstone::PlayerInteractActorEvent::~PlayerInteractActorEvent () override
+```
+

@@ -1,0 +1,82 @@
+---
+title: "BlockEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::BlockEvent
+
+Bases: [`endstone::Event`](classendstone_1_1_event.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_block_event_1a784685838d2b051b0846ceb821e6a9b5">
+    <td>[`BlockEvent`](#function-blockevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_block_event_1ac9da7c79ee76c2145547c4b09eea46a0">
+    <td>[`getBlock`](#function-getblock)</td>
+    <td>Gets the block involved in this event.</td>
+</tr>
+<tr key="classendstone_1_1_block_event_1a099e0f2a50354664de1e9f9bfc02d5d7">
+    <td>[`~BlockEvent`](#function-blockevent)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> BlockEvent
+
+```cpp
+inline explicit endstone::BlockEvent::BlockEvent (
+    std::unique_ptr< Block > block
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getBlock
+
+```cpp
+inline Block & endstone::BlockEvent::getBlock () const
+```
+
+Gets the block involved in this event.
+
+
+
+**Returns:**
+
+The [**Block**](classendstone_1_1_block.md) which block is involved in this event 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~BlockEvent
+
+```cpp
+endstone::BlockEvent::~BlockEvent () override
+```
+

@@ -1,0 +1,452 @@
+---
+title: "BossBar"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::BossBar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_boss_bar_1a7620a5bbf2fe2e260ffd981ed812b233">
+    <td>[`addFlag`](#function-addflag)</td>
+    <td>Add an optional flag to this boss bar.</td>
+</tr>
+<tr key="classendstone_1_1_boss_bar_1a12761830372d48958fd50bddef835170">
+    <td>[`addPlayer`](#function-addplayer)</td>
+    <td>Adds the player to this boss bar causing it to display on their screen.</td>
+</tr>
+<tr key="classendstone_1_1_boss_bar_1adf1bfb4dc7ac123c729edc425c6dbf38">
+    <td>[`getColor`](#function-getcolor)</td>
+    <td>Returns the color of this boss bar.</td>
+</tr>
+<tr key="classendstone_1_1_boss_bar_1a56def5f8e4f80164ae5d17288adc3c98">
+    <td>[`getPlayers`](#function-getplayers)</td>
+    <td>Returns all players viewing this boss bar.</td>
+</tr>
+<tr key="classendstone_1_1_boss_bar_1a26fd77e91731b0d93a1053251c551cd0">
+    <td>[`getProgress`](#function-getprogress)</td>
+    <td>Returns the progress of the bar between 0.0 and 1.0.</td>
+</tr>
+<tr key="classendstone_1_1_boss_bar_1a12f194cb1f44f0875591c2d31a26a079">
+    <td>[`getStyle`](#function-getstyle)</td>
+    <td>Returns the style of this boss bar.</td>
+</tr>
+<tr key="classendstone_1_1_boss_bar_1adf79b39c307ce9a60ce97150a10da473">
+    <td>[`getTitle`](#function-gettitle)</td>
+    <td>Returns the title of this boss bar.</td>
+</tr>
+<tr key="classendstone_1_1_boss_bar_1a059c621a5d4bb4bd32aa1567195f6332">
+    <td>[`hasFlag`](#function-hasflag)</td>
+    <td>Returns whether this boss bar has the passed flag set.</td>
+</tr>
+<tr key="classendstone_1_1_boss_bar_1a00f426146a25566319f641881318aa43">
+    <td>[`isVisible`](#function-isvisible)</td>
+    <td>Return if the boss bar is displayed to attached players.</td>
+</tr>
+<tr key="classendstone_1_1_boss_bar_1adb723506a074cee293e813a4409b12c2">
+    <td>[`removeAll`](#function-removeall)</td>
+    <td>Removes all players from this boss bar.</td>
+</tr>
+<tr key="classendstone_1_1_boss_bar_1a1300817a31f861f6ec11094ab4d39a40">
+    <td>[`removeFlag`](#function-removeflag)</td>
+    <td>Remove an existing flag on this boss bar.</td>
+</tr>
+<tr key="classendstone_1_1_boss_bar_1a5e1dfb34a264bfcbfea1af2c2a2ba578">
+    <td>[`removePlayer`](#function-removeplayer)</td>
+    <td>Removes the player from this boss bar causing it to be removed from their screen.</td>
+</tr>
+<tr key="classendstone_1_1_boss_bar_1a6f2954ac107a94b825740c52946f5fe1">
+    <td>[`setColor`](#function-setcolor)</td>
+    <td>Sets the color of this boss bar.</td>
+</tr>
+<tr key="classendstone_1_1_boss_bar_1af9af318e8026186174ae0b729ab964f7">
+    <td>[`setProgress`](#function-setprogress)</td>
+    <td>Sets the progress of the bar. Values should be between 0.0 (empty) and 1.0 (full)</td>
+</tr>
+<tr key="classendstone_1_1_boss_bar_1ae9af39fed4792bba3635aca0b33cc364">
+    <td>[`setStyle`](#function-setstyle)</td>
+    <td>Sets the bar style of this boss bar.</td>
+</tr>
+<tr key="classendstone_1_1_boss_bar_1a8001b15b6c865dff7505af594854f9d6">
+    <td>[`setTitle`](#function-settitle)</td>
+    <td>Sets the title of this boss bar.</td>
+</tr>
+<tr key="classendstone_1_1_boss_bar_1ac037275aadff9ea427432063ffeca138">
+    <td>[`setVisible`](#function-setvisible)</td>
+    <td>Set if the boss bar is displayed to attached players.</td>
+</tr>
+<tr key="classendstone_1_1_boss_bar_1aed35b808e9aa8cfc810acd70f399992b">
+    <td>[`~BossBar`](#function-bossbar)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> addFlag
+
+```cpp
+virtual void endstone::BossBar::addFlag (
+    BarFlag flag
+) = 0
+```
+
+Add an optional flag to this boss bar.
+
+
+
+**Parameters:**
+
+
+* `flag` an optional flag to set on the boss bar. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> addPlayer
+
+```cpp
+virtual void endstone::BossBar::addPlayer (
+    Player & player
+) = 0
+```
+
+Adds the player to this boss bar causing it to display on their screen.
+
+
+
+**Parameters:**
+
+
+* `player` the player to add 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getColor
+
+```cpp
+virtual BarColor endstone::BossBar::getColor () const = 0
+```
+
+Returns the color of this boss bar.
+
+
+
+**Returns:**
+
+the color of the bar 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPlayers
+
+```cpp
+virtual std::vector< Player * > endstone::BossBar::getPlayers () const = 0
+```
+
+Returns all players viewing this boss bar.
+
+
+
+**Returns:**
+
+a list of players 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getProgress
+
+```cpp
+virtual float endstone::BossBar::getProgress () const = 0
+```
+
+Returns the progress of the bar between 0.0 and 1.0.
+
+
+
+**Returns:**
+
+the progress of the bar 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getStyle
+
+```cpp
+virtual BarStyle endstone::BossBar::getStyle () const = 0
+```
+
+Returns the style of this boss bar.
+
+
+
+**Returns:**
+
+the style of the bar. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getTitle
+
+```cpp
+virtual std::string endstone::BossBar::getTitle () const = 0
+```
+
+Returns the title of this boss bar.
+
+
+
+**Returns:**
+
+the title of the bar 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> hasFlag
+
+```cpp
+virtual bool endstone::BossBar::hasFlag (
+    BarFlag flag
+) const = 0
+```
+
+Returns whether this boss bar has the passed flag set.
+
+
+
+**Parameters:**
+
+
+* `flag` the flag to check. 
+
+
+
+**Returns:**
+
+whether it has the flag. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> isVisible
+
+```cpp
+virtual bool endstone::BossBar::isVisible () const = 0
+```
+
+Return if the boss bar is displayed to attached players.
+
+
+
+**Returns:**
+
+visible status 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> removeAll
+
+```cpp
+virtual void endstone::BossBar::removeAll () = 0
+```
+
+Removes all players from this boss bar.
+
+### <code className="doc-symbol doc-symbol-function"/> removeFlag
+
+```cpp
+virtual void endstone::BossBar::removeFlag (
+    BarFlag flag
+) = 0
+```
+
+Remove an existing flag on this boss bar.
+
+
+
+**Parameters:**
+
+
+* `flag` the existing flag to remove. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> removePlayer
+
+```cpp
+virtual void endstone::BossBar::removePlayer (
+    Player & player
+) = 0
+```
+
+Removes the player from this boss bar causing it to be removed from their screen.
+
+
+
+**Parameters:**
+
+
+* `player` the player to remove 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setColor
+
+```cpp
+virtual void endstone::BossBar::setColor (
+    BarColor color
+) = 0
+```
+
+Sets the color of this boss bar.
+
+
+
+**Parameters:**
+
+
+* `color` the color of the bar 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setProgress
+
+```cpp
+virtual Result< void > endstone::BossBar::setProgress (
+    float progress
+) = 0
+```
+
+Sets the progress of the bar. Values should be between 0.0 (empty) and 1.0 (full)
+
+
+
+**Parameters:**
+
+
+* `progress` the progress of the bar 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setStyle
+
+```cpp
+virtual void endstone::BossBar::setStyle (
+    BarStyle style
+) = 0
+```
+
+Sets the bar style of this boss bar.
+
+
+
+**Parameters:**
+
+
+* `style` the style of the bar. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setTitle
+
+```cpp
+virtual void endstone::BossBar::setTitle (
+    std::string title
+) = 0
+```
+
+Sets the title of this boss bar.
+
+
+
+**Parameters:**
+
+
+* `title` the title of the bar 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setVisible
+
+```cpp
+virtual void endstone::BossBar::setVisible (
+    bool visible
+) = 0
+```
+
+Set if the boss bar is displayed to attached players.
+
+
+
+**Parameters:**
+
+
+* `visible` visible status 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~BossBar
+
+```cpp
+virtual endstone::BossBar::~BossBar () = default
+```
+

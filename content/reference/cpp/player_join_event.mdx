@@ -1,0 +1,111 @@
+---
+title: "PlayerJoinEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerJoinEvent
+
+Bases: [`endstone::PlayerEvent`](classendstone_1_1_player_event.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_player_join_event_1a8d98db7f36578c9563fa158defc791f1">
+    <td>[`ENDSTONE\_EVENT`](#function-endstone_event)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_join_event_1a57649db75a39610202ffecf345d4e09b">
+    <td>[`PlayerJoinEvent`](#function-playerjoinevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_join_event_1af6a9da33988a5734a055434ba384faeb">
+    <td>[`getJoinMessage`](#function-getjoinmessage)</td>
+    <td>Gets the join message to send to all online players.</td>
+</tr>
+<tr key="classendstone_1_1_player_join_event_1a63594b91d25a768fef8edcd5ca24bd93">
+    <td>[`setJoinMessage`](#function-setjoinmessage)</td>
+    <td>Sets the join message to send to all online players.</td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> ENDSTONE\_EVENT
+
+```cpp
+endstone::PlayerJoinEvent::ENDSTONE_EVENT (
+    PlayerJoinEvent
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> PlayerJoinEvent
+
+```cpp
+inline explicit endstone::PlayerJoinEvent::PlayerJoinEvent (
+    Player & player,
+    std::optional< Message > join_message
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getJoinMessage
+
+```cpp
+inline std::optional< Message > endstone::PlayerJoinEvent::getJoinMessage () const
+```
+
+Gets the join message to send to all online players.
+
+
+
+**Returns:**
+
+Message to appear to other players on the server. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setJoinMessage
+
+```cpp
+inline void endstone::PlayerJoinEvent::setJoinMessage (
+    std::optional< Message > message
+) 
+```
+
+Sets the join message to send to all online players.
+
+
+
+**Parameters:**
+
+
+* `message` Message to appear to other players on the server. 
+
+
+
+
+        

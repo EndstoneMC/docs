@@ -1,0 +1,206 @@
+---
+title: "ActorTeleportEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::ActorTeleportEvent
+
+Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+
+
+
+
+
+
+
+
+
+**Attributes:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_actor_teleport_event_1a2f7ffbf56f181255a139b024ba509783">
+    <td>[`NAME`](#variable-name)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_actor_teleport_event_1a6c419a38acb7baf7091376bac7bb44d7">
+    <td>[`ActorTeleportEvent`](#function-actorteleportevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_teleport_event_1a60979e7b5222885d3b072c8dde7185d2">
+    <td>[`getEventName`](#function-geteventname)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_teleport_event_1a2d41334b6b7b8362cad60430d56febb2">
+    <td>[`getFrom`](#function-getfrom)</td>
+    <td>Gets the location that this actor moved from.</td>
+</tr>
+<tr key="classendstone_1_1_actor_teleport_event_1ab0bce5bf080702eb2808d46e7e1ab612">
+    <td>[`getTo`](#function-getto)</td>
+    <td>Gets the location that this actor moved to.</td>
+</tr>
+<tr key="classendstone_1_1_actor_teleport_event_1ac71b31960417257ca1b2abaf7fc3e5e2">
+    <td>[`setFrom`](#function-setfrom)</td>
+    <td>Sets the location that this actor moved from.</td>
+</tr>
+<tr key="classendstone_1_1_actor_teleport_event_1aeabc5788b424d23a598b057a05f767d0">
+    <td>[`setTo`](#function-setto)</td>
+    <td>Sets the location that this actor moved to.</td>
+</tr>
+<tr key="classendstone_1_1_actor_teleport_event_1a05d22c8898cc980d69767e36c70d2248">
+    <td>[`~ActorTeleportEvent`](#function-actorteleportevent)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-variable"/> NAME
+
+```cpp
+const std::string endstone::ActorTeleportEvent::NAME;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> ActorTeleportEvent
+
+```cpp
+inline explicit endstone::ActorTeleportEvent::ActorTeleportEvent (
+    Actor & actor,
+    Location from,
+    Location to
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getEventName
+
+```cpp
+inline virtual std::string endstone::ActorTeleportEvent::getEventName () override const
+```
+
+
+Gets a user-friendly identifier for this event.
+
+
+
+
+**Returns:**
+
+name of this event 
+
+
+
+
+
+        
+Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
+
+### <code className="doc-symbol doc-symbol-function"/> getFrom
+
+```cpp
+inline const Location & endstone::ActorTeleportEvent::getFrom () const
+```
+
+Gets the location that this actor moved from.
+
+
+
+**Returns:**
+
+[**Location**](classendstone_1_1_location.md) this actor moved from 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getTo
+
+```cpp
+inline const Location & endstone::ActorTeleportEvent::getTo () const
+```
+
+Gets the location that this actor moved to.
+
+
+
+**Returns:**
+
+[**Location**](classendstone_1_1_location.md) this actor moved to 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setFrom
+
+```cpp
+inline void endstone::ActorTeleportEvent::setFrom (
+    const Location & from
+) 
+```
+
+Sets the location that this actor moved from.
+
+
+
+**Parameters:**
+
+
+* `from` New location this actor moved from 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setTo
+
+```cpp
+inline void endstone::ActorTeleportEvent::setTo (
+    const Location & to
+) 
+```
+
+Sets the location that this actor moved to.
+
+
+
+**Parameters:**
+
+
+* `to` New [**Location**](classendstone_1_1_location.md) this actor moved to 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~ActorTeleportEvent
+
+```cpp
+endstone::ActorTeleportEvent::~ActorTeleportEvent () override
+```
+

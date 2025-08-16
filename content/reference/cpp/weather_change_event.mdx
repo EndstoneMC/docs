@@ -1,0 +1,134 @@
+---
+title: "WeatherChangeEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::WeatherChangeEvent
+
+Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+
+
+
+
+
+
+
+
+
+**Attributes:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_weather_change_event_1af684c3b39e6a91f4453f14e46ade558e">
+    <td>[`NAME`](#variable-name)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_weather_change_event_1a70879686a9719e31e6bf74e78652f192">
+    <td>[`WeatherChangeEvent`](#function-weatherchangeevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_weather_change_event_1aed5ffb1d7cab8026df5c6b2529f95f24">
+    <td>[`getEventName`](#function-geteventname)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_weather_change_event_1a6f1a7f2b0be3478b85737c52f35da02e">
+    <td>[`toWeatherState`](#function-toweatherstate)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_weather_change_event_1a2654b155b5ca461dd93f90348142c3f3">
+    <td>[`~WeatherChangeEvent`](#function-weatherchangeevent)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-variable"/> NAME
+
+```cpp
+const std::string endstone::WeatherChangeEvent::NAME;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> WeatherChangeEvent
+
+```cpp
+inline endstone::WeatherChangeEvent::WeatherChangeEvent (
+    Level & level,
+    const bool to
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getEventName
+
+```cpp
+inline virtual std::string endstone::WeatherChangeEvent::getEventName () override const
+```
+
+
+Gets a user-friendly identifier for this event.
+
+
+
+
+**Returns:**
+
+name of this event 
+
+
+
+
+
+        
+Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
+
+### <code className="doc-symbol doc-symbol-function"/> toWeatherState
+
+```cpp
+inline bool endstone::WeatherChangeEvent::toWeatherState () const
+```
+
+
+Gets the state of weather that the world is being set to
+
+
+
+
+**Returns:**
+
+true if the weather is being set to raining, false otherwise 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~WeatherChangeEvent
+
+```cpp
+endstone::WeatherChangeEvent::~WeatherChangeEvent () override
+```
+

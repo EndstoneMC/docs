@@ -1,0 +1,219 @@
+---
+title: "Registry"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::Registry
+
+**template &lt;typename T&gt;**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_registry_1ad4ccf75b2d21093309be4663cbc9e71b">
+    <td>[`forEach`](#function-foreach)</td>
+    <td>Apply a function to each stored element.</td>
+</tr>
+<tr key="classendstone_1_1_registry_1a12086295fb74563d44e4e362cff1598b">
+    <td>[`get`](#function-get-12)</td>
+    <td>Get the object by its key.</td>
+</tr>
+<tr key="classendstone_1_1_registry_1a99649cc36f14453c0013b82e0f3843db">
+    <td>[`get`](#function-get-22)</td>
+    <td>Const overload of get() .</td>
+</tr>
+<tr key="classendstone_1_1_registry_1a72a8c099b8f3fa87b3ecd6a3b1ef4834">
+    <td>[`getOrThrow`](#function-getorthrow-12)</td>
+    <td>Get the object by its key or throw if missing.</td>
+</tr>
+<tr key="classendstone_1_1_registry_1a2e2e60ccbebb8aea3cb57afe54f5443c">
+    <td>[`getOrThrow`](#function-getorthrow-22)</td>
+    <td>Const overload of getOrThrow() .</td>
+</tr>
+<tr key="classendstone_1_1_registry_1a9396db9d9eea6543c7ed9d6162e9822a">
+    <td>[`~Registry`](#function-registry)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> forEach
+
+```cpp
+virtual void endstone::Registry::forEach (
+    std::function< bool(const T &)> func
+) const = 0
+```
+
+Apply a function to each stored element.
+
+Iterates over all stored elements and applies the provided function to them. The iteration continues until the function returns false or all elements have been processed.
+
+
+
+
+**Parameters:**
+
+
+* `func` A callable object taking a const reference to an element and returning a boolean. Returning false stops the iteration. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> get
+
+```cpp
+virtual T * endstone::Registry::get (
+    NamespacedKey key
+) noexcept = 0
+```
+
+Get the object by its key.
+
+Returns a raw pointer to the object, or nullptr if not found.
+
+
+
+
+**Parameters:**
+
+
+* `key` Non-null key to look up. 
+
+
+
+**Returns:**
+
+T\* Pointer to the object, or nullptr if it does not exist. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> get
+
+```cpp
+virtual const T * endstone::Registry::get (
+    NamespacedKey key
+) noexcept const = 0
+```
+
+Const overload of get() .
+
+
+
+**Parameters:**
+
+
+* `key` Non-null key to look up. 
+
+
+
+**Returns:**
+
+const T\* Pointer to the object, or nullptr if it does not exist. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getOrThrow
+
+```cpp
+inline virtual T & endstone::Registry::getOrThrow (
+    const NamespacedKey key
+) 
+```
+
+Get the object by its key or throw if missing.
+
+
+
+**Parameters:**
+
+
+* `key` Key of the object to retrieve. 
+
+
+
+**Returns:**
+
+T& Reference to the object with the given key. 
+
+
+
+
+**Exception:**
+
+
+* `std::invalid_argument` if no object with the given key exists. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getOrThrow
+
+```cpp
+inline virtual const T & endstone::Registry::getOrThrow (
+    const NamespacedKey key
+) const
+```
+
+Const overload of getOrThrow() .
+
+
+
+**Parameters:**
+
+
+* `key` Key of the object to retrieve. 
+
+
+
+**Returns:**
+
+const T& Const reference to the object with the given key. 
+
+
+
+
+**Exception:**
+
+
+* `std::invalid_argument` if no object with the given key exists. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~Registry
+
+```cpp
+virtual endstone::Registry::~Registry () = default
+```
+

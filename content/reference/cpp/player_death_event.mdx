@@ -1,0 +1,112 @@
+---
+title: "PlayerDeathEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerDeathEvent
+
+Bases: [`endstone::ActorDeathEvent`](classendstone_1_1_actor_death_event.md),  [`endstone::PlayerEvent`](classendstone_1_1_player_event.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_player_death_event_1a65fb428be5bdb70e91101198e73416dd">
+    <td>[`ENDSTONE\_EVENT`](#function-endstone_event)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_death_event_1a3104f4d23f97f8c6231b5b6be585d18e">
+    <td>[`PlayerDeathEvent`](#function-playerdeathevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_death_event_1ac10543a6ddb7eb32aed23e72c94b7d61">
+    <td>[`getDeathMessage`](#function-getdeathmessage)</td>
+    <td>Get the death message that will appear to everyone on the server.</td>
+</tr>
+<tr key="classendstone_1_1_player_death_event_1a6a243db2fbf5bdcb6163b39b151338a5">
+    <td>[`setDeathMessage`](#function-setdeathmessage)</td>
+    <td>Set the death message that will appear to everyone on the server.</td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> ENDSTONE\_EVENT
+
+```cpp
+endstone::PlayerDeathEvent::ENDSTONE_EVENT (
+    PlayerDeathEvent
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> PlayerDeathEvent
+
+```cpp
+inline explicit endstone::PlayerDeathEvent::PlayerDeathEvent (
+    Player & player,
+    std::unique_ptr< DamageSource > damage_source,
+    std::optional< Message > death_message
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getDeathMessage
+
+```cpp
+inline std::optional< Message > endstone::PlayerDeathEvent::getDeathMessage () const
+```
+
+Get the death message that will appear to everyone on the server.
+
+
+
+**Returns:**
+
+Message to appear to other players on the server. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setDeathMessage
+
+```cpp
+inline void endstone::PlayerDeathEvent::setDeathMessage (
+    std::optional< Message > death_message
+) 
+```
+
+Set the death message that will appear to everyone on the server.
+
+
+
+**Parameters:**
+
+
+* `death_message` Message to appear to other players on the server. 
+
+
+
+
+        

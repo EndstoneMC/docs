@@ -1,0 +1,170 @@
+---
+title: "Toggle"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::Toggle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_toggle_1a1c470350b59df5562dcc97f5dd1385a1">
+    <td>[`Toggle`](#function-toggle-12)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_toggle_1a31ca9d6bea35c794ce39248ea7cecf28">
+    <td>[`Toggle`](#function-toggle-22)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_toggle_1a3a5805179c86bb7f90c753c244b54162">
+    <td>[`getDefaultValue`](#function-getdefaultvalue)</td>
+    <td>Gets the default value of the toggle.</td>
+</tr>
+<tr key="classendstone_1_1_toggle_1a0448b55baf2e8096ee855c46059e0161">
+    <td>[`getLabel`](#function-getlabel)</td>
+    <td>Gets the label of the toggle.</td>
+</tr>
+<tr key="classendstone_1_1_toggle_1a17339331f52f72813e65c7edb654646e">
+    <td>[`setDefaultValue`](#function-setdefaultvalue)</td>
+    <td>Sets the default value of the toggle.</td>
+</tr>
+<tr key="classendstone_1_1_toggle_1af50982b6fa024d5baa71e93aeca3c250">
+    <td>[`setLabel`](#function-setlabel)</td>
+    <td>Sets the label of the toggle.</td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> Toggle
+
+```cpp
+endstone::Toggle::Toggle () = default
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> Toggle
+
+```cpp
+inline explicit endstone::Toggle::Toggle (
+    Message label,
+    bool default_value=false
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getDefaultValue
+
+```cpp
+inline bool endstone::Toggle::getDefaultValue () const
+```
+
+Gets the default value of the toggle.
+
+
+
+**Returns:**
+
+The default value of the toggle. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getLabel
+
+```cpp
+inline Message endstone::Toggle::getLabel () const
+```
+
+Gets the label of the toggle.
+
+
+
+**Returns:**
+
+The label of the toggle. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setDefaultValue
+
+```cpp
+inline Toggle & endstone::Toggle::setDefaultValue (
+    bool value
+) 
+```
+
+Sets the default value of the toggle.
+
+
+
+**Parameters:**
+
+
+* `value` The new default value for the toggle. 
+
+
+
+**Returns:**
+
+A reference to the current toggle. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setLabel
+
+```cpp
+inline Toggle & endstone::Toggle::setLabel (
+    Message label
+) 
+```
+
+Sets the label of the toggle.
+
+
+
+**Parameters:**
+
+
+* `label` The new label for the toggle. 
+
+
+
+**Returns:**
+
+A reference to the current toggle. 
+
+
+
+
+
+        

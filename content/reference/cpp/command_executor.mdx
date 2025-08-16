@@ -1,0 +1,83 @@
+---
+title: "CommandExecutor"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::CommandExecutor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_command_executor_1abf189fa960c2e7f1fbc3f0366afc3d1f">
+    <td>[`onCommand`](#function-oncommand)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_command_executor_1a9dfc0b1fe01086e280de0d8202f6482c">
+    <td>[`~CommandExecutor`](#function-commandexecutor)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> onCommand
+
+```cpp
+inline virtual bool endstone::CommandExecutor::onCommand (
+    CommandSender & sender,
+    const Command & command,
+    const std::vector< std::string > & args
+) 
+```
+
+
+Executes the given command, returning its success.
+
+
+
+
+**Parameters:**
+
+
+* `sender` Source of the command 
+* `command` [**Command**](classendstone_1_1_command.md) which was executed 
+* `args` Passed command arguments 
+
+
+
+**Returns:**
+
+true if the execution is successful, otherwise false 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~CommandExecutor
+
+```cpp
+virtual endstone::CommandExecutor::~CommandExecutor () = default
+```
+

@@ -1,0 +1,176 @@
+---
+title: "ServerCommandEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::ServerCommandEvent
+
+Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+
+
+
+
+
+
+
+
+
+**Attributes:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_server_command_event_1a6df4d8250b60448f4574d4d732d6f1ad">
+    <td>[`NAME`](#variable-name)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_server_command_event_1a8c99c3360b322ea0d6fcf42b3b0ab4b0">
+    <td>[`ServerCommandEvent`](#function-servercommandevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_command_event_1a93827eb1ca9e938792f2abcf9fd1a09c">
+    <td>[`getCommand`](#function-getcommand)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_command_event_1af62a9d9bbc278b05dece09c1273e5b63">
+    <td>[`getEventName`](#function-geteventname)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_command_event_1a989fc72b2d7b7feb85a88dc3aa50bca7">
+    <td>[`getSender`](#function-getsender)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_server_command_event_1a738f83bdce175aed3493f4e15f7834a9">
+    <td>[`setCommand`](#function-setcommand)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-variable"/> NAME
+
+```cpp
+const std::string endstone::ServerCommandEvent::NAME;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> ServerCommandEvent
+
+```cpp
+inline endstone::ServerCommandEvent::ServerCommandEvent (
+    CommandSender & sender,
+    std::string command
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getCommand
+
+```cpp
+inline std::string endstone::ServerCommandEvent::getCommand () const
+```
+
+
+Gets the command that the server is attempting to execute from the console
+
+
+
+
+**Returns:**
+
+[**Command**](classendstone_1_1_command.md) the server is attempting to execute 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getEventName
+
+```cpp
+inline virtual std::string endstone::ServerCommandEvent::getEventName () override const
+```
+
+
+Gets a user-friendly identifier for this event.
+
+
+
+
+**Returns:**
+
+name of this event 
+
+
+
+
+
+        
+Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
+
+### <code className="doc-symbol doc-symbol-function"/> getSender
+
+```cpp
+inline CommandSender & endstone::ServerCommandEvent::getSender () const
+```
+
+
+Get the command sender.
+
+
+
+
+**Returns:**
+
+The sender 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setCommand
+
+```cpp
+inline void endstone::ServerCommandEvent::setCommand (
+    std::string message
+) 
+```
+
+
+Sets the command that the server will execute
+
+
+
+
+**Parameters:**
+
+
+* `message` New message that the server will execute 
+
+
+
+
+        

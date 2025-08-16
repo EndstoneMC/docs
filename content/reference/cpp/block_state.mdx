@@ -1,0 +1,383 @@
+---
+title: "BlockState"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::BlockState
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_block_state_1af4b36588a23e8df26ea57425c206265f">
+    <td>[`getBlock`](#function-getblock)</td>
+    <td>Gets the block represented by this block state.</td>
+</tr>
+<tr key="classendstone_1_1_block_state_1a18ebe2b1c527ebb7b915157bb2d0c557">
+    <td>[`getData`](#function-getdata)</td>
+    <td>Gets the data for this block state.</td>
+</tr>
+<tr key="classendstone_1_1_block_state_1a0d30c01fe70f8e5b591a23fe36490738">
+    <td>[`getDimension`](#function-getdimension)</td>
+    <td>Gets the dimension which contains the block represented by this block state.</td>
+</tr>
+<tr key="classendstone_1_1_block_state_1a6f8f4a475c2c955b1a883877d9b4baf5">
+    <td>[`getLocation`](#function-getlocation)</td>
+    <td>Gets the location of this block state.</td>
+</tr>
+<tr key="classendstone_1_1_block_state_1ae5c5fbb7989498006f3e7e48d76e10cf">
+    <td>[`getType`](#function-gettype)</td>
+    <td>Gets the type of this block state.</td>
+</tr>
+<tr key="classendstone_1_1_block_state_1a465f89196adeb9f1cb76b1425f8b1856">
+    <td>[`getX`](#function-getx)</td>
+    <td>Gets the x-coordinate of this block state.</td>
+</tr>
+<tr key="classendstone_1_1_block_state_1a26cb455d3bb6d9ab6f703d1df14c9232">
+    <td>[`getY`](#function-gety)</td>
+    <td>Gets the y-coordinate of this block state.</td>
+</tr>
+<tr key="classendstone_1_1_block_state_1a1d4ccdc3539f2d549ef3d98393bb89af">
+    <td>[`getZ`](#function-getz)</td>
+    <td>Gets the z-coordinate of this block state.</td>
+</tr>
+<tr key="classendstone_1_1_block_state_1a97427ac349aacfcc0d617ec52fb33ff8">
+    <td>[`setData`](#function-setdata)</td>
+    <td>Sets the data for this block state.</td>
+</tr>
+<tr key="classendstone_1_1_block_state_1a54629f4faa893e30d1ef4d4ac15bf147">
+    <td>[`setType`](#function-settype)</td>
+    <td>Sets the type of this block state.</td>
+</tr>
+<tr key="classendstone_1_1_block_state_1aeaca92e63b3fa7bf37eb82e59bb9a45d">
+    <td>[`update`](#function-update-13)</td>
+    <td>Attempts to update the block represented by this state, setting it to yhe new values as defined by this state.</td>
+</tr>
+<tr key="classendstone_1_1_block_state_1a4d603b37f4b38df4151ced22c7f78331">
+    <td>[`update`](#function-update-23)</td>
+    <td>Attempts to update the block represented by this state, setting it to the new values as defined by this state.</td>
+</tr>
+<tr key="classendstone_1_1_block_state_1a6bb9b025f0e02b8ec732e6a74c27b599">
+    <td>[`update`](#function-update-33)</td>
+    <td>Attempts to update the block represented by this state, setting it to the new values as defined by this state.</td>
+</tr>
+<tr key="classendstone_1_1_block_state_1a7e3b8131f58cbb0ba1cd3338d8b90c12">
+    <td>[`~BlockState`](#function-blockstate)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> getBlock
+
+```cpp
+virtual std::unique_ptr< Block > endstone::BlockState::getBlock () const = 0
+```
+
+Gets the block represented by this block state.
+
+
+
+**Returns:**
+
+the block represented by this block state 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getData
+
+```cpp
+virtual std::unique_ptr< BlockData > endstone::BlockState::getData () const = 0
+```
+
+Gets the data for this block state.
+
+
+
+**Returns:**
+
+block specific data 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getDimension
+
+```cpp
+virtual Dimension & endstone::BlockState::getDimension () const = 0
+```
+
+Gets the dimension which contains the block represented by this block state.
+
+
+
+**Returns:**
+
+the dimension containing the block represented by this block state 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getLocation
+
+```cpp
+virtual Location endstone::BlockState::getLocation () const = 0
+```
+
+Gets the location of this block state.
+
+
+
+**Returns:**
+
+the location 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getType
+
+```cpp
+virtual std::string endstone::BlockState::getType () const = 0
+```
+
+Gets the type of this block state.
+
+
+
+**Returns:**
+
+block type 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getX
+
+```cpp
+virtual int endstone::BlockState::getX () const = 0
+```
+
+Gets the x-coordinate of this block state.
+
+
+
+**Returns:**
+
+x-coordinate 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getY
+
+```cpp
+virtual int endstone::BlockState::getY () const = 0
+```
+
+Gets the y-coordinate of this block state.
+
+
+
+**Returns:**
+
+y-coordinate 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getZ
+
+```cpp
+virtual int endstone::BlockState::getZ () const = 0
+```
+
+Gets the z-coordinate of this block state.
+
+
+
+**Returns:**
+
+z-coordinate 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setData
+
+```cpp
+virtual Result< void > endstone::BlockState::setData (
+    const BlockData & data
+) = 0
+```
+
+Sets the data for this block state.
+
+
+
+**Parameters:**
+
+
+* `data` New block specific data 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setType
+
+```cpp
+virtual Result< void > endstone::BlockState::setType (
+    std::string type
+) = 0
+```
+
+Sets the type of this block state.
+
+
+
+**Parameters:**
+
+
+* `type` [**Block**](classendstone_1_1_block.md) type to change this block state to 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> update
+
+```cpp
+virtual bool endstone::BlockState::update () = 0
+```
+
+Attempts to update the block represented by this state, setting it to yhe new values as defined by this state.
+
+This has the same effect as calling update(false). That is to say, this will not modify the state of a block if it is no longer the same type as it was when this state was taken. It will return false in this eventuality.
+
+
+
+
+**Returns:**
+
+true if the update was successful, otherwise false 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> update
+
+```cpp
+virtual bool endstone::BlockState::update (
+    bool force
+) = 0
+```
+
+Attempts to update the block represented by this state, setting it to the new values as defined by this state.
+
+This has the same effect as calling update(force, true). That is to say, this will trigger a physics update to surrounding blocks.
+
+
+
+
+**Parameters:**
+
+
+* `force` true to forcefully set the state 
+
+
+
+**Returns:**
+
+true if the update was successful, otherwise false 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> update
+
+```cpp
+virtual bool endstone::BlockState::update (
+    bool force,
+    bool apply_physics
+) = 0
+```
+
+Attempts to update the block represented by this state, setting it to the new values as defined by this state.
+
+Unless force is true, this will not modify the state of a block if it is no longer the same type as it was when this state was taken. It will return false in this eventuality. 
+
+
+If force is true, it will set the type of the block to match the new state, set the state data and then return true. 
+
+
+If apply\_physics is true, it will trigger a physics update on surrounding blocks which could cause them to update or disappear.
+
+
+
+
+**Parameters:**
+
+
+* `force` true to forcefully set the state 
+* `apply_physics` false to cancel updating physics on surrounding blocks 
+
+
+
+**Returns:**
+
+true if the update was successful, otherwise false 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~BlockState
+
+```cpp
+virtual endstone::BlockState::~BlockState () = default
+```
+

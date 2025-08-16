@@ -1,0 +1,110 @@
+---
+title: "SocketAddress"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::SocketAddress
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_socket_address_1a737ca1e9fbf491286e5c99d43eb4ac70">
+    <td>[`SocketAddress`](#function-socketaddress-12)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_socket_address_1a68d8ef8f335c853e7b56c3c90d648301">
+    <td>[`SocketAddress`](#function-socketaddress-22)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_socket_address_1ae29c126b04d9d5094323ae495c32f6dd">
+    <td>[`getHostname`](#function-gethostname)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_socket_address_1aab52350c83757435fe655b07f9cb8496">
+    <td>[`getPort`](#function-getport)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> SocketAddress
+
+```cpp
+endstone::SocketAddress::SocketAddress () = default
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> SocketAddress
+
+```cpp
+inline endstone::SocketAddress::SocketAddress (
+    std::string hostname,
+    std::uint32_t port
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getHostname
+
+```cpp
+inline const std::string & endstone::SocketAddress::getHostname () const
+```
+
+
+Gets the hostname.
+
+
+
+
+**Returns:**
+
+The hostname of this socket address 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPort
+
+```cpp
+inline std::uint32_t endstone::SocketAddress::getPort () const
+```
+
+
+Gets the port number.
+
+
+
+
+**Returns:**
+
+The port number of this socket address 
+
+
+
+
+
+        

@@ -1,0 +1,151 @@
+---
+title: "PermissionAttachmentInfo"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::PermissionAttachmentInfo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_permission_attachment_info_1ab427bdc121a357b5392e87b134c6fb6b">
+    <td>[`PermissionAttachmentInfo`](#function-permissionattachmentinfo)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_permission_attachment_info_1a1052981a67ade54aa639e382eaf21838">
+    <td>[`getAttachment`](#function-getattachment)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_permission_attachment_info_1aed4a895ddc1289a4b6325ef965d08518">
+    <td>[`getPermissible`](#function-getpermissible)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_permission_attachment_info_1aab0ecc028e2335689a99a4c8af4d631c">
+    <td>[`getPermission`](#function-getpermission)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_permission_attachment_info_1a86e337719e9f2625f7a8a1760c630ecb">
+    <td>[`getValue`](#function-getvalue)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> PermissionAttachmentInfo
+
+```cpp
+inline endstone::PermissionAttachmentInfo::PermissionAttachmentInfo (
+    Permissible & permissible,
+    std::string permission,
+    PermissionAttachment * attachment,
+    bool value
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getAttachment
+
+```cpp
+inline PermissionAttachment * endstone::PermissionAttachmentInfo::getAttachment () const
+```
+
+
+Gets the attachment providing this permission. This may be null for default permissions (usually parent permissions).
+
+
+
+
+**Returns:**
+
+Attachment 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPermissible
+
+```cpp
+inline Permissible & endstone::PermissionAttachmentInfo::getPermissible () const
+```
+
+
+Gets the permissible this is attached to
+
+
+
+
+**Returns:**
+
+[**Permissible**](classendstone_1_1_permissible.md) this permission is for 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPermission
+
+```cpp
+inline std::string endstone::PermissionAttachmentInfo::getPermission () const
+```
+
+
+Gets the permission being set
+
+
+
+
+**Returns:**
+
+Name of the permission 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getValue
+
+```cpp
+inline bool endstone::PermissionAttachmentInfo::getValue () const
+```
+
+
+Gets the value of this permission
+
+
+
+
+**Returns:**
+
+Value of the permission 
+
+
+
+
+
+        

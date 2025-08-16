@@ -1,0 +1,264 @@
+---
+title: "Location"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::Location
+
+Bases: [`endstone::Position`](classendstone_1_1_position.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_location_1a1ec203c20e222d518b12a065703f62d2">
+    <td>[`Location`](#function-location-13)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_location_1afa5301b5666075dd78b66145003b7beb">
+    <td>[`Location`](#function-location-23)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_location_1af13e92b895db527ad011c8438ed9ca93">
+    <td>[`Location`](#function-location-33)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_location_1afd7f8dbb082f27f480135d4ba430bdaa">
+    <td>[`Position`](#function-position-12)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_location_1a4d254166aee4f58209134e7e56c16597">
+    <td>[`Position`](#function-position-22)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_location_1ac7bbf98fefeb8b94ed69c98382fec84e">
+    <td>[`getDirection`](#function-getdirection)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_location_1a8d5d7508809220f179abd3aab4432272">
+    <td>[`getPitch`](#function-getpitch)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_location_1a15b337fd56d6e8e4cb24ba1b6b745a41">
+    <td>[`getYaw`](#function-getyaw)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_location_1a27175a2731840cf6a10438adb80e8ad1">
+    <td>[`setPitch`](#function-setpitch)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_location_1adc5ba432e8d7e277ad1a004f51fe5e5d">
+    <td>[`setYaw`](#function-setyaw)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-function"/> Location
+
+```cpp
+template<typename T, typename>
+inline endstone::Location::Location (
+    T x,
+    T y,
+    T z,
+    float pitch=0.0,
+    float yaw=0.0
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> Location
+
+```cpp
+template<typename T, typename>
+inline endstone::Location::Location (
+    T x,
+    T y,
+    T z,
+    float pitch,
+    Dimension & dimension
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> Location
+
+```cpp
+template<typename T, typename>
+inline endstone::Location::Location (
+    T x,
+    T y,
+    T z,
+    float pitch,
+    float yaw,
+    Dimension & dimension
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> Position
+
+```cpp
+template<typename T, typename>
+inline endstone::Location::Position (
+    T x,
+    T y,
+    T z
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> Position
+
+```cpp
+template<typename T, typename>
+inline endstone::Location::Position (
+    T x,
+    T y,
+    T z,
+    Dimension & dimension
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getDirection
+
+```cpp
+inline Vector endstone::Location::getDirection () const
+```
+
+
+Gets a unit-vector pointing in the direction that this [**Location**](classendstone_1_1_location.md) is facing.
+
+
+
+
+**Returns:**
+
+a vector pointing the direction of this location's pitch and yaw 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getPitch
+
+```cpp
+inline float endstone::Location::getPitch () const
+```
+
+
+Gets the pitch of this location, measured in degrees.
+
+
+
+
+**Returns:**
+
+the incline's pitch 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getYaw
+
+```cpp
+inline float endstone::Location::getYaw () const
+```
+
+
+Gets the yaw of this location, measured in degrees.
+
+
+
+
+**Returns:**
+
+the rotation's yaw 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setPitch
+
+```cpp
+inline void endstone::Location::setPitch (
+    float pitch
+) 
+```
+
+
+Sets the pitch of this location, measured in degrees. 
+* A pitch of 0 represents level forward facing. 
+* A pitch of 90 represents downward facing, or negative y direction. 
+* A pitch of -90 represents upward facing, or positive y direction. 
+
+Increasing pitch values the equivalent of looking down.
+
+
+
+
+**Parameters:**
+
+
+* `pitch` new incline's pitch 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setYaw
+
+```cpp
+inline void endstone::Location::setYaw (
+    float yaw
+) 
+```
+
+
+Sets the yaw of this location, measured in degrees. 
+* A yaw of 0 or 360 represents the positive z direction. 
+* A yaw of 180 represents the negative z direction. 
+* A yaw of 90 represents the negative x direction. 
+* A yaw of 270 represents the positive x direction. 
+
+Increasing yaw values are the equivalent of turning to your right-facing, increasing the scale of the next respective axis, and decreasing the scale of the previous axis.
+
+
+
+
+**Parameters:**
+
+
+* `yaw` new rotation's yaw 
+
+
+
+
+        

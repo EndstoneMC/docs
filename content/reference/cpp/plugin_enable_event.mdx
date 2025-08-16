@@ -1,0 +1,123 @@
+---
+title: "PluginEnableEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::PluginEnableEvent
+
+Bases: [`endstone::ServerEvent`](classendstone_1_1_server_event.md)
+
+
+
+
+
+
+
+
+
+**Attributes:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_plugin_enable_event_1a6cb2f949961229f901d9a577fc1f7524">
+    <td>[`NAME`](#variable-name)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_plugin_enable_event_1a0a91fb81e3cba570f202ad1be08b323c">
+    <td>[`PluginEnableEvent`](#function-pluginenableevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_enable_event_1a80a2a76f95e0c011b04994475905d79b">
+    <td>[`getEventName`](#function-geteventname)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_plugin_enable_event_1a52ae25a2b8f978fd31ccfde6b5fcd203">
+    <td>[`getPlugin`](#function-getplugin)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-variable"/> NAME
+
+```cpp
+const std::string endstone::PluginEnableEvent::NAME;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> PluginEnableEvent
+
+```cpp
+inline explicit endstone::PluginEnableEvent::PluginEnableEvent (
+    Plugin & plugin
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getEventName
+
+```cpp
+inline virtual std::string endstone::PluginEnableEvent::getEventName () override const
+```
+
+
+Gets a user-friendly identifier for this event.
+
+
+
+
+**Returns:**
+
+name of this event 
+
+
+
+
+
+        
+Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
+
+### <code className="doc-symbol doc-symbol-function"/> getPlugin
+
+```cpp
+inline Plugin & endstone::PluginEnableEvent::getPlugin () const
+```
+
+
+Gets the plugin involved in this event
+
+
+
+
+**Returns:**
+
+[**Plugin**](classendstone_1_1_plugin.md) for this event 
+
+
+
+
+
+        

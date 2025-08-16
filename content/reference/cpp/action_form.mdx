@@ -1,0 +1,368 @@
+---
+title: "ActionForm"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::ActionForm
+
+Bases: [`endstone::Form`](classendstone_1_1_form.md)
+
+
+
+
+
+
+**Types:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_action_form_1a468369b9ae764e15f0cda9dcd721934c">
+    <td>[`Control`](#typedef-control)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_action_form_1a0ca59e6772ff18f48423865050a4ef0c">
+    <td>[`OnSubmitCallback`](#typedef-onsubmitcallback)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_action_form_1ac76d90626698589dba21d3d9d372326f">
+    <td>[`ActionForm`](#function-actionform)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_action_form_1a67bb3b3933803edf6e64013d3386fcec">
+    <td>[`addButton`](#function-addbutton)</td>
+    <td>Adds a button to the form.</td>
+</tr>
+<tr key="classendstone_1_1_action_form_1a3000d750607a90793bcb0d933d55e854">
+    <td>[`addDivider`](#function-adddivider)</td>
+    <td>Adds a divider to the form.</td>
+</tr>
+<tr key="classendstone_1_1_action_form_1a71b6ee0a6a60f61ceff0f864cb7aa662">
+    <td>[`addHeader`](#function-addheader)</td>
+    <td>Adds a header to the form.</td>
+</tr>
+<tr key="classendstone_1_1_action_form_1a4d1d4891f8f9893afc10e34aaf3ac392">
+    <td>[`addLabel`](#function-addlabel)</td>
+    <td>Adds a label to the form.</td>
+</tr>
+<tr key="classendstone_1_1_action_form_1aff5268af0e4b5386b406fdd90092aff3">
+    <td>[`getContent`](#function-getcontent)</td>
+    <td>Get the content of the form.</td>
+</tr>
+<tr key="classendstone_1_1_action_form_1a9490eb69d1bcee4ed940b9fd42681002">
+    <td>[`getControls`](#function-getcontrols)</td>
+    <td>Get the controls of the action form.</td>
+</tr>
+<tr key="classendstone_1_1_action_form_1a18e87e6ed9ab7a49f74522672392ffe6">
+    <td>[`getOnSubmit`](#function-getonsubmit)</td>
+    <td>Gets the on submit callback of the form.</td>
+</tr>
+<tr key="classendstone_1_1_action_form_1adb15597b6b4d6a4edf6bec6db6ed7faa">
+    <td>[`setContent`](#function-setcontent)</td>
+    <td>Set the content of the form.</td>
+</tr>
+<tr key="classendstone_1_1_action_form_1a11f4ae54967fb5223e50b3444c467ca6">
+    <td>[`setControls`](#function-setcontrols)</td>
+    <td>Set the controls of the action form.</td>
+</tr>
+<tr key="classendstone_1_1_action_form_1ad6432d9fec3543615bc2a79a33c846a5">
+    <td>[`setOnSubmit`](#function-setonsubmit)</td>
+    <td>Sets the on submit callback of the form.</td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-typedef"/> Control
+
+```cpp
+using endstone::ActionForm::Control =  std::variant<Button, Divider, Header, Label>;
+```
+
+
+### <code className="doc-symbol doc-symbol-typedef"/> OnSubmitCallback
+
+```cpp
+using endstone::ActionForm::OnSubmitCallback =  std::function<void(Player *, int)>;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> ActionForm
+
+```cpp
+explicit endstone::ActionForm::ActionForm () = default
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> addButton
+
+```cpp
+inline ActionForm & endstone::ActionForm::addButton (
+    const Message & text,
+    const std::optional< std::string > & icon=std::nullopt,
+    Button::OnClickCallback on_click={}
+) 
+```
+
+Adds a button to the form.
+
+
+
+**Parameters:**
+
+
+* `text` The text of the button 
+* `icon` The path or URL to the icon image 
+* `on_click` The on click callback of the button 
+
+
+
+**Returns:**
+
+A reference to the current form. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> addDivider
+
+```cpp
+inline ActionForm & endstone::ActionForm::addDivider () 
+```
+
+Adds a divider to the form.
+
+
+
+**Returns:**
+
+A reference to the current form. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> addHeader
+
+```cpp
+inline ActionForm & endstone::ActionForm::addHeader (
+    const Message & text
+) 
+```
+
+Adds a header to the form.
+
+
+
+**Parameters:**
+
+
+* `text` The text of the header 
+
+
+
+**Returns:**
+
+A reference to the current form. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> addLabel
+
+```cpp
+inline ActionForm & endstone::ActionForm::addLabel (
+    const Message & text
+) 
+```
+
+Adds a label to the form.
+
+
+
+**Parameters:**
+
+
+* `text` The text of the label 
+
+
+
+**Returns:**
+
+A reference to the current form. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getContent
+
+```cpp
+inline Message endstone::ActionForm::getContent () const
+```
+
+Get the content of the form.
+
+
+
+**Returns:**
+
+The content of the form. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getControls
+
+```cpp
+inline const std::vector< Control > & endstone::ActionForm::getControls () const
+```
+
+Get the controls of the action form.
+
+
+
+**Returns:**
+
+A list of controls in the action form. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getOnSubmit
+
+```cpp
+inline OnSubmitCallback endstone::ActionForm::getOnSubmit () const
+```
+
+Gets the on submit callback of the form.
+
+
+
+**Returns:**
+
+The on submit callback of the form. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setContent
+
+```cpp
+inline ActionForm & endstone::ActionForm::setContent (
+    Message text
+) 
+```
+
+Set the content of the form.
+
+
+
+**Parameters:**
+
+
+* `text` The text to set as the content. 
+
+
+
+**Returns:**
+
+A reference to the current form. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setControls
+
+```cpp
+inline ActionForm & endstone::ActionForm::setControls (
+    const std::vector< Control > & controls
+) 
+```
+
+Set the controls of the action form.
+
+
+
+**Parameters:**
+
+
+* `controls` The list of controls to set. 
+
+
+
+**Returns:**
+
+A reference to the current form. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setOnSubmit
+
+```cpp
+inline ActionForm & endstone::ActionForm::setOnSubmit (
+    OnSubmitCallback on_submit
+) 
+```
+
+Sets the on submit callback of the form.
+
+
+
+**Parameters:**
+
+
+* `on_submit` The callback to be set. 
+
+
+
+**Returns:**
+
+A reference to the current form. 
+
+
+
+
+
+        

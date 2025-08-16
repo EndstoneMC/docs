@@ -1,0 +1,191 @@
+---
+title: "PlayerEmoteEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerEmoteEvent
+
+Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+
+
+
+
+
+
+
+
+
+**Attributes:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_player_emote_event_1a74ecb4319b65d01b406f8c591d3aff18">
+    <td>[`NAME`](#variable-name)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_player_emote_event_1ac2488935ceb6439496161cad234f16aa">
+    <td>[`PlayerEmoteEvent`](#function-playeremoteevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_emote_event_1a3cdd5e160ee7f361ee4dd23cd94bf709">
+    <td>[`getEmoteId`](#function-getemoteid)</td>
+    <td>Gets the emote piece ID.</td>
+</tr>
+<tr key="classendstone_1_1_player_emote_event_1a79b81c6252a8a7036ddf04f4827edd40">
+    <td>[`getEventName`](#function-geteventname)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_player_emote_event_1a44bd292db6e8d2326ac16126cadfcf1a">
+    <td>[`isMuted`](#function-ismuted)</td>
+    <td>Gets the muted state for the emote.</td>
+</tr>
+<tr key="classendstone_1_1_player_emote_event_1a8b3923ba2a6d0867d03ea8ec89ab299a">
+    <td>[`setMuted`](#function-setmuted)</td>
+    <td>Sets the muted state for the emote.</td>
+</tr>
+<tr key="classendstone_1_1_player_emote_event_1a197c850f0d19456039fa2371f4476ff6">
+    <td>[`~PlayerEmoteEvent`](#function-playeremoteevent)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-variable"/> NAME
+
+```cpp
+const std::string endstone::PlayerEmoteEvent::NAME;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> PlayerEmoteEvent
+
+```cpp
+inline explicit endstone::PlayerEmoteEvent::PlayerEmoteEvent (
+    Player & player,
+    std::string emote_id,
+    bool muted
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getEmoteId
+
+```cpp
+inline std::string endstone::PlayerEmoteEvent::getEmoteId () const
+```
+
+Gets the emote piece ID.
+
+
+
+**Returns:**
+
+The emote piece ID 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getEventName
+
+```cpp
+inline virtual std::string endstone::PlayerEmoteEvent::getEventName () override const
+```
+
+
+Gets a user-friendly identifier for this event.
+
+
+
+
+**Returns:**
+
+name of this event 
+
+
+
+
+
+        
+Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
+
+### <code className="doc-symbol doc-symbol-function"/> isMuted
+
+```cpp
+inline bool endstone::PlayerEmoteEvent::isMuted () const
+```
+
+Gets the muted state for the emote.
+
+This method determines whether the emote is being executed without sending a chat message about the emote.
+
+
+
+
+**Returns:**
+
+true if the emote is muted, false otherwise. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> setMuted
+
+```cpp
+inline void endstone::PlayerEmoteEvent::setMuted (
+    bool muted
+) 
+```
+
+Sets the muted state for the emote.
+
+
+
+**Note:**
+
+If set to true, the emote will be executed silently, and no chat messages will be sent.
+
+
+
+
+**Parameters:**
+
+
+* `muted` true to mute the emote and disable chat messages, false to unmute it. 
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> ~PlayerEmoteEvent
+
+```cpp
+endstone::PlayerEmoteEvent::~PlayerEmoteEvent () override
+```
+

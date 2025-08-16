@@ -1,0 +1,121 @@
+---
+title: "ActorDeathEvent"
+---
+
+## <code className="doc-symbol doc-symbol-class"/> endstone::ActorDeathEvent
+
+Bases: [`endstone::ActorEvent`](classendstone_1_1_actor_event.md)
+
+
+
+
+
+
+
+
+
+**Attributes:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_actor_death_event_1a18887864dc592fcce27965ceda143deb">
+    <td>[`NAME`](#variable-name)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+**Functions:**
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+<tr key="classendstone_1_1_actor_death_event_1a0a2ffc4f1aa535e3afd006a934114f1a">
+    <td>[`ActorDeathEvent`](#function-actordeathevent)</td>
+    <td></td>
+</tr>
+<tr key="classendstone_1_1_actor_death_event_1ac269e4dac094cf1275a1fe60302872ed">
+    <td>[`getDamageSource`](#function-getdamagesource)</td>
+    <td>Gets the source of damage which caused the death.</td>
+</tr>
+<tr key="classendstone_1_1_actor_death_event_1ad3572783702cd3e40447a3d6344a8094">
+    <td>[`getEventName`](#function-geteventname)</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+### <code className="doc-symbol doc-symbol-variable"/> NAME
+
+```cpp
+const std::string endstone::ActorDeathEvent::NAME;
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> ActorDeathEvent
+
+```cpp
+inline endstone::ActorDeathEvent::ActorDeathEvent (
+    Mob & actor,
+    std::unique_ptr< DamageSource > damage_source
+) 
+```
+
+
+### <code className="doc-symbol doc-symbol-function"/> getDamageSource
+
+```cpp
+inline DamageSource & endstone::ActorDeathEvent::getDamageSource () const
+```
+
+Gets the source of damage which caused the death.
+
+
+
+**Returns:**
+
+a [**DamageSource**](classendstone_1_1_damage_source.md) detailing the source of the damage for the death. 
+
+
+
+
+
+        
+### <code className="doc-symbol doc-symbol-function"/> getEventName
+
+```cpp
+inline virtual std::string endstone::ActorDeathEvent::getEventName () override const
+```
+
+
+Gets a user-friendly identifier for this event.
+
+
+
+
+**Returns:**
+
+name of this event 
+
+
+
+
+
+        
+Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
