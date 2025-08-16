@@ -310,15 +310,6 @@ When multiple plugins are loaded, the [**onLoad()**](classendstone_1_1_plugin.md
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> operator=
-
-```cpp
-Plugin & endstone::Plugin::operator= (
-    const Plugin &
-) = delete
-```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> registerEvent
 
 ```cpp
@@ -341,13 +332,6 @@ inline void endstone::Plugin::registerEvent (
     EventPriority priority=EventPriority::Normal,
     bool ignore_cancelled=false
 ) 
-```
-
-
-### <code className="doc-symbol doc-symbol-function"/> ~Plugin
-
-```cpp
-endstone::Plugin::~Plugin () override
 ```
 
 

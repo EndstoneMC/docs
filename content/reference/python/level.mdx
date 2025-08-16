@@ -109,10 +109,6 @@ Name | Description
    </tr>
 </thead>
 <tbody>
-    <tr key="drop_item">
-        <td>[`drop_item`](#endstone.level.Dimension.drop_item)</td>
-        <td>Drops an item at the specified Location</td>
-    </tr>
     <tr key="get_block_at">
         <td>[`get_block_at`](#endstone.level.Dimension.get_block_at)</td>
         <td>Gets the Block at the given Location<br/>Gets the Block at the given coordinates</td>
@@ -327,14 +323,6 @@ value: int
 
 </div>
 
-#### <code className="doc-symbol doc-symbol-method"/> drop_item [#endstone.level.Dimension.drop_item]
-
-```python
-drop_item(location:Location, item:ItemStack) -> Item
-```
-
-Drops an item at the specified Location
-
 #### <code className="doc-symbol doc-symbol-method"/> get_block_at [#endstone.level.Dimension.get_block_at]
 
 ```python
@@ -472,12 +460,12 @@ Gets the dimension with the given name.
 
 ```python
 Location(
+    dimension: Dimension,
     x: float,
     y: float,
     z: float,
     pitch: float = 0.0,
     yaw: float = 0.0,
-    dimension: Dimension = None,
 )
 ```
 
@@ -531,7 +519,7 @@ The yaw of this location, measured in degrees.
 ### <code className="doc-symbol doc-symbol-class"/> Position [#endstone.level.Position]
 
 ```python
-Position(x:float, y:float, z:float, dimension:Dimension = None)
+Position(dimension:Dimension, x:float, y:float, z:float)
 ```
 
 <div className="pl-[2em] mt-[1.25em]">

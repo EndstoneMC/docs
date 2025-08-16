@@ -316,24 +316,6 @@ true if scores are modifiable
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> operator!=
-
-```cpp
-virtual bool endstone::Objective::operator!= (
-    const Objective & other
-) const = 0
-```
-
-
-### <code className="doc-symbol doc-symbol-function"/> operator==
-
-```cpp
-virtual bool endstone::Objective::operator== (
-    const Objective & other
-) const = 0
-```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> setDisplay
 
 ```cpp
@@ -427,10 +409,3 @@ virtual Result< void > endstone::Objective::unregister () const = 0
 ```
 
 Unregisters this objective from the associated Scoreboard .
-
-### <code className="doc-symbol doc-symbol-function"/> ~Objective
-
-```cpp
-virtual endstone::Objective::~Objective () = default
-```
-

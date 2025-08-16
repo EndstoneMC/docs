@@ -186,8 +186,28 @@
         @apply bg-red-700/20 text-red-700 rounded-full;
     }
 
+    .doc-symbol-function::after {
+        content: "f";
+        @apply bg-red-700/20 text-red-700 rounded-full;
+    }
+
     .doc-symbol-attribute::after {
         content: "p";
         @apply bg-violet-700/20 text-violet-700 rounded-full;
+    }
+
+    .doc-symbol-typedef::after {
+        content: "T";
+        @apply bg-violet-700/20 text-violet-700;
+    }
+
+    .doc-symbol-enum::after {
+        content: "E";
+        @apply bg-violet-700/20 text-violet-700;
+    }
+
+    .doc-symbol-variable::after {
+        content: "F";
+        @apply bg-violet-700/20 text-violet-700;
     }
 }

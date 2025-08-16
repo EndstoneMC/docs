@@ -451,7 +451,7 @@ Stores the ItemStack at the given index of the inventory.
 #### <code className="doc-symbol doc-symbol-method"/> as_meta_for [#endstone.inventory.ItemFactory.as_meta_for]
 
 ```python
-as_meta_for(meta:ItemMeta, type:str) -> ItemMeta
+as_meta_for(meta:ItemMeta, type:ItemType) -> ItemMeta
 ```
 
 Returns an appropriate item meta for the specified item type.
@@ -467,7 +467,7 @@ This method is used to compare two ItemMeta objects.
 #### <code className="doc-symbol doc-symbol-method"/> get_item_meta [#endstone.inventory.ItemFactory.get_item_meta]
 
 ```python
-get_item_meta(type:str) -> ItemMeta
+get_item_meta(type:ItemType) -> ItemMeta
 ```
 
 This creates a new item meta for the item type.
@@ -475,7 +475,7 @@ This creates a new item meta for the item type.
 #### <code className="doc-symbol doc-symbol-method"/> is_applicable [#endstone.inventory.ItemFactory.is_applicable]
 
 ```python
-is_applicable(meta:ItemMeta, type:str) -> bool
+is_applicable(meta:ItemMeta, type:ItemType) -> bool
 ```
 
 This method checks the item meta to confirm that it is applicable (no data lost if applied) to the specified ItemStack
@@ -793,7 +793,7 @@ Represents a stack of items.
     </tr>
     <tr key="type">
         <td>[`type`](#endstone.inventory.ItemStack.type)</td>
-        <td><code className="nextra-code">[str](#str)</code></td>
+        <td><code className="nextra-code">[ItemType](#endstone._internal.endstone_python.ItemType)</code></td>
         <td>Gets or sets the type of this item.</td>
     </tr></tbody>
 </table>
@@ -833,7 +833,7 @@ Get the maximum stack size for this item.
 #### <code className="doc-symbol doc-symbol-attribute"/> type [#endstone.inventory.ItemStack.type]
 
 ```python
-type: str
+type: ItemType
 ```
 
 Gets or sets the type of this item.

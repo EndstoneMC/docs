@@ -1,0 +1,32 @@
+{%- filter indent(config.get('indent_level', 0), True) -%}
+{# This template is used inside of member.py #}
+
+{%- if node.has(visibility, kinds, static) -%}
+{%- if parent is none -%}
+**{{title}}:**
+{%- else -%}
+**{{title}} inherited from {{node.name}}:**
+
+See [{{node.name_long}}]({{node.url}})
+{%- endif %}
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+{% for member in node.query(visibility, kinds, static) -%}
+<tr key="{{ member.refid }}">
+    <td>[`{{ member.name_short }}`](#{{member.anchor}})</td>
+    <td>{{member._brief.plain()}}</td>
+</tr>
+{% endfor -%}
+</tbody>
+</table>
+
+{%- endif -%}
+
+{% endfilter %}

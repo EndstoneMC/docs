@@ -169,24 +169,6 @@ Gets the command registered to the specified name
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> operator=
-
-```cpp
-CommandMap & endstone::CommandMap::operator= (
-    const CommandMap &
-) = delete
-```
-
-
-### <code className="doc-symbol doc-symbol-function"/> operator=
-
-```cpp
-CommandMap & endstone::CommandMap::operator= (
-    CommandMap &&
-) = default
-```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> registerCommand
 
 ```cpp
@@ -217,9 +199,3 @@ true on success, false if a command with the same name is already registered
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> ~CommandMap
-
-```cpp
-virtual endstone::CommandMap::~CommandMap () = default
-```
-

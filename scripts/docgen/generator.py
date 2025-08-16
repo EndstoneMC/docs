@@ -14,7 +14,7 @@ class Generator(GeneratorAuto):
             file.write(output)
 
     def member(self, node: Node, config: dict = None):
-        path = inflection.underscore(node.name_short) + ".md"
+        path = inflection.underscore(node.name_short) + ".mdx"
 
         output = ""
         output += '---\n'
