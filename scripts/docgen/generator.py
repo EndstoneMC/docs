@@ -3,6 +3,12 @@ import os
 
 import filters
 import mkdoxy
+from filters import (
+    do_filter_functions,
+    do_format_codeblock,
+    do_format_refid,
+    do_group_overloads,
+)
 from jinja2 import BaseLoader, Environment, Template
 from mkdocs import exceptions
 from mkdocs.structure import files
@@ -13,14 +19,14 @@ from mkdoxy.node import Node
 from mkdoxy.utils import parseTemplateFile
 from tqdm import tqdm
 
-from filters import do_format_refid, do_filter_functions, do_group_overloads, do_format_codeblock
+from scripts.docgen.filters import do_as_base_classes
 
 log: logging.Logger = logging.getLogger("mkdocs")
 
 
 class BaseGenerator(GeneratorBase):
     def __init__(
-            self, templateDir: str = "", ignore_errors: bool = False, debug: bool = False
+        self, templateDir: str = "", ignore_errors: bool = False, debug: bool = False
     ):
         """! Constructor.
         @details
@@ -46,6 +52,7 @@ class BaseGenerator(GeneratorBase):
         environment.filters["filter_functions"] = do_filter_functions
         environment.filters["group_overloads"] = do_group_overloads
         environment.filters["format_codeblock"] = do_format_codeblock
+        environment.filters["as_base_classes"] = do_as_base_classes
         # code from https://github.com/daizutabi/mkapi/blob/master/mkapi/core/renderer.py#L29-L38
         path = os.path.join(os.path.dirname(mkdoxy.__file__), "templates")
         ENDING = (".jinja2", ".j2", ".jinja")

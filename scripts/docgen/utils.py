@@ -1,5 +1,5 @@
-import subprocess
 import shutil
+import subprocess
 
 
 def clang_format(code: str, binary=None, cwd=None) -> str:

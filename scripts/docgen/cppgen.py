@@ -2,14 +2,13 @@ import argparse
 import logging
 from pathlib import Path
 
-from generator import Generator, BaseGenerator
+from generator import BaseGenerator, Generator
 from mkdoxy.cache import Cache
 from mkdoxy.constants import Kind
 from mkdoxy.doxygen import Doxygen
 from mkdoxy.doxyrun import DoxygenRun
 from mkdoxy.generatorBase import GeneratorBase
 from mkdoxy.xml_parser import XmlParser
-
 from tqdm import tqdm
 
 logging.basicConfig()

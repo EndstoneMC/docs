@@ -8,12 +8,12 @@ implements: True
 ## <code className="doc-symbol doc-symbol-{{node.kind.value}}"/> {{node.name_long}}
 {% if node.has_templateparams %}
 **template &lt;{{node.templateparams}}&gt;**
-{%- endif %}
+{% endif %}
 
 {%- if node.has_base_classes %}
 Bases:
-{%- for base in node.base_classes -%}
-{%- if base is string %} `{{base}}`{%- else %} [`{{base.name_long}}`]({{base.refid | format_refid}}){%- endif -%}
+{%- for name, base in (node|as_base_classes).items() -%}
+{%- if not base %} `{{name}}`{%- else %} [`{{name}}`]({{base.refid | format_refid}}){%- endif -%}
 {{ ', ' if not loop.last else '' }}
 {%- endfor -%}
 {%- endif %}

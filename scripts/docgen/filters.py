@@ -1,7 +1,7 @@
 import re
+from collections import OrderedDict
 from pathlib import Path
 from typing import Sequence
-from collections import OrderedDict
 
 from griffe import DocstringFunction, DocstringSectionFunctions, Function
 from mkdoxy.node import Node
@@ -10,7 +10,7 @@ from scripts.docgen.utils import clang_format
 
 
 def do_heading(
-        content: str, heading_level: int, role: str | None = None, **attributes: str
+    content: str, heading_level: int, role: str | None = None, **attributes: str
 ) -> str:
     """Render a Markdown heading.
 
@@ -36,9 +36,9 @@ def do_heading(
 
 
 def do_as_functions_section(
-        functions: Sequence[Function],
-        *,
-        check_public: bool = True,
+    functions: Sequence[Function],
+    *,
+    check_public: bool = True,
 ) -> DocstringSectionFunctions:
     """Build a functions section from a list of functions.
 
@@ -131,8 +131,8 @@ def do_group_overloads(functions: [Node]):
         key = function.name_short
         if key in groups:
             node = groups[key]
-            if not hasattr(node, '_overloads'):
-                setattr(node, '_overloads', [node])
+            if not hasattr(node, "_overloads"):
+                setattr(node, "_overloads", [node])
             node._overloads.append(function)
         else:
             groups[key] = function
@@ -201,7 +201,9 @@ def do_format_codeblock(node: Node) -> str:
                     code.append(f"    {param},")
             code.append(f") {node._initializer.plain()}")
         else:
-            code.append(f"#define {node.name_full_unescaped} {node._initializer.plain()}")
+            code.append(
+                f"#define {node.name_full_unescaped} {node._initializer.plain()}"
+            )
 
     else:
         code.append(node._definition.plain())
@@ -209,7 +211,19 @@ def do_format_codeblock(node: Node) -> str:
     result = "\n".join([*code])
     try:
         result = clang_format(result)
+        pass
     except:
         print(f"clang-format failed for {node.name}")
 
     return "\n".join(["```", result, "```"])
+
+
+def do_as_base_classes(node: Node) -> dict[str, Node]:
+    ret = {}
+    for ref in node._xml.findall("basecompoundref"):
+        refid = ref.get("refid")
+        if refid is None:
+            ret[ref.text] = None
+        else:
+            ret[ref.text] = node._cache.get(refid)
+    return ret
