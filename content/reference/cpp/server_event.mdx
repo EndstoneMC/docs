@@ -4,7 +4,7 @@ title: "ServerEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::ServerEvent
 
-Bases: [`endstone::Event`](classendstone_1_1_event.md)
+Bases: [`endstone::Event`](event)
 
 
 
@@ -47,13 +47,9 @@ Bases: [`endstone::Event`](classendstone_1_1_event.md)
 
 
 ```cpp
-inline explicit endstone::ServerEvent::Event (
-    bool async=false
-) 
+Event(bool async = false)
 ```
 
 ```cpp
-endstone::ServerEvent::Event (
-    const Event &
-) = delete
+Event(const Event &) = delete
 ```

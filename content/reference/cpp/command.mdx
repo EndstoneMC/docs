@@ -108,26 +108,20 @@ title: "Command"
 ### <code className="doc-symbol doc-symbol-function"/> Command [#Command]
 
 ```cpp
-inline explicit endstone::Command::Command (
-    std::string name,
-    std::string description="",
-    std::vector< std::string > usages={},
-    std::vector< std::string > aliases={},
-    std::vector< std::string > permissions={}
-) 
+Command(std::string name, std::string description = "",
+        std::vector<std::string> usages = {},
+        std::vector<std::string> aliases = {},
+        std::vector<std::string> permissions = {})
 ```
 ### <code className="doc-symbol doc-symbol-function"/> asPluginCommand [#asPluginCommand]
 
 ```cpp
-inline virtual PluginCommand * endstone::Command::asPluginCommand () const
+PluginCommand *asPluginCommand() const
 ```
 ### <code className="doc-symbol doc-symbol-function"/> execute [#execute]
 
 ```cpp
-inline virtual bool endstone::Command::execute (
-    CommandSender & sender,
-    const std::vector< std::string > & args
-) const
+bool execute(CommandSender &sender, const std::vector<std::string> &args) const
 ```
 
 
@@ -156,7 +150,7 @@ true if the execution was successful, otherwise false
 ### <code className="doc-symbol doc-symbol-function"/> getAliases [#getAliases]
 
 ```cpp
-inline std::vector< std::string > endstone::Command::getAliases () const
+std::vector<std::string> getAliases() const
 ```
 
 
@@ -177,7 +171,7 @@ List of aliases
 ### <code className="doc-symbol doc-symbol-function"/> getDescription [#getDescription]
 
 ```cpp
-inline std::string endstone::Command::getDescription () const
+std::string getDescription() const
 ```
 
 
@@ -198,7 +192,7 @@ Description of this command
 ### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
-inline std::string endstone::Command::getName () const
+std::string getName() const
 ```
 
 
@@ -219,7 +213,7 @@ Name of this command
 ### <code className="doc-symbol doc-symbol-function"/> getPermissions [#getPermissions]
 
 ```cpp
-inline std::vector< std::string > endstone::Command::getPermissions () const
+std::vector<std::string> getPermissions() const
 ```
 
 
@@ -240,7 +234,7 @@ List of permission names, or empty if none
 ### <code className="doc-symbol doc-symbol-function"/> getUsages [#getUsages]
 
 ```cpp
-inline std::vector< std::string > endstone::Command::getUsages () const
+std::vector<std::string> getUsages() const
 ```
 
 
@@ -261,7 +255,7 @@ List of usages
 ### <code className="doc-symbol doc-symbol-function"/> isRegistered [#isRegistered]
 
 ```cpp
-inline bool endstone::Command::isRegistered () const
+bool isRegistered() const
 ```
 
 
@@ -282,9 +276,7 @@ true if this command is currently registered false otherwise
 ### <code className="doc-symbol doc-symbol-function"/> registerTo [#registerTo]
 
 ```cpp
-inline bool endstone::Command::registerTo (
-    const CommandMap & command_map
-) 
+bool registerTo(const CommandMap &command_map)
 ```
 
 
@@ -312,10 +304,7 @@ true if the registration was successful, false otherwise
 ### <code className="doc-symbol doc-symbol-function"/> setAliases [#setAliases]
 
 ```cpp
-template<typename... Alias>
-inline void endstone::Command::setAliases (
-    Alias... aliases
-) 
+template <typename... Alias> void setAliases(Alias... aliases)
 ```
 
 
@@ -336,9 +325,7 @@ Sets the list of aliases to request on registration for this command.
 ### <code className="doc-symbol doc-symbol-function"/> setDescription [#setDescription]
 
 ```cpp
-inline void endstone::Command::setDescription (
-    std::string description
-) 
+void setDescription(std::string description)
 ```
 
 
@@ -359,9 +346,7 @@ Sets a brief description of this command.
 ### <code className="doc-symbol doc-symbol-function"/> setName [#setName]
 
 ```cpp
-inline void endstone::Command::setName (
-    std::string name
-) 
+void setName(std::string name)
 ```
 
 
@@ -385,10 +370,7 @@ May only be used before registering the command.
 ### <code className="doc-symbol doc-symbol-function"/> setPermissions [#setPermissions]
 
 ```cpp
-template<typename... Permission>
-inline void endstone::Command::setPermissions (
-    Permission... permissions
-) 
+template <typename... Permission> void setPermissions(Permission... permissions)
 ```
 
 
@@ -409,10 +391,7 @@ Sets the permissions required by users to be able to perform this command
 ### <code className="doc-symbol doc-symbol-function"/> setUsages [#setUsages]
 
 ```cpp
-template<typename... Usage>
-inline void endstone::Command::setUsages (
-    Usage... usages
-) 
+template <typename... Usage> void setUsages(Usage... usages)
 ```
 
 
@@ -433,9 +412,7 @@ Sets the usages of this command
 ### <code className="doc-symbol doc-symbol-function"/> testPermission [#testPermission]
 
 ```cpp
-inline bool endstone::Command::testPermission (
-    const CommandSender & target
-) const
+bool testPermission(const CommandSender &target) const
 ```
 
 
@@ -463,9 +440,7 @@ true if they can use it, otherwise false
 ### <code className="doc-symbol doc-symbol-function"/> testPermissionSilently [#testPermissionSilently]
 
 ```cpp
-inline bool endstone::Command::testPermissionSilently (
-    const CommandSender & target
-) const
+bool testPermissionSilently(const CommandSender &target) const
 ```
 
 
@@ -493,9 +468,7 @@ true if they can use it, otherwise false
 ### <code className="doc-symbol doc-symbol-function"/> unregisterFrom [#unregisterFrom]
 
 ```cpp
-inline bool endstone::Command::unregisterFrom (
-    const CommandMap & command_map
-) 
+bool unregisterFrom(const CommandMap &command_map)
 ```
 
 

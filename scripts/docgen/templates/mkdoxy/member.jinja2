@@ -13,7 +13,7 @@ implements: True
 {%- if node.has_base_classes %}
 Bases:
 {%- for base in node.base_classes -%}
-{%- if base is string %} `{{base}}`{%- else %} [`{{base.name_long}}`]({{base.url}}){%- endif -%}
+{%- if base is string %} `{{base}}`{%- else %} [`{{base.name_long}}`]({{base.refid | format_refid}}){%- endif -%}
 {{ ', ' if not loop.last else '' }}
 {%- endfor -%}
 {%- endif %}

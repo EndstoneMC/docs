@@ -4,7 +4,7 @@ title: "PlayerJumpEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerJumpEvent
 
-Bases: [`endstone::PlayerMoveEvent`](classendstone_1_1_player_move_event.md)
+Bases: [`endstone::PlayerMoveEvent`](player_move_event)
 
 
 
@@ -41,9 +41,5 @@ Bases: [`endstone::PlayerMoveEvent`](classendstone_1_1_player_move_event.md)
 ### <code className="doc-symbol doc-symbol-function"/> PlayerMoveEvent [#PlayerMoveEvent]
 
 ```cpp
-inline explicit endstone::PlayerJumpEvent::PlayerMoveEvent (
-    Player & player,
-    Location from,
-    Location to
-) 
+PlayerMoveEvent(Player &player, Location from, Location to)
 ```

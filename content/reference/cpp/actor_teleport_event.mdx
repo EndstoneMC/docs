@@ -4,7 +4,7 @@ title: "ActorTeleportEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::ActorTeleportEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -81,16 +81,12 @@ const std::string endstone::ActorTeleportEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> ActorTeleportEvent [#ActorTeleportEvent]
 
 ```cpp
-inline explicit endstone::ActorTeleportEvent::ActorTeleportEvent (
-    Actor & actor,
-    Location from,
-    Location to
-) 
+ActorTeleportEvent(Actor &actor, Location from, Location to)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::ActorTeleportEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 
@@ -111,7 +107,7 @@ name of this event
 ### <code className="doc-symbol doc-symbol-function"/> getFrom [#getFrom]
 
 ```cpp
-inline const Location & endstone::ActorTeleportEvent::getFrom () const
+const Location &getFrom() const
 ```
 
 Gets the location that this actor moved from.
@@ -132,7 +128,7 @@ Gets the location that this actor moved from.
 ### <code className="doc-symbol doc-symbol-function"/> getTo [#getTo]
 
 ```cpp
-inline const Location & endstone::ActorTeleportEvent::getTo () const
+const Location &getTo() const
 ```
 
 Gets the location that this actor moved to.
@@ -153,9 +149,7 @@ Gets the location that this actor moved to.
 ### <code className="doc-symbol doc-symbol-function"/> setFrom [#setFrom]
 
 ```cpp
-inline void endstone::ActorTeleportEvent::setFrom (
-    const Location & from
-) 
+void setFrom(const Location &from)
 ```
 
 Sets the location that this actor moved from.
@@ -176,9 +170,7 @@ Sets the location that this actor moved from.
 ### <code className="doc-symbol doc-symbol-function"/> setTo [#setTo]
 
 ```cpp
-inline void endstone::ActorTeleportEvent::setTo (
-    const Location & to
-) 
+void setTo(const Location &to)
 ```
 
 Sets the location that this actor moved to.

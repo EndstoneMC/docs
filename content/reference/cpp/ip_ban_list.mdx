@@ -4,7 +4,7 @@ title: "IpBanList"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::IpBanList
 
-Bases: [`endstone::BanList`](classendstone_1_1_ban_list.md)
+Bases: [`endstone::BanList`](ban_list)
 
 
 
@@ -71,12 +71,9 @@ Bases: [`endstone::BanList`](classendstone_1_1_ban_list.md)
 
 
 ```cpp
-virtual IpBanEntry & endstone::IpBanList::addBan (
-    std::string address,
-    std::optional< std::string > reason,
-    std::optional< BanEntry::Date > expires,
-    std::optional< std::string > source
-) override = 0
+IpBanEntry &addBan(std::string address, std::optional<std::string> reason,
+                   std::optional<BanEntry::Date> expires,
+                   std::optional<std::string> source) override
 ```
 
 Adds a ban to this list. If a previous ban exists, this will update the previous entry.
@@ -106,12 +103,9 @@ Adds a ban to this list. If a previous ban exists, this will update the previous
         
 
 ```cpp
-virtual IpBanEntry & endstone::IpBanList::addBan (
-    std::string address,
-    std::optional< std::string > reason,
-    std::chrono::seconds duration,
-    std::optional< std::string > source
-) override = 0
+IpBanEntry &addBan(std::string address, std::optional<std::string> reason,
+                   std::chrono::seconds duration,
+                   std::optional<std::string> source) override
 ```
 
 Adds a ban to this list. If a previous ban exists, this will update the previous entry.
@@ -144,9 +138,7 @@ Adds a ban to this list. If a previous ban exists, this will update the previous
 
 
 ```cpp
-virtual const IpBanEntry * endstone::IpBanList::getBanEntry (
-    std::string address
-) override const = 0
+const IpBanEntry *getBanEntry(std::string address) override const
 ```
 
 Gets a BanEntry by IP address.
@@ -173,9 +165,7 @@ IpBanEntry\* The corresponding entry, or nullptr if none found.
         
 
 ```cpp
-virtual IpBanEntry * endstone::IpBanList::getBanEntry (
-    std::string address
-) override = 0
+IpBanEntry *getBanEntry(std::string address) override
 ```
 
 Gets a BanEntry by IP address.
@@ -205,7 +195,7 @@ IpBanEntry\* The corresponding entry, or nullptr if none found.
 
 
 ```cpp
-virtual std::vector< const IpBanEntry * > endstone::IpBanList::getEntries () override const = 0
+std::vector<const IpBanEntry *> getEntries() override const
 ```
 
 Gets a vector containing pointers to every BanEntry in this list.
@@ -225,7 +215,7 @@ A vector containing pointers to every entry tracked by this list.
         
 
 ```cpp
-virtual std::vector< IpBanEntry * > endstone::IpBanList::getEntries () override = 0
+std::vector<IpBanEntry *> getEntries() override
 ```
 
 Gets a vector containing pointers to every BanEntry in this list.
@@ -246,9 +236,7 @@ A vector containing pointers to every entry tracked by this list.
 ### <code className="doc-symbol doc-symbol-function"/> isBanned [#isBanned]
 
 ```cpp
-virtual bool endstone::IpBanList::isBanned (
-    std::string address
-) override const = 0
+bool isBanned(std::string address) override const
 ```
 
 Checks if a BanEntry exists for the target, indicating an active ban status.
@@ -283,9 +271,7 @@ false Otherwise.
 ### <code className="doc-symbol doc-symbol-function"/> removeBan [#removeBan]
 
 ```cpp
-virtual void endstone::IpBanList::removeBan (
-    std::string address
-) override = 0
+void removeBan(std::string address) override
 ```
 
 Removes the specified IP address from this list, therefore indicating a "not banned" status.

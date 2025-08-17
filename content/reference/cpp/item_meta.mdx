@@ -147,21 +147,12 @@ title: "ItemMeta"
 ### <code className="doc-symbol doc-symbol-enum"/> Type [#Type]
 
 ```cpp
-enum endstone::ItemMeta::Type {
-    Item = 0,
-    Map = 1,
-    Count,
-    None = Item
-};
+enum Type { Item = 0, Map = 1, Count, None = Item };
 ```
 ### <code className="doc-symbol doc-symbol-function"/> addEnchant [#addEnchant]
 
 ```cpp
-virtual bool endstone::ItemMeta::addEnchant (
-    const std::string & id,
-    int level,
-    bool force
-) = 0
+bool addEnchant(const std::string &id, int level, bool force)
 ```
 
 Adds the specified enchantment to this item meta.
@@ -191,7 +182,7 @@ true if the item meta changed as a result of this call, false otherwise
 ### <code className="doc-symbol doc-symbol-function"/> clone [#clone]
 
 ```cpp
-virtual std::unique_ptr< ItemMeta > endstone::ItemMeta::clone () const = 0
+std::unique_ptr<ItemMeta> clone() const
 ```
 
 Creates a clone of the current metadata.
@@ -212,7 +203,7 @@ A copy of the metadata containing the same state as the original.
 ### <code className="doc-symbol doc-symbol-function"/> getDamage [#getDamage]
 
 ```cpp
-virtual int endstone::ItemMeta::getDamage () const = 0
+int getDamage() const
 ```
 
 Gets the damage.
@@ -233,7 +224,7 @@ the damage
 ### <code className="doc-symbol doc-symbol-function"/> getDisplayName [#getDisplayName]
 
 ```cpp
-virtual std::optional< std::string > endstone::ItemMeta::getDisplayName () const = 0
+std::optional<std::string> getDisplayName() const
 ```
 
 Gets the display name that is set.
@@ -254,9 +245,7 @@ the display name that is set
 ### <code className="doc-symbol doc-symbol-function"/> getEnchantLevel [#getEnchantLevel]
 
 ```cpp
-virtual int endstone::ItemMeta::getEnchantLevel (
-    const std::string & id
-) const = 0
+int getEnchantLevel(const std::string &id) const
 ```
 
 Checks for the level of the specified enchantment.
@@ -284,7 +273,7 @@ The level that the specified enchantment has, or 0 if none
 ### <code className="doc-symbol doc-symbol-function"/> getEnchants [#getEnchants]
 
 ```cpp
-virtual std::unordered_map< std::string, int > endstone::ItemMeta::getEnchants () const = 0
+std::unordered_map<std::string, int> getEnchants() const
 ```
 
 Returns a copy the enchantments in this ItemMeta .
@@ -308,7 +297,7 @@ An immutable copy of the enchantments
 ### <code className="doc-symbol doc-symbol-function"/> getLore [#getLore]
 
 ```cpp
-virtual std::optional< std::vector< std::string > > endstone::ItemMeta::getLore () const = 0
+std::optional<std::vector<std::string>> getLore() const
 ```
 
 Gets the lore that is set.
@@ -329,7 +318,7 @@ a list of lore that is set
 ### <code className="doc-symbol doc-symbol-function"/> getRepairCost [#getRepairCost]
 
 ```cpp
-virtual int endstone::ItemMeta::getRepairCost () const = 0
+int getRepairCost() const
 ```
 
 Gets the repair penalty.
@@ -350,7 +339,7 @@ the repair penalty
 ### <code className="doc-symbol doc-symbol-function"/> getType [#getType]
 
 ```cpp
-virtual Type endstone::ItemMeta::getType () const = 0
+Type getType() const
 ```
 
 Gets the type of this item meta.
@@ -371,7 +360,7 @@ type of this item meta
 ### <code className="doc-symbol doc-symbol-function"/> hasDamage [#hasDamage]
 
 ```cpp
-virtual bool endstone::ItemMeta::hasDamage () const = 0
+bool hasDamage() const
 ```
 
 Checks to see if this item has damage.
@@ -392,7 +381,7 @@ true if this has damage
 ### <code className="doc-symbol doc-symbol-function"/> hasDisplayName [#hasDisplayName]
 
 ```cpp
-virtual bool endstone::ItemMeta::hasDisplayName () const = 0
+bool hasDisplayName() const
 ```
 
 Checks for existence of a display name.
@@ -413,9 +402,7 @@ true if this has a display name
 ### <code className="doc-symbol doc-symbol-function"/> hasEnchant [#hasEnchant]
 
 ```cpp
-virtual bool endstone::ItemMeta::hasEnchant (
-    const std::string & id
-) const = 0
+bool hasEnchant(const std::string &id) const
 ```
 
 Checks for existence of the specified enchantment.
@@ -443,7 +430,7 @@ true if this enchantment exists for this meta
 ### <code className="doc-symbol doc-symbol-function"/> hasEnchants [#hasEnchants]
 
 ```cpp
-virtual bool endstone::ItemMeta::hasEnchants () const = 0
+bool hasEnchants() const
 ```
 
 Checks for the existence of any enchantments.
@@ -464,7 +451,7 @@ true if an enchantment exists on this meta
 ### <code className="doc-symbol doc-symbol-function"/> hasLore [#hasLore]
 
 ```cpp
-virtual bool endstone::ItemMeta::hasLore () const = 0
+bool hasLore() const
 ```
 
 Checks for existence of lore.
@@ -485,7 +472,7 @@ true if this has lore
 ### <code className="doc-symbol doc-symbol-function"/> hasRepairCost [#hasRepairCost]
 
 ```cpp
-virtual bool endstone::ItemMeta::hasRepairCost () const = 0
+bool hasRepairCost() const
 ```
 
 Checks to see if this has a repair penalty.
@@ -506,7 +493,7 @@ true if this has a repair penalty
 ### <code className="doc-symbol doc-symbol-function"/> isEmpty [#isEmpty]
 
 ```cpp
-virtual bool endstone::ItemMeta::isEmpty () const = 0
+bool isEmpty() const
 ```
 
 Checks if the item metadata is empty.
@@ -527,7 +514,7 @@ true if the metadata is empty, false otherwise.
 ### <code className="doc-symbol doc-symbol-function"/> isUnbreakable [#isUnbreakable]
 
 ```cpp
-virtual bool endstone::ItemMeta::isUnbreakable () const = 0
+bool isUnbreakable() const
 ```
 
 Return if the unbreakable tag is true. An unbreakable item will not lose durability.
@@ -548,9 +535,7 @@ true if the unbreakable tag is true
 ### <code className="doc-symbol doc-symbol-function"/> removeEnchant [#removeEnchant]
 
 ```cpp
-virtual bool endstone::ItemMeta::removeEnchant (
-    const std::string & id
-) = 0
+bool removeEnchant(const std::string &id)
 ```
 
 Removes the specified enchantment from this item meta.
@@ -578,7 +563,7 @@ true if the item meta changed as a result of this call, false otherwise
 ### <code className="doc-symbol doc-symbol-function"/> removeEnchants [#removeEnchants]
 
 ```cpp
-virtual void endstone::ItemMeta::removeEnchants () = 0
+void removeEnchants()
 ```
 
 Removes all enchantments from this item meta.
@@ -586,9 +571,7 @@ Removes all enchantments from this item meta.
 ### <code className="doc-symbol doc-symbol-function"/> setDamage [#setDamage]
 
 ```cpp
-virtual void endstone::ItemMeta::setDamage (
-    int damage
-) = 0
+void setDamage(int damage)
 ```
 
 Sets the damage.
@@ -609,9 +592,7 @@ Sets the damage.
 ### <code className="doc-symbol doc-symbol-function"/> setDisplayName [#setDisplayName]
 
 ```cpp
-virtual void endstone::ItemMeta::setDisplayName (
-    std::optional< std::string > name
-) = 0
+void setDisplayName(std::optional<std::string> name)
 ```
 
 Sets the display name.
@@ -632,9 +613,7 @@ Sets the display name.
 ### <code className="doc-symbol doc-symbol-function"/> setLore [#setLore]
 
 ```cpp
-virtual void endstone::ItemMeta::setLore (
-    std::optional< std::vector< std::string > > lore
-) = 0
+void setLore(std::optional<std::vector<std::string>> lore)
 ```
 
 Sets the lore for this item or removes lore when given std::nullopt.
@@ -655,9 +634,7 @@ Sets the lore for this item or removes lore when given std::nullopt.
 ### <code className="doc-symbol doc-symbol-function"/> setRepairCost [#setRepairCost]
 
 ```cpp
-virtual void endstone::ItemMeta::setRepairCost (
-    int cost
-) = 0
+void setRepairCost(int cost)
 ```
 
 Sets the repair penalty.
@@ -678,9 +655,7 @@ Sets the repair penalty.
 ### <code className="doc-symbol doc-symbol-function"/> setUnbreakable [#setUnbreakable]
 
 ```cpp
-virtual void endstone::ItemMeta::setUnbreakable (
-    bool unbreakable
-) = 0
+void setUnbreakable(bool unbreakable)
 ```
 
 Sets the unbreakable tag. An unbreakable item will not lose durability.

@@ -54,18 +54,16 @@ title: "Header"
 
 
 ```cpp
-endstone::Header::Header () = default
+Header() = default
 ```
 
 ```cpp
-inline explicit endstone::Header::Header (
-    Message label
-) 
+Header(Message label)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getLabel [#getLabel]
 
 ```cpp
-inline Message endstone::Header::getLabel () const
+Message getLabel() const
 ```
 
 Gets the label of the header.
@@ -86,9 +84,7 @@ The label of the header.
 ### <code className="doc-symbol doc-symbol-function"/> setLabel [#setLabel]
 
 ```cpp
-inline Header & endstone::Header::setLabel (
-    Message label
-) 
+Header &setLabel(Message label)
 ```
 
 Sets the label of the header.

@@ -4,7 +4,7 @@ title: "ActorDeathEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::ActorDeathEvent
 
-Bases: [`endstone::ActorEvent`](classendstone_1_1_actor_event.md)
+Bases: [`endstone::ActorEvent`](actor_event)
 
 
 
@@ -69,15 +69,12 @@ const std::string endstone::ActorDeathEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> ActorDeathEvent [#ActorDeathEvent]
 
 ```cpp
-inline endstone::ActorDeathEvent::ActorDeathEvent (
-    Mob & actor,
-    std::unique_ptr< DamageSource > damage_source
-) 
+ActorDeathEvent(Mob &actor, std::unique_ptr<DamageSource> damage_source)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getDamageSource [#getDamageSource]
 
 ```cpp
-inline DamageSource & endstone::ActorDeathEvent::getDamageSource () const
+DamageSource &getDamageSource() const
 ```
 
 Gets the source of damage which caused the death.
@@ -98,7 +95,7 @@ a [**DamageSource**](classendstone_1_1_damage_source.md) detailing the source of
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::ActorDeathEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 

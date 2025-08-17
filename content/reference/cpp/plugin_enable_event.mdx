@@ -4,7 +4,7 @@ title: "PluginEnableEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PluginEnableEvent
 
-Bases: [`endstone::ServerEvent`](classendstone_1_1_server_event.md)
+Bases: [`endstone::ServerEvent`](server_event)
 
 
 
@@ -69,14 +69,12 @@ const std::string endstone::PluginEnableEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> PluginEnableEvent [#PluginEnableEvent]
 
 ```cpp
-inline explicit endstone::PluginEnableEvent::PluginEnableEvent (
-    Plugin & plugin
-) 
+PluginEnableEvent(Plugin &plugin)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::PluginEnableEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 
@@ -97,7 +95,7 @@ name of this event
 ### <code className="doc-symbol doc-symbol-function"/> getPlugin [#getPlugin]
 
 ```cpp
-inline Plugin & endstone::PluginEnableEvent::getPlugin () const
+Plugin &getPlugin() const
 ```
 
 

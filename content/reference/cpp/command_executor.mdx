@@ -40,11 +40,8 @@ title: "CommandExecutor"
 ### <code className="doc-symbol doc-symbol-function"/> onCommand [#onCommand]
 
 ```cpp
-inline virtual bool endstone::CommandExecutor::onCommand (
-    CommandSender & sender,
-    const Command & command,
-    const std::vector< std::string > & args
-) 
+bool onCommand(CommandSender &sender, const Command &command,
+               const std::vector<std::string> &args)
 ```
 
 

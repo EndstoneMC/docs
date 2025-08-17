@@ -4,7 +4,7 @@ title: "PlayerItemHeldEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerItemHeldEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -49,16 +49,12 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 ### <code className="doc-symbol doc-symbol-function"/> PlayerItemHeldEvent [#PlayerItemHeldEvent]
 
 ```cpp
-inline explicit endstone::PlayerItemHeldEvent::PlayerItemHeldEvent (
-    Player & player,
-    const int previous,
-    const int current
-) 
+PlayerItemHeldEvent(Player &player, const int previous, const int current)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getNewSlot [#getNewSlot]
 
 ```cpp
-inline int endstone::PlayerItemHeldEvent::getNewSlot () const
+int getNewSlot() const
 ```
 
 Gets the new held slot index.
@@ -79,7 +75,7 @@ New slot index
 ### <code className="doc-symbol doc-symbol-function"/> getPreviousSlot [#getPreviousSlot]
 
 ```cpp
-inline int endstone::PlayerItemHeldEvent::getPreviousSlot () const
+int getPreviousSlot() const
 ```
 
 Gets the previous held slot index.

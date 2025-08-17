@@ -72,17 +72,17 @@ title: "Form"
 ### <code className="doc-symbol doc-symbol-typedef"/> OnCloseCallback [#OnCloseCallback]
 
 ```cpp
-using endstone::Form< T >::OnCloseCallback =  std::function<void(Player *)>;
+using endstone::Form<T>::OnCloseCallback = std::function<void(Player *)>;
 ```
 ### <code className="doc-symbol doc-symbol-function"/> Form [#Form]
 
 ```cpp
-explicit endstone::Form::Form () = default
+Form() = default
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getOnClose [#getOnClose]
 
 ```cpp
-inline OnCloseCallback endstone::Form::getOnClose () const
+OnCloseCallback getOnClose() const
 ```
 
 Gets the on close callback of the form.
@@ -103,7 +103,7 @@ The on close callback of the form.
 ### <code className="doc-symbol doc-symbol-function"/> getTitle [#getTitle]
 
 ```cpp
-inline Message endstone::Form::getTitle () const
+Message getTitle() const
 ```
 
 Gets the title of the form.
@@ -124,9 +124,7 @@ The title of the form.
 ### <code className="doc-symbol doc-symbol-function"/> setOnClose [#setOnClose]
 
 ```cpp
-inline T & endstone::Form::setOnClose (
-    OnCloseCallback on_close
-) 
+T &setOnClose(OnCloseCallback on_close)
 ```
 
 Sets the on close callback of the form.
@@ -154,9 +152,7 @@ A reference to the current form.
 ### <code className="doc-symbol doc-symbol-function"/> setTitle [#setTitle]
 
 ```cpp
-inline T & endstone::Form::setTitle (
-    Message title
-) 
+T &setTitle(Message title)
 ```
 
 Sets the title of the form.

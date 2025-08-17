@@ -60,9 +60,7 @@ title: "ServiceManager"
 ### <code className="doc-symbol doc-symbol-function"/> get [#get]
 
 ```cpp
-virtual std::shared_ptr< Service > endstone::ServiceManager::get (
-    std::string name
-) const = 0
+std::shared_ptr<Service> get(std::string name) const
 ```
 
 Queries for a provider. This may return null if no provider has been registered for a service. The highest priority provider is returned.
@@ -90,20 +88,13 @@ provider or null
 ### <code className="doc-symbol doc-symbol-function"/> load [#load]
 
 ```cpp
-template<typename T>
-inline std::shared_ptr< T > endstone::ServiceManager::load (
-    std::string name
-) const
+template <typename T> std::shared_ptr<T> load(std::string name) const
 ```
 ### <code className="doc-symbol doc-symbol-function"/> registerService [#registerService]
 
 ```cpp
-virtual void endstone::ServiceManager::registerService (
-    std::string name,
-    std::shared_ptr< Service > provider,
-    const Plugin & plugin,
-    ServicePriority priority
-) = 0
+void registerService(std::string name, std::shared_ptr<Service> provider,
+                     const Plugin &plugin, ServicePriority priority)
 ```
 
 Register a provider of a service.
@@ -129,10 +120,7 @@ Register a provider of a service.
 
 
 ```cpp
-virtual void endstone::ServiceManager::unregister (
-    std::string name,
-    const Service & provider
-) = 0
+void unregister(std::string name, const Service &provider)
 ```
 
 Unregister a particular provider for a particular service.
@@ -153,9 +141,7 @@ Unregister a particular provider for a particular service.
         
 
 ```cpp
-virtual void endstone::ServiceManager::unregister (
-    const Service & provider
-) = 0
+void unregister(const Service &provider)
 ```
 
 Unregister a particular provider.
@@ -176,9 +162,7 @@ Unregister a particular provider.
 ### <code className="doc-symbol doc-symbol-function"/> unregisterAll [#unregisterAll]
 
 ```cpp
-virtual void endstone::ServiceManager::unregisterAll (
-    const Plugin & plugin
-) = 0
+void unregisterAll(const Plugin &plugin)
 ```
 
 Unregister all the services registered by a particular plugin.

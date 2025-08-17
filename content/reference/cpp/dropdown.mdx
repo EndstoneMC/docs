@@ -74,22 +74,17 @@ title: "Dropdown"
 
 
 ```cpp
-endstone::Dropdown::Dropdown () = default
+Dropdown() = default
 ```
 
 ```cpp
-inline explicit endstone::Dropdown::Dropdown (
-    Message label,
-    std::vector< std::string > options,
-    std::optional< int > default_index=std::nullopt
-) 
+Dropdown(Message label, std::vector<std::string> options,
+         std::optional<int> default_index = std::nullopt)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> addOption [#addOption]
 
 ```cpp
-inline Dropdown & endstone::Dropdown::addOption (
-    const std::string & option
-) 
+Dropdown &addOption(const std::string &option)
 ```
 
 Adds a new option to the dropdown.
@@ -117,7 +112,7 @@ A reference to the dropdown itself.
 ### <code className="doc-symbol doc-symbol-function"/> getDefaultIndex [#getDefaultIndex]
 
 ```cpp
-inline std::optional< int > endstone::Dropdown::getDefaultIndex () const
+std::optional<int> getDefaultIndex() const
 ```
 
 Gets the default index of the dropdown.
@@ -138,7 +133,7 @@ The default index of the dropdown.
 ### <code className="doc-symbol doc-symbol-function"/> getLabel [#getLabel]
 
 ```cpp
-inline Message endstone::Dropdown::getLabel () const
+Message getLabel() const
 ```
 
 Gets the label of the dropdown.
@@ -159,7 +154,7 @@ The label of the dropdown.
 ### <code className="doc-symbol doc-symbol-function"/> getOptions [#getOptions]
 
 ```cpp
-inline std::vector< std::string > endstone::Dropdown::getOptions () const
+std::vector<std::string> getOptions() const
 ```
 
 Gets the options of the dropdown.
@@ -180,9 +175,7 @@ The options of the dropdown.
 ### <code className="doc-symbol doc-symbol-function"/> setDefaultIndex [#setDefaultIndex]
 
 ```cpp
-inline Dropdown & endstone::Dropdown::setDefaultIndex (
-    std::optional< int > default_index
-) 
+Dropdown &setDefaultIndex(std::optional<int> default_index)
 ```
 
 Sets the default index of the dropdown.
@@ -210,9 +203,7 @@ A reference to the dropdown itself.
 ### <code className="doc-symbol doc-symbol-function"/> setLabel [#setLabel]
 
 ```cpp
-inline Dropdown & endstone::Dropdown::setLabel (
-    Message label
-) 
+Dropdown &setLabel(Message label)
 ```
 
 Sets the label of the dropdown.
@@ -240,9 +231,7 @@ A reference to the dropdown itself.
 ### <code className="doc-symbol doc-symbol-function"/> setOptions [#setOptions]
 
 ```cpp
-inline Dropdown & endstone::Dropdown::setOptions (
-    std::vector< std::string > options
-) 
+Dropdown &setOptions(std::vector<std::string> options)
 ```
 
 Sets the options of the dropdown.

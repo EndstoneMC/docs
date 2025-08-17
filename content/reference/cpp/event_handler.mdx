@@ -60,20 +60,13 @@ title: "EventHandler"
 ### <code className="doc-symbol doc-symbol-function"/> EventHandler [#EventHandler]
 
 ```cpp
-inline endstone::EventHandler::EventHandler (
-    std::string event,
-    std::function< void( Event &)> executor,
-    EventPriority priority,
-    Plugin & plugin,
-    bool ignore_cancelled
-) 
+EventHandler(std::string event, std::function<void(Event &)> executor,
+             EventPriority priority, Plugin &plugin, bool ignore_cancelled)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> callEvent [#callEvent]
 
 ```cpp
-inline void endstone::EventHandler::callEvent (
-    Event & event
-) const
+void callEvent(Event &event) const
 ```
 
 
@@ -94,7 +87,7 @@ Calls the event executor
 ### <code className="doc-symbol doc-symbol-function"/> getEventType [#getEventType]
 
 ```cpp
-inline std::string endstone::EventHandler::getEventType () const
+std::string getEventType() const
 ```
 
 
@@ -115,7 +108,7 @@ Registered event type
 ### <code className="doc-symbol doc-symbol-function"/> getPlugin [#getPlugin]
 
 ```cpp
-inline Plugin & endstone::EventHandler::getPlugin () const
+Plugin &getPlugin() const
 ```
 
 
@@ -136,7 +129,7 @@ Registered [**Plugin**](classendstone_1_1_plugin.md)
 ### <code className="doc-symbol doc-symbol-function"/> getPriority [#getPriority]
 
 ```cpp
-inline EventPriority endstone::EventHandler::getPriority () const
+EventPriority getPriority() const
 ```
 
 
@@ -157,7 +150,7 @@ Registered Priority
 ### <code className="doc-symbol doc-symbol-function"/> isIgnoreCancelled [#isIgnoreCancelled]
 
 ```cpp
-inline bool endstone::EventHandler::isIgnoreCancelled () const
+bool isIgnoreCancelled() const
 ```
 
 

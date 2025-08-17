@@ -4,7 +4,7 @@ title: "PlayerCommandEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerCommandEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -73,15 +73,12 @@ const std::string endstone::PlayerCommandEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> PlayerCommandEvent [#PlayerCommandEvent]
 
 ```cpp
-inline explicit endstone::PlayerCommandEvent::PlayerCommandEvent (
-    Player & player,
-    std::string command
-) 
+PlayerCommandEvent(Player &player, std::string command)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getCommand [#getCommand]
 
 ```cpp
-inline std::string endstone::PlayerCommandEvent::getCommand () const
+std::string getCommand() const
 ```
 
 
@@ -102,7 +99,7 @@ Gets the command that the player is attempting to send.
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::PlayerCommandEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 
@@ -123,9 +120,7 @@ name of this event
 ### <code className="doc-symbol doc-symbol-function"/> setCommand [#setCommand]
 
 ```cpp
-inline void endstone::PlayerCommandEvent::setCommand (
-    std::string command
-) 
+void setCommand(std::string command)
 ```
 
 

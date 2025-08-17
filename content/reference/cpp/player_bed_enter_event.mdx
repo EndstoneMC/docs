@@ -4,7 +4,7 @@ title: "PlayerBedEnterEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerBedEnterEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -45,15 +45,12 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 ### <code className="doc-symbol doc-symbol-function"/> PlayerBedEnterEvent [#PlayerBedEnterEvent]
 
 ```cpp
-inline explicit endstone::PlayerBedEnterEvent::PlayerBedEnterEvent (
-    Player & player,
-    Block & bed
-) 
+PlayerBedEnterEvent(Player &player, Block &bed)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getBed [#getBed]
 
 ```cpp
-inline Block & endstone::PlayerBedEnterEvent::getBed () const
+Block &getBed() const
 ```
 
 Represents the default possible outcomes of this event.

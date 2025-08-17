@@ -4,7 +4,7 @@ title: "ActorDamageEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::ActorDamageEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -77,16 +77,13 @@ const std::string endstone::ActorDamageEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> ActorDamageEvent [#ActorDamageEvent]
 
 ```cpp
-inline endstone::ActorDamageEvent::ActorDamageEvent (
-    Mob & actor,
-    std::unique_ptr< DamageSource > damage_source,
-    const float damage
-) 
+ActorDamageEvent(Mob &actor, std::unique_ptr<DamageSource> damage_source,
+                 const float damage)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getDamage [#getDamage]
 
 ```cpp
-inline float endstone::ActorDamageEvent::getDamage () const
+float getDamage() const
 ```
 
 Gets the raw amount of damage caused by the event.
@@ -107,7 +104,7 @@ The raw amount of damage caused by the event
 ### <code className="doc-symbol doc-symbol-function"/> getDamageSource [#getDamageSource]
 
 ```cpp
-inline DamageSource & endstone::ActorDamageEvent::getDamageSource () const
+DamageSource &getDamageSource() const
 ```
 
 Get the source of damage.
@@ -128,7 +125,7 @@ a [**DamageSource**](classendstone_1_1_damage_source.md) detailing the source of
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::ActorDamageEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 
@@ -149,9 +146,7 @@ name of this event
 ### <code className="doc-symbol doc-symbol-function"/> setDamage [#setDamage]
 
 ```cpp
-inline void endstone::ActorDamageEvent::setDamage (
-    const float damage
-) 
+void setDamage(const float damage)
 ```
 
 Sets the raw amount of damage caused by the event.

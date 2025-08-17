@@ -4,7 +4,7 @@ title: "Plugin"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::Plugin
 
-Bases: [`endstone::CommandExecutor`](classendstone_1_1_command_executor.md)
+Bases: [`endstone::CommandExecutor`](command_executor)
 
 
 
@@ -99,20 +99,16 @@ Bases: [`endstone::CommandExecutor`](classendstone_1_1_command_executor.md)
 
 
 ```cpp
-endstone::Plugin::Plugin () = default
+Plugin() = default
 ```
 
 ```cpp
-endstone::Plugin::Plugin (
-    const Plugin &
-) = delete
+Plugin(const Plugin &) = delete
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getCommand [#getCommand]
 
 ```cpp
-inline PluginCommand * endstone::Plugin::getCommand (
-    std::string name
-) const
+PluginCommand *getCommand(std::string name) const
 ```
 
 Gets the command with the given name, specific to this plugin.
@@ -140,7 +136,7 @@ the plugin command if found, otherwise null
 ### <code className="doc-symbol doc-symbol-function"/> getDataFolder [#getDataFolder]
 
 ```cpp
-inline const std::filesystem::path & endstone::Plugin::getDataFolder () const
+const std::filesystem::path &getDataFolder() const
 ```
 
 Returns the folder that the plugin data's files are located in. The folder may not yet exist.
@@ -161,7 +157,7 @@ The folder
 ### <code className="doc-symbol doc-symbol-function"/> getDescription [#getDescription]
 
 ```cpp
-virtual const PluginDescription & endstone::Plugin::getDescription () const = 0
+const PluginDescription &getDescription() const
 ```
 
 Returns the details of this plugin.
@@ -182,7 +178,7 @@ Details of this plugin
 ### <code className="doc-symbol doc-symbol-function"/> getLogger [#getLogger]
 
 ```cpp
-inline Logger & endstone::Plugin::getLogger () const
+Logger &getLogger() const
 ```
 
 Returns the plugin logger associated with this server's logger. The returned logger automatically tags all log messages with the plugin's name.
@@ -203,7 +199,7 @@ Returns the plugin logger associated with this server's logger. The returned log
 ### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
-inline std::string endstone::Plugin::getName () const
+std::string getName() const
 ```
 
 Returns the name of the plugin.
@@ -227,7 +223,7 @@ name of the plugin
 ### <code className="doc-symbol doc-symbol-function"/> getPluginLoader [#getPluginLoader]
 
 ```cpp
-inline PluginLoader & endstone::Plugin::getPluginLoader () const
+PluginLoader &getPluginLoader() const
 ```
 
 Gets the associated PluginLoader responsible for this plugin.
@@ -248,7 +244,7 @@ Gets the associated PluginLoader responsible for this plugin.
 ### <code className="doc-symbol doc-symbol-function"/> getServer [#getServer]
 
 ```cpp
-inline Server & endstone::Plugin::getServer () const
+Server &getServer() const
 ```
 
 Returns the Server instance currently running this plugin.
@@ -269,7 +265,7 @@ Returns the Server instance currently running this plugin.
 ### <code className="doc-symbol doc-symbol-function"/> isEnabled [#isEnabled]
 
 ```cpp
-inline bool endstone::Plugin::isEnabled () const
+bool isEnabled() const
 ```
 
 Returns a value indicating whether this plugin is currently enabled.
@@ -290,7 +286,7 @@ true if this plugin is enabled, otherwise false
 ### <code className="doc-symbol doc-symbol-function"/> onDisable [#onDisable]
 
 ```cpp
-inline virtual void endstone::Plugin::onDisable () 
+void onDisable()
 ```
 
 Called when this plugin is disabled.
@@ -298,7 +294,7 @@ Called when this plugin is disabled.
 ### <code className="doc-symbol doc-symbol-function"/> onEnable [#onEnable]
 
 ```cpp
-inline virtual void endstone::Plugin::onEnable () 
+void onEnable()
 ```
 
 Called when this plugin is enabled.
@@ -306,7 +302,7 @@ Called when this plugin is enabled.
 ### <code className="doc-symbol doc-symbol-function"/> onLoad [#onLoad]
 
 ```cpp
-inline virtual void endstone::Plugin::onLoad () 
+void onLoad()
 ```
 
 Called after a plugin is loaded but before it has been enabled.
@@ -322,20 +318,15 @@ When multiple plugins are loaded, the [**onLoad()**](classendstone_1_1_plugin.md
 
 
 ```cpp
-template<typename EventType, typename T>
-inline void endstone::Plugin::registerEvent (
-    void(T::*)(EventType &) func,
-    T & instance,
-    EventPriority priority=EventPriority::Normal,
-    bool ignore_cancelled=false
-) 
+template <typename EventType, typename T>
+void registerEvent(void (T::*)(EventType &) func, T &instance,
+                   EventPriority priority = EventPriority::Normal,
+                   bool ignore_cancelled = false)
 ```
 
 ```cpp
-template<typename EventType>
-inline void endstone::Plugin::registerEvent (
-    std::function< void(EventType &)> func,
-    EventPriority priority=EventPriority::Normal,
-    bool ignore_cancelled=false
-) 
+template <typename EventType>
+void registerEvent(std::function<void(EventType &)> func,
+                   EventPriority priority = EventPriority::Normal,
+                   bool ignore_cancelled = false)
 ```

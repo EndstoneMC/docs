@@ -4,7 +4,7 @@ title: "Actor"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::Actor
 
-Bases: [`endstone::CommandSender`](classendstone_1_1_command_sender.md)
+Bases: [`endstone::CommandSender`](command_sender)
 
 
 
@@ -165,9 +165,7 @@ Bases: [`endstone::CommandSender`](classendstone_1_1_command_sender.md)
 ### <code className="doc-symbol doc-symbol-function"/> addScoreboardTag [#addScoreboardTag]
 
 ```cpp
-virtual bool endstone::Actor::addScoreboardTag (
-    std::string tag
-) const = 0
+bool addScoreboardTag(std::string tag) const
 ```
 
 Adds a tag to this actor.
@@ -195,7 +193,7 @@ true if the tag was successfully added, false if the tag already exists.
 ### <code className="doc-symbol doc-symbol-function"/> asItem [#asItem]
 
 ```cpp
-virtual Item * endstone::Actor::asItem () const = 0
+Item *asItem() const
 ```
 
 Gets an Actor as Item .
@@ -216,7 +214,7 @@ Gets an Actor as Item .
 ### <code className="doc-symbol doc-symbol-function"/> asMob [#asMob]
 
 ```cpp
-virtual Mob * endstone::Actor::asMob () const = 0
+Mob *asMob() const
 ```
 
 Gets an Actor as Mob .
@@ -237,7 +235,7 @@ Gets an Actor as Mob .
 ### <code className="doc-symbol doc-symbol-function"/> getDimension [#getDimension]
 
 ```cpp
-virtual Dimension & endstone::Actor::getDimension () const = 0
+Dimension &getDimension() const
 ```
 
 
@@ -258,7 +256,7 @@ The current [**Dimension**](classendstone_1_1_dimension.md) this actor resides i
 ### <code className="doc-symbol doc-symbol-function"/> getHealth [#getHealth]
 
 ```cpp
-virtual int endstone::Actor::getHealth () const = 0
+int getHealth() const
 ```
 
 Gets the entity's health from 0 to its max possible value, where 0 is dead.
@@ -279,7 +277,7 @@ Health represented from 0 to max
 ### <code className="doc-symbol doc-symbol-function"/> getId [#getId]
 
 ```cpp
-virtual std::int64_t endstone::Actor::getId () const = 0
+std::int64_t getId() const
 ```
 
 Returns a unique id for this actor.
@@ -300,7 +298,7 @@ Returns a unique id for this actor.
 ### <code className="doc-symbol doc-symbol-function"/> getLevel [#getLevel]
 
 ```cpp
-virtual Level & endstone::Actor::getLevel () const = 0
+Level &getLevel() const
 ```
 
 
@@ -321,7 +319,7 @@ The current [**Level**](classendstone_1_1_level.md) this actor resides in
 ### <code className="doc-symbol doc-symbol-function"/> getLocation [#getLocation]
 
 ```cpp
-virtual Location endstone::Actor::getLocation () const = 0
+Location getLocation() const
 ```
 
 
@@ -342,7 +340,7 @@ a new copy of [**Location**](classendstone_1_1_location.md) containing the posit
 ### <code className="doc-symbol doc-symbol-function"/> getMaxHealth [#getMaxHealth]
 
 ```cpp
-virtual int endstone::Actor::getMaxHealth () const = 0
+int getMaxHealth() const
 ```
 
 Gets the maximum health this entity has.
@@ -363,7 +361,7 @@ Maximum health
 ### <code className="doc-symbol doc-symbol-function"/> getNameTag [#getNameTag]
 
 ```cpp
-virtual std::string endstone::Actor::getNameTag () const = 0
+std::string getNameTag() const
 ```
 
 Gets the current name tag of the actor.
@@ -384,7 +382,7 @@ The name tag.
 ### <code className="doc-symbol doc-symbol-function"/> getRuntimeId [#getRuntimeId]
 
 ```cpp
-virtual std::uint64_t endstone::Actor::getRuntimeId () const = 0
+std::uint64_t getRuntimeId() const
 ```
 
 
@@ -405,7 +403,7 @@ Runtime id for this actor
 ### <code className="doc-symbol doc-symbol-function"/> getScoreTag [#getScoreTag]
 
 ```cpp
-virtual std::string endstone::Actor::getScoreTag () const = 0
+std::string getScoreTag() const
 ```
 
 Gets the current score tag of the actor.
@@ -426,7 +424,7 @@ The score tag.
 ### <code className="doc-symbol doc-symbol-function"/> getScoreboardTags [#getScoreboardTags]
 
 ```cpp
-virtual std::vector< std::string > endstone::Actor::getScoreboardTags () const = 0
+std::vector<std::string> getScoreboardTags() const
 ```
 
 Returns a list of scoreboard tags for this actor.
@@ -447,7 +445,7 @@ a list of scoreboard tags for this actor
 ### <code className="doc-symbol doc-symbol-function"/> getType [#getType]
 
 ```cpp
-virtual std::string endstone::Actor::getType () const = 0
+std::string getType() const
 ```
 
 Get the type of the actor.
@@ -471,7 +469,7 @@ The type of the actor.
 ### <code className="doc-symbol doc-symbol-function"/> getVelocity [#getVelocity]
 
 ```cpp
-virtual Vector < float > endstone::Actor::getVelocity () const = 0
+Vector<float> getVelocity() const
 ```
 
 
@@ -492,7 +490,7 @@ Current traveling velocity of this actor
 ### <code className="doc-symbol doc-symbol-function"/> isDead [#isDead]
 
 ```cpp
-virtual bool endstone::Actor::isDead () const = 0
+bool isDead() const
 ```
 
 Returns true if this actor has been marked for removal.
@@ -513,7 +511,7 @@ True if it is dead.
 ### <code className="doc-symbol doc-symbol-function"/> isInLava [#isInLava]
 
 ```cpp
-virtual bool endstone::Actor::isInLava () const = 0
+bool isInLava() const
 ```
 
 
@@ -534,7 +532,7 @@ True if the actor is in lava.
 ### <code className="doc-symbol doc-symbol-function"/> isInWater [#isInWater]
 
 ```cpp
-virtual bool endstone::Actor::isInWater () const = 0
+bool isInWater() const
 ```
 
 
@@ -555,7 +553,7 @@ True if the actor is in water.
 ### <code className="doc-symbol doc-symbol-function"/> isNameTagAlwaysVisible [#isNameTagAlwaysVisible]
 
 ```cpp
-virtual bool endstone::Actor::isNameTagAlwaysVisible () const = 0
+bool isNameTagAlwaysVisible() const
 ```
 
 Checks if the actor's name tag is always visible.
@@ -576,7 +574,7 @@ True if the name tag is always visible, false otherwise.
 ### <code className="doc-symbol doc-symbol-function"/> isNameTagVisible [#isNameTagVisible]
 
 ```cpp
-virtual bool endstone::Actor::isNameTagVisible () const = 0
+bool isNameTagVisible() const
 ```
 
 Checks if the actor's name tag is currently visible.
@@ -597,7 +595,7 @@ True if the name tag is visible, false otherwise.
 ### <code className="doc-symbol doc-symbol-function"/> isOnGround [#isOnGround]
 
 ```cpp
-virtual bool endstone::Actor::isOnGround () const = 0
+bool isOnGround() const
 ```
 
 
@@ -618,7 +616,7 @@ True if actor is on ground.
 ### <code className="doc-symbol doc-symbol-function"/> isValid [#isValid]
 
 ```cpp
-virtual bool endstone::Actor::isValid () const = 0
+bool isValid() const
 ```
 
 
@@ -639,7 +637,7 @@ True if valid.
 ### <code className="doc-symbol doc-symbol-function"/> remove [#remove]
 
 ```cpp
-virtual void endstone::Actor::remove () = 0
+void remove()
 ```
 
 
@@ -653,9 +651,7 @@ If you are trying to remove a [**Player**](classendstone_1_1_player.md), use [**
 ### <code className="doc-symbol doc-symbol-function"/> removeScoreboardTag [#removeScoreboardTag]
 
 ```cpp
-virtual bool endstone::Actor::removeScoreboardTag (
-    std::string tag
-) const = 0
+bool removeScoreboardTag(std::string tag) const
 ```
 
 Removes a given tag from this actor.
@@ -683,9 +679,7 @@ true if the tag was successfully removed, false if the tag does not exist.
 ### <code className="doc-symbol doc-symbol-function"/> setHealth [#setHealth]
 
 ```cpp
-virtual Result< void > endstone::Actor::setHealth (
-    int health
-) const = 0
+Result<void> setHealth(int health) const
 ```
 
 
@@ -706,9 +700,7 @@ Sets the entity's health from 0 to its possible value, where 0 is dead.
 ### <code className="doc-symbol doc-symbol-function"/> setNameTag [#setNameTag]
 
 ```cpp
-virtual void endstone::Actor::setNameTag (
-    std::string name
-) = 0
+void setNameTag(std::string name)
 ```
 
 Sets the name tag for the actor.
@@ -729,9 +721,7 @@ Sets the name tag for the actor.
 ### <code className="doc-symbol doc-symbol-function"/> setNameTagAlwaysVisible [#setNameTagAlwaysVisible]
 
 ```cpp
-virtual void endstone::Actor::setNameTagAlwaysVisible (
-    bool visible
-) = 0
+void setNameTagAlwaysVisible(bool visible)
 ```
 
 Sets whether the actor's name tag should always be visible.
@@ -752,9 +742,7 @@ Sets whether the actor's name tag should always be visible.
 ### <code className="doc-symbol doc-symbol-function"/> setNameTagVisible [#setNameTagVisible]
 
 ```cpp
-virtual void endstone::Actor::setNameTagVisible (
-    bool visible
-) = 0
+void setNameTagVisible(bool visible)
 ```
 
 Sets if the actor's name tag is visible or not.
@@ -775,10 +763,7 @@ Sets if the actor's name tag is visible or not.
 ### <code className="doc-symbol doc-symbol-function"/> setRotation [#setRotation]
 
 ```cpp
-virtual void endstone::Actor::setRotation (
-    float yaw,
-    float pitch
-) = 0
+void setRotation(float yaw, float pitch)
 ```
 
 
@@ -807,9 +792,7 @@ Note that if the actor is affected by AI, it may override this rotation.
 ### <code className="doc-symbol doc-symbol-function"/> setScoreTag [#setScoreTag]
 
 ```cpp
-virtual void endstone::Actor::setScoreTag (
-    std::string score
-) = 0
+void setScoreTag(std::string score)
 ```
 
 Sets the score tag for the actor.
@@ -832,9 +815,7 @@ Sets the score tag for the actor.
 
 
 ```cpp
-virtual void endstone::Actor::teleport (
-    Location location
-) = 0
+void teleport(Location location)
 ```
 
 
@@ -858,9 +839,7 @@ Teleports this actor to the given location.
         
 
 ```cpp
-virtual void endstone::Actor::teleport (
-    Actor & target
-) = 0
+void teleport(Actor &target)
 ```
 
 

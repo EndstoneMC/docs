@@ -4,7 +4,7 @@ title: "ActorSpawnEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::ActorSpawnEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -65,14 +65,12 @@ const std::string endstone::ActorSpawnEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> ActorSpawnEvent [#ActorSpawnEvent]
 
 ```cpp
-inline explicit endstone::ActorSpawnEvent::ActorSpawnEvent (
-    Actor & actor
-) 
+ActorSpawnEvent(Actor &actor)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::ActorSpawnEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 

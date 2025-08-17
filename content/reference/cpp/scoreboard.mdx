@@ -83,10 +83,8 @@ Bases: `std::enable_shared_from_this< Scoreboard >`
 
 
 ```cpp
-virtual Result< std::unique_ptr< Objective > > endstone::Scoreboard::addObjective (
-    std::string name,
-    Criteria::Type criteria
-) = 0
+Result<std::unique_ptr<Objective>> addObjective(std::string name,
+                                                Criteria::Type criteria)
 ```
 
 Registers an Objective on this Scoreboard .
@@ -114,11 +112,9 @@ A reference to the newly registered [**Objective**](classendstone_1_1_objective.
         
 
 ```cpp
-virtual Result< std::unique_ptr< Objective > > endstone::Scoreboard::addObjective (
-    std::string name,
-    Criteria::Type criteria,
-    std::string display_name
-) = 0
+Result<std::unique_ptr<Objective>> addObjective(std::string name,
+                                                Criteria::Type criteria,
+                                                std::string display_name)
 ```
 
 Registers an Objective on this Scoreboard .
@@ -147,12 +143,10 @@ A reference to the newly registered [**Objective**](classendstone_1_1_objective.
         
 
 ```cpp
-virtual Result< std::unique_ptr< Objective > > endstone::Scoreboard::addObjective (
-    std::string name,
-    Criteria::Type criteria,
-    std::string display_name,
-    RenderType render_type
-) = 0
+Result<std::unique_ptr<Objective>> addObjective(std::string name,
+                                                Criteria::Type criteria,
+                                                std::string display_name,
+                                                RenderType render_type)
 ```
 
 Registers an Objective on this Scoreboard .
@@ -183,9 +177,7 @@ A reference to the newly registered [**Objective**](classendstone_1_1_objective.
 ### <code className="doc-symbol doc-symbol-function"/> clearSlot [#clearSlot]
 
 ```cpp
-virtual void endstone::Scoreboard::clearSlot (
-    DisplaySlot slot
-) = 0
+void clearSlot(DisplaySlot slot)
 ```
 
 Clears any objective in the specified slot.
@@ -206,7 +198,7 @@ Clears any objective in the specified slot.
 ### <code className="doc-symbol doc-symbol-function"/> getEntries [#getEntries]
 
 ```cpp
-virtual std::vector< ScoreEntry > endstone::Scoreboard::getEntries () const = 0
+std::vector<ScoreEntry> getEntries() const
 ```
 
 Gets all entries tracked by this Scoreboard .
@@ -229,9 +221,7 @@ A list of all tracked entries
 
 
 ```cpp
-virtual std::unique_ptr< Objective > endstone::Scoreboard::getObjective (
-    std::string name
-) const = 0
+std::unique_ptr<Objective> getObjective(std::string name) const
 ```
 
 Gets an Objective on this Scoreboard by name.
@@ -258,9 +248,7 @@ the [**Objective**](classendstone_1_1_objective.md) or `nullptr` if it does not 
         
 
 ```cpp
-virtual std::unique_ptr< Objective > endstone::Scoreboard::getObjective (
-    DisplaySlot slot
-) const = 0
+std::unique_ptr<Objective> getObjective(DisplaySlot slot) const
 ```
 
 Gets the Objective currently displayed in a DisplaySlot on this Scoreboard .
@@ -288,7 +276,7 @@ the [**Objective**](classendstone_1_1_objective.md) currently displayed or `null
 ### <code className="doc-symbol doc-symbol-function"/> getObjectives [#getObjectives]
 
 ```cpp
-virtual std::vector< std::unique_ptr< Objective > > endstone::Scoreboard::getObjectives () const = 0
+std::vector<std::unique_ptr<Objective>> getObjectives() const
 ```
 
 Gets all Objectives on this Scoreboard .
@@ -309,9 +297,8 @@ A list of all Objectives on this [**Scoreboard**](classendstone_1_1_scoreboard.m
 ### <code className="doc-symbol doc-symbol-function"/> getObjectivesByCriteria [#getObjectivesByCriteria]
 
 ```cpp
-virtual std::vector< std::unique_ptr< Objective > > endstone::Scoreboard::getObjectivesByCriteria (
-    Criteria::Type criteria
-) const = 0
+std::vector<std::unique_ptr<Objective>>
+getObjectivesByCriteria(Criteria::Type criteria) const
 ```
 
 Gets all Objectives of a Criteria on the Scoreboard .
@@ -339,9 +326,7 @@ A list of Objectives using the specified [**Criteria**](classendstone_1_1_criter
 ### <code className="doc-symbol doc-symbol-function"/> getScores [#getScores]
 
 ```cpp
-virtual std::vector< std::unique_ptr< Score > > endstone::Scoreboard::getScores (
-    ScoreEntry entry
-) const = 0
+std::vector<std::unique_ptr<Score>> getScores(ScoreEntry entry) const
 ```
 
 Gets all scores for an entry on this Scoreboard .
@@ -369,9 +354,7 @@ a list of all scores tracked for the entry
 ### <code className="doc-symbol doc-symbol-function"/> resetScores [#resetScores]
 
 ```cpp
-virtual void endstone::Scoreboard::resetScores (
-    ScoreEntry entry
-) = 0
+void resetScores(ScoreEntry entry)
 ```
 
 Removes all scores for an entry on this Scoreboard .

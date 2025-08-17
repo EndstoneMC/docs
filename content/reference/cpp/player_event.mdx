@@ -4,7 +4,7 @@ title: "PlayerEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerEvent
 
-Bases: [`endstone::Event`](classendstone_1_1_event.md)
+Bases: [`endstone::Event`](event)
 
 
 
@@ -45,14 +45,12 @@ Bases: [`endstone::Event`](classendstone_1_1_event.md)
 ### <code className="doc-symbol doc-symbol-function"/> PlayerEvent [#PlayerEvent]
 
 ```cpp
-inline explicit endstone::PlayerEvent::PlayerEvent (
-    Player & player
-) 
+PlayerEvent(Player &player)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getPlayer [#getPlayer]
 
 ```cpp
-inline Player & endstone::PlayerEvent::getPlayer () const
+Player &getPlayer() const
 ```
 
 

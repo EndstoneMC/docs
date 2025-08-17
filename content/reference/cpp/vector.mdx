@@ -91,22 +91,16 @@ title: "Vector"
 
 
 ```cpp
-inline constexpr endstone::Vector::Vector () 
+constexpr Vector()
 ```
 
 ```cpp
-inline constexpr endstone::Vector::Vector (
-    T x,
-    T y,
-    T z
-) 
+constexpr Vector(T x, T y, T z)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> distance [#distance]
 
 ```cpp
-inline T endstone::Vector::distance (
-    const Vector < T > & other
-) const
+T distance(const Vector<T> &other) const
 ```
 
 
@@ -134,9 +128,7 @@ the distance
 ### <code className="doc-symbol doc-symbol-function"/> distanceSquared [#distanceSquared]
 
 ```cpp
-inline T endstone::Vector::distanceSquared (
-    const Vector < T > & other
-) const
+T distanceSquared(const Vector<T> &other) const
 ```
 
 
@@ -164,7 +156,7 @@ the distance
 ### <code className="doc-symbol doc-symbol-function"/> getX [#getX]
 
 ```cpp
-inline T endstone::Vector::getX () const
+T getX() const
 ```
 
 Gets the X component.
@@ -185,7 +177,7 @@ The X component.
 ### <code className="doc-symbol doc-symbol-function"/> getY [#getY]
 
 ```cpp
-inline T endstone::Vector::getY () const
+T getY() const
 ```
 
 Gets the Y component.
@@ -206,7 +198,7 @@ The Y component.
 ### <code className="doc-symbol doc-symbol-function"/> getZ [#getZ]
 
 ```cpp
-inline T endstone::Vector::getZ () const
+T getZ() const
 ```
 
 Gets the Z component.
@@ -227,7 +219,7 @@ The Z component.
 ### <code className="doc-symbol doc-symbol-function"/> length [#length]
 
 ```cpp
-inline T endstone::Vector::length () const
+T length() const
 ```
 
 Gets the magnitude of the vector, defined as sqrt(x^2+y^2+z^2).
@@ -248,7 +240,7 @@ the magnitude
 ### <code className="doc-symbol doc-symbol-function"/> lengthSquared [#lengthSquared]
 
 ```cpp
-inline T endstone::Vector::lengthSquared () const
+T lengthSquared() const
 ```
 
 Gets the magnitude of the vector squared.
@@ -269,7 +261,7 @@ the magnitude
 ### <code className="doc-symbol doc-symbol-function"/> normalize [#normalize]
 
 ```cpp
-inline Vector < T > & endstone::Vector::normalize () 
+Vector<T> &normalize()
 ```
 
 
@@ -290,9 +282,7 @@ the same vector
 ### <code className="doc-symbol doc-symbol-function"/> setX [#setX]
 
 ```cpp
-inline void endstone::Vector::setX (
-    T x
-) 
+void setX(T x)
 ```
 
 Set the X component.
@@ -320,9 +310,7 @@ This vector.
 ### <code className="doc-symbol doc-symbol-function"/> setY [#setY]
 
 ```cpp
-inline void endstone::Vector::setY (
-    T y
-) 
+void setY(T y)
 ```
 
 Set the Y component.
@@ -350,9 +338,7 @@ This vector.
 ### <code className="doc-symbol doc-symbol-function"/> setZ [#setZ]
 
 ```cpp
-inline void endstone::Vector::setZ (
-    T z
-) 
+void setZ(T z)
 ```
 
 Set the Z component.

@@ -4,7 +4,7 @@ title: "ActorKnockbackEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::ActorKnockbackEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -77,16 +77,12 @@ const std::string endstone::ActorKnockbackEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> ActorKnockbackEvent [#ActorKnockbackEvent]
 
 ```cpp
-inline explicit endstone::ActorKnockbackEvent::ActorKnockbackEvent (
-    Mob & mob,
-    Actor * source,
-    Vector < float > knockback
-) 
+ActorKnockbackEvent(Mob &mob, Actor *source, Vector<float> knockback)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::ActorKnockbackEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 
@@ -107,7 +103,7 @@ name of this event
 ### <code className="doc-symbol doc-symbol-function"/> getKnockback [#getKnockback]
 
 ```cpp
-inline Vector < float > endstone::ActorKnockbackEvent::getKnockback () const
+Vector<float> getKnockback() const
 ```
 
 
@@ -131,7 +127,7 @@ the knockback
 ### <code className="doc-symbol doc-symbol-function"/> getSource [#getSource]
 
 ```cpp
-inline Actor * endstone::ActorKnockbackEvent::getSource () const
+Actor *getSource() const
 ```
 
 Get the source actor that has caused knockback to the defender, if exists.
@@ -152,9 +148,7 @@ actor that caused knockback, or nullptr if the knockback is not caused by an act
 ### <code className="doc-symbol doc-symbol-function"/> setKnockback [#setKnockback]
 
 ```cpp
-inline void endstone::ActorKnockbackEvent::setKnockback (
-    Vector < float > knockback
-) 
+void setKnockback(Vector<float> knockback)
 ```
 
 Sets the knockback that will be applied to the entity.

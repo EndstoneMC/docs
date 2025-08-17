@@ -4,7 +4,7 @@ title: "PlayerQuitEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerQuitEvent
 
-Bases: [`endstone::PlayerEvent`](classendstone_1_1_player_event.md)
+Bases: [`endstone::PlayerEvent`](player_event)
 
 
 
@@ -49,15 +49,12 @@ Bases: [`endstone::PlayerEvent`](classendstone_1_1_player_event.md)
 ### <code className="doc-symbol doc-symbol-function"/> PlayerQuitEvent [#PlayerQuitEvent]
 
 ```cpp
-inline explicit endstone::PlayerQuitEvent::PlayerQuitEvent (
-    Player & player,
-    std::optional< Message > quit_message
-) 
+PlayerQuitEvent(Player &player, std::optional<Message> quit_message)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getQuitMessage [#getQuitMessage]
 
 ```cpp
-inline std::optional< Message > endstone::PlayerQuitEvent::getQuitMessage () const
+std::optional<Message> getQuitMessage() const
 ```
 
 Gets the quit message to send to all online players.
@@ -78,9 +75,7 @@ Message to appear to other players on the server.
 ### <code className="doc-symbol doc-symbol-function"/> setQuitMessage [#setQuitMessage]
 
 ```cpp
-inline void endstone::PlayerQuitEvent::setQuitMessage (
-    std::optional< Message > message
-) 
+void setQuitMessage(std::optional<Message> message)
 ```
 
 Sets the quit message to send to all online players.

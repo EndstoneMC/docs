@@ -48,7 +48,7 @@ title: "BlockData"
 ### <code className="doc-symbol doc-symbol-function"/> getBlockStates [#getBlockStates]
 
 ```cpp
-virtual BlockStates endstone::BlockData::getBlockStates () const = 0
+BlockStates getBlockStates() const
 ```
 
 Gets the block states, which when passed into a method such as Server::createBlockData(type, block_states) will unambiguously recreate this instance.
@@ -69,7 +69,7 @@ the block states for this block
 ### <code className="doc-symbol doc-symbol-function"/> getRuntimeId [#getRuntimeId]
 
 ```cpp
-virtual std::uint32_t endstone::BlockData::getRuntimeId () const = 0
+std::uint32_t getRuntimeId() const
 ```
 
 Get the runtime ID for this block.
@@ -90,7 +90,7 @@ the runtime id for this block
 ### <code className="doc-symbol doc-symbol-function"/> getType [#getType]
 
 ```cpp
-virtual std::string endstone::BlockData::getType () const = 0
+std::string getType() const
 ```
 
 Get the block type represented by this block data.

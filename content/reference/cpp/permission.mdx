@@ -104,22 +104,16 @@ const PermissionDefault endstone::Permission::DefaultPermission;
 ### <code className="doc-symbol doc-symbol-function"/> Permission [#Permission]
 
 ```cpp
-inline explicit endstone::Permission::Permission (
-    std::string name,
-    std::string description="",
-    PermissionDefault default_value=DefaultPermission,
-    std::unordered_map< std::string, bool > children={}
-) 
+Permission(std::string name, std::string description = "",
+           PermissionDefault default_value = DefaultPermission,
+           std::unordered_map<std::string, bool> children = {})
 ```
 ### <code className="doc-symbol doc-symbol-function"/> addParent [#addParent]
 
 
 
 ```cpp
-inline Permission * endstone::Permission::addParent (
-    std::string name,
-    bool value
-) 
+Permission *addParent(std::string name, bool value)
 ```
 
 
@@ -150,10 +144,7 @@ Parent permission it created or loaded
         
 
 ```cpp
-inline void endstone::Permission::addParent (
-    Permission & perm,
-    bool value
-) const
+void addParent(Permission &perm, bool value) const
 ```
 
 
@@ -175,7 +166,7 @@ Adds this permission to the specified parent permission.
 ### <code className="doc-symbol doc-symbol-function"/> getChildren [#getChildren]
 
 ```cpp
-inline std::unordered_map< std::string, bool > & endstone::Permission::getChildren () 
+std::unordered_map<std::string, bool> &getChildren()
 ```
 
 
@@ -196,7 +187,7 @@ Gets the children of this permission. If you change this map in any form, you mu
 ### <code className="doc-symbol doc-symbol-function"/> getDefault [#getDefault]
 
 ```cpp
-inline PermissionDefault endstone::Permission::getDefault () const
+PermissionDefault getDefault() const
 ```
 
 
@@ -217,7 +208,7 @@ Default value of this permission.
 ### <code className="doc-symbol doc-symbol-function"/> getDescription [#getDescription]
 
 ```cpp
-inline std::string endstone::Permission::getDescription () const
+std::string getDescription() const
 ```
 
 
@@ -238,7 +229,7 @@ Brief description of this permission
 ### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
-inline std::string endstone::Permission::getName () const
+std::string getName() const
 ```
 
 
@@ -259,7 +250,7 @@ Fully qualified name
 ### <code className="doc-symbol doc-symbol-function"/> getPermissibles [#getPermissibles]
 
 ```cpp
-inline std::unordered_set< Permissible * > endstone::Permission::getPermissibles () const
+std::unordered_set<Permissible *> getPermissibles() const
 ```
 
 
@@ -280,14 +271,12 @@ Set containing permissibles with this permission
 ### <code className="doc-symbol doc-symbol-function"/> init [#init]
 
 ```cpp
-inline void endstone::Permission::init (
-    PluginManager & plugin_manager
-) 
+void init(PluginManager &plugin_manager)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> recalculatePermissibles [#recalculatePermissibles]
 
 ```cpp
-inline void endstone::Permission::recalculatePermissibles () 
+void recalculatePermissibles()
 ```
 
 
@@ -301,9 +290,7 @@ This should be called after modifying the children, and is automatically called 
 ### <code className="doc-symbol doc-symbol-function"/> setDefault [#setDefault]
 
 ```cpp
-inline void endstone::Permission::setDefault (
-    PermissionDefault value
-) 
+void setDefault(PermissionDefault value)
 ```
 
 
@@ -327,9 +314,7 @@ This will not be saved to disk, and is a temporary operation until the server re
 ### <code className="doc-symbol doc-symbol-function"/> setDescription [#setDescription]
 
 ```cpp
-inline void endstone::Permission::setDescription (
-    std::string value
-) 
+void setDescription(std::string value)
 ```
 
 

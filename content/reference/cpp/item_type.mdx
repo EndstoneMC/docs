@@ -71,7 +71,7 @@ title: "ItemType"
 ### <code className="doc-symbol doc-symbol-function"/> getId [#getId]
 
 ```cpp
-virtual std::string_view endstone::ItemType::getId () const = 0
+std::string_view getId() const
 ```
 
 Return the identifier of this item type.
@@ -92,7 +92,7 @@ this item's identifier
 ### <code className="doc-symbol doc-symbol-function"/> getKey [#getKey]
 
 ```cpp
-virtual NamespacedKey endstone::ItemType::getKey () const = 0
+NamespacedKey getKey() const
 ```
 
 Return the namespaced identifier of this item type.
@@ -113,7 +113,7 @@ this item's key
 ### <code className="doc-symbol doc-symbol-function"/> getMaxDurability [#getMaxDurability]
 
 ```cpp
-virtual int endstone::ItemType::getMaxDurability () const = 0
+int getMaxDurability() const
 ```
 
 Gets the maximum durability of this item type.
@@ -134,7 +134,7 @@ Maximum durability for this item type
 ### <code className="doc-symbol doc-symbol-function"/> getMaxStackSize [#getMaxStackSize]
 
 ```cpp
-virtual int endstone::ItemType::getMaxStackSize () const = 0
+int getMaxStackSize() const
 ```
 
 Gets the maximum amount of this item type that can be held in a stack.
@@ -155,7 +155,7 @@ Maximum stack size for this item type
 ### <code className="doc-symbol doc-symbol-function"/> getTranslationKey [#getTranslationKey]
 
 ```cpp
-virtual std::string endstone::ItemType::getTranslationKey () const = 0
+std::string getTranslationKey() const
 ```
 
 Get the translation key, suitable for use in a translation component.
@@ -176,9 +176,7 @@ the translation key
 ### <code className="doc-symbol doc-symbol-function"/> get [#get]
 
 ```cpp
-static inline const ItemType * endstone::ItemType::get (
-    std::string_view name
-) 
+static const ItemType *get(std::string_view name)
 ```
 
 Attempts to get the ItemType with the given name.

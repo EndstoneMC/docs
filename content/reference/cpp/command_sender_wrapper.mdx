@@ -4,7 +4,7 @@ title: "CommandSenderWrapper"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::CommandSenderWrapper
 
-Bases: [`endstone::CommandSender`](classendstone_1_1_command_sender.md)
+Bases: [`endstone::CommandSender`](command_sender)
 
 
 
@@ -124,27 +124,22 @@ Bases: [`endstone::CommandSender`](classendstone_1_1_command_sender.md)
 ### <code className="doc-symbol doc-symbol-typedef"/> Callback [#Callback]
 
 ```cpp
-using endstone::CommandSenderWrapper::Callback =  std::function<void(const Message &)>;
+using endstone::CommandSenderWrapper::Callback =
+    std::function<void(const Message &)>;
 ```
 ### <code className="doc-symbol doc-symbol-function"/> CommandSenderWrapper [#CommandSenderWrapper]
 
 ```cpp
-inline explicit endstone::CommandSenderWrapper::CommandSenderWrapper (
-    CommandSender & sender,
-    Callback on_message={},
-    Callback on_error={}
-) 
+CommandSenderWrapper(CommandSender &sender, Callback on_message = {},
+                     Callback on_error = {})
 ```
 ### <code className="doc-symbol doc-symbol-function"/> addAttachment [#addAttachment]
 
 
 
 ```cpp
-inline virtual PermissionAttachment * endstone::CommandSenderWrapper::addAttachment (
-    Plugin & plugin,
-    const std::string & name,
-    bool value
-) override
+PermissionAttachment *addAttachment(Plugin &plugin, const std::string &name,
+                                    bool value) override
 ```
 
 Adds a new PermissionAttachment with a single permission by name and value.
@@ -173,9 +168,7 @@ The [**PermissionAttachment**](classendstone_1_1_permission_attachment.md) that 
         
 
 ```cpp
-inline virtual PermissionAttachment * endstone::CommandSenderWrapper::addAttachment (
-    Plugin & plugin
-) override
+PermissionAttachment *addAttachment(Plugin &plugin) override
 ```
 
 Adds a new empty PermissionAttachment to this object.
@@ -203,7 +196,7 @@ The [**PermissionAttachment**](classendstone_1_1_permission_attachment.md) that 
 ### <code className="doc-symbol doc-symbol-function"/> asActor [#asActor]
 
 ```cpp
-inline virtual Actor * endstone::CommandSenderWrapper::asActor () override const
+Actor *asActor() override const
 ```
 
 Gets a CommandSender as Actor .
@@ -224,7 +217,7 @@ Gets a CommandSender as Actor .
 ### <code className="doc-symbol doc-symbol-function"/> asConsole [#asConsole]
 
 ```cpp
-inline virtual ConsoleCommandSender * endstone::CommandSenderWrapper::asConsole () override const
+ConsoleCommandSender *asConsole() override const
 ```
 
 Gets a CommandSender as ConsoleCommandSender .
@@ -245,7 +238,7 @@ Gets a CommandSender as ConsoleCommandSender .
 ### <code className="doc-symbol doc-symbol-function"/> asPlayer [#asPlayer]
 
 ```cpp
-inline virtual Player * endstone::CommandSenderWrapper::asPlayer () override const
+Player *asPlayer() override const
 ```
 
 Gets a CommandSender as Player .
@@ -266,7 +259,8 @@ Gets a CommandSender as Player .
 ### <code className="doc-symbol doc-symbol-function"/> getEffectivePermissions [#getEffectivePermissions]
 
 ```cpp
-inline virtual std::unordered_set< PermissionAttachmentInfo * > endstone::CommandSenderWrapper::getEffectivePermissions () override const
+std::unordered_set<PermissionAttachmentInfo *>
+getEffectivePermissions() override const
 ```
 
 Gets a set containing all the permissions currently in effect by this object.
@@ -287,7 +281,7 @@ Set of currently effective permissions
 ### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
-inline virtual std::string endstone::CommandSenderWrapper::getName () override const
+std::string getName() override const
 ```
 
 Gets the name of this command sender.
@@ -308,7 +302,7 @@ Name of the sender
 ### <code className="doc-symbol doc-symbol-function"/> getPermissionLevel [#getPermissionLevel]
 
 ```cpp
-inline virtual PermissionLevel endstone::CommandSenderWrapper::getPermissionLevel () override const
+PermissionLevel getPermissionLevel() override const
 ```
 
 Gets the permission level of this object.
@@ -329,7 +323,7 @@ The permission level
 ### <code className="doc-symbol doc-symbol-function"/> getServer [#getServer]
 
 ```cpp
-inline virtual Server & endstone::CommandSenderWrapper::getServer () override const
+Server &getServer() override const
 ```
 
 Returns the server instance that this command is running on.
@@ -352,9 +346,7 @@ Returns the server instance that this command is running on.
 
 
 ```cpp
-inline virtual bool endstone::CommandSenderWrapper::hasPermission (
-    std::string name
-) override const
+bool hasPermission(std::string name) override const
 ```
 
 Gets the value of the specified permission, if set. If a permission override is not set on this object, the default value of the permission will be returned.
@@ -381,9 +373,7 @@ Value of the permission
         
 
 ```cpp
-inline virtual bool endstone::CommandSenderWrapper::hasPermission (
-    const Permission & perm
-) override const
+bool hasPermission(const Permission &perm) override const
 ```
 
 Gets the value of the specified permission, if set. If a permission override is not set on this object, the default value of the permission will be returned.
@@ -413,9 +403,7 @@ Value of the permission
 
 
 ```cpp
-inline virtual bool endstone::CommandSenderWrapper::isPermissionSet (
-    std::string name
-) override const
+bool isPermissionSet(std::string name) override const
 ```
 
 Checks if this object contains an override for the specified permission, by fully qualified name.
@@ -442,9 +430,7 @@ true if the permission is set, otherwise false
         
 
 ```cpp
-inline virtual bool endstone::CommandSenderWrapper::isPermissionSet (
-    const Permission & perm
-) override const
+bool isPermissionSet(const Permission &perm) override const
 ```
 
 Checks if this object contains an override for the specified Permission .
@@ -472,7 +458,7 @@ true if the permission is set, otherwise false
 ### <code className="doc-symbol doc-symbol-function"/> recalculatePermissions [#recalculatePermissions]
 
 ```cpp
-inline virtual void endstone::CommandSenderWrapper::recalculatePermissions () override
+void recalculatePermissions() override
 ```
 
 Recalculates the permissions for this object, if the attachments have changed values. This should very rarely need to be called from a plugin.
@@ -480,9 +466,7 @@ Recalculates the permissions for this object, if the attachments have changed va
 ### <code className="doc-symbol doc-symbol-function"/> removeAttachment [#removeAttachment]
 
 ```cpp
-inline virtual Result< void > endstone::CommandSenderWrapper::removeAttachment (
-    PermissionAttachment & attachment
-) override
+Result<void> removeAttachment(PermissionAttachment &attachment) override
 ```
 
 Removes the given PermissionAttachment from this object.
@@ -510,9 +494,7 @@ true if the specified attachment was removed successfully, false when it isn't p
 ### <code className="doc-symbol doc-symbol-function"/> sendErrorMessage [#sendErrorMessage]
 
 ```cpp
-inline virtual void endstone::CommandSenderWrapper::sendErrorMessage (
-    const Message & message
-) override const
+void sendErrorMessage(const Message &message) override const
 ```
 
 Sends this sender a error message.
@@ -533,9 +515,7 @@ Sends this sender a error message.
 ### <code className="doc-symbol doc-symbol-function"/> sendMessage [#sendMessage]
 
 ```cpp
-inline virtual void endstone::CommandSenderWrapper::sendMessage (
-    const Message & message
-) override const
+void sendMessage(const Message &message) override const
 ```
 
 Sends this sender a message.

@@ -4,7 +4,7 @@ title: "ThunderChangeEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::ThunderChangeEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -69,15 +69,12 @@ const std::string endstone::ThunderChangeEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> ThunderChangeEvent [#ThunderChangeEvent]
 
 ```cpp
-inline endstone::ThunderChangeEvent::ThunderChangeEvent (
-    Level & level,
-    bool to
-) 
+ThunderChangeEvent(Level &level, bool to)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::ThunderChangeEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 
@@ -98,7 +95,7 @@ name of this event
 ### <code className="doc-symbol doc-symbol-function"/> toThunderState [#toThunderState]
 
 ```cpp
-inline bool endstone::ThunderChangeEvent::toThunderState () const
+bool toThunderState() const
 ```
 
 

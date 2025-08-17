@@ -1,9 +1,12 @@
 import re
+from pathlib import Path
 from typing import Sequence
 from collections import OrderedDict
 
 from griffe import DocstringFunction, DocstringSectionFunctions, Function
 from mkdoxy.node import Node
+
+from scripts.docgen.utils import clang_format
 
 
 def do_heading(
@@ -136,3 +139,77 @@ def do_group_overloads(functions: [Node]):
 
     out = list(groups.values())
     return out
+
+
+def do_format_codeblock(node: Node) -> str:
+    code = []
+    if node.is_function or node.is_friend:
+        if node._templateparams.has():
+            code.append(f"template<{node._templateparams.plain()}>")
+
+        typ = node._type.plain()
+        if typ:
+            typ += " "
+        if node.is_static:
+            typ = f"static {typ}"
+
+        specifiers = node._specifiers.parsed()
+        specifiers = specifiers.replace("= 0", "")
+        specifiers = specifiers.strip()
+
+        if node._params.has():
+            code.append(typ + node.name_tokens[-1] + "(")
+            params = node._params.array(plain=True)
+            for i, param in enumerate(params):
+                if i + 1 >= len(params):
+                    code.append(f"    {param}")
+                else:
+                    code.append(f"    {param},")
+            code.append(f") {specifiers}")
+        else:
+            code.append(typ + node.name_tokens[-1] + "() " + specifiers)
+
+    elif node.is_enum:
+        if node._values.has():
+            code.append(f"enum {node.name_tokens[-1]}" + " {")
+
+            values = []
+            for enumvalue in node._xml.findall("enumvalue"):
+                p = enumvalue.find("name").text
+                initializer = enumvalue.find("initializer")
+                if initializer is not None:
+                    p += f" {node._parser.paras_as_str(initializer, plain=True)}"
+                values.append(p)
+
+            for i, value in enumerate(values):
+                if i + 1 >= len(values):
+                    code.append(f"    {value}")
+                else:
+                    code.append(f"    {value},")
+            code.append("};")
+        else:
+            code.append(f"enum {node.name_tokens[-1]};")
+
+    elif node.is_define:
+        if node._params.has():
+            code.append(f"#define {node.name_full_unescaped} (")
+            params = node._params.array(plain=True)
+            for i, param in enumerate(params):
+                if i + 1 >= len(params):
+                    code.append(f"    {param}")
+                else:
+                    code.append(f"    {param},")
+            code.append(f") {node._initializer.plain()}")
+        else:
+            code.append(f"#define {node.name_full_unescaped} {node._initializer.plain()}")
+
+    else:
+        code.append(node._definition.plain())
+
+    result = "\n".join([*code])
+    try:
+        result = clang_format(result)
+    except:
+        print(f"clang-format failed for {node.name}")
+
+    return "\n".join(["```", result, "```"])

@@ -60,9 +60,7 @@ title: "Enchantment"
 ### <code className="doc-symbol doc-symbol-function"/> canEnchantItem [#canEnchantItem]
 
 ```cpp
-virtual bool endstone::Enchantment::canEnchantItem (
-    const ItemStack & item
-) const = 0
+bool canEnchantItem(const ItemStack &item) const
 ```
 
 Checks if this Enchantment may be applied to the given ItemStack .
@@ -93,9 +91,7 @@ True if the enchantment may be applied, otherwise False
 ### <code className="doc-symbol doc-symbol-function"/> conflictsWith [#conflictsWith]
 
 ```cpp
-virtual bool endstone::Enchantment::conflictsWith (
-    const Enchantment & other
-) const = 0
+bool conflictsWith(const Enchantment &other) const
 ```
 
 Check if this enchantment conflicts with another enchantment.
@@ -123,7 +119,7 @@ True if there is a conflict.
 ### <code className="doc-symbol doc-symbol-function"/> getKey [#getKey]
 
 ```cpp
-virtual NamespacedKey endstone::Enchantment::getKey () const = 0
+NamespacedKey getKey() const
 ```
 
 Return the namespaced identifier for this enchantment.
@@ -144,7 +140,7 @@ this enchantment's key
 ### <code className="doc-symbol doc-symbol-function"/> getMaxLevel [#getMaxLevel]
 
 ```cpp
-virtual int endstone::Enchantment::getMaxLevel () const = 0
+int getMaxLevel() const
 ```
 
 Gets the maximum level that this Enchantment may become.
@@ -165,7 +161,7 @@ Maximum level of the [**Enchantment**](classendstone_1_1_enchantment.md)
 ### <code className="doc-symbol doc-symbol-function"/> getStartLevel [#getStartLevel]
 
 ```cpp
-virtual int endstone::Enchantment::getStartLevel () const = 0
+int getStartLevel() const
 ```
 
 Gets the level that this Enchantment should start at (also known as minimum level).
@@ -186,7 +182,7 @@ Starting level of the [**Enchantment**](classendstone_1_1_enchantment.md)
 ### <code className="doc-symbol doc-symbol-function"/> getTranslationKey [#getTranslationKey]
 
 ```cpp
-virtual std::string endstone::Enchantment::getTranslationKey () const = 0
+std::string getTranslationKey() const
 ```
 
 Get the translation key, suitable for use in a translation component.

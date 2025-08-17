@@ -4,7 +4,7 @@ title: "MessageForm"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::MessageForm
 
-Bases: [`endstone::Form`](classendstone_1_1_form.md)
+Bases: [`endstone::Form`](form)
 
 
 
@@ -84,12 +84,13 @@ Bases: [`endstone::Form`](classendstone_1_1_form.md)
 ### <code className="doc-symbol doc-symbol-typedef"/> OnSubmitCallback [#OnSubmitCallback]
 
 ```cpp
-using endstone::MessageForm::OnSubmitCallback =  std::function<void(Player *, int)>;
+using endstone::MessageForm::OnSubmitCallback =
+    std::function<void(Player *, int)>;
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getButton1 [#getButton1]
 
 ```cpp
-inline Message endstone::MessageForm::getButton1 () const
+Message getButton1() const
 ```
 
 Get the text of button1.
@@ -110,7 +111,7 @@ The text of button1.
 ### <code className="doc-symbol doc-symbol-function"/> getButton2 [#getButton2]
 
 ```cpp
-inline Message endstone::MessageForm::getButton2 () const
+Message getButton2() const
 ```
 
 Get the text of button2.
@@ -131,7 +132,7 @@ The text of button2.
 ### <code className="doc-symbol doc-symbol-function"/> getContent [#getContent]
 
 ```cpp
-inline Message endstone::MessageForm::getContent () const
+Message getContent() const
 ```
 
 Get the content of the form.
@@ -152,7 +153,7 @@ The content of the form.
 ### <code className="doc-symbol doc-symbol-function"/> getOnSubmit [#getOnSubmit]
 
 ```cpp
-inline OnSubmitCallback endstone::MessageForm::getOnSubmit () const
+OnSubmitCallback getOnSubmit() const
 ```
 
 Gets the on submit callback of the form.
@@ -173,9 +174,7 @@ The on submit callback of the form.
 ### <code className="doc-symbol doc-symbol-function"/> setButton1 [#setButton1]
 
 ```cpp
-inline MessageForm & endstone::MessageForm::setButton1 (
-    Message text
-) 
+MessageForm &setButton1(Message text)
 ```
 
 Set the text of button1.
@@ -203,9 +202,7 @@ A reference to the current form.
 ### <code className="doc-symbol doc-symbol-function"/> setButton2 [#setButton2]
 
 ```cpp
-inline MessageForm & endstone::MessageForm::setButton2 (
-    Message text
-) 
+MessageForm &setButton2(Message text)
 ```
 
 Set the text of button2.
@@ -233,9 +230,7 @@ A reference to the current form.
 ### <code className="doc-symbol doc-symbol-function"/> setContent [#setContent]
 
 ```cpp
-inline MessageForm & endstone::MessageForm::setContent (
-    Message text
-) 
+MessageForm &setContent(Message text)
 ```
 
 Set the content of the form.
@@ -263,9 +258,7 @@ A reference to the current form.
 ### <code className="doc-symbol doc-symbol-function"/> setOnSubmit [#setOnSubmit]
 
 ```cpp
-inline MessageForm & endstone::MessageForm::setOnSubmit (
-    OnSubmitCallback on_submit
-) 
+MessageForm &setOnSubmit(OnSubmitCallback on_submit)
 ```
 
 Sets the on submit callback of the form.

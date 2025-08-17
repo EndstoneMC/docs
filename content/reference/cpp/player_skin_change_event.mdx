@@ -4,7 +4,7 @@ title: "PlayerSkinChangeEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerSkinChangeEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -53,16 +53,13 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 ### <code className="doc-symbol doc-symbol-function"/> PlayerSkinChangeEvent [#PlayerSkinChangeEvent]
 
 ```cpp
-inline explicit endstone::PlayerSkinChangeEvent::PlayerSkinChangeEvent (
-    Player & player,
-    Skin new_skin,
-    std::optional< Message > message
-) 
+PlayerSkinChangeEvent(Player &player, Skin new_skin,
+                      std::optional<Message> message)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getNewSkin [#getNewSkin]
 
 ```cpp
-inline Skin endstone::PlayerSkinChangeEvent::getNewSkin () const
+Skin getNewSkin() const
 ```
 
 Gets the player's new skin.
@@ -83,7 +80,7 @@ The skin that will be applied.
 ### <code className="doc-symbol doc-symbol-function"/> getSkinChangeMessage [#getSkinChangeMessage]
 
 ```cpp
-inline std::optional< Message > endstone::PlayerSkinChangeEvent::getSkinChangeMessage () const
+std::optional<Message> getSkinChangeMessage() const
 ```
 
 Gets the message to send to all online players for this skin change.
@@ -104,9 +101,7 @@ Message to appear to other players on the server.
 ### <code className="doc-symbol doc-symbol-function"/> setSkinChangeMessage [#setSkinChangeMessage]
 
 ```cpp
-inline void endstone::PlayerSkinChangeEvent::setSkinChangeMessage (
-    std::optional< Message > message
-) 
+void setSkinChangeMessage(std::optional<Message> message)
 ```
 
 Sets the message to send to all online players for this skin change.

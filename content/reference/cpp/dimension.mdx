@@ -91,12 +91,7 @@ title: "Dimension"
 ### <code className="doc-symbol doc-symbol-enum"/> Type [#Type]
 
 ```cpp
-enum endstone::Dimension::Type {
-    Overworld = 0,
-    Nether = 1,
-    TheEnd = 2,
-    Custom = 999
-};
+enum Type { Overworld = 0, Nether = 1, TheEnd = 2, Custom = 999 };
 ```
 
 Represents various dimension types.
@@ -104,10 +99,7 @@ Represents various dimension types.
 ### <code className="doc-symbol doc-symbol-function"/> dropItem [#dropItem]
 
 ```cpp
-virtual Item & endstone::Dimension::dropItem (
-    Location location,
-    ItemStack & item
-) = 0
+Item &dropItem(Location location, ItemStack &item)
 ```
 
 Drops an item at the specified Location .
@@ -138,11 +130,7 @@ Drops an item at the specified Location .
 
 
 ```cpp
-virtual std::unique_ptr< Block > endstone::Dimension::getBlockAt (
-    int x,
-    int y,
-    int z
-) const = 0
+std::unique_ptr<Block> getBlockAt(int x, int y, int z) const
 ```
 
 Gets the Block at the given coordinates.
@@ -171,9 +159,7 @@ Gets the Block at the given coordinates.
         
 
 ```cpp
-virtual std::unique_ptr< Block > endstone::Dimension::getBlockAt (
-    Location location
-) const = 0
+std::unique_ptr<Block> getBlockAt(Location location) const
 ```
 
 Gets the Block at the given Location .
@@ -203,10 +189,7 @@ Gets the Block at the given Location .
 
 
 ```cpp
-virtual std::unique_ptr< Block > endstone::Dimension::getHighestBlockAt (
-    int x,
-    int z
-) const = 0
+std::unique_ptr<Block> getHighestBlockAt(int x, int z) const
 ```
 
 Gets the highest non-empty (impassable) block at the given coordinates.
@@ -234,9 +217,7 @@ Highest non-empty block
         
 
 ```cpp
-virtual std::unique_ptr< Block > endstone::Dimension::getHighestBlockAt (
-    Location location
-) const = 0
+std::unique_ptr<Block> getHighestBlockAt(Location location) const
 ```
 
 Gets the highest non-empty (impassable) block at the given Location .
@@ -264,10 +245,7 @@ Highest non-empty block
 ### <code className="doc-symbol doc-symbol-function"/> getHighestBlockYAt [#getHighestBlockYAt]
 
 ```cpp
-virtual int endstone::Dimension::getHighestBlockYAt (
-    int x,
-    int z
-) const = 0
+int getHighestBlockYAt(int x, int z) const
 ```
 
 Gets the highest non-empty (impassable) coordinate at the given coordinates.
@@ -296,7 +274,7 @@ Y-coordinate of the highest non-empty block
 ### <code className="doc-symbol doc-symbol-function"/> getLevel [#getLevel]
 
 ```cpp
-virtual Level & endstone::Dimension::getLevel () const = 0
+Level &getLevel() const
 ```
 
 Gets the level to which this dimension belongs.
@@ -317,7 +295,7 @@ Gets the level to which this dimension belongs.
 ### <code className="doc-symbol doc-symbol-function"/> getLoadedChunks [#getLoadedChunks]
 
 ```cpp
-virtual std::vector< std::unique_ptr< Chunk > > endstone::Dimension::getLoadedChunks () = 0
+std::vector<std::unique_ptr<Chunk>> getLoadedChunks()
 ```
 
 Gets a list of all loaded Chunks.
@@ -338,7 +316,7 @@ All loaded chunks
 ### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
-virtual std::string endstone::Dimension::getName () const = 0
+std::string getName() const
 ```
 
 Gets the name of this dimension.
@@ -359,7 +337,7 @@ Name of this dimension
 ### <code className="doc-symbol doc-symbol-function"/> getType [#getType]
 
 ```cpp
-virtual Type endstone::Dimension::getType () const = 0
+Type getType() const
 ```
 
 Gets the type of this dimension.

@@ -56,7 +56,7 @@ title: "Task"
 ### <code className="doc-symbol doc-symbol-function"/> cancel [#cancel]
 
 ```cpp
-virtual void endstone::Task::cancel () = 0
+void cancel()
 ```
 
 
@@ -67,7 +67,7 @@ Attempts to cancel this task.
 ### <code className="doc-symbol doc-symbol-function"/> getOwner [#getOwner]
 
 ```cpp
-virtual Plugin * endstone::Task::getOwner () const = 0
+Plugin *getOwner() const
 ```
 
 
@@ -88,7 +88,7 @@ The [**Plugin**](classendstone_1_1_plugin.md) that owns the task
 ### <code className="doc-symbol doc-symbol-function"/> getTaskId [#getTaskId]
 
 ```cpp
-virtual TaskId endstone::Task::getTaskId () const = 0
+TaskId getTaskId() const
 ```
 
 
@@ -109,7 +109,7 @@ Returns the taskId for the task.
 ### <code className="doc-symbol doc-symbol-function"/> isCancelled [#isCancelled]
 
 ```cpp
-virtual bool endstone::Task::isCancelled () const = 0
+bool isCancelled() const
 ```
 
 
@@ -130,7 +130,7 @@ true if the task has been cancelled
 ### <code className="doc-symbol doc-symbol-function"/> isSync [#isSync]
 
 ```cpp
-virtual bool endstone::Task::isSync () const = 0
+bool isSync() const
 ```
 
 

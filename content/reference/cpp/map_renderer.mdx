@@ -52,9 +52,7 @@ title: "MapRenderer"
 ### <code className="doc-symbol doc-symbol-function"/> MapRenderer [#MapRenderer]
 
 ```cpp
-inline explicit endstone::MapRenderer::MapRenderer (
-    const bool is_contextual=false
-) 
+MapRenderer(const bool is_contextual = false)
 ```
 
 Initialize the map renderer base with the given contextual status.
@@ -75,9 +73,7 @@ Initialize the map renderer base with the given contextual status.
 ### <code className="doc-symbol doc-symbol-function"/> initialize [#initialize]
 
 ```cpp
-inline virtual void endstone::MapRenderer::initialize (
-    MapView & map
-) 
+void initialize(MapView &map)
 ```
 
 Initialize this MapRenderer for the given map.
@@ -98,7 +94,7 @@ Initialize this MapRenderer for the given map.
 ### <code className="doc-symbol doc-symbol-function"/> isContextual [#isContextual]
 
 ```cpp
-inline bool endstone::MapRenderer::isContextual () const
+bool isContextual() const
 ```
 
 Get whether the renderer is contextual, i.e. has different canvases for different players.
@@ -119,11 +115,7 @@ true if contextual, false otherwise.
 ### <code className="doc-symbol doc-symbol-function"/> render [#render]
 
 ```cpp
-virtual void endstone::MapRenderer::render (
-    MapView & map,
-    MapCanvas & canvas,
-    Player & player
-) = 0
+void render(MapView &map, MapCanvas &canvas, Player &player)
 ```
 
 Render to the given map.

@@ -4,7 +4,7 @@ title: "PlayerDropItemEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerDropItemEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -45,15 +45,12 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 ### <code className="doc-symbol doc-symbol-function"/> PlayerDropItemEvent [#PlayerDropItemEvent]
 
 ```cpp
-inline explicit endstone::PlayerDropItemEvent::PlayerDropItemEvent (
-    Player & player,
-    const ItemStack & drop
-) 
+PlayerDropItemEvent(Player &player, const ItemStack &drop)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getItem [#getItem]
 
 ```cpp
-inline const ItemStack & endstone::PlayerDropItemEvent::getItem () const
+const ItemStack &getItem() const
 ```
 
 Gets the ItemStack dropped by the player.

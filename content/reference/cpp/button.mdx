@@ -83,27 +83,24 @@ title: "Button"
 ### <code className="doc-symbol doc-symbol-typedef"/> OnClickCallback [#OnClickCallback]
 
 ```cpp
-using endstone::Button::OnClickCallback =  std::function<void(Player *)>;
+using endstone::Button::OnClickCallback = std::function<void(Player *)>;
 ```
 ### <code className="doc-symbol doc-symbol-function"/> Button [#Button]
 
 
 
 ```cpp
-endstone::Button::Button () = default
+Button() = default
 ```
 
 ```cpp
-inline explicit endstone::Button::Button (
-    Message text,
-    std::optional< std::string > icon=std::nullopt,
-    OnClickCallback on_click={}
-) 
+Button(Message text, std::optional<std::string> icon = std::nullopt,
+       OnClickCallback on_click = {})
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getIcon [#getIcon]
 
 ```cpp
-inline std::optional< std::string > endstone::Button::getIcon () const
+std::optional<std::string> getIcon() const
 ```
 
 Get the icon of the button.
@@ -124,7 +121,7 @@ The path or URL to the icon file
 ### <code className="doc-symbol doc-symbol-function"/> getOnClick [#getOnClick]
 
 ```cpp
-inline OnClickCallback endstone::Button::getOnClick () const
+OnClickCallback getOnClick() const
 ```
 
 Gets the on click callback of the button.
@@ -145,7 +142,7 @@ The on click callback of the button.
 ### <code className="doc-symbol doc-symbol-function"/> getText [#getText]
 
 ```cpp
-inline Message endstone::Button::getText () const
+Message getText() const
 ```
 
 Gets the text of the button.
@@ -166,9 +163,7 @@ The text.
 ### <code className="doc-symbol doc-symbol-function"/> setIcon [#setIcon]
 
 ```cpp
-inline Button & endstone::Button::setIcon (
-    std::string icon
-) 
+Button &setIcon(std::string icon)
 ```
 
 Sets the icon for the button.
@@ -196,9 +191,7 @@ A reference to the current button.
 ### <code className="doc-symbol doc-symbol-function"/> setOnClick [#setOnClick]
 
 ```cpp
-inline Button & endstone::Button::setOnClick (
-    OnClickCallback on_click
-) 
+Button &setOnClick(OnClickCallback on_click)
 ```
 
 Sets the on click callback of the button.
@@ -226,9 +219,7 @@ A reference to the current button.
 ### <code className="doc-symbol doc-symbol-function"/> setText [#setText]
 
 ```cpp
-inline Button & endstone::Button::setText (
-    Message text
-) 
+Button &setText(Message text)
 ```
 
 Sets the text of the button.

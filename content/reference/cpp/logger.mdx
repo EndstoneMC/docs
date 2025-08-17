@@ -123,14 +123,14 @@ title: "Logger"
 ### <code className="doc-symbol doc-symbol-enum"/> Level [#Level]
 
 ```cpp
-enum endstone::Logger::Level {
-    Trace = 0,
-    Debug = 1,
-    Info = 2,
-    Warning = 3,
-    Error = 4,
-    Critical = 5,
-    Off = 6
+enum Level {
+  Trace = 0,
+  Debug = 1,
+  Info = 2,
+  Warning = 3,
+  Error = 4,
+  Critical = 5,
+  Off = 6
 };
 ```
 
@@ -139,63 +139,48 @@ Specifies the log level.
 ### <code className="doc-symbol doc-symbol-function"/> Logger [#Logger]
 
 ```cpp
-endstone::Logger::Logger () = default
+Logger() = default
 ```
 ### <code className="doc-symbol doc-symbol-function"/> critical [#critical]
 
 
 
 ```cpp
-inline void endstone::Logger::critical (
-    const std::string_view message
-) const
+void critical(const std::string_view message) const
 ```
 
 ```cpp
-template<typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int >>
-inline void endstone::Logger::critical (
-    const fmt::format_string< Args... > format,
-    Args &&... args
-) const
+template <typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int>>
+void critical(const fmt::format_string<Args...> format, Args &&...args) const
 ```
 ### <code className="doc-symbol doc-symbol-function"/> debug [#debug]
 
 
 
 ```cpp
-inline void endstone::Logger::debug (
-    const std::string_view message
-) const
+void debug(const std::string_view message) const
 ```
 
 ```cpp
-template<typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int >>
-inline void endstone::Logger::debug (
-    const fmt::format_string< Args... > format,
-    Args &&... args
-) const
+template <typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int>>
+void debug(const fmt::format_string<Args...> format, Args &&...args) const
 ```
 ### <code className="doc-symbol doc-symbol-function"/> error [#error]
 
 
 
 ```cpp
-inline void endstone::Logger::error (
-    const std::string_view message
-) const
+void error(const std::string_view message) const
 ```
 
 ```cpp
-template<typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int >>
-inline void endstone::Logger::error (
-    const fmt::format_string< Args... > format,
-    Args &&... args
-) const
+template <typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int>>
+void error(const fmt::format_string<Args...> format, Args &&...args) const
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
-virtual std::string_view endstone::Logger::getName () const = 0
+std::string_view getName() const
 ```
 
 Get the name of this Logger instance.
@@ -218,24 +203,17 @@ The name of this [**Logger**](classendstone_1_1_logger.md) instance.
 
 
 ```cpp
-inline void endstone::Logger::info (
-    const std::string_view message
-) const
+void info(const std::string_view message) const
 ```
 
 ```cpp
-template<typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int >>
-inline void endstone::Logger::info (
-    const fmt::format_string< Args... > format,
-    Args &&... args
-) const
+template <typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int>>
+void info(const fmt::format_string<Args...> format, Args &&...args) const
 ```
 ### <code className="doc-symbol doc-symbol-function"/> isEnabledFor [#isEnabledFor]
 
 ```cpp
-virtual bool endstone::Logger::isEnabledFor (
-    Level level
-) const = 0
+bool isEnabledFor(Level level) const
 ```
 
 Check if the Logger instance is enabled for the given log Level .
@@ -265,10 +243,7 @@ true if the logger is enabled for the [**Level**](classendstone_1_1_level.md), f
 
 
 ```cpp
-virtual void endstone::Logger::log (
-    Level level,
-    std::string_view message
-) const = 0
+void log(Level level, std::string_view message) const
 ```
 
 Log a message at the given level.
@@ -289,19 +264,14 @@ Log a message at the given level.
         
 
 ```cpp
-template<typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int >>
-inline void endstone::Logger::log (
-    Level level,
-    const fmt::format_string< Args... > format,
-    Args &&... args
-) const
+template <typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int>>
+void log(Level level, const fmt::format_string<Args...> format,
+         Args &&...args) const
 ```
 ### <code className="doc-symbol doc-symbol-function"/> setLevel [#setLevel]
 
 ```cpp
-virtual void endstone::Logger::setLevel (
-    Level level
-) = 0
+void setLevel(Level level)
 ```
 
 Set the logging level for this Logger instance.
@@ -324,32 +294,22 @@ Set the logging level for this Logger instance.
 
 
 ```cpp
-inline void endstone::Logger::trace (
-    const std::string_view message
-) const
+void trace(const std::string_view message) const
 ```
 
 ```cpp
-template<typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int >>
-inline void endstone::Logger::trace (
-    const fmt::format_string< Args... > format,
-    Args &&... args
-) const
+template <typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int>>
+void trace(const fmt::format_string<Args...> format, Args &&...args) const
 ```
 ### <code className="doc-symbol doc-symbol-function"/> warning [#warning]
 
 
 
 ```cpp
-inline void endstone::Logger::warning (
-    const std::string_view message
-) const
+void warning(const std::string_view message) const
 ```
 
 ```cpp
-template<typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int >>
-inline void endstone::Logger::warning (
-    const fmt::format_string< Args... > format,
-    Args &&... args
-) const
+template <typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int>>
+void warning(const fmt::format_string<Args...> format, Args &&...args) const
 ```

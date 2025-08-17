@@ -4,7 +4,7 @@ title: "BlockPistonRetractEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::BlockPistonRetractEvent
 
-Bases: [`endstone::BlockPistonEvent`](classendstone_1_1_block_piston_event.md)
+Bases: [`endstone::BlockPistonEvent`](block_piston_event)
 
 
 
@@ -41,8 +41,5 @@ Bases: [`endstone::BlockPistonEvent`](classendstone_1_1_block_piston_event.md)
 ### <code className="doc-symbol doc-symbol-function"/> BlockPistonEvent [#BlockPistonEvent]
 
 ```cpp
-inline explicit endstone::BlockPistonRetractEvent::BlockPistonEvent (
-    std::unique_ptr< Block > block,
-    BlockFace direction
-) 
+BlockPistonEvent(std::unique_ptr<Block> block, BlockFace direction)
 ```

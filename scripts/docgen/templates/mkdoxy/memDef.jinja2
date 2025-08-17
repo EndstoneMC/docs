@@ -13,7 +13,7 @@ url_source: True
 {% if node._overloads -%}
 {%- for overload in node._overloads %}
 
-{{overload.codeblock | use_code_language("cpp")}}
+{{overload | format_codeblock | use_code_language("cpp")}}
 
 {%- if configMemDef.get('brief') -%}
 {%- if overload.has_brief %}
@@ -32,7 +32,7 @@ url_source: True
 {%- endfor -%}
 {%- else -%}
 
-{{node.codeblock | use_code_language("cpp")}}
+{{node | format_codeblock | use_code_language("cpp")}}
 {%- if configMemDef.get('brief') -%}
 {%- if node.has_brief %}
 

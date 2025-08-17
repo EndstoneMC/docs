@@ -93,25 +93,22 @@ The namespace representing all inbuilt keys.
 ### <code className="doc-symbol doc-symbol-function"/> getKey [#getKey]
 
 ```cpp
-inline const std::string & endstone::NamespacedKey::getKey () noexcept const
+const std::string &getKey() noexcept const
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getNamespace [#getNamespace]
 
 ```cpp
-inline const std::string & endstone::NamespacedKey::getNamespace () noexcept const
+const std::string &getNamespace() noexcept const
 ```
 ### <code className="doc-symbol doc-symbol-function"/> toString [#toString]
 
 ```cpp
-inline std::string endstone::NamespacedKey::toString () noexcept const
+std::string toString() noexcept const
 ```
 ### <code className="doc-symbol doc-symbol-function"/> create [#create]
 
 ```cpp
-static inline Result< NamespacedKey > endstone::NamespacedKey::create (
-    const Plugin & plugin,
-    std::string_view key
-) 
+static Result<NamespacedKey> create(const Plugin &plugin, std::string_view key)
 ```
 
 Create a key in the plugin's namespace.
@@ -133,10 +130,8 @@ Create a key in the plugin's namespace.
 ### <code className="doc-symbol doc-symbol-function"/> fromString [#fromString]
 
 ```cpp
-static inline Result< NamespacedKey > endstone::NamespacedKey::fromString (
-    std::string_view input,
-    const Plugin * plugin=nullptr
-) 
+static Result<NamespacedKey> fromString(std::string_view input,
+                                        const Plugin *plugin = nullptr)
 ```
 
 

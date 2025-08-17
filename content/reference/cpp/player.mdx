@@ -4,7 +4,7 @@ title: "Player"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::Player
 
-Bases: [`endstone::Mob`](classendstone_1_1_mob.md),  [`endstone::OfflinePlayer`](classendstone_1_1_offline_player.md)
+Bases: [`endstone::Mob`](mob),  [`endstone::OfflinePlayer`](offline_player)
 
 
 
@@ -261,7 +261,7 @@ Bases: [`endstone::Mob`](classendstone_1_1_mob.md),  [`endstone::OfflinePlayer`]
 ### <code className="doc-symbol doc-symbol-function"/> closeForm [#closeForm]
 
 ```cpp
-virtual void endstone::Player::closeForm () = 0
+void closeForm()
 ```
 
 Closes the forms that are currently open for the player.
@@ -269,7 +269,7 @@ Closes the forms that are currently open for the player.
 ### <code className="doc-symbol doc-symbol-function"/> getAddress [#getAddress]
 
 ```cpp
-virtual SocketAddress endstone::Player::getAddress () const = 0
+SocketAddress getAddress() const
 ```
 
 Gets the socket address of this player.
@@ -290,7 +290,7 @@ the player's socket address
 ### <code className="doc-symbol doc-symbol-function"/> getAllowFlight [#getAllowFlight]
 
 ```cpp
-virtual bool endstone::Player::getAllowFlight () const = 0
+bool getAllowFlight() const
 ```
 
 Determines if the Player is allowed to fly via jump key double-tap.
@@ -311,7 +311,7 @@ True if the player is allowed to fly.
 ### <code className="doc-symbol doc-symbol-function"/> getDeviceId [#getDeviceId]
 
 ```cpp
-virtual std::string endstone::Player::getDeviceId () const = 0
+std::string getDeviceId() const
 ```
 
 Gets the player's current device id.
@@ -332,7 +332,7 @@ the player's device id
 ### <code className="doc-symbol doc-symbol-function"/> getDeviceOS [#getDeviceOS]
 
 ```cpp
-virtual std::string endstone::Player::getDeviceOS () const = 0
+std::string getDeviceOS() const
 ```
 
 Gets the player's current device's operation system (OS).
@@ -353,7 +353,7 @@ the player's device OS
 ### <code className="doc-symbol doc-symbol-function"/> getEnderChest [#getEnderChest]
 
 ```cpp
-virtual Inventory & endstone::Player::getEnderChest () const = 0
+Inventory &getEnderChest() const
 ```
 
 Get the player's EnderChest inventory.
@@ -374,7 +374,7 @@ The EnderChest of the player
 ### <code className="doc-symbol doc-symbol-function"/> getExpLevel [#getExpLevel]
 
 ```cpp
-virtual int endstone::Player::getExpLevel () const = 0
+int getExpLevel() const
 ```
 
 Gets the players current experience level.
@@ -395,7 +395,7 @@ Current experience level
 ### <code className="doc-symbol doc-symbol-function"/> getExpProgress [#getExpProgress]
 
 ```cpp
-virtual float endstone::Player::getExpProgress () const = 0
+float getExpProgress() const
 ```
 
 Gets the players current experience progress towards the next level.
@@ -419,7 +419,7 @@ Current experience points
 ### <code className="doc-symbol doc-symbol-function"/> getFlySpeed [#getFlySpeed]
 
 ```cpp
-virtual float endstone::Player::getFlySpeed () const = 0
+float getFlySpeed() const
 ```
 
 Gets the current allowed speed that a client can fly.
@@ -440,7 +440,7 @@ The current allowed speed, default is 0.05.
 ### <code className="doc-symbol doc-symbol-function"/> getGameMode [#getGameMode]
 
 ```cpp
-virtual GameMode endstone::Player::getGameMode () const = 0
+GameMode getGameMode() const
 ```
 
 Gets this player's current GameMode .
@@ -461,7 +461,7 @@ Current game mode
 ### <code className="doc-symbol doc-symbol-function"/> getGameVersion [#getGameVersion]
 
 ```cpp
-virtual std::string endstone::Player::getGameVersion () const = 0
+std::string getGameVersion() const
 ```
 
 Gets the player's current game version.
@@ -482,7 +482,7 @@ the player's game version
 ### <code className="doc-symbol doc-symbol-function"/> getInventory [#getInventory]
 
 ```cpp
-virtual PlayerInventory & endstone::Player::getInventory () const = 0
+PlayerInventory &getInventory() const
 ```
 
 Get the player's inventory.
@@ -503,7 +503,7 @@ The inventory of the player, this also contains the armor slots.
 ### <code className="doc-symbol doc-symbol-function"/> getLocale [#getLocale]
 
 ```cpp
-virtual std::string endstone::Player::getLocale () const = 0
+std::string getLocale() const
 ```
 
 Gets the player's current locale.
@@ -524,7 +524,7 @@ the player's locale
 ### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
-virtual std::string endstone::Player::getName () override const = 0
+std::string getName() override const
 ```
 
 Returns the name of this player.
@@ -545,7 +545,7 @@ Returns the name of this player.
 ### <code className="doc-symbol doc-symbol-function"/> getPing [#getPing]
 
 ```cpp
-virtual std::chrono::milliseconds endstone::Player::getPing () const = 0
+std::chrono::milliseconds getPing() const
 ```
 
 Gets the player's average ping.
@@ -566,7 +566,7 @@ player ping
 ### <code className="doc-symbol doc-symbol-function"/> getScoreboard [#getScoreboard]
 
 ```cpp
-virtual Scoreboard & endstone::Player::getScoreboard () const = 0
+Scoreboard &getScoreboard() const
 ```
 
 Gets the Scoreboard displayed to this player.
@@ -587,7 +587,7 @@ The current scoreboard seen by this player
 ### <code className="doc-symbol doc-symbol-function"/> getSkin [#getSkin]
 
 ```cpp
-virtual Skin endstone::Player::getSkin () const = 0
+Skin getSkin() const
 ```
 
 Gets the player's skin.
@@ -608,7 +608,7 @@ the player's skin
 ### <code className="doc-symbol doc-symbol-function"/> getTotalExp [#getTotalExp]
 
 ```cpp
-virtual int endstone::Player::getTotalExp () const = 0
+int getTotalExp() const
 ```
 
 Gets the players total experience points.
@@ -632,7 +632,7 @@ Current total experience points
 ### <code className="doc-symbol doc-symbol-function"/> getWalkSpeed [#getWalkSpeed]
 
 ```cpp
-virtual float endstone::Player::getWalkSpeed () const = 0
+float getWalkSpeed() const
 ```
 
 Gets the current allowed speed that a client can walk.
@@ -653,7 +653,7 @@ The current allowed speed, default is 0.10.
 ### <code className="doc-symbol doc-symbol-function"/> getXuid [#getXuid]
 
 ```cpp
-virtual std::string endstone::Player::getXuid () const = 0
+std::string getXuid() const
 ```
 
 Returns the Xbox User ID (XUID) of this player.
@@ -674,9 +674,7 @@ Returns the Xbox User ID (XUID) of this player.
 ### <code className="doc-symbol doc-symbol-function"/> giveExp [#giveExp]
 
 ```cpp
-virtual void endstone::Player::giveExp (
-    int amount
-) = 0
+void giveExp(int amount)
 ```
 
 Gives the player the amount of experience specified.
@@ -697,9 +695,7 @@ Gives the player the amount of experience specified.
 ### <code className="doc-symbol doc-symbol-function"/> giveExpLevels [#giveExpLevels]
 
 ```cpp
-virtual void endstone::Player::giveExpLevels (
-    int amount
-) = 0
+void giveExpLevels(int amount)
 ```
 
 Gives the player the amount of experience levels specified.
@@ -720,7 +716,7 @@ Gives the player the amount of experience levels specified.
 ### <code className="doc-symbol doc-symbol-function"/> isFlying [#isFlying]
 
 ```cpp
-virtual bool endstone::Player::isFlying () const = 0
+bool isFlying() const
 ```
 
 Checks to see if this player is currently flying or not.
@@ -741,7 +737,7 @@ True if the player is flying, else false.
 ### <code className="doc-symbol doc-symbol-function"/> isOp [#isOp]
 
 ```cpp
-virtual bool endstone::Player::isOp () const = 0
+bool isOp() const
 ```
 
 Checks if this player is a server operator.
@@ -762,7 +758,7 @@ true if this is an operator, otherwise false
 ### <code className="doc-symbol doc-symbol-function"/> isSneaking [#isSneaking]
 
 ```cpp
-virtual bool endstone::Player::isSneaking () const = 0
+bool isSneaking() const
 ```
 
 Returns if the player is in sneak mode.
@@ -783,7 +779,7 @@ true if player is in sneak mode
 ### <code className="doc-symbol doc-symbol-function"/> isSprinting [#isSprinting]
 
 ```cpp
-virtual bool endstone::Player::isSprinting () const = 0
+bool isSprinting() const
 ```
 
 Gets whether the player is sprinting or not.
@@ -804,9 +800,7 @@ true if player is sprinting.
 ### <code className="doc-symbol doc-symbol-function"/> kick [#kick]
 
 ```cpp
-virtual void endstone::Player::kick (
-    std::string message
-) const = 0
+void kick(std::string message) const
 ```
 
 Kicks player with custom kick message.
@@ -827,9 +821,7 @@ Kicks player with custom kick message.
 ### <code className="doc-symbol doc-symbol-function"/> performCommand [#performCommand]
 
 ```cpp
-virtual bool endstone::Player::performCommand (
-    std::string command
-) const = 0
+bool performCommand(std::string command) const
 ```
 
 Makes the player perform the given command.
@@ -857,12 +849,7 @@ true if the command was successful, otherwise false
 ### <code className="doc-symbol doc-symbol-function"/> playSound [#playSound]
 
 ```cpp
-virtual void endstone::Player::playSound (
-    Location location,
-    std::string sound,
-    float volume,
-    float pitch
-) = 0
+void playSound(Location location, std::string sound, float volume, float pitch)
 ```
 
 Play a sound for a player at the location.
@@ -886,7 +873,7 @@ Play a sound for a player at the location.
 ### <code className="doc-symbol doc-symbol-function"/> resetTitle [#resetTitle]
 
 ```cpp
-virtual void endstone::Player::resetTitle () const = 0
+void resetTitle() const
 ```
 
 Resets the title displayed to the player. This will clear the displayed title / subtitle and reset timings to their default values.
@@ -894,9 +881,7 @@ Resets the title displayed to the player. This will clear the displayed title / 
 ### <code className="doc-symbol doc-symbol-function"/> sendForm [#sendForm]
 
 ```cpp
-virtual void endstone::Player::sendForm (
-    FormVariant form
-) = 0
+void sendForm(FormVariant form)
 ```
 
 Sends a form to the player.
@@ -917,10 +902,7 @@ Sends a form to the player.
 ### <code className="doc-symbol doc-symbol-function"/> sendPacket [#sendPacket]
 
 ```cpp
-virtual void endstone::Player::sendPacket (
-    int packet_id,
-    std::string_view payload
-) const = 0
+void sendPacket(int packet_id, std::string_view payload) const
 ```
 
 Sends a packet to the player.
@@ -942,9 +924,7 @@ Sends a packet to the player.
 ### <code className="doc-symbol doc-symbol-function"/> sendPopup [#sendPopup]
 
 ```cpp
-virtual void endstone::Player::sendPopup (
-    std::string message
-) const = 0
+void sendPopup(std::string message) const
 ```
 
 Sends this player a popup message.
@@ -965,9 +945,7 @@ Sends this player a popup message.
 ### <code className="doc-symbol doc-symbol-function"/> sendTip [#sendTip]
 
 ```cpp
-virtual void endstone::Player::sendTip (
-    std::string message
-) const = 0
+void sendTip(std::string message) const
 ```
 
 Sends this player a tip message.
@@ -990,10 +968,7 @@ Sends this player a tip message.
 
 
 ```cpp
-virtual void endstone::Player::sendTitle (
-    std::string title,
-    std::string subtitle
-) const = 0
+void sendTitle(std::string title, std::string subtitle) const
 ```
 
 Sends a title and a subtitle message to the player. If they are empty strings, the display will be updated as such. The titles will be displayed with the default timings.
@@ -1014,13 +989,8 @@ Sends a title and a subtitle message to the player. If they are empty strings, t
         
 
 ```cpp
-virtual void endstone::Player::sendTitle (
-    std::string title,
-    std::string subtitle,
-    int fade_in,
-    int stay,
-    int fade_out
-) const = 0
+void sendTitle(std::string title, std::string subtitle, int fade_in, int stay,
+               int fade_out) const
 ```
 
 Sends a title and a subtitle message to the player. If they are empty strings, the display will be updated as such.
@@ -1045,10 +1015,7 @@ Sends a title and a subtitle message to the player. If they are empty strings, t
 ### <code className="doc-symbol doc-symbol-function"/> sendToast [#sendToast]
 
 ```cpp
-virtual void endstone::Player::sendToast (
-    std::string title,
-    std::string content
-) const = 0
+void sendToast(std::string title, std::string content) const
 ```
 
 Sends this player a toast notification.
@@ -1070,9 +1037,7 @@ Sends this player a toast notification.
 ### <code className="doc-symbol doc-symbol-function"/> setAllowFlight [#setAllowFlight]
 
 ```cpp
-virtual void endstone::Player::setAllowFlight (
-    bool flight
-) = 0
+void setAllowFlight(bool flight)
 ```
 
 Sets if the Player is allowed to fly via jump key double-tap.
@@ -1093,9 +1058,7 @@ Sets if the Player is allowed to fly via jump key double-tap.
 ### <code className="doc-symbol doc-symbol-function"/> setExpLevel [#setExpLevel]
 
 ```cpp
-virtual Result< void > endstone::Player::setExpLevel (
-    int level
-) = 0
+Result<void> setExpLevel(int level)
 ```
 
 Sets the players current experience level.
@@ -1116,9 +1079,7 @@ Sets the players current experience level.
 ### <code className="doc-symbol doc-symbol-function"/> setExpProgress [#setExpProgress]
 
 ```cpp
-virtual Result< void > endstone::Player::setExpProgress (
-    float progress
-) = 0
+Result<void> setExpProgress(float progress)
 ```
 
 Sets the players current experience progress towards the next level.
@@ -1142,9 +1103,7 @@ This is a percentage value. 0.0 is "no progress" and 1.0 is "next level".
 ### <code className="doc-symbol doc-symbol-function"/> setFlySpeed [#setFlySpeed]
 
 ```cpp
-virtual void endstone::Player::setFlySpeed (
-    float value
-) const = 0
+void setFlySpeed(float value) const
 ```
 
 
@@ -1165,9 +1124,7 @@ Sets the speed at which a client will fly.
 ### <code className="doc-symbol doc-symbol-function"/> setFlying [#setFlying]
 
 ```cpp
-virtual Result< void > endstone::Player::setFlying (
-    bool value
-) = 0
+Result<void> setFlying(bool value)
 ```
 
 Makes this player start or stop flying.
@@ -1188,9 +1145,7 @@ Makes this player start or stop flying.
 ### <code className="doc-symbol doc-symbol-function"/> setGameMode [#setGameMode]
 
 ```cpp
-virtual void endstone::Player::setGameMode (
-    GameMode mode
-) = 0
+void setGameMode(GameMode mode)
 ```
 
 Sets this player's current GameMode .
@@ -1211,9 +1166,7 @@ Sets this player's current GameMode .
 ### <code className="doc-symbol doc-symbol-function"/> setOp [#setOp]
 
 ```cpp
-virtual void endstone::Player::setOp (
-    bool value
-) = 0
+void setOp(bool value)
 ```
 
 Sets the operator status of this player.
@@ -1234,9 +1187,7 @@ Sets the operator status of this player.
 ### <code className="doc-symbol doc-symbol-function"/> setScoreboard [#setScoreboard]
 
 ```cpp
-virtual void endstone::Player::setScoreboard (
-    Scoreboard & scoreboard
-) = 0
+void setScoreboard(Scoreboard &scoreboard)
 ```
 
 
@@ -1257,9 +1208,7 @@ virtual void endstone::Player::setScoreboard (
 ### <code className="doc-symbol doc-symbol-function"/> setSneaking [#setSneaking]
 
 ```cpp
-virtual void endstone::Player::setSneaking (
-    bool sneak
-) = 0
+void setSneaking(bool sneak)
 ```
 
 Sets the sneak mode of the player.
@@ -1280,9 +1229,7 @@ Sets the sneak mode of the player.
 ### <code className="doc-symbol doc-symbol-function"/> setSprinting [#setSprinting]
 
 ```cpp
-virtual void endstone::Player::setSprinting (
-    bool sprinting
-) = 0
+void setSprinting(bool sprinting)
 ```
 
 Sets whether the player is sprinting or not.
@@ -1303,9 +1250,7 @@ Sets whether the player is sprinting or not.
 ### <code className="doc-symbol doc-symbol-function"/> setWalkSpeed [#setWalkSpeed]
 
 ```cpp
-virtual void endstone::Player::setWalkSpeed (
-    float value
-) const = 0
+void setWalkSpeed(float value) const
 ```
 
 
@@ -1328,10 +1273,7 @@ Sets the speed at which a client will walk.
 
 
 ```cpp
-virtual void endstone::Player::spawnParticle (
-    std::string name,
-    Location location
-) const = 0
+void spawnParticle(std::string name, Location location) const
 ```
 
 Spawns the particle at the target location.
@@ -1352,12 +1294,7 @@ Spawns the particle at the target location.
         
 
 ```cpp
-virtual void endstone::Player::spawnParticle (
-    std::string name,
-    float x,
-    float y,
-    float z
-) const = 0
+void spawnParticle(std::string name, float x, float y, float z) const
 ```
 
 Spawns the particle at the target location.
@@ -1380,11 +1317,8 @@ Spawns the particle at the target location.
         
 
 ```cpp
-virtual void endstone::Player::spawnParticle (
-    std::string name,
-    Location location,
-    std::optional< std::string > molang_variables_json
-) const = 0
+void spawnParticle(std::string name, Location location,
+                   std::optional<std::string> molang_variables_json) const
 ```
 
 Spawns the particle at the target location.
@@ -1406,13 +1340,8 @@ Spawns the particle at the target location.
         
 
 ```cpp
-virtual void endstone::Player::spawnParticle (
-    std::string name,
-    float x,
-    float y,
-    float z,
-    std::optional< std::string > molang_variables_json
-) const = 0
+void spawnParticle(std::string name, float x, float y, float z,
+                   std::optional<std::string> molang_variables_json) const
 ```
 
 Spawns the particle at the target location.
@@ -1437,7 +1366,7 @@ Spawns the particle at the target location.
 ### <code className="doc-symbol doc-symbol-function"/> stopAllSounds [#stopAllSounds]
 
 ```cpp
-virtual void endstone::Player::stopAllSounds () = 0
+void stopAllSounds()
 ```
 
 Stop all sounds from playing.
@@ -1445,9 +1374,7 @@ Stop all sounds from playing.
 ### <code className="doc-symbol doc-symbol-function"/> stopSound [#stopSound]
 
 ```cpp
-virtual void endstone::Player::stopSound (
-    std::string sound
-) = 0
+void stopSound(std::string sound)
 ```
 
 Stop the specified sound from playing.
@@ -1468,10 +1395,7 @@ Stop the specified sound from playing.
 ### <code className="doc-symbol doc-symbol-function"/> transfer [#transfer]
 
 ```cpp
-virtual void endstone::Player::transfer (
-    std::string host,
-    int port
-) const = 0
+void transfer(std::string host, int port) const
 ```
 
 Transfers the player to another server.
@@ -1493,7 +1417,7 @@ Transfers the player to another server.
 ### <code className="doc-symbol doc-symbol-function"/> updateCommands [#updateCommands]
 
 ```cpp
-virtual void endstone::Player::updateCommands () const = 0
+void updateCommands() const
 ```
 
 Send the list of commands to the client.

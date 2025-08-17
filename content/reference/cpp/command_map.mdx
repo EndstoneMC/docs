@@ -66,24 +66,20 @@ title: "CommandMap"
 
 
 ```cpp
-endstone::CommandMap::CommandMap () = default
+CommandMap() = default
 ```
 
 ```cpp
-endstone::CommandMap::CommandMap (
-    const CommandMap &
-) = delete
+CommandMap(const CommandMap &) = delete
 ```
 
 ```cpp
-endstone::CommandMap::CommandMap (
-    CommandMap &&
-) = default
+CommandMap(CommandMap &&) = default
 ```
 ### <code className="doc-symbol doc-symbol-function"/> clearCommands [#clearCommands]
 
 ```cpp
-virtual void endstone::CommandMap::clearCommands () = 0
+void clearCommands()
 ```
 
 
@@ -94,10 +90,7 @@ Clears all registered commands.
 ### <code className="doc-symbol doc-symbol-function"/> dispatch [#dispatch]
 
 ```cpp
-virtual bool endstone::CommandMap::dispatch (
-    CommandSender & sender,
-    std::string command_line
-) const = 0
+bool dispatch(CommandSender &sender, std::string command_line) const
 ```
 
 Looks for the requested command and executes it if found.
@@ -126,9 +119,7 @@ true if execution is successful, false otherwise
 ### <code className="doc-symbol doc-symbol-function"/> getCommand [#getCommand]
 
 ```cpp
-virtual std::shared_ptr< Command > endstone::CommandMap::getCommand (
-    std::string name
-) const = 0
+std::shared_ptr<Command> getCommand(std::string name) const
 ```
 
 
@@ -156,9 +147,7 @@ Gets the command registered to the specified name
 ### <code className="doc-symbol doc-symbol-function"/> registerCommand [#registerCommand]
 
 ```cpp
-virtual bool endstone::CommandMap::registerCommand (
-    std::shared_ptr< Command > command
-) = 0
+bool registerCommand(std::shared_ptr<Command> command)
 ```
 
 

@@ -57,9 +57,7 @@ title: "Registry"
 ### <code className="doc-symbol doc-symbol-function"/> forEach [#forEach]
 
 ```cpp
-virtual void endstone::Registry::forEach (
-    std::function< bool(const T &)> func
-) const = 0
+void forEach(std::function<bool(const T &)> func) const
 ```
 
 Apply a function to each stored element.
@@ -85,9 +83,7 @@ Iterates over all stored elements and applies the provided function to them. The
 
 
 ```cpp
-virtual T * endstone::Registry::get (
-    NamespacedKey key
-) noexcept = 0
+T *get(NamespacedKey key) noexcept
 ```
 
 Get the object by its key.
@@ -117,9 +113,7 @@ T\* Pointer to the object, or nullptr if it does not exist.
         
 
 ```cpp
-virtual const T * endstone::Registry::get (
-    NamespacedKey key
-) noexcept const = 0
+const T *get(NamespacedKey key) noexcept const
 ```
 
 Const overload of get() .
@@ -149,9 +143,7 @@ const T\* Pointer to the object, or nullptr if it does not exist.
 
 
 ```cpp
-inline virtual T & endstone::Registry::getOrThrow (
-    const NamespacedKey key
-) 
+T &getOrThrow(const NamespacedKey key)
 ```
 
 Get the object by its key or throw if missing.
@@ -185,9 +177,7 @@ T& Reference to the object with the given key.
         
 
 ```cpp
-inline virtual const T & endstone::Registry::getOrThrow (
-    const NamespacedKey key
-) const
+const T &getOrThrow(const NamespacedKey key) const
 ```
 
 Const overload of getOrThrow() .

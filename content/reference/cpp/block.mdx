@@ -100,7 +100,7 @@ title: "Block"
 ### <code className="doc-symbol doc-symbol-function"/> captureState [#captureState]
 
 ```cpp
-virtual std::unique_ptr< BlockState > endstone::Block::captureState () const = 0
+std::unique_ptr<BlockState> captureState() const
 ```
 
 Captures the current state of this block.
@@ -124,7 +124,7 @@ The returned object will never be updated, and you are not guaranteed that (for 
 ### <code className="doc-symbol doc-symbol-function"/> clone [#clone]
 
 ```cpp
-virtual std::unique_ptr< Block > endstone::Block::clone () const = 0
+std::unique_ptr<Block> clone() const
 ```
 
 Creates a copy of the current block.
@@ -145,7 +145,7 @@ Creates a copy of the current block.
 ### <code className="doc-symbol doc-symbol-function"/> getData [#getData]
 
 ```cpp
-virtual std::unique_ptr< BlockData > endstone::Block::getData () const = 0
+std::unique_ptr<BlockData> getData() const
 ```
 
 Gets the complete block data for this block.
@@ -166,7 +166,7 @@ block specific data
 ### <code className="doc-symbol doc-symbol-function"/> getDimension [#getDimension]
 
 ```cpp
-virtual Dimension & endstone::Block::getDimension () const = 0
+Dimension &getDimension() const
 ```
 
 Gets the dimension which contains this Block .
@@ -187,7 +187,7 @@ Gets the dimension which contains this Block .
 ### <code className="doc-symbol doc-symbol-function"/> getLocation [#getLocation]
 
 ```cpp
-virtual Location endstone::Block::getLocation () const = 0
+Location getLocation() const
 ```
 
 Gets the Location of the block.
@@ -210,11 +210,7 @@ Gets the Location of the block.
 
 
 ```cpp
-virtual std::unique_ptr< Block > endstone::Block::getRelative (
-    int offset_x,
-    int offset_y,
-    int offset_z
-) = 0
+std::unique_ptr<Block> getRelative(int offset_x, int offset_y, int offset_z)
 ```
 
 Gets the block at the given offsets.
@@ -243,9 +239,7 @@ Gets the block at the given offsets.
         
 
 ```cpp
-virtual std::unique_ptr< Block > endstone::Block::getRelative (
-    BlockFace face
-) = 0
+std::unique_ptr<Block> getRelative(BlockFace face)
 ```
 
 Gets the block at the given face.
@@ -275,10 +269,7 @@ This method is equal to getRelative(face, 1)
         
 
 ```cpp
-virtual std::unique_ptr< Block > endstone::Block::getRelative (
-    BlockFace face,
-    int distance
-) = 0
+std::unique_ptr<Block> getRelative(BlockFace face, int distance)
 ```
 
 Gets the block at the given distance of the given face.
@@ -307,7 +298,7 @@ Gets the block at the given distance of the given face.
 ### <code className="doc-symbol doc-symbol-function"/> getType [#getType]
 
 ```cpp
-virtual std::string endstone::Block::getType () const = 0
+std::string getType() const
 ```
 
 Get the type of the block.
@@ -331,7 +322,7 @@ The type of the block.
 ### <code className="doc-symbol doc-symbol-function"/> getX [#getX]
 
 ```cpp
-virtual int endstone::Block::getX () const = 0
+int getX() const
 ```
 
 Gets the x-coordinate of this block.
@@ -352,7 +343,7 @@ x-coordinate
 ### <code className="doc-symbol doc-symbol-function"/> getY [#getY]
 
 ```cpp
-virtual int endstone::Block::getY () const = 0
+int getY() const
 ```
 
 Gets the y-coordinate of this block.
@@ -373,7 +364,7 @@ x-coordinate
 ### <code className="doc-symbol doc-symbol-function"/> getZ [#getZ]
 
 ```cpp
-virtual int endstone::Block::getZ () const = 0
+int getZ() const
 ```
 
 Gets the z-coordinate of this block.
@@ -396,9 +387,7 @@ x-coordinate
 
 
 ```cpp
-virtual Result< void > endstone::Block::setData (
-    const BlockData & data
-) = 0
+Result<void> setData(const BlockData &data)
 ```
 
 Sets the complete data for this block.
@@ -418,10 +407,7 @@ Sets the complete data for this block.
         
 
 ```cpp
-virtual Result< void > endstone::Block::setData (
-    const BlockData & data,
-    bool apply_physics
-) = 0
+Result<void> setData(const BlockData &data, bool apply_physics)
 ```
 
 Sets the complete data for this block.
@@ -445,9 +431,7 @@ Sets the complete data for this block.
 
 
 ```cpp
-virtual Result< void > endstone::Block::setType (
-    std::string type
-) = 0
+Result<void> setType(std::string type)
 ```
 
 Sets the type of this block.
@@ -467,10 +451,7 @@ Sets the type of this block.
         
 
 ```cpp
-virtual Result< void > endstone::Block::setType (
-    std::string type,
-    bool apply_physics
-) = 0
+Result<void> setType(std::string type, bool apply_physics)
 ```
 
 Sets the type of this block.

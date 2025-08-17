@@ -5,7 +5,7 @@ title: "Cancellable"
 ## <code className="doc-symbol doc-symbol-class"/> endstone::Cancellable
 
 **template &lt;typename EventType&gt;**
-Bases: `EventType`,  [`endstone::ICancellable`](classendstone_1_1_i_cancellable.md)
+Bases: `EventType`,  [`endstone::ICancellable`](i_cancellable)
 
 
 
@@ -50,7 +50,7 @@ Bases: `EventType`,  [`endstone::ICancellable`](classendstone_1_1_i_cancellable.
 ### <code className="doc-symbol doc-symbol-function"/> cancel [#cancel]
 
 ```cpp
-inline virtual void endstone::Cancellable::cancel () 
+void cancel()
 ```
 
 Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
@@ -58,7 +58,7 @@ Cancel this event. A cancelled event will not be executed in the server, but wil
 ### <code className="doc-symbol doc-symbol-function"/> isCancelled [#isCancelled]
 
 ```cpp
-inline virtual bool endstone::Cancellable::isCancelled () override const
+bool isCancelled() override const
 ```
 
 Gets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
@@ -79,9 +79,7 @@ true if this event is cancelled
 ### <code className="doc-symbol doc-symbol-function"/> setCancelled [#setCancelled]
 
 ```cpp
-inline virtual void endstone::Cancellable::setCancelled (
-    bool cancel
-) override
+void setCancelled(bool cancel) override
 ```
 
 Sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.

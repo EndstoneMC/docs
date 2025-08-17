@@ -68,11 +68,7 @@ title: "MapCanvas"
 ### <code className="doc-symbol doc-symbol-function"/> drawImage [#drawImage]
 
 ```cpp
-virtual void endstone::MapCanvas::drawImage (
-    int x,
-    int y,
-    const Image & image
-) = 0
+void drawImage(int x, int y, const Image &image)
 ```
 
 Draw an image to the map. The image will be clipped if necessary.
@@ -95,10 +91,7 @@ Draw an image to the map. The image will be clipped if necessary.
 ### <code className="doc-symbol doc-symbol-function"/> getBasePixel [#getBasePixel]
 
 ```cpp
-virtual int endstone::MapCanvas::getBasePixel (
-    int x,
-    int y
-) const = 0
+int getBasePixel(int x, int y) const
 ```
 
 Get a pixel from the layers below this canvas.
@@ -127,10 +120,7 @@ The color.
 ### <code className="doc-symbol doc-symbol-function"/> getBasePixelColor [#getBasePixelColor]
 
 ```cpp
-virtual Color endstone::MapCanvas::getBasePixelColor (
-    int x,
-    int y
-) const = 0
+Color getBasePixelColor(int x, int y) const
 ```
 
 Get a pixel from the layers below this canvas.
@@ -159,7 +149,7 @@ The color.
 ### <code className="doc-symbol doc-symbol-function"/> getMapView [#getMapView]
 
 ```cpp
-virtual MapView & endstone::MapCanvas::getMapView () const = 0
+MapView &getMapView() const
 ```
 
 Get the map this canvas is attached to.
@@ -180,10 +170,7 @@ The [**MapView**](classendstone_1_1_map_view.md) this canvas is attached to.
 ### <code className="doc-symbol doc-symbol-function"/> getPixel [#getPixel]
 
 ```cpp
-virtual int endstone::MapCanvas::getPixel (
-    int x,
-    int y
-) const = 0
+int getPixel(int x, int y) const
 ```
 
 Get a pixel from the canvas.
@@ -212,10 +199,7 @@ The color.
 ### <code className="doc-symbol doc-symbol-function"/> getPixelColor [#getPixelColor]
 
 ```cpp
-virtual std::optional< Color > endstone::MapCanvas::getPixelColor (
-    int x,
-    int y
-) const = 0
+std::optional<Color> getPixelColor(int x, int y) const
 ```
 
 Get a pixel from the canvas.
@@ -247,11 +231,7 @@ The color, or std::nullopt if no color is set.
 ### <code className="doc-symbol doc-symbol-function"/> setPixel [#setPixel]
 
 ```cpp
-virtual void endstone::MapCanvas::setPixel (
-    int x,
-    int y,
-    int color
-) = 0
+void setPixel(int x, int y, int color)
 ```
 
 Draw a pixel to the canvas.
@@ -274,11 +254,7 @@ Draw a pixel to the canvas.
 ### <code className="doc-symbol doc-symbol-function"/> setPixelColor [#setPixelColor]
 
 ```cpp
-virtual void endstone::MapCanvas::setPixelColor (
-    int x,
-    int y,
-    std::optional< Color > color
-) = 0
+void setPixelColor(int x, int y, std::optional<Color> color)
 ```
 
 Draw a pixel to the canvas.

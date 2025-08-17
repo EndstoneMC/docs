@@ -52,10 +52,8 @@ title: "ItemFactory"
 ### <code className="doc-symbol doc-symbol-function"/> asMetaFor [#asMetaFor]
 
 ```cpp
-virtual std::unique_ptr< ItemMeta > endstone::ItemFactory::asMetaFor (
-    const ItemMeta * meta,
-    const std::string & type
-) const = 0
+std::unique_ptr<ItemMeta> asMetaFor(const ItemMeta *meta,
+                                    const std::string &type) const
 ```
 
 Returns an appropriate item meta for the specified item type.
@@ -87,10 +85,7 @@ An appropriate item meta for the specified item type.
 ### <code className="doc-symbol doc-symbol-function"/> equals [#equals]
 
 ```cpp
-virtual bool endstone::ItemFactory::equals (
-    const ItemMeta * meta1,
-    const ItemMeta * meta2
-) const = 0
+bool equals(const ItemMeta *meta1, const ItemMeta *meta2) const
 ```
 
 This method is used to compare two ItemMeta objects.
@@ -119,9 +114,7 @@ false if one of the meta has data the other does not, otherwise true
 ### <code className="doc-symbol doc-symbol-function"/> getItemMeta [#getItemMeta]
 
 ```cpp
-virtual std::unique_ptr< ItemMeta > endstone::ItemFactory::getItemMeta (
-    const std::string & type
-) const = 0
+std::unique_ptr<ItemMeta> getItemMeta(const std::string &type) const
 ```
 
 This creates a new item meta for the item type.
@@ -149,10 +142,7 @@ a new [**ItemMeta**](classendstone_1_1_item_meta.md) that could be applied to an
 ### <code className="doc-symbol doc-symbol-function"/> isApplicable [#isApplicable]
 
 ```cpp
-virtual bool endstone::ItemFactory::isApplicable (
-    const ItemMeta * meta,
-    const std::string & type
-) const = 0
+bool isApplicable(const ItemMeta *meta, const std::string &type) const
 ```
 
 This method checks the item meta to confirm that it is applicable (no data lost if applied) to the specified ItemStack .

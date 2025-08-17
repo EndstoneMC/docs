@@ -4,7 +4,7 @@ title: "IpBanEntry"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::IpBanEntry
 
-Bases: [`endstone::BanEntry`](classendstone_1_1_ban_entry.md)
+Bases: [`endstone::BanEntry`](ban_entry)
 
 
 
@@ -45,14 +45,12 @@ Bases: [`endstone::BanEntry`](classendstone_1_1_ban_entry.md)
 ### <code className="doc-symbol doc-symbol-function"/> IpBanEntry [#IpBanEntry]
 
 ```cpp
-inline explicit endstone::IpBanEntry::IpBanEntry (
-    std::string address
-) 
+IpBanEntry(std::string address)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getAddress [#getAddress]
 
 ```cpp
-inline std::string endstone::IpBanEntry::getAddress () const
+std::string getAddress() const
 ```
 
 Gets the banned IP address.

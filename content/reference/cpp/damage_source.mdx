@@ -52,7 +52,7 @@ title: "DamageSource"
 ### <code className="doc-symbol doc-symbol-function"/> getActor [#getActor]
 
 ```cpp
-virtual Actor * endstone::DamageSource::getActor () const = 0
+Actor *getActor() const
 ```
 
 Get the actor that caused the damage to occur.
@@ -76,7 +76,7 @@ an [**Actor**](classendstone_1_1_actor.md) or null
 ### <code className="doc-symbol doc-symbol-function"/> getDamagingActor [#getDamagingActor]
 
 ```cpp
-virtual Actor * endstone::DamageSource::getDamagingActor () const = 0
+Actor *getDamagingActor() const
 ```
 
 Get the actor that directly caused the damage.
@@ -100,7 +100,7 @@ an [**Actor**](classendstone_1_1_actor.md) or null
 ### <code className="doc-symbol doc-symbol-function"/> getType [#getType]
 
 ```cpp
-virtual std::string_view endstone::DamageSource::getType () const = 0
+std::string_view getType() const
 ```
 
 Get the damage type.
@@ -121,7 +121,7 @@ the damage type
 ### <code className="doc-symbol doc-symbol-function"/> isIndirect [#isIndirect]
 
 ```cpp
-virtual bool endstone::DamageSource::isIndirect () const = 0
+bool isIndirect() const
 ```
 
 Get if this damage is indirect.

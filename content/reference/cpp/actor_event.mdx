@@ -5,7 +5,7 @@ title: "ActorEvent"
 ## <code className="doc-symbol doc-symbol-class"/> endstone::ActorEvent
 
 **template &lt;typename ActorType&gt;**
-Bases: [`endstone::Event`](classendstone_1_1_event.md)
+Bases: [`endstone::Event`](event)
 
 
 
@@ -46,14 +46,12 @@ Bases: [`endstone::Event`](classendstone_1_1_event.md)
 ### <code className="doc-symbol doc-symbol-function"/> ActorEvent [#ActorEvent]
 
 ```cpp
-inline explicit endstone::ActorEvent::ActorEvent (
-    ActorType & actor
-) 
+ActorEvent(ActorType &actor)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getActor [#getActor]
 
 ```cpp
-inline ActorType & endstone::ActorEvent::getActor () const
+ActorType &getActor() const
 ```
 
 Returns the Actor involved in this event.

@@ -94,27 +94,22 @@ title: "ItemStack"
 
 
 ```cpp
-inline explicit endstone::ItemStack::ItemStack (
-    const std::string & type="minecraft:air",
-    const int amount=1,
-    const int data=0
-) 
+ItemStack(const std::string &type = "minecraft:air", const int amount = 1,
+          const int data = 0)
 ```
 
 ```cpp
-inline endstone::ItemStack::ItemStack (
-    const ItemStack & stack
-) 
+ItemStack(const ItemStack &stack)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> clone [#clone]
 
 ```cpp
-inline virtual std::unique_ptr< ItemStack > endstone::ItemStack::clone () const
+std::unique_ptr<ItemStack> clone() const
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getAmount [#getAmount]
 
 ```cpp
-inline virtual int endstone::ItemStack::getAmount () const
+int getAmount() const
 ```
 
 Gets the amount of items in this stack.
@@ -135,7 +130,7 @@ Amount of items in this stack
 ### <code className="doc-symbol doc-symbol-function"/> getData [#getData]
 
 ```cpp
-inline virtual int endstone::ItemStack::getData () const
+int getData() const
 ```
 
 Gets the data for this stack of items.
@@ -156,7 +151,7 @@ Data for this item
 ### <code className="doc-symbol doc-symbol-function"/> getItemMeta [#getItemMeta]
 
 ```cpp
-inline virtual std::unique_ptr< ItemMeta > endstone::ItemStack::getItemMeta () const
+std::unique_ptr<ItemMeta> getItemMeta() const
 ```
 
 Gets a copy of this ItemStack 's ItemMeta .
@@ -177,7 +172,7 @@ a copy of the current [**ItemStack**](classendstone_1_1_item_stack.md)'s [**Item
 ### <code className="doc-symbol doc-symbol-function"/> getMaxStackSize [#getMaxStackSize]
 
 ```cpp
-inline virtual int endstone::ItemStack::getMaxStackSize () const
+int getMaxStackSize() const
 ```
 
 Get the maximum stack size for this item.
@@ -198,7 +193,7 @@ The maximum you can stack this item to.
 ### <code className="doc-symbol doc-symbol-function"/> getType [#getType]
 
 ```cpp
-inline virtual std::string endstone::ItemStack::getType () const
+std::string getType() const
 ```
 
 Gets the type of this item.
@@ -219,7 +214,7 @@ Type of the items in this stack
 ### <code className="doc-symbol doc-symbol-function"/> hasItemMeta [#hasItemMeta]
 
 ```cpp
-inline virtual bool endstone::ItemStack::hasItemMeta () const
+bool hasItemMeta() const
 ```
 
 Checks to see if any metadata has been defined.
@@ -240,9 +235,7 @@ Returns true if some metadata has been set for this item
 ### <code className="doc-symbol doc-symbol-function"/> isSimilar [#isSimilar]
 
 ```cpp
-inline virtual bool endstone::ItemStack::isSimilar (
-    const ItemStack & other
-) const
+bool isSimilar(const ItemStack &other) const
 ```
 
 Checks if the two stacks are equal, but does not consider stack size (amount).
@@ -270,9 +263,7 @@ true if the two stacks are equal, ignoring the amount
 ### <code className="doc-symbol doc-symbol-function"/> setAmount [#setAmount]
 
 ```cpp
-inline virtual void endstone::ItemStack::setAmount (
-    const int amount
-) 
+void setAmount(const int amount)
 ```
 
 Sets the amount of items in this stack.
@@ -293,9 +284,7 @@ Sets the amount of items in this stack.
 ### <code className="doc-symbol doc-symbol-function"/> setData [#setData]
 
 ```cpp
-inline virtual void endstone::ItemStack::setData (
-    const int data
-) 
+void setData(const int data)
 ```
 
 Sets the data for this stack of items.
@@ -316,9 +305,7 @@ Sets the data for this stack of items.
 ### <code className="doc-symbol doc-symbol-function"/> setItemMeta [#setItemMeta]
 
 ```cpp
-inline virtual bool endstone::ItemStack::setItemMeta (
-    ItemMeta * meta
-) 
+bool setItemMeta(ItemMeta *meta)
 ```
 
 Set the ItemMeta of this ItemStack .
@@ -346,9 +333,7 @@ True if successfully applied [**ItemMeta**](classendstone_1_1_item_meta.md)
 ### <code className="doc-symbol doc-symbol-function"/> setType [#setType]
 
 ```cpp
-inline virtual void endstone::ItemStack::setType (
-    const std::string & type
-) 
+void setType(const std::string &type)
 ```
 
 Sets the type of this item.

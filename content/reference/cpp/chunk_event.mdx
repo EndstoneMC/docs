@@ -4,7 +4,7 @@ title: "ChunkEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::ChunkEvent
 
-Bases: [`endstone::DimensionEvent`](classendstone_1_1_dimension_event.md)
+Bases: [`endstone::DimensionEvent`](dimension_event)
 
 
 
@@ -45,14 +45,12 @@ Bases: [`endstone::DimensionEvent`](classendstone_1_1_dimension_event.md)
 ### <code className="doc-symbol doc-symbol-function"/> ChunkEvent [#ChunkEvent]
 
 ```cpp
-inline explicit endstone::ChunkEvent::ChunkEvent (
-    Chunk & chunk
-) 
+ChunkEvent(Chunk &chunk)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getChunk [#getChunk]
 
 ```cpp
-inline Chunk & endstone::ChunkEvent::getChunk () const
+Chunk &getChunk() const
 ```
 
 

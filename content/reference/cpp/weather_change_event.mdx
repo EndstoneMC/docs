@@ -4,7 +4,7 @@ title: "WeatherChangeEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::WeatherChangeEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -69,15 +69,12 @@ const std::string endstone::WeatherChangeEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> WeatherChangeEvent [#WeatherChangeEvent]
 
 ```cpp
-inline endstone::WeatherChangeEvent::WeatherChangeEvent (
-    Level & level,
-    const bool to
-) 
+WeatherChangeEvent(Level &level, const bool to)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::WeatherChangeEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 
@@ -98,7 +95,7 @@ name of this event
 ### <code className="doc-symbol doc-symbol-function"/> toWeatherState [#toWeatherState]
 
 ```cpp
-inline bool endstone::WeatherChangeEvent::toWeatherState () const
+bool toWeatherState() const
 ```
 
 

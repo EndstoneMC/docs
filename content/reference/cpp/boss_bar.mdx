@@ -104,9 +104,7 @@ title: "BossBar"
 ### <code className="doc-symbol doc-symbol-function"/> addFlag [#addFlag]
 
 ```cpp
-virtual void endstone::BossBar::addFlag (
-    BarFlag flag
-) = 0
+void addFlag(BarFlag flag)
 ```
 
 Add an optional flag to this boss bar.
@@ -127,9 +125,7 @@ Add an optional flag to this boss bar.
 ### <code className="doc-symbol doc-symbol-function"/> addPlayer [#addPlayer]
 
 ```cpp
-virtual void endstone::BossBar::addPlayer (
-    Player & player
-) = 0
+void addPlayer(Player &player)
 ```
 
 Adds the player to this boss bar causing it to display on their screen.
@@ -150,7 +146,7 @@ Adds the player to this boss bar causing it to display on their screen.
 ### <code className="doc-symbol doc-symbol-function"/> getColor [#getColor]
 
 ```cpp
-virtual BarColor endstone::BossBar::getColor () const = 0
+BarColor getColor() const
 ```
 
 Returns the color of this boss bar.
@@ -171,7 +167,7 @@ the color of the bar
 ### <code className="doc-symbol doc-symbol-function"/> getPlayers [#getPlayers]
 
 ```cpp
-virtual std::vector< Player * > endstone::BossBar::getPlayers () const = 0
+std::vector<Player *> getPlayers() const
 ```
 
 Returns all players viewing this boss bar.
@@ -192,7 +188,7 @@ a list of players
 ### <code className="doc-symbol doc-symbol-function"/> getProgress [#getProgress]
 
 ```cpp
-virtual float endstone::BossBar::getProgress () const = 0
+float getProgress() const
 ```
 
 Returns the progress of the bar between 0.0 and 1.0.
@@ -213,7 +209,7 @@ the progress of the bar
 ### <code className="doc-symbol doc-symbol-function"/> getStyle [#getStyle]
 
 ```cpp
-virtual BarStyle endstone::BossBar::getStyle () const = 0
+BarStyle getStyle() const
 ```
 
 Returns the style of this boss bar.
@@ -234,7 +230,7 @@ the style of the bar.
 ### <code className="doc-symbol doc-symbol-function"/> getTitle [#getTitle]
 
 ```cpp
-virtual std::string endstone::BossBar::getTitle () const = 0
+std::string getTitle() const
 ```
 
 Returns the title of this boss bar.
@@ -255,9 +251,7 @@ the title of the bar
 ### <code className="doc-symbol doc-symbol-function"/> hasFlag [#hasFlag]
 
 ```cpp
-virtual bool endstone::BossBar::hasFlag (
-    BarFlag flag
-) const = 0
+bool hasFlag(BarFlag flag) const
 ```
 
 Returns whether this boss bar has the passed flag set.
@@ -285,7 +279,7 @@ whether it has the flag.
 ### <code className="doc-symbol doc-symbol-function"/> isVisible [#isVisible]
 
 ```cpp
-virtual bool endstone::BossBar::isVisible () const = 0
+bool isVisible() const
 ```
 
 Return if the boss bar is displayed to attached players.
@@ -306,7 +300,7 @@ visible status
 ### <code className="doc-symbol doc-symbol-function"/> removeAll [#removeAll]
 
 ```cpp
-virtual void endstone::BossBar::removeAll () = 0
+void removeAll()
 ```
 
 Removes all players from this boss bar.
@@ -314,9 +308,7 @@ Removes all players from this boss bar.
 ### <code className="doc-symbol doc-symbol-function"/> removeFlag [#removeFlag]
 
 ```cpp
-virtual void endstone::BossBar::removeFlag (
-    BarFlag flag
-) = 0
+void removeFlag(BarFlag flag)
 ```
 
 Remove an existing flag on this boss bar.
@@ -337,9 +329,7 @@ Remove an existing flag on this boss bar.
 ### <code className="doc-symbol doc-symbol-function"/> removePlayer [#removePlayer]
 
 ```cpp
-virtual void endstone::BossBar::removePlayer (
-    Player & player
-) = 0
+void removePlayer(Player &player)
 ```
 
 Removes the player from this boss bar causing it to be removed from their screen.
@@ -360,9 +350,7 @@ Removes the player from this boss bar causing it to be removed from their screen
 ### <code className="doc-symbol doc-symbol-function"/> setColor [#setColor]
 
 ```cpp
-virtual void endstone::BossBar::setColor (
-    BarColor color
-) = 0
+void setColor(BarColor color)
 ```
 
 Sets the color of this boss bar.
@@ -383,9 +371,7 @@ Sets the color of this boss bar.
 ### <code className="doc-symbol doc-symbol-function"/> setProgress [#setProgress]
 
 ```cpp
-virtual Result< void > endstone::BossBar::setProgress (
-    float progress
-) = 0
+Result<void> setProgress(float progress)
 ```
 
 Sets the progress of the bar. Values should be between 0.0 (empty) and 1.0 (full)
@@ -406,9 +392,7 @@ Sets the progress of the bar. Values should be between 0.0 (empty) and 1.0 (full
 ### <code className="doc-symbol doc-symbol-function"/> setStyle [#setStyle]
 
 ```cpp
-virtual void endstone::BossBar::setStyle (
-    BarStyle style
-) = 0
+void setStyle(BarStyle style)
 ```
 
 Sets the bar style of this boss bar.
@@ -429,9 +413,7 @@ Sets the bar style of this boss bar.
 ### <code className="doc-symbol doc-symbol-function"/> setTitle [#setTitle]
 
 ```cpp
-virtual void endstone::BossBar::setTitle (
-    std::string title
-) = 0
+void setTitle(std::string title)
 ```
 
 Sets the title of this boss bar.
@@ -452,9 +434,7 @@ Sets the title of this boss bar.
 ### <code className="doc-symbol doc-symbol-function"/> setVisible [#setVisible]
 
 ```cpp
-virtual void endstone::BossBar::setVisible (
-    bool visible
-) = 0
+void setVisible(bool visible)
 ```
 
 Set if the boss bar is displayed to attached players.

@@ -4,7 +4,7 @@ title: "PlayerInteractEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerInteractEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -84,29 +84,19 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 ### <code className="doc-symbol doc-symbol-enum"/> Action [#Action]
 
 ```cpp
-enum endstone::PlayerInteractEvent::Action {
-    LeftClickBlock,
-    RightClickBlock,
-    LeftClickAir,
-    RightClickAir
-};
+enum Action { LeftClickBlock, RightClickBlock, LeftClickAir, RightClickAir };
 ```
 ### <code className="doc-symbol doc-symbol-function"/> PlayerInteractEvent [#PlayerInteractEvent]
 
 ```cpp
-inline endstone::PlayerInteractEvent::PlayerInteractEvent (
-    Player & player,
-    Action action,
-    ItemStack * item,
-    Block * block_clicked,
-    BlockFace block_face,
-    const std::optional< Vector < float > > & clicked_position
-) 
+PlayerInteractEvent(Player &player, Action action, ItemStack *item,
+                    Block *block_clicked, BlockFace block_face,
+                    const std::optional<Vector<float>> &clicked_position)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getAction [#getAction]
 
 ```cpp
-inline Action endstone::PlayerInteractEvent::getAction () const
+Action getAction() const
 ```
 
 Returns the action type.
@@ -127,7 +117,7 @@ Returns the action type.
 ### <code className="doc-symbol doc-symbol-function"/> getBlock [#getBlock]
 
 ```cpp
-inline Block * endstone::PlayerInteractEvent::getBlock () const
+Block *getBlock() const
 ```
 
 Returns the clicked block.
@@ -148,7 +138,7 @@ Returns the clicked block.
 ### <code className="doc-symbol doc-symbol-function"/> getBlockFace [#getBlockFace]
 
 ```cpp
-inline BlockFace endstone::PlayerInteractEvent::getBlockFace () const
+BlockFace getBlockFace() const
 ```
 
 Returns the face of the block that was clicked.
@@ -169,7 +159,7 @@ BlockFace returns the face of the block that was clicked
 ### <code className="doc-symbol doc-symbol-function"/> getClickedPosition [#getClickedPosition]
 
 ```cpp
-inline std::optional< Vector < float > > endstone::PlayerInteractEvent::getClickedPosition () const
+std::optional<Vector<float>> getClickedPosition() const
 ```
 
 Gets the exact position on the block the player interacted with.
@@ -204,7 +194,7 @@ the clicked position.
 ### <code className="doc-symbol doc-symbol-function"/> getItem [#getItem]
 
 ```cpp
-inline ItemStack * endstone::PlayerInteractEvent::getItem () const
+ItemStack *getItem() const
 ```
 
 Returns the item in hand represented by this event.
@@ -225,7 +215,7 @@ Returns the item in hand represented by this event.
 ### <code className="doc-symbol doc-symbol-function"/> hasBlock [#hasBlock]
 
 ```cpp
-inline bool endstone::PlayerInteractEvent::hasBlock () const
+bool hasBlock() const
 ```
 
 Check if this event involved a block.
@@ -246,7 +236,7 @@ boolean true if it did
 ### <code className="doc-symbol doc-symbol-function"/> hasItem [#hasItem]
 
 ```cpp
-inline bool endstone::PlayerInteractEvent::hasItem () const
+bool hasItem() const
 ```
 
 Check if this event involved an item.

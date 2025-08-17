@@ -4,7 +4,7 @@ title: "PlayerKickEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerKickEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -49,15 +49,12 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 ### <code className="doc-symbol doc-symbol-function"/> PlayerKickEvent [#PlayerKickEvent]
 
 ```cpp
-inline explicit endstone::PlayerKickEvent::PlayerKickEvent (
-    Player & player,
-    std::string reason
-) 
+PlayerKickEvent(Player &player, std::string reason)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getReason [#getReason]
 
 ```cpp
-inline std::string endstone::PlayerKickEvent::getReason () const
+std::string getReason() const
 ```
 
 Gets the reason why the player is getting kicked.
@@ -78,9 +75,7 @@ string kick reason
 ### <code className="doc-symbol doc-symbol-function"/> setReason [#setReason]
 
 ```cpp
-inline void endstone::PlayerKickEvent::setReason (
-    std::string reason
-) 
+void setReason(std::string reason)
 ```
 
 Sets the reason why the player is getting kicked.

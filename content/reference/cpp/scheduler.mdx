@@ -80,9 +80,7 @@ title: "Scheduler"
 ### <code className="doc-symbol doc-symbol-function"/> cancelTask [#cancelTask]
 
 ```cpp
-virtual void endstone::Scheduler::cancelTask (
-    TaskId id
-) = 0
+void cancelTask(TaskId id)
 ```
 
 
@@ -103,9 +101,7 @@ Removes task from scheduler.
 ### <code className="doc-symbol doc-symbol-function"/> cancelTasks [#cancelTasks]
 
 ```cpp
-virtual void endstone::Scheduler::cancelTasks (
-    Plugin & plugin
-) = 0
+void cancelTasks(Plugin &plugin)
 ```
 
 
@@ -126,7 +122,7 @@ Removes all tasks associated with a particular plugin from the scheduler.
 ### <code className="doc-symbol doc-symbol-function"/> getPendingTasks [#getPendingTasks]
 
 ```cpp
-virtual std::vector< Task * > endstone::Scheduler::getPendingTasks () = 0
+std::vector<Task *> getPendingTasks()
 ```
 
 
@@ -150,9 +146,7 @@ Pending tasks
 ### <code className="doc-symbol doc-symbol-function"/> isQueued [#isQueued]
 
 ```cpp
-virtual bool endstone::Scheduler::isQueued (
-    TaskId id
-) = 0
+bool isQueued(TaskId id)
 ```
 
 
@@ -180,9 +174,7 @@ If the task is queued to be run.
 ### <code className="doc-symbol doc-symbol-function"/> isRunning [#isRunning]
 
 ```cpp
-virtual bool endstone::Scheduler::isRunning (
-    TaskId id
-) = 0
+bool isRunning(TaskId id)
 ```
 
 
@@ -210,10 +202,7 @@ If the task is currently running.
 ### <code className="doc-symbol doc-symbol-function"/> runTask [#runTask]
 
 ```cpp
-virtual std::shared_ptr< Task > endstone::Scheduler::runTask (
-    Plugin & plugin,
-    std::function< void()> task
-) = 0
+std::shared_ptr<Task> runTask(Plugin &plugin, std::function<void()> task)
 ```
 
 
@@ -242,10 +231,7 @@ a [**Task**](classendstone_1_1_task.md) that contains the id number (nullptr if 
 ### <code className="doc-symbol doc-symbol-function"/> runTaskAsync [#runTaskAsync]
 
 ```cpp
-virtual std::shared_ptr< Task > endstone::Scheduler::runTaskAsync (
-    Plugin & plugin,
-    std::function< void()> task
-) = 0
+std::shared_ptr<Task> runTaskAsync(Plugin &plugin, std::function<void()> task)
 ```
 
 Returns a task that will be executed asynchronously on the next server tick.
@@ -281,11 +267,8 @@ a [**Task**](classendstone_1_1_task.md) that contains the id number (nullptr if 
 ### <code className="doc-symbol doc-symbol-function"/> runTaskLater [#runTaskLater]
 
 ```cpp
-virtual std::shared_ptr< Task > endstone::Scheduler::runTaskLater (
-    Plugin & plugin,
-    std::function< void()> task,
-    std::uint64_t delay
-) = 0
+std::shared_ptr<Task> runTaskLater(Plugin &plugin, std::function<void()> task,
+                                   std::uint64_t delay)
 ```
 
 
@@ -315,11 +298,9 @@ a [**Task**](classendstone_1_1_task.md) that contains the id number (nullptr if 
 ### <code className="doc-symbol doc-symbol-function"/> runTaskLaterAsync [#runTaskLaterAsync]
 
 ```cpp
-virtual std::shared_ptr< Task > endstone::Scheduler::runTaskLaterAsync (
-    Plugin & plugin,
-    std::function< void()> task,
-    std::uint64_t delay
-) = 0
+std::shared_ptr<Task> runTaskLaterAsync(Plugin &plugin,
+                                        std::function<void()> task,
+                                        std::uint64_t delay)
 ```
 
 Returns a task that will be executed asynchronously after the specified number of server ticks.
@@ -356,12 +337,8 @@ a [**Task**](classendstone_1_1_task.md) that contains the id number (nullptr if 
 ### <code className="doc-symbol doc-symbol-function"/> runTaskTimer [#runTaskTimer]
 
 ```cpp
-virtual std::shared_ptr< Task > endstone::Scheduler::runTaskTimer (
-    Plugin & plugin,
-    std::function< void()> task,
-    std::uint64_t delay,
-    std::uint64_t period
-) = 0
+std::shared_ptr<Task> runTaskTimer(Plugin &plugin, std::function<void()> task,
+                                   std::uint64_t delay, std::uint64_t period)
 ```
 
 
@@ -392,12 +369,10 @@ a [**Task**](classendstone_1_1_task.md) that contains the id number (nullptr if 
 ### <code className="doc-symbol doc-symbol-function"/> runTaskTimerAsync [#runTaskTimerAsync]
 
 ```cpp
-virtual std::shared_ptr< Task > endstone::Scheduler::runTaskTimerAsync (
-    Plugin & plugin,
-    std::function< void()> task,
-    std::uint64_t delay,
-    std::uint64_t period
-) = 0
+std::shared_ptr<Task> runTaskTimerAsync(Plugin &plugin,
+                                        std::function<void()> task,
+                                        std::uint64_t delay,
+                                        std::uint64_t period)
 ```
 
 Returns a task that will be executed repeatedly (and asynchronously) until cancelled, starting after the specified number of server ticks.

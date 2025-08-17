@@ -62,19 +62,16 @@ title: "Toggle"
 
 
 ```cpp
-endstone::Toggle::Toggle () = default
+Toggle() = default
 ```
 
 ```cpp
-inline explicit endstone::Toggle::Toggle (
-    Message label,
-    bool default_value=false
-) 
+Toggle(Message label, bool default_value = false)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getDefaultValue [#getDefaultValue]
 
 ```cpp
-inline bool endstone::Toggle::getDefaultValue () const
+bool getDefaultValue() const
 ```
 
 Gets the default value of the toggle.
@@ -95,7 +92,7 @@ The default value of the toggle.
 ### <code className="doc-symbol doc-symbol-function"/> getLabel [#getLabel]
 
 ```cpp
-inline Message endstone::Toggle::getLabel () const
+Message getLabel() const
 ```
 
 Gets the label of the toggle.
@@ -116,9 +113,7 @@ The label of the toggle.
 ### <code className="doc-symbol doc-symbol-function"/> setDefaultValue [#setDefaultValue]
 
 ```cpp
-inline Toggle & endstone::Toggle::setDefaultValue (
-    bool value
-) 
+Toggle &setDefaultValue(bool value)
 ```
 
 Sets the default value of the toggle.
@@ -146,9 +141,7 @@ A reference to the current toggle.
 ### <code className="doc-symbol doc-symbol-function"/> setLabel [#setLabel]
 
 ```cpp
-inline Toggle & endstone::Toggle::setLabel (
-    Message label
-) 
+Toggle &setLabel(Message label)
 ```
 
 Sets the label of the toggle.

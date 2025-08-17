@@ -4,7 +4,7 @@ title: "PlayerDeathEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerDeathEvent
 
-Bases: [`endstone::ActorDeathEvent`](classendstone_1_1_actor_death_event.md),  [`endstone::PlayerEvent`](classendstone_1_1_player_event.md)
+Bases: [`endstone::ActorDeathEvent`](actor_death_event),  [`endstone::PlayerEvent`](player_event)
 
 
 
@@ -49,16 +49,13 @@ Bases: [`endstone::ActorDeathEvent`](classendstone_1_1_actor_death_event.md),  [
 ### <code className="doc-symbol doc-symbol-function"/> PlayerDeathEvent [#PlayerDeathEvent]
 
 ```cpp
-inline explicit endstone::PlayerDeathEvent::PlayerDeathEvent (
-    Player & player,
-    std::unique_ptr< DamageSource > damage_source,
-    std::optional< Message > death_message
-) 
+PlayerDeathEvent(Player &player, std::unique_ptr<DamageSource> damage_source,
+                 std::optional<Message> death_message)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getDeathMessage [#getDeathMessage]
 
 ```cpp
-inline std::optional< Message > endstone::PlayerDeathEvent::getDeathMessage () const
+std::optional<Message> getDeathMessage() const
 ```
 
 Get the death message that will appear to everyone on the server.
@@ -79,9 +76,7 @@ Message to appear to other players on the server.
 ### <code className="doc-symbol doc-symbol-function"/> setDeathMessage [#setDeathMessage]
 
 ```cpp
-inline void endstone::PlayerDeathEvent::setDeathMessage (
-    std::optional< Message > death_message
-) 
+void setDeathMessage(std::optional<Message> death_message)
 ```
 
 Set the death message that will appear to everyone on the server.

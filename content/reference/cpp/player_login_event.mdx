@@ -4,7 +4,7 @@ title: "PlayerLoginEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerLoginEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -73,15 +73,12 @@ const std::string endstone::PlayerLoginEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> PlayerLoginEvent [#PlayerLoginEvent]
 
 ```cpp
-inline explicit endstone::PlayerLoginEvent::PlayerLoginEvent (
-    Player & player,
-    std::string message=""
-) 
+PlayerLoginEvent(Player &player, std::string message = "")
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::PlayerLoginEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 
@@ -102,7 +99,7 @@ name of this event
 ### <code className="doc-symbol doc-symbol-function"/> getKickMessage [#getKickMessage]
 
 ```cpp
-inline const std::string & endstone::PlayerLoginEvent::getKickMessage () const
+const std::string &getKickMessage() const
 ```
 
 
@@ -123,9 +120,7 @@ Current kick message
 ### <code className="doc-symbol doc-symbol-function"/> setKickMessage [#setKickMessage]
 
 ```cpp
-inline void endstone::PlayerLoginEvent::setKickMessage (
-    const std::string & message
-) 
+void setKickMessage(const std::string &message)
 ```
 
 

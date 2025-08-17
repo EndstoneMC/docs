@@ -4,7 +4,7 @@ title: "BlockPistonEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::BlockPistonEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -45,15 +45,12 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 ### <code className="doc-symbol doc-symbol-function"/> BlockPistonEvent [#BlockPistonEvent]
 
 ```cpp
-inline explicit endstone::BlockPistonEvent::BlockPistonEvent (
-    std::unique_ptr< Block > block,
-    BlockFace direction
-) 
+BlockPistonEvent(std::unique_ptr<Block> block, BlockFace direction)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getDirection [#getDirection]
 
 ```cpp
-inline BlockFace endstone::BlockPistonEvent::getDirection () const
+BlockFace getDirection() const
 ```
 
 Return the direction in which the piston will operate.

@@ -52,15 +52,12 @@ title: "Translatable"
 ### <code className="doc-symbol doc-symbol-function"/> Translatable [#Translatable]
 
 ```cpp
-inline explicit endstone::Translatable::Translatable (
-    std::string text,
-    std::vector< std::string > params={}
-) 
+Translatable(std::string text, std::vector<std::string> params = {})
 ```
 ### <code className="doc-symbol doc-symbol-function"/> empty [#empty]
 
 ```cpp
-inline bool endstone::Translatable::empty () const
+bool empty() const
 ```
 
 Check if the message to be translated is empty.
@@ -81,7 +78,7 @@ true if the message to be translated is empty, false otherwise
 ### <code className="doc-symbol doc-symbol-function"/> getParameters [#getParameters]
 
 ```cpp
-inline const std::vector< std::string > & endstone::Translatable::getParameters () const
+const std::vector<std::string> &getParameters() const
 ```
 
 Get the translation parameters.
@@ -102,7 +99,7 @@ the translation parameters
 ### <code className="doc-symbol doc-symbol-function"/> getText [#getText]
 
 ```cpp
-inline const std::string & endstone::Translatable::getText () const
+const std::string &getText() const
 ```
 
 Get the text to be translated.

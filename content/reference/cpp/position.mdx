@@ -4,7 +4,7 @@ title: "Position"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::Position
 
-Bases: [`endstone::Vector`](classendstone_1_1_vector.md)
+Bases: [`endstone::Vector`](vector)
 
 
 
@@ -67,27 +67,16 @@ Bases: [`endstone::Vector`](classendstone_1_1_vector.md)
 
 
 ```cpp
-template<typename T, typename>
-inline endstone::Position::Position (
-    T x,
-    T y,
-    T z
-) 
+template <typename T, typename> Position(T x, T y, T z)
 ```
 
 ```cpp
-template<typename T, typename>
-inline endstone::Position::Position (
-    T x,
-    T y,
-    T z,
-    Dimension & dimension
-) 
+template <typename T, typename> Position(T x, T y, T z, Dimension &dimension)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getBlockX [#getBlockX]
 
 ```cpp
-inline int endstone::Position::getBlockX () const
+int getBlockX() const
 ```
 
 Gets the floored value of the X component, indicating the block that this location is contained with.
@@ -108,7 +97,7 @@ block X
 ### <code className="doc-symbol doc-symbol-function"/> getBlockY [#getBlockY]
 
 ```cpp
-inline int endstone::Position::getBlockY () const
+int getBlockY() const
 ```
 
 Gets the floored value of the Y component, indicating the block that this location is contained with.
@@ -129,7 +118,7 @@ block Y
 ### <code className="doc-symbol doc-symbol-function"/> getBlockZ [#getBlockZ]
 
 ```cpp
-inline int endstone::Position::getBlockZ () const
+int getBlockZ() const
 ```
 
 Gets the floored value of the Z component, indicating the block that this location is contained with.
@@ -150,7 +139,7 @@ block Z
 ### <code className="doc-symbol doc-symbol-function"/> getDimension [#getDimension]
 
 ```cpp
-inline Dimension * endstone::Position::getDimension () const
+Dimension *getDimension() const
 ```
 
 
@@ -171,9 +160,7 @@ Gets the dimension that this position resides in
 ### <code className="doc-symbol doc-symbol-function"/> setDimension [#setDimension]
 
 ```cpp
-inline void endstone::Position::setDimension (
-    Dimension & dimension
-) 
+void setDimension(Dimension &dimension)
 ```
 
 

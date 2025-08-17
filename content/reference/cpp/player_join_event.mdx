@@ -4,7 +4,7 @@ title: "PlayerJoinEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerJoinEvent
 
-Bases: [`endstone::PlayerEvent`](classendstone_1_1_player_event.md)
+Bases: [`endstone::PlayerEvent`](player_event)
 
 
 
@@ -49,15 +49,12 @@ Bases: [`endstone::PlayerEvent`](classendstone_1_1_player_event.md)
 ### <code className="doc-symbol doc-symbol-function"/> PlayerJoinEvent [#PlayerJoinEvent]
 
 ```cpp
-inline explicit endstone::PlayerJoinEvent::PlayerJoinEvent (
-    Player & player,
-    std::optional< Message > join_message
-) 
+PlayerJoinEvent(Player &player, std::optional<Message> join_message)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getJoinMessage [#getJoinMessage]
 
 ```cpp
-inline std::optional< Message > endstone::PlayerJoinEvent::getJoinMessage () const
+std::optional<Message> getJoinMessage() const
 ```
 
 Gets the join message to send to all online players.
@@ -78,9 +75,7 @@ Message to appear to other players on the server.
 ### <code className="doc-symbol doc-symbol-function"/> setJoinMessage [#setJoinMessage]
 
 ```cpp
-inline void endstone::PlayerJoinEvent::setJoinMessage (
-    std::optional< Message > message
-) 
+void setJoinMessage(std::optional<Message> message)
 ```
 
 Sets the join message to send to all online players.

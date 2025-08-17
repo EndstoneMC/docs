@@ -56,17 +56,13 @@ title: "PermissionAttachmentInfo"
 ### <code className="doc-symbol doc-symbol-function"/> PermissionAttachmentInfo [#PermissionAttachmentInfo]
 
 ```cpp
-inline endstone::PermissionAttachmentInfo::PermissionAttachmentInfo (
-    Permissible & permissible,
-    std::string permission,
-    PermissionAttachment * attachment,
-    bool value
-) 
+PermissionAttachmentInfo(Permissible &permissible, std::string permission,
+                         PermissionAttachment *attachment, bool value)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getAttachment [#getAttachment]
 
 ```cpp
-inline PermissionAttachment * endstone::PermissionAttachmentInfo::getAttachment () const
+PermissionAttachment *getAttachment() const
 ```
 
 
@@ -87,7 +83,7 @@ Attachment
 ### <code className="doc-symbol doc-symbol-function"/> getPermissible [#getPermissible]
 
 ```cpp
-inline Permissible & endstone::PermissionAttachmentInfo::getPermissible () const
+Permissible &getPermissible() const
 ```
 
 
@@ -108,7 +104,7 @@ Gets the permissible this is attached to
 ### <code className="doc-symbol doc-symbol-function"/> getPermission [#getPermission]
 
 ```cpp
-inline std::string endstone::PermissionAttachmentInfo::getPermission () const
+std::string getPermission() const
 ```
 
 
@@ -129,7 +125,7 @@ Name of the permission
 ### <code className="doc-symbol doc-symbol-function"/> getValue [#getValue]
 
 ```cpp
-inline bool endstone::PermissionAttachmentInfo::getValue () const
+bool getValue() const
 ```
 
 

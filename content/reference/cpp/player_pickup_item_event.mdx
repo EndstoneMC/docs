@@ -4,7 +4,7 @@ title: "PlayerPickupItemEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerPickupItemEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -45,15 +45,12 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 ### <code className="doc-symbol doc-symbol-function"/> PlayerPickupItemEvent [#PlayerPickupItemEvent]
 
 ```cpp
-inline explicit endstone::PlayerPickupItemEvent::PlayerPickupItemEvent (
-    Player & player,
-    Item & item
-) 
+PlayerPickupItemEvent(Player &player, Item &item)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getItem [#getItem]
 
 ```cpp
-inline Item & endstone::PlayerPickupItemEvent::getItem () const
+Item &getItem() const
 ```
 
 Gets the Item picked up by the entity.

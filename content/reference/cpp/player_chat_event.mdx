@@ -4,7 +4,7 @@ title: "PlayerChatEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerChatEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -73,15 +73,12 @@ const std::string endstone::PlayerChatEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> PlayerChatEvent [#PlayerChatEvent]
 
 ```cpp
-inline explicit endstone::PlayerChatEvent::PlayerChatEvent (
-    Player & player,
-    std::string message
-) 
+PlayerChatEvent(Player &player, std::string message)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::PlayerChatEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 
@@ -102,7 +99,7 @@ name of this event
 ### <code className="doc-symbol doc-symbol-function"/> getMessage [#getMessage]
 
 ```cpp
-inline std::string endstone::PlayerChatEvent::getMessage () const
+std::string getMessage() const
 ```
 
 
@@ -123,9 +120,7 @@ Message the player is attempting to send
 ### <code className="doc-symbol doc-symbol-function"/> setMessage [#setMessage]
 
 ```cpp
-inline void endstone::PlayerChatEvent::setMessage (
-    std::string message
-) 
+void setMessage(std::string message)
 ```
 
 

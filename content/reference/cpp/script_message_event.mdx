@@ -4,7 +4,7 @@ title: "ScriptMessageEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::ScriptMessageEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -77,16 +77,13 @@ const std::string endstone::ScriptMessageEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> ScriptMessageEvent [#ScriptMessageEvent]
 
 ```cpp
-inline endstone::ScriptMessageEvent::ScriptMessageEvent (
-    std::string message_id,
-    std::string message,
-    const CommandSender & sender
-) 
+ScriptMessageEvent(std::string message_id, std::string message,
+                   const CommandSender &sender)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::ScriptMessageEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 
@@ -107,7 +104,7 @@ name of this event
 ### <code className="doc-symbol doc-symbol-function"/> getMessage [#getMessage]
 
 ```cpp
-inline const std::string & endstone::ScriptMessageEvent::getMessage () const
+const std::string &getMessage() const
 ```
 
 
@@ -128,7 +125,7 @@ Message to send
 ### <code className="doc-symbol doc-symbol-function"/> getMessageId [#getMessageId]
 
 ```cpp
-inline const std::string & endstone::ScriptMessageEvent::getMessageId () const
+const std::string &getMessageId() const
 ```
 
 
@@ -149,7 +146,7 @@ Message id to send
 ### <code className="doc-symbol doc-symbol-function"/> getSender [#getSender]
 
 ```cpp
-inline const CommandSender & endstone::ScriptMessageEvent::getSender () const
+const CommandSender &getSender() const
 ```
 
 

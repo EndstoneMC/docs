@@ -4,7 +4,7 @@ title: "PlayerInventory"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerInventory
 
-Bases: [`endstone::Inventory`](classendstone_1_1_inventory.md)
+Bases: [`endstone::Inventory`](inventory)
 
 
 
@@ -93,7 +93,7 @@ Bases: [`endstone::Inventory`](classendstone_1_1_inventory.md)
 ### <code className="doc-symbol doc-symbol-function"/> getBoots [#getBoots]
 
 ```cpp
-virtual std::unique_ptr< ItemStack > endstone::PlayerInventory::getBoots () const = 0
+std::unique_ptr<ItemStack> getBoots() const
 ```
 
 Return the ItemStack from the boots slot.
@@ -114,7 +114,7 @@ The [**ItemStack**](classendstone_1_1_item_stack.md) in the boots slot
 ### <code className="doc-symbol doc-symbol-function"/> getChestplate [#getChestplate]
 
 ```cpp
-virtual std::unique_ptr< ItemStack > endstone::PlayerInventory::getChestplate () const = 0
+std::unique_ptr<ItemStack> getChestplate() const
 ```
 
 Return the ItemStack from the chestplate slot.
@@ -135,7 +135,7 @@ The [**ItemStack**](classendstone_1_1_item_stack.md) in the chestplate slot
 ### <code className="doc-symbol doc-symbol-function"/> getHeldItemSlot [#getHeldItemSlot]
 
 ```cpp
-virtual int endstone::PlayerInventory::getHeldItemSlot () const = 0
+int getHeldItemSlot() const
 ```
 
 Get the slot number of the currently held item.
@@ -156,7 +156,7 @@ Held item slot number
 ### <code className="doc-symbol doc-symbol-function"/> getHelmet [#getHelmet]
 
 ```cpp
-virtual std::unique_ptr< ItemStack > endstone::PlayerInventory::getHelmet () const = 0
+std::unique_ptr<ItemStack> getHelmet() const
 ```
 
 Return the ItemStack from the helmet slot.
@@ -177,7 +177,7 @@ The [**ItemStack**](classendstone_1_1_item_stack.md) in the helmet slot
 ### <code className="doc-symbol doc-symbol-function"/> getItemInMainHand [#getItemInMainHand]
 
 ```cpp
-virtual std::unique_ptr< ItemStack > endstone::PlayerInventory::getItemInMainHand () const = 0
+std::unique_ptr<ItemStack> getItemInMainHand() const
 ```
 
 Gets the item the player is currently holding in their main hand.
@@ -198,7 +198,7 @@ the currently held item
 ### <code className="doc-symbol doc-symbol-function"/> getItemInOffHand [#getItemInOffHand]
 
 ```cpp
-virtual std::unique_ptr< ItemStack > endstone::PlayerInventory::getItemInOffHand () const = 0
+std::unique_ptr<ItemStack> getItemInOffHand() const
 ```
 
 Gets the item the player is currently holding in their off hand.
@@ -219,7 +219,7 @@ the currently held item
 ### <code className="doc-symbol doc-symbol-function"/> getLeggings [#getLeggings]
 
 ```cpp
-virtual std::unique_ptr< ItemStack > endstone::PlayerInventory::getLeggings () const = 0
+std::unique_ptr<ItemStack> getLeggings() const
 ```
 
 Return the ItemStack from the leg slot.
@@ -240,9 +240,7 @@ The [**ItemStack**](classendstone_1_1_item_stack.md) in the leg slot
 ### <code className="doc-symbol doc-symbol-function"/> setBoots [#setBoots]
 
 ```cpp
-virtual void endstone::PlayerInventory::setBoots (
-    const ItemStack * boots
-) = 0
+void setBoots(const ItemStack *boots)
 ```
 
 Put the given ItemStack into the boots slot.
@@ -266,9 +264,7 @@ This does not check if the [**ItemStack**](classendstone_1_1_item_stack.md) is a
 ### <code className="doc-symbol doc-symbol-function"/> setChestplate [#setChestplate]
 
 ```cpp
-virtual void endstone::PlayerInventory::setChestplate (
-    const ItemStack * chestplate
-) = 0
+void setChestplate(const ItemStack *chestplate)
 ```
 
 Put the given ItemStack into the chestplate slot.
@@ -292,9 +288,7 @@ This does not check if the [**ItemStack**](classendstone_1_1_item_stack.md) is a
 ### <code className="doc-symbol doc-symbol-function"/> setHeldItemSlot [#setHeldItemSlot]
 
 ```cpp
-virtual Result< void > endstone::PlayerInventory::setHeldItemSlot (
-    int slot
-) = 0
+Result<void> setHeldItemSlot(int slot)
 ```
 
 Set the slot number of the currently held item.
@@ -318,9 +312,7 @@ This validates whether the slot is between 0 and 8 inclusive.
 ### <code className="doc-symbol doc-symbol-function"/> setHelmet [#setHelmet]
 
 ```cpp
-virtual void endstone::PlayerInventory::setHelmet (
-    const ItemStack * helmet
-) = 0
+void setHelmet(const ItemStack *helmet)
 ```
 
 Put the given ItemStack into the helmet slot.
@@ -344,9 +336,7 @@ This does not check if the [**ItemStack**](classendstone_1_1_item_stack.md) is a
 ### <code className="doc-symbol doc-symbol-function"/> setItemInMainHand [#setItemInMainHand]
 
 ```cpp
-virtual void endstone::PlayerInventory::setItemInMainHand (
-    const ItemStack * item
-) = 0
+void setItemInMainHand(const ItemStack *item)
 ```
 
 Sets the item the player is holding in their main hand.
@@ -367,9 +357,7 @@ Sets the item the player is holding in their main hand.
 ### <code className="doc-symbol doc-symbol-function"/> setItemInOffHand [#setItemInOffHand]
 
 ```cpp
-virtual void endstone::PlayerInventory::setItemInOffHand (
-    const ItemStack * item
-) = 0
+void setItemInOffHand(const ItemStack *item)
 ```
 
 Sets the item the player is holding in their off hand.
@@ -390,9 +378,7 @@ Sets the item the player is holding in their off hand.
 ### <code className="doc-symbol doc-symbol-function"/> setLeggings [#setLeggings]
 
 ```cpp
-virtual void endstone::PlayerInventory::setLeggings (
-    const ItemStack * leggings
-) = 0
+void setLeggings(const ItemStack *leggings)
 ```
 
 Put the given ItemStack into the leggings slot.

@@ -4,7 +4,7 @@ title: "PacketSendEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PacketSendEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -65,18 +65,13 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 ### <code className="doc-symbol doc-symbol-function"/> PacketSendEvent [#PacketSendEvent]
 
 ```cpp
-inline endstone::PacketSendEvent::PacketSendEvent (
-    Player * player,
-    const int packet_id,
-    std::string_view payload,
-    SocketAddress address,
-    const int sub_client_id
-) 
+PacketSendEvent(Player *player, const int packet_id, std::string_view payload,
+                SocketAddress address, const int sub_client_id)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getAddress [#getAddress]
 
 ```cpp
-inline SocketAddress endstone::PacketSendEvent::getAddress () const
+SocketAddress getAddress() const
 ```
 
 Gets the network address to which this packet is being sent.
@@ -97,7 +92,7 @@ The [**SocketAddress**](classendstone_1_1_socket_address.md) of the destination 
 ### <code className="doc-symbol doc-symbol-function"/> getPacketId [#getPacketId]
 
 ```cpp
-inline int endstone::PacketSendEvent::getPacketId () const
+int getPacketId() const
 ```
 
 Gets the ID of the packet.
@@ -118,7 +113,7 @@ The packet ID.
 ### <code className="doc-symbol doc-symbol-function"/> getPayload [#getPayload]
 
 ```cpp
-inline std::string_view endstone::PacketSendEvent::getPayload () const
+std::string_view getPayload() const
 ```
 
 Gets the raw packet data excluding the header.
@@ -139,7 +134,7 @@ The packet payload data.
 ### <code className="doc-symbol doc-symbol-function"/> getPlayer [#getPlayer]
 
 ```cpp
-inline Player * endstone::PacketSendEvent::getPlayer () const
+Player *getPlayer() const
 ```
 
 Returns the player involved in this event.
@@ -167,7 +162,7 @@ This may return nullptr if the packet is sent before the player completes the lo
 ### <code className="doc-symbol doc-symbol-function"/> getSubClientId [#getSubClientId]
 
 ```cpp
-inline int endstone::PacketSendEvent::getSubClientId () const
+int getSubClientId() const
 ```
 
 Gets the SubClient ID.
@@ -195,9 +190,7 @@ The SubClient ID.
 ### <code className="doc-symbol doc-symbol-function"/> setPayload [#setPayload]
 
 ```cpp
-inline void endstone::PacketSendEvent::setPayload (
-    std::string_view payload
-) 
+void setPayload(std::string_view payload)
 ```
 
 Sets the raw packet data excluding the header.

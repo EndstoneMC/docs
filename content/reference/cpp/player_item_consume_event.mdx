@@ -4,7 +4,7 @@ title: "PlayerItemConsumeEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerItemConsumeEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -49,16 +49,13 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 ### <code className="doc-symbol doc-symbol-function"/> PlayerItemConsumeEvent [#PlayerItemConsumeEvent]
 
 ```cpp
-inline explicit endstone::PlayerItemConsumeEvent::PlayerItemConsumeEvent (
-    Player & player,
-    const ItemStack & item,
-    EquipmentSlot hand
-) 
+PlayerItemConsumeEvent(Player &player, const ItemStack &item,
+                       EquipmentSlot hand)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getHand [#getHand]
 
 ```cpp
-inline EquipmentSlot endstone::PlayerItemConsumeEvent::getHand () const
+EquipmentSlot getHand() const
 ```
 
 Get the hand used to consume the item.
@@ -79,7 +76,7 @@ the hand
 ### <code className="doc-symbol doc-symbol-function"/> getItem [#getItem]
 
 ```cpp
-inline std::unique_ptr< ItemStack > endstone::PlayerItemConsumeEvent::getItem () const
+std::unique_ptr<ItemStack> getItem() const
 ```
 
 Gets the item that is being consumed.

@@ -4,7 +4,7 @@ title: "StepSlider"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::StepSlider
 
-Bases: [`endstone::Dropdown`](classendstone_1_1_dropdown.md)
+Bases: [`endstone::Dropdown`](dropdown)
 
 
 
@@ -47,13 +47,10 @@ Bases: [`endstone::Dropdown`](classendstone_1_1_dropdown.md)
 
 
 ```cpp
-endstone::StepSlider::Dropdown () = default
+Dropdown() = default
 ```
 
 ```cpp
-inline explicit endstone::StepSlider::Dropdown (
-    Message label,
-    std::vector< std::string > options,
-    std::optional< int > default_index=std::nullopt
-) 
+Dropdown(Message label, std::vector<std::string> options,
+         std::optional<int> default_index = std::nullopt)
 ```

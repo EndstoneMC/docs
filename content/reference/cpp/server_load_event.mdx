@@ -4,7 +4,7 @@ title: "ServerLoadEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::ServerLoadEvent
 
-Bases: [`endstone::ServerEvent`](classendstone_1_1_server_event.md)
+Bases: [`endstone::ServerEvent`](server_event)
 
 
 
@@ -79,10 +79,7 @@ Bases: [`endstone::ServerEvent`](classendstone_1_1_server_event.md)
 ### <code className="doc-symbol doc-symbol-enum"/> LoadType [#LoadType]
 
 ```cpp
-enum endstone::ServerLoadEvent::LoadType {
-    Startup,
-    Reload
-};
+enum LoadType { Startup, Reload };
 ```
 ### <code className="doc-symbol doc-symbol-variable"/> NAME [#NAME]
 
@@ -92,14 +89,12 @@ const std::string endstone::ServerLoadEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> ServerLoadEvent [#ServerLoadEvent]
 
 ```cpp
-inline explicit endstone::ServerLoadEvent::ServerLoadEvent (
-    LoadType type
-) 
+ServerLoadEvent(LoadType type)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::ServerLoadEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 
@@ -120,5 +115,5 @@ name of this event
 ### <code className="doc-symbol doc-symbol-function"/> getType [#getType]
 
 ```cpp
-inline LoadType endstone::ServerLoadEvent::getType () const
+LoadType getType() const
 ```

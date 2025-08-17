@@ -56,17 +56,14 @@ title: "Skin"
 ### <code className="doc-symbol doc-symbol-function"/> Skin [#Skin]
 
 ```cpp
-inline endstone::Skin::Skin (
-    std::string id,
-    Image image,
-    std::optional< std::string > cape_id=std::nullopt,
-    std::optional< Image > cape_image=std::nullopt
-) 
+Skin(std::string id, Image image,
+     std::optional<std::string> cape_id = std::nullopt,
+     std::optional<Image> cape_image = std::nullopt)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getCapeId [#getCapeId]
 
 ```cpp
-inline const std::optional< std::string > & endstone::Skin::getCapeId () const
+const std::optional<std::string> &getCapeId() const
 ```
 
 Gets the cape id.
@@ -87,7 +84,7 @@ the cape id.
 ### <code className="doc-symbol doc-symbol-function"/> getCapeImage [#getCapeImage]
 
 ```cpp
-inline const Image * endstone::Skin::getCapeImage () const
+const Image *getCapeImage() const
 ```
 
 Gets the cape image.
@@ -108,7 +105,7 @@ the cape image.
 ### <code className="doc-symbol doc-symbol-function"/> getId [#getId]
 
 ```cpp
-inline const std::string & endstone::Skin::getId () const
+const std::string &getId() const
 ```
 
 Gets the skin id.
@@ -129,7 +126,7 @@ the skin id.
 ### <code className="doc-symbol doc-symbol-function"/> getImage [#getImage]
 
 ```cpp
-inline const Image & endstone::Skin::getImage () const
+const Image &getImage() const
 ```
 
 Gets the skin image.

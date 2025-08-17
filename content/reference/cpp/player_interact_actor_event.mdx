@@ -4,7 +4,7 @@ title: "PlayerInteractActorEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerInteractActorEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -69,15 +69,12 @@ const std::string endstone::PlayerInteractActorEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> PlayerInteractActorEvent [#PlayerInteractActorEvent]
 
 ```cpp
-inline explicit endstone::PlayerInteractActorEvent::PlayerInteractActorEvent (
-    Player & player,
-    Actor & actor
-) 
+PlayerInteractActorEvent(Player &player, Actor &actor)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getActor [#getActor]
 
 ```cpp
-inline Actor & endstone::PlayerInteractActorEvent::getActor () const
+Actor &getActor() const
 ```
 
 Gets the actor that was right-clicked by the player.
@@ -98,7 +95,7 @@ actor right-clicked by player
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::PlayerInteractActorEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 

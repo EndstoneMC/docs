@@ -4,7 +4,7 @@ title: "Location"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::Location
 
-Bases: [`endstone::Position`](classendstone_1_1_position.md)
+Bases: [`endstone::Position`](position)
 
 
 
@@ -79,64 +79,34 @@ Bases: [`endstone::Position`](classendstone_1_1_position.md)
 
 
 ```cpp
-template<typename T, typename>
-inline endstone::Location::Location (
-    T x,
-    T y,
-    T z,
-    float pitch=0.0,
-    float yaw=0.0
-) 
+template <typename T, typename>
+Location(T x, T y, T z, float pitch = 0.0, float yaw = 0.0)
 ```
 
 ```cpp
-template<typename T, typename>
-inline endstone::Location::Location (
-    T x,
-    T y,
-    T z,
-    float pitch,
-    Dimension & dimension
-) 
+template <typename T, typename>
+Location(T x, T y, T z, float pitch, Dimension &dimension)
 ```
 
 ```cpp
-template<typename T, typename>
-inline endstone::Location::Location (
-    T x,
-    T y,
-    T z,
-    float pitch,
-    float yaw,
-    Dimension & dimension
-) 
+template <typename T, typename>
+Location(T x, T y, T z, float pitch, float yaw, Dimension &dimension)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> Position [#Position]
 
 
 
 ```cpp
-template<typename T, typename>
-inline endstone::Location::Position (
-    T x,
-    T y,
-    T z
-) 
+template <typename T, typename> Position(T x, T y, T z)
 ```
 
 ```cpp
-template<typename T, typename>
-inline endstone::Location::Position (
-    T x,
-    T y,
-    T z,
-    Dimension & dimension
-) 
+template <typename T, typename> Position(T x, T y, T z, Dimension &dimension)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getDirection [#getDirection]
 
 ```cpp
-inline Vector endstone::Location::getDirection () const
+Vector getDirection() const
 ```
 
 
@@ -157,7 +127,7 @@ a vector pointing the direction of this location's pitch and yaw
 ### <code className="doc-symbol doc-symbol-function"/> getPitch [#getPitch]
 
 ```cpp
-inline float endstone::Location::getPitch () const
+float getPitch() const
 ```
 
 
@@ -178,7 +148,7 @@ the incline's pitch
 ### <code className="doc-symbol doc-symbol-function"/> getYaw [#getYaw]
 
 ```cpp
-inline float endstone::Location::getYaw () const
+float getYaw() const
 ```
 
 
@@ -199,9 +169,7 @@ the rotation's yaw
 ### <code className="doc-symbol doc-symbol-function"/> setPitch [#setPitch]
 
 ```cpp
-inline void endstone::Location::setPitch (
-    float pitch
-) 
+void setPitch(float pitch)
 ```
 
 
@@ -227,9 +195,7 @@ Increasing pitch values the equivalent of looking down.
 ### <code className="doc-symbol doc-symbol-function"/> setYaw [#setYaw]
 
 ```cpp
-inline void endstone::Location::setYaw (
-    float yaw
-) 
+void setYaw(float yaw)
 ```
 
 

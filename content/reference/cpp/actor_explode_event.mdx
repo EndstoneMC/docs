@@ -4,7 +4,7 @@ title: "ActorExplodeEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::ActorExplodeEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -77,18 +77,14 @@ const std::string endstone::ActorExplodeEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> ActorExplodeEvent [#ActorExplodeEvent]
 
 ```cpp
-inline explicit endstone::ActorExplodeEvent::ActorExplodeEvent (
-    Actor & actor,
-    Location location,
-    BlockList blocks
-) 
+ActorExplodeEvent(Actor &actor, Location location, BlockList blocks)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getBlockList [#getBlockList]
 
 
 
 ```cpp
-inline const BlockList & endstone::ActorExplodeEvent::getBlockList () const
+const BlockList &getBlockList() const
 ```
 
 Returns the list of blocks that would have been removed or were removed from the explosion event.
@@ -108,7 +104,7 @@ All blown-up blocks
         
 
 ```cpp
-inline BlockList & endstone::ActorExplodeEvent::getBlockList () 
+BlockList &getBlockList()
 ```
 
 Returns the list of blocks that would have been removed or were removed from the explosion event.
@@ -129,7 +125,7 @@ All blown-up blocks
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::ActorExplodeEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 
@@ -150,7 +146,7 @@ name of this event
 ### <code className="doc-symbol doc-symbol-function"/> getLocation [#getLocation]
 
 ```cpp
-inline const Location & endstone::ActorExplodeEvent::getLocation () const
+const Location &getLocation() const
 ```
 
 Returns the location where the explosion happened.

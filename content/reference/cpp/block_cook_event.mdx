@@ -4,7 +4,7 @@ title: "BlockCookEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::BlockCookEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -53,16 +53,13 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 ### <code className="doc-symbol doc-symbol-function"/> BlockCookEvent [#BlockCookEvent]
 
 ```cpp
-inline endstone::BlockCookEvent::BlockCookEvent (
-    std::unique_ptr< Block > block,
-    std::unique_ptr< ItemStack > source,
-    std::unique_ptr< ItemStack > result
-) 
+BlockCookEvent(std::unique_ptr<Block> block, std::unique_ptr<ItemStack> source,
+               std::unique_ptr<ItemStack> result)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getResult [#getResult]
 
 ```cpp
-inline const ItemStack & endstone::BlockCookEvent::getResult () const
+const ItemStack &getResult() const
 ```
 
 Gets the resultant ItemStack for this event.
@@ -83,7 +80,7 @@ smelting result [**ItemStack**](classendstone_1_1_item_stack.md)
 ### <code className="doc-symbol doc-symbol-function"/> getSource [#getSource]
 
 ```cpp
-inline const ItemStack & endstone::BlockCookEvent::getSource () const
+const ItemStack &getSource() const
 ```
 
 Gets the smelted ItemStack for this event.
@@ -104,9 +101,7 @@ smelting source [**ItemStack**](classendstone_1_1_item_stack.md)
 ### <code className="doc-symbol doc-symbol-function"/> setResult [#setResult]
 
 ```cpp
-inline void endstone::BlockCookEvent::setResult (
-    std::unique_ptr< ItemStack > result
-) 
+void setResult(std::unique_ptr<ItemStack> result)
 ```
 
 Sets the resultant ItemStack for this event.

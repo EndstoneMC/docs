@@ -4,7 +4,7 @@ title: "PlayerBedLeaveEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerBedLeaveEvent
 
-Bases: [`endstone::PlayerEvent`](classendstone_1_1_player_event.md)
+Bases: [`endstone::PlayerEvent`](player_event)
 
 
 
@@ -45,15 +45,12 @@ Bases: [`endstone::PlayerEvent`](classendstone_1_1_player_event.md)
 ### <code className="doc-symbol doc-symbol-function"/> PlayerBedLeaveEvent [#PlayerBedLeaveEvent]
 
 ```cpp
-inline explicit endstone::PlayerBedLeaveEvent::PlayerBedLeaveEvent (
-    Player & player,
-    Block & bed
-) 
+PlayerBedLeaveEvent(Player &player, Block &bed)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getBed [#getBed]
 
 ```cpp
-inline Block & endstone::PlayerBedLeaveEvent::getBed () const
+Block &getBed() const
 ```
 
 Returns the bed block involved in this event.

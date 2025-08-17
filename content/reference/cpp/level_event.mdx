@@ -4,7 +4,7 @@ title: "LevelEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::LevelEvent
 
-Bases: [`endstone::Event`](classendstone_1_1_event.md)
+Bases: [`endstone::Event`](event)
 
 
 
@@ -45,14 +45,12 @@ Bases: [`endstone::Event`](classendstone_1_1_event.md)
 ### <code className="doc-symbol doc-symbol-function"/> LevelEvent [#LevelEvent]
 
 ```cpp
-inline explicit endstone::LevelEvent::LevelEvent (
-    Level & level
-) 
+LevelEvent(Level &level)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getLevel [#getLevel]
 
 ```cpp
-inline Level & endstone::LevelEvent::getLevel () const
+Level &getLevel() const
 ```
 
 

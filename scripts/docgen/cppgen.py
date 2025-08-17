@@ -10,6 +10,8 @@ from mkdoxy.doxyrun import DoxygenRun
 from mkdoxy.generatorBase import GeneratorBase
 from mkdoxy.xml_parser import XmlParser
 
+from tqdm import tqdm
+
 logging.basicConfig()
 log: logging.Logger = logging.getLogger("mkdocs")
 log.setLevel(logging.DEBUG)
@@ -70,5 +72,9 @@ def generate(base_dir: Path, debug: bool = True):
 
     assert root_node is not None, "root node not found"
     nodes = [node for node in root_node.children if node.kind == Kind.CLASS]
-    generator.members(nodes, template_config)
+
+    for node in tqdm(nodes):
+        if node.is_parent or node.is_group or node.is_file or node.is_dir:
+            generator.member(node, template_config)
+
     generator.classes(nodes, template_config)

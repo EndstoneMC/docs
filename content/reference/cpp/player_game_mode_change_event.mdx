@@ -4,7 +4,7 @@ title: "PlayerGameModeChangeEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerGameModeChangeEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -69,15 +69,12 @@ const std::string endstone::PlayerGameModeChangeEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> PlayerGameModeChangeEvent [#PlayerGameModeChangeEvent]
 
 ```cpp
-inline explicit endstone::PlayerGameModeChangeEvent::PlayerGameModeChangeEvent (
-    Player & player,
-    GameMode new_game_mode
-) 
+PlayerGameModeChangeEvent(Player &player, GameMode new_game_mode)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::PlayerGameModeChangeEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 
@@ -98,7 +95,7 @@ name of this event
 ### <code className="doc-symbol doc-symbol-function"/> getNewGameMode [#getNewGameMode]
 
 ```cpp
-inline GameMode endstone::PlayerGameModeChangeEvent::getNewGameMode () const
+GameMode getNewGameMode() const
 ```
 
 Gets the GameMode the player is switched to.

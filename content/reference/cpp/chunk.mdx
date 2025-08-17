@@ -52,7 +52,7 @@ title: "Chunk"
 ### <code className="doc-symbol doc-symbol-function"/> getDimension [#getDimension]
 
 ```cpp
-virtual Dimension & endstone::Chunk::getDimension () const = 0
+Dimension &getDimension() const
 ```
 
 Gets the dimension containing this chunk.
@@ -73,7 +73,7 @@ Parent [**Dimension**](classendstone_1_1_dimension.md)
 ### <code className="doc-symbol doc-symbol-function"/> getLevel [#getLevel]
 
 ```cpp
-virtual Level & endstone::Chunk::getLevel () const = 0
+Level &getLevel() const
 ```
 
 Gets the level containing this chunk.
@@ -94,7 +94,7 @@ Parent [**Level**](classendstone_1_1_level.md)
 ### <code className="doc-symbol doc-symbol-function"/> getX [#getX]
 
 ```cpp
-virtual int endstone::Chunk::getX () const = 0
+int getX() const
 ```
 
 Gets the X-coordinate of this chunk.
@@ -115,7 +115,7 @@ X-coordinate
 ### <code className="doc-symbol doc-symbol-function"/> getZ [#getZ]
 
 ```cpp
-virtual int endstone::Chunk::getZ () const = 0
+int getZ() const
 ```
 
 Gets the Z-coordinate of this chunk.

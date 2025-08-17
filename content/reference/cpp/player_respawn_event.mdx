@@ -4,7 +4,7 @@ title: "PlayerRespawnEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerRespawnEvent
 
-Bases: [`endstone::PlayerEvent`](classendstone_1_1_player_event.md)
+Bases: [`endstone::PlayerEvent`](player_event)
 
 
 
@@ -65,14 +65,12 @@ const std::string endstone::PlayerRespawnEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> PlayerRespawnEvent [#PlayerRespawnEvent]
 
 ```cpp
-inline explicit endstone::PlayerRespawnEvent::PlayerRespawnEvent (
-    Player & player
-) 
+PlayerRespawnEvent(Player &player)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::PlayerRespawnEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 

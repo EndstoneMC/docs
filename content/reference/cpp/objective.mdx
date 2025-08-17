@@ -96,7 +96,7 @@ title: "Objective"
 ### <code className="doc-symbol doc-symbol-function"/> getCriteria [#getCriteria]
 
 ```cpp
-virtual Result< const Criteria * > endstone::Objective::getCriteria () const = 0
+Result<const Criteria *> getCriteria() const
 ```
 
 Gets the criteria this objective tracks.
@@ -117,7 +117,7 @@ this objective's criteria.
 ### <code className="doc-symbol doc-symbol-function"/> getDisplayName [#getDisplayName]
 
 ```cpp
-virtual Result< std::string > endstone::Objective::getDisplayName () const = 0
+Result<std::string> getDisplayName() const
 ```
 
 Gets the name displayed to players for this objective.
@@ -138,7 +138,7 @@ this objective's display name
 ### <code className="doc-symbol doc-symbol-function"/> getDisplaySlot [#getDisplaySlot]
 
 ```cpp
-virtual Result< DisplaySlot > endstone::Objective::getDisplaySlot () const = 0
+Result<DisplaySlot> getDisplaySlot() const
 ```
 
 Gets the display slot this objective is displayed at.
@@ -159,7 +159,7 @@ the display slot for this objective
 ### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
-virtual Result< std::string > endstone::Objective::getName () const = 0
+Result<std::string> getName() const
 ```
 
 Gets the name of this Objective .
@@ -180,7 +180,7 @@ this objective's name
 ### <code className="doc-symbol doc-symbol-function"/> getRenderType [#getRenderType]
 
 ```cpp
-virtual Result< RenderType > endstone::Objective::getRenderType () const = 0
+Result<RenderType> getRenderType() const
 ```
 
 
@@ -201,9 +201,7 @@ the render type
 ### <code className="doc-symbol doc-symbol-function"/> getScore [#getScore]
 
 ```cpp
-virtual Result< std::unique_ptr< Score > > endstone::Objective::getScore (
-    ScoreEntry entry
-) const = 0
+Result<std::unique_ptr<Score>> getScore(ScoreEntry entry) const
 ```
 
 Sets manner in which this objective will be rendered.
@@ -241,7 +239,7 @@ Gets an entry's [**Score**](classendstone_1_1_score.md) for this objective.
 ### <code className="doc-symbol doc-symbol-function"/> getScoreboard [#getScoreboard]
 
 ```cpp
-virtual Scoreboard & endstone::Objective::getScoreboard () const = 0
+Scoreboard &getScoreboard() const
 ```
 
 Gets the scoreboard to which this objective is attached.
@@ -262,7 +260,7 @@ Owning scoreboard
 ### <code className="doc-symbol doc-symbol-function"/> getSortOrder [#getSortOrder]
 
 ```cpp
-virtual Result< ObjectiveSortOrder > endstone::Objective::getSortOrder () const = 0
+Result<ObjectiveSortOrder> getSortOrder() const
 ```
 
 Gets the sort order for this objective.
@@ -283,7 +281,7 @@ The sort order for this objective.
 ### <code className="doc-symbol doc-symbol-function"/> isDisplayed [#isDisplayed]
 
 ```cpp
-virtual Result< bool > endstone::Objective::isDisplayed () const = 0
+Result<bool> isDisplayed() const
 ```
 
 Gets if the objective is currently displayed in a slot.
@@ -304,7 +302,7 @@ true if the objective is displayed
 ### <code className="doc-symbol doc-symbol-function"/> isModifiable [#isModifiable]
 
 ```cpp
-virtual Result< bool > endstone::Objective::isModifiable () const = 0
+Result<bool> isModifiable() const
 ```
 
 Gets if the objective's scores can be modified directly by a plugin.
@@ -325,10 +323,8 @@ true if scores are modifiable
 ### <code className="doc-symbol doc-symbol-function"/> setDisplay [#setDisplay]
 
 ```cpp
-virtual Result< void > endstone::Objective::setDisplay (
-    std::optional< DisplaySlot > slot,
-    ObjectiveSortOrder order
-) = 0
+Result<void> setDisplay(std::optional<DisplaySlot> slot,
+                        ObjectiveSortOrder order)
 ```
 
 Sets the display slot and sort order for this objective. This will remove it from any other display slot.
@@ -350,9 +346,7 @@ Sets the display slot and sort order for this objective. This will remove it fro
 ### <code className="doc-symbol doc-symbol-function"/> setDisplayName [#setDisplayName]
 
 ```cpp
-virtual Result< void > endstone::Objective::setDisplayName (
-    std::string display_name
-) = 0
+Result<void> setDisplayName(std::string display_name)
 ```
 
 Sets the name displayed to players for this objective.
@@ -373,9 +367,7 @@ Sets the name displayed to players for this objective.
 ### <code className="doc-symbol doc-symbol-function"/> setDisplaySlot [#setDisplaySlot]
 
 ```cpp
-virtual Result< void > endstone::Objective::setDisplaySlot (
-    std::optional< DisplaySlot > slot
-) = 0
+Result<void> setDisplaySlot(std::optional<DisplaySlot> slot)
 ```
 
 Sets the display slot for this objective. This will remove it from any other display slot.
@@ -396,9 +388,7 @@ Sets the display slot for this objective. This will remove it from any other dis
 ### <code className="doc-symbol doc-symbol-function"/> setSortOrder [#setSortOrder]
 
 ```cpp
-virtual Result< void > endstone::Objective::setSortOrder (
-    ObjectiveSortOrder order
-) = 0
+Result<void> setSortOrder(ObjectiveSortOrder order)
 ```
 
 Sets the sort order for this objective.
@@ -419,7 +409,7 @@ Sets the sort order for this objective.
 ### <code className="doc-symbol doc-symbol-function"/> unregister [#unregister]
 
 ```cpp
-virtual Result< void > endstone::Objective::unregister () const = 0
+Result<void> unregister() const
 ```
 
 Unregisters this objective from the associated Scoreboard .

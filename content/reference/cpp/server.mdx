@@ -265,21 +265,16 @@ Used for all announcement messages, such as informing users that a player has jo
 
 
 ```cpp
-endstone::Server::Server () = default
+Server() = default
 ```
 
 ```cpp
-endstone::Server::Server (
-    const Server &
-) = delete
+Server(const Server &) = delete
 ```
 ### <code className="doc-symbol doc-symbol-function"/> broadcast [#broadcast]
 
 ```cpp
-virtual void endstone::Server::broadcast (
-    const Message & message,
-    const std::string & permission
-) const = 0
+void broadcast(const Message &message, const std::string &permission) const
 ```
 
 Broadcasts the specified message to every user with the given permission name.
@@ -303,9 +298,7 @@ Broadcasts the specified message to every user with the given permission name.
 
 
 ```cpp
-virtual void endstone::Server::broadcastMessage (
-    const Message & message
-) const = 0
+void broadcastMessage(const Message &message) const
 ```
 
 Broadcasts the specified message to every user with permission endstone.broadcast.user.
@@ -325,20 +318,16 @@ Broadcasts the specified message to every user with permission endstone.broadcas
         
 
 ```cpp
-template<typename... Args>
-inline void endstone::Server::broadcastMessage (
-    const fmt::format_string< Args... > format,
-    Args &&... args
-) const
+template <typename... Args>
+void broadcastMessage(const fmt::format_string<Args...> format,
+                      Args &&...args) const
 ```
 ### <code className="doc-symbol doc-symbol-function"/> createBlockData [#createBlockData]
 
 
 
 ```cpp
-virtual Result< std::unique_ptr< BlockData > > endstone::Server::createBlockData (
-    std::string type
-) const = 0
+Result<std::unique_ptr<BlockData>> createBlockData(std::string type) const
 ```
 
 Creates a new BlockData instance for the specified block type, with all properties initialized to defaults.
@@ -365,10 +354,8 @@ new data instance
         
 
 ```cpp
-virtual Result< std::unique_ptr< BlockData > > endstone::Server::createBlockData (
-    std::string type,
-    BlockStates block_states
-) const = 0
+Result<std::unique_ptr<BlockData>>
+createBlockData(std::string type, BlockStates block_states) const
 ```
 
 Creates a new BlockData instance for the specified block type, with all properties initialized to defaults, except for those provided in data.
@@ -399,11 +386,8 @@ new data instance
 
 
 ```cpp
-virtual std::unique_ptr< BossBar > endstone::Server::createBossBar (
-    std::string title,
-    BarColor color,
-    BarStyle style
-) const = 0
+std::unique_ptr<BossBar> createBossBar(std::string title, BarColor color,
+                                       BarStyle style) const
 ```
 
 Creates a boss bar instance to display to players. The progress defaults to 1.0.
@@ -432,12 +416,9 @@ the created boss bar
         
 
 ```cpp
-virtual std::unique_ptr< BossBar > endstone::Server::createBossBar (
-    std::string title,
-    BarColor color,
-    BarStyle style,
-    std::vector< BarFlag > flags
-) const = 0
+std::unique_ptr<BossBar> createBossBar(std::string title, BarColor color,
+                                       BarStyle style,
+                                       std::vector<BarFlag> flags) const
 ```
 
 Creates a boss bar instance to display to players. The progress defaults to 1.0.
@@ -468,7 +449,7 @@ the created boss bar
 ### <code className="doc-symbol doc-symbol-function"/> createScoreboard [#createScoreboard]
 
 ```cpp
-virtual std::shared_ptr< Scoreboard > endstone::Server::createScoreboard () = 0
+std::shared_ptr<Scoreboard> createScoreboard()
 ```
 
 Creates a new Scoreboard to be tracked by the server.
@@ -492,10 +473,7 @@ the newly created [**Scoreboard**](classendstone_1_1_scoreboard.md)
 ### <code className="doc-symbol doc-symbol-function"/> dispatchCommand [#dispatchCommand]
 
 ```cpp
-virtual bool endstone::Server::dispatchCommand (
-    CommandSender & sender,
-    std::string command_line
-) const = 0
+bool dispatchCommand(CommandSender &sender, std::string command_line) const
 ```
 
 Dispatches a command on this server, and executes it if found.
@@ -524,7 +502,7 @@ true if execution is successful, false otherwise
 ### <code className="doc-symbol doc-symbol-function"/> getAverageMillisecondsPerTick [#getAverageMillisecondsPerTick]
 
 ```cpp
-virtual float endstone::Server::getAverageMillisecondsPerTick () = 0
+float getAverageMillisecondsPerTick()
 ```
 
 Gets the average milliseconds per tick (MSPT).
@@ -545,7 +523,7 @@ The average number of milliseconds per tick.
 ### <code className="doc-symbol doc-symbol-function"/> getAverageTickUsage [#getAverageTickUsage]
 
 ```cpp
-virtual float endstone::Server::getAverageTickUsage () = 0
+float getAverageTickUsage()
 ```
 
 Gets the average tick usage of the server.
@@ -566,7 +544,7 @@ The average tick usage in percentage.
 ### <code className="doc-symbol doc-symbol-function"/> getAverageTicksPerSecond [#getAverageTicksPerSecond]
 
 ```cpp
-virtual float endstone::Server::getAverageTicksPerSecond () = 0
+float getAverageTicksPerSecond()
 ```
 
 Gets the average ticks per second (TPS).
@@ -587,7 +565,7 @@ The average ticks per second
 ### <code className="doc-symbol doc-symbol-function"/> getBanList [#getBanList]
 
 ```cpp
-virtual PlayerBanList & endstone::Server::getBanList () const = 0
+PlayerBanList &getBanList() const
 ```
 
 
@@ -608,7 +586,7 @@ The player ban list
 ### <code className="doc-symbol doc-symbol-function"/> getCommandSender [#getCommandSender]
 
 ```cpp
-virtual ConsoleCommandSender & endstone::Server::getCommandSender () const = 0
+ConsoleCommandSender &getCommandSender() const
 ```
 
 Gets a CommandSender for this server.
@@ -629,7 +607,7 @@ a console command sender
 ### <code className="doc-symbol doc-symbol-function"/> getCurrentMillisecondsPerTick [#getCurrentMillisecondsPerTick]
 
 ```cpp
-virtual float endstone::Server::getCurrentMillisecondsPerTick () = 0
+float getCurrentMillisecondsPerTick()
 ```
 
 Gets the current milliseconds per tick (MSPT).
@@ -650,7 +628,7 @@ The average current of milliseconds per tick.
 ### <code className="doc-symbol doc-symbol-function"/> getCurrentTickUsage [#getCurrentTickUsage]
 
 ```cpp
-virtual float endstone::Server::getCurrentTickUsage () = 0
+float getCurrentTickUsage()
 ```
 
 Gets the current tick usage of the server.
@@ -671,7 +649,7 @@ The current tick usage in percentage.
 ### <code className="doc-symbol doc-symbol-function"/> getCurrentTicksPerSecond [#getCurrentTicksPerSecond]
 
 ```cpp
-virtual float endstone::Server::getCurrentTicksPerSecond () = 0
+float getCurrentTicksPerSecond()
 ```
 
 Gets the current ticks per second (TPS).
@@ -692,7 +670,7 @@ The current ticks per second
 ### <code className="doc-symbol doc-symbol-function"/> getEnchantmentRegistry [#getEnchantmentRegistry]
 
 ```cpp
-virtual Registry < Enchantment > & endstone::Server::getEnchantmentRegistry () const = 0
+Registry<Enchantment> &getEnchantmentRegistry() const
 ```
 
 
@@ -713,7 +691,7 @@ the enchantment registry.
 ### <code className="doc-symbol doc-symbol-function"/> getIpBanList [#getIpBanList]
 
 ```cpp
-virtual IpBanList & endstone::Server::getIpBanList () const = 0
+IpBanList &getIpBanList() const
 ```
 
 
@@ -734,7 +712,7 @@ The IP ban list
 ### <code className="doc-symbol doc-symbol-function"/> getItemFactory [#getItemFactory]
 
 ```cpp
-virtual ItemFactory & endstone::Server::getItemFactory () const = 0
+ItemFactory &getItemFactory() const
 ```
 
 
@@ -758,7 +736,7 @@ the item factory
 ### <code className="doc-symbol doc-symbol-function"/> getItemRegistry [#getItemRegistry]
 
 ```cpp
-virtual Registry < ItemType > & endstone::Server::getItemRegistry () const = 0
+Registry<ItemType> &getItemRegistry() const
 ```
 
 
@@ -779,7 +757,7 @@ the item registry.
 ### <code className="doc-symbol doc-symbol-function"/> getLanguage [#getLanguage]
 
 ```cpp
-virtual Language & endstone::Server::getLanguage () const = 0
+Language &getLanguage() const
 ```
 
 Gets the current language interface used by the server.
@@ -800,7 +778,7 @@ Gets the current language interface used by the server.
 ### <code className="doc-symbol doc-symbol-function"/> getLevel [#getLevel]
 
 ```cpp
-virtual Level * endstone::Server::getLevel () const = 0
+Level *getLevel() const
 ```
 
 Gets the server level.
@@ -821,7 +799,7 @@ the server level
 ### <code className="doc-symbol doc-symbol-function"/> getLogger [#getLogger]
 
 ```cpp
-virtual Logger & endstone::Server::getLogger () const = 0
+Logger &getLogger() const
 ```
 
 Returns the primary logger associated with this server instance.
@@ -842,7 +820,7 @@ Returns the primary logger associated with this server instance.
 ### <code className="doc-symbol doc-symbol-function"/> getMaxPlayers [#getMaxPlayers]
 
 ```cpp
-virtual int endstone::Server::getMaxPlayers () const = 0
+int getMaxPlayers() const
 ```
 
 Get the maximum amount of players which can login to this server.
@@ -863,7 +841,7 @@ the amount of players this server allows
 ### <code className="doc-symbol doc-symbol-function"/> getMinecraftVersion [#getMinecraftVersion]
 
 ```cpp
-virtual std::string endstone::Server::getMinecraftVersion () const = 0
+std::string getMinecraftVersion() const
 ```
 
 Gets the Minecraft version that this server is running.
@@ -884,7 +862,7 @@ version of Minecraft
 ### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
-virtual std::string endstone::Server::getName () const = 0
+std::string getName() const
 ```
 
 Gets the name of this server implementation.
@@ -905,7 +883,7 @@ name of this server implementation
 ### <code className="doc-symbol doc-symbol-function"/> getOnlineMode [#getOnlineMode]
 
 ```cpp
-virtual bool endstone::Server::getOnlineMode () const = 0
+bool getOnlineMode() const
 ```
 
 Gets whether the Server is in online mode or not.
@@ -926,7 +904,7 @@ true if the server authenticates clients, false otherwise
 ### <code className="doc-symbol doc-symbol-function"/> getOnlinePlayers [#getOnlinePlayers]
 
 ```cpp
-virtual std::vector< Player * > endstone::Server::getOnlinePlayers () const = 0
+std::vector<Player *> getOnlinePlayers() const
 ```
 
 Gets a list of all currently online players.
@@ -949,9 +927,7 @@ a list of currently online players.
 
 
 ```cpp
-virtual Player * endstone::Server::getPlayer (
-    endstone::UUID id
-) const = 0
+Player *getPlayer(endstone::UUID id) const
 ```
 
 Gets the player with the given UUID .
@@ -978,9 +954,7 @@ a player object if one was found, null otherwise
         
 
 ```cpp
-virtual Player * endstone::Server::getPlayer (
-    std::string name
-) const = 0
+Player *getPlayer(std::string name) const
 ```
 
 Gets the player with the exact given name, case-insensitive.
@@ -1008,9 +982,7 @@ a player object if one was found, null otherwise
 ### <code className="doc-symbol doc-symbol-function"/> getPluginCommand [#getPluginCommand]
 
 ```cpp
-virtual PluginCommand * endstone::Server::getPluginCommand (
-    std::string name
-) const = 0
+PluginCommand *getPluginCommand(std::string name) const
 ```
 
 Gets a PluginCommand with the given name or alias.
@@ -1038,7 +1010,7 @@ a plugin command if found, null otherwise
 ### <code className="doc-symbol doc-symbol-function"/> getPluginManager [#getPluginManager]
 
 ```cpp
-virtual PluginManager & endstone::Server::getPluginManager () const = 0
+PluginManager &getPluginManager() const
 ```
 
 Gets the plugin manager for interfacing with plugins.
@@ -1059,7 +1031,7 @@ a plugin manager for this [**Server**](classendstone_1_1_server.md) instance
 ### <code className="doc-symbol doc-symbol-function"/> getPort [#getPort]
 
 ```cpp
-virtual int endstone::Server::getPort () const = 0
+int getPort() const
 ```
 
 Get the game port that the server runs on.
@@ -1080,7 +1052,7 @@ the port number of this server
 ### <code className="doc-symbol doc-symbol-function"/> getPortV6 [#getPortV6]
 
 ```cpp
-virtual int endstone::Server::getPortV6 () const = 0
+int getPortV6() const
 ```
 
 Get the game port (IPv6) that the server runs on.
@@ -1101,7 +1073,7 @@ the port number of this server
 ### <code className="doc-symbol doc-symbol-function"/> getProtocolVersion [#getProtocolVersion]
 
 ```cpp
-virtual int endstone::Server::getProtocolVersion () const = 0
+int getProtocolVersion() const
 ```
 
 Gets the network protocol version that this server supports.
@@ -1122,7 +1094,7 @@ version of network protocol
 ### <code className="doc-symbol doc-symbol-function"/> getScheduler [#getScheduler]
 
 ```cpp
-virtual Scheduler & endstone::Server::getScheduler () const = 0
+Scheduler &getScheduler() const
 ```
 
 Gets the scheduler for managing scheduled events.
@@ -1143,7 +1115,7 @@ a scheduling service for this server
 ### <code className="doc-symbol doc-symbol-function"/> getScoreboard [#getScoreboard]
 
 ```cpp
-virtual Scoreboard * endstone::Server::getScoreboard () const = 0
+Scoreboard *getScoreboard() const
 ```
 
 Gets the primary Scoreboard controlled by the server.
@@ -1167,7 +1139,7 @@ the default server scoreboard
 ### <code className="doc-symbol doc-symbol-function"/> getServiceManager [#getServiceManager]
 
 ```cpp
-virtual ServiceManager & endstone::Server::getServiceManager () const = 0
+ServiceManager &getServiceManager() const
 ```
 
 
@@ -1188,7 +1160,7 @@ The service manager
 ### <code className="doc-symbol doc-symbol-function"/> getStartTime [#getStartTime]
 
 ```cpp
-virtual std::chrono::system_clock::time_point endstone::Server::getStartTime () = 0
+std::chrono::system_clock::time_point getStartTime()
 ```
 
 Gets the start time of the server.
@@ -1209,7 +1181,7 @@ The start time of the server.
 ### <code className="doc-symbol doc-symbol-function"/> getVersion [#getVersion]
 
 ```cpp
-virtual std::string endstone::Server::getVersion () const = 0
+std::string getVersion() const
 ```
 
 Gets the version string of this server implementation.
@@ -1230,7 +1202,7 @@ version of this server implementation
 ### <code className="doc-symbol doc-symbol-function"/> isPrimaryThread [#isPrimaryThread]
 
 ```cpp
-virtual bool endstone::Server::isPrimaryThread () const = 0
+bool isPrimaryThread() const
 ```
 
 Checks the current thread against the expected primary server thread.
@@ -1251,7 +1223,7 @@ true if the current thread matches the expected primary thread, false otherwise
 ### <code className="doc-symbol doc-symbol-function"/> reload [#reload]
 
 ```cpp
-virtual void endstone::Server::reload () = 0
+void reload()
 ```
 
 Reloads the server configuration, functions, scripts and plugins.
@@ -1259,7 +1231,7 @@ Reloads the server configuration, functions, scripts and plugins.
 ### <code className="doc-symbol doc-symbol-function"/> reloadData [#reloadData]
 
 ```cpp
-virtual void endstone::Server::reloadData () = 0
+void reloadData()
 ```
 
 Reload only the Minecraft data for the server.
@@ -1273,9 +1245,7 @@ This includes functions and script files from all behaviour packs.
 ### <code className="doc-symbol doc-symbol-function"/> setMaxPlayers [#setMaxPlayers]
 
 ```cpp
-virtual Result< void > endstone::Server::setMaxPlayers (
-    int max_players
-) = 0
+Result<void> setMaxPlayers(int max_players)
 ```
 
 Set the maximum amount of players allowed to be logged in at once.
@@ -1296,7 +1266,7 @@ Set the maximum amount of players allowed to be logged in at once.
 ### <code className="doc-symbol doc-symbol-function"/> shutdown [#shutdown]
 
 ```cpp
-virtual void endstone::Server::shutdown () = 0
+void shutdown()
 ```
 
 Shutdowns the server, stopping everything.

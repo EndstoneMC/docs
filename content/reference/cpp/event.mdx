@@ -54,20 +54,16 @@ title: "Event"
 
 
 ```cpp
-inline explicit endstone::Event::Event (
-    bool async=false
-) 
+Event(bool async = false)
 ```
 
 ```cpp
-endstone::Event::Event (
-    const Event &
-) = delete
+Event(const Event &) = delete
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-virtual std::string endstone::Event::getEventName () const = 0
+std::string getEventName() const
 ```
 
 
@@ -88,7 +84,7 @@ name of this event
 ### <code className="doc-symbol doc-symbol-function"/> isAsynchronous [#isAsynchronous]
 
 ```cpp
-inline bool endstone::Event::isAsynchronous () const
+bool isAsynchronous() const
 ```
 
 

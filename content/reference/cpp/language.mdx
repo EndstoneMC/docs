@@ -64,7 +64,7 @@ title: "Language"
 ### <code className="doc-symbol doc-symbol-function"/> getLocale [#getLocale]
 
 ```cpp
-virtual std::string endstone::Language::getLocale () const = 0
+std::string getLocale() const
 ```
 
 Gets the current locale.
@@ -87,9 +87,7 @@ A string representing the current locale (e.g., "en\_US").
 
 
 ```cpp
-virtual std::string endstone::Language::translate (
-    std::string text
-) const = 0
+std::string translate(std::string text) const
 ```
 
 Translates a given text into the current locale.
@@ -116,10 +114,7 @@ The translated text in the current locale.
         
 
 ```cpp
-virtual std::string endstone::Language::translate (
-    std::string text,
-    std::string locale
-) const = 0
+std::string translate(std::string text, std::string locale) const
 ```
 
 Translates a given text into a specific locale.
@@ -147,10 +142,7 @@ The translated text in the specified locale.
         
 
 ```cpp
-virtual std::string endstone::Language::translate (
-    std::string text,
-    std::vector< std::string > params
-) const = 0
+std::string translate(std::string text, std::vector<std::string> params) const
 ```
 
 Translates a given text using a set of parameters for the current locale.
@@ -178,11 +170,8 @@ The translated text in the current locale, with parameters applied.
         
 
 ```cpp
-virtual std::string endstone::Language::translate (
-    std::string text,
-    std::vector< std::string > params,
-    std::string locale
-) const = 0
+std::string translate(std::string text, std::vector<std::string> params,
+                      std::string locale) const
 ```
 
 Translates a given text using a set of parameters for a specific locale.
@@ -211,9 +200,7 @@ The translated text in the specified locale, with parameters applied.
         
 
 ```cpp
-virtual std::string endstone::Language::translate (
-    Translatable translatable
-) const = 0
+std::string translate(Translatable translatable) const
 ```
 
 Translates a Translatable object into the current locale.
@@ -240,10 +227,7 @@ The translated text in the current locale.
         
 
 ```cpp
-virtual std::string endstone::Language::translate (
-    Translatable translatable,
-    std::string locale
-) const = 0
+std::string translate(Translatable translatable, std::string locale) const
 ```
 
 Translates a Translatable object into a specific locale.

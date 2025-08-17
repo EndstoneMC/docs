@@ -4,7 +4,7 @@ title: "PlayerEmoteEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerEmoteEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -77,16 +77,12 @@ const std::string endstone::PlayerEmoteEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> PlayerEmoteEvent [#PlayerEmoteEvent]
 
 ```cpp
-inline explicit endstone::PlayerEmoteEvent::PlayerEmoteEvent (
-    Player & player,
-    std::string emote_id,
-    bool muted
-) 
+PlayerEmoteEvent(Player &player, std::string emote_id, bool muted)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getEmoteId [#getEmoteId]
 
 ```cpp
-inline std::string endstone::PlayerEmoteEvent::getEmoteId () const
+std::string getEmoteId() const
 ```
 
 Gets the emote piece ID.
@@ -107,7 +103,7 @@ The emote piece ID
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::PlayerEmoteEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 
@@ -128,7 +124,7 @@ name of this event
 ### <code className="doc-symbol doc-symbol-function"/> isMuted [#isMuted]
 
 ```cpp
-inline bool endstone::PlayerEmoteEvent::isMuted () const
+bool isMuted() const
 ```
 
 Gets the muted state for the emote.
@@ -152,9 +148,7 @@ true if the emote is muted, false otherwise.
 ### <code className="doc-symbol doc-symbol-function"/> setMuted [#setMuted]
 
 ```cpp
-inline void endstone::PlayerEmoteEvent::setMuted (
-    bool muted
-) 
+void setMuted(bool muted)
 ```
 
 Sets the muted state for the emote.

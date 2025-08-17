@@ -108,28 +108,23 @@ title: "PluginDescription"
 ### <code className="doc-symbol doc-symbol-function"/> PluginDescription [#PluginDescription]
 
 ```cpp
-inline endstone::PluginDescription::PluginDescription (
-    std::string name,
-    std::string version,
-    std::string description="",
-    PluginLoadOrder load=PluginLoadOrder::PostWorld,
-    std::vector< std::string > authors={},
-    std::vector< std::string > contributors={},
-    std::string website="",
-    std::string prefix="",
-    std::vector< std::string > provides={},
-    std::vector< std::string > depend={},
-    std::vector< std::string > soft_depend={},
-    std::vector< std::string > load_before={},
-    PermissionDefault default_permission=PermissionDefault::Operator,
-    std::vector< Command > commands={},
-    std::vector< Permission > permissions={}
-) 
+PluginDescription(
+    std::string name, std::string version, std::string description = "",
+    PluginLoadOrder load = PluginLoadOrder::PostWorld,
+    std::vector<std::string> authors = {},
+    std::vector<std::string> contributors = {}, std::string website = "",
+    std::string prefix = "", std::vector<std::string> provides = {},
+    std::vector<std::string> depend = {},
+    std::vector<std::string> soft_depend = {},
+    std::vector<std::string> load_before = {},
+    PermissionDefault default_permission = PermissionDefault::Operator,
+    std::vector<Command> commands = {},
+    std::vector<Permission> permissions = {})
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getAPIVersion [#getAPIVersion]
 
 ```cpp
-inline std::string endstone::PluginDescription::getAPIVersion () const
+std::string getAPIVersion() const
 ```
 
 
@@ -150,7 +145,7 @@ the API version supported by the plugin
 ### <code className="doc-symbol doc-symbol-function"/> getAuthors [#getAuthors]
 
 ```cpp
-inline std::vector< std::string > endstone::PluginDescription::getAuthors () const
+std::vector<std::string> getAuthors() const
 ```
 
 
@@ -171,7 +166,7 @@ an immutable list of the plugin's authors
 ### <code className="doc-symbol doc-symbol-function"/> getCommands [#getCommands]
 
 ```cpp
-inline std::vector< Command > endstone::PluginDescription::getCommands () const
+std::vector<Command> getCommands() const
 ```
 
 
@@ -192,7 +187,7 @@ the commands this plugin will register
 ### <code className="doc-symbol doc-symbol-function"/> getContributors [#getContributors]
 
 ```cpp
-inline std::vector< std::string > endstone::PluginDescription::getContributors () const
+std::vector<std::string> getContributors() const
 ```
 
 
@@ -213,7 +208,7 @@ an immutable list of the plugin's contributions
 ### <code className="doc-symbol doc-symbol-function"/> getDefaultPermission [#getDefaultPermission]
 
 ```cpp
-inline PermissionDefault endstone::PluginDescription::getDefaultPermission () const
+PermissionDefault getDefaultPermission() const
 ```
 
 
@@ -234,7 +229,7 @@ the default value for the plugin's permissions
 ### <code className="doc-symbol doc-symbol-function"/> getDepend [#getDepend]
 
 ```cpp
-inline std::vector< std::string > endstone::PluginDescription::getDepend () const
+std::vector<std::string> getDepend() const
 ```
 
 
@@ -255,7 +250,7 @@ immutable list of the plugin's dependencies
 ### <code className="doc-symbol doc-symbol-function"/> getDescription [#getDescription]
 
 ```cpp
-inline std::string endstone::PluginDescription::getDescription () const
+std::string getDescription() const
 ```
 
 
@@ -273,7 +268,7 @@ description of this plugin, or empty if not specified
 ### <code className="doc-symbol doc-symbol-function"/> getFullName [#getFullName]
 
 ```cpp
-inline std::string endstone::PluginDescription::getFullName () const
+std::string getFullName() const
 ```
 
 
@@ -294,7 +289,7 @@ a descriptive name of the plugin and respective version
 ### <code className="doc-symbol doc-symbol-function"/> getLoad [#getLoad]
 
 ```cpp
-inline PluginLoadOrder endstone::PluginDescription::getLoad () const
+PluginLoadOrder getLoad() const
 ```
 
 
@@ -315,7 +310,7 @@ the phase when the plugin should be loaded
 ### <code className="doc-symbol doc-symbol-function"/> getLoadBefore [#getLoadBefore]
 
 ```cpp
-inline std::vector< std::string > endstone::PluginDescription::getLoadBefore () const
+std::vector<std::string> getLoadBefore() const
 ```
 
 
@@ -336,7 +331,7 @@ immutable list of plugins that should consider this plugin a soft-dependency
 ### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
-inline std::string endstone::PluginDescription::getName () const
+std::string getName() const
 ```
 
 
@@ -357,7 +352,7 @@ the name of the plugin
 ### <code className="doc-symbol doc-symbol-function"/> getPermissions [#getPermissions]
 
 ```cpp
-inline std::vector< Permission > endstone::PluginDescription::getPermissions () const
+std::vector<Permission> getPermissions() const
 ```
 
 
@@ -378,7 +373,7 @@ the permissions this plugin will register
 ### <code className="doc-symbol doc-symbol-function"/> getPrefix [#getPrefix]
 
 ```cpp
-inline std::string endstone::PluginDescription::getPrefix () const
+std::string getPrefix() const
 ```
 
 
@@ -399,7 +394,7 @@ the prefixed logging token, or empty if not specified
 ### <code className="doc-symbol doc-symbol-function"/> getProvides [#getProvides]
 
 ```cpp
-inline std::vector< std::string > endstone::PluginDescription::getProvides () const
+std::vector<std::string> getProvides() const
 ```
 
 
@@ -420,7 +415,7 @@ immutable list of the plugin APIs which this plugin provides
 ### <code className="doc-symbol doc-symbol-function"/> getSoftDepend [#getSoftDepend]
 
 ```cpp
-inline std::vector< std::string > endstone::PluginDescription::getSoftDepend () const
+std::vector<std::string> getSoftDepend() const
 ```
 
 
@@ -441,7 +436,7 @@ immutable list of the plugin's preferred dependencies
 ### <code className="doc-symbol doc-symbol-function"/> getVersion [#getVersion]
 
 ```cpp
-inline std::string endstone::PluginDescription::getVersion () const
+std::string getVersion() const
 ```
 
 
@@ -462,7 +457,7 @@ the version of the plugin
 ### <code className="doc-symbol doc-symbol-function"/> getWebsite [#getWebsite]
 
 ```cpp
-inline std::string endstone::PluginDescription::getWebsite () const
+std::string getWebsite() const
 ```
 
 

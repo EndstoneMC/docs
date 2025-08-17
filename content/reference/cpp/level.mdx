@@ -60,7 +60,7 @@ title: "Level"
 ### <code className="doc-symbol doc-symbol-function"/> getActors [#getActors]
 
 ```cpp
-virtual std::vector< Actor * > endstone::Level::getActors () const = 0
+std::vector<Actor *> getActors() const
 ```
 
 Get a list of all actors in this level.
@@ -81,9 +81,7 @@ A List of all actors currently residing in this level
 ### <code className="doc-symbol doc-symbol-function"/> getDimension [#getDimension]
 
 ```cpp
-virtual Dimension * endstone::Level::getDimension (
-    std::string name
-) const = 0
+Dimension *getDimension(std::string name) const
 ```
 
 Gets the dimension with the given name.
@@ -111,7 +109,7 @@ The [**Dimension**](classendstone_1_1_dimension.md) with the given name, or null
 ### <code className="doc-symbol doc-symbol-function"/> getDimensions [#getDimensions]
 
 ```cpp
-virtual std::vector< Dimension * > endstone::Level::getDimensions () const = 0
+std::vector<Dimension *> getDimensions() const
 ```
 
 Gets a list of all dimensions within this level.
@@ -132,7 +130,7 @@ a list of dimensions
 ### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
-virtual std::string endstone::Level::getName () const = 0
+std::string getName() const
 ```
 
 Gets the unique name of this level.
@@ -153,7 +151,7 @@ Name of this level
 ### <code className="doc-symbol doc-symbol-function"/> getTime [#getTime]
 
 ```cpp
-virtual int endstone::Level::getTime () const = 0
+int getTime() const
 ```
 
 Gets the relative in-game time of this level.
@@ -174,9 +172,7 @@ The current relative time
 ### <code className="doc-symbol doc-symbol-function"/> setTime [#setTime]
 
 ```cpp
-virtual void endstone::Level::setTime (
-    int time
-) = 0
+void setTime(int time)
 ```
 
 Sets the relative in-game time on the server.

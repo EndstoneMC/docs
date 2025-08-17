@@ -60,7 +60,7 @@ title: "Score"
 ### <code className="doc-symbol doc-symbol-function"/> getEntry [#getEntry]
 
 ```cpp
-virtual ScoreEntry endstone::Score::getEntry () const = 0
+ScoreEntry getEntry() const
 ```
 
 Gets the entry being tracked by this Score .
@@ -81,7 +81,7 @@ this [**Score**](classendstone_1_1_score.md)'s tracked entry
 ### <code className="doc-symbol doc-symbol-function"/> getObjective [#getObjective]
 
 ```cpp
-virtual Objective & endstone::Score::getObjective () const = 0
+Objective &getObjective() const
 ```
 
 Gets the Objective being tracked by this Score .
@@ -102,7 +102,7 @@ the owning objective's scoreboard
 ### <code className="doc-symbol doc-symbol-function"/> getScoreboard [#getScoreboard]
 
 ```cpp
-virtual Scoreboard & endstone::Score::getScoreboard () const = 0
+Scoreboard &getScoreboard() const
 ```
 
 Gets the scoreboard for the associated objective.
@@ -123,7 +123,7 @@ the owning objective's scoreboard
 ### <code className="doc-symbol doc-symbol-function"/> getValue [#getValue]
 
 ```cpp
-virtual Result< int > endstone::Score::getValue () const = 0
+Result<int> getValue() const
 ```
 
 Gets the current score.
@@ -144,7 +144,7 @@ the current score
 ### <code className="doc-symbol doc-symbol-function"/> isScoreSet [#isScoreSet]
 
 ```cpp
-virtual Result< bool > endstone::Score::isScoreSet () const = 0
+Result<bool> isScoreSet() const
 ```
 
 Shows if this score has been set at any point in time.
@@ -165,9 +165,7 @@ if this score has been set before
 ### <code className="doc-symbol doc-symbol-function"/> setValue [#setValue]
 
 ```cpp
-virtual Result< void > endstone::Score::setValue (
-    int score
-) = 0
+Result<void> setValue(int score)
 ```
 
 Sets the current score.

@@ -119,13 +119,7 @@ title: "MapView"
 ### <code className="doc-symbol doc-symbol-enum"/> Scale [#Scale]
 
 ```cpp
-enum endstone::MapView::Scale {
-    Closest = 0,
-    Close = 1,
-    Normal = 2,
-    Far = 3,
-    Farthest = 4
-};
+enum Scale { Closest = 0, Close = 1, Normal = 2, Far = 3, Farthest = 4 };
 ```
 
 An enum representing all possible scales a map can be set to.
@@ -133,9 +127,7 @@ An enum representing all possible scales a map can be set to.
 ### <code className="doc-symbol doc-symbol-function"/> addRenderer [#addRenderer]
 
 ```cpp
-virtual void endstone::MapView::addRenderer (
-    std::shared_ptr< MapRenderer > renderer
-) = 0
+void addRenderer(std::shared_ptr<MapRenderer> renderer)
 ```
 
 Add a renderer to this map.
@@ -156,7 +148,7 @@ Add a renderer to this map.
 ### <code className="doc-symbol doc-symbol-function"/> getCenterX [#getCenterX]
 
 ```cpp
-virtual int endstone::MapView::getCenterX () const = 0
+int getCenterX() const
 ```
 
 Get the center X position of this map.
@@ -177,7 +169,7 @@ The center X position.
 ### <code className="doc-symbol doc-symbol-function"/> getCenterZ [#getCenterZ]
 
 ```cpp
-virtual int endstone::MapView::getCenterZ () const = 0
+int getCenterZ() const
 ```
 
 Get the center Z position of this map.
@@ -198,7 +190,7 @@ The center Z position.
 ### <code className="doc-symbol doc-symbol-function"/> getDimension [#getDimension]
 
 ```cpp
-virtual Dimension * endstone::MapView::getDimension () const = 0
+Dimension *getDimension() const
 ```
 
 Get the dimension that this map is associated with.
@@ -219,7 +211,7 @@ Pointer to the World this map is associated with, or nullptr.
 ### <code className="doc-symbol doc-symbol-function"/> getId [#getId]
 
 ```cpp
-virtual std::int64_t endstone::MapView::getId () const = 0
+std::int64_t getId() const
 ```
 
 Get the ID of this map item for use with MapMeta .
@@ -240,7 +232,7 @@ The unique ID of the map.
 ### <code className="doc-symbol doc-symbol-function"/> getRenderers [#getRenderers]
 
 ```cpp
-virtual std::vector< MapRenderer * > endstone::MapView::getRenderers () const = 0
+std::vector<MapRenderer *> getRenderers() const
 ```
 
 Get a list of MapRenderers currently in effect.
@@ -261,7 +253,7 @@ A list of references to each [**MapRenderer**](classendstone_1_1_map_renderer.md
 ### <code className="doc-symbol doc-symbol-function"/> getScale [#getScale]
 
 ```cpp
-virtual Scale endstone::MapView::getScale () const = 0
+Scale getScale() const
 ```
 
 Get the scale of this map.
@@ -282,7 +274,7 @@ The scale of the map.
 ### <code className="doc-symbol doc-symbol-function"/> isLocked [#isLocked]
 
 ```cpp
-virtual bool endstone::MapView::isLocked () const = 0
+bool isLocked() const
 ```
 
 Gets whether the map is locked or not. A locked map may not be explored further.
@@ -303,7 +295,7 @@ True if the map is locked.
 ### <code className="doc-symbol doc-symbol-function"/> isUnlimitedTracking [#isUnlimitedTracking]
 
 ```cpp
-virtual bool endstone::MapView::isUnlimitedTracking () const = 0
+bool isUnlimitedTracking() const
 ```
 
 Whether the map will show a smaller position cursor (true), or no position cursor (false) when cursor is outside of map's range.
@@ -324,7 +316,7 @@ True if unlimited tracking is enabled.
 ### <code className="doc-symbol doc-symbol-function"/> isVirtual [#isVirtual]
 
 ```cpp
-virtual bool endstone::MapView::isVirtual () const = 0
+bool isVirtual() const
 ```
 
 Check whether this map is virtual.
@@ -348,9 +340,7 @@ True if the map is virtual.
 ### <code className="doc-symbol doc-symbol-function"/> removeRenderer [#removeRenderer]
 
 ```cpp
-virtual bool endstone::MapView::removeRenderer (
-    MapRenderer * renderer
-) = 0
+bool removeRenderer(MapRenderer *renderer)
 ```
 
 Remove a renderer from this map.
@@ -378,9 +368,7 @@ True if the renderer was successfully removed.
 ### <code className="doc-symbol doc-symbol-function"/> setCenterX [#setCenterX]
 
 ```cpp
-virtual void endstone::MapView::setCenterX (
-    int x
-) = 0
+void setCenterX(int x)
 ```
 
 Set the center X position of this map.
@@ -401,9 +389,7 @@ Set the center X position of this map.
 ### <code className="doc-symbol doc-symbol-function"/> setCenterZ [#setCenterZ]
 
 ```cpp
-virtual void endstone::MapView::setCenterZ (
-    int z
-) = 0
+void setCenterZ(int z)
 ```
 
 Set the center Z position of this map.
@@ -424,9 +410,7 @@ Set the center Z position of this map.
 ### <code className="doc-symbol doc-symbol-function"/> setDimension [#setDimension]
 
 ```cpp
-virtual void endstone::MapView::setDimension (
-    const Dimension & dimension
-) = 0
+void setDimension(const Dimension &dimension)
 ```
 
 Set the dimension that this map is associated with.
@@ -447,9 +431,7 @@ Set the dimension that this map is associated with.
 ### <code className="doc-symbol doc-symbol-function"/> setLocked [#setLocked]
 
 ```cpp
-virtual void endstone::MapView::setLocked (
-    bool locked
-) = 0
+void setLocked(bool locked)
 ```
 
 Sets whether the map is locked or not. A locked map may not be explored further.
@@ -470,9 +452,7 @@ Sets whether the map is locked or not. A locked map may not be explored further.
 ### <code className="doc-symbol doc-symbol-function"/> setScale [#setScale]
 
 ```cpp
-virtual void endstone::MapView::setScale (
-    Scale scale
-) = 0
+void setScale(Scale scale)
 ```
 
 Set the scale of this map.
@@ -493,9 +473,7 @@ Set the scale of this map.
 ### <code className="doc-symbol doc-symbol-function"/> setUnlimitedTracking [#setUnlimitedTracking]
 
 ```cpp
-virtual void endstone::MapView::setUnlimitedTracking (
-    bool unlimited
-) = 0
+void setUnlimitedTracking(bool unlimited)
 ```
 
 Whether the map will show a smaller position cursor (true), or no position cursor (false) when cursor is outside of map's range.

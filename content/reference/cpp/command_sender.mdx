@@ -4,7 +4,7 @@ title: "CommandSender"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::CommandSender
 
-Bases: [`endstone::Permissible`](classendstone_1_1_permissible.md)
+Bases: [`endstone::Permissible`](permissible)
 
 
 
@@ -81,7 +81,7 @@ Bases: [`endstone::Permissible`](classendstone_1_1_permissible.md)
 ### <code className="doc-symbol doc-symbol-function"/> asActor [#asActor]
 
 ```cpp
-inline virtual Actor * endstone::CommandSender::asActor () const
+Actor *asActor() const
 ```
 
 Gets a CommandSender as Actor .
@@ -102,7 +102,7 @@ Gets a CommandSender as Actor .
 ### <code className="doc-symbol doc-symbol-function"/> asBlock [#asBlock]
 
 ```cpp
-inline virtual BlockCommandSender * endstone::CommandSender::asBlock () const
+BlockCommandSender *asBlock() const
 ```
 
 Gets a CommandSender as BlockCommandSender .
@@ -123,7 +123,7 @@ Gets a CommandSender as BlockCommandSender .
 ### <code className="doc-symbol doc-symbol-function"/> asCommandSender [#asCommandSender]
 
 ```cpp
-inline virtual CommandSender * endstone::CommandSender::asCommandSender () override const
+CommandSender *asCommandSender() override const
 ```
 
 Casts a Permissible as CommandSender .
@@ -144,7 +144,7 @@ Casts a Permissible as CommandSender .
 ### <code className="doc-symbol doc-symbol-function"/> asConsole [#asConsole]
 
 ```cpp
-inline virtual ConsoleCommandSender * endstone::CommandSender::asConsole () const
+ConsoleCommandSender *asConsole() const
 ```
 
 Gets a CommandSender as ConsoleCommandSender .
@@ -165,7 +165,7 @@ Gets a CommandSender as ConsoleCommandSender .
 ### <code className="doc-symbol doc-symbol-function"/> asPlayer [#asPlayer]
 
 ```cpp
-inline virtual Player * endstone::CommandSender::asPlayer () const
+Player *asPlayer() const
 ```
 
 Gets a CommandSender as Player .
@@ -186,7 +186,7 @@ Gets a CommandSender as Player .
 ### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
-virtual std::string endstone::CommandSender::getName () const = 0
+std::string getName() const
 ```
 
 Gets the name of this command sender.
@@ -207,7 +207,7 @@ Name of the sender
 ### <code className="doc-symbol doc-symbol-function"/> getServer [#getServer]
 
 ```cpp
-virtual Server & endstone::CommandSender::getServer () const = 0
+Server &getServer() const
 ```
 
 Returns the server instance that this command is running on.
@@ -230,9 +230,7 @@ Returns the server instance that this command is running on.
 
 
 ```cpp
-virtual void endstone::CommandSender::sendErrorMessage (
-    const Message & message
-) const = 0
+void sendErrorMessage(const Message &message) const
 ```
 
 Sends this sender a error message.
@@ -252,20 +250,16 @@ Sends this sender a error message.
         
 
 ```cpp
-template<typename... Args>
-inline void endstone::CommandSender::sendErrorMessage (
-    const fmt::format_string< Args... > format,
-    Args &&... args
-) const
+template <typename... Args>
+void sendErrorMessage(const fmt::format_string<Args...> format,
+                      Args &&...args) const
 ```
 ### <code className="doc-symbol doc-symbol-function"/> sendMessage [#sendMessage]
 
 
 
 ```cpp
-virtual void endstone::CommandSender::sendMessage (
-    const Message & message
-) const = 0
+void sendMessage(const Message &message) const
 ```
 
 Sends this sender a message.
@@ -285,9 +279,6 @@ Sends this sender a message.
         
 
 ```cpp
-template<typename... Args>
-inline void endstone::CommandSender::sendMessage (
-    const fmt::format_string< Args... > format,
-    Args &&... args
-) const
+template <typename... Args>
+void sendMessage(const fmt::format_string<Args...> format, Args &&...args) const
 ```

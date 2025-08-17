@@ -4,7 +4,7 @@ title: "BlockEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::BlockEvent
 
-Bases: [`endstone::Event`](classendstone_1_1_event.md)
+Bases: [`endstone::Event`](event)
 
 
 
@@ -45,14 +45,12 @@ Bases: [`endstone::Event`](classendstone_1_1_event.md)
 ### <code className="doc-symbol doc-symbol-function"/> BlockEvent [#BlockEvent]
 
 ```cpp
-inline explicit endstone::BlockEvent::BlockEvent (
-    std::unique_ptr< Block > block
-) 
+BlockEvent(std::unique_ptr<Block> block)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getBlock [#getBlock]
 
 ```cpp
-inline Block & endstone::BlockEvent::getBlock () const
+Block &getBlock() const
 ```
 
 Gets the block involved in this event.

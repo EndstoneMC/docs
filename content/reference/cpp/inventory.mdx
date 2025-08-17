@@ -138,9 +138,7 @@ title: "Inventory"
 
 
 ```cpp
-virtual std::unordered_map< int, ItemStack * > endstone::Inventory::addItem (
-    std::vector< ItemStack * > items
-) = 0
+std::unordered_map<int, ItemStack *> addItem(std::vector<ItemStack *> items)
 ```
 
 Stores the given ItemStacks in the inventory.
@@ -181,10 +179,8 @@ A map containing items that couldn't be added.
         
 
 ```cpp
-template<typename... Args, typename>
-inline std::unordered_map< int, ItemStack * > endstone::Inventory::addItem (
-    Args &&... items
-) 
+template <typename... Args, typename>
+std::unordered_map<int, ItemStack *> addItem(Args &&...items)
 ```
 
 Stores the given ItemStacks in the inventory.
@@ -228,9 +224,8 @@ A map containing items that couldn't be added.
 
 
 ```cpp
-virtual std::unordered_map< int, std::unique_ptr< ItemStack > > endstone::Inventory::all (
-    const std::string & type
-) const = 0
+std::unordered_map<int, std::unique_ptr<ItemStack>>
+all(const std::string &type) const
 ```
 
 Finds all slots in the inventory containing any ItemStacks with the given ItemType .
@@ -260,9 +255,8 @@ A map from slot indexes to item at index
         
 
 ```cpp
-virtual std::unordered_map< int, std::unique_ptr< ItemStack > > endstone::Inventory::all (
-    const ItemStack & item
-) const = 0
+std::unordered_map<int, std::unique_ptr<ItemStack>>
+all(const ItemStack &item) const
 ```
 
 Finds all slots in the inventory containing any ItemStacks with the given ItemStack .
@@ -302,9 +296,7 @@ A map from slot indexes to item at index
 
 
 ```cpp
-virtual void endstone::Inventory::clear (
-    int index
-) = 0
+void clear(int index)
 ```
 
 Clears out a particular slot in the index.
@@ -324,7 +316,7 @@ Clears out a particular slot in the index.
         
 
 ```cpp
-virtual void endstone::Inventory::clear () = 0
+void clear()
 ```
 
 Clears out the whole Inventory .
@@ -334,9 +326,7 @@ Clears out the whole Inventory .
 
 
 ```cpp
-virtual bool endstone::Inventory::contains (
-    const std::string & type
-) const = 0
+bool contains(const std::string &type) const
 ```
 
 Checks if the inventory contains any ItemStacks with the given ItemType .
@@ -363,9 +353,7 @@ true if an [**ItemStack**](classendstone_1_1_item_stack.md) is found with the gi
         
 
 ```cpp
-virtual bool endstone::Inventory::contains (
-    const ItemStack & item
-) const = 0
+bool contains(const ItemStack &item) const
 ```
 
 Checks if the inventory contains any ItemStacks with the given ItemStack .
@@ -399,10 +387,7 @@ true if any exactly matching ItemStacks were found, false otherwise
         
 
 ```cpp
-virtual bool endstone::Inventory::contains (
-    const ItemStack & item,
-    int amount
-) const = 0
+bool contains(const ItemStack &item, int amount) const
 ```
 
 Checks if the inventory contains at least the minimum amount specified of exactly matching ItemStacks.
@@ -440,10 +425,7 @@ true if amount less than 1 or if amount of exactly matching ItemStacks were foun
 
 
 ```cpp
-virtual bool endstone::Inventory::containsAtLeast (
-    const std::string & type,
-    int amount
-) const = 0
+bool containsAtLeast(const std::string &type, int amount) const
 ```
 
 Checks if the inventory contains any ItemStacks with the given ItemType , adding to at least the minimum amount specified.
@@ -471,10 +453,7 @@ true if amount is less than 1, true if enough ItemStacks were found to add to th
         
 
 ```cpp
-virtual bool endstone::Inventory::containsAtLeast (
-    const ItemStack & item,
-    int amount
-) const = 0
+bool containsAtLeast(const ItemStack &item, int amount) const
 ```
 
 Checks if the inventory contains ItemStacks matching the given ItemStack whose amounts sum to at least the minimum amount specified.
@@ -505,9 +484,7 @@ true if amount less than 1 or enough ItemStacks were found to add to the given a
 
 
 ```cpp
-virtual int endstone::Inventory::first (
-    const std::string & type
-) const = 0
+int first(const std::string &type) const
 ```
 
 Finds the first slot in the inventory containing an ItemStack with the given ItemType .
@@ -534,9 +511,7 @@ The slot index of the given [**ItemType**](classendstone_1_1_item_type.md) or -1
         
 
 ```cpp
-virtual int endstone::Inventory::first (
-    const ItemStack & item
-) const = 0
+int first(const ItemStack &item) const
 ```
 
 Returns the first slot in the inventory containing an ItemStack with the given stack.
@@ -564,7 +539,7 @@ The slot index of the given [**ItemStack**](classendstone_1_1_item_stack.md) or 
 ### <code className="doc-symbol doc-symbol-function"/> firstEmpty [#firstEmpty]
 
 ```cpp
-virtual int endstone::Inventory::firstEmpty () const = 0
+int firstEmpty() const
 ```
 
 Returns the first empty Slot.
@@ -585,7 +560,7 @@ The first empty Slot found, or -1 if no empty slots.
 ### <code className="doc-symbol doc-symbol-function"/> getContents [#getContents]
 
 ```cpp
-virtual std::vector< std::unique_ptr< ItemStack > > endstone::Inventory::getContents () const = 0
+std::vector<std::unique_ptr<ItemStack>> getContents() const
 ```
 
 Returns all ItemStacks from the inventory.
@@ -606,9 +581,7 @@ An array of ItemStacks from the inventory. Individual items may be null.
 ### <code className="doc-symbol doc-symbol-function"/> getItem [#getItem]
 
 ```cpp
-virtual std::unique_ptr< ItemStack > endstone::Inventory::getItem (
-    int index
-) const = 0
+std::unique_ptr<ItemStack> getItem(int index) const
 ```
 
 Returns the ItemStack found in the slot at the given index.
@@ -636,7 +609,7 @@ The [**ItemStack**](classendstone_1_1_item_stack.md) in the slot
 ### <code className="doc-symbol doc-symbol-function"/> getMaxStackSize [#getMaxStackSize]
 
 ```cpp
-virtual int endstone::Inventory::getMaxStackSize () const = 0
+int getMaxStackSize() const
 ```
 
 Returns the maximum stack size for an ItemStack in this inventory.
@@ -657,7 +630,7 @@ The maximum size for an [**ItemStack**](classendstone_1_1_item_stack.md) in this
 ### <code className="doc-symbol doc-symbol-function"/> getSize [#getSize]
 
 ```cpp
-virtual int endstone::Inventory::getSize () const = 0
+int getSize() const
 ```
 
 Returns the size of the inventory.
@@ -678,7 +651,7 @@ The size of the inventory
 ### <code className="doc-symbol doc-symbol-function"/> isEmpty [#isEmpty]
 
 ```cpp
-virtual bool endstone::Inventory::isEmpty () const = 0
+bool isEmpty() const
 ```
 
 Check whether this inventory is empty. An inventory is considered to be empty if there are no ItemStacks in any slot of this inventory.
@@ -701,9 +674,7 @@ true if empty, false otherwise
 
 
 ```cpp
-virtual void endstone::Inventory::remove (
-    const std::string & type
-) = 0
+void remove(const std::string &type)
 ```
 
 Removes all stacks in the inventory matching the given ItemType .
@@ -723,9 +694,7 @@ Removes all stacks in the inventory matching the given ItemType .
         
 
 ```cpp
-virtual void endstone::Inventory::remove (
-    const ItemStack & item
-) = 0
+void remove(const ItemStack &item)
 ```
 
 Removes all stacks in the inventory matching the given stack.
@@ -755,9 +724,7 @@ This will only match a slot if both the type and the amount of the stack match
 
 
 ```cpp
-virtual std::unordered_map< int, ItemStack * > endstone::Inventory::removeItem (
-    std::vector< ItemStack * > items
-) = 0
+std::unordered_map<int, ItemStack *> removeItem(std::vector<ItemStack *> items)
 ```
 
 Removes the given ItemStacks from the inventory.
@@ -798,10 +765,8 @@ A map containing items that couldn't be removed.
         
 
 ```cpp
-template<typename... Args, typename>
-inline std::unordered_map< int, ItemStack * > endstone::Inventory::removeItem (
-    Args &&... items
-) 
+template <typename... Args, typename>
+std::unordered_map<int, ItemStack *> removeItem(Args &&...items)
 ```
 
 Removes the given ItemStacks from the inventory.
@@ -843,9 +808,7 @@ A map containing items that couldn't be removed.
 ### <code className="doc-symbol doc-symbol-function"/> setContents [#setContents]
 
 ```cpp
-virtual Result< void > endstone::Inventory::setContents (
-    std::vector< const ItemStack * > items
-) = 0
+Result<void> setContents(std::vector<const ItemStack *> items)
 ```
 
 Completely replaces the inventory's contents. Removes all existing contents and replaces it with the ItemStacks given in the array.
@@ -866,10 +829,7 @@ Completely replaces the inventory's contents. Removes all existing contents and 
 ### <code className="doc-symbol doc-symbol-function"/> setItem [#setItem]
 
 ```cpp
-virtual void endstone::Inventory::setItem (
-    int index,
-    const ItemStack * item
-) = 0
+void setItem(int index, const ItemStack *item)
 ```
 
 Stores the ItemStack at the given index of the inventory.

@@ -54,19 +54,16 @@ title: "SocketAddress"
 
 
 ```cpp
-endstone::SocketAddress::SocketAddress () = default
+SocketAddress() = default
 ```
 
 ```cpp
-inline endstone::SocketAddress::SocketAddress (
-    std::string hostname,
-    std::uint32_t port
-) 
+SocketAddress(std::string hostname, std::uint32_t port)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getHostname [#getHostname]
 
 ```cpp
-inline const std::string & endstone::SocketAddress::getHostname () const
+const std::string &getHostname() const
 ```
 
 
@@ -87,7 +84,7 @@ The hostname of this socket address
 ### <code className="doc-symbol doc-symbol-function"/> getPort [#getPort]
 
 ```cpp
-inline std::uint32_t endstone::SocketAddress::getPort () const
+std::uint32_t getPort() const
 ```
 
 

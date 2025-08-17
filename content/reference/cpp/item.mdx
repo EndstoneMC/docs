@@ -4,7 +4,7 @@ title: "Item"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::Item
 
-Bases: [`endstone::Actor`](classendstone_1_1_actor.md)
+Bases: [`endstone::Actor`](actor)
 
 
 
@@ -69,7 +69,7 @@ Bases: [`endstone::Actor`](classendstone_1_1_actor.md)
 ### <code className="doc-symbol doc-symbol-function"/> getItemStack [#getItemStack]
 
 ```cpp
-virtual std::unique_ptr< ItemStack > endstone::Item::getItemStack () const = 0
+std::unique_ptr<ItemStack> getItemStack() const
 ```
 
 Gets the item stack associated with this item drop.
@@ -90,7 +90,7 @@ An item stack.
 ### <code className="doc-symbol doc-symbol-function"/> getPickupDelay [#getPickupDelay]
 
 ```cpp
-virtual int endstone::Item::getPickupDelay () const = 0
+int getPickupDelay() const
 ```
 
 Gets the delay before this Item is available to be picked up by players.
@@ -111,7 +111,7 @@ Remaining delay
 ### <code className="doc-symbol doc-symbol-function"/> getThrower [#getThrower]
 
 ```cpp
-virtual std::optional< std::int64_t > endstone::Item::getThrower () const = 0
+std::optional<std::int64_t> getThrower() const
 ```
 
 Get the thrower of this item.
@@ -139,7 +139,7 @@ unique id of thrower
 ### <code className="doc-symbol doc-symbol-function"/> isUnlimitedLifetime [#isUnlimitedLifetime]
 
 ```cpp
-virtual bool endstone::Item::isUnlimitedLifetime () const = 0
+bool isUnlimitedLifetime() const
 ```
 
 Gets if this Item lives forever.
@@ -160,9 +160,7 @@ true if the lifetime is unlimited
 ### <code className="doc-symbol doc-symbol-function"/> setItemStack [#setItemStack]
 
 ```cpp
-virtual void endstone::Item::setItemStack (
-    const ItemStack & stack
-) = 0
+void setItemStack(const ItemStack &stack)
 ```
 
 Sets the item stack associated with this item drop.
@@ -183,9 +181,7 @@ Sets the item stack associated with this item drop.
 ### <code className="doc-symbol doc-symbol-function"/> setPickupDelay [#setPickupDelay]
 
 ```cpp
-virtual void endstone::Item::setPickupDelay (
-    int delay
-) = 0
+void setPickupDelay(int delay)
 ```
 
 Sets the delay before this Item is available to be picked up by players.
@@ -206,9 +202,7 @@ Sets the delay before this Item is available to be picked up by players.
 ### <code className="doc-symbol doc-symbol-function"/> setThrower [#setThrower]
 
 ```cpp
-virtual void endstone::Item::setThrower (
-    std::optional< std::int64_t > thrower
-) = 0
+void setThrower(std::optional<std::int64_t> thrower)
 ```
 
 Set the thrower of this item.
@@ -236,9 +230,7 @@ The thrower is the entity which dropped the item.
 ### <code className="doc-symbol doc-symbol-function"/> setUnlimitedLifetime [#setUnlimitedLifetime]
 
 ```cpp
-virtual void endstone::Item::setUnlimitedLifetime (
-    bool unlimited
-) = 0
+void setUnlimitedLifetime(bool unlimited)
 ```
 
 Sets if this Item should live forever.

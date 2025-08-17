@@ -4,7 +4,7 @@ title: "BlockBreakEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::BlockBreakEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -69,15 +69,12 @@ const std::string endstone::BlockBreakEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> BlockBreakEvent [#BlockBreakEvent]
 
 ```cpp
-inline explicit endstone::BlockBreakEvent::BlockBreakEvent (
-    std::unique_ptr< Block > block,
-    Player & player
-) 
+BlockBreakEvent(std::unique_ptr<Block> block, Player &player)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::BlockBreakEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 
@@ -98,7 +95,7 @@ name of this event
 ### <code className="doc-symbol doc-symbol-function"/> getPlayer [#getPlayer]
 
 ```cpp
-inline Player & endstone::BlockBreakEvent::getPlayer () const
+Player &getPlayer() const
 ```
 
 Gets the Player that is breaking the block involved in this event.

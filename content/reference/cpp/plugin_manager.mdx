@@ -158,20 +158,16 @@ title: "PluginManager"
 
 
 ```cpp
-endstone::PluginManager::PluginManager () = default
+PluginManager() = default
 ```
 
 ```cpp
-endstone::PluginManager::PluginManager (
-    PluginManager const &
-) = delete
+PluginManager(PluginManager const &) = delete
 ```
 ### <code className="doc-symbol doc-symbol-function"/> addPermission [#addPermission]
 
 ```cpp
-virtual Permission * endstone::PluginManager::addPermission (
-    std::unique_ptr< Permission > perm
-) = 0
+Permission *addPermission(std::unique_ptr<Permission> perm)
 ```
 
 
@@ -199,9 +195,7 @@ Adds a [**Permission**](classendstone_1_1_permission.md) to this plugin manager.
 ### <code className="doc-symbol doc-symbol-function"/> callEvent [#callEvent]
 
 ```cpp
-virtual void endstone::PluginManager::callEvent (
-    Event & event
-) = 0
+void callEvent(Event &event)
 ```
 
 
@@ -222,7 +216,7 @@ Calls an event which will be passed to plugins.
 ### <code className="doc-symbol doc-symbol-function"/> clearPlugins [#clearPlugins]
 
 ```cpp
-virtual void endstone::PluginManager::clearPlugins () = 0
+void clearPlugins()
 ```
 
 
@@ -233,9 +227,7 @@ Disables and removes all plugins
 ### <code className="doc-symbol doc-symbol-function"/> disablePlugin [#disablePlugin]
 
 ```cpp
-virtual void endstone::PluginManager::disablePlugin (
-    Plugin & plugin
-) = 0
+void disablePlugin(Plugin &plugin)
 ```
 
 
@@ -256,7 +248,7 @@ Disables the specified plugin Attempting to disable a plugin that is not enabled
 ### <code className="doc-symbol doc-symbol-function"/> disablePlugins [#disablePlugins]
 
 ```cpp
-virtual void endstone::PluginManager::disablePlugins () = 0
+void disablePlugins()
 ```
 
 
@@ -267,9 +259,7 @@ Disables all the loaded plugins
 ### <code className="doc-symbol doc-symbol-function"/> enablePlugin [#enablePlugin]
 
 ```cpp
-virtual void endstone::PluginManager::enablePlugin (
-    Plugin & plugin
-) const = 0
+void enablePlugin(Plugin &plugin) const
 ```
 
 
@@ -290,7 +280,7 @@ Enables the specified plugin Attempting to enable a plugin that is already enabl
 ### <code className="doc-symbol doc-symbol-function"/> enablePlugins [#enablePlugins]
 
 ```cpp
-virtual void endstone::PluginManager::enablePlugins () const = 0
+void enablePlugins() const
 ```
 
 
@@ -301,9 +291,8 @@ Enable all the loaded plugins
 ### <code className="doc-symbol doc-symbol-function"/> getDefaultPermSubscriptions [#getDefaultPermSubscriptions]
 
 ```cpp
-virtual std::unordered_set< Permissible * > endstone::PluginManager::getDefaultPermSubscriptions (
-    PermissionLevel level
-) const = 0
+std::unordered_set<Permissible *>
+getDefaultPermSubscriptions(PermissionLevel level) const
 ```
 
 
@@ -331,9 +320,7 @@ Set containing all subscribed permissions
 ### <code className="doc-symbol doc-symbol-function"/> getDefaultPermissions [#getDefaultPermissions]
 
 ```cpp
-virtual std::vector< Permission * > endstone::PluginManager::getDefaultPermissions (
-    PermissionLevel level
-) const = 0
+std::vector<Permission *> getDefaultPermissions(PermissionLevel level) const
 ```
 
 
@@ -361,9 +348,7 @@ The default permissions
 ### <code className="doc-symbol doc-symbol-function"/> getPermission [#getPermission]
 
 ```cpp
-virtual Permission * endstone::PluginManager::getPermission (
-    std::string name
-) const = 0
+Permission *getPermission(std::string name) const
 ```
 
 
@@ -391,9 +376,8 @@ Gets a [**Permission**](classendstone_1_1_permission.md) from its fully qualifie
 ### <code className="doc-symbol doc-symbol-function"/> getPermissionSubscriptions [#getPermissionSubscriptions]
 
 ```cpp
-virtual std::unordered_set< Permissible * > endstone::PluginManager::getPermissionSubscriptions (
-    std::string permission
-) const = 0
+std::unordered_set<Permissible *>
+getPermissionSubscriptions(std::string permission) const
 ```
 
 
@@ -421,7 +405,7 @@ Set containing all subscribed permissions
 ### <code className="doc-symbol doc-symbol-function"/> getPermissions [#getPermissions]
 
 ```cpp
-virtual std::unordered_set< Permission * > endstone::PluginManager::getPermissions () const = 0
+std::unordered_set<Permission *> getPermissions() const
 ```
 
 
@@ -445,9 +429,7 @@ Set containing all current registered permissions
 ### <code className="doc-symbol doc-symbol-function"/> getPlugin [#getPlugin]
 
 ```cpp
-virtual Plugin * endstone::PluginManager::getPlugin (
-    const std::string & name
-) const = 0
+Plugin *getPlugin(const std::string &name) const
 ```
 
 
@@ -475,7 +457,7 @@ Checks if the given plugin is loaded and returns it when applicable. Please note
 ### <code className="doc-symbol doc-symbol-function"/> getPlugins [#getPlugins]
 
 ```cpp
-virtual std::vector< Plugin * > endstone::PluginManager::getPlugins () const = 0
+std::vector<Plugin *> getPlugins() const
 ```
 
 
@@ -498,9 +480,7 @@ List of Plugins
 
 
 ```cpp
-virtual bool endstone::PluginManager::isPluginEnabled (
-    const std::string & name
-) const = 0
+bool isPluginEnabled(const std::string &name) const
 ```
 
 
@@ -527,9 +507,7 @@ true if the plugin is enabled, otherwise false
         
 
 ```cpp
-virtual bool endstone::PluginManager::isPluginEnabled (
-    Plugin * plugin
-) const = 0
+bool isPluginEnabled(Plugin *plugin) const
 ```
 
 
@@ -557,9 +535,7 @@ true if the plugin is enabled, otherwise false
 ### <code className="doc-symbol doc-symbol-function"/> loadPlugin [#loadPlugin]
 
 ```cpp
-virtual Plugin * endstone::PluginManager::loadPlugin (
-    std::string file
-) = 0
+Plugin *loadPlugin(std::string file)
 ```
 
 
@@ -592,9 +568,7 @@ The [**Plugin**](classendstone_1_1_plugin.md) loaded, or nullptr if it was inval
 
 
 ```cpp
-virtual std::vector< Plugin * > endstone::PluginManager::loadPlugins (
-    std::string directory
-) = 0
+std::vector<Plugin *> loadPlugins(std::string directory)
 ```
 
 
@@ -621,9 +595,7 @@ A list of all plugins loaded
         
 
 ```cpp
-virtual std::vector< Plugin * > endstone::PluginManager::loadPlugins (
-    std::vector< std::string > files
-) = 0
+std::vector<Plugin *> loadPlugins(std::vector<std::string> files)
 ```
 
 
@@ -651,9 +623,7 @@ A list of all plugins loaded
 ### <code className="doc-symbol doc-symbol-function"/> recalculatePermissionDefaults [#recalculatePermissionDefaults]
 
 ```cpp
-virtual void endstone::PluginManager::recalculatePermissionDefaults (
-    Permission & perm
-) = 0
+void recalculatePermissionDefaults(Permission &perm)
 ```
 
 
@@ -677,13 +647,9 @@ This will have no effect if the specified permission is not registered here.
 ### <code className="doc-symbol doc-symbol-function"/> registerEvent [#registerEvent]
 
 ```cpp
-virtual void endstone::PluginManager::registerEvent (
-    std::string event,
-    std::function< void( Event &)> executor,
-    EventPriority priority,
-    Plugin & plugin,
-    bool ignore_cancelled
-) = 0
+void registerEvent(std::string event, std::function<void(Event &)> executor,
+                   EventPriority priority, Plugin &plugin,
+                   bool ignore_cancelled)
 ```
 
 
@@ -708,9 +674,7 @@ Registers the given event
 ### <code className="doc-symbol doc-symbol-function"/> registerLoader [#registerLoader]
 
 ```cpp
-virtual void endstone::PluginManager::registerLoader (
-    std::unique_ptr< PluginLoader > loader
-) = 0
+void registerLoader(std::unique_ptr<PluginLoader> loader)
 ```
 
 
@@ -733,9 +697,7 @@ Registers the specified plugin loader
 
 
 ```cpp
-virtual void endstone::PluginManager::removePermission (
-    Permission & perm
-) = 0
+void removePermission(Permission &perm)
 ```
 
 
@@ -758,9 +720,7 @@ If the specified permission does not exist in this plugin manager, nothing will 
         
 
 ```cpp
-virtual void endstone::PluginManager::removePermission (
-    std::string name
-) = 0
+void removePermission(std::string name)
 ```
 
 
@@ -784,10 +744,7 @@ If the specified permission does not exist in this plugin manager, nothing will 
 ### <code className="doc-symbol doc-symbol-function"/> subscribeToDefaultPerms [#subscribeToDefaultPerms]
 
 ```cpp
-virtual void endstone::PluginManager::subscribeToDefaultPerms (
-    PermissionLevel level,
-    Permissible & permissible
-) = 0
+void subscribeToDefaultPerms(PermissionLevel level, Permissible &permissible)
 ```
 
 
@@ -812,10 +769,7 @@ If the specified defaults change in any form, the [**Permissible**](classendston
 ### <code className="doc-symbol doc-symbol-function"/> subscribeToPermission [#subscribeToPermission]
 
 ```cpp
-virtual void endstone::PluginManager::subscribeToPermission (
-    std::string permission,
-    Permissible & permissible
-) = 0
+void subscribeToPermission(std::string permission, Permissible &permissible)
 ```
 
 
@@ -837,10 +791,8 @@ Subscribes the given [**Permissible**](classendstone_1_1_permissible.md) for inf
 ### <code className="doc-symbol doc-symbol-function"/> unsubscribeFromDefaultPerms [#unsubscribeFromDefaultPerms]
 
 ```cpp
-virtual void endstone::PluginManager::unsubscribeFromDefaultPerms (
-    PermissionLevel level,
-    Permissible & permissible
-) = 0
+void unsubscribeFromDefaultPerms(PermissionLevel level,
+                                 Permissible &permissible)
 ```
 
 
@@ -862,10 +814,7 @@ Unsubscribes from the given Default permissions by permission level
 ### <code className="doc-symbol doc-symbol-function"/> unsubscribeFromPermission [#unsubscribeFromPermission]
 
 ```cpp
-virtual void endstone::PluginManager::unsubscribeFromPermission (
-    std::string permission,
-    Permissible & permissible
-) = 0
+void unsubscribeFromPermission(std::string permission, Permissible &permissible)
 ```
 
 

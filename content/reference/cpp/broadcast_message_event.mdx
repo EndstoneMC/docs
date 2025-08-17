@@ -4,7 +4,7 @@ title: "BroadcastMessageEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::BroadcastMessageEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -77,16 +77,13 @@ const std::string endstone::BroadcastMessageEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> BroadcastMessageEvent [#BroadcastMessageEvent]
 
 ```cpp
-inline endstone::BroadcastMessageEvent::BroadcastMessageEvent (
-    bool async,
-    Message message,
-    std::unordered_set< const CommandSender * > recipients
-) 
+BroadcastMessageEvent(bool async, Message message,
+                      std::unordered_set<const CommandSender *> recipients)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::BroadcastMessageEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 
@@ -107,7 +104,7 @@ name of this event
 ### <code className="doc-symbol doc-symbol-function"/> getMessage [#getMessage]
 
 ```cpp
-inline const Message & endstone::BroadcastMessageEvent::getMessage () const
+const Message &getMessage() const
 ```
 
 
@@ -128,7 +125,7 @@ Message to broadcast
 ### <code className="doc-symbol doc-symbol-function"/> getRecipients [#getRecipients]
 
 ```cpp
-inline const std::unordered_set< const CommandSender * > & endstone::BroadcastMessageEvent::getRecipients () const
+const std::unordered_set<const CommandSender *> &getRecipients() const
 ```
 
 
@@ -149,9 +146,7 @@ All CommandSenders who will see this broadcast message
 ### <code className="doc-symbol doc-symbol-function"/> setMessage [#setMessage]
 
 ```cpp
-inline void endstone::BroadcastMessageEvent::setMessage (
-    Message message
-) 
+void setMessage(Message message)
 ```
 
 

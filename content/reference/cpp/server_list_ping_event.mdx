@@ -4,7 +4,7 @@ title: "ServerListPingEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::ServerListPingEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -157,21 +157,18 @@ const std::string endstone::ServerListPingEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> ServerListPingEvent [#ServerListPingEvent]
 
 ```cpp
-inline endstone::ServerListPingEvent::ServerListPingEvent (
-    std::string remote_host,
-    int remote_port,
-    std::string ping_response
-) 
+ServerListPingEvent(std::string remote_host, int remote_port,
+                    std::string ping_response)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> deserialize [#deserialize]
 
 ```cpp
-bool endstone::ServerListPingEvent::deserialize () 
+bool deserialize()
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::ServerListPingEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 
@@ -192,7 +189,7 @@ name of this event
 ### <code className="doc-symbol doc-symbol-function"/> getGameMode [#getGameMode]
 
 ```cpp
-inline GameMode endstone::ServerListPingEvent::getGameMode () const
+GameMode getGameMode() const
 ```
 
 
@@ -213,7 +210,7 @@ the game mode
 ### <code className="doc-symbol doc-symbol-function"/> getLevelName [#getLevelName]
 
 ```cpp
-inline std::string endstone::ServerListPingEvent::getLevelName () const
+std::string getLevelName() const
 ```
 
 
@@ -234,7 +231,7 @@ the level name
 ### <code className="doc-symbol doc-symbol-function"/> getLocalPort [#getLocalPort]
 
 ```cpp
-inline int endstone::ServerListPingEvent::getLocalPort () const
+int getLocalPort() const
 ```
 
 
@@ -255,7 +252,7 @@ The local port
 ### <code className="doc-symbol doc-symbol-function"/> getLocalPortV6 [#getLocalPortV6]
 
 ```cpp
-inline int endstone::ServerListPingEvent::getLocalPortV6 () const
+int getLocalPortV6() const
 ```
 
 
@@ -276,7 +273,7 @@ The local port for IPv6
 ### <code className="doc-symbol doc-symbol-function"/> getMaxPlayers [#getMaxPlayers]
 
 ```cpp
-inline int endstone::ServerListPingEvent::getMaxPlayers () const
+int getMaxPlayers() const
 ```
 
 
@@ -297,7 +294,7 @@ the maximum number of players
 ### <code className="doc-symbol doc-symbol-function"/> getMinecraftVersionNetwork [#getMinecraftVersionNetwork]
 
 ```cpp
-inline std::string endstone::ServerListPingEvent::getMinecraftVersionNetwork () const
+std::string getMinecraftVersionNetwork() const
 ```
 
 
@@ -318,7 +315,7 @@ the network version of Minecraft
 ### <code className="doc-symbol doc-symbol-function"/> getMotd [#getMotd]
 
 ```cpp
-inline std::string endstone::ServerListPingEvent::getMotd () const
+std::string getMotd() const
 ```
 
 
@@ -339,7 +336,7 @@ the message of the day
 ### <code className="doc-symbol doc-symbol-function"/> getNetworkProtocolVersion [#getNetworkProtocolVersion]
 
 ```cpp
-inline int endstone::ServerListPingEvent::getNetworkProtocolVersion () const
+int getNetworkProtocolVersion() const
 ```
 
 
@@ -360,7 +357,7 @@ the network protocol version
 ### <code className="doc-symbol doc-symbol-function"/> getNumPlayers [#getNumPlayers]
 
 ```cpp
-inline int endstone::ServerListPingEvent::getNumPlayers () const
+int getNumPlayers() const
 ```
 
 
@@ -381,7 +378,7 @@ the number of players
 ### <code className="doc-symbol doc-symbol-function"/> getRemoteHost [#getRemoteHost]
 
 ```cpp
-inline std::string endstone::ServerListPingEvent::getRemoteHost () const
+std::string getRemoteHost() const
 ```
 
 
@@ -402,7 +399,7 @@ The host
 ### <code className="doc-symbol doc-symbol-function"/> getRemotePort [#getRemotePort]
 
 ```cpp
-inline int endstone::ServerListPingEvent::getRemotePort () const
+int getRemotePort() const
 ```
 
 
@@ -423,7 +420,7 @@ The port
 ### <code className="doc-symbol doc-symbol-function"/> getServerGuid [#getServerGuid]
 
 ```cpp
-inline std::string endstone::ServerListPingEvent::getServerGuid () const
+std::string getServerGuid() const
 ```
 
 
@@ -444,14 +441,12 @@ The server guid
 ### <code className="doc-symbol doc-symbol-function"/> serialize [#serialize]
 
 ```cpp
-std::string endstone::ServerListPingEvent::serialize () 
+std::string serialize()
 ```
 ### <code className="doc-symbol doc-symbol-function"/> setGameMode [#setGameMode]
 
 ```cpp
-inline void endstone::ServerListPingEvent::setGameMode (
-    GameMode game_mode
-) 
+void setGameMode(GameMode game_mode)
 ```
 
 
@@ -472,9 +467,7 @@ Set the current game mode.
 ### <code className="doc-symbol doc-symbol-function"/> setLevelName [#setLevelName]
 
 ```cpp
-inline void endstone::ServerListPingEvent::setLevelName (
-    std::string level_name
-) 
+void setLevelName(std::string level_name)
 ```
 
 
@@ -495,9 +488,7 @@ Set the level name.
 ### <code className="doc-symbol doc-symbol-function"/> setLocalPort [#setLocalPort]
 
 ```cpp
-inline void endstone::ServerListPingEvent::setLocalPort (
-    int port
-) 
+void setLocalPort(int port)
 ```
 
 
@@ -518,9 +509,7 @@ Set the local port of the server.
 ### <code className="doc-symbol doc-symbol-function"/> setLocalPortV6 [#setLocalPortV6]
 
 ```cpp
-inline void endstone::ServerListPingEvent::setLocalPortV6 (
-    int port
-) 
+void setLocalPortV6(int port)
 ```
 
 
@@ -541,9 +530,7 @@ Set the local port of the server for IPv6 support.
 ### <code className="doc-symbol doc-symbol-function"/> setMaxPlayers [#setMaxPlayers]
 
 ```cpp
-inline void endstone::ServerListPingEvent::setMaxPlayers (
-    int max_players
-) 
+void setMaxPlayers(int max_players)
 ```
 
 
@@ -564,9 +551,7 @@ Set the maximum number of players allowed.
 ### <code className="doc-symbol doc-symbol-function"/> setMinecraftVersionNetwork [#setMinecraftVersionNetwork]
 
 ```cpp
-inline void endstone::ServerListPingEvent::setMinecraftVersionNetwork (
-    std::string minecraft_version_network
-) 
+void setMinecraftVersionNetwork(std::string minecraft_version_network)
 ```
 
 
@@ -587,9 +572,7 @@ Set the network version of Minecraft that is supported by this server
 ### <code className="doc-symbol doc-symbol-function"/> setMotd [#setMotd]
 
 ```cpp
-inline void endstone::ServerListPingEvent::setMotd (
-    std::string motd
-) 
+void setMotd(std::string motd)
 ```
 
 
@@ -610,9 +593,7 @@ Change the message of the day message.
 ### <code className="doc-symbol doc-symbol-function"/> setNumPlayers [#setNumPlayers]
 
 ```cpp
-inline void endstone::ServerListPingEvent::setNumPlayers (
-    int num_players
-) 
+void setNumPlayers(int num_players)
 ```
 
 
@@ -633,9 +614,7 @@ Set the number of players online.
 ### <code className="doc-symbol doc-symbol-function"/> setServerGuid [#setServerGuid]
 
 ```cpp
-inline void endstone::ServerListPingEvent::setServerGuid (
-    std::string guid
-) 
+void setServerGuid(std::string guid)
 ```
 
 

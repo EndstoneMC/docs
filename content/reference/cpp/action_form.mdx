@@ -4,7 +4,7 @@ title: "ActionForm"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::ActionForm
 
-Bases: [`endstone::Form`](classendstone_1_1_form.md)
+Bases: [`endstone::Form`](form)
 
 
 
@@ -100,26 +100,26 @@ Bases: [`endstone::Form`](classendstone_1_1_form.md)
 ### <code className="doc-symbol doc-symbol-typedef"/> Control [#Control]
 
 ```cpp
-using endstone::ActionForm::Control =  std::variant<Button, Divider, Header, Label>;
+using endstone::ActionForm::Control =
+    std::variant<Button, Divider, Header, Label>;
 ```
 ### <code className="doc-symbol doc-symbol-typedef"/> OnSubmitCallback [#OnSubmitCallback]
 
 ```cpp
-using endstone::ActionForm::OnSubmitCallback =  std::function<void(Player *, int)>;
+using endstone::ActionForm::OnSubmitCallback =
+    std::function<void(Player *, int)>;
 ```
 ### <code className="doc-symbol doc-symbol-function"/> ActionForm [#ActionForm]
 
 ```cpp
-explicit endstone::ActionForm::ActionForm () = default
+ActionForm() = default
 ```
 ### <code className="doc-symbol doc-symbol-function"/> addButton [#addButton]
 
 ```cpp
-inline ActionForm & endstone::ActionForm::addButton (
-    const Message & text,
-    const std::optional< std::string > & icon=std::nullopt,
-    Button::OnClickCallback on_click={}
-) 
+ActionForm &addButton(const Message &text,
+                      const std::optional<std::string> &icon = std::nullopt,
+                      Button::OnClickCallback on_click = {})
 ```
 
 Adds a button to the form.
@@ -149,7 +149,7 @@ A reference to the current form.
 ### <code className="doc-symbol doc-symbol-function"/> addDivider [#addDivider]
 
 ```cpp
-inline ActionForm & endstone::ActionForm::addDivider () 
+ActionForm &addDivider()
 ```
 
 Adds a divider to the form.
@@ -170,9 +170,7 @@ A reference to the current form.
 ### <code className="doc-symbol doc-symbol-function"/> addHeader [#addHeader]
 
 ```cpp
-inline ActionForm & endstone::ActionForm::addHeader (
-    const Message & text
-) 
+ActionForm &addHeader(const Message &text)
 ```
 
 Adds a header to the form.
@@ -200,9 +198,7 @@ A reference to the current form.
 ### <code className="doc-symbol doc-symbol-function"/> addLabel [#addLabel]
 
 ```cpp
-inline ActionForm & endstone::ActionForm::addLabel (
-    const Message & text
-) 
+ActionForm &addLabel(const Message &text)
 ```
 
 Adds a label to the form.
@@ -230,7 +226,7 @@ A reference to the current form.
 ### <code className="doc-symbol doc-symbol-function"/> getContent [#getContent]
 
 ```cpp
-inline Message endstone::ActionForm::getContent () const
+Message getContent() const
 ```
 
 Get the content of the form.
@@ -251,7 +247,7 @@ The content of the form.
 ### <code className="doc-symbol doc-symbol-function"/> getControls [#getControls]
 
 ```cpp
-inline const std::vector< Control > & endstone::ActionForm::getControls () const
+const std::vector<Control> &getControls() const
 ```
 
 Get the controls of the action form.
@@ -272,7 +268,7 @@ A list of controls in the action form.
 ### <code className="doc-symbol doc-symbol-function"/> getOnSubmit [#getOnSubmit]
 
 ```cpp
-inline OnSubmitCallback endstone::ActionForm::getOnSubmit () const
+OnSubmitCallback getOnSubmit() const
 ```
 
 Gets the on submit callback of the form.
@@ -293,9 +289,7 @@ The on submit callback of the form.
 ### <code className="doc-symbol doc-symbol-function"/> setContent [#setContent]
 
 ```cpp
-inline ActionForm & endstone::ActionForm::setContent (
-    Message text
-) 
+ActionForm &setContent(Message text)
 ```
 
 Set the content of the form.
@@ -323,9 +317,7 @@ A reference to the current form.
 ### <code className="doc-symbol doc-symbol-function"/> setControls [#setControls]
 
 ```cpp
-inline ActionForm & endstone::ActionForm::setControls (
-    const std::vector< Control > & controls
-) 
+ActionForm &setControls(const std::vector<Control> &controls)
 ```
 
 Set the controls of the action form.
@@ -353,9 +345,7 @@ A reference to the current form.
 ### <code className="doc-symbol doc-symbol-function"/> setOnSubmit [#setOnSubmit]
 
 ```cpp
-inline ActionForm & endstone::ActionForm::setOnSubmit (
-    OnSubmitCallback on_submit
-) 
+ActionForm &setOnSubmit(OnSubmitCallback on_submit)
 ```
 
 Sets the on submit callback of the form.

@@ -4,7 +4,7 @@ title: "PluginCommand"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PluginCommand
 
-Bases: [`endstone::Command`](classendstone_1_1_command.md)
+Bases: [`endstone::Command`](command)
 
 
 
@@ -61,23 +61,18 @@ Bases: [`endstone::Command`](classendstone_1_1_command.md)
 ### <code className="doc-symbol doc-symbol-function"/> PluginCommand [#PluginCommand]
 
 ```cpp
-inline endstone::PluginCommand::PluginCommand (
-    const Command & command,
-    Plugin & owner
-) 
+PluginCommand(const Command &command, Plugin &owner)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> asPluginCommand [#asPluginCommand]
 
 ```cpp
-inline virtual PluginCommand * endstone::PluginCommand::asPluginCommand () override const
+PluginCommand *asPluginCommand() override const
 ```
 ### <code className="doc-symbol doc-symbol-function"/> execute [#execute]
 
 ```cpp
-inline virtual bool endstone::PluginCommand::execute (
-    CommandSender & sender,
-    const std::vector< std::string > & args
-) override const
+bool execute(CommandSender &sender,
+             const std::vector<std::string> &args) override const
 ```
 
 
@@ -106,7 +101,7 @@ true if the execution was successful, otherwise false
 ### <code className="doc-symbol doc-symbol-function"/> getExecutor [#getExecutor]
 
 ```cpp
-inline virtual CommandExecutor & endstone::PluginCommand::getExecutor () const
+CommandExecutor &getExecutor() const
 ```
 
 
@@ -127,7 +122,7 @@ Gets the [**CommandExecutor**](classendstone_1_1_command_executor.md) associated
 ### <code className="doc-symbol doc-symbol-function"/> getPlugin [#getPlugin]
 
 ```cpp
-inline Plugin & endstone::PluginCommand::getPlugin () const
+Plugin &getPlugin() const
 ```
 
 
@@ -148,9 +143,7 @@ Gets the owner of this [**PluginCommand**](classendstone_1_1_plugin_command.md)
 ### <code className="doc-symbol doc-symbol-function"/> setExecutor [#setExecutor]
 
 ```cpp
-inline virtual void endstone::PluginCommand::setExecutor (
-    std::shared_ptr< CommandExecutor > executor
-) 
+void setExecutor(std::shared_ptr<CommandExecutor> executor)
 ```
 
 

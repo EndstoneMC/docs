@@ -4,7 +4,7 @@ title: "WeatherEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::WeatherEvent
 
-Bases: [`endstone::Event`](classendstone_1_1_event.md)
+Bases: [`endstone::Event`](event)
 
 
 
@@ -45,14 +45,12 @@ Bases: [`endstone::Event`](classendstone_1_1_event.md)
 ### <code className="doc-symbol doc-symbol-function"/> WeatherEvent [#WeatherEvent]
 
 ```cpp
-inline explicit endstone::WeatherEvent::WeatherEvent (
-    Level & level
-) 
+WeatherEvent(Level &level)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getLevel [#getLevel]
 
 ```cpp
-inline Level & endstone::WeatherEvent::getLevel () const
+Level &getLevel() const
 ```
 
 

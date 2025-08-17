@@ -4,7 +4,7 @@ title: "BlockPlaceEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::BlockPlaceEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -81,17 +81,14 @@ const std::string endstone::BlockPlaceEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> BlockPlaceEvent [#BlockPlaceEvent]
 
 ```cpp
-inline explicit endstone::BlockPlaceEvent::BlockPlaceEvent (
-    std::unique_ptr< BlockState > placed_block,
-    std::unique_ptr< Block > replaced_block,
-    std::unique_ptr< Block > placed_against,
-    Player & player
-) 
+BlockPlaceEvent(std::unique_ptr<BlockState> placed_block,
+                std::unique_ptr<Block> replaced_block,
+                std::unique_ptr<Block> placed_against, Player &player)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getBlockAgainst [#getBlockAgainst]
 
 ```cpp
-inline Block & endstone::BlockPlaceEvent::getBlockAgainst () const
+Block &getBlockAgainst() const
 ```
 
 Gets the block that this block was placed against.
@@ -112,7 +109,7 @@ Gets the block that this block was placed against.
 ### <code className="doc-symbol doc-symbol-function"/> getBlockPlacedState [#getBlockPlacedState]
 
 ```cpp
-inline BlockState & endstone::BlockPlaceEvent::getBlockPlacedState () const
+BlockState &getBlockPlacedState() const
 ```
 
 Gets the BlockState for the block which was placed.
@@ -133,7 +130,7 @@ The [**BlockState**](classendstone_1_1_block_state.md) for the block which was p
 ### <code className="doc-symbol doc-symbol-function"/> getBlockReplaced [#getBlockReplaced]
 
 ```cpp
-inline Block & endstone::BlockPlaceEvent::getBlockReplaced () const
+Block &getBlockReplaced() const
 ```
 
 Gets the block which was replaced.
@@ -154,7 +151,7 @@ The [**Block**](classendstone_1_1_block.md) which was replaced.
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::BlockPlaceEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 
@@ -175,7 +172,7 @@ name of this event
 ### <code className="doc-symbol doc-symbol-function"/> getPlayer [#getPlayer]
 
 ```cpp
-inline Player & endstone::BlockPlaceEvent::getPlayer () const
+Player &getPlayer() const
 ```
 
 Gets the player who placed the block involved in this event.

@@ -4,7 +4,7 @@ title: "BlockCommandSender"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::BlockCommandSender
 
-Bases: [`endstone::CommandSender`](classendstone_1_1_command_sender.md)
+Bases: [`endstone::CommandSender`](command_sender)
 
 
 
@@ -41,7 +41,7 @@ Bases: [`endstone::CommandSender`](classendstone_1_1_command_sender.md)
 ### <code className="doc-symbol doc-symbol-function"/> getBlock [#getBlock]
 
 ```cpp
-virtual std::unique_ptr< Block > endstone::BlockCommandSender::getBlock () const = 0
+std::unique_ptr<Block> getBlock() const
 ```
 
 Returns the block this command sender belongs to.

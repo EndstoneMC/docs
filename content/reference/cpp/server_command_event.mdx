@@ -4,7 +4,7 @@ title: "ServerCommandEvent"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::ServerCommandEvent
 
-Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
+Bases: [`endstone::Cancellable`](cancellable)
 
 
 
@@ -77,15 +77,12 @@ const std::string endstone::ServerCommandEvent::NAME;
 ### <code className="doc-symbol doc-symbol-function"/> ServerCommandEvent [#ServerCommandEvent]
 
 ```cpp
-inline endstone::ServerCommandEvent::ServerCommandEvent (
-    CommandSender & sender,
-    std::string command
-) 
+ServerCommandEvent(CommandSender &sender, std::string command)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getCommand [#getCommand]
 
 ```cpp
-inline std::string endstone::ServerCommandEvent::getCommand () const
+std::string getCommand() const
 ```
 
 
@@ -106,7 +103,7 @@ Gets the command that the server is attempting to execute from the console
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
-inline virtual std::string endstone::ServerCommandEvent::getEventName () override const
+std::string getEventName() override const
 ```
 
 
@@ -127,7 +124,7 @@ name of this event
 ### <code className="doc-symbol doc-symbol-function"/> getSender [#getSender]
 
 ```cpp
-inline CommandSender & endstone::ServerCommandEvent::getSender () const
+CommandSender &getSender() const
 ```
 
 
@@ -148,9 +145,7 @@ The sender
 ### <code className="doc-symbol doc-symbol-function"/> setCommand [#setCommand]
 
 ```cpp
-inline void endstone::ServerCommandEvent::setCommand (
-    std::string message
-) 
+void setCommand(std::string message)
 ```
 
 

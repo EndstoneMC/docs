@@ -70,22 +70,16 @@ title: "PluginLoader"
 
 
 ```cpp
-inline explicit endstone::PluginLoader::PluginLoader (
-    Server & server
-) 
+PluginLoader(Server &server)
 ```
 
 ```cpp
-endstone::PluginLoader::PluginLoader (
-    const PluginLoader &
-) = delete
+PluginLoader(const PluginLoader &) = delete
 ```
 ### <code className="doc-symbol doc-symbol-function"/> disablePlugin [#disablePlugin]
 
 ```cpp
-inline virtual void endstone::PluginLoader::disablePlugin (
-    Plugin & plugin
-) const
+void disablePlugin(Plugin &plugin) const
 ```
 
 Disables the specified plugin Attempting to disable a plugin that is not enabled will have no effect.
@@ -106,9 +100,7 @@ Disables the specified plugin Attempting to disable a plugin that is not enabled
 ### <code className="doc-symbol doc-symbol-function"/> enablePlugin [#enablePlugin]
 
 ```cpp
-inline virtual void endstone::PluginLoader::enablePlugin (
-    Plugin & plugin
-) const
+void enablePlugin(Plugin &plugin) const
 ```
 
 Enables the specified plugin Attempting to enable a plugin that is already enabled will have no effect.
@@ -129,7 +121,7 @@ Enables the specified plugin Attempting to enable a plugin that is already enabl
 ### <code className="doc-symbol doc-symbol-function"/> getPluginFileFilters [#getPluginFileFilters]
 
 ```cpp
-virtual std::vector< std::string > endstone::PluginLoader::getPluginFileFilters () const = 0
+std::vector<std::string> getPluginFileFilters() const
 ```
 
 Returns a list of all filename filters expected by this PluginLoader .
@@ -150,7 +142,7 @@ The filters
 ### <code className="doc-symbol doc-symbol-function"/> getServer [#getServer]
 
 ```cpp
-inline Server & endstone::PluginLoader::getServer () const
+Server &getServer() const
 ```
 
 Retrieves the Server object associated with the PluginLoader .
@@ -174,9 +166,7 @@ The [**Server**](classendstone_1_1_server.md) reference.
 ### <code className="doc-symbol doc-symbol-function"/> loadPlugin [#loadPlugin]
 
 ```cpp
-virtual Plugin * endstone::PluginLoader::loadPlugin (
-    std::string file
-) = 0
+Plugin *loadPlugin(std::string file)
 ```
 
 
@@ -204,9 +194,7 @@ Loads the plugin contained in the specified file
 ### <code className="doc-symbol doc-symbol-function"/> loadPlugins [#loadPlugins]
 
 ```cpp
-inline virtual std::vector< Plugin * > endstone::PluginLoader::loadPlugins (
-    std::string directory
-) 
+std::vector<Plugin *> loadPlugins(std::string directory)
 ```
 
 Loads the plugin contained within the specified directory.

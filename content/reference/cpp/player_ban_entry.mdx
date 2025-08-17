@@ -4,7 +4,7 @@ title: "PlayerBanEntry"
 
 ## <code className="doc-symbol doc-symbol-class"/> endstone::PlayerBanEntry
 
-Bases: [`endstone::BanEntry`](classendstone_1_1_ban_entry.md)
+Bases: [`endstone::BanEntry`](ban_entry)
 
 
 
@@ -53,16 +53,13 @@ Bases: [`endstone::BanEntry`](classendstone_1_1_ban_entry.md)
 ### <code className="doc-symbol doc-symbol-function"/> PlayerBanEntry [#PlayerBanEntry]
 
 ```cpp
-inline explicit endstone::PlayerBanEntry::PlayerBanEntry (
-    std::string name,
-    std::optional< UUID > uuid=std::nullopt,
-    std::optional< std::string > xuid=std::nullopt
-) 
+PlayerBanEntry(std::string name, std::optional<UUID> uuid = std::nullopt,
+               std::optional<std::string> xuid = std::nullopt)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
-inline std::string endstone::PlayerBanEntry::getName () const
+std::string getName() const
 ```
 
 Gets the banned player's name.
@@ -83,7 +80,7 @@ the player name
 ### <code className="doc-symbol doc-symbol-function"/> getUniqueId [#getUniqueId]
 
 ```cpp
-inline std::optional< UUID > endstone::PlayerBanEntry::getUniqueId () const
+std::optional<UUID> getUniqueId() const
 ```
 
 Gets the banned player's unique id.
@@ -104,7 +101,7 @@ the player's unique id, or std::nullopt if not available
 ### <code className="doc-symbol doc-symbol-function"/> getXuid [#getXuid]
 
 ```cpp
-inline std::optional< std::string > endstone::PlayerBanEntry::getXuid () const
+std::optional<std::string> getXuid() const
 ```
 
 Gets the banned player's xbox user id (xuid).

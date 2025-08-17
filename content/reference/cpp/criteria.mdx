@@ -63,14 +63,12 @@ title: "Criteria"
 ### <code className="doc-symbol doc-symbol-enum"/> Type [#Type]
 
 ```cpp
-enum endstone::Criteria::Type {
-    Dummy
-};
+enum Type { Dummy };
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getDefaultRenderType [#getDefaultRenderType]
 
 ```cpp
-virtual RenderType endstone::Criteria::getDefaultRenderType () const = 0
+RenderType getDefaultRenderType() const
 ```
 
 
@@ -91,7 +89,7 @@ the default render type
 ### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
-virtual std::string endstone::Criteria::getName () const = 0
+std::string getName() const
 ```
 
 Get the name of this criteria (its unique id).
@@ -112,7 +110,7 @@ the name
 ### <code className="doc-symbol doc-symbol-function"/> isReadOnly [#isReadOnly]
 
 ```cpp
-virtual bool endstone::Criteria::isReadOnly () const = 0
+bool isReadOnly() const
 ```
 
 Get whether or not this criteria is read only. If read only, scoreboards with this criteria cannot have their scores changed.

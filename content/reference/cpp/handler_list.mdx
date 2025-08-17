@@ -56,14 +56,12 @@ title: "HandlerList"
 ### <code className="doc-symbol doc-symbol-function"/> HandlerList [#HandlerList]
 
 ```cpp
-inline explicit endstone::HandlerList::HandlerList (
-    std::string event
-) 
+HandlerList(std::string event)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getHandlers [#getHandlers]
 
 ```cpp
-inline std::vector< EventHandler * > endstone::HandlerList::getHandlers () const
+std::vector<EventHandler *> getHandlers() const
 ```
 
 
@@ -84,9 +82,7 @@ the array of registered handlers
 ### <code className="doc-symbol doc-symbol-function"/> registerHandler [#registerHandler]
 
 ```cpp
-inline EventHandler * endstone::HandlerList::registerHandler (
-    std::unique_ptr< EventHandler > handler
-) 
+EventHandler *registerHandler(std::unique_ptr<EventHandler> handler)
 ```
 
 
@@ -116,9 +112,7 @@ the pointer to the registered handler
 
 
 ```cpp
-inline void endstone::HandlerList::unregister (
-    const EventHandler & handler
-) 
+void unregister(const EventHandler &handler)
 ```
 
 
@@ -138,9 +132,7 @@ Remove a handler from a specific order slot
         
 
 ```cpp
-inline void endstone::HandlerList::unregister (
-    const Plugin & plugin
-) 
+void unregister(const Plugin &plugin)
 ```
 
 

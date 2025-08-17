@@ -54,18 +54,16 @@ title: "Label"
 
 
 ```cpp
-endstone::Label::Label () = default
+Label() = default
 ```
 
 ```cpp
-inline explicit endstone::Label::Label (
-    Message text
-) 
+Label(Message text)
 ```
 ### <code className="doc-symbol doc-symbol-function"/> getText [#getText]
 
 ```cpp
-inline Message endstone::Label::getText () const
+Message getText() const
 ```
 
 Gets the text of the label.
@@ -86,9 +84,7 @@ The text of the label.
 ### <code className="doc-symbol doc-symbol-function"/> setText [#setText]
 
 ```cpp
-inline Label & endstone::Label::setText (
-    Message text
-) 
+Label &setText(Message text)
 ```
 
 Sets the text of the label.
