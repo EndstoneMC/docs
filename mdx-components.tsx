@@ -7,7 +7,7 @@ import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/c
 
 const themeComponents = getThemeComponents()
 
-export function useMDXComponents<T>(components: T) {
+export function useMDXComponents<T>(components?: T) {
   return {
     ...themeComponents,
     ...components,
