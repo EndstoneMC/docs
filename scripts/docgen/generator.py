@@ -25,3 +25,13 @@ class Generator(GeneratorAuto):
 
         if node.is_language or node.is_group or node.is_file or node.is_dir:
             self.members(node.children, config)
+
+    def classes(self, nodes: [Node], config: dict = None):
+        path = "index.mdx"
+
+        output = ""
+        output += '---\n'
+        output += f'asIndexPage: true"\n'
+        output += '---\n\n'
+        output += self.generatorBase.classes(nodes, config)
+        self.save(path, output)

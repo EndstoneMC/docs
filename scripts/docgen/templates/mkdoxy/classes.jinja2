@@ -1,0 +1,25 @@
+{% filter indent(config.get('indent_level', 0), True) %}
+# Class Index
+
+{% for letter, children in dictionary.items() %}
+## {{letter}}
+
+<table>
+<thead>
+   <tr>
+      <th>Name</th>
+      <th>Description</th>
+   </tr>
+</thead>
+<tbody>
+{% for node in children|sort(attribute='name_short') -%}
+<tr key="index-{{ node.refid }}">
+    <td>[`{{ node.name_short }}`]({{node.url}})</td>
+    <td>{{node._brief.plain()}}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+{% endfor %}
+{% endfilter %}
