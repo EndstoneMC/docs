@@ -6,9 +6,14 @@ implements: True
 {%- filter indent(config.get('indent_level', 0), True) -%}
 
 ## <code className="doc-symbol doc-symbol-{{node.kind.value}}"/> {{node.name_long}}
+
+{% if node.has_brief -%}
+{{node._brief.plain()}}
+{%- endif %}
+
 {% if node.has_templateparams %}
 **template &lt;{{node.templateparams}}&gt;**
-{% endif %}
+{%- endif %}
 
 {%- if node.has_base_classes %}
 Bases:
