@@ -1,16 +1,19 @@
 import argparse
 from pathlib import Path
-import pygen
+
 import cppgen
+import pygen
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("base_dir", type=Path, help="Base directory for code generation")
+    parser.add_argument(
+        "base_dir", type=Path, help="Base directory for code generation"
+    )
     parser.add_argument(
         "--language",
         type=str,
         choices=["python", "cpp"],
-        help="Language to generate code for (default: both)"
+        help="Language to generate code for (default: both)",
     )
     args = parser.parse_args()
 

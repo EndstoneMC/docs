@@ -2,13 +2,13 @@ import argparse
 import logging
 from pathlib import Path
 
+from generator import Generator, BaseGenerator
 from mkdoxy.cache import Cache
 from mkdoxy.constants import Kind
 from mkdoxy.doxygen import Doxygen
 from mkdoxy.doxyrun import DoxygenRun
 from mkdoxy.generatorBase import GeneratorBase
 from mkdoxy.xml_parser import XmlParser
-from generator import Generator
 
 logging.basicConfig()
 log: logging.Logger = logging.getLogger("mkdocs")
@@ -29,7 +29,9 @@ def generate(base_dir: Path, debug: bool = True):
         "STRIP_FROM_INC_PATH": str(base_dir / "include"),
     }
 
-    runner = DoxygenRun('doxygen', str(base_dir / "include" / "endstone"), str(temp_dir), config, "")
+    runner = DoxygenRun(
+        "doxygen", str(base_dir / "include" / "endstone"), str(temp_dir), config, ""
+    )
     if runner.checkAndRun():
         log.info("  -> generating Doxygen files")
     else:
@@ -48,7 +50,7 @@ def generate(base_dir: Path, debug: bool = True):
 
     # Prepare generator for future use (GeneratorAuto, SnippetGenerator)
     template_dir = str(Path(__file__).parent / "templates" / "mkdoxy")
-    base_generator = GeneratorBase(template_dir, ignore_errors=False, debug=debug)
+    base_generator = BaseGenerator(template_dir, ignore_errors=False, debug=debug)
 
     generator = Generator(
         generatorBase=base_generator,

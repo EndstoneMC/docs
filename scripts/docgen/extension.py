@@ -1,17 +1,26 @@
 import ast
-
-from griffe import Class, Extension, Function, Inspector, Kind, ObjectNode, Visitor, typing_overload
 from typing import Any
+
+from griffe import (
+    Class,
+    Extension,
+    Function,
+    Inspector,
+    Kind,
+    ObjectNode,
+    Visitor,
+    typing_overload,
+)
 
 
 class StubOverloadExtension(Extension):
     def on_function_instance(
-            self,
-            *,
-            node: ast.AST | ObjectNode,
-            func: Function,
-            agent: Visitor | Inspector,
-            **kwargs: Any,
+        self,
+        *,
+        node: ast.AST | ObjectNode,
+        func: Function,
+        agent: Visitor | Inspector,
+        **kwargs: Any,
     ) -> None:
         """
         Fix overloads with implementations in stub files not detected

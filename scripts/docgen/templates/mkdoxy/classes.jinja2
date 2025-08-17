@@ -2,7 +2,7 @@
 # Class Index
 
 {% for letter, children in dictionary.items() %}
-## {{letter}}
+## {{letter.upper()}}
 
 <table>
 <thead>
@@ -14,7 +14,7 @@
 <tbody>
 {% for node in children|sort(attribute='name_short') -%}
 <tr key="index-{{ node.refid }}">
-    <td>[`{{ node.name_short }}`]({{node.url}})</td>
+    <td>[`{{ node.name_short }}`](cpp/{{node.refid  | format_refid}})</td>
     <td>{{node._brief.plain()}}</td>
 </tr>
 {% endfor %}

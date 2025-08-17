@@ -3,15 +3,15 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
+import filters
 import griffe
 import griffe2md.rendering
 import mdformat
-import _rendering
-from griffe import GriffeLoader, Object, Parser, Kind
+from extension import StubOverloadExtension
+from griffe import GriffeLoader, Kind, Object, Parser
 from griffe2md import rendering
 from griffe2md.main import prepare_context, prepare_env
 from jinja2 import FileSystemLoader
-from extension import StubOverloadExtension
 
 
 def render_object_docs(obj: Object, config: dict | None = None) -> str:
@@ -19,8 +19,8 @@ def render_object_docs(obj: Object, config: dict | None = None) -> str:
     assert isinstance(env.loader, FileSystemLoader)
     loader: FileSystemLoader = env.loader
     loader.searchpath.insert(0, str(Path(__file__).parent / "templates" / "griffe2md"))
-    env.filters["heading"] = _rendering.do_heading
-    env.filters["as_functions_section"] = _rendering.do_as_functions_section
+    env.filters["heading"] = filters.do_heading
+    env.filters["as_functions_section"] = filters.do_as_functions_section
     context = prepare_context(obj, config)
     rendered = env.get_template(f"{obj.kind.value}.md.jinja").render(**context)
     return mdformat.text(rendered)
@@ -39,7 +39,7 @@ def render_package_docs(package: str, config: dict | None = None) -> str:
 def generate(base_dir: Path):
     sys.path.append(str(base_dir.absolute()))
     output_path = (
-            Path(__file__).parent.parent.parent / "content" / "reference" / "python"
+        Path(__file__).parent.parent.parent / "content" / "reference" / "python"
     )
     config = griffe2md.rendering.default_config
     config["docstring_section_style"] = "table"
@@ -59,9 +59,9 @@ def generate(base_dir: Path):
     root_output_path.parent.mkdir(parents=True, exist_ok=True)
 
     with root_output_path.open("w", encoding="utf-8") as f:
-        f.write('---\n')
+        f.write("---\n")
         f.write('title: "endstone"\n')
-        f.write('---\n\n')
+        f.write("---\n\n")
         f.write(render_package_docs("endstone", config))
 
     # Iterate over submodules of the `endstone` root module
@@ -76,7 +76,7 @@ def generate(base_dir: Path):
         submodule_output_path.parent.mkdir(parents=True, exist_ok=True)
 
         with submodule_output_path.open("w", encoding="utf-8") as f:
-            f.write('---\n')
+            f.write("---\n")
             f.write(f'title: "endstone.{submodule_name}"\n')  # Dynamic title
-            f.write('---\n\n')
+            f.write("---\n\n")
             f.write(render_package_docs(f"endstone.{submodule_name}", config))
