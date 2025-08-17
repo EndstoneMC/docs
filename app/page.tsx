@@ -91,7 +91,7 @@ export default function Home() {
                 </Link>
               </Button>
             </div>
-            <div className="mt-10 flex items-center gap-x-4 sm:hidden grid grid-cols-2">
+            <div className="mt-10 flex items-center gap-x-2 sm:hidden grid grid-cols-2">
               <Button className="rounded-xl has-[svg]:pl-4 h-10 group col-span-1 w-full" asChild>
                 <Link href="/docs/getting-started">
                   Getting Started
