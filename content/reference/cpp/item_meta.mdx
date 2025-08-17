@@ -141,10 +141,6 @@ title: "ItemMeta"
     <td>[`setUnbreakable`](#setUnbreakable)</td>
     <td>Sets the unbreakable tag. An unbreakable item will not lose durability.</td>
 </tr>
-<tr key="classendstone_1_1_item_meta_1ad87efd61083beac19969df0c0dcacff7">
-    <td>[`~ItemMeta`](#~ItemMeta)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
@@ -158,8 +154,6 @@ enum endstone::ItemMeta::Type {
     None = Item
 };
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> addEnchant [#addEnchant]
 
 ```cpp
@@ -171,6 +165,8 @@ virtual bool endstone::ItemMeta::addEnchant (
 ```
 
 Adds the specified enchantment to this item meta.
+
+
 
 
 
@@ -202,6 +198,8 @@ Creates a clone of the current metadata.
 
 
 
+
+
 **Returns:**
 
 A copy of the metadata containing the same state as the original. 
@@ -218,6 +216,8 @@ virtual int endstone::ItemMeta::getDamage () const = 0
 ```
 
 Gets the damage.
+
+
 
 
 
@@ -240,6 +240,8 @@ Gets the display name that is set.
 
 
 
+
+
 **Returns:**
 
 the display name that is set 
@@ -258,6 +260,8 @@ virtual int endstone::ItemMeta::getEnchantLevel (
 ```
 
 Checks for the level of the specified enchantment.
+
+
 
 
 
@@ -285,6 +289,8 @@ virtual std::unordered_map< std::string, int > endstone::ItemMeta::getEnchants (
 
 Returns a copy the enchantments in this ItemMeta .
 
+
+
 Returns an empty map if none.
 
 
@@ -309,6 +315,8 @@ Gets the lore that is set.
 
 
 
+
+
 **Returns:**
 
 a list of lore that is set 
@@ -325,6 +333,8 @@ virtual int endstone::ItemMeta::getRepairCost () const = 0
 ```
 
 Gets the repair penalty.
+
+
 
 
 
@@ -347,6 +357,8 @@ Gets the type of this item meta.
 
 
 
+
+
 **Returns:**
 
 type of this item meta 
@@ -363,6 +375,8 @@ virtual bool endstone::ItemMeta::hasDamage () const = 0
 ```
 
 Checks to see if this item has damage.
+
+
 
 
 
@@ -385,6 +399,8 @@ Checks for existence of a display name.
 
 
 
+
+
 **Returns:**
 
 true if this has a display name 
@@ -403,6 +419,8 @@ virtual bool endstone::ItemMeta::hasEnchant (
 ```
 
 Checks for existence of the specified enchantment.
+
+
 
 
 
@@ -432,6 +450,8 @@ Checks for the existence of any enchantments.
 
 
 
+
+
 **Returns:**
 
 true if an enchantment exists on this meta 
@@ -448,6 +468,8 @@ virtual bool endstone::ItemMeta::hasLore () const = 0
 ```
 
 Checks for existence of lore.
+
+
 
 
 
@@ -470,6 +492,8 @@ Checks to see if this has a repair penalty.
 
 
 
+
+
 **Returns:**
 
 true if this has a repair penalty 
@@ -486,6 +510,8 @@ virtual bool endstone::ItemMeta::isEmpty () const = 0
 ```
 
 Checks if the item metadata is empty.
+
+
 
 
 
@@ -508,6 +534,8 @@ Return if the unbreakable tag is true. An unbreakable item will not lose durabil
 
 
 
+
+
 **Returns:**
 
 true if the unbreakable tag is true 
@@ -526,6 +554,8 @@ virtual bool endstone::ItemMeta::removeEnchant (
 ```
 
 Removes the specified enchantment from this item meta.
+
+
 
 
 
@@ -565,6 +595,8 @@ Sets the damage.
 
 
 
+
+
 **Parameters:**
 
 
@@ -583,6 +615,8 @@ virtual void endstone::ItemMeta::setDisplayName (
 ```
 
 Sets the display name.
+
+
 
 
 
@@ -607,6 +641,8 @@ Sets the lore for this item or removes lore when given std::nullopt.
 
 
 
+
+
 **Parameters:**
 
 
@@ -628,6 +664,8 @@ Sets the repair penalty.
 
 
 
+
+
 **Parameters:**
 
 
@@ -646,6 +684,8 @@ virtual void endstone::ItemMeta::setUnbreakable (
 ```
 
 Sets the unbreakable tag. An unbreakable item will not lose durability.
+
+
 
 
 

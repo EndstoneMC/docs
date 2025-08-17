@@ -50,8 +50,6 @@ inline explicit endstone::PlayerBedEnterEvent::PlayerBedEnterEvent (
     Block & bed
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getBed [#getBed]
 
 ```cpp
@@ -59,6 +57,8 @@ inline Block & endstone::PlayerBedEnterEvent::getBed () const
 ```
 
 Represents the default possible outcomes of this event.
+
+
 
 The player will enter the bed. The dimension doesn't allow sleeping or saving the spawn point (eg,Nether, The End). Entering the bed is prevented due to it not being night nor thundering currently. Entering the bed is prevented due to the player being too far away. Entering the bed is prevented due to there being monsters nearby. Entering the bed is prevented due to there being some other problem.
 

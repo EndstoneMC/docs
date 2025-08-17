@@ -94,10 +94,6 @@ title: "Block"
     <td>[`setType`](#setType)</td>
     <td>Sets the type of this block.</td>
 </tr>
-<tr key="classendstone_1_1_block_1a8a7ea0b990c4c610f75cf53bd5c6647b">
-    <td>[`~Block`](#~Block)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
@@ -108,6 +104,8 @@ virtual std::unique_ptr< BlockState > endstone::Block::captureState () const = 0
 ```
 
 Captures the current state of this block.
+
+
 
 The returned object will never be updated, and you are not guaranteed that (for example) a sign is still a sign after you capture its state.
 
@@ -133,6 +131,8 @@ Creates a copy of the current block.
 
 
 
+
+
 **Returns:**
 
 [**Block**](classendstone_1_1_block.md) 
@@ -149,6 +149,8 @@ virtual std::unique_ptr< BlockData > endstone::Block::getData () const = 0
 ```
 
 Gets the complete block data for this block.
+
+
 
 
 
@@ -171,6 +173,8 @@ Gets the dimension which contains this Block .
 
 
 
+
+
 **Returns:**
 
 [**Dimension**](classendstone_1_1_dimension.md) containing this block 
@@ -190,6 +194,8 @@ Gets the Location of the block.
 
 
 
+
+
 **Returns:**
 
 [**Location**](classendstone_1_1_location.md) of block 
@@ -201,6 +207,8 @@ Gets the Location of the block.
         
 ### <code className="doc-symbol doc-symbol-function"/> getRelative [#getRelative]
 
+
+
 ```cpp
 virtual std::unique_ptr< Block > endstone::Block::getRelative (
     int offset_x,
@@ -210,6 +218,8 @@ virtual std::unique_ptr< Block > endstone::Block::getRelative (
 ```
 
 Gets the block at the given offsets.
+
+
 
 
 
@@ -231,7 +241,6 @@ Gets the block at the given offsets.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getRelative [#getRelative]
 
 ```cpp
 virtual std::unique_ptr< Block > endstone::Block::getRelative (
@@ -240,6 +249,8 @@ virtual std::unique_ptr< Block > endstone::Block::getRelative (
 ```
 
 Gets the block at the given face.
+
+
 
 This method is equal to getRelative(face, 1)
 
@@ -262,7 +273,6 @@ This method is equal to getRelative(face, 1)
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getRelative [#getRelative]
 
 ```cpp
 virtual std::unique_ptr< Block > endstone::Block::getRelative (
@@ -272,6 +282,8 @@ virtual std::unique_ptr< Block > endstone::Block::getRelative (
 ```
 
 Gets the block at the given distance of the given face.
+
+
 
 
 
@@ -300,6 +312,8 @@ virtual std::string endstone::Block::getType () const = 0
 
 Get the type of the block.
 
+
+
 This method returns the type of the block as a string, for example, minecraft:acacia\_stairs.
 
 
@@ -324,6 +338,8 @@ Gets the x-coordinate of this block.
 
 
 
+
+
 **Returns:**
 
 x-coordinate 
@@ -340,6 +356,8 @@ virtual int endstone::Block::getY () const = 0
 ```
 
 Gets the y-coordinate of this block.
+
+
 
 
 
@@ -362,6 +380,8 @@ Gets the z-coordinate of this block.
 
 
 
+
+
 **Returns:**
 
 x-coordinate 
@@ -373,6 +393,8 @@ x-coordinate
         
 ### <code className="doc-symbol doc-symbol-function"/> setData [#setData]
 
+
+
 ```cpp
 virtual Result< void > endstone::Block::setData (
     const BlockData & data
@@ -380,6 +402,8 @@ virtual Result< void > endstone::Block::setData (
 ```
 
 Sets the complete data for this block.
+
+
 
 
 
@@ -392,7 +416,6 @@ Sets the complete data for this block.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setData [#setData]
 
 ```cpp
 virtual Result< void > endstone::Block::setData (
@@ -402,6 +425,8 @@ virtual Result< void > endstone::Block::setData (
 ```
 
 Sets the complete data for this block.
+
+
 
 
 
@@ -417,6 +442,8 @@ Sets the complete data for this block.
         
 ### <code className="doc-symbol doc-symbol-function"/> setType [#setType]
 
+
+
 ```cpp
 virtual Result< void > endstone::Block::setType (
     std::string type
@@ -424,6 +451,8 @@ virtual Result< void > endstone::Block::setType (
 ```
 
 Sets the type of this block.
+
+
 
 
 
@@ -436,7 +465,6 @@ Sets the type of this block.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setType [#setType]
 
 ```cpp
 virtual Result< void > endstone::Block::setType (
@@ -446,6 +474,8 @@ virtual Result< void > endstone::Block::setType (
 ```
 
 Sets the type of this block.
+
+
 
 
 

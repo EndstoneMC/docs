@@ -70,10 +70,6 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
     <td>[`getPlayer`](#getPlayer)</td>
     <td>Gets the player who placed the block involved in this event.</td>
 </tr>
-<tr key="classendstone_1_1_block_place_event_1ab1bb2ece0d15adb5704b90587d971bed">
-    <td>[`~BlockPlaceEvent`](#~BlockPlaceEvent)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
@@ -82,8 +78,6 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 ```cpp
 const std::string endstone::BlockPlaceEvent::NAME;
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> BlockPlaceEvent [#BlockPlaceEvent]
 
 ```cpp
@@ -94,8 +88,6 @@ inline explicit endstone::BlockPlaceEvent::BlockPlaceEvent (
     Player & player
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getBlockAgainst [#getBlockAgainst]
 
 ```cpp
@@ -103,6 +95,8 @@ inline Block & endstone::BlockPlaceEvent::getBlockAgainst () const
 ```
 
 Gets the block that this block was placed against.
+
+
 
 
 
@@ -125,6 +119,8 @@ Gets the BlockState for the block which was placed.
 
 
 
+
+
 **Returns:**
 
 The [**BlockState**](classendstone_1_1_block_state.md) for the block which was placed. 
@@ -141,6 +137,8 @@ inline Block & endstone::BlockPlaceEvent::getBlockReplaced () const
 ```
 
 Gets the block which was replaced.
+
+
 
 
 
@@ -174,8 +172,6 @@ name of this event
 
 
         
-Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
-
 ### <code className="doc-symbol doc-symbol-function"/> getPlayer [#getPlayer]
 
 ```cpp
@@ -183,6 +179,8 @@ inline Player & endstone::BlockPlaceEvent::getPlayer () const
 ```
 
 Gets the player who placed the block involved in this event.
+
+
 
 
 

@@ -74,8 +74,6 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 ```cpp
 const std::string endstone::ActorDamageEvent::NAME;
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> ActorDamageEvent [#ActorDamageEvent]
 
 ```cpp
@@ -85,8 +83,6 @@ inline endstone::ActorDamageEvent::ActorDamageEvent (
     const float damage
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getDamage [#getDamage]
 
 ```cpp
@@ -94,6 +90,8 @@ inline float endstone::ActorDamageEvent::getDamage () const
 ```
 
 Gets the raw amount of damage caused by the event.
+
+
 
 
 
@@ -113,6 +111,8 @@ inline DamageSource & endstone::ActorDamageEvent::getDamageSource () const
 ```
 
 Get the source of damage.
+
+
 
 
 
@@ -146,8 +146,6 @@ name of this event
 
 
         
-Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
-
 ### <code className="doc-symbol doc-symbol-function"/> setDamage [#setDamage]
 
 ```cpp
@@ -157,6 +155,8 @@ inline void endstone::ActorDamageEvent::setDamage (
 ```
 
 Sets the raw amount of damage caused by the event.
+
+
 
 
 

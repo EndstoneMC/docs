@@ -66,10 +66,6 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
     <td>[`setKnockback`](#setKnockback)</td>
     <td>Sets the knockback that will be applied to the entity.</td>
 </tr>
-<tr key="classendstone_1_1_actor_knockback_event_1a2c59d36dbcf12d782d927acc211ef292">
-    <td>[`~ActorKnockbackEvent`](#~ActorKnockbackEvent)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
@@ -78,8 +74,6 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 ```cpp
 const std::string endstone::ActorKnockbackEvent::NAME;
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> ActorKnockbackEvent [#ActorKnockbackEvent]
 
 ```cpp
@@ -89,8 +83,6 @@ inline explicit endstone::ActorKnockbackEvent::ActorKnockbackEvent (
     Vector < float > knockback
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
@@ -112,8 +104,6 @@ name of this event
 
 
         
-Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
-
 ### <code className="doc-symbol doc-symbol-function"/> getKnockback [#getKnockback]
 
 ```cpp
@@ -148,6 +138,8 @@ Get the source actor that has caused knockback to the defender, if exists.
 
 
 
+
+
 **Returns:**
 
 actor that caused knockback, or nullptr if the knockback is not caused by an actor. 
@@ -166,6 +158,8 @@ inline void endstone::ActorKnockbackEvent::setKnockback (
 ```
 
 Sets the knockback that will be applied to the entity.
+
+
 
 
 

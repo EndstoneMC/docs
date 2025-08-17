@@ -91,8 +91,6 @@ enum endstone::PlayerInteractEvent::Action {
     RightClickAir
 };
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> PlayerInteractEvent [#PlayerInteractEvent]
 
 ```cpp
@@ -105,8 +103,6 @@ inline endstone::PlayerInteractEvent::PlayerInteractEvent (
     const std::optional< Vector < float > > & clicked_position
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getAction [#getAction]
 
 ```cpp
@@ -114,6 +110,8 @@ inline Action endstone::PlayerInteractEvent::getAction () const
 ```
 
 Returns the action type.
+
+
 
 
 
@@ -136,6 +134,8 @@ Returns the clicked block.
 
 
 
+
+
 **Returns:**
 
 [**Block**](classendstone_1_1_block.md) returns the block clicked with this item. 
@@ -155,6 +155,8 @@ Returns the face of the block that was clicked.
 
 
 
+
+
 **Returns:**
 
 BlockFace returns the face of the block that was clicked 
@@ -171,6 +173,8 @@ inline std::optional< Vector < float > > endstone::PlayerInteractEvent::getClick
 ```
 
 Gets the exact position on the block the player interacted with.
+
+
 
 
 
@@ -207,6 +211,8 @@ Returns the item in hand represented by this event.
 
 
 
+
+
 **Returns:**
 
 [**ItemStack**](classendstone_1_1_item_stack.md) the item used 
@@ -226,6 +232,8 @@ Check if this event involved a block.
 
 
 
+
+
 **Returns:**
 
 boolean true if it did 
@@ -242,6 +250,8 @@ inline bool endstone::PlayerInteractEvent::hasItem () const
 ```
 
 Check if this event involved an item.
+
+
 
 
 

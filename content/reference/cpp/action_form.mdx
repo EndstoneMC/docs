@@ -102,22 +102,16 @@ Bases: [`endstone::Form`](classendstone_1_1_form.md)
 ```cpp
 using endstone::ActionForm::Control =  std::variant<Button, Divider, Header, Label>;
 ```
-
-
 ### <code className="doc-symbol doc-symbol-typedef"/> OnSubmitCallback [#OnSubmitCallback]
 
 ```cpp
 using endstone::ActionForm::OnSubmitCallback =  std::function<void(Player *, int)>;
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> ActionForm [#ActionForm]
 
 ```cpp
 explicit endstone::ActionForm::ActionForm () = default
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> addButton [#addButton]
 
 ```cpp
@@ -129,6 +123,8 @@ inline ActionForm & endstone::ActionForm::addButton (
 ```
 
 Adds a button to the form.
+
+
 
 
 
@@ -160,6 +156,8 @@ Adds a divider to the form.
 
 
 
+
+
 **Returns:**
 
 A reference to the current form. 
@@ -178,6 +176,8 @@ inline ActionForm & endstone::ActionForm::addHeader (
 ```
 
 Adds a header to the form.
+
+
 
 
 
@@ -209,6 +209,8 @@ Adds a label to the form.
 
 
 
+
+
 **Parameters:**
 
 
@@ -235,6 +237,8 @@ Get the content of the form.
 
 
 
+
+
 **Returns:**
 
 The content of the form. 
@@ -251,6 +255,8 @@ inline const std::vector< Control > & endstone::ActionForm::getControls () const
 ```
 
 Get the controls of the action form.
+
+
 
 
 
@@ -273,6 +279,8 @@ Gets the on submit callback of the form.
 
 
 
+
+
 **Returns:**
 
 The on submit callback of the form. 
@@ -291,6 +299,8 @@ inline ActionForm & endstone::ActionForm::setContent (
 ```
 
 Set the content of the form.
+
+
 
 
 
@@ -322,6 +332,8 @@ Set the controls of the action form.
 
 
 
+
+
 **Parameters:**
 
 
@@ -347,6 +359,8 @@ inline ActionForm & endstone::ActionForm::setOnSubmit (
 ```
 
 Sets the on submit callback of the form.
+
+
 
 
 

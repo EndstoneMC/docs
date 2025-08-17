@@ -66,8 +66,6 @@ Bases: [`endstone::ActorEvent`](classendstone_1_1_actor_event.md)
 ```cpp
 const std::string endstone::ActorDeathEvent::NAME;
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> ActorDeathEvent [#ActorDeathEvent]
 
 ```cpp
@@ -76,8 +74,6 @@ inline endstone::ActorDeathEvent::ActorDeathEvent (
     std::unique_ptr< DamageSource > damage_source
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getDamageSource [#getDamageSource]
 
 ```cpp
@@ -85,6 +81,8 @@ inline DamageSource & endstone::ActorDeathEvent::getDamageSource () const
 ```
 
 Gets the source of damage which caused the death.
+
+
 
 
 
@@ -118,4 +116,3 @@ name of this event
 
 
         
-Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)

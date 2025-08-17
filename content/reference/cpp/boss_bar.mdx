@@ -98,10 +98,6 @@ title: "BossBar"
     <td>[`setVisible`](#setVisible)</td>
     <td>Set if the boss bar is displayed to attached players.</td>
 </tr>
-<tr key="classendstone_1_1_boss_bar_1aed35b808e9aa8cfc810acd70f399992b">
-    <td>[`~BossBar`](#~BossBar)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
@@ -114,6 +110,8 @@ virtual void endstone::BossBar::addFlag (
 ```
 
 Add an optional flag to this boss bar.
+
+
 
 
 
@@ -138,6 +136,8 @@ Adds the player to this boss bar causing it to display on their screen.
 
 
 
+
+
 **Parameters:**
 
 
@@ -154,6 +154,8 @@ virtual BarColor endstone::BossBar::getColor () const = 0
 ```
 
 Returns the color of this boss bar.
+
+
 
 
 
@@ -176,6 +178,8 @@ Returns all players viewing this boss bar.
 
 
 
+
+
 **Returns:**
 
 a list of players 
@@ -192,6 +196,8 @@ virtual float endstone::BossBar::getProgress () const = 0
 ```
 
 Returns the progress of the bar between 0.0 and 1.0.
+
+
 
 
 
@@ -214,6 +220,8 @@ Returns the style of this boss bar.
 
 
 
+
+
 **Returns:**
 
 the style of the bar. 
@@ -230,6 +238,8 @@ virtual std::string endstone::BossBar::getTitle () const = 0
 ```
 
 Returns the title of this boss bar.
+
+
 
 
 
@@ -251,6 +261,8 @@ virtual bool endstone::BossBar::hasFlag (
 ```
 
 Returns whether this boss bar has the passed flag set.
+
+
 
 
 
@@ -277,6 +289,8 @@ virtual bool endstone::BossBar::isVisible () const = 0
 ```
 
 Return if the boss bar is displayed to attached players.
+
+
 
 
 
@@ -309,6 +323,8 @@ Remove an existing flag on this boss bar.
 
 
 
+
+
 **Parameters:**
 
 
@@ -327,6 +343,8 @@ virtual void endstone::BossBar::removePlayer (
 ```
 
 Removes the player from this boss bar causing it to be removed from their screen.
+
+
 
 
 
@@ -351,6 +369,8 @@ Sets the color of this boss bar.
 
 
 
+
+
 **Parameters:**
 
 
@@ -369,6 +389,8 @@ virtual Result< void > endstone::BossBar::setProgress (
 ```
 
 Sets the progress of the bar. Values should be between 0.0 (empty) and 1.0 (full)
+
+
 
 
 
@@ -393,6 +415,8 @@ Sets the bar style of this boss bar.
 
 
 
+
+
 **Parameters:**
 
 
@@ -414,6 +438,8 @@ Sets the title of this boss bar.
 
 
 
+
+
 **Parameters:**
 
 
@@ -432,6 +458,8 @@ virtual void endstone::BossBar::setVisible (
 ```
 
 Set if the boss bar is displayed to attached players.
+
+
 
 
 

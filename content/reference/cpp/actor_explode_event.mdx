@@ -66,10 +66,6 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
     <td>[`getLocation`](#getLocation)</td>
     <td>Returns the location where the explosion happened.</td>
 </tr>
-<tr key="classendstone_1_1_actor_explode_event_1aeb8f75b17f04f27c4e4e64cd1f56d2f2">
-    <td>[`~ActorExplodeEvent`](#~ActorExplodeEvent)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
@@ -78,8 +74,6 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 ```cpp
 const std::string endstone::ActorExplodeEvent::NAME;
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> ActorExplodeEvent [#ActorExplodeEvent]
 
 ```cpp
@@ -89,15 +83,17 @@ inline explicit endstone::ActorExplodeEvent::ActorExplodeEvent (
     BlockList blocks
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getBlockList [#getBlockList]
+
+
 
 ```cpp
 inline const BlockList & endstone::ActorExplodeEvent::getBlockList () const
 ```
 
 Returns the list of blocks that would have been removed or were removed from the explosion event.
+
+
 
 
 
@@ -110,13 +106,14 @@ All blown-up blocks
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getBlockList [#getBlockList]
 
 ```cpp
 inline BlockList & endstone::ActorExplodeEvent::getBlockList () 
 ```
 
 Returns the list of blocks that would have been removed or were removed from the explosion event.
+
+
 
 
 
@@ -150,8 +147,6 @@ name of this event
 
 
         
-Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
-
 ### <code className="doc-symbol doc-symbol-function"/> getLocation [#getLocation]
 
 ```cpp
@@ -159,6 +154,8 @@ inline const Location & endstone::ActorExplodeEvent::getLocation () const
 ```
 
 Returns the location where the explosion happened.
+
+
 
 It is not possible to get this value from the Entity as the Entity no longer exists in the world.
 

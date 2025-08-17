@@ -88,6 +88,8 @@ Gets a CommandSender as Actor .
 
 
 
+
+
 **Returns:**
 
 [**Actor**](classendstone_1_1_actor.md), nullptr if not an [**Actor**](classendstone_1_1_actor.md) 
@@ -104,6 +106,8 @@ inline virtual BlockCommandSender * endstone::CommandSender::asBlock () const
 ```
 
 Gets a CommandSender as BlockCommandSender .
+
+
 
 
 
@@ -126,6 +130,8 @@ Casts a Permissible as CommandSender .
 
 
 
+
+
 **Returns:**
 
 [**CommandSender**](classendstone_1_1_command_sender.md), nullptr if not a [**CommandSender**](classendstone_1_1_command_sender.md) 
@@ -135,8 +141,6 @@ Casts a Permissible as CommandSender .
 
 
         
-Implements [*endstone::Permissible::asCommandSender*](classendstone_1_1_permissible.md#function-ascommandsender)
-
 ### <code className="doc-symbol doc-symbol-function"/> asConsole [#asConsole]
 
 ```cpp
@@ -144,6 +148,8 @@ inline virtual ConsoleCommandSender * endstone::CommandSender::asConsole () cons
 ```
 
 Gets a CommandSender as ConsoleCommandSender .
+
+
 
 
 
@@ -166,6 +172,8 @@ Gets a CommandSender as Player .
 
 
 
+
+
 **Returns:**
 
 [**Player**](classendstone_1_1_player.md), nullptr if not a [**Player**](classendstone_1_1_player.md) 
@@ -182,6 +190,8 @@ virtual std::string endstone::CommandSender::getName () const = 0
 ```
 
 Gets the name of this command sender.
+
+
 
 
 
@@ -204,6 +214,8 @@ Returns the server instance that this command is running on.
 
 
 
+
+
 **Returns:**
 
 [**Server**](classendstone_1_1_server.md) instance 
@@ -215,6 +227,8 @@ Returns the server instance that this command is running on.
         
 ### <code className="doc-symbol doc-symbol-function"/> sendErrorMessage [#sendErrorMessage]
 
+
+
 ```cpp
 virtual void endstone::CommandSender::sendErrorMessage (
     const Message & message
@@ -222,6 +236,8 @@ virtual void endstone::CommandSender::sendErrorMessage (
 ```
 
 Sends this sender a error message.
+
+
 
 
 
@@ -234,7 +250,6 @@ Sends this sender a error message.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> sendErrorMessage [#sendErrorMessage]
 
 ```cpp
 template<typename... Args>
@@ -243,9 +258,9 @@ inline void endstone::CommandSender::sendErrorMessage (
     Args &&... args
 ) const
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> sendMessage [#sendMessage]
+
+
 
 ```cpp
 virtual void endstone::CommandSender::sendMessage (
@@ -254,6 +269,8 @@ virtual void endstone::CommandSender::sendMessage (
 ```
 
 Sends this sender a message.
+
+
 
 
 
@@ -266,7 +283,6 @@ Sends this sender a message.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> sendMessage [#sendMessage]
 
 ```cpp
 template<typename... Args>
@@ -275,4 +291,3 @@ inline void endstone::CommandSender::sendMessage (
     Args &&... args
 ) const
 ```
-

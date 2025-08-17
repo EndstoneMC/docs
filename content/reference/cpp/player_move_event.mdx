@@ -50,10 +50,6 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
    </tr>
 </thead>
 <tbody>
-<tr key="classendstone_1_1_player_move_event_1a545efb1716ac4e5a9ff1c50b81f2df69">
-    <td>[`ENDSTONE\_EVENT`](#ENDSTONE\_EVENT)</td>
-    <td></td>
-</tr>
 <tr key="classendstone_1_1_player_move_event_1a8a1cf3638b2074e1d7845129adbbfed5">
     <td>[`PlayerMoveEvent`](#PlayerMoveEvent)</td>
     <td></td>
@@ -82,24 +78,11 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 ```cpp
 Location endstone::PlayerMoveEvent::from_;
 ```
-
-
 ### <code className="doc-symbol doc-symbol-variable"/> to\_ [#to\_]
 
 ```cpp
 Location endstone::PlayerMoveEvent::to_;
 ```
-
-
-### <code className="doc-symbol doc-symbol-function"/> ENDSTONE\_EVENT [#ENDSTONE\_EVENT]
-
-```cpp
-endstone::PlayerMoveEvent::ENDSTONE_EVENT (
-    PlayerMoveEvent
-) 
-```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> PlayerMoveEvent [#PlayerMoveEvent]
 
 ```cpp
@@ -109,8 +92,6 @@ inline explicit endstone::PlayerMoveEvent::PlayerMoveEvent (
     Location to
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getFrom [#getFrom]
 
 ```cpp
@@ -118,6 +99,8 @@ inline const Location & endstone::PlayerMoveEvent::getFrom () const
 ```
 
 Gets the location this player moved from.
+
+
 
 
 
@@ -137,6 +120,8 @@ inline const Location & endstone::PlayerMoveEvent::getTo () const
 ```
 
 Gets the location this player moved to.
+
+
 
 
 
@@ -161,6 +146,8 @@ Sets the location to mark as where the player moved from.
 
 
 
+
+
 **Parameters:**
 
 
@@ -179,6 +166,8 @@ inline Result< void > endstone::PlayerMoveEvent::setTo (
 ```
 
 Sets the location that this player will move to.
+
+
 
 
 

@@ -10,24 +10,42 @@ url_source: True
 
 ### <code className="doc-symbol doc-symbol-{{node.kind.value}}"/> {{node.name_short}} [#{{node.name_short}}]
 
-{{node.codeblock | use_code_language("cpp")}}
+{% if node._overloads -%}
+{%- for overload in node._overloads %}
 
-{% if configMemDef.get('brief') -%}
-{% if node.has_brief -%}
+{{overload.codeblock | use_code_language("cpp")}}
+
+{%- if configMemDef.get('brief') -%}
+{%- if overload.has_brief %}
+
+{{overload._brief.plain() + "\n"}}
+{%- endif -%}
+{%- endif -%}
+
+{%- if configMemDef.get('details') -%}
+{%- if overload.has_details %}
+
+{{overload.details | use_code_language("cpp")}}
+{%- endif -%}
+{%- endif -%}
+
+{%- endfor -%}
+{%- else -%}
+
+{{node.codeblock | use_code_language("cpp")}}
+{%- if configMemDef.get('brief') -%}
+{%- if node.has_brief %}
+
 {{node._brief.plain() + "\n"}}
 {%- endif -%}
 {%- endif -%}
 
 {%- if configMemDef.get('details') -%}
-{%- if node.has_details -%}
+{%- if node.has_details %}
+
 {{node.details | use_code_language("cpp")}}
 {%- endif -%}
 {%- endif -%}
-
-{% if configMemDef.get('implements') -%}
-{% if node.reimplements %}
-Implements [*{{node.reimplements.name_long}}*]({{node.reimplements.url}})
-{% endif %}
 {%- endif -%}
 
 {% endfilter %}

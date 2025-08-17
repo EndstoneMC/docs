@@ -130,14 +130,12 @@ title: "Inventory"
     <td>[`setItem`](#setItem)</td>
     <td>Stores the ItemStack at the given index of the inventory.</td>
 </tr>
-<tr key="classendstone_1_1_inventory_1ae4195380f173c841a5df5ddea12087ae">
-    <td>[`~Inventory`](#~Inventory)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
 ### <code className="doc-symbol doc-symbol-function"/> addItem [#addItem]
+
+
 
 ```cpp
 virtual std::unordered_map< int, ItemStack * > endstone::Inventory::addItem (
@@ -146,6 +144,8 @@ virtual std::unordered_map< int, ItemStack * > endstone::Inventory::addItem (
 ```
 
 Stores the given ItemStacks in the inventory.
+
+
 
 
 
@@ -179,7 +179,6 @@ A map containing items that couldn't be added.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> addItem [#addItem]
 
 ```cpp
 template<typename... Args, typename>
@@ -189,6 +188,8 @@ inline std::unordered_map< int, ItemStack * > endstone::Inventory::addItem (
 ```
 
 Stores the given ItemStacks in the inventory.
+
+
 
 
 
@@ -224,6 +225,8 @@ A map containing items that couldn't be added.
         
 ### <code className="doc-symbol doc-symbol-function"/> all [#all]
 
+
+
 ```cpp
 virtual std::unordered_map< int, std::unique_ptr< ItemStack > > endstone::Inventory::all (
     const std::string & type
@@ -231,6 +234,8 @@ virtual std::unordered_map< int, std::unique_ptr< ItemStack > > endstone::Invent
 ```
 
 Finds all slots in the inventory containing any ItemStacks with the given ItemType .
+
+
 
 The returned map contains entries where, the key is the slot index, and the value is the [**ItemStack**](classendstone_1_1_item_stack.md) in that slot. If no matching [**ItemStack**](classendstone_1_1_item_stack.md) is found, an empty map is returned.
 
@@ -253,7 +258,6 @@ A map from slot indexes to item at index
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> all [#all]
 
 ```cpp
 virtual std::unordered_map< int, std::unique_ptr< ItemStack > > endstone::Inventory::all (
@@ -262,6 +266,8 @@ virtual std::unordered_map< int, std::unique_ptr< ItemStack > > endstone::Invent
 ```
 
 Finds all slots in the inventory containing any ItemStacks with the given ItemStack .
+
+
 
 
 
@@ -293,6 +299,8 @@ A map from slot indexes to item at index
         
 ### <code className="doc-symbol doc-symbol-function"/> clear [#clear]
 
+
+
 ```cpp
 virtual void endstone::Inventory::clear (
     int index
@@ -300,6 +308,8 @@ virtual void endstone::Inventory::clear (
 ```
 
 Clears out a particular slot in the index.
+
+
 
 
 
@@ -312,7 +322,6 @@ Clears out a particular slot in the index.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> clear [#clear]
 
 ```cpp
 virtual void endstone::Inventory::clear () = 0
@@ -322,6 +331,8 @@ Clears out the whole Inventory .
 
 ### <code className="doc-symbol doc-symbol-function"/> contains [#contains]
 
+
+
 ```cpp
 virtual bool endstone::Inventory::contains (
     const std::string & type
@@ -329,6 +340,8 @@ virtual bool endstone::Inventory::contains (
 ```
 
 Checks if the inventory contains any ItemStacks with the given ItemType .
+
+
 
 
 
@@ -348,7 +361,6 @@ true if an [**ItemStack**](classendstone_1_1_item_stack.md) is found with the gi
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> contains [#contains]
 
 ```cpp
 virtual bool endstone::Inventory::contains (
@@ -357,6 +369,8 @@ virtual bool endstone::Inventory::contains (
 ```
 
 Checks if the inventory contains any ItemStacks with the given ItemStack .
+
+
 
 
 
@@ -383,7 +397,6 @@ true if any exactly matching ItemStacks were found, false otherwise
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> contains [#contains]
 
 ```cpp
 virtual bool endstone::Inventory::contains (
@@ -393,6 +406,8 @@ virtual bool endstone::Inventory::contains (
 ```
 
 Checks if the inventory contains at least the minimum amount specified of exactly matching ItemStacks.
+
+
 
 
 
@@ -422,6 +437,8 @@ true if amount less than 1 or if amount of exactly matching ItemStacks were foun
         
 ### <code className="doc-symbol doc-symbol-function"/> containsAtLeast [#containsAtLeast]
 
+
+
 ```cpp
 virtual bool endstone::Inventory::containsAtLeast (
     const std::string & type,
@@ -430,6 +447,8 @@ virtual bool endstone::Inventory::containsAtLeast (
 ```
 
 Checks if the inventory contains any ItemStacks with the given ItemType , adding to at least the minimum amount specified.
+
+
 
 
 
@@ -450,7 +469,6 @@ true if amount is less than 1, true if enough ItemStacks were found to add to th
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> containsAtLeast [#containsAtLeast]
 
 ```cpp
 virtual bool endstone::Inventory::containsAtLeast (
@@ -460,6 +478,8 @@ virtual bool endstone::Inventory::containsAtLeast (
 ```
 
 Checks if the inventory contains ItemStacks matching the given ItemStack whose amounts sum to at least the minimum amount specified.
+
+
 
 
 
@@ -482,6 +502,8 @@ true if amount less than 1 or enough ItemStacks were found to add to the given a
         
 ### <code className="doc-symbol doc-symbol-function"/> first [#first]
 
+
+
 ```cpp
 virtual int endstone::Inventory::first (
     const std::string & type
@@ -489,6 +511,8 @@ virtual int endstone::Inventory::first (
 ```
 
 Finds the first slot in the inventory containing an ItemStack with the given ItemType .
+
+
 
 
 
@@ -508,7 +532,6 @@ The slot index of the given [**ItemType**](classendstone_1_1_item_type.md) or -1
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> first [#first]
 
 ```cpp
 virtual int endstone::Inventory::first (
@@ -517,6 +540,8 @@ virtual int endstone::Inventory::first (
 ```
 
 Returns the first slot in the inventory containing an ItemStack with the given stack.
+
+
 
 
 
@@ -546,6 +571,8 @@ Returns the first empty Slot.
 
 
 
+
+
 **Returns:**
 
 The first empty Slot found, or -1 if no empty slots. 
@@ -562,6 +589,8 @@ virtual std::vector< std::unique_ptr< ItemStack > > endstone::Inventory::getCont
 ```
 
 Returns all ItemStacks from the inventory.
+
+
 
 
 
@@ -583,6 +612,8 @@ virtual std::unique_ptr< ItemStack > endstone::Inventory::getItem (
 ```
 
 Returns the ItemStack found in the slot at the given index.
+
+
 
 
 
@@ -612,6 +643,8 @@ Returns the maximum stack size for an ItemStack in this inventory.
 
 
 
+
+
 **Returns:**
 
 The maximum size for an [**ItemStack**](classendstone_1_1_item_stack.md) in this inventory. 
@@ -628,6 +661,8 @@ virtual int endstone::Inventory::getSize () const = 0
 ```
 
 Returns the size of the inventory.
+
+
 
 
 
@@ -650,6 +685,8 @@ Check whether this inventory is empty. An inventory is considered to be empty if
 
 
 
+
+
 **Returns:**
 
 true if empty, false otherwise 
@@ -661,6 +698,8 @@ true if empty, false otherwise
         
 ### <code className="doc-symbol doc-symbol-function"/> remove [#remove]
 
+
+
 ```cpp
 virtual void endstone::Inventory::remove (
     const std::string & type
@@ -668,6 +707,8 @@ virtual void endstone::Inventory::remove (
 ```
 
 Removes all stacks in the inventory matching the given ItemType .
+
+
 
 
 
@@ -680,7 +721,6 @@ Removes all stacks in the inventory matching the given ItemType .
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> remove [#remove]
 
 ```cpp
 virtual void endstone::Inventory::remove (
@@ -689,6 +729,8 @@ virtual void endstone::Inventory::remove (
 ```
 
 Removes all stacks in the inventory matching the given stack.
+
+
 
 
 
@@ -710,6 +752,8 @@ This will only match a slot if both the type and the amount of the stack match
         
 ### <code className="doc-symbol doc-symbol-function"/> removeItem [#removeItem]
 
+
+
 ```cpp
 virtual std::unordered_map< int, ItemStack * > endstone::Inventory::removeItem (
     std::vector< ItemStack * > items
@@ -717,6 +761,8 @@ virtual std::unordered_map< int, ItemStack * > endstone::Inventory::removeItem (
 ```
 
 Removes the given ItemStacks from the inventory.
+
+
 
 
 
@@ -750,7 +796,6 @@ A map containing items that couldn't be removed.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> removeItem [#removeItem]
 
 ```cpp
 template<typename... Args, typename>
@@ -760,6 +805,8 @@ inline std::unordered_map< int, ItemStack * > endstone::Inventory::removeItem (
 ```
 
 Removes the given ItemStacks from the inventory.
+
+
 
 
 
@@ -805,6 +852,8 @@ Completely replaces the inventory's contents. Removes all existing contents and 
 
 
 
+
+
 **Parameters:**
 
 
@@ -824,6 +873,8 @@ virtual void endstone::Inventory::setItem (
 ```
 
 Stores the ItemStack at the given index of the inventory.
+
+
 
 
 

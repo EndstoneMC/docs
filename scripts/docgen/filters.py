@@ -1,11 +1,13 @@
 import re
 from typing import Sequence
+from collections import OrderedDict
 
 from griffe import DocstringFunction, DocstringSectionFunctions, Function
+from mkdoxy.node import Node
 
 
 def do_heading(
-    content: str, heading_level: int, role: str | None = None, **attributes: str
+        content: str, heading_level: int, role: str | None = None, **attributes: str
 ) -> str:
     """Render a Markdown heading.
 
@@ -31,9 +33,9 @@ def do_heading(
 
 
 def do_as_functions_section(
-    functions: Sequence[Function],
-    *,
-    check_public: bool = True,
+        functions: Sequence[Function],
+        *,
+        check_public: bool = True,
 ) -> DocstringSectionFunctions:
     """Build a functions section from a list of functions.
 
@@ -106,3 +108,31 @@ def do_format_refid(refid: str) -> str:
         s = "uuid"
 
     return s.lower()
+
+
+def do_filter_functions(functions: [Node]):
+    out = []
+    blacklists = ["ENDSTONE_EVENT"]
+    for function in functions:
+        n = function.name_tokens[-1]
+        if not (n.startswith("operator") or n.startswith("~")) and not n in blacklists:
+            out.append(function)
+
+    return out
+
+
+def do_group_overloads(functions: [Node]):
+    groups = OrderedDict()
+
+    for function in functions:
+        key = function.name_short
+        if key in groups:
+            node = groups[key]
+            if not hasattr(node, '_overloads'):
+                setattr(node, '_overloads', [node])
+            node._overloads.append(function)
+        else:
+            groups[key] = function
+
+    out = list(groups.values())
+    return out

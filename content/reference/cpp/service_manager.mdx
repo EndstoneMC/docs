@@ -54,10 +54,6 @@ title: "ServiceManager"
     <td>[`unregisterAll`](#unregisterAll)</td>
     <td>Unregister all the services registered by a particular plugin.</td>
 </tr>
-<tr key="classendstone_1_1_service_manager_1abbb8cc4e6fb216c72faeba297e006eb7">
-    <td>[`~ServiceManager`](#~ServiceManager)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
@@ -70,6 +66,8 @@ virtual std::shared_ptr< Service > endstone::ServiceManager::get (
 ```
 
 Queries for a provider. This may return null if no provider has been registered for a service. The highest priority provider is returned.
+
+
 
 
 
@@ -97,8 +95,6 @@ inline std::shared_ptr< T > endstone::ServiceManager::load (
     std::string name
 ) const
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> registerService [#registerService]
 
 ```cpp
@@ -111,6 +107,8 @@ virtual void endstone::ServiceManager::registerService (
 ```
 
 Register a provider of a service.
+
+
 
 
 
@@ -128,6 +126,8 @@ Register a provider of a service.
         
 ### <code className="doc-symbol doc-symbol-function"/> unregister [#unregister]
 
+
+
 ```cpp
 virtual void endstone::ServiceManager::unregister (
     std::string name,
@@ -136,6 +136,8 @@ virtual void endstone::ServiceManager::unregister (
 ```
 
 Unregister a particular provider for a particular service.
+
+
 
 
 
@@ -149,7 +151,6 @@ Unregister a particular provider for a particular service.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> unregister [#unregister]
 
 ```cpp
 virtual void endstone::ServiceManager::unregister (
@@ -158,6 +159,8 @@ virtual void endstone::ServiceManager::unregister (
 ```
 
 Unregister a particular provider.
+
+
 
 
 
@@ -179,6 +182,8 @@ virtual void endstone::ServiceManager::unregisterAll (
 ```
 
 Unregister all the services registered by a particular plugin.
+
+
 
 
 

@@ -86,8 +86,6 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 ```cpp
 const std::string endstone::PacketReceiveEvent::NAME;
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> PacketReceiveEvent [#PacketReceiveEvent]
 
 ```cpp
@@ -99,8 +97,6 @@ inline endstone::PacketReceiveEvent::PacketReceiveEvent (
     const int sub_client_id
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getAddress [#getAddress]
 
 ```cpp
@@ -108,6 +104,8 @@ inline SocketAddress endstone::PacketReceiveEvent::getAddress () const
 ```
 
 Gets the network address to which this packet is being sent.
+
+
 
 
 
@@ -141,8 +139,6 @@ name of this event
 
 
         
-Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
-
 ### <code className="doc-symbol doc-symbol-function"/> getPacketId [#getPacketId]
 
 ```cpp
@@ -150,6 +146,8 @@ inline int endstone::PacketReceiveEvent::getPacketId () const
 ```
 
 Gets the ID of the packet.
+
+
 
 
 
@@ -172,6 +170,8 @@ Gets the raw packet data excluding the header.
 
 
 
+
+
 **Returns:**
 
 The packet payload data. 
@@ -188,6 +188,8 @@ inline Player * endstone::PacketReceiveEvent::getPlayer () const
 ```
 
 Returns the player involved in this event.
+
+
 
 
 
@@ -217,6 +219,8 @@ Gets the SubClient ID.
 
 
 
+
+
 **Note:**
 
 Range is 0 to 3 (0 = primary client; 1-3 = split-screen clients).
@@ -242,6 +246,8 @@ inline void endstone::PacketReceiveEvent::setPayload (
 ```
 
 Sets the raw packet data excluding the header.
+
+
 
 
 

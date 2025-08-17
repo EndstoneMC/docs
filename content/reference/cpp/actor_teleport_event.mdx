@@ -70,10 +70,6 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
     <td>[`setTo`](#setTo)</td>
     <td>Sets the location that this actor moved to.</td>
 </tr>
-<tr key="classendstone_1_1_actor_teleport_event_1a05d22c8898cc980d69767e36c70d2248">
-    <td>[`~ActorTeleportEvent`](#~ActorTeleportEvent)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
@@ -82,8 +78,6 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 ```cpp
 const std::string endstone::ActorTeleportEvent::NAME;
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> ActorTeleportEvent [#ActorTeleportEvent]
 
 ```cpp
@@ -93,8 +87,6 @@ inline explicit endstone::ActorTeleportEvent::ActorTeleportEvent (
     Location to
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
@@ -116,8 +108,6 @@ name of this event
 
 
         
-Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
-
 ### <code className="doc-symbol doc-symbol-function"/> getFrom [#getFrom]
 
 ```cpp
@@ -125,6 +115,8 @@ inline const Location & endstone::ActorTeleportEvent::getFrom () const
 ```
 
 Gets the location that this actor moved from.
+
+
 
 
 
@@ -144,6 +136,8 @@ inline const Location & endstone::ActorTeleportEvent::getTo () const
 ```
 
 Gets the location that this actor moved to.
+
+
 
 
 
@@ -168,6 +162,8 @@ Sets the location that this actor moved from.
 
 
 
+
+
 **Parameters:**
 
 
@@ -186,6 +182,8 @@ inline void endstone::ActorTeleportEvent::setTo (
 ```
 
 Sets the location that this actor moved to.
+
+
 
 
 

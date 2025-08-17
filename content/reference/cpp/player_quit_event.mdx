@@ -31,10 +31,6 @@ Bases: [`endstone::PlayerEvent`](classendstone_1_1_player_event.md)
    </tr>
 </thead>
 <tbody>
-<tr key="classendstone_1_1_player_quit_event_1a4cafa40ad32d17a9df4dd202ca3bb58c">
-    <td>[`ENDSTONE\_EVENT`](#ENDSTONE\_EVENT)</td>
-    <td></td>
-</tr>
 <tr key="classendstone_1_1_player_quit_event_1ac6ffac80709929a051bd364c84dd65ce">
     <td>[`PlayerQuitEvent`](#PlayerQuitEvent)</td>
     <td></td>
@@ -50,15 +46,6 @@ Bases: [`endstone::PlayerEvent`](classendstone_1_1_player_event.md)
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> ENDSTONE\_EVENT [#ENDSTONE\_EVENT]
-
-```cpp
-endstone::PlayerQuitEvent::ENDSTONE_EVENT (
-    PlayerQuitEvent
-) 
-```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> PlayerQuitEvent [#PlayerQuitEvent]
 
 ```cpp
@@ -67,8 +54,6 @@ inline explicit endstone::PlayerQuitEvent::PlayerQuitEvent (
     std::optional< Message > quit_message
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getQuitMessage [#getQuitMessage]
 
 ```cpp
@@ -76,6 +61,8 @@ inline std::optional< Message > endstone::PlayerQuitEvent::getQuitMessage () con
 ```
 
 Gets the quit message to send to all online players.
+
+
 
 
 
@@ -97,6 +84,8 @@ inline void endstone::PlayerQuitEvent::setQuitMessage (
 ```
 
 Sets the quit message to send to all online players.
+
+
 
 
 

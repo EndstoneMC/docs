@@ -81,14 +81,6 @@ title: "Color"
     <td>[`getRed`](#getRed)</td>
     <td>Gets the red component of the color.</td>
 </tr>
-<tr key="classendstone_1_1_color_1a4748a2087280419ccb2fda334d14c1a7">
-    <td>[`operator!=`](#operator!=)</td>
-    <td></td>
-</tr>
-<tr key="classendstone_1_1_color_1aba327588593d6e8fd59114d831fb0b60">
-    <td>[`operator==`](#operator==)</td>
-    <td></td>
-</tr>
 <tr key="classendstone_1_1_color_1a90d9dc03bed7fd437a864b5a3a2e597e">
     <td>[`setAlpha`](#setAlpha)</td>
     <td>Creates a new Color object with specified component.</td>
@@ -148,15 +140,11 @@ title: "Color"
 ```cpp
 int endstone::Color::BIT_MASK;
 ```
-
-
 ### <code className="doc-symbol doc-symbol-variable"/> DEFAULT\_ALPHA [#DEFAULT\_ALPHA]
 
 ```cpp
 int endstone::Color::DEFAULT_ALPHA;
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> Color [#Color]
 
 ```cpp
@@ -167,8 +155,6 @@ inline constexpr endstone::Color::Color (
     const std::uint8_t alpha=DEFAULT_ALPHA
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> asBGR [#asBGR]
 
 ```cpp
@@ -176,6 +162,8 @@ inline int endstone::Color::asBGR () const
 ```
 
 Gets the color as an BGR integer.
+
+
 
 
 
@@ -198,6 +186,8 @@ Gets the color as an RGB integer.
 
 
 
+
+
 **Returns:**
 
 An integer representation of this color, as 0xRRGGBB 
@@ -214,6 +204,8 @@ inline int endstone::Color::asRGBA () const
 ```
 
 Gets the color as an RGBA integer.
+
+
 
 
 
@@ -236,6 +228,8 @@ Gets the alpha component of the color.
 
 
 
+
+
 **Returns:**
 
 The alpha component (0–255) of the color. 
@@ -252,6 +246,8 @@ inline int endstone::Color::getBlue () const
 ```
 
 Gets the blue component of the color.
+
+
 
 
 
@@ -274,6 +270,8 @@ Gets the green component of the color.
 
 
 
+
+
 **Returns:**
 
 The green component (0–255) of the color. 
@@ -290,6 +288,8 @@ inline int endstone::Color::getRed () const
 ```
 
 Gets the red component of the color.
+
+
 
 
 
@@ -311,6 +311,8 @@ inline Result< Color > endstone::Color::setAlpha (
 ```
 
 Creates a new Color object with specified component.
+
+
 
 
 
@@ -342,6 +344,8 @@ Creates a new Color object with specified component.
 
 
 
+
+
 **Parameters:**
 
 
@@ -367,6 +371,8 @@ inline Result< Color > endstone::Color::setGreen (
 ```
 
 Creates a new Color object with specified component.
+
+
 
 
 
@@ -398,6 +404,8 @@ Creates a new Color object with specified component.
 
 
 
+
+
 **Parameters:**
 
 
@@ -416,6 +424,8 @@ a new color object with the red component
         
 ### <code className="doc-symbol doc-symbol-function"/> fromBGR [#fromBGR]
 
+
+
 ```cpp
 static inline Result< Color > endstone::Color::fromBGR (
     const int blue,
@@ -425,6 +435,8 @@ static inline Result< Color > endstone::Color::fromBGR (
 ```
 
 Creates a new Color object from a blue, green, and red.
+
+
 
 
 
@@ -446,16 +458,15 @@ a new [**Color**](classendstone_1_1_color.md) object for the red, green, blue
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> fromBGR [#fromBGR]
 
 ```cpp
 static inline Result< Color > endstone::Color::fromBGR (
     const int bgr
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> fromRGB [#fromRGB]
+
+
 
 ```cpp
 static inline Result< Color > endstone::Color::fromRGB (
@@ -466,6 +477,8 @@ static inline Result< Color > endstone::Color::fromRGB (
 ```
 
 Creates a new Color object from a red, green, and blue.
+
+
 
 
 
@@ -487,7 +500,6 @@ a new [**Color**](classendstone_1_1_color.md) object for the red, green, blue
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> fromRGB [#fromRGB]
 
 ```cpp
 static inline Result< Color > endstone::Color::fromRGB (
@@ -496,6 +508,8 @@ static inline Result< Color > endstone::Color::fromRGB (
 ```
 
 Creates a new color object from an integer that contains the red, green, and blue bytes in the lowest order 24 bits.
+
+
 
 
 
@@ -517,6 +531,8 @@ a new color object for specified values
         
 ### <code className="doc-symbol doc-symbol-function"/> fromRGBA [#fromRGBA]
 
+
+
 ```cpp
 static inline Result< Color > endstone::Color::fromRGBA (
     int red,
@@ -527,6 +543,8 @@ static inline Result< Color > endstone::Color::fromRGBA (
 ```
 
 Creates a new Color object from a red, green, blue, and alpha.
+
+
 
 
 
@@ -549,7 +567,6 @@ a new [**Color**](classendstone_1_1_color.md) object for the red, green, blue, a
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> fromRGBA [#fromRGBA]
 
 ```cpp
 static inline Result< Color > endstone::Color::fromRGBA (
@@ -558,6 +575,8 @@ static inline Result< Color > endstone::Color::fromRGBA (
 ```
 
 Creates a new color object from an integer that contains the red, green, blue, and alpha bytes.
+
+
 
 
 

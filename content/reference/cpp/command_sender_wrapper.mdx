@@ -126,8 +126,6 @@ Bases: [`endstone::CommandSender`](classendstone_1_1_command_sender.md)
 ```cpp
 using endstone::CommandSenderWrapper::Callback =  std::function<void(const Message &)>;
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> CommandSenderWrapper [#CommandSenderWrapper]
 
 ```cpp
@@ -137,9 +135,9 @@ inline explicit endstone::CommandSenderWrapper::CommandSenderWrapper (
     Callback on_error={}
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> addAttachment [#addAttachment]
+
+
 
 ```cpp
 inline virtual PermissionAttachment * endstone::CommandSenderWrapper::addAttachment (
@@ -150,6 +148,8 @@ inline virtual PermissionAttachment * endstone::CommandSenderWrapper::addAttachm
 ```
 
 Adds a new PermissionAttachment with a single permission by name and value.
+
+
 
 
 
@@ -171,9 +171,6 @@ The [**PermissionAttachment**](classendstone_1_1_permission_attachment.md) that 
 
 
         
-Implements [*endstone::Permissible::addAttachment*](classendstone_1_1_permissible.md#function-addattachment-12)
-
-### <code className="doc-symbol doc-symbol-function"/> addAttachment [#addAttachment]
 
 ```cpp
 inline virtual PermissionAttachment * endstone::CommandSenderWrapper::addAttachment (
@@ -182,6 +179,8 @@ inline virtual PermissionAttachment * endstone::CommandSenderWrapper::addAttachm
 ```
 
 Adds a new empty PermissionAttachment to this object.
+
+
 
 
 
@@ -201,8 +200,6 @@ The [**PermissionAttachment**](classendstone_1_1_permission_attachment.md) that 
 
 
         
-Implements [*endstone::Permissible::addAttachment*](classendstone_1_1_permissible.md#function-addattachment-22)
-
 ### <code className="doc-symbol doc-symbol-function"/> asActor [#asActor]
 
 ```cpp
@@ -210,6 +207,8 @@ inline virtual Actor * endstone::CommandSenderWrapper::asActor () override const
 ```
 
 Gets a CommandSender as Actor .
+
+
 
 
 
@@ -222,8 +221,6 @@ Gets a CommandSender as Actor .
 
 
         
-Implements [*endstone::CommandSender::asActor*](classendstone_1_1_command_sender.md#function-asactor)
-
 ### <code className="doc-symbol doc-symbol-function"/> asConsole [#asConsole]
 
 ```cpp
@@ -231,6 +228,8 @@ inline virtual ConsoleCommandSender * endstone::CommandSenderWrapper::asConsole 
 ```
 
 Gets a CommandSender as ConsoleCommandSender .
+
+
 
 
 
@@ -243,8 +242,6 @@ Gets a CommandSender as ConsoleCommandSender .
 
 
         
-Implements [*endstone::CommandSender::asConsole*](classendstone_1_1_command_sender.md#function-asconsole)
-
 ### <code className="doc-symbol doc-symbol-function"/> asPlayer [#asPlayer]
 
 ```cpp
@@ -252,6 +249,8 @@ inline virtual Player * endstone::CommandSenderWrapper::asPlayer () override con
 ```
 
 Gets a CommandSender as Player .
+
+
 
 
 
@@ -264,8 +263,6 @@ Gets a CommandSender as Player .
 
 
         
-Implements [*endstone::CommandSender::asPlayer*](classendstone_1_1_command_sender.md#function-asplayer)
-
 ### <code className="doc-symbol doc-symbol-function"/> getEffectivePermissions [#getEffectivePermissions]
 
 ```cpp
@@ -273,6 +270,8 @@ inline virtual std::unordered_set< PermissionAttachmentInfo * > endstone::Comman
 ```
 
 Gets a set containing all the permissions currently in effect by this object.
+
+
 
 
 
@@ -285,8 +284,6 @@ Set of currently effective permissions
 
 
         
-Implements [*endstone::Permissible::getEffectivePermissions*](classendstone_1_1_permissible.md#function-geteffectivepermissions)
-
 ### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
@@ -294,6 +291,8 @@ inline virtual std::string endstone::CommandSenderWrapper::getName () override c
 ```
 
 Gets the name of this command sender.
+
+
 
 
 
@@ -306,8 +305,6 @@ Name of the sender
 
 
         
-Implements [*endstone::CommandSender::getName*](classendstone_1_1_command_sender.md#function-getname)
-
 ### <code className="doc-symbol doc-symbol-function"/> getPermissionLevel [#getPermissionLevel]
 
 ```cpp
@@ -315,6 +312,8 @@ inline virtual PermissionLevel endstone::CommandSenderWrapper::getPermissionLeve
 ```
 
 Gets the permission level of this object.
+
+
 
 
 
@@ -327,8 +326,6 @@ The permission level
 
 
         
-Implements [*endstone::Permissible::getPermissionLevel*](classendstone_1_1_permissible.md#function-getpermissionlevel)
-
 ### <code className="doc-symbol doc-symbol-function"/> getServer [#getServer]
 
 ```cpp
@@ -336,6 +333,8 @@ inline virtual Server & endstone::CommandSenderWrapper::getServer () override co
 ```
 
 Returns the server instance that this command is running on.
+
+
 
 
 
@@ -348,9 +347,9 @@ Returns the server instance that this command is running on.
 
 
         
-Implements [*endstone::CommandSender::getServer*](classendstone_1_1_command_sender.md#function-getserver)
-
 ### <code className="doc-symbol doc-symbol-function"/> hasPermission [#hasPermission]
+
+
 
 ```cpp
 inline virtual bool endstone::CommandSenderWrapper::hasPermission (
@@ -359,6 +358,8 @@ inline virtual bool endstone::CommandSenderWrapper::hasPermission (
 ```
 
 Gets the value of the specified permission, if set. If a permission override is not set on this object, the default value of the permission will be returned.
+
+
 
 
 
@@ -378,9 +379,6 @@ Value of the permission
 
 
         
-Implements [*endstone::Permissible::hasPermission*](classendstone_1_1_permissible.md#function-haspermission-12)
-
-### <code className="doc-symbol doc-symbol-function"/> hasPermission [#hasPermission]
 
 ```cpp
 inline virtual bool endstone::CommandSenderWrapper::hasPermission (
@@ -389,6 +387,8 @@ inline virtual bool endstone::CommandSenderWrapper::hasPermission (
 ```
 
 Gets the value of the specified permission, if set. If a permission override is not set on this object, the default value of the permission will be returned.
+
+
 
 
 
@@ -408,9 +408,9 @@ Value of the permission
 
 
         
-Implements [*endstone::Permissible::hasPermission*](classendstone_1_1_permissible.md#function-haspermission-22)
-
 ### <code className="doc-symbol doc-symbol-function"/> isPermissionSet [#isPermissionSet]
+
+
 
 ```cpp
 inline virtual bool endstone::CommandSenderWrapper::isPermissionSet (
@@ -419,6 +419,8 @@ inline virtual bool endstone::CommandSenderWrapper::isPermissionSet (
 ```
 
 Checks if this object contains an override for the specified permission, by fully qualified name.
+
+
 
 
 
@@ -438,9 +440,6 @@ true if the permission is set, otherwise false
 
 
         
-Implements [*endstone::Permissible::isPermissionSet*](classendstone_1_1_permissible.md#function-ispermissionset-12)
-
-### <code className="doc-symbol doc-symbol-function"/> isPermissionSet [#isPermissionSet]
 
 ```cpp
 inline virtual bool endstone::CommandSenderWrapper::isPermissionSet (
@@ -449,6 +448,8 @@ inline virtual bool endstone::CommandSenderWrapper::isPermissionSet (
 ```
 
 Checks if this object contains an override for the specified Permission .
+
+
 
 
 
@@ -468,8 +469,6 @@ true if the permission is set, otherwise false
 
 
         
-Implements [*endstone::Permissible::isPermissionSet*](classendstone_1_1_permissible.md#function-ispermissionset-22)
-
 ### <code className="doc-symbol doc-symbol-function"/> recalculatePermissions [#recalculatePermissions]
 
 ```cpp
@@ -477,8 +476,6 @@ inline virtual void endstone::CommandSenderWrapper::recalculatePermissions () ov
 ```
 
 Recalculates the permissions for this object, if the attachments have changed values. This should very rarely need to be called from a plugin.
-
-Implements [*endstone::Permissible::recalculatePermissions*](classendstone_1_1_permissible.md#function-recalculatepermissions)
 
 ### <code className="doc-symbol doc-symbol-function"/> removeAttachment [#removeAttachment]
 
@@ -489,6 +486,8 @@ inline virtual Result< void > endstone::CommandSenderWrapper::removeAttachment (
 ```
 
 Removes the given PermissionAttachment from this object.
+
+
 
 
 
@@ -508,8 +507,6 @@ true if the specified attachment was removed successfully, false when it isn't p
 
 
         
-Implements [*endstone::Permissible::removeAttachment*](classendstone_1_1_permissible.md#function-removeattachment)
-
 ### <code className="doc-symbol doc-symbol-function"/> sendErrorMessage [#sendErrorMessage]
 
 ```cpp
@@ -522,6 +519,8 @@ Sends this sender a error message.
 
 
 
+
+
 **Parameters:**
 
 
@@ -531,8 +530,6 @@ Sends this sender a error message.
 
 
         
-Implements [*endstone::CommandSender::sendErrorMessage*](classendstone_1_1_command_sender.md#function-senderrormessage-12)
-
 ### <code className="doc-symbol doc-symbol-function"/> sendMessage [#sendMessage]
 
 ```cpp
@@ -545,6 +542,8 @@ Sends this sender a message.
 
 
 
+
+
 **Parameters:**
 
 
@@ -554,4 +553,3 @@ Sends this sender a message.
 
 
         
-Implements [*endstone::CommandSender::sendMessage*](classendstone_1_1_command_sender.md#function-sendmessage-12)

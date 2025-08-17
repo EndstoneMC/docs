@@ -54,10 +54,6 @@ title: "Score"
     <td>[`setValue`](#setValue)</td>
     <td>Sets the current score.</td>
 </tr>
-<tr key="classendstone_1_1_score_1aaf6dc0162a28e0b9b3224221d22cb2ea">
-    <td>[`~Score`](#~Score)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
@@ -68,6 +64,8 @@ virtual ScoreEntry endstone::Score::getEntry () const = 0
 ```
 
 Gets the entry being tracked by this Score .
+
+
 
 
 
@@ -90,6 +88,8 @@ Gets the Objective being tracked by this Score .
 
 
 
+
+
 **Returns:**
 
 the owning objective's scoreboard 
@@ -106,6 +106,8 @@ virtual Scoreboard & endstone::Score::getScoreboard () const = 0
 ```
 
 Gets the scoreboard for the associated objective.
+
+
 
 
 
@@ -128,6 +130,8 @@ Gets the current score.
 
 
 
+
+
 **Returns:**
 
 the current score 
@@ -144,6 +148,8 @@ virtual Result< bool > endstone::Score::isScoreSet () const = 0
 ```
 
 Shows if this score has been set at any point in time.
+
+
 
 
 
@@ -165,6 +171,8 @@ virtual Result< void > endstone::Score::setValue (
 ```
 
 Sets the current score.
+
+
 
 
 

@@ -70,14 +70,6 @@ title: "Objective"
     <td>[`isModifiable`](#isModifiable)</td>
     <td>Gets if the objective's scores can be modified directly by a plugin.</td>
 </tr>
-<tr key="classendstone_1_1_objective_1abfd8c61ab066baec27ba92445cc6ce3b">
-    <td>[`operator!=`](#operator!=)</td>
-    <td></td>
-</tr>
-<tr key="classendstone_1_1_objective_1a8a41679213a22450c756fd1c14edbc36">
-    <td>[`operator==`](#operator==)</td>
-    <td></td>
-</tr>
 <tr key="classendstone_1_1_objective_1a42b677651015bc3e39519974f4fdac56">
     <td>[`setDisplay`](#setDisplay)</td>
     <td>Sets the display slot and sort order for this objective. This will remove it from any other display slot.</td>
@@ -98,10 +90,6 @@ title: "Objective"
     <td>[`unregister`](#unregister)</td>
     <td>Unregisters this objective from the associated Scoreboard .</td>
 </tr>
-<tr key="classendstone_1_1_objective_1aa8fe81958a62274b81fe7d9d8ff515fd">
-    <td>[`~Objective`](#~Objective)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
@@ -112,6 +100,8 @@ virtual Result< const Criteria * > endstone::Objective::getCriteria () const = 0
 ```
 
 Gets the criteria this objective tracks.
+
+
 
 
 
@@ -134,6 +124,8 @@ Gets the name displayed to players for this objective.
 
 
 
+
+
 **Returns:**
 
 this objective's display name 
@@ -153,6 +145,8 @@ Gets the display slot this objective is displayed at.
 
 
 
+
+
 **Returns:**
 
 the display slot for this objective 
@@ -169,6 +163,8 @@ virtual Result< std::string > endstone::Objective::getName () const = 0
 ```
 
 Gets the name of this Objective .
+
+
 
 
 
@@ -214,6 +210,8 @@ Sets manner in which this objective will be rendered.
 
 
 
+
+
 **Parameters:**
 
 
@@ -250,6 +248,8 @@ Gets the scoreboard to which this objective is attached.
 
 
 
+
+
 **Returns:**
 
 Owning scoreboard 
@@ -266,6 +266,8 @@ virtual Result< ObjectiveSortOrder > endstone::Objective::getSortOrder () const 
 ```
 
 Gets the sort order for this objective.
+
+
 
 
 
@@ -288,6 +290,8 @@ Gets if the objective is currently displayed in a slot.
 
 
 
+
+
 **Returns:**
 
 true if the objective is displayed 
@@ -304,6 +308,8 @@ virtual Result< bool > endstone::Objective::isModifiable () const = 0
 ```
 
 Gets if the objective's scores can be modified directly by a plugin.
+
+
 
 
 
@@ -329,6 +335,8 @@ Sets the display slot and sort order for this objective. This will remove it fro
 
 
 
+
+
 **Parameters:**
 
 
@@ -348,6 +356,8 @@ virtual Result< void > endstone::Objective::setDisplayName (
 ```
 
 Sets the name displayed to players for this objective.
+
+
 
 
 
@@ -372,6 +382,8 @@ Sets the display slot for this objective. This will remove it from any other dis
 
 
 
+
+
 **Parameters:**
 
 
@@ -390,6 +402,8 @@ virtual Result< void > endstone::Objective::setSortOrder (
 ```
 
 Sets the sort order for this objective.
+
+
 
 
 

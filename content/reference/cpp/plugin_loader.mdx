@@ -62,18 +62,12 @@ title: "PluginLoader"
     <td>[`loadPlugins`](#loadPlugins)</td>
     <td>Loads the plugin contained within the specified directory.</td>
 </tr>
-<tr key="classendstone_1_1_plugin_loader_1ab20454a8e41b03d4e7f36f2bf3447c17">
-    <td>[`operator=`](#operator=)</td>
-    <td></td>
-</tr>
-<tr key="classendstone_1_1_plugin_loader_1a6a8f266b427ace08cd86695ffda049f6">
-    <td>[`~PluginLoader`](#~PluginLoader)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
 ### <code className="doc-symbol doc-symbol-function"/> PluginLoader [#PluginLoader]
+
+
 
 ```cpp
 inline explicit endstone::PluginLoader::PluginLoader (
@@ -81,16 +75,11 @@ inline explicit endstone::PluginLoader::PluginLoader (
 ) 
 ```
 
-
-### <code className="doc-symbol doc-symbol-function"/> PluginLoader [#PluginLoader]
-
 ```cpp
 endstone::PluginLoader::PluginLoader (
     const PluginLoader &
 ) = delete
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> disablePlugin [#disablePlugin]
 
 ```cpp
@@ -100,6 +89,8 @@ inline virtual void endstone::PluginLoader::disablePlugin (
 ```
 
 Disables the specified plugin Attempting to disable a plugin that is not enabled will have no effect.
+
+
 
 
 
@@ -124,6 +115,8 @@ Enables the specified plugin Attempting to enable a plugin that is already enabl
 
 
 
+
+
 **Parameters:**
 
 
@@ -143,6 +136,8 @@ Returns a list of all filename filters expected by this PluginLoader .
 
 
 
+
+
 **Returns:**
 
 The filters 
@@ -159,6 +154,8 @@ inline Server & endstone::PluginLoader::getServer () const
 ```
 
 Retrieves the Server object associated with the PluginLoader .
+
+
 
 This function returns a reference to the [**Server**](classendstone_1_1_server.md) object that the [**PluginLoader**](classendstone_1_1_plugin_loader.md) is associated with.
 
@@ -216,6 +213,8 @@ Loads the plugin contained within the specified directory.
 
 
 
+
+
 **Parameters:**
 
 
@@ -232,9 +231,3 @@ A list of all plugins loaded
 
 
         
-### <code className="doc-symbol doc-symbol-variable"/> server\_ [#server\_]
-
-```cpp
-Server& endstone::PluginLoader::server_;
-```
-

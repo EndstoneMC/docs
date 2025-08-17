@@ -74,10 +74,6 @@ title: "Scheduler"
     <td>[`runTaskTimerAsync`](#runTaskTimerAsync)</td>
     <td>Returns a task that will be executed repeatedly (and asynchronously) until cancelled, starting after the specified number of server ticks.</td>
 </tr>
-<tr key="classendstone_1_1_scheduler_1a869448c7e94100977f5c3026c6a16a45">
-    <td>[`~Scheduler`](#~Scheduler)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
@@ -256,6 +252,8 @@ Returns a task that will be executed asynchronously on the next server tick.
 
 
 
+
+
 **Remark:**
 
 Asynchronous tasks should never access any Endstone API
@@ -325,6 +323,8 @@ virtual std::shared_ptr< Task > endstone::Scheduler::runTaskLaterAsync (
 ```
 
 Returns a task that will be executed asynchronously after the specified number of server ticks.
+
+
 
 
 
@@ -401,6 +401,8 @@ virtual std::shared_ptr< Task > endstone::Scheduler::runTaskTimerAsync (
 ```
 
 Returns a task that will be executed repeatedly (and asynchronously) until cancelled, starting after the specified number of server ticks.
+
+
 
 
 

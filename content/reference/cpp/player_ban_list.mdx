@@ -87,14 +87,12 @@ Bases: [`endstone::BanList`](classendstone_1_1_ban_list.md)
     <td>[`removeBan`](#removeBan)</td>
     <td>Removes the specified player from this list, therefore indicating a "not banned" status.</td>
 </tr>
-<tr key="classendstone_1_1_player_ban_list_1a66813f3c67c642ad17caf7a474edab17">
-    <td>[`~PlayerBanList`](#~PlayerBanList)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
 ### <code className="doc-symbol doc-symbol-function"/> addBan [#addBan]
+
+
 
 ```cpp
 virtual PlayerBanEntry & endstone::PlayerBanList::addBan (
@@ -106,6 +104,8 @@ virtual PlayerBanEntry & endstone::PlayerBanList::addBan (
 ```
 
 Adds a ban to this list. If a previous ban exists, this will update the previous entry.
+
+
 
 
 
@@ -128,9 +128,6 @@ Adds a ban to this list. If a previous ban exists, this will update the previous
 
 
         
-Implements [*endstone::BanList::addBan*](classendstone_1_1_ban_list.md#function-addban-12)
-
-### <code className="doc-symbol doc-symbol-function"/> addBan [#addBan]
 
 ```cpp
 virtual PlayerBanEntry & endstone::PlayerBanList::addBan (
@@ -144,6 +141,8 @@ virtual PlayerBanEntry & endstone::PlayerBanList::addBan (
 ```
 
 Adds a ban to this list. If a previous ban exists, this will update the previous entry.
+
+
 
 
 
@@ -168,7 +167,6 @@ Adds a ban to this list. If a previous ban exists, this will update the previous
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> addBan [#addBan]
 
 ```cpp
 virtual PlayerBanEntry & endstone::PlayerBanList::addBan (
@@ -180,6 +178,8 @@ virtual PlayerBanEntry & endstone::PlayerBanList::addBan (
 ```
 
 Adds a ban to this list. If a previous ban exists, this will update the previous entry.
+
+
 
 
 
@@ -202,7 +202,6 @@ Adds a ban to this list. If a previous ban exists, this will update the previous
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> addBan [#addBan]
 
 ```cpp
 virtual PlayerBanEntry & endstone::PlayerBanList::addBan (
@@ -216,6 +215,8 @@ virtual PlayerBanEntry & endstone::PlayerBanList::addBan (
 ```
 
 Adds a ban to this list. If a previous ban exists, this will update the previous entry.
+
+
 
 
 
@@ -242,6 +243,8 @@ Adds a ban to this list. If a previous ban exists, this will update the previous
         
 ### <code className="doc-symbol doc-symbol-function"/> getBanEntry [#getBanEntry]
 
+
+
 ```cpp
 virtual const PlayerBanEntry * endstone::PlayerBanList::getBanEntry (
     std::string name
@@ -249,6 +252,8 @@ virtual const PlayerBanEntry * endstone::PlayerBanList::getBanEntry (
 ```
 
 Gets a BanEntry by player name.
+
+
 
 
 
@@ -268,9 +273,6 @@ PlayerBanEntry\* The corresponding entry, or nullptr if none found.
 
 
         
-Implements [*endstone::BanList::getBanEntry*](classendstone_1_1_ban_list.md#function-getbanentry-12)
-
-### <code className="doc-symbol doc-symbol-function"/> getBanEntry [#getBanEntry]
 
 ```cpp
 virtual PlayerBanEntry * endstone::PlayerBanList::getBanEntry (
@@ -282,6 +284,8 @@ Gets a BanEntry by player name.
 
 
 
+
+
 **Parameters:**
 
 
@@ -298,7 +302,6 @@ PlayerBanEntry\* The corresponding entry, or nullptr if none found.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getBanEntry [#getBanEntry]
 
 ```cpp
 virtual const PlayerBanEntry * endstone::PlayerBanList::getBanEntry (
@@ -309,6 +312,8 @@ virtual const PlayerBanEntry * endstone::PlayerBanList::getBanEntry (
 ```
 
 Gets a BanEntry by player name, UUID , or XUID.
+
+
 
 
 
@@ -330,7 +335,6 @@ PlayerBanEntry\* The corresponding entry, or nullptr if none found.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getBanEntry [#getBanEntry]
 
 ```cpp
 virtual PlayerBanEntry * endstone::PlayerBanList::getBanEntry (
@@ -341,6 +345,8 @@ virtual PlayerBanEntry * endstone::PlayerBanList::getBanEntry (
 ```
 
 Gets a BanEntry by player name, UUID , or XUID.
+
+
 
 
 
@@ -364,11 +370,15 @@ PlayerBanEntry\* The corresponding entry, or nullptr if none found.
         
 ### <code className="doc-symbol doc-symbol-function"/> getEntries [#getEntries]
 
+
+
 ```cpp
 virtual std::vector< const PlayerBanEntry * > endstone::PlayerBanList::getEntries () const = 0
 ```
 
 Gets a vector containing pointers to every BanEntry in this list.
+
+
 
 
 
@@ -381,15 +391,14 @@ A vector containing pointers to every entry tracked by this list.
 
 
         
-Implements [*endstone::BanList::getEntries*](classendstone_1_1_ban_list.md#function-getentries-12)
-
-### <code className="doc-symbol doc-symbol-function"/> getEntries [#getEntries]
 
 ```cpp
 virtual std::vector< PlayerBanEntry * > endstone::PlayerBanList::getEntries () = 0
 ```
 
 Gets a vector containing pointers to every BanEntry in this list.
+
+
 
 
 
@@ -404,6 +413,8 @@ A vector containing pointers to every entry tracked by this list.
         
 ### <code className="doc-symbol doc-symbol-function"/> isBanned [#isBanned]
 
+
+
 ```cpp
 virtual bool endstone::PlayerBanList::isBanned (
     std::string name
@@ -411,6 +422,8 @@ virtual bool endstone::PlayerBanList::isBanned (
 ```
 
 Checks if a BanEntry exists for the target, indicating an active ban status.
+
+
 
 
 
@@ -437,9 +450,6 @@ false Otherwise.
 
 
         
-Implements [*endstone::BanList::isBanned*](classendstone_1_1_ban_list.md#function-isbanned)
-
-### <code className="doc-symbol doc-symbol-function"/> isBanned [#isBanned]
 
 ```cpp
 virtual bool endstone::PlayerBanList::isBanned (
@@ -450,6 +460,8 @@ virtual bool endstone::PlayerBanList::isBanned (
 ```
 
 Checks if a BanEntry exists for the target, indicating an active ban status.
+
+
 
 
 
@@ -480,6 +492,8 @@ false Otherwise.
         
 ### <code className="doc-symbol doc-symbol-function"/> removeBan [#removeBan]
 
+
+
 ```cpp
 virtual void endstone::PlayerBanList::removeBan (
     std::string name
@@ -487,6 +501,8 @@ virtual void endstone::PlayerBanList::removeBan (
 ```
 
 Removes the specified player from this list, therefore indicating a "not banned" status.
+
+
 
 
 
@@ -499,9 +515,6 @@ Removes the specified player from this list, therefore indicating a "not banned"
 
 
         
-Implements [*endstone::BanList::removeBan*](classendstone_1_1_ban_list.md#function-removeban)
-
-### <code className="doc-symbol doc-symbol-function"/> removeBan [#removeBan]
 
 ```cpp
 virtual void endstone::PlayerBanList::removeBan (
@@ -512,6 +525,8 @@ virtual void endstone::PlayerBanList::removeBan (
 ```
 
 Removes the specified player from this list, therefore indicating a "not banned" status.
+
+
 
 
 

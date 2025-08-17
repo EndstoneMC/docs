@@ -42,10 +42,6 @@ title: "BlockData"
     <td>[`getType`](#getType)</td>
     <td>Get the block type represented by this block data.</td>
 </tr>
-<tr key="classendstone_1_1_block_data_1afe42c3c7cc62c74f14f95c02e58c576e">
-    <td>[`~BlockData`](#~BlockData)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
@@ -56,6 +52,8 @@ virtual BlockStates endstone::BlockData::getBlockStates () const = 0
 ```
 
 Gets the block states, which when passed into a method such as Server::createBlockData(type, block_states) will unambiguously recreate this instance.
+
+
 
 
 
@@ -78,6 +76,8 @@ Get the runtime ID for this block.
 
 
 
+
+
 **Returns:**
 
 the runtime id for this block 
@@ -94,6 +94,8 @@ virtual std::string endstone::BlockData::getType () const = 0
 ```
 
 Get the block type represented by this block data.
+
+
 
 
 

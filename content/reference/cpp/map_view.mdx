@@ -113,10 +113,6 @@ title: "MapView"
     <td>[`setUnlimitedTracking`](#setUnlimitedTracking)</td>
     <td>Whether the map will show a smaller position cursor (true), or no position cursor (false) when cursor is outside of map's range.</td>
 </tr>
-<tr key="classendstone_1_1_map_view_1afd118d375700e3fe7699498c00a7ec2e">
-    <td>[`~MapView`](#~MapView)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
@@ -146,6 +142,8 @@ Add a renderer to this map.
 
 
 
+
+
 **Parameters:**
 
 
@@ -162,6 +160,8 @@ virtual int endstone::MapView::getCenterX () const = 0
 ```
 
 Get the center X position of this map.
+
+
 
 
 
@@ -184,6 +184,8 @@ Get the center Z position of this map.
 
 
 
+
+
 **Returns:**
 
 The center Z position. 
@@ -200,6 +202,8 @@ virtual Dimension * endstone::MapView::getDimension () const = 0
 ```
 
 Get the dimension that this map is associated with.
+
+
 
 
 
@@ -222,6 +226,8 @@ Get the ID of this map item for use with MapMeta .
 
 
 
+
+
 **Returns:**
 
 The unique ID of the map. 
@@ -238,6 +244,8 @@ virtual std::vector< MapRenderer * > endstone::MapView::getRenderers () const = 
 ```
 
 Get a list of MapRenderers currently in effect.
+
+
 
 
 
@@ -260,6 +268,8 @@ Get the scale of this map.
 
 
 
+
+
 **Returns:**
 
 The scale of the map. 
@@ -276,6 +286,8 @@ virtual bool endstone::MapView::isLocked () const = 0
 ```
 
 Gets whether the map is locked or not. A locked map may not be explored further.
+
+
 
 
 
@@ -298,6 +310,8 @@ Whether the map will show a smaller position cursor (true), or no position curso
 
 
 
+
+
 **Returns:**
 
 True if unlimited tracking is enabled. 
@@ -314,6 +328,8 @@ virtual bool endstone::MapView::isVirtual () const = 0
 ```
 
 Check whether this map is virtual.
+
+
 
 A map is virtual if its lowermost [**MapRenderer**](classendstone_1_1_map_renderer.md) is plugin-provided.
 
@@ -338,6 +354,8 @@ virtual bool endstone::MapView::removeRenderer (
 ```
 
 Remove a renderer from this map.
+
+
 
 
 
@@ -369,6 +387,8 @@ Set the center X position of this map.
 
 
 
+
+
 **Parameters:**
 
 
@@ -387,6 +407,8 @@ virtual void endstone::MapView::setCenterZ (
 ```
 
 Set the center Z position of this map.
+
+
 
 
 
@@ -411,6 +433,8 @@ Set the dimension that this map is associated with.
 
 
 
+
+
 **Parameters:**
 
 
@@ -429,6 +453,8 @@ virtual void endstone::MapView::setLocked (
 ```
 
 Sets whether the map is locked or not. A locked map may not be explored further.
+
+
 
 
 
@@ -453,6 +479,8 @@ Set the scale of this map.
 
 
 
+
+
 **Parameters:**
 
 
@@ -471,6 +499,8 @@ virtual void endstone::MapView::setUnlimitedTracking (
 ```
 
 Whether the map will show a smaller position cursor (true), or no position cursor (false) when cursor is outside of map's range.
+
+
 
 
 

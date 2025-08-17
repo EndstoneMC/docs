@@ -225,10 +225,6 @@ title: "Server"
     <td>[`isPrimaryThread`](#isPrimaryThread)</td>
     <td>Checks the current thread against the expected primary server thread.</td>
 </tr>
-<tr key="classendstone_1_1_server_1a2dc1b2cbbff569db469db842d178baf6">
-    <td>[`operator=`](#operator=)</td>
-    <td></td>
-</tr>
 <tr key="classendstone_1_1_server_1acd79b367ca64559921c87dbfe9950bea">
     <td>[`reload`](#reload)</td>
     <td>Reloads the server configuration, functions, scripts and plugins.</td>
@@ -244,10 +240,6 @@ title: "Server"
 <tr key="classendstone_1_1_server_1a349c02e809ca14e2c16b0fa6bf021d1a">
     <td>[`shutdown`](#shutdown)</td>
     <td>Shutdowns the server, stopping everything.</td>
-</tr>
-<tr key="classendstone_1_1_server_1a6d90d04047e7e0730d9822be14611ba1">
-    <td>[`~Server`](#~Server)</td>
-    <td></td>
 </tr>
 </tbody>
 </table>
@@ -270,20 +262,17 @@ Used for all announcement messages, such as informing users that a player has jo
 
 ### <code className="doc-symbol doc-symbol-function"/> Server [#Server]
 
+
+
 ```cpp
 endstone::Server::Server () = default
 ```
-
-
-### <code className="doc-symbol doc-symbol-function"/> Server [#Server]
 
 ```cpp
 endstone::Server::Server (
     const Server &
 ) = delete
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> broadcast [#broadcast]
 
 ```cpp
@@ -294,6 +283,8 @@ virtual void endstone::Server::broadcast (
 ```
 
 Broadcasts the specified message to every user with the given permission name.
+
+
 
 
 
@@ -309,6 +300,8 @@ Broadcasts the specified message to every user with the given permission name.
         
 ### <code className="doc-symbol doc-symbol-function"/> broadcastMessage [#broadcastMessage]
 
+
+
 ```cpp
 virtual void endstone::Server::broadcastMessage (
     const Message & message
@@ -316,6 +309,8 @@ virtual void endstone::Server::broadcastMessage (
 ```
 
 Broadcasts the specified message to every user with permission endstone.broadcast.user.
+
+
 
 
 
@@ -328,7 +323,6 @@ Broadcasts the specified message to every user with permission endstone.broadcas
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> broadcastMessage [#broadcastMessage]
 
 ```cpp
 template<typename... Args>
@@ -337,9 +331,9 @@ inline void endstone::Server::broadcastMessage (
     Args &&... args
 ) const
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> createBlockData [#createBlockData]
+
+
 
 ```cpp
 virtual Result< std::unique_ptr< BlockData > > endstone::Server::createBlockData (
@@ -348,6 +342,8 @@ virtual Result< std::unique_ptr< BlockData > > endstone::Server::createBlockData
 ```
 
 Creates a new BlockData instance for the specified block type, with all properties initialized to defaults.
+
+
 
 
 
@@ -367,7 +363,6 @@ new data instance
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> createBlockData [#createBlockData]
 
 ```cpp
 virtual Result< std::unique_ptr< BlockData > > endstone::Server::createBlockData (
@@ -377,6 +372,8 @@ virtual Result< std::unique_ptr< BlockData > > endstone::Server::createBlockData
 ```
 
 Creates a new BlockData instance for the specified block type, with all properties initialized to defaults, except for those provided in data.
+
+
 
 
 
@@ -399,6 +396,8 @@ new data instance
         
 ### <code className="doc-symbol doc-symbol-function"/> createBossBar [#createBossBar]
 
+
+
 ```cpp
 virtual std::unique_ptr< BossBar > endstone::Server::createBossBar (
     std::string title,
@@ -408,6 +407,8 @@ virtual std::unique_ptr< BossBar > endstone::Server::createBossBar (
 ```
 
 Creates a boss bar instance to display to players. The progress defaults to 1.0.
+
+
 
 
 
@@ -429,7 +430,6 @@ the created boss bar
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> createBossBar [#createBossBar]
 
 ```cpp
 virtual std::unique_ptr< BossBar > endstone::Server::createBossBar (
@@ -441,6 +441,8 @@ virtual std::unique_ptr< BossBar > endstone::Server::createBossBar (
 ```
 
 Creates a boss bar instance to display to players. The progress defaults to 1.0.
+
+
 
 
 
@@ -471,6 +473,8 @@ virtual std::shared_ptr< Scoreboard > endstone::Server::createScoreboard () = 0
 
 Creates a new Scoreboard to be tracked by the server.
 
+
+
 This will not be saved by the server and is not affected by the /scoreboard command.
 
 
@@ -495,6 +499,8 @@ virtual bool endstone::Server::dispatchCommand (
 ```
 
 Dispatches a command on this server, and executes it if found.
+
+
 
 
 
@@ -525,6 +531,8 @@ Gets the average milliseconds per tick (MSPT).
 
 
 
+
+
 **Returns:**
 
 The average number of milliseconds per tick. 
@@ -544,6 +552,8 @@ Gets the average tick usage of the server.
 
 
 
+
+
 **Returns:**
 
 The average tick usage in percentage. 
@@ -560,6 +570,8 @@ virtual float endstone::Server::getAverageTicksPerSecond () = 0
 ```
 
 Gets the average ticks per second (TPS).
+
+
 
 
 
@@ -603,6 +615,8 @@ Gets a CommandSender for this server.
 
 
 
+
+
 **Returns:**
 
 a console command sender 
@@ -619,6 +633,8 @@ virtual float endstone::Server::getCurrentMillisecondsPerTick () = 0
 ```
 
 Gets the current milliseconds per tick (MSPT).
+
+
 
 
 
@@ -641,6 +657,8 @@ Gets the current tick usage of the server.
 
 
 
+
+
 **Returns:**
 
 The current tick usage in percentage. 
@@ -657,6 +675,8 @@ virtual float endstone::Server::getCurrentTicksPerSecond () = 0
 ```
 
 Gets the current ticks per second (TPS).
+
+
 
 
 
@@ -766,6 +786,8 @@ Gets the current language interface used by the server.
 
 
 
+
+
 **Returns:**
 
 [**Language**](classendstone_1_1_language.md) interface used by the server for translations. 
@@ -782,6 +804,8 @@ virtual Level * endstone::Server::getLevel () const = 0
 ```
 
 Gets the server level.
+
+
 
 
 
@@ -804,6 +828,8 @@ Returns the primary logger associated with this server instance.
 
 
 
+
+
 **Returns:**
 
 [**Logger**](classendstone_1_1_logger.md) associated with this server 
@@ -820,6 +846,8 @@ virtual int endstone::Server::getMaxPlayers () const = 0
 ```
 
 Get the maximum amount of players which can login to this server.
+
+
 
 
 
@@ -842,6 +870,8 @@ Gets the Minecraft version that this server is running.
 
 
 
+
+
 **Returns:**
 
 version of Minecraft 
@@ -858,6 +888,8 @@ virtual std::string endstone::Server::getName () const = 0
 ```
 
 Gets the name of this server implementation.
+
+
 
 
 
@@ -880,6 +912,8 @@ Gets whether the Server is in online mode or not.
 
 
 
+
+
 **Returns:**
 
 true if the server authenticates clients, false otherwise 
@@ -899,6 +933,8 @@ Gets a list of all currently online players.
 
 
 
+
+
 **Returns:**
 
 a list of currently online players. 
@@ -910,6 +946,8 @@ a list of currently online players.
         
 ### <code className="doc-symbol doc-symbol-function"/> getPlayer [#getPlayer]
 
+
+
 ```cpp
 virtual Player * endstone::Server::getPlayer (
     endstone::UUID id
@@ -917,6 +955,8 @@ virtual Player * endstone::Server::getPlayer (
 ```
 
 Gets the player with the given UUID .
+
+
 
 
 
@@ -936,7 +976,6 @@ a player object if one was found, null otherwise
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getPlayer [#getPlayer]
 
 ```cpp
 virtual Player * endstone::Server::getPlayer (
@@ -945,6 +984,8 @@ virtual Player * endstone::Server::getPlayer (
 ```
 
 Gets the player with the exact given name, case-insensitive.
+
+
 
 
 
@@ -976,6 +1017,8 @@ Gets a PluginCommand with the given name or alias.
 
 
 
+
+
 **Parameters:**
 
 
@@ -1002,6 +1045,8 @@ Gets the plugin manager for interfacing with plugins.
 
 
 
+
+
 **Returns:**
 
 a plugin manager for this [**Server**](classendstone_1_1_server.md) instance 
@@ -1018,6 +1063,8 @@ virtual int endstone::Server::getPort () const = 0
 ```
 
 Get the game port that the server runs on.
+
+
 
 
 
@@ -1040,6 +1087,8 @@ Get the game port (IPv6) that the server runs on.
 
 
 
+
+
 **Returns:**
 
 the port number of this server 
@@ -1056,6 +1105,8 @@ virtual int endstone::Server::getProtocolVersion () const = 0
 ```
 
 Gets the network protocol version that this server supports.
+
+
 
 
 
@@ -1078,6 +1129,8 @@ Gets the scheduler for managing scheduled events.
 
 
 
+
+
 **Returns:**
 
 a scheduling service for this server 
@@ -1094,6 +1147,8 @@ virtual Scoreboard * endstone::Server::getScoreboard () const = 0
 ```
 
 Gets the primary Scoreboard controlled by the server.
+
+
 
 This [**Scoreboard**](classendstone_1_1_scoreboard.md) is saved by the server, is affected by the /scoreboard command, and is the scoreboard shown by default to players. This will only exist after the level has been loaded.
 
@@ -1140,6 +1195,8 @@ Gets the start time of the server.
 
 
 
+
+
 **Returns:**
 
 The start time of the server. 
@@ -1159,6 +1216,8 @@ Gets the version string of this server implementation.
 
 
 
+
+
 **Returns:**
 
 version of this server implementation 
@@ -1175,6 +1234,8 @@ virtual bool endstone::Server::isPrimaryThread () const = 0
 ```
 
 Checks the current thread against the expected primary server thread.
+
+
 
 
 
@@ -1203,6 +1264,8 @@ virtual void endstone::Server::reloadData () = 0
 
 Reload only the Minecraft data for the server.
 
+
+
 This includes functions and script files from all behaviour packs. 
 
 
@@ -1216,6 +1279,8 @@ virtual Result< void > endstone::Server::setMaxPlayers (
 ```
 
 Set the maximum amount of players allowed to be logged in at once.
+
+
 
 
 

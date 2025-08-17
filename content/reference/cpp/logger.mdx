@@ -117,10 +117,6 @@ title: "Logger"
     <td>[`warning`](#warning)</td>
     <td></td>
 </tr>
-<tr key="classendstone_1_1_logger_1a44faaf98cb5398fbb95d7a81228caa2f">
-    <td>[`~Logger`](#~Logger)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
@@ -145,18 +141,15 @@ Specifies the log level.
 ```cpp
 endstone::Logger::Logger () = default
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> critical [#critical]
+
+
 
 ```cpp
 inline void endstone::Logger::critical (
     const std::string_view message
 ) const
 ```
-
-
-### <code className="doc-symbol doc-symbol-function"/> critical [#critical]
 
 ```cpp
 template<typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int >>
@@ -165,18 +158,15 @@ inline void endstone::Logger::critical (
     Args &&... args
 ) const
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> debug [#debug]
+
+
 
 ```cpp
 inline void endstone::Logger::debug (
     const std::string_view message
 ) const
 ```
-
-
-### <code className="doc-symbol doc-symbol-function"/> debug [#debug]
 
 ```cpp
 template<typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int >>
@@ -185,18 +175,15 @@ inline void endstone::Logger::debug (
     Args &&... args
 ) const
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> error [#error]
+
+
 
 ```cpp
 inline void endstone::Logger::error (
     const std::string_view message
 ) const
 ```
-
-
-### <code className="doc-symbol doc-symbol-function"/> error [#error]
 
 ```cpp
 template<typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int >>
@@ -205,8 +192,6 @@ inline void endstone::Logger::error (
     Args &&... args
 ) const
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
@@ -214,6 +199,8 @@ virtual std::string_view endstone::Logger::getName () const = 0
 ```
 
 Get the name of this Logger instance.
+
+
 
 
 
@@ -228,14 +215,13 @@ The name of this [**Logger**](classendstone_1_1_logger.md) instance.
         
 ### <code className="doc-symbol doc-symbol-function"/> info [#info]
 
+
+
 ```cpp
 inline void endstone::Logger::info (
     const std::string_view message
 ) const
 ```
-
-
-### <code className="doc-symbol doc-symbol-function"/> info [#info]
 
 ```cpp
 template<typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int >>
@@ -244,8 +230,6 @@ inline void endstone::Logger::info (
     Args &&... args
 ) const
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> isEnabledFor [#isEnabledFor]
 
 ```cpp
@@ -255,6 +239,8 @@ virtual bool endstone::Logger::isEnabledFor (
 ```
 
 Check if the Logger instance is enabled for the given log Level .
+
+
 
 
 
@@ -276,6 +262,8 @@ true if the logger is enabled for the [**Level**](classendstone_1_1_level.md), f
         
 ### <code className="doc-symbol doc-symbol-function"/> log [#log]
 
+
+
 ```cpp
 virtual void endstone::Logger::log (
     Level level,
@@ -284,6 +272,8 @@ virtual void endstone::Logger::log (
 ```
 
 Log a message at the given level.
+
+
 
 
 
@@ -297,7 +287,6 @@ Log a message at the given level.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> log [#log]
 
 ```cpp
 template<typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int >>
@@ -307,8 +296,6 @@ inline void endstone::Logger::log (
     Args &&... args
 ) const
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> setLevel [#setLevel]
 
 ```cpp
@@ -318,6 +305,8 @@ virtual void endstone::Logger::setLevel (
 ```
 
 Set the logging level for this Logger instance.
+
+
 
 
 
@@ -332,14 +321,13 @@ Set the logging level for this Logger instance.
         
 ### <code className="doc-symbol doc-symbol-function"/> trace [#trace]
 
+
+
 ```cpp
 inline void endstone::Logger::trace (
     const std::string_view message
 ) const
 ```
-
-
-### <code className="doc-symbol doc-symbol-function"/> trace [#trace]
 
 ```cpp
 template<typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int >>
@@ -348,18 +336,15 @@ inline void endstone::Logger::trace (
     Args &&... args
 ) const
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> warning [#warning]
+
+
 
 ```cpp
 inline void endstone::Logger::warning (
     const std::string_view message
 ) const
 ```
-
-
-### <code className="doc-symbol doc-symbol-function"/> warning [#warning]
 
 ```cpp
 template<typename... Args, std::enable_if_t<(sizeof...(Args) > 0), int >>
@@ -368,4 +353,3 @@ inline void endstone::Logger::warning (
     Args &&... args
 ) const
 ```
-

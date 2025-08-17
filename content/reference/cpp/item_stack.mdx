@@ -70,14 +70,6 @@ title: "ItemStack"
     <td>[`isSimilar`](#isSimilar)</td>
     <td>Checks if the two stacks are equal, but does not consider stack size (amount).</td>
 </tr>
-<tr key="classendstone_1_1_item_stack_1a4f314fd80081b60546b282bee4d255ed">
-    <td>[`operator!=`](#operator!=)</td>
-    <td></td>
-</tr>
-<tr key="classendstone_1_1_item_stack_1a6bacc04cea58d3b47668b78973af287d">
-    <td>[`operator==`](#operator==)</td>
-    <td></td>
-</tr>
 <tr key="classendstone_1_1_item_stack_1afd9e055aeb937c5b3da9ecc2cf9baecc">
     <td>[`setAmount`](#setAmount)</td>
     <td>Sets the amount of items in this stack.</td>
@@ -94,14 +86,12 @@ title: "ItemStack"
     <td>[`setType`](#setType)</td>
     <td>Sets the type of this item.</td>
 </tr>
-<tr key="classendstone_1_1_item_stack_1a3d5879ba64ad7afe47d3c7726f276d52">
-    <td>[`~ItemStack`](#~ItemStack)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
 ### <code className="doc-symbol doc-symbol-function"/> ItemStack [#ItemStack]
+
+
 
 ```cpp
 inline explicit endstone::ItemStack::ItemStack (
@@ -111,23 +101,16 @@ inline explicit endstone::ItemStack::ItemStack (
 ) 
 ```
 
-
-### <code className="doc-symbol doc-symbol-function"/> ItemStack [#ItemStack]
-
 ```cpp
 inline endstone::ItemStack::ItemStack (
     const ItemStack & stack
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> clone [#clone]
 
 ```cpp
 inline virtual std::unique_ptr< ItemStack > endstone::ItemStack::clone () const
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getAmount [#getAmount]
 
 ```cpp
@@ -135,6 +118,8 @@ inline virtual int endstone::ItemStack::getAmount () const
 ```
 
 Gets the amount of items in this stack.
+
+
 
 
 
@@ -157,6 +142,8 @@ Gets the data for this stack of items.
 
 
 
+
+
 **Returns:**
 
 Data for this item 
@@ -173,6 +160,8 @@ inline virtual std::unique_ptr< ItemMeta > endstone::ItemStack::getItemMeta () c
 ```
 
 Gets a copy of this ItemStack 's ItemMeta .
+
+
 
 
 
@@ -195,6 +184,8 @@ Get the maximum stack size for this item.
 
 
 
+
+
 **Returns:**
 
 The maximum you can stack this item to. 
@@ -211,6 +202,8 @@ inline virtual std::string endstone::ItemStack::getType () const
 ```
 
 Gets the type of this item.
+
+
 
 
 
@@ -233,6 +226,8 @@ Checks to see if any metadata has been defined.
 
 
 
+
+
 **Returns:**
 
 Returns true if some metadata has been set for this item 
@@ -251,6 +246,8 @@ inline virtual bool endstone::ItemStack::isSimilar (
 ```
 
 Checks if the two stacks are equal, but does not consider stack size (amount).
+
+
 
 
 
@@ -282,6 +279,8 @@ Sets the amount of items in this stack.
 
 
 
+
+
 **Parameters:**
 
 
@@ -303,6 +302,8 @@ Sets the data for this stack of items.
 
 
 
+
+
 **Parameters:**
 
 
@@ -321,6 +322,8 @@ inline virtual bool endstone::ItemStack::setItemMeta (
 ```
 
 Set the ItemMeta of this ItemStack .
+
+
 
 
 
@@ -352,6 +355,8 @@ Sets the type of this item.
 
 
 
+
+
 **Parameters:**
 
 
@@ -361,9 +366,3 @@ Sets the type of this item.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> isEndstoneItemStack [#isEndstoneItemStack]
-
-```cpp
-inline virtual bool endstone::ItemStack::isEndstoneItemStack () const
-```
-

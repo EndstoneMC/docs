@@ -75,14 +75,12 @@ Bases: `std::enable_shared_from_this< Scoreboard >`
     <td>[`resetScores`](#resetScores)</td>
     <td>Removes all scores for an entry on this Scoreboard .</td>
 </tr>
-<tr key="classendstone_1_1_scoreboard_1a3353d465636fad59aab0c4656f80ff37">
-    <td>[`~Scoreboard`](#~Scoreboard)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
 ### <code className="doc-symbol doc-symbol-function"/> addObjective [#addObjective]
+
+
 
 ```cpp
 virtual Result< std::unique_ptr< Objective > > endstone::Scoreboard::addObjective (
@@ -92,6 +90,8 @@ virtual Result< std::unique_ptr< Objective > > endstone::Scoreboard::addObjectiv
 ```
 
 Registers an Objective on this Scoreboard .
+
+
 
 
 
@@ -112,7 +112,6 @@ A reference to the newly registered [**Objective**](classendstone_1_1_objective.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> addObjective [#addObjective]
 
 ```cpp
 virtual Result< std::unique_ptr< Objective > > endstone::Scoreboard::addObjective (
@@ -123,6 +122,8 @@ virtual Result< std::unique_ptr< Objective > > endstone::Scoreboard::addObjectiv
 ```
 
 Registers an Objective on this Scoreboard .
+
+
 
 
 
@@ -144,7 +145,6 @@ A reference to the newly registered [**Objective**](classendstone_1_1_objective.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> addObjective [#addObjective]
 
 ```cpp
 virtual Result< std::unique_ptr< Objective > > endstone::Scoreboard::addObjective (
@@ -156,6 +156,8 @@ virtual Result< std::unique_ptr< Objective > > endstone::Scoreboard::addObjectiv
 ```
 
 Registers an Objective on this Scoreboard .
+
+
 
 
 
@@ -190,6 +192,8 @@ Clears any objective in the specified slot.
 
 
 
+
+
 **Parameters:**
 
 
@@ -209,6 +213,8 @@ Gets all entries tracked by this Scoreboard .
 
 
 
+
+
 **Returns:**
 
 A list of all tracked entries 
@@ -220,6 +226,8 @@ A list of all tracked entries
         
 ### <code className="doc-symbol doc-symbol-function"/> getObjective [#getObjective]
 
+
+
 ```cpp
 virtual std::unique_ptr< Objective > endstone::Scoreboard::getObjective (
     std::string name
@@ -227,6 +235,8 @@ virtual std::unique_ptr< Objective > endstone::Scoreboard::getObjective (
 ```
 
 Gets an Objective on this Scoreboard by name.
+
+
 
 
 
@@ -246,7 +256,6 @@ the [**Objective**](classendstone_1_1_objective.md) or `nullptr` if it does not 
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getObjective [#getObjective]
 
 ```cpp
 virtual std::unique_ptr< Objective > endstone::Scoreboard::getObjective (
@@ -255,6 +264,8 @@ virtual std::unique_ptr< Objective > endstone::Scoreboard::getObjective (
 ```
 
 Gets the Objective currently displayed in a DisplaySlot on this Scoreboard .
+
+
 
 
 
@@ -284,6 +295,8 @@ Gets all Objectives on this Scoreboard .
 
 
 
+
+
 **Returns:**
 
 A list of all Objectives on this [**Scoreboard**](classendstone_1_1_scoreboard.md) 
@@ -302,6 +315,8 @@ virtual std::vector< std::unique_ptr< Objective > > endstone::Scoreboard::getObj
 ```
 
 Gets all Objectives of a Criteria on the Scoreboard .
+
+
 
 
 
@@ -333,6 +348,8 @@ Gets all scores for an entry on this Scoreboard .
 
 
 
+
+
 **Parameters:**
 
 
@@ -358,6 +375,8 @@ virtual void endstone::Scoreboard::resetScores (
 ```
 
 Removes all scores for an entry on this Scoreboard .
+
+
 
 
 

@@ -31,10 +31,6 @@ Bases: [`endstone::ActorDeathEvent`](classendstone_1_1_actor_death_event.md),  [
    </tr>
 </thead>
 <tbody>
-<tr key="classendstone_1_1_player_death_event_1a65fb428be5bdb70e91101198e73416dd">
-    <td>[`ENDSTONE\_EVENT`](#ENDSTONE\_EVENT)</td>
-    <td></td>
-</tr>
 <tr key="classendstone_1_1_player_death_event_1a3104f4d23f97f8c6231b5b6be585d18e">
     <td>[`PlayerDeathEvent`](#PlayerDeathEvent)</td>
     <td></td>
@@ -50,15 +46,6 @@ Bases: [`endstone::ActorDeathEvent`](classendstone_1_1_actor_death_event.md),  [
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> ENDSTONE\_EVENT [#ENDSTONE\_EVENT]
-
-```cpp
-endstone::PlayerDeathEvent::ENDSTONE_EVENT (
-    PlayerDeathEvent
-) 
-```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> PlayerDeathEvent [#PlayerDeathEvent]
 
 ```cpp
@@ -68,8 +55,6 @@ inline explicit endstone::PlayerDeathEvent::PlayerDeathEvent (
     std::optional< Message > death_message
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getDeathMessage [#getDeathMessage]
 
 ```cpp
@@ -77,6 +62,8 @@ inline std::optional< Message > endstone::PlayerDeathEvent::getDeathMessage () c
 ```
 
 Get the death message that will appear to everyone on the server.
+
+
 
 
 
@@ -98,6 +85,8 @@ inline void endstone::PlayerDeathEvent::setDeathMessage (
 ```
 
 Set the death message that will appear to everyone on the server.
+
+
 
 
 

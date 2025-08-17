@@ -63,14 +63,12 @@ title: "BanList"
     <td>[`removeBan`](#removeBan)</td>
     <td>Removes the specified target from this list, therefore indicating a "not banned" status.</td>
 </tr>
-<tr key="classendstone_1_1_ban_list_1a409cf606a2985931ed9a7eb51b9362ea">
-    <td>[`~BanList`](#~BanList)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
 ### <code className="doc-symbol doc-symbol-function"/> addBan [#addBan]
+
+
 
 ```cpp
 virtual T & endstone::BanList::addBan (
@@ -82,6 +80,8 @@ virtual T & endstone::BanList::addBan (
 ```
 
 Adds a ban to this list. If a previous ban exists, this will update the previous entry.
+
+
 
 
 
@@ -104,7 +104,6 @@ T& The entry for the newly created ban, or the entry for the (updated) previous 
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> addBan [#addBan]
 
 ```cpp
 virtual T & endstone::BanList::addBan (
@@ -116,6 +115,8 @@ virtual T & endstone::BanList::addBan (
 ```
 
 Adds a ban to this list. If a previous ban exists, this will update the previous entry.
+
+
 
 
 
@@ -140,6 +141,8 @@ T& The entry for the newly created ban, or the entry for the (updated) previous 
         
 ### <code className="doc-symbol doc-symbol-function"/> getBanEntry [#getBanEntry]
 
+
+
 ```cpp
 virtual const T * endstone::BanList::getBanEntry (
     std::string target
@@ -147,6 +150,8 @@ virtual const T * endstone::BanList::getBanEntry (
 ```
 
 Gets a BanEntry by target.
+
+
 
 
 
@@ -166,7 +171,6 @@ T\* The corresponding entry, or nullptr if none found.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getBanEntry [#getBanEntry]
 
 ```cpp
 virtual T * endstone::BanList::getBanEntry (
@@ -175,6 +179,8 @@ virtual T * endstone::BanList::getBanEntry (
 ```
 
 Gets a BanEntry by target.
+
+
 
 
 
@@ -196,11 +202,15 @@ T\* The corresponding entry, or nullptr if none found.
         
 ### <code className="doc-symbol doc-symbol-function"/> getEntries [#getEntries]
 
+
+
 ```cpp
 virtual std::vector< const T * > endstone::BanList::getEntries () const = 0
 ```
 
 Gets a vector containing pointers to every BanEntry in this list.
+
+
 
 
 
@@ -213,13 +223,14 @@ A vector containing pointers to every entry tracked by this list.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getEntries [#getEntries]
 
 ```cpp
 virtual std::vector< T * > endstone::BanList::getEntries () = 0
 ```
 
 Gets a vector containing pointers to every BanEntry in this list.
+
+
 
 
 
@@ -241,6 +252,8 @@ virtual bool endstone::BanList::isBanned (
 ```
 
 Checks if a BanEntry exists for the target, indicating an active ban status.
+
+
 
 
 
@@ -276,6 +289,8 @@ virtual void endstone::BanList::removeBan (
 ```
 
 Removes the specified target from this list, therefore indicating a "not banned" status.
+
+
 
 
 

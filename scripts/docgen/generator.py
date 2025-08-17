@@ -12,14 +12,14 @@ from mkdoxy.generatorBase import GeneratorBase
 from mkdoxy.node import Node
 from mkdoxy.utils import parseTemplateFile
 
-from scripts.docgen.filters import do_format_refid
+from scripts.docgen.filters import do_format_refid, do_filter_functions, do_group_overloads
 
 log: logging.Logger = logging.getLogger("mkdocs")
 
 
 class BaseGenerator(GeneratorBase):
     def __init__(
-        self, templateDir: str = "", ignore_errors: bool = False, debug: bool = False
+            self, templateDir: str = "", ignore_errors: bool = False, debug: bool = False
     ):
         """! Constructor.
         @details
@@ -42,6 +42,8 @@ class BaseGenerator(GeneratorBase):
         environment = Environment(loader=BaseLoader())
         environment.filters["use_code_language"] = use_code_language
         environment.filters["format_refid"] = do_format_refid
+        environment.filters["filter_functions"] = do_filter_functions
+        environment.filters["group_overloads"] = do_group_overloads
         # code from https://github.com/daizutabi/mkapi/blob/master/mkapi/core/renderer.py#L29-L38
         path = os.path.join(os.path.dirname(mkdoxy.__file__), "templates")
         ENDING = (".jinja2", ".j2", ".jinja")

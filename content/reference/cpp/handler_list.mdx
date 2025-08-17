@@ -60,8 +60,6 @@ inline explicit endstone::HandlerList::HandlerList (
     std::string event
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getHandlers [#getHandlers]
 
 ```cpp
@@ -115,6 +113,8 @@ the pointer to the registered handler
         
 ### <code className="doc-symbol doc-symbol-function"/> unregister [#unregister]
 
+
+
 ```cpp
 inline void endstone::HandlerList::unregister (
     const EventHandler & handler
@@ -136,7 +136,6 @@ Remove a handler from a specific order slot
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> unregister [#unregister]
 
 ```cpp
 inline void endstone::HandlerList::unregister (
@@ -159,9 +158,3 @@ Remove a specific plugin's handlers from this handler
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> bake [#bake]
-
-```cpp
-inline void endstone::HandlerList::bake () const
-```
-

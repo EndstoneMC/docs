@@ -46,10 +46,6 @@ title: "ItemFactory"
     <td>[`isApplicable`](#isApplicable)</td>
     <td>This method checks the item meta to confirm that it is applicable (no data lost if applied) to the specified ItemStack .</td>
 </tr>
-<tr key="classendstone_1_1_item_factory_1aad09d9483ab4cada38c27ef7b735f6da">
-    <td>[`~ItemFactory`](#~ItemFactory)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
@@ -63,6 +59,8 @@ virtual std::unique_ptr< ItemMeta > endstone::ItemFactory::asMetaFor (
 ```
 
 Returns an appropriate item meta for the specified item type.
+
+
 
 The item meta returned will always be a valid meta for a given [**ItemStack**](classendstone_1_1_item_stack.md) of the specified item type. It may be a more or less specific meta, and could also be the same meta or meta type as the parameter. The item meta returned will also always be the most appropriate meta.
 
@@ -99,6 +97,8 @@ This method is used to compare two ItemMeta objects.
 
 
 
+
+
 **Parameters:**
 
 
@@ -128,6 +128,8 @@ This creates a new item meta for the item type.
 
 
 
+
+
 **Parameters:**
 
 
@@ -154,6 +156,8 @@ virtual bool endstone::ItemFactory::isApplicable (
 ```
 
 This method checks the item meta to confirm that it is applicable (no data lost if applied) to the specified ItemStack .
+
+
 
 
 

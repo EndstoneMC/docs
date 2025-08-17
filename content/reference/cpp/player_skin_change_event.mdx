@@ -31,10 +31,6 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
    </tr>
 </thead>
 <tbody>
-<tr key="classendstone_1_1_player_skin_change_event_1aa1bde5cf2f4a623f3bbb6d43ca97c3d2">
-    <td>[`ENDSTONE\_EVENT`](#ENDSTONE\_EVENT)</td>
-    <td></td>
-</tr>
 <tr key="classendstone_1_1_player_skin_change_event_1a9559d39b2ad83634184c6c1beabc04e1">
     <td>[`PlayerSkinChangeEvent`](#PlayerSkinChangeEvent)</td>
     <td></td>
@@ -54,15 +50,6 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> ENDSTONE\_EVENT [#ENDSTONE\_EVENT]
-
-```cpp
-endstone::PlayerSkinChangeEvent::ENDSTONE_EVENT (
-    PlayerSkinChangeEvent
-) 
-```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> PlayerSkinChangeEvent [#PlayerSkinChangeEvent]
 
 ```cpp
@@ -72,8 +59,6 @@ inline explicit endstone::PlayerSkinChangeEvent::PlayerSkinChangeEvent (
     std::optional< Message > message
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getNewSkin [#getNewSkin]
 
 ```cpp
@@ -81,6 +66,8 @@ inline Skin endstone::PlayerSkinChangeEvent::getNewSkin () const
 ```
 
 Gets the player's new skin.
+
+
 
 
 
@@ -103,6 +90,8 @@ Gets the message to send to all online players for this skin change.
 
 
 
+
+
 **Returns:**
 
 Message to appear to other players on the server. 
@@ -121,6 +110,8 @@ inline void endstone::PlayerSkinChangeEvent::setSkinChangeMessage (
 ```
 
 Sets the message to send to all online players for this skin change.
+
+
 
 
 

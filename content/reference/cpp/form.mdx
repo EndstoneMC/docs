@@ -74,15 +74,11 @@ title: "Form"
 ```cpp
 using endstone::Form< T >::OnCloseCallback =  std::function<void(Player *)>;
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> Form [#Form]
 
 ```cpp
 explicit endstone::Form::Form () = default
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getOnClose [#getOnClose]
 
 ```cpp
@@ -90,6 +86,8 @@ inline OnCloseCallback endstone::Form::getOnClose () const
 ```
 
 Gets the on close callback of the form.
+
+
 
 
 
@@ -112,6 +110,8 @@ Gets the title of the form.
 
 
 
+
+
 **Returns:**
 
 The title of the form. 
@@ -130,6 +130,8 @@ inline T & endstone::Form::setOnClose (
 ```
 
 Sets the on close callback of the form.
+
+
 
 
 
@@ -161,6 +163,8 @@ Sets the title of the form.
 
 
 
+
+
 **Parameters:**
 
 
@@ -177,16 +181,3 @@ A reference to the current form.
 
 
         
-### <code className="doc-symbol doc-symbol-variable"/> on\_close\_ [#on\_close\_]
-
-```cpp
-OnCloseCallback endstone::Form< T >::on_close_;
-```
-
-
-### <code className="doc-symbol doc-symbol-variable"/> title\_ [#title\_]
-
-```cpp
-Message endstone::Form< T >::title_;
-```
-

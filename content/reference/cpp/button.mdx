@@ -85,16 +85,13 @@ title: "Button"
 ```cpp
 using endstone::Button::OnClickCallback =  std::function<void(Player *)>;
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> Button [#Button]
+
+
 
 ```cpp
 endstone::Button::Button () = default
 ```
-
-
-### <code className="doc-symbol doc-symbol-function"/> Button [#Button]
 
 ```cpp
 inline explicit endstone::Button::Button (
@@ -103,8 +100,6 @@ inline explicit endstone::Button::Button (
     OnClickCallback on_click={}
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getIcon [#getIcon]
 
 ```cpp
@@ -112,6 +107,8 @@ inline std::optional< std::string > endstone::Button::getIcon () const
 ```
 
 Get the icon of the button.
+
+
 
 
 
@@ -134,6 +131,8 @@ Gets the on click callback of the button.
 
 
 
+
+
 **Returns:**
 
 The on click callback of the button. 
@@ -150,6 +149,8 @@ inline Message endstone::Button::getText () const
 ```
 
 Gets the text of the button.
+
+
 
 
 
@@ -171,6 +172,8 @@ inline Button & endstone::Button::setIcon (
 ```
 
 Sets the icon for the button.
+
+
 
 
 
@@ -202,6 +205,8 @@ Sets the on click callback of the button.
 
 
 
+
+
 **Parameters:**
 
 
@@ -227,6 +232,8 @@ inline Button & endstone::Button::setText (
 ```
 
 Sets the text of the button.
+
+
 
 
 

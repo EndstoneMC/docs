@@ -100,6 +100,8 @@ Return the ItemStack from the boots slot.
 
 
 
+
+
 **Returns:**
 
 The [**ItemStack**](classendstone_1_1_item_stack.md) in the boots slot 
@@ -116,6 +118,8 @@ virtual std::unique_ptr< ItemStack > endstone::PlayerInventory::getChestplate ()
 ```
 
 Return the ItemStack from the chestplate slot.
+
+
 
 
 
@@ -138,6 +142,8 @@ Get the slot number of the currently held item.
 
 
 
+
+
 **Returns:**
 
 Held item slot number 
@@ -154,6 +160,8 @@ virtual std::unique_ptr< ItemStack > endstone::PlayerInventory::getHelmet () con
 ```
 
 Return the ItemStack from the helmet slot.
+
+
 
 
 
@@ -176,6 +184,8 @@ Gets the item the player is currently holding in their main hand.
 
 
 
+
+
 **Returns:**
 
 the currently held item 
@@ -192,6 +202,8 @@ virtual std::unique_ptr< ItemStack > endstone::PlayerInventory::getItemInOffHand
 ```
 
 Gets the item the player is currently holding in their off hand.
+
+
 
 
 
@@ -214,6 +226,8 @@ Return the ItemStack from the leg slot.
 
 
 
+
+
 **Returns:**
 
 The [**ItemStack**](classendstone_1_1_item_stack.md) in the leg slot 
@@ -232,6 +246,8 @@ virtual void endstone::PlayerInventory::setBoots (
 ```
 
 Put the given ItemStack into the boots slot.
+
+
 
 This does not check if the [**ItemStack**](classendstone_1_1_item_stack.md) is a pair of boots.
 
@@ -257,6 +273,8 @@ virtual void endstone::PlayerInventory::setChestplate (
 
 Put the given ItemStack into the chestplate slot.
 
+
+
 This does not check if the [**ItemStack**](classendstone_1_1_item_stack.md) is a chestplate.
 
 
@@ -281,6 +299,8 @@ virtual Result< void > endstone::PlayerInventory::setHeldItemSlot (
 
 Set the slot number of the currently held item.
 
+
+
 This validates whether the slot is between 0 and 8 inclusive.
 
 
@@ -304,6 +324,8 @@ virtual void endstone::PlayerInventory::setHelmet (
 ```
 
 Put the given ItemStack into the helmet slot.
+
+
 
 This does not check if the [**ItemStack**](classendstone_1_1_item_stack.md) is a helmet.
 
@@ -331,6 +353,8 @@ Sets the item the player is holding in their main hand.
 
 
 
+
+
 **Parameters:**
 
 
@@ -352,6 +376,8 @@ Sets the item the player is holding in their off hand.
 
 
 
+
+
 **Parameters:**
 
 
@@ -370,6 +396,8 @@ virtual void endstone::PlayerInventory::setLeggings (
 ```
 
 Put the given ItemStack into the leggings slot.
+
+
 
 This does not check if the [**ItemStack**](classendstone_1_1_item_stack.md) is a pair of leggings.
 

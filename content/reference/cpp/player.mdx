@@ -276,6 +276,8 @@ Gets the socket address of this player.
 
 
 
+
+
 **Returns:**
 
 the player's socket address 
@@ -292,6 +294,8 @@ virtual bool endstone::Player::getAllowFlight () const = 0
 ```
 
 Determines if the Player is allowed to fly via jump key double-tap.
+
+
 
 
 
@@ -314,6 +318,8 @@ Gets the player's current device id.
 
 
 
+
+
 **Returns:**
 
 the player's device id 
@@ -330,6 +336,8 @@ virtual std::string endstone::Player::getDeviceOS () const = 0
 ```
 
 Gets the player's current device's operation system (OS).
+
+
 
 
 
@@ -352,6 +360,8 @@ Get the player's EnderChest inventory.
 
 
 
+
+
 **Returns:**
 
 The EnderChest of the player 
@@ -371,6 +381,8 @@ Gets the players current experience level.
 
 
 
+
+
 **Returns:**
 
 Current experience level 
@@ -387,6 +399,8 @@ virtual float endstone::Player::getExpProgress () const = 0
 ```
 
 Gets the players current experience progress towards the next level.
+
+
 
 This is a percentage value. 0.0 is "no progress" and 1.0 is "next level".
 
@@ -412,6 +426,8 @@ Gets the current allowed speed that a client can fly.
 
 
 
+
+
 **Returns:**
 
 The current allowed speed, default is 0.05. 
@@ -428,6 +444,8 @@ virtual GameMode endstone::Player::getGameMode () const = 0
 ```
 
 Gets this player's current GameMode .
+
+
 
 
 
@@ -450,6 +468,8 @@ Gets the player's current game version.
 
 
 
+
+
 **Returns:**
 
 the player's game version 
@@ -466,6 +486,8 @@ virtual PlayerInventory & endstone::Player::getInventory () const = 0
 ```
 
 Get the player's inventory.
+
+
 
 
 
@@ -488,6 +510,8 @@ Gets the player's current locale.
 
 
 
+
+
 **Returns:**
 
 the player's locale 
@@ -507,6 +531,8 @@ Returns the name of this player.
 
 
 
+
+
 **Returns:**
 
 [**Player**](classendstone_1_1_player.md) name or null if we have not seen a name for this player yet 
@@ -516,8 +542,6 @@ Returns the name of this player.
 
 
         
-Implements [*endstone::CommandSender::getName*](classendstone_1_1_command_sender.md#function-getname)
-
 ### <code className="doc-symbol doc-symbol-function"/> getPing [#getPing]
 
 ```cpp
@@ -525,6 +549,8 @@ virtual std::chrono::milliseconds endstone::Player::getPing () const = 0
 ```
 
 Gets the player's average ping.
+
+
 
 
 
@@ -547,6 +573,8 @@ Gets the Scoreboard displayed to this player.
 
 
 
+
+
 **Returns:**
 
 The current scoreboard seen by this player 
@@ -566,6 +594,8 @@ Gets the player's skin.
 
 
 
+
+
 **Returns:**
 
 the player's skin 
@@ -582,6 +612,8 @@ virtual int endstone::Player::getTotalExp () const = 0
 ```
 
 Gets the players total experience points.
+
+
 
 This refers to the total amount of experience the player has collected over time and is not currently displayed to the client.
 
@@ -607,6 +639,8 @@ Gets the current allowed speed that a client can walk.
 
 
 
+
+
 **Returns:**
 
 The current allowed speed, default is 0.10. 
@@ -623,6 +657,8 @@ virtual std::string endstone::Player::getXuid () const = 0
 ```
 
 Returns the Xbox User ID (XUID) of this player.
+
+
 
 
 
@@ -647,6 +683,8 @@ Gives the player the amount of experience specified.
 
 
 
+
+
 **Parameters:**
 
 
@@ -665,6 +703,8 @@ virtual void endstone::Player::giveExpLevels (
 ```
 
 Gives the player the amount of experience levels specified.
+
+
 
 
 
@@ -687,6 +727,8 @@ Checks to see if this player is currently flying or not.
 
 
 
+
+
 **Returns:**
 
 True if the player is flying, else false. 
@@ -703,6 +745,8 @@ virtual bool endstone::Player::isOp () const = 0
 ```
 
 Checks if this player is a server operator.
+
+
 
 
 
@@ -725,6 +769,8 @@ Returns if the player is in sneak mode.
 
 
 
+
+
 **Returns:**
 
 true if player is in sneak mode 
@@ -741,6 +787,8 @@ virtual bool endstone::Player::isSprinting () const = 0
 ```
 
 Gets whether the player is sprinting or not.
+
+
 
 
 
@@ -765,6 +813,8 @@ Kicks player with custom kick message.
 
 
 
+
+
 **Parameters:**
 
 
@@ -783,6 +833,8 @@ virtual bool endstone::Player::performCommand (
 ```
 
 Makes the player perform the given command.
+
+
 
 
 
@@ -814,6 +866,8 @@ virtual void endstone::Player::playSound (
 ```
 
 Play a sound for a player at the location.
+
+
 
 
 
@@ -849,6 +903,8 @@ Sends a form to the player.
 
 
 
+
+
 **Parameters:**
 
 
@@ -868,6 +924,8 @@ virtual void endstone::Player::sendPacket (
 ```
 
 Sends a packet to the player.
+
+
 
 
 
@@ -893,6 +951,8 @@ Sends this player a popup message.
 
 
 
+
+
 **Parameters:**
 
 
@@ -914,6 +974,8 @@ Sends this player a tip message.
 
 
 
+
+
 **Parameters:**
 
 
@@ -925,6 +987,8 @@ Sends this player a tip message.
         
 ### <code className="doc-symbol doc-symbol-function"/> sendTitle [#sendTitle]
 
+
+
 ```cpp
 virtual void endstone::Player::sendTitle (
     std::string title,
@@ -933,6 +997,8 @@ virtual void endstone::Player::sendTitle (
 ```
 
 Sends a title and a subtitle message to the player. If they are empty strings, the display will be updated as such. The titles will be displayed with the default timings.
+
+
 
 
 
@@ -946,7 +1012,6 @@ Sends a title and a subtitle message to the player. If they are empty strings, t
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> sendTitle [#sendTitle]
 
 ```cpp
 virtual void endstone::Player::sendTitle (
@@ -959,6 +1024,8 @@ virtual void endstone::Player::sendTitle (
 ```
 
 Sends a title and a subtitle message to the player. If they are empty strings, the display will be updated as such.
+
+
 
 
 
@@ -988,6 +1055,8 @@ Sends this player a toast notification.
 
 
 
+
+
 **Parameters:**
 
 
@@ -1007,6 +1076,8 @@ virtual void endstone::Player::setAllowFlight (
 ```
 
 Sets if the Player is allowed to fly via jump key double-tap.
+
+
 
 
 
@@ -1031,6 +1102,8 @@ Sets the players current experience level.
 
 
 
+
+
 **Parameters:**
 
 
@@ -1049,6 +1122,8 @@ virtual Result< void > endstone::Player::setExpProgress (
 ```
 
 Sets the players current experience progress towards the next level.
+
+
 
 This is a percentage value. 0.0 is "no progress" and 1.0 is "next level".
 
@@ -1099,6 +1174,8 @@ Makes this player start or stop flying.
 
 
 
+
+
 **Parameters:**
 
 
@@ -1120,6 +1197,8 @@ Sets this player's current GameMode .
 
 
 
+
+
 **Parameters:**
 
 
@@ -1138,6 +1217,8 @@ virtual void endstone::Player::setOp (
 ```
 
 Sets the operator status of this player.
+
+
 
 
 
@@ -1185,6 +1266,8 @@ Sets the sneak mode of the player.
 
 
 
+
+
 **Parameters:**
 
 
@@ -1203,6 +1286,8 @@ virtual void endstone::Player::setSprinting (
 ```
 
 Sets whether the player is sprinting or not.
+
+
 
 
 
@@ -1240,6 +1325,8 @@ Sets the speed at which a client will walk.
         
 ### <code className="doc-symbol doc-symbol-function"/> spawnParticle [#spawnParticle]
 
+
+
 ```cpp
 virtual void endstone::Player::spawnParticle (
     std::string name,
@@ -1248,6 +1335,8 @@ virtual void endstone::Player::spawnParticle (
 ```
 
 Spawns the particle at the target location.
+
+
 
 
 
@@ -1261,7 +1350,6 @@ Spawns the particle at the target location.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> spawnParticle [#spawnParticle]
 
 ```cpp
 virtual void endstone::Player::spawnParticle (
@@ -1273,6 +1361,8 @@ virtual void endstone::Player::spawnParticle (
 ```
 
 Spawns the particle at the target location.
+
+
 
 
 
@@ -1288,7 +1378,6 @@ Spawns the particle at the target location.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> spawnParticle [#spawnParticle]
 
 ```cpp
 virtual void endstone::Player::spawnParticle (
@@ -1299,6 +1388,8 @@ virtual void endstone::Player::spawnParticle (
 ```
 
 Spawns the particle at the target location.
+
+
 
 
 
@@ -1313,7 +1404,6 @@ Spawns the particle at the target location.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> spawnParticle [#spawnParticle]
 
 ```cpp
 virtual void endstone::Player::spawnParticle (
@@ -1326,6 +1416,8 @@ virtual void endstone::Player::spawnParticle (
 ```
 
 Spawns the particle at the target location.
+
+
 
 
 
@@ -1362,6 +1454,8 @@ Stop the specified sound from playing.
 
 
 
+
+
 **Parameters:**
 
 
@@ -1384,6 +1478,8 @@ Transfers the player to another server.
 
 
 
+
+
 **Parameters:**
 
 
@@ -1402,13 +1498,9 @@ virtual void endstone::Player::updateCommands () const = 0
 
 Send the list of commands to the client.
 
+
+
 Generally useful to ensure the client has a complete list of commands after permission changes are done. 
 
 
         
-### <code className="doc-symbol doc-symbol-typedef"/> FormVariant [#FormVariant]
-
-```cpp
-using endstone::Player::FormVariant =  std::variant<MessageForm, ActionForm, ModalForm>;
-```
-

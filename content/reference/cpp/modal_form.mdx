@@ -94,15 +94,11 @@ Bases: [`endstone::Form`](classendstone_1_1_form.md)
 ```cpp
 using endstone::ModalForm::Control =  std::variant<Dropdown, Label, Slider, StepSlider, TextInput, Toggle, Divider, Header>;
 ```
-
-
 ### <code className="doc-symbol doc-symbol-typedef"/> OnSubmitCallback [#OnSubmitCallback]
 
 ```cpp
 using endstone::ModalForm::OnSubmitCallback =  std::function<void(Player *, std::string)>;
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> addControl [#addControl]
 
 ```cpp
@@ -112,6 +108,8 @@ inline ModalForm & endstone::ModalForm::addControl (
 ```
 
 Adds a control to the form.
+
+
 
 
 
@@ -141,6 +139,8 @@ Gets the controls of the modal form.
 
 
 
+
+
 **Returns:**
 
 A list of controls in the modal form. 
@@ -157,6 +157,8 @@ inline std::optional< std::string > endstone::ModalForm::getIcon () const
 ```
 
 Get the icon of the form.
+
+
 
 
 
@@ -179,6 +181,8 @@ Gets the on submit callback of the form.
 
 
 
+
+
 **Returns:**
 
 The on submit callback of the form. 
@@ -195,6 +199,8 @@ inline std::optional< Message > endstone::ModalForm::getSubmitButton () const
 ```
 
 Gets the submit button text of the form.
+
+
 
 
 
@@ -216,6 +222,8 @@ inline ModalForm & endstone::ModalForm::setControls (
 ```
 
 Sets the controls of the modal form.
+
+
 
 
 
@@ -247,6 +255,8 @@ Sets the icon of the form.
 
 
 
+
+
 **Parameters:**
 
 
@@ -275,6 +285,8 @@ Sets the on submit callback of the form.
 
 
 
+
+
 **Parameters:**
 
 
@@ -300,6 +312,8 @@ inline ModalForm & endstone::ModalForm::setSubmitButton (
 ```
 
 Sets the submit button text of the form.
+
+
 
 
 

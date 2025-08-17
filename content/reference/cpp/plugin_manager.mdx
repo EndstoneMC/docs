@@ -114,10 +114,6 @@ title: "PluginManager"
     <td>[`loadPlugins`](#loadPlugins)</td>
     <td></td>
 </tr>
-<tr key="classendstone_1_1_plugin_manager_1a773e9898c1364422297e68b04877ded6">
-    <td>[`operator=`](#operator=)</td>
-    <td></td>
-</tr>
 <tr key="classendstone_1_1_plugin_manager_1a6b871de71ea1884cf526b4c5880e732e">
     <td>[`recalculatePermissionDefaults`](#recalculatePermissionDefaults)</td>
     <td></td>
@@ -154,29 +150,22 @@ title: "PluginManager"
     <td>[`unsubscribeFromPermission`](#unsubscribeFromPermission)</td>
     <td></td>
 </tr>
-<tr key="classendstone_1_1_plugin_manager_1a648f03d094a5d49c697c6dbd3a94b9a8">
-    <td>[`~PluginManager`](#~PluginManager)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
 ### <code className="doc-symbol doc-symbol-function"/> PluginManager [#PluginManager]
 
+
+
 ```cpp
 endstone::PluginManager::PluginManager () = default
 ```
-
-
-### <code className="doc-symbol doc-symbol-function"/> PluginManager [#PluginManager]
 
 ```cpp
 endstone::PluginManager::PluginManager (
     PluginManager const &
 ) = delete
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> addPermission [#addPermission]
 
 ```cpp
@@ -506,6 +495,8 @@ List of Plugins
         
 ### <code className="doc-symbol doc-symbol-function"/> isPluginEnabled [#isPluginEnabled]
 
+
+
 ```cpp
 virtual bool endstone::PluginManager::isPluginEnabled (
     const std::string & name
@@ -534,7 +525,6 @@ true if the plugin is enabled, otherwise false
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> isPluginEnabled [#isPluginEnabled]
 
 ```cpp
 virtual bool endstone::PluginManager::isPluginEnabled (
@@ -599,6 +589,8 @@ The [**Plugin**](classendstone_1_1_plugin.md) loaded, or nullptr if it was inval
         
 ### <code className="doc-symbol doc-symbol-function"/> loadPlugins [#loadPlugins]
 
+
+
 ```cpp
 virtual std::vector< Plugin * > endstone::PluginManager::loadPlugins (
     std::string directory
@@ -627,7 +619,6 @@ A list of all plugins loaded
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> loadPlugins [#loadPlugins]
 
 ```cpp
 virtual std::vector< Plugin * > endstone::PluginManager::loadPlugins (
@@ -739,6 +730,8 @@ Registers the specified plugin loader
         
 ### <code className="doc-symbol doc-symbol-function"/> removePermission [#removePermission]
 
+
+
 ```cpp
 virtual void endstone::PluginManager::removePermission (
     Permission & perm
@@ -763,7 +756,6 @@ If the specified permission does not exist in this plugin manager, nothing will 
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> removePermission [#removePermission]
 
 ```cpp
 virtual void endstone::PluginManager::removePermission (

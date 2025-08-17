@@ -31,10 +31,6 @@ Bases: [`endstone::PlayerEvent`](classendstone_1_1_player_event.md)
    </tr>
 </thead>
 <tbody>
-<tr key="classendstone_1_1_player_join_event_1a8d98db7f36578c9563fa158defc791f1">
-    <td>[`ENDSTONE\_EVENT`](#ENDSTONE\_EVENT)</td>
-    <td></td>
-</tr>
 <tr key="classendstone_1_1_player_join_event_1a57649db75a39610202ffecf345d4e09b">
     <td>[`PlayerJoinEvent`](#PlayerJoinEvent)</td>
     <td></td>
@@ -50,15 +46,6 @@ Bases: [`endstone::PlayerEvent`](classendstone_1_1_player_event.md)
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> ENDSTONE\_EVENT [#ENDSTONE\_EVENT]
-
-```cpp
-endstone::PlayerJoinEvent::ENDSTONE_EVENT (
-    PlayerJoinEvent
-) 
-```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> PlayerJoinEvent [#PlayerJoinEvent]
 
 ```cpp
@@ -67,8 +54,6 @@ inline explicit endstone::PlayerJoinEvent::PlayerJoinEvent (
     std::optional< Message > join_message
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getJoinMessage [#getJoinMessage]
 
 ```cpp
@@ -76,6 +61,8 @@ inline std::optional< Message > endstone::PlayerJoinEvent::getJoinMessage () con
 ```
 
 Gets the join message to send to all online players.
+
+
 
 
 
@@ -97,6 +84,8 @@ inline void endstone::PlayerJoinEvent::setJoinMessage (
 ```
 
 Sets the join message to send to all online players.
+
+
 
 
 

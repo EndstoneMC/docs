@@ -62,10 +62,6 @@ title: "MapCanvas"
     <td>[`setPixelColor`](#setPixelColor)</td>
     <td>Draw a pixel to the canvas.</td>
 </tr>
-<tr key="classendstone_1_1_map_canvas_1a5130d9187ef7596b7fa535241dd0b8d6">
-    <td>[`~MapCanvas`](#~MapCanvas)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
@@ -80,6 +76,8 @@ virtual void endstone::MapCanvas::drawImage (
 ```
 
 Draw an image to the map. The image will be clipped if necessary.
+
+
 
 
 
@@ -104,6 +102,8 @@ virtual int endstone::MapCanvas::getBasePixel (
 ```
 
 Get a pixel from the layers below this canvas.
+
+
 
 
 
@@ -137,6 +137,8 @@ Get a pixel from the layers below this canvas.
 
 
 
+
+
 **Parameters:**
 
 
@@ -164,6 +166,8 @@ Get the map this canvas is attached to.
 
 
 
+
+
 **Returns:**
 
 The [**MapView**](classendstone_1_1_map_view.md) this canvas is attached to. 
@@ -183,6 +187,8 @@ virtual int endstone::MapCanvas::getPixel (
 ```
 
 Get a pixel from the canvas.
+
+
 
 
 
@@ -213,6 +219,8 @@ virtual std::optional< Color > endstone::MapCanvas::getPixelColor (
 ```
 
 Get a pixel from the canvas.
+
+
 
 If no color is set at the given position for this canvas, then std::nullopt is returned and the color returned by [**getBasePixelColor()**](classendstone_1_1_map_canvas.md#function-getbasepixelcolor) is shown on the map.
 
@@ -250,6 +258,8 @@ Draw a pixel to the canvas.
 
 
 
+
+
 **Parameters:**
 
 
@@ -272,6 +282,8 @@ virtual void endstone::MapCanvas::setPixelColor (
 ```
 
 Draw a pixel to the canvas.
+
+
 
 If std::nullopt is used as color, then the color returned by [**getBasePixelColor()**](classendstone_1_1_map_canvas.md#function-getbasepixelcolor) is shown on the map.
 

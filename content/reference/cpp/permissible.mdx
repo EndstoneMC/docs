@@ -74,14 +74,12 @@ title: "Permissible"
     <td>[`removeAttachment`](#removeAttachment)</td>
     <td>Removes the given PermissionAttachment from this object.</td>
 </tr>
-<tr key="classendstone_1_1_permissible_1afd630275e217c42932d29208712fe438">
-    <td>[`~Permissible`](#~Permissible)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
 ### <code className="doc-symbol doc-symbol-function"/> addAttachment [#addAttachment]
+
+
 
 ```cpp
 virtual PermissionAttachment * endstone::Permissible::addAttachment (
@@ -92,6 +90,8 @@ virtual PermissionAttachment * endstone::Permissible::addAttachment (
 ```
 
 Adds a new PermissionAttachment with a single permission by name and value.
+
+
 
 
 
@@ -113,7 +113,6 @@ The [**PermissionAttachment**](classendstone_1_1_permission_attachment.md) that 
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> addAttachment [#addAttachment]
 
 ```cpp
 virtual PermissionAttachment * endstone::Permissible::addAttachment (
@@ -122,6 +121,8 @@ virtual PermissionAttachment * endstone::Permissible::addAttachment (
 ```
 
 Adds a new empty PermissionAttachment to this object.
+
+
 
 
 
@@ -151,6 +152,8 @@ Casts a Permissible as CommandSender .
 
 
 
+
+
 **Returns:**
 
 [**CommandSender**](classendstone_1_1_command_sender.md), nullptr if not a [**CommandSender**](classendstone_1_1_command_sender.md) 
@@ -167,6 +170,8 @@ virtual std::unordered_set< PermissionAttachmentInfo * > endstone::Permissible::
 ```
 
 Gets a set containing all the permissions currently in effect by this object.
+
+
 
 
 
@@ -189,6 +194,8 @@ Gets the permission level of this object.
 
 
 
+
+
 **Returns:**
 
 The permission level 
@@ -200,6 +207,8 @@ The permission level
         
 ### <code className="doc-symbol doc-symbol-function"/> hasPermission [#hasPermission]
 
+
+
 ```cpp
 virtual bool endstone::Permissible::hasPermission (
     std::string name
@@ -207,6 +216,8 @@ virtual bool endstone::Permissible::hasPermission (
 ```
 
 Gets the value of the specified permission, if set. If a permission override is not set on this object, the default value of the permission will be returned.
+
+
 
 
 
@@ -226,7 +237,6 @@ Value of the permission
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> hasPermission [#hasPermission]
 
 ```cpp
 virtual bool endstone::Permissible::hasPermission (
@@ -235,6 +245,8 @@ virtual bool endstone::Permissible::hasPermission (
 ```
 
 Gets the value of the specified permission, if set. If a permission override is not set on this object, the default value of the permission will be returned.
+
+
 
 
 
@@ -256,6 +268,8 @@ Value of the permission
         
 ### <code className="doc-symbol doc-symbol-function"/> isPermissionSet [#isPermissionSet]
 
+
+
 ```cpp
 virtual bool endstone::Permissible::isPermissionSet (
     std::string name
@@ -263,6 +277,8 @@ virtual bool endstone::Permissible::isPermissionSet (
 ```
 
 Checks if this object contains an override for the specified permission, by fully qualified name.
+
+
 
 
 
@@ -282,7 +298,6 @@ true if the permission is set, otherwise false
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> isPermissionSet [#isPermissionSet]
 
 ```cpp
 virtual bool endstone::Permissible::isPermissionSet (
@@ -291,6 +306,8 @@ virtual bool endstone::Permissible::isPermissionSet (
 ```
 
 Checks if this object contains an override for the specified Permission .
+
+
 
 
 
@@ -327,6 +344,8 @@ virtual Result< void > endstone::Permissible::removeAttachment (
 ```
 
 Removes the given PermissionAttachment from this object.
+
+
 
 
 

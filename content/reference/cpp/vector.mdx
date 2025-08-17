@@ -71,58 +71,6 @@ title: "Vector"
     <td>[`normalize`](#normalize)</td>
     <td></td>
 </tr>
-<tr key="classendstone_1_1_vector_1a5485042a4e6973e83660c590aa03a791">
-    <td>[`operator\*`](#operator\*)</td>
-    <td></td>
-</tr>
-<tr key="classendstone_1_1_vector_1a7296335b054365c0747066f44f969fca">
-    <td>[`operator\*`](#operator\*)</td>
-    <td></td>
-</tr>
-<tr key="classendstone_1_1_vector_1abd4abd618ccad756cd3a10ccb437446a">
-    <td>[`operator\*=`](#operator\*=)</td>
-    <td></td>
-</tr>
-<tr key="classendstone_1_1_vector_1ab7f0e69eca26377fcdcabc58b6ae8577">
-    <td>[`operator+`](#operator+)</td>
-    <td></td>
-</tr>
-<tr key="classendstone_1_1_vector_1ad68e9504d5ef46327f5d40c833a4f802">
-    <td>[`operator+`](#operator+)</td>
-    <td></td>
-</tr>
-<tr key="classendstone_1_1_vector_1ac80f982a6ba8f6771779a2f5473f6303">
-    <td>[`operator+=`](#operator+=)</td>
-    <td></td>
-</tr>
-<tr key="classendstone_1_1_vector_1a2c6969b8a3ead3b3f993417a6c7d5124">
-    <td>[`operator-`](#operator-)</td>
-    <td></td>
-</tr>
-<tr key="classendstone_1_1_vector_1a02ac07a018efdabcd621ba8505a385fa">
-    <td>[`operator-`](#operator-)</td>
-    <td></td>
-</tr>
-<tr key="classendstone_1_1_vector_1aa77a533d48afb08c5bf8c106dab089ab">
-    <td>[`operator-=`](#operator-=)</td>
-    <td></td>
-</tr>
-<tr key="classendstone_1_1_vector_1abc685a19d9f6c585ede28769ca3bdbe6">
-    <td>[`operator/`](#operator/)</td>
-    <td></td>
-</tr>
-<tr key="classendstone_1_1_vector_1a4501ecc7c065ffc7de8fec9a5341c520">
-    <td>[`operator/`](#operator/)</td>
-    <td></td>
-</tr>
-<tr key="classendstone_1_1_vector_1ac4bc1aeef782ff41ca2c37b3e760f2bf">
-    <td>[`operator/=`](#operator/=)</td>
-    <td></td>
-</tr>
-<tr key="classendstone_1_1_vector_1adeb43307778c502701288edb44b975db">
-    <td>[`operator==`](#operator==)</td>
-    <td></td>
-</tr>
 <tr key="classendstone_1_1_vector_1aaddaeaa8e19c615a2ebc0ed97ee4e9db">
     <td>[`setX`](#setX)</td>
     <td>Set the X component.</td>
@@ -140,12 +88,11 @@ title: "Vector"
 
 ### <code className="doc-symbol doc-symbol-function"/> Vector [#Vector]
 
+
+
 ```cpp
 inline constexpr endstone::Vector::Vector () 
 ```
-
-
-### <code className="doc-symbol doc-symbol-function"/> Vector [#Vector]
 
 ```cpp
 inline constexpr endstone::Vector::Vector (
@@ -154,8 +101,6 @@ inline constexpr endstone::Vector::Vector (
     T z
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> distance [#distance]
 
 ```cpp
@@ -226,6 +171,8 @@ Gets the X component.
 
 
 
+
+
 **Returns:**
 
 The X component. 
@@ -242,6 +189,8 @@ inline T endstone::Vector::getY () const
 ```
 
 Gets the Y component.
+
+
 
 
 
@@ -264,6 +213,8 @@ Gets the Z component.
 
 
 
+
+
 **Returns:**
 
 The Z component. 
@@ -283,6 +234,8 @@ Gets the magnitude of the vector, defined as sqrt(x^2+y^2+z^2).
 
 
 
+
+
 **Returns:**
 
 the magnitude 
@@ -299,6 +252,8 @@ inline T endstone::Vector::lengthSquared () const
 ```
 
 Gets the magnitude of the vector squared.
+
+
 
 
 
@@ -344,6 +299,8 @@ Set the X component.
 
 
 
+
+
 **Parameters:**
 
 
@@ -369,6 +326,8 @@ inline void endstone::Vector::setY (
 ```
 
 Set the Y component.
+
+
 
 
 
@@ -400,6 +359,8 @@ Set the Z component.
 
 
 
+
+
 **Parameters:**
 
 
@@ -416,23 +377,3 @@ This vector.
 
 
         
-### <code className="doc-symbol doc-symbol-variable"/> x\_ [#x\_]
-
-```cpp
-T endstone::Vector< T >::x_;
-```
-
-
-### <code className="doc-symbol doc-symbol-variable"/> y\_ [#y\_]
-
-```cpp
-T endstone::Vector< T >::y_;
-```
-
-
-### <code className="doc-symbol doc-symbol-variable"/> z\_ [#z\_]
-
-```cpp
-T endstone::Vector< T >::z_;
-```
-

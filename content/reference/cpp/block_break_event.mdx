@@ -58,10 +58,6 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
     <td>[`getPlayer`](#getPlayer)</td>
     <td>Gets the Player that is breaking the block involved in this event.</td>
 </tr>
-<tr key="classendstone_1_1_block_break_event_1a0c013b5825d1ea1b75eaec4e2e076ee8">
-    <td>[`~BlockBreakEvent`](#~BlockBreakEvent)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
@@ -70,8 +66,6 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 ```cpp
 const std::string endstone::BlockBreakEvent::NAME;
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> BlockBreakEvent [#BlockBreakEvent]
 
 ```cpp
@@ -80,8 +74,6 @@ inline explicit endstone::BlockBreakEvent::BlockBreakEvent (
     Player & player
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
@@ -103,8 +95,6 @@ name of this event
 
 
         
-Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
-
 ### <code className="doc-symbol doc-symbol-function"/> getPlayer [#getPlayer]
 
 ```cpp
@@ -112,6 +102,8 @@ inline Player & endstone::BlockBreakEvent::getPlayer () const
 ```
 
 Gets the Player that is breaking the block involved in this event.
+
+
 
 
 

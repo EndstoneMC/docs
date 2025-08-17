@@ -63,14 +63,12 @@ Bases: [`endstone::BanList`](classendstone_1_1_ban_list.md)
     <td>[`removeBan`](#removeBan)</td>
     <td>Removes the specified IP address from this list, therefore indicating a "not banned" status.</td>
 </tr>
-<tr key="classendstone_1_1_ip_ban_list_1a99859c818b01e6685f3326e4ee0e0cf3">
-    <td>[`~IpBanList`](#~IpBanList)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
 ### <code className="doc-symbol doc-symbol-function"/> addBan [#addBan]
+
+
 
 ```cpp
 virtual IpBanEntry & endstone::IpBanList::addBan (
@@ -82,6 +80,8 @@ virtual IpBanEntry & endstone::IpBanList::addBan (
 ```
 
 Adds a ban to this list. If a previous ban exists, this will update the previous entry.
+
+
 
 
 
@@ -104,9 +104,6 @@ Adds a ban to this list. If a previous ban exists, this will update the previous
 
 
         
-Implements [*endstone::BanList::addBan*](classendstone_1_1_ban_list.md#function-addban-12)
-
-### <code className="doc-symbol doc-symbol-function"/> addBan [#addBan]
 
 ```cpp
 virtual IpBanEntry & endstone::IpBanList::addBan (
@@ -118,6 +115,8 @@ virtual IpBanEntry & endstone::IpBanList::addBan (
 ```
 
 Adds a ban to this list. If a previous ban exists, this will update the previous entry.
+
+
 
 
 
@@ -142,6 +141,8 @@ Adds a ban to this list. If a previous ban exists, this will update the previous
         
 ### <code className="doc-symbol doc-symbol-function"/> getBanEntry [#getBanEntry]
 
+
+
 ```cpp
 virtual const IpBanEntry * endstone::IpBanList::getBanEntry (
     std::string address
@@ -149,6 +150,8 @@ virtual const IpBanEntry * endstone::IpBanList::getBanEntry (
 ```
 
 Gets a BanEntry by IP address.
+
+
 
 
 
@@ -168,9 +171,6 @@ IpBanEntry\* The corresponding entry, or nullptr if none found.
 
 
         
-Implements [*endstone::BanList::getBanEntry*](classendstone_1_1_ban_list.md#function-getbanentry-12)
-
-### <code className="doc-symbol doc-symbol-function"/> getBanEntry [#getBanEntry]
 
 ```cpp
 virtual IpBanEntry * endstone::IpBanList::getBanEntry (
@@ -179,6 +179,8 @@ virtual IpBanEntry * endstone::IpBanList::getBanEntry (
 ```
 
 Gets a BanEntry by IP address.
+
+
 
 
 
@@ -200,11 +202,15 @@ IpBanEntry\* The corresponding entry, or nullptr if none found.
         
 ### <code className="doc-symbol doc-symbol-function"/> getEntries [#getEntries]
 
+
+
 ```cpp
 virtual std::vector< const IpBanEntry * > endstone::IpBanList::getEntries () override const = 0
 ```
 
 Gets a vector containing pointers to every BanEntry in this list.
+
+
 
 
 
@@ -217,15 +223,14 @@ A vector containing pointers to every entry tracked by this list.
 
 
         
-Implements [*endstone::BanList::getEntries*](classendstone_1_1_ban_list.md#function-getentries-12)
-
-### <code className="doc-symbol doc-symbol-function"/> getEntries [#getEntries]
 
 ```cpp
 virtual std::vector< IpBanEntry * > endstone::IpBanList::getEntries () override = 0
 ```
 
 Gets a vector containing pointers to every BanEntry in this list.
+
+
 
 
 
@@ -247,6 +252,8 @@ virtual bool endstone::IpBanList::isBanned (
 ```
 
 Checks if a BanEntry exists for the target, indicating an active ban status.
+
+
 
 
 
@@ -273,8 +280,6 @@ false Otherwise.
 
 
         
-Implements [*endstone::BanList::isBanned*](classendstone_1_1_ban_list.md#function-isbanned)
-
 ### <code className="doc-symbol doc-symbol-function"/> removeBan [#removeBan]
 
 ```cpp
@@ -287,6 +292,8 @@ Removes the specified IP address from this list, therefore indicating a "not ban
 
 
 
+
+
 **Parameters:**
 
 
@@ -296,4 +303,3 @@ Removes the specified IP address from this list, therefore indicating a "not ban
 
 
         
-Implements [*endstone::BanList::removeBan*](classendstone_1_1_ban_list.md#function-removeban)

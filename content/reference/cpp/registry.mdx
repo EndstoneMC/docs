@@ -51,10 +51,6 @@ title: "Registry"
     <td>[`getOrThrow`](#getOrThrow)</td>
     <td>Const overload of getOrThrow() .</td>
 </tr>
-<tr key="classendstone_1_1_registry_1a9396db9d9eea6543c7ed9d6162e9822a">
-    <td>[`~Registry`](#~Registry)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
@@ -67,6 +63,8 @@ virtual void endstone::Registry::forEach (
 ```
 
 Apply a function to each stored element.
+
+
 
 Iterates over all stored elements and applies the provided function to them. The iteration continues until the function returns false or all elements have been processed.
 
@@ -84,6 +82,8 @@ Iterates over all stored elements and applies the provided function to them. The
         
 ### <code className="doc-symbol doc-symbol-function"/> get [#get]
 
+
+
 ```cpp
 virtual T * endstone::Registry::get (
     NamespacedKey key
@@ -91,6 +91,8 @@ virtual T * endstone::Registry::get (
 ```
 
 Get the object by its key.
+
+
 
 Returns a raw pointer to the object, or nullptr if not found.
 
@@ -113,7 +115,6 @@ T\* Pointer to the object, or nullptr if it does not exist.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> get [#get]
 
 ```cpp
 virtual const T * endstone::Registry::get (
@@ -122,6 +123,8 @@ virtual const T * endstone::Registry::get (
 ```
 
 Const overload of get() .
+
+
 
 
 
@@ -143,6 +146,8 @@ const T\* Pointer to the object, or nullptr if it does not exist.
         
 ### <code className="doc-symbol doc-symbol-function"/> getOrThrow [#getOrThrow]
 
+
+
 ```cpp
 inline virtual T & endstone::Registry::getOrThrow (
     const NamespacedKey key
@@ -150,6 +155,8 @@ inline virtual T & endstone::Registry::getOrThrow (
 ```
 
 Get the object by its key or throw if missing.
+
+
 
 
 
@@ -176,7 +183,6 @@ T& Reference to the object with the given key.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getOrThrow [#getOrThrow]
 
 ```cpp
 inline virtual const T & endstone::Registry::getOrThrow (
@@ -185,6 +191,8 @@ inline virtual const T & endstone::Registry::getOrThrow (
 ```
 
 Const overload of getOrThrow() .
+
+
 
 
 

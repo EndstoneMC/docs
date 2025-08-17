@@ -50,26 +50,6 @@ title: "ItemType"
     <td>[`getTranslationKey`](#getTranslationKey)</td>
     <td>Get the translation key, suitable for use in a translation component.</td>
 </tr>
-<tr key="classendstone_1_1_item_type_1af744ff14c9521369c6935eb8993d640f">
-    <td>[`operator!=`](#operator!=)</td>
-    <td></td>
-</tr>
-<tr key="classendstone_1_1_item_type_1a81b1aeb108d98457a98c801207b92f21">
-    <td>[`operator!=`](#operator!=)</td>
-    <td></td>
-</tr>
-<tr key="classendstone_1_1_item_type_1a30a71758b6797ce64715172fbc187e7f">
-    <td>[`operator==`](#operator==)</td>
-    <td></td>
-</tr>
-<tr key="classendstone_1_1_item_type_1af875aee911c2b3f95b2efb7dfd2dc8fd">
-    <td>[`operator==`](#operator==)</td>
-    <td></td>
-</tr>
-<tr key="classendstone_1_1_item_type_1a0d214cfa5e07bd5310b1ad134f873bc7">
-    <td>[`~ItemType`](#~ItemType)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 **Functions:**
@@ -98,6 +78,8 @@ Return the identifier of this item type.
 
 
 
+
+
 **Returns:**
 
 this item's identifier 
@@ -114,6 +96,8 @@ virtual NamespacedKey endstone::ItemType::getKey () const = 0
 ```
 
 Return the namespaced identifier of this item type.
+
+
 
 
 
@@ -136,6 +120,8 @@ Gets the maximum durability of this item type.
 
 
 
+
+
 **Returns:**
 
 Maximum durability for this item type 
@@ -152,6 +138,8 @@ virtual int endstone::ItemType::getMaxStackSize () const = 0
 ```
 
 Gets the maximum amount of this item type that can be held in a stack.
+
+
 
 
 
@@ -174,6 +162,8 @@ Get the translation key, suitable for use in a translation component.
 
 
 
+
+
 **Returns:**
 
 the translation key 
@@ -192,6 +182,8 @@ static inline const ItemType * endstone::ItemType::get (
 ```
 
 Attempts to get the ItemType with the given name.
+
+
 
 
 

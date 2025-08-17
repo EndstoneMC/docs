@@ -54,20 +54,8 @@ title: "CommandMap"
     <td>[`getCommand`](#getCommand)</td>
     <td></td>
 </tr>
-<tr key="classendstone_1_1_command_map_1af84987985d1b5dd0dcd0c14840dae7da">
-    <td>[`operator=`](#operator=)</td>
-    <td></td>
-</tr>
-<tr key="classendstone_1_1_command_map_1a71900d4f6d83ea0a21f9b2dbddcae322">
-    <td>[`operator=`](#operator=)</td>
-    <td></td>
-</tr>
 <tr key="classendstone_1_1_command_map_1a5b3beafddf2091946afee009ae1cf5de">
     <td>[`registerCommand`](#registerCommand)</td>
-    <td></td>
-</tr>
-<tr key="classendstone_1_1_command_map_1abc727aa73950b67e85315d0fa0317c9d">
-    <td>[`~CommandMap`](#~CommandMap)</td>
     <td></td>
 </tr>
 </tbody>
@@ -75,12 +63,11 @@ title: "CommandMap"
 
 ### <code className="doc-symbol doc-symbol-function"/> CommandMap [#CommandMap]
 
+
+
 ```cpp
 endstone::CommandMap::CommandMap () = default
 ```
-
-
-### <code className="doc-symbol doc-symbol-function"/> CommandMap [#CommandMap]
 
 ```cpp
 endstone::CommandMap::CommandMap (
@@ -88,16 +75,11 @@ endstone::CommandMap::CommandMap (
 ) = delete
 ```
 
-
-### <code className="doc-symbol doc-symbol-function"/> CommandMap [#CommandMap]
-
 ```cpp
 endstone::CommandMap::CommandMap (
     CommandMap &&
 ) = default
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> clearCommands [#clearCommands]
 
 ```cpp
@@ -119,6 +101,8 @@ virtual bool endstone::CommandMap::dispatch (
 ```
 
 Looks for the requested command and executes it if found.
+
+
 
 
 

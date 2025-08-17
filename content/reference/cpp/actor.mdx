@@ -174,6 +174,8 @@ Adds a tag to this actor.
 
 
 
+
+
 **Parameters:**
 
 
@@ -200,6 +202,8 @@ Gets an Actor as Item .
 
 
 
+
+
 **Returns:**
 
 [**Item**](classendstone_1_1_item.md), nullptr if not an [**Item**](classendstone_1_1_item.md) 
@@ -216,6 +220,8 @@ virtual Mob * endstone::Actor::asMob () const = 0
 ```
 
 Gets an Actor as Mob .
+
+
 
 
 
@@ -259,6 +265,8 @@ Gets the entity's health from 0 to its max possible value, where 0 is dead.
 
 
 
+
+
 **Returns:**
 
 Health represented from 0 to max 
@@ -275,6 +283,8 @@ virtual std::int64_t endstone::Actor::getId () const = 0
 ```
 
 Returns a unique id for this actor.
+
+
 
 
 
@@ -339,6 +349,8 @@ Gets the maximum health this entity has.
 
 
 
+
+
 **Returns:**
 
 Maximum health 
@@ -355,6 +367,8 @@ virtual std::string endstone::Actor::getNameTag () const = 0
 ```
 
 Gets the current name tag of the actor.
+
+
 
 
 
@@ -398,6 +412,8 @@ Gets the current score tag of the actor.
 
 
 
+
+
 **Returns:**
 
 The score tag. 
@@ -417,6 +433,8 @@ Returns a list of scoreboard tags for this actor.
 
 
 
+
+
 **Returns:**
 
 a list of scoreboard tags for this actor 
@@ -433,6 +451,8 @@ virtual std::string endstone::Actor::getType () const = 0
 ```
 
 Get the type of the actor.
+
+
 
 This method returns the type of the actor as a string, for example, minecraft:pig.
 
@@ -476,6 +496,8 @@ virtual bool endstone::Actor::isDead () const = 0
 ```
 
 Returns true if this actor has been marked for removal.
+
+
 
 
 
@@ -540,6 +562,8 @@ Checks if the actor's name tag is always visible.
 
 
 
+
+
 **Returns:**
 
 True if the name tag is always visible, false otherwise. 
@@ -556,6 +580,8 @@ virtual bool endstone::Actor::isNameTagVisible () const = 0
 ```
 
 Checks if the actor's name tag is currently visible.
+
+
 
 
 
@@ -636,6 +662,8 @@ Removes a given tag from this actor.
 
 
 
+
+
 **Parameters:**
 
 
@@ -687,6 +715,8 @@ Sets the name tag for the actor.
 
 
 
+
+
 **Parameters:**
 
 
@@ -708,6 +738,8 @@ Sets whether the actor's name tag should always be visible.
 
 
 
+
+
 **Parameters:**
 
 
@@ -726,6 +758,8 @@ virtual void endstone::Actor::setNameTagVisible (
 ```
 
 Sets if the actor's name tag is visible or not.
+
+
 
 
 
@@ -782,6 +816,8 @@ Sets the score tag for the actor.
 
 
 
+
+
 **Parameters:**
 
 
@@ -792,6 +828,8 @@ Sets the score tag for the actor.
 
         
 ### <code className="doc-symbol doc-symbol-function"/> teleport [#teleport]
+
+
 
 ```cpp
 virtual void endstone::Actor::teleport (
@@ -818,7 +856,6 @@ Teleports this actor to the given location.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> teleport [#teleport]
 
 ```cpp
 virtual void endstone::Actor::teleport (

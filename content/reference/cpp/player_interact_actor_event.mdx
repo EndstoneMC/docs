@@ -58,10 +58,6 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
     <td>[`getEventName`](#getEventName)</td>
     <td></td>
 </tr>
-<tr key="classendstone_1_1_player_interact_actor_event_1a3223c9370df9d9354fd174dd1918cd07">
-    <td>[`~PlayerInteractActorEvent`](#~PlayerInteractActorEvent)</td>
-    <td></td>
-</tr>
 </tbody>
 </table>
 
@@ -70,8 +66,6 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 ```cpp
 const std::string endstone::PlayerInteractActorEvent::NAME;
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> PlayerInteractActorEvent [#PlayerInteractActorEvent]
 
 ```cpp
@@ -80,8 +74,6 @@ inline explicit endstone::PlayerInteractActorEvent::PlayerInteractActorEvent (
     Actor & actor
 ) 
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getActor [#getActor]
 
 ```cpp
@@ -89,6 +81,8 @@ inline Actor & endstone::PlayerInteractActorEvent::getActor () const
 ```
 
 Gets the actor that was right-clicked by the player.
+
+
 
 
 
@@ -122,4 +116,3 @@ name of this event
 
 
         
-Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)

@@ -100,15 +100,11 @@ title: "BanEntry"
 ```cpp
 using endstone::BanEntry::Date =  std::chrono::system_clock::time_point;
 ```
-
-
 ### <code className="doc-symbol doc-symbol-variable"/> DateFormat [#DateFormat]
 
 ```cpp
 const std::string endstone::BanEntry::DateFormat;
 ```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getCreated [#getCreated]
 
 ```cpp
@@ -116,6 +112,8 @@ inline Date endstone::BanEntry::getCreated () const
 ```
 
 Gets the date this ban entry was created.
+
+
 
 
 
@@ -138,6 +136,8 @@ Gets the date this ban expires on, or std::nullopt for no defined end date.
 
 
 
+
+
 **Returns:**
 
 the expiration date 
@@ -154,6 +154,8 @@ inline std::string endstone::BanEntry::getReason () const
 ```
 
 Gets the reason for this ban.
+
+
 
 
 
@@ -176,6 +178,8 @@ Gets the source of this ban.
 
 
 
+
+
 **Returns:**
 
 the source of the ban 
@@ -194,6 +198,8 @@ inline void endstone::BanEntry::setCreated (
 ```
 
 Sets the date this ban entry was created.
+
+
 
 
 
@@ -221,6 +227,8 @@ Sets the date this ban expires on. std::nullopt values are considered "infinite"
 
 
 
+
+
 **Parameters:**
 
 
@@ -239,6 +247,8 @@ inline void endstone::BanEntry::setReason (
 ```
 
 Sets the reason for this ban.
+
+
 
 
 
@@ -263,6 +273,8 @@ inline void endstone::BanEntry::setSource (
 ```
 
 Sets the source of this ban.
+
+
 
 
 

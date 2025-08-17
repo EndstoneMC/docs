@@ -35,10 +35,6 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
     <td>[`BlockCookEvent`](#BlockCookEvent)</td>
     <td></td>
 </tr>
-<tr key="classendstone_1_1_block_cook_event_1a0c022b567cdab73d5f74da17326cd88e">
-    <td>[`ENDSTONE\_EVENT`](#ENDSTONE\_EVENT)</td>
-    <td></td>
-</tr>
 <tr key="classendstone_1_1_block_cook_event_1a0b7b3c972fa4056c0598cba0a6259b1a">
     <td>[`getResult`](#getResult)</td>
     <td>Gets the resultant ItemStack for this event.</td>
@@ -63,17 +59,6 @@ inline endstone::BlockCookEvent::BlockCookEvent (
     std::unique_ptr< ItemStack > result
 ) 
 ```
-
-
-### <code className="doc-symbol doc-symbol-function"/> ENDSTONE\_EVENT [#ENDSTONE\_EVENT]
-
-```cpp
-endstone::BlockCookEvent::ENDSTONE_EVENT (
-    BlockCookEvent
-) 
-```
-
-
 ### <code className="doc-symbol doc-symbol-function"/> getResult [#getResult]
 
 ```cpp
@@ -81,6 +66,8 @@ inline const ItemStack & endstone::BlockCookEvent::getResult () const
 ```
 
 Gets the resultant ItemStack for this event.
+
+
 
 
 
@@ -103,6 +90,8 @@ Gets the smelted ItemStack for this event.
 
 
 
+
+
 **Returns:**
 
 smelting source [**ItemStack**](classendstone_1_1_item_stack.md) 
@@ -121,6 +110,8 @@ inline void endstone::BlockCookEvent::setResult (
 ```
 
 Sets the resultant ItemStack for this event.
+
+
 
 
 
