@@ -25,7 +25,7 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_player_chat_event_1a06ce04642473d0eeff2bac22d3319d87">
-    <td>[`NAME`](#variable-name)</td>
+    <td>[`NAME`](#NAME)</td>
     <td></td>
 </tr>
 </tbody>
@@ -47,36 +47,36 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_player_chat_event_1ae0ef119ee5dd4d80ba0db94d7927e011">
-    <td>[`PlayerChatEvent`](#function-playerchatevent)</td>
+    <td>[`PlayerChatEvent`](#PlayerChatEvent)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_player_chat_event_1ac7473c18e7328d7fa402d49c143c152a">
-    <td>[`getEventName`](#function-geteventname)</td>
+    <td>[`getEventName`](#getEventName)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_player_chat_event_1a6aaa932d6bf8d004a1aa67f9332587e3">
-    <td>[`getMessage`](#function-getmessage)</td>
+    <td>[`getMessage`](#getMessage)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_player_chat_event_1a6911b50e5f63878d746bdda07d8fcd58">
-    <td>[`setMessage`](#function-setmessage)</td>
+    <td>[`setMessage`](#setMessage)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_player_chat_event_1a84de57a1184f0d6384f32ac95c21864e">
-    <td>[`~PlayerChatEvent`](#function-playerchatevent)</td>
+    <td>[`~PlayerChatEvent`](#~PlayerChatEvent)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-variable"/> NAME
+### <code className="doc-symbol doc-symbol-variable"/> NAME [#NAME]
 
 ```cpp
 const std::string endstone::PlayerChatEvent::NAME;
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> PlayerChatEvent
+### <code className="doc-symbol doc-symbol-function"/> PlayerChatEvent [#PlayerChatEvent]
 
 ```cpp
 inline explicit endstone::PlayerChatEvent::PlayerChatEvent (
@@ -86,7 +86,7 @@ inline explicit endstone::PlayerChatEvent::PlayerChatEvent (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> getEventName
+### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
 inline virtual std::string endstone::PlayerChatEvent::getEventName () override const
@@ -109,7 +109,7 @@ name of this event
         
 Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
 
-### <code className="doc-symbol doc-symbol-function"/> getMessage
+### <code className="doc-symbol doc-symbol-function"/> getMessage [#getMessage]
 
 ```cpp
 inline std::string endstone::PlayerChatEvent::getMessage () const
@@ -130,7 +130,7 @@ Message the player is attempting to send
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setMessage
+### <code className="doc-symbol doc-symbol-function"/> setMessage [#setMessage]
 
 ```cpp
 inline void endstone::PlayerChatEvent::setMessage (

@@ -31,85 +31,85 @@ title: "Command"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_command_1aa44822c895d67402241b9570bafd2ce7">
-    <td>[`Command`](#function-command)</td>
+    <td>[`Command`](#Command)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_1ae3f04d6fbd6fe48c29c1b2951f77a5c0">
-    <td>[`asPluginCommand`](#function-asplugincommand)</td>
+    <td>[`asPluginCommand`](#asPluginCommand)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_1a983f63a4d9460dcc7a952eabd7c46737">
-    <td>[`execute`](#function-execute)</td>
+    <td>[`execute`](#execute)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_1a15380c3310b2a8f58b1ce3e227ddcf6d">
-    <td>[`getAliases`](#function-getaliases)</td>
+    <td>[`getAliases`](#getAliases)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_1a2f860b42aae19582ecc4a2d74ebc8cca">
-    <td>[`getDescription`](#function-getdescription)</td>
+    <td>[`getDescription`](#getDescription)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_1ae7306437f7a829db83548ca11288b298">
-    <td>[`getName`](#function-getname)</td>
+    <td>[`getName`](#getName)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_1a77de470be4805521e2f8887bbc873152">
-    <td>[`getPermissions`](#function-getpermissions)</td>
+    <td>[`getPermissions`](#getPermissions)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_1a43b745e674aed0f0cfc152bb1a99c2b0">
-    <td>[`getUsages`](#function-getusages)</td>
+    <td>[`getUsages`](#getUsages)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_1a4b4bfe6350f3deae258fc5fd8e344fbf">
-    <td>[`isRegistered`](#function-isregistered)</td>
+    <td>[`isRegistered`](#isRegistered)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_1a694f2bdd19a6381000fad63fbc3d6ad0">
-    <td>[`registerTo`](#function-registerto)</td>
+    <td>[`registerTo`](#registerTo)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_1a79687a94cbcfbd9a07c3aa8d72afd995">
-    <td>[`setAliases`](#function-setaliases)</td>
+    <td>[`setAliases`](#setAliases)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_1a1dff1fa7383c76451f28d2c131d6c77c">
-    <td>[`setDescription`](#function-setdescription)</td>
+    <td>[`setDescription`](#setDescription)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_1a66160b5ff3d7efbc62e93e122d699776">
-    <td>[`setName`](#function-setname)</td>
+    <td>[`setName`](#setName)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_1a53e55d4c2375b2b34e321f4f46551b09">
-    <td>[`setPermissions`](#function-setpermissions)</td>
+    <td>[`setPermissions`](#setPermissions)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_1ab73ce16a9a92a52780fd2640b5f5a91a">
-    <td>[`setUsages`](#function-setusages)</td>
+    <td>[`setUsages`](#setUsages)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_1a3d6b00319efa8c4e8bc51227532577d6">
-    <td>[`testPermission`](#function-testpermission)</td>
+    <td>[`testPermission`](#testPermission)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_1a72a27372e25345d4efe9f421520fc44b">
-    <td>[`testPermissionSilently`](#function-testpermissionsilently)</td>
+    <td>[`testPermissionSilently`](#testPermissionSilently)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_1af0220a368428afc83b15d638e40426fd">
-    <td>[`unregisterFrom`](#function-unregisterfrom)</td>
+    <td>[`unregisterFrom`](#unregisterFrom)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_1a1a6c0c0027b500df3e4eea60cf489ea2">
-    <td>[`~Command`](#function-command)</td>
+    <td>[`~Command`](#~Command)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> Command
+### <code className="doc-symbol doc-symbol-function"/> Command [#Command]
 
 ```cpp
 inline explicit endstone::Command::Command (
@@ -122,14 +122,14 @@ inline explicit endstone::Command::Command (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> asPluginCommand
+### <code className="doc-symbol doc-symbol-function"/> asPluginCommand [#asPluginCommand]
 
 ```cpp
 inline virtual PluginCommand * endstone::Command::asPluginCommand () const
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> execute
+### <code className="doc-symbol doc-symbol-function"/> execute [#execute]
 
 ```cpp
 inline virtual bool endstone::Command::execute (
@@ -161,7 +161,7 @@ true if the execution was successful, otherwise false
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getAliases
+### <code className="doc-symbol doc-symbol-function"/> getAliases [#getAliases]
 
 ```cpp
 inline std::vector< std::string > endstone::Command::getAliases () const
@@ -182,7 +182,7 @@ List of aliases
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getDescription
+### <code className="doc-symbol doc-symbol-function"/> getDescription [#getDescription]
 
 ```cpp
 inline std::string endstone::Command::getDescription () const
@@ -203,7 +203,7 @@ Description of this command
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getName
+### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
 inline std::string endstone::Command::getName () const
@@ -224,7 +224,7 @@ Name of this command
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getPermissions
+### <code className="doc-symbol doc-symbol-function"/> getPermissions [#getPermissions]
 
 ```cpp
 inline std::vector< std::string > endstone::Command::getPermissions () const
@@ -245,7 +245,7 @@ List of permission names, or empty if none
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getUsages
+### <code className="doc-symbol doc-symbol-function"/> getUsages [#getUsages]
 
 ```cpp
 inline std::vector< std::string > endstone::Command::getUsages () const
@@ -266,7 +266,7 @@ List of usages
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> isRegistered
+### <code className="doc-symbol doc-symbol-function"/> isRegistered [#isRegistered]
 
 ```cpp
 inline bool endstone::Command::isRegistered () const
@@ -287,7 +287,7 @@ true if this command is currently registered false otherwise
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> registerTo
+### <code className="doc-symbol doc-symbol-function"/> registerTo [#registerTo]
 
 ```cpp
 inline bool endstone::Command::registerTo (
@@ -317,7 +317,7 @@ true if the registration was successful, false otherwise
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setAliases
+### <code className="doc-symbol doc-symbol-function"/> setAliases [#setAliases]
 
 ```cpp
 template<typename... Alias>
@@ -341,7 +341,7 @@ Sets the list of aliases to request on registration for this command.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setDescription
+### <code className="doc-symbol doc-symbol-function"/> setDescription [#setDescription]
 
 ```cpp
 inline void endstone::Command::setDescription (
@@ -364,7 +364,7 @@ Sets a brief description of this command.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setName
+### <code className="doc-symbol doc-symbol-function"/> setName [#setName]
 
 ```cpp
 inline void endstone::Command::setName (
@@ -390,7 +390,7 @@ May only be used before registering the command.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setPermissions
+### <code className="doc-symbol doc-symbol-function"/> setPermissions [#setPermissions]
 
 ```cpp
 template<typename... Permission>
@@ -414,7 +414,7 @@ Sets the permissions required by users to be able to perform this command
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setUsages
+### <code className="doc-symbol doc-symbol-function"/> setUsages [#setUsages]
 
 ```cpp
 template<typename... Usage>
@@ -438,7 +438,7 @@ Sets the usages of this command
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> testPermission
+### <code className="doc-symbol doc-symbol-function"/> testPermission [#testPermission]
 
 ```cpp
 inline bool endstone::Command::testPermission (
@@ -468,7 +468,7 @@ true if they can use it, otherwise false
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> testPermissionSilently
+### <code className="doc-symbol doc-symbol-function"/> testPermissionSilently [#testPermissionSilently]
 
 ```cpp
 inline bool endstone::Command::testPermissionSilently (
@@ -498,7 +498,7 @@ true if they can use it, otherwise false
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> unregisterFrom
+### <code className="doc-symbol doc-symbol-function"/> unregisterFrom [#unregisterFrom]
 
 ```cpp
 inline bool endstone::Command::unregisterFrom (

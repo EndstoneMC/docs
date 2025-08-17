@@ -22,7 +22,7 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_player_interact_event_1aeb83b5a442ff89d6ffa627d6de378ce8">
-    <td>[`Action`](#enum-action)</td>
+    <td>[`Action`](#Action)</td>
     <td></td>
 </tr>
 </tbody>
@@ -47,41 +47,41 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_player_interact_event_1af0c0b0c0d24f7af231b5da2c03fa5568">
-    <td>[`PlayerInteractEvent`](#function-playerinteractevent)</td>
+    <td>[`PlayerInteractEvent`](#PlayerInteractEvent)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_player_interact_event_1a17117725b022db37efc279e4f35b06c5">
-    <td>[`getAction`](#function-getaction)</td>
+    <td>[`getAction`](#getAction)</td>
     <td>Returns the action type.</td>
 </tr>
 <tr key="classendstone_1_1_player_interact_event_1a4f26cb5a7a2306ab9c37aab371498bb2">
-    <td>[`getBlock`](#function-getblock)</td>
+    <td>[`getBlock`](#getBlock)</td>
     <td>Returns the clicked block.</td>
 </tr>
 <tr key="classendstone_1_1_player_interact_event_1ad38f34d2deabcbd5503b3ceaafd033c7">
-    <td>[`getBlockFace`](#function-getblockface)</td>
+    <td>[`getBlockFace`](#getBlockFace)</td>
     <td>Returns the face of the block that was clicked.</td>
 </tr>
 <tr key="classendstone_1_1_player_interact_event_1a3b82ca64d995c4b0afdc731c990db4d9">
-    <td>[`getClickedPosition`](#function-getclickedposition)</td>
+    <td>[`getClickedPosition`](#getClickedPosition)</td>
     <td>Gets the exact position on the block the player interacted with.</td>
 </tr>
 <tr key="classendstone_1_1_player_interact_event_1a2d08f03d4f791c471a4bedc4ae0bf03b">
-    <td>[`getItem`](#function-getitem)</td>
+    <td>[`getItem`](#getItem)</td>
     <td>Returns the item in hand represented by this event.</td>
 </tr>
 <tr key="classendstone_1_1_player_interact_event_1a34e1b96ac0ad624c40e8877a4696111e">
-    <td>[`hasBlock`](#function-hasblock)</td>
+    <td>[`hasBlock`](#hasBlock)</td>
     <td>Check if this event involved a block.</td>
 </tr>
 <tr key="classendstone_1_1_player_interact_event_1a24de1e03d7c563bc8cddc7ee7e4c73c5">
-    <td>[`hasItem`](#function-hasitem)</td>
+    <td>[`hasItem`](#hasItem)</td>
     <td>Check if this event involved an item.</td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-enum"/> Action
+### <code className="doc-symbol doc-symbol-enum"/> Action [#Action]
 
 ```cpp
 enum endstone::PlayerInteractEvent::Action {
@@ -93,7 +93,7 @@ enum endstone::PlayerInteractEvent::Action {
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> PlayerInteractEvent
+### <code className="doc-symbol doc-symbol-function"/> PlayerInteractEvent [#PlayerInteractEvent]
 
 ```cpp
 inline endstone::PlayerInteractEvent::PlayerInteractEvent (
@@ -107,7 +107,7 @@ inline endstone::PlayerInteractEvent::PlayerInteractEvent (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> getAction
+### <code className="doc-symbol doc-symbol-function"/> getAction [#getAction]
 
 ```cpp
 inline Action endstone::PlayerInteractEvent::getAction () const
@@ -126,7 +126,7 @@ Returns the action type.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getBlock
+### <code className="doc-symbol doc-symbol-function"/> getBlock [#getBlock]
 
 ```cpp
 inline Block * endstone::PlayerInteractEvent::getBlock () const
@@ -145,7 +145,7 @@ Returns the clicked block.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getBlockFace
+### <code className="doc-symbol doc-symbol-function"/> getBlockFace [#getBlockFace]
 
 ```cpp
 inline BlockFace endstone::PlayerInteractEvent::getBlockFace () const
@@ -164,7 +164,7 @@ BlockFace returns the face of the block that was clicked
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getClickedPosition
+### <code className="doc-symbol doc-symbol-function"/> getClickedPosition [#getClickedPosition]
 
 ```cpp
 inline std::optional< Vector < float > > endstone::PlayerInteractEvent::getClickedPosition () const
@@ -197,7 +197,7 @@ the clicked position.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getItem
+### <code className="doc-symbol doc-symbol-function"/> getItem [#getItem]
 
 ```cpp
 inline ItemStack * endstone::PlayerInteractEvent::getItem () const
@@ -216,7 +216,7 @@ Returns the item in hand represented by this event.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> hasBlock
+### <code className="doc-symbol doc-symbol-function"/> hasBlock [#hasBlock]
 
 ```cpp
 inline bool endstone::PlayerInteractEvent::hasBlock () const
@@ -235,7 +235,7 @@ boolean true if it did
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> hasItem
+### <code className="doc-symbol doc-symbol-function"/> hasItem [#hasItem]
 
 ```cpp
 inline bool endstone::PlayerInteractEvent::hasItem () const

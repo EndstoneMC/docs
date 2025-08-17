@@ -32,21 +32,21 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_player_item_consume_event_1a1fc9118fc82b6e23fd2dd5def71601a2">
-    <td>[`PlayerItemConsumeEvent`](#function-playeritemconsumeevent)</td>
+    <td>[`PlayerItemConsumeEvent`](#PlayerItemConsumeEvent)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_player_item_consume_event_1a4c71af194ee2c446fcb5c5eb28715050">
-    <td>[`getHand`](#function-gethand)</td>
+    <td>[`getHand`](#getHand)</td>
     <td>Get the hand used to consume the item.</td>
 </tr>
 <tr key="classendstone_1_1_player_item_consume_event_1acf92431b4fefa6c42d450c301a03c9a5">
-    <td>[`getItem`](#function-getitem)</td>
+    <td>[`getItem`](#getItem)</td>
     <td>Gets the item that is being consumed.</td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> PlayerItemConsumeEvent
+### <code className="doc-symbol doc-symbol-function"/> PlayerItemConsumeEvent [#PlayerItemConsumeEvent]
 
 ```cpp
 inline explicit endstone::PlayerItemConsumeEvent::PlayerItemConsumeEvent (
@@ -57,7 +57,7 @@ inline explicit endstone::PlayerItemConsumeEvent::PlayerItemConsumeEvent (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> getHand
+### <code className="doc-symbol doc-symbol-function"/> getHand [#getHand]
 
 ```cpp
 inline EquipmentSlot endstone::PlayerItemConsumeEvent::getHand () const
@@ -76,7 +76,7 @@ the hand
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getItem
+### <code className="doc-symbol doc-symbol-function"/> getItem [#getItem]
 
 ```cpp
 inline std::unique_ptr< ItemStack > endstone::PlayerItemConsumeEvent::getItem () const

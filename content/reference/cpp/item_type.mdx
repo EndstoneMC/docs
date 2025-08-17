@@ -31,43 +31,43 @@ title: "ItemType"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_item_type_1a56424331592c8d52c505a381ff15480d">
-    <td>[`getId`](#function-getid)</td>
+    <td>[`getId`](#getId)</td>
     <td>Return the identifier of this item type.</td>
 </tr>
 <tr key="classendstone_1_1_item_type_1ac6e624e2ada4e0b00e649da7eef9c895">
-    <td>[`getKey`](#function-getkey)</td>
+    <td>[`getKey`](#getKey)</td>
     <td>Return the namespaced identifier of this item type.</td>
 </tr>
 <tr key="classendstone_1_1_item_type_1ad6e45d72ee92f575f9913674f3beacd9">
-    <td>[`getMaxDurability`](#function-getmaxdurability)</td>
+    <td>[`getMaxDurability`](#getMaxDurability)</td>
     <td>Gets the maximum durability of this item type.</td>
 </tr>
 <tr key="classendstone_1_1_item_type_1a0ed5eae24345de2c756b00eb6da0cdb9">
-    <td>[`getMaxStackSize`](#function-getmaxstacksize)</td>
+    <td>[`getMaxStackSize`](#getMaxStackSize)</td>
     <td>Gets the maximum amount of this item type that can be held in a stack.</td>
 </tr>
 <tr key="classendstone_1_1_item_type_1a2e673b2a8d514e0d5697d5c15bee9e3c">
-    <td>[`getTranslationKey`](#function-gettranslationkey)</td>
+    <td>[`getTranslationKey`](#getTranslationKey)</td>
     <td>Get the translation key, suitable for use in a translation component.</td>
 </tr>
 <tr key="classendstone_1_1_item_type_1af744ff14c9521369c6935eb8993d640f">
-    <td>[`operator!=`](#function-operator)</td>
+    <td>[`operator!=`](#operator!=)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_item_type_1a81b1aeb108d98457a98c801207b92f21">
-    <td>[`operator!=`](#function-operator_1)</td>
+    <td>[`operator!=`](#operator!=)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_item_type_1a30a71758b6797ce64715172fbc187e7f">
-    <td>[`operator==`](#function-operator_2)</td>
+    <td>[`operator==`](#operator==)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_item_type_1af875aee911c2b3f95b2efb7dfd2dc8fd">
-    <td>[`operator==`](#function-operator_3)</td>
+    <td>[`operator==`](#operator==)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_item_type_1a0d214cfa5e07bd5310b1ad134f873bc7">
-    <td>[`~ItemType`](#function-itemtype)</td>
+    <td>[`~ItemType`](#~ItemType)</td>
     <td></td>
 </tr>
 </tbody>
@@ -83,12 +83,12 @@ title: "ItemType"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_item_type_1a828907daec071e5a095a248dfd3bd309">
-    <td>[`get`](#function-get)</td>
+    <td>[`get`](#get)</td>
     <td>Attempts to get the ItemType with the given name.</td>
 </tr>
 </tbody>
 </table>
-### <code className="doc-symbol doc-symbol-function"/> getId
+### <code className="doc-symbol doc-symbol-function"/> getId [#getId]
 
 ```cpp
 virtual std::string_view endstone::ItemType::getId () const = 0
@@ -107,7 +107,7 @@ this item's identifier
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getKey
+### <code className="doc-symbol doc-symbol-function"/> getKey [#getKey]
 
 ```cpp
 virtual NamespacedKey endstone::ItemType::getKey () const = 0
@@ -126,7 +126,7 @@ this item's key
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getMaxDurability
+### <code className="doc-symbol doc-symbol-function"/> getMaxDurability [#getMaxDurability]
 
 ```cpp
 virtual int endstone::ItemType::getMaxDurability () const = 0
@@ -145,7 +145,7 @@ Maximum durability for this item type
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getMaxStackSize
+### <code className="doc-symbol doc-symbol-function"/> getMaxStackSize [#getMaxStackSize]
 
 ```cpp
 virtual int endstone::ItemType::getMaxStackSize () const = 0
@@ -164,7 +164,7 @@ Maximum stack size for this item type
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getTranslationKey
+### <code className="doc-symbol doc-symbol-function"/> getTranslationKey [#getTranslationKey]
 
 ```cpp
 virtual std::string endstone::ItemType::getTranslationKey () const = 0
@@ -183,7 +183,7 @@ the translation key
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> get
+### <code className="doc-symbol doc-symbol-function"/> get [#get]
 
 ```cpp
 static inline const ItemType * endstone::ItemType::get (

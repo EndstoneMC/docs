@@ -21,7 +21,7 @@ title: "Dimension"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_dimension_1a5dbe2e9365112e8c0f883978fae1356b">
-    <td>[`Type`](#enum-type)</td>
+    <td>[`Type`](#Type)</td>
     <td>Represents various dimension types.</td>
 </tr>
 </tbody>
@@ -46,53 +46,53 @@ title: "Dimension"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_dimension_1a2e5a4db170608345dac498ffd627ef6c">
-    <td>[`dropItem`](#function-dropitem)</td>
+    <td>[`dropItem`](#dropItem)</td>
     <td>Drops an item at the specified Location .</td>
 </tr>
 <tr key="classendstone_1_1_dimension_1a3dee0a686f00cf7c2c861a798ccf2346">
-    <td>[`getBlockAt`](#function-getblockat-12)</td>
+    <td>[`getBlockAt`](#getBlockAt)</td>
     <td>Gets the Block at the given coordinates.</td>
 </tr>
 <tr key="classendstone_1_1_dimension_1afd372293472494681775452163da7aed">
-    <td>[`getBlockAt`](#function-getblockat-22)</td>
+    <td>[`getBlockAt`](#getBlockAt)</td>
     <td>Gets the Block at the given Location .</td>
 </tr>
 <tr key="classendstone_1_1_dimension_1a59ce26e75b00ffc1b6a3dff6ab35331c">
-    <td>[`getHighestBlockAt`](#function-gethighestblockat-12)</td>
+    <td>[`getHighestBlockAt`](#getHighestBlockAt)</td>
     <td>Gets the highest non-empty (impassable) block at the given coordinates.</td>
 </tr>
 <tr key="classendstone_1_1_dimension_1aaf801dc0b5f2d696178b5770d7466d79">
-    <td>[`getHighestBlockAt`](#function-gethighestblockat-22)</td>
+    <td>[`getHighestBlockAt`](#getHighestBlockAt)</td>
     <td>Gets the highest non-empty (impassable) block at the given Location .</td>
 </tr>
 <tr key="classendstone_1_1_dimension_1a444efcebbf833e779384449f781a10c6">
-    <td>[`getHighestBlockYAt`](#function-gethighestblockyat)</td>
+    <td>[`getHighestBlockYAt`](#getHighestBlockYAt)</td>
     <td>Gets the highest non-empty (impassable) coordinate at the given coordinates.</td>
 </tr>
 <tr key="classendstone_1_1_dimension_1a541fd7f166a3d746dde92b57e4843f6a">
-    <td>[`getLevel`](#function-getlevel)</td>
+    <td>[`getLevel`](#getLevel)</td>
     <td>Gets the level to which this dimension belongs.</td>
 </tr>
 <tr key="classendstone_1_1_dimension_1a065a2b1242a809b89dd1502b2ad828b6">
-    <td>[`getLoadedChunks`](#function-getloadedchunks)</td>
+    <td>[`getLoadedChunks`](#getLoadedChunks)</td>
     <td>Gets a list of all loaded Chunks.</td>
 </tr>
 <tr key="classendstone_1_1_dimension_1a3cd59f6145706ead47d173255a10a39d">
-    <td>[`getName`](#function-getname)</td>
+    <td>[`getName`](#getName)</td>
     <td>Gets the name of this dimension.</td>
 </tr>
 <tr key="classendstone_1_1_dimension_1a9d9baf77525291924f80c682cc3d012c">
-    <td>[`getType`](#function-gettype)</td>
+    <td>[`getType`](#getType)</td>
     <td>Gets the type of this dimension.</td>
 </tr>
 <tr key="classendstone_1_1_dimension_1a24406b7020898c1be0ce62e57ffce62d">
-    <td>[`~Dimension`](#function-dimension)</td>
+    <td>[`~Dimension`](#~Dimension)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-enum"/> Type
+### <code className="doc-symbol doc-symbol-enum"/> Type [#Type]
 
 ```cpp
 enum endstone::Dimension::Type {
@@ -105,7 +105,7 @@ enum endstone::Dimension::Type {
 
 Represents various dimension types.
 
-### <code className="doc-symbol doc-symbol-function"/> dropItem
+### <code className="doc-symbol doc-symbol-function"/> dropItem [#dropItem]
 
 ```cpp
 virtual Item & endstone::Dimension::dropItem (
@@ -135,7 +135,7 @@ Drops an item at the specified Location .
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getBlockAt
+### <code className="doc-symbol doc-symbol-function"/> getBlockAt [#getBlockAt]
 
 ```cpp
 virtual std::unique_ptr< Block > endstone::Dimension::getBlockAt (
@@ -167,7 +167,7 @@ Gets the Block at the given coordinates.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getBlockAt
+### <code className="doc-symbol doc-symbol-function"/> getBlockAt [#getBlockAt]
 
 ```cpp
 virtual std::unique_ptr< Block > endstone::Dimension::getBlockAt (
@@ -195,7 +195,7 @@ Gets the Block at the given Location .
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getHighestBlockAt
+### <code className="doc-symbol doc-symbol-function"/> getHighestBlockAt [#getHighestBlockAt]
 
 ```cpp
 virtual std::unique_ptr< Block > endstone::Dimension::getHighestBlockAt (
@@ -225,7 +225,7 @@ Highest non-empty block
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getHighestBlockAt
+### <code className="doc-symbol doc-symbol-function"/> getHighestBlockAt [#getHighestBlockAt]
 
 ```cpp
 virtual std::unique_ptr< Block > endstone::Dimension::getHighestBlockAt (
@@ -253,7 +253,7 @@ Highest non-empty block
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getHighestBlockYAt
+### <code className="doc-symbol doc-symbol-function"/> getHighestBlockYAt [#getHighestBlockYAt]
 
 ```cpp
 virtual int endstone::Dimension::getHighestBlockYAt (
@@ -283,7 +283,7 @@ Y-coordinate of the highest non-empty block
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getLevel
+### <code className="doc-symbol doc-symbol-function"/> getLevel [#getLevel]
 
 ```cpp
 virtual Level & endstone::Dimension::getLevel () const = 0
@@ -302,7 +302,7 @@ Gets the level to which this dimension belongs.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getLoadedChunks
+### <code className="doc-symbol doc-symbol-function"/> getLoadedChunks [#getLoadedChunks]
 
 ```cpp
 virtual std::vector< std::unique_ptr< Chunk > > endstone::Dimension::getLoadedChunks () = 0
@@ -321,7 +321,7 @@ All loaded chunks
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getName
+### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
 virtual std::string endstone::Dimension::getName () const = 0
@@ -340,7 +340,7 @@ Name of this dimension
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getType
+### <code className="doc-symbol doc-symbol-function"/> getType [#getType]
 
 ```cpp
 virtual Type endstone::Dimension::getType () const = 0

@@ -32,45 +32,45 @@ title: "BanList"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_ban_list_1a61b4780100f97cc243ccc9195c556959">
-    <td>[`addBan`](#function-addban-12)</td>
+    <td>[`addBan`](#addBan)</td>
     <td>Adds a ban to this list. If a previous ban exists, this will update the previous entry.</td>
 </tr>
 <tr key="classendstone_1_1_ban_list_1a341a701b475641623b2ce42f7a8c8f73">
-    <td>[`addBan`](#function-addban-22)</td>
+    <td>[`addBan`](#addBan)</td>
     <td>Adds a ban to this list. If a previous ban exists, this will update the previous entry.</td>
 </tr>
 <tr key="classendstone_1_1_ban_list_1acbf544a1e7d2a8950b23668a6bc28488">
-    <td>[`getBanEntry`](#function-getbanentry-12)</td>
+    <td>[`getBanEntry`](#getBanEntry)</td>
     <td>Gets a BanEntry by target.</td>
 </tr>
 <tr key="classendstone_1_1_ban_list_1a6bf71e53fc104040604afe2de4cea0c3">
-    <td>[`getBanEntry`](#function-getbanentry-22)</td>
+    <td>[`getBanEntry`](#getBanEntry)</td>
     <td>Gets a BanEntry by target.</td>
 </tr>
 <tr key="classendstone_1_1_ban_list_1aad4b42721be143342e22d1ba2fa325e2">
-    <td>[`getEntries`](#function-getentries-12)</td>
+    <td>[`getEntries`](#getEntries)</td>
     <td>Gets a vector containing pointers to every BanEntry in this list.</td>
 </tr>
 <tr key="classendstone_1_1_ban_list_1afcd17dd71093a6ad37ae785797e09511">
-    <td>[`getEntries`](#function-getentries-22)</td>
+    <td>[`getEntries`](#getEntries)</td>
     <td>Gets a vector containing pointers to every BanEntry in this list.</td>
 </tr>
 <tr key="classendstone_1_1_ban_list_1a7fd3e0a897b072736e9df35d91b12c19">
-    <td>[`isBanned`](#function-isbanned)</td>
+    <td>[`isBanned`](#isBanned)</td>
     <td>Checks if a BanEntry exists for the target, indicating an active ban status.</td>
 </tr>
 <tr key="classendstone_1_1_ban_list_1abefb6ec9f4a696e98609579e3b87718a">
-    <td>[`removeBan`](#function-removeban)</td>
+    <td>[`removeBan`](#removeBan)</td>
     <td>Removes the specified target from this list, therefore indicating a "not banned" status.</td>
 </tr>
 <tr key="classendstone_1_1_ban_list_1a409cf606a2985931ed9a7eb51b9362ea">
-    <td>[`~BanList`](#function-banlist)</td>
+    <td>[`~BanList`](#~BanList)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> addBan
+### <code className="doc-symbol doc-symbol-function"/> addBan [#addBan]
 
 ```cpp
 virtual T & endstone::BanList::addBan (
@@ -104,7 +104,7 @@ T& The entry for the newly created ban, or the entry for the (updated) previous 
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> addBan
+### <code className="doc-symbol doc-symbol-function"/> addBan [#addBan]
 
 ```cpp
 virtual T & endstone::BanList::addBan (
@@ -138,7 +138,7 @@ T& The entry for the newly created ban, or the entry for the (updated) previous 
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getBanEntry
+### <code className="doc-symbol doc-symbol-function"/> getBanEntry [#getBanEntry]
 
 ```cpp
 virtual const T * endstone::BanList::getBanEntry (
@@ -166,7 +166,7 @@ T\* The corresponding entry, or nullptr if none found.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getBanEntry
+### <code className="doc-symbol doc-symbol-function"/> getBanEntry [#getBanEntry]
 
 ```cpp
 virtual T * endstone::BanList::getBanEntry (
@@ -194,7 +194,7 @@ T\* The corresponding entry, or nullptr if none found.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getEntries
+### <code className="doc-symbol doc-symbol-function"/> getEntries [#getEntries]
 
 ```cpp
 virtual std::vector< const T * > endstone::BanList::getEntries () const = 0
@@ -213,7 +213,7 @@ A vector containing pointers to every entry tracked by this list.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getEntries
+### <code className="doc-symbol doc-symbol-function"/> getEntries [#getEntries]
 
 ```cpp
 virtual std::vector< T * > endstone::BanList::getEntries () = 0
@@ -232,7 +232,7 @@ A vector containing pointers to every entry tracked by this list.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> isBanned
+### <code className="doc-symbol doc-symbol-function"/> isBanned [#isBanned]
 
 ```cpp
 virtual bool endstone::BanList::isBanned (
@@ -267,7 +267,7 @@ false Otherwise.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> removeBan
+### <code className="doc-symbol doc-symbol-function"/> removeBan [#removeBan]
 
 ```cpp
 virtual void endstone::BanList::removeBan (

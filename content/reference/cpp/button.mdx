@@ -21,7 +21,7 @@ title: "Button"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_button_1a52b4d719bc268f8d3543c83a3bf429ea">
-    <td>[`OnClickCallback`](#typedef-onclickcallback)</td>
+    <td>[`OnClickCallback`](#OnClickCallback)</td>
     <td></td>
 </tr>
 </tbody>
@@ -46,55 +46,55 @@ title: "Button"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_button_1aa7bd604170d6b66a289e1fb1326605fd">
-    <td>[`Button`](#function-button-12)</td>
+    <td>[`Button`](#Button)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_button_1ac605e37f08b850a6e997525b57da9912">
-    <td>[`Button`](#function-button-22)</td>
+    <td>[`Button`](#Button)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_button_1a51ef57a2817568eba3b565c04b409b3b">
-    <td>[`getIcon`](#function-geticon)</td>
+    <td>[`getIcon`](#getIcon)</td>
     <td>Get the icon of the button.</td>
 </tr>
 <tr key="classendstone_1_1_button_1a60036ee46a14e1782aa4a9ae1623a823">
-    <td>[`getOnClick`](#function-getonclick)</td>
+    <td>[`getOnClick`](#getOnClick)</td>
     <td>Gets the on click callback of the button.</td>
 </tr>
 <tr key="classendstone_1_1_button_1a9f4197b42dd6f09b47e77ed083a69b2b">
-    <td>[`getText`](#function-gettext)</td>
+    <td>[`getText`](#getText)</td>
     <td>Gets the text of the button.</td>
 </tr>
 <tr key="classendstone_1_1_button_1a5b8b26c09fd84d50e501f66bc2340727">
-    <td>[`setIcon`](#function-seticon)</td>
+    <td>[`setIcon`](#setIcon)</td>
     <td>Sets the icon for the button.</td>
 </tr>
 <tr key="classendstone_1_1_button_1a06e11b2cc8acd773c5fd6e1d482255c0">
-    <td>[`setOnClick`](#function-setonclick)</td>
+    <td>[`setOnClick`](#setOnClick)</td>
     <td>Sets the on click callback of the button.</td>
 </tr>
 <tr key="classendstone_1_1_button_1a81e95408c4c135c0e0a14693b5285f51">
-    <td>[`setText`](#function-settext)</td>
+    <td>[`setText`](#setText)</td>
     <td>Sets the text of the button.</td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-typedef"/> OnClickCallback
+### <code className="doc-symbol doc-symbol-typedef"/> OnClickCallback [#OnClickCallback]
 
 ```cpp
 using endstone::Button::OnClickCallback =  std::function<void(Player *)>;
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> Button
+### <code className="doc-symbol doc-symbol-function"/> Button [#Button]
 
 ```cpp
 endstone::Button::Button () = default
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> Button
+### <code className="doc-symbol doc-symbol-function"/> Button [#Button]
 
 ```cpp
 inline explicit endstone::Button::Button (
@@ -105,7 +105,7 @@ inline explicit endstone::Button::Button (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> getIcon
+### <code className="doc-symbol doc-symbol-function"/> getIcon [#getIcon]
 
 ```cpp
 inline std::optional< std::string > endstone::Button::getIcon () const
@@ -124,7 +124,7 @@ The path or URL to the icon file
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getOnClick
+### <code className="doc-symbol doc-symbol-function"/> getOnClick [#getOnClick]
 
 ```cpp
 inline OnClickCallback endstone::Button::getOnClick () const
@@ -143,7 +143,7 @@ The on click callback of the button.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getText
+### <code className="doc-symbol doc-symbol-function"/> getText [#getText]
 
 ```cpp
 inline Message endstone::Button::getText () const
@@ -162,7 +162,7 @@ The text.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setIcon
+### <code className="doc-symbol doc-symbol-function"/> setIcon [#setIcon]
 
 ```cpp
 inline Button & endstone::Button::setIcon (
@@ -190,7 +190,7 @@ A reference to the current button.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setOnClick
+### <code className="doc-symbol doc-symbol-function"/> setOnClick [#setOnClick]
 
 ```cpp
 inline Button & endstone::Button::setOnClick (
@@ -218,7 +218,7 @@ A reference to the current button.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setText
+### <code className="doc-symbol doc-symbol-function"/> setText [#setText]
 
 ```cpp
 inline Button & endstone::Button::setText (

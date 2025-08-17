@@ -32,33 +32,33 @@ Bases: [`endstone::Command`](classendstone_1_1_command.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_plugin_command_1aaceb3f61ac9023104cf66875c9407e2b">
-    <td>[`PluginCommand`](#function-plugincommand)</td>
+    <td>[`PluginCommand`](#PluginCommand)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_plugin_command_1a8d5cd569a483b56fc16e95757384a531">
-    <td>[`asPluginCommand`](#function-asplugincommand)</td>
+    <td>[`asPluginCommand`](#asPluginCommand)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_plugin_command_1a376735d9dccfa3142004f92063808cdc">
-    <td>[`execute`](#function-execute)</td>
+    <td>[`execute`](#execute)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_plugin_command_1a555a83596463f0b58e8f1895f16c34d7">
-    <td>[`getExecutor`](#function-getexecutor)</td>
+    <td>[`getExecutor`](#getExecutor)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_plugin_command_1a7f812a8e80c3f2c9fc578b3a77513c9a">
-    <td>[`getPlugin`](#function-getplugin)</td>
+    <td>[`getPlugin`](#getPlugin)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_plugin_command_1a49cc0fd16a008de539a703fa63fd7ef4">
-    <td>[`setExecutor`](#function-setexecutor)</td>
+    <td>[`setExecutor`](#setExecutor)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> PluginCommand
+### <code className="doc-symbol doc-symbol-function"/> PluginCommand [#PluginCommand]
 
 ```cpp
 inline endstone::PluginCommand::PluginCommand (
@@ -68,7 +68,7 @@ inline endstone::PluginCommand::PluginCommand (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> asPluginCommand
+### <code className="doc-symbol doc-symbol-function"/> asPluginCommand [#asPluginCommand]
 
 ```cpp
 inline virtual PluginCommand * endstone::PluginCommand::asPluginCommand () override const
@@ -77,7 +77,7 @@ inline virtual PluginCommand * endstone::PluginCommand::asPluginCommand () overr
 
 Implements [*endstone::Command::asPluginCommand*](classendstone_1_1_command.md#function-asplugincommand)
 
-### <code className="doc-symbol doc-symbol-function"/> execute
+### <code className="doc-symbol doc-symbol-function"/> execute [#execute]
 
 ```cpp
 inline virtual bool endstone::PluginCommand::execute (
@@ -111,7 +111,7 @@ true if the execution was successful, otherwise false
         
 Implements [*endstone::Command::execute*](classendstone_1_1_command.md#function-execute)
 
-### <code className="doc-symbol doc-symbol-function"/> getExecutor
+### <code className="doc-symbol doc-symbol-function"/> getExecutor [#getExecutor]
 
 ```cpp
 inline virtual CommandExecutor & endstone::PluginCommand::getExecutor () const
@@ -132,7 +132,7 @@ Gets the [**CommandExecutor**](classendstone_1_1_command_executor.md) associated
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getPlugin
+### <code className="doc-symbol doc-symbol-function"/> getPlugin [#getPlugin]
 
 ```cpp
 inline Plugin & endstone::PluginCommand::getPlugin () const
@@ -153,7 +153,7 @@ Gets the owner of this [**PluginCommand**](classendstone_1_1_plugin_command.md)
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setExecutor
+### <code className="doc-symbol doc-symbol-function"/> setExecutor [#setExecutor]
 
 ```cpp
 inline virtual void endstone::PluginCommand::setExecutor (

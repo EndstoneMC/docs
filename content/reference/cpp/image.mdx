@@ -21,7 +21,7 @@ title: "Image"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_image_1ab90b74144efbc447609b079e7089dd3b">
-    <td>[`Type`](#enum-type)</td>
+    <td>[`Type`](#Type)</td>
     <td></td>
 </tr>
 </tbody>
@@ -46,31 +46,31 @@ title: "Image"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_image_1a312c38a53a5e27f6b10c4d0e62f1f630">
-    <td>[`Image`](#function-image-12)</td>
+    <td>[`Image`](#Image)</td>
     <td>Create an empty image (all pixels transparent black).</td>
 </tr>
 <tr key="classendstone_1_1_image_1a58311542846d5ed447a69f2c17d06d6c">
-    <td>[`getColor`](#function-getcolor)</td>
+    <td>[`getColor`](#getColor)</td>
     <td>Get the color of a pixel.</td>
 </tr>
 <tr key="classendstone_1_1_image_1a11876f62967de8de031c79aee31cc3a6">
-    <td>[`getData`](#function-getdata)</td>
+    <td>[`getData`](#getData)</td>
     <td>Gets the raw pixel buffer (row-major, H x W x D).</td>
 </tr>
 <tr key="classendstone_1_1_image_1ac87dac3e15a668005e46fc9e31c82d65">
-    <td>[`getDepth`](#function-getdepth)</td>
+    <td>[`getDepth`](#getDepth)</td>
     <td>Get the image depth.</td>
 </tr>
 <tr key="classendstone_1_1_image_1a1a37e02cab2cd6c3e80c9b50b2ec8c93">
-    <td>[`getHeight`](#function-getheight)</td>
+    <td>[`getHeight`](#getHeight)</td>
     <td>Get the image height.</td>
 </tr>
 <tr key="classendstone_1_1_image_1ab592f7b0673fc9dcbaf9e9ebfcc1a76b">
-    <td>[`getWidth`](#function-getwidth)</td>
+    <td>[`getWidth`](#getWidth)</td>
     <td>Get the image width.</td>
 </tr>
 <tr key="classendstone_1_1_image_1a3345e47562e1f00eaf6d3e944517f60f">
-    <td>[`setColor`](#function-setcolor)</td>
+    <td>[`setColor`](#setColor)</td>
     <td>Set the color of a pixel.</td>
 </tr>
 </tbody>
@@ -86,16 +86,16 @@ title: "Image"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_image_1a3a1c8f43ddaa26480349a1bb1e13132f">
-    <td>[`fromArray`](#function-fromarray)</td>
+    <td>[`fromArray`](#fromArray)</td>
     <td>Creates an image from the pixel data in a byte array.</td>
 </tr>
 <tr key="classendstone_1_1_image_1a34842adf667ed77decdc8a3de25d4367">
-    <td>[`fromBuffer`](#function-frombuffer)</td>
+    <td>[`fromBuffer`](#fromBuffer)</td>
     <td>Creates an image from the pixel data in a byte buffer.</td>
 </tr>
 </tbody>
 </table>
-### <code className="doc-symbol doc-symbol-enum"/> Type
+### <code className="doc-symbol doc-symbol-enum"/> Type [#Type]
 
 ```cpp
 enum endstone::Image::Type {
@@ -107,7 +107,7 @@ enum endstone::Image::Type {
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> Image
+### <code className="doc-symbol doc-symbol-function"/> Image [#Image]
 
 ```cpp
 inline explicit endstone::Image::Image (
@@ -132,7 +132,7 @@ Create an empty image (all pixels transparent black).
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getColor
+### <code className="doc-symbol doc-symbol-function"/> getColor [#getColor]
 
 ```cpp
 inline Color endstone::Image::getColor (
@@ -162,7 +162,7 @@ Get the color of a pixel.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getData
+### <code className="doc-symbol doc-symbol-function"/> getData [#getData]
 
 ```cpp
 inline std::string_view endstone::Image::getData () const
@@ -181,7 +181,7 @@ The underlying image data buffer
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getDepth
+### <code className="doc-symbol doc-symbol-function"/> getDepth [#getDepth]
 
 ```cpp
 inline int endstone::Image::getDepth () const
@@ -200,7 +200,7 @@ Get the image depth.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getHeight
+### <code className="doc-symbol doc-symbol-function"/> getHeight [#getHeight]
 
 ```cpp
 inline int endstone::Image::getHeight () const
@@ -219,7 +219,7 @@ Get the image height.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getWidth
+### <code className="doc-symbol doc-symbol-function"/> getWidth [#getWidth]
 
 ```cpp
 inline int endstone::Image::getWidth () const
@@ -238,7 +238,7 @@ Get the image width.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setColor
+### <code className="doc-symbol doc-symbol-function"/> setColor [#setColor]
 
 ```cpp
 inline void endstone::Image::setColor (
@@ -263,7 +263,7 @@ Set the color of a pixel.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> fromArray
+### <code className="doc-symbol doc-symbol-function"/> fromArray [#fromArray]
 
 ```cpp
 static inline Result< Image > endstone::Image::fromArray (
@@ -297,7 +297,7 @@ The image on success, or an error on failure.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> fromBuffer
+### <code className="doc-symbol doc-symbol-function"/> fromBuffer [#fromBuffer]
 
 ```cpp
 static inline Result< Image > endstone::Image::fromBuffer (

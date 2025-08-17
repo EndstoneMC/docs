@@ -31,29 +31,29 @@ title: "ItemFactory"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_item_factory_1ae0dbbe25981c64f3d65e770cc72bf6c5">
-    <td>[`asMetaFor`](#function-asmetafor)</td>
+    <td>[`asMetaFor`](#asMetaFor)</td>
     <td>Returns an appropriate item meta for the specified item type.</td>
 </tr>
 <tr key="classendstone_1_1_item_factory_1a3addbbc69664b64ec93e2a0ceb8b7217">
-    <td>[`equals`](#function-equals)</td>
+    <td>[`equals`](#equals)</td>
     <td>This method is used to compare two ItemMeta objects.</td>
 </tr>
 <tr key="classendstone_1_1_item_factory_1afb7e6bf34ea8428da0faa4b49ec70f6e">
-    <td>[`getItemMeta`](#function-getitemmeta)</td>
+    <td>[`getItemMeta`](#getItemMeta)</td>
     <td>This creates a new item meta for the item type.</td>
 </tr>
 <tr key="classendstone_1_1_item_factory_1ad23cc36994459bd2182ff507d30e760c">
-    <td>[`isApplicable`](#function-isapplicable)</td>
+    <td>[`isApplicable`](#isApplicable)</td>
     <td>This method checks the item meta to confirm that it is applicable (no data lost if applied) to the specified ItemStack .</td>
 </tr>
 <tr key="classendstone_1_1_item_factory_1aad09d9483ab4cada38c27ef7b735f6da">
-    <td>[`~ItemFactory`](#function-itemfactory)</td>
+    <td>[`~ItemFactory`](#~ItemFactory)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> asMetaFor
+### <code className="doc-symbol doc-symbol-function"/> asMetaFor [#asMetaFor]
 
 ```cpp
 virtual std::unique_ptr< ItemMeta > endstone::ItemFactory::asMetaFor (
@@ -86,7 +86,7 @@ An appropriate item meta for the specified item type.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> equals
+### <code className="doc-symbol doc-symbol-function"/> equals [#equals]
 
 ```cpp
 virtual bool endstone::ItemFactory::equals (
@@ -116,7 +116,7 @@ false if one of the meta has data the other does not, otherwise true
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getItemMeta
+### <code className="doc-symbol doc-symbol-function"/> getItemMeta [#getItemMeta]
 
 ```cpp
 virtual std::unique_ptr< ItemMeta > endstone::ItemFactory::getItemMeta (
@@ -144,7 +144,7 @@ a new [**ItemMeta**](classendstone_1_1_item_meta.md) that could be applied to an
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> isApplicable
+### <code className="doc-symbol doc-symbol-function"/> isApplicable [#isApplicable]
 
 ```cpp
 virtual bool endstone::ItemFactory::isApplicable (

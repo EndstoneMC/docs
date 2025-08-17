@@ -32,29 +32,29 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_player_skin_change_event_1aa1bde5cf2f4a623f3bbb6d43ca97c3d2">
-    <td>[`ENDSTONE\_EVENT`](#function-endstone_event)</td>
+    <td>[`ENDSTONE\_EVENT`](#ENDSTONE\_EVENT)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_player_skin_change_event_1a9559d39b2ad83634184c6c1beabc04e1">
-    <td>[`PlayerSkinChangeEvent`](#function-playerskinchangeevent)</td>
+    <td>[`PlayerSkinChangeEvent`](#PlayerSkinChangeEvent)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_player_skin_change_event_1a4728133136eeee43c55f4c130890fdad">
-    <td>[`getNewSkin`](#function-getnewskin)</td>
+    <td>[`getNewSkin`](#getNewSkin)</td>
     <td>Gets the player's new skin.</td>
 </tr>
 <tr key="classendstone_1_1_player_skin_change_event_1a243027ad8b931684bf1c0d0aa6bdac30">
-    <td>[`getSkinChangeMessage`](#function-getskinchangemessage)</td>
+    <td>[`getSkinChangeMessage`](#getSkinChangeMessage)</td>
     <td>Gets the message to send to all online players for this skin change.</td>
 </tr>
 <tr key="classendstone_1_1_player_skin_change_event_1a1c36f45cb1c6f64c234efedefa12f834">
-    <td>[`setSkinChangeMessage`](#function-setskinchangemessage)</td>
+    <td>[`setSkinChangeMessage`](#setSkinChangeMessage)</td>
     <td>Sets the message to send to all online players for this skin change.</td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> ENDSTONE\_EVENT
+### <code className="doc-symbol doc-symbol-function"/> ENDSTONE\_EVENT [#ENDSTONE\_EVENT]
 
 ```cpp
 endstone::PlayerSkinChangeEvent::ENDSTONE_EVENT (
@@ -63,7 +63,7 @@ endstone::PlayerSkinChangeEvent::ENDSTONE_EVENT (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> PlayerSkinChangeEvent
+### <code className="doc-symbol doc-symbol-function"/> PlayerSkinChangeEvent [#PlayerSkinChangeEvent]
 
 ```cpp
 inline explicit endstone::PlayerSkinChangeEvent::PlayerSkinChangeEvent (
@@ -74,7 +74,7 @@ inline explicit endstone::PlayerSkinChangeEvent::PlayerSkinChangeEvent (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> getNewSkin
+### <code className="doc-symbol doc-symbol-function"/> getNewSkin [#getNewSkin]
 
 ```cpp
 inline Skin endstone::PlayerSkinChangeEvent::getNewSkin () const
@@ -93,7 +93,7 @@ The skin that will be applied.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getSkinChangeMessage
+### <code className="doc-symbol doc-symbol-function"/> getSkinChangeMessage [#getSkinChangeMessage]
 
 ```cpp
 inline std::optional< Message > endstone::PlayerSkinChangeEvent::getSkinChangeMessage () const
@@ -112,7 +112,7 @@ Message to appear to other players on the server.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setSkinChangeMessage
+### <code className="doc-symbol doc-symbol-function"/> setSkinChangeMessage [#setSkinChangeMessage]
 
 ```cpp
 inline void endstone::PlayerSkinChangeEvent::setSkinChangeMessage (

@@ -31,37 +31,37 @@ title: "ServiceManager"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_service_manager_1a329a71e32b64af8ed4df189f3976739f">
-    <td>[`get`](#function-get)</td>
+    <td>[`get`](#get)</td>
     <td>Queries for a provider. This may return null if no provider has been registered for a service. The highest priority provider is returned.</td>
 </tr>
 <tr key="classendstone_1_1_service_manager_1ac2fcb33a1d0fc89902100b7244fa55b0">
-    <td>[`load`](#function-load)</td>
+    <td>[`load`](#load)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_service_manager_1a8fbe97b8dcbc297e6386f0e6c1c6e3f6">
-    <td>[`registerService`](#function-registerservice)</td>
+    <td>[`registerService`](#registerService)</td>
     <td>Register a provider of a service.</td>
 </tr>
 <tr key="classendstone_1_1_service_manager_1ad6e9b9f07037a0fa971697bf9de486ec">
-    <td>[`unregister`](#function-unregister-12)</td>
+    <td>[`unregister`](#unregister)</td>
     <td>Unregister a particular provider for a particular service.</td>
 </tr>
 <tr key="classendstone_1_1_service_manager_1aa8f39bf20330d57e8d3d242645ef5109">
-    <td>[`unregister`](#function-unregister-22)</td>
+    <td>[`unregister`](#unregister)</td>
     <td>Unregister a particular provider.</td>
 </tr>
 <tr key="classendstone_1_1_service_manager_1af62f98b2abdd3fa261d372dd10b5d831">
-    <td>[`unregisterAll`](#function-unregisterall)</td>
+    <td>[`unregisterAll`](#unregisterAll)</td>
     <td>Unregister all the services registered by a particular plugin.</td>
 </tr>
 <tr key="classendstone_1_1_service_manager_1abbb8cc4e6fb216c72faeba297e006eb7">
-    <td>[`~ServiceManager`](#function-servicemanager)</td>
+    <td>[`~ServiceManager`](#~ServiceManager)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> get
+### <code className="doc-symbol doc-symbol-function"/> get [#get]
 
 ```cpp
 virtual std::shared_ptr< Service > endstone::ServiceManager::get (
@@ -89,7 +89,7 @@ provider or null
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> load
+### <code className="doc-symbol doc-symbol-function"/> load [#load]
 
 ```cpp
 template<typename T>
@@ -99,7 +99,7 @@ inline std::shared_ptr< T > endstone::ServiceManager::load (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> registerService
+### <code className="doc-symbol doc-symbol-function"/> registerService [#registerService]
 
 ```cpp
 virtual void endstone::ServiceManager::registerService (
@@ -126,7 +126,7 @@ Register a provider of a service.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> unregister
+### <code className="doc-symbol doc-symbol-function"/> unregister [#unregister]
 
 ```cpp
 virtual void endstone::ServiceManager::unregister (
@@ -149,7 +149,7 @@ Unregister a particular provider for a particular service.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> unregister
+### <code className="doc-symbol doc-symbol-function"/> unregister [#unregister]
 
 ```cpp
 virtual void endstone::ServiceManager::unregister (
@@ -170,7 +170,7 @@ Unregister a particular provider.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> unregisterAll
+### <code className="doc-symbol doc-symbol-function"/> unregisterAll [#unregisterAll]
 
 ```cpp
 virtual void endstone::ServiceManager::unregisterAll (

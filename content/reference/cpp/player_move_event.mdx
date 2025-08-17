@@ -24,11 +24,11 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_player_move_event_1ab13ad4f9c7456bf710fcb329233cf4c7">
-    <td>[`from\_`](#variable-from_)</td>
+    <td>[`from\_`](#from\_)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_player_move_event_1a4b5dde5fe4cfcebba45d3864de199d79">
-    <td>[`to\_`](#variable-to_)</td>
+    <td>[`to\_`](#to\_)</td>
     <td></td>
 </tr>
 </tbody>
@@ -51,47 +51,47 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_player_move_event_1a545efb1716ac4e5a9ff1c50b81f2df69">
-    <td>[`ENDSTONE\_EVENT`](#function-endstone_event)</td>
+    <td>[`ENDSTONE\_EVENT`](#ENDSTONE\_EVENT)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_player_move_event_1a8a1cf3638b2074e1d7845129adbbfed5">
-    <td>[`PlayerMoveEvent`](#function-playermoveevent)</td>
+    <td>[`PlayerMoveEvent`](#PlayerMoveEvent)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_player_move_event_1a107f307825941d5cfb6b128ddfce7afa">
-    <td>[`getFrom`](#function-getfrom)</td>
+    <td>[`getFrom`](#getFrom)</td>
     <td>Gets the location this player moved from.</td>
 </tr>
 <tr key="classendstone_1_1_player_move_event_1a4b864f9dd1062d0f2ab64af81b20513e">
-    <td>[`getTo`](#function-getto)</td>
+    <td>[`getTo`](#getTo)</td>
     <td>Gets the location this player moved to.</td>
 </tr>
 <tr key="classendstone_1_1_player_move_event_1a8917f8be7ae5bdeb109e58ddc7d3b723">
-    <td>[`setFrom`](#function-setfrom)</td>
+    <td>[`setFrom`](#setFrom)</td>
     <td>Sets the location to mark as where the player moved from.</td>
 </tr>
 <tr key="classendstone_1_1_player_move_event_1a733ae2307c00ed312652389f1e26317f">
-    <td>[`setTo`](#function-setto)</td>
+    <td>[`setTo`](#setTo)</td>
     <td>Sets the location that this player will move to.</td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-variable"/> from\_
+### <code className="doc-symbol doc-symbol-variable"/> from\_ [#from\_]
 
 ```cpp
 Location endstone::PlayerMoveEvent::from_;
 ```
 
 
-### <code className="doc-symbol doc-symbol-variable"/> to\_
+### <code className="doc-symbol doc-symbol-variable"/> to\_ [#to\_]
 
 ```cpp
 Location endstone::PlayerMoveEvent::to_;
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> ENDSTONE\_EVENT
+### <code className="doc-symbol doc-symbol-function"/> ENDSTONE\_EVENT [#ENDSTONE\_EVENT]
 
 ```cpp
 endstone::PlayerMoveEvent::ENDSTONE_EVENT (
@@ -100,7 +100,7 @@ endstone::PlayerMoveEvent::ENDSTONE_EVENT (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> PlayerMoveEvent
+### <code className="doc-symbol doc-symbol-function"/> PlayerMoveEvent [#PlayerMoveEvent]
 
 ```cpp
 inline explicit endstone::PlayerMoveEvent::PlayerMoveEvent (
@@ -111,7 +111,7 @@ inline explicit endstone::PlayerMoveEvent::PlayerMoveEvent (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> getFrom
+### <code className="doc-symbol doc-symbol-function"/> getFrom [#getFrom]
 
 ```cpp
 inline const Location & endstone::PlayerMoveEvent::getFrom () const
@@ -130,7 +130,7 @@ Gets the location this player moved from.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getTo
+### <code className="doc-symbol doc-symbol-function"/> getTo [#getTo]
 
 ```cpp
 inline const Location & endstone::PlayerMoveEvent::getTo () const
@@ -149,7 +149,7 @@ Gets the location this player moved to.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setFrom
+### <code className="doc-symbol doc-symbol-function"/> setFrom [#setFrom]
 
 ```cpp
 inline Result< void > endstone::PlayerMoveEvent::setFrom (
@@ -170,7 +170,7 @@ Sets the location to mark as where the player moved from.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setTo
+### <code className="doc-symbol doc-symbol-function"/> setTo [#setTo]
 
 ```cpp
 inline Result< void > endstone::PlayerMoveEvent::setTo (

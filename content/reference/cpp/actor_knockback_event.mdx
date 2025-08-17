@@ -25,7 +25,7 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_actor_knockback_event_1a3612ace20ee9b1d15cc5d3f65aef90a0">
-    <td>[`NAME`](#variable-name)</td>
+    <td>[`NAME`](#NAME)</td>
     <td></td>
 </tr>
 </tbody>
@@ -47,40 +47,40 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_actor_knockback_event_1acd617a2d1ffb56c3b9a479d4ddb080a5">
-    <td>[`ActorKnockbackEvent`](#function-actorknockbackevent)</td>
+    <td>[`ActorKnockbackEvent`](#ActorKnockbackEvent)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_actor_knockback_event_1a6b3eee184de0d29360031cf48680c25a">
-    <td>[`getEventName`](#function-geteventname)</td>
+    <td>[`getEventName`](#getEventName)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_actor_knockback_event_1a7ec5c1018eb0c66d7143796837ebfff0">
-    <td>[`getKnockback`](#function-getknockback)</td>
+    <td>[`getKnockback`](#getKnockback)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_actor_knockback_event_1a4dc601b2fc54d46ef20821a75035cd2e">
-    <td>[`getSource`](#function-getsource)</td>
+    <td>[`getSource`](#getSource)</td>
     <td>Get the source actor that has caused knockback to the defender, if exists.</td>
 </tr>
 <tr key="classendstone_1_1_actor_knockback_event_1a17876ee6a06028878ff098bec3bb20f1">
-    <td>[`setKnockback`](#function-setknockback)</td>
+    <td>[`setKnockback`](#setKnockback)</td>
     <td>Sets the knockback that will be applied to the entity.</td>
 </tr>
 <tr key="classendstone_1_1_actor_knockback_event_1a2c59d36dbcf12d782d927acc211ef292">
-    <td>[`~ActorKnockbackEvent`](#function-actorknockbackevent)</td>
+    <td>[`~ActorKnockbackEvent`](#~ActorKnockbackEvent)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-variable"/> NAME
+### <code className="doc-symbol doc-symbol-variable"/> NAME [#NAME]
 
 ```cpp
 const std::string endstone::ActorKnockbackEvent::NAME;
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> ActorKnockbackEvent
+### <code className="doc-symbol doc-symbol-function"/> ActorKnockbackEvent [#ActorKnockbackEvent]
 
 ```cpp
 inline explicit endstone::ActorKnockbackEvent::ActorKnockbackEvent (
@@ -91,7 +91,7 @@ inline explicit endstone::ActorKnockbackEvent::ActorKnockbackEvent (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> getEventName
+### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
 inline virtual std::string endstone::ActorKnockbackEvent::getEventName () override const
@@ -114,7 +114,7 @@ name of this event
         
 Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
 
-### <code className="doc-symbol doc-symbol-function"/> getKnockback
+### <code className="doc-symbol doc-symbol-function"/> getKnockback [#getKnockback]
 
 ```cpp
 inline Vector < float > endstone::ActorKnockbackEvent::getKnockback () const
@@ -138,7 +138,7 @@ the knockback
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getSource
+### <code className="doc-symbol doc-symbol-function"/> getSource [#getSource]
 
 ```cpp
 inline Actor * endstone::ActorKnockbackEvent::getSource () const
@@ -157,7 +157,7 @@ actor that caused knockback, or nullptr if the knockback is not caused by an act
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setKnockback
+### <code className="doc-symbol doc-symbol-function"/> setKnockback [#setKnockback]
 
 ```cpp
 inline void endstone::ActorKnockbackEvent::setKnockback (

@@ -31,56 +31,56 @@ title: "CommandMap"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_command_map_1a25331c5810be15454974aaefe3fbc68b">
-    <td>[`CommandMap`](#function-commandmap-13)</td>
+    <td>[`CommandMap`](#CommandMap)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_map_1afc2b0e7676d5d23fffb429c5910a1645">
-    <td>[`CommandMap`](#function-commandmap-23)</td>
+    <td>[`CommandMap`](#CommandMap)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_map_1a4ebefdf37ff6f59a731c03217fe4bb9c">
-    <td>[`CommandMap`](#function-commandmap-33)</td>
+    <td>[`CommandMap`](#CommandMap)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_map_1a668e38f90aad2458f33563f84d87c95a">
-    <td>[`clearCommands`](#function-clearcommands)</td>
+    <td>[`clearCommands`](#clearCommands)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_map_1a4f06f0f67a32638079499c1b8bbc8dbc">
-    <td>[`dispatch`](#function-dispatch)</td>
+    <td>[`dispatch`](#dispatch)</td>
     <td>Looks for the requested command and executes it if found.</td>
 </tr>
 <tr key="classendstone_1_1_command_map_1a8b44b32258c2a2d0dabfcc3618f1f383">
-    <td>[`getCommand`](#function-getcommand)</td>
+    <td>[`getCommand`](#getCommand)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_map_1af84987985d1b5dd0dcd0c14840dae7da">
-    <td>[`operator=`](#function-operator)</td>
+    <td>[`operator=`](#operator=)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_map_1a71900d4f6d83ea0a21f9b2dbddcae322">
-    <td>[`operator=`](#function-operator_1)</td>
+    <td>[`operator=`](#operator=)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_map_1a5b3beafddf2091946afee009ae1cf5de">
-    <td>[`registerCommand`](#function-registercommand)</td>
+    <td>[`registerCommand`](#registerCommand)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_map_1abc727aa73950b67e85315d0fa0317c9d">
-    <td>[`~CommandMap`](#function-commandmap)</td>
+    <td>[`~CommandMap`](#~CommandMap)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> CommandMap
+### <code className="doc-symbol doc-symbol-function"/> CommandMap [#CommandMap]
 
 ```cpp
 endstone::CommandMap::CommandMap () = default
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> CommandMap
+### <code className="doc-symbol doc-symbol-function"/> CommandMap [#CommandMap]
 
 ```cpp
 endstone::CommandMap::CommandMap (
@@ -89,7 +89,7 @@ endstone::CommandMap::CommandMap (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> CommandMap
+### <code className="doc-symbol doc-symbol-function"/> CommandMap [#CommandMap]
 
 ```cpp
 endstone::CommandMap::CommandMap (
@@ -98,7 +98,7 @@ endstone::CommandMap::CommandMap (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> clearCommands
+### <code className="doc-symbol doc-symbol-function"/> clearCommands [#clearCommands]
 
 ```cpp
 virtual void endstone::CommandMap::clearCommands () = 0
@@ -109,7 +109,7 @@ Clears all registered commands.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> dispatch
+### <code className="doc-symbol doc-symbol-function"/> dispatch [#dispatch]
 
 ```cpp
 virtual bool endstone::CommandMap::dispatch (
@@ -139,7 +139,7 @@ true if execution is successful, false otherwise
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getCommand
+### <code className="doc-symbol doc-symbol-function"/> getCommand [#getCommand]
 
 ```cpp
 virtual std::shared_ptr< Command > endstone::CommandMap::getCommand (
@@ -169,7 +169,7 @@ Gets the command registered to the specified name
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> registerCommand
+### <code className="doc-symbol doc-symbol-function"/> registerCommand [#registerCommand]
 
 ```cpp
 virtual bool endstone::CommandMap::registerCommand (

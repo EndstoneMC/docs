@@ -32,41 +32,41 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_packet_send_event_1a0dd456687bcaac313777f30cfd48ded0">
-    <td>[`ENDSTONE\_EVENT`](#function-endstone_event)</td>
+    <td>[`ENDSTONE\_EVENT`](#ENDSTONE\_EVENT)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_packet_send_event_1a5d4752bfb59aa606b2a92c577f1ca251">
-    <td>[`PacketSendEvent`](#function-packetsendevent)</td>
+    <td>[`PacketSendEvent`](#PacketSendEvent)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_packet_send_event_1ada748078e0707514545961d6bd837060">
-    <td>[`getAddress`](#function-getaddress)</td>
+    <td>[`getAddress`](#getAddress)</td>
     <td>Gets the network address to which this packet is being sent.</td>
 </tr>
 <tr key="classendstone_1_1_packet_send_event_1a09a905e5a99059f865bcdb931bf7f230">
-    <td>[`getPacketId`](#function-getpacketid)</td>
+    <td>[`getPacketId`](#getPacketId)</td>
     <td>Gets the ID of the packet.</td>
 </tr>
 <tr key="classendstone_1_1_packet_send_event_1a5742091cbd6fd1a5883567f4509693a8">
-    <td>[`getPayload`](#function-getpayload)</td>
+    <td>[`getPayload`](#getPayload)</td>
     <td>Gets the raw packet data excluding the header.</td>
 </tr>
 <tr key="classendstone_1_1_packet_send_event_1ae40aec395d824f1d5759d9aff77ea4d2">
-    <td>[`getPlayer`](#function-getplayer)</td>
+    <td>[`getPlayer`](#getPlayer)</td>
     <td>Returns the player involved in this event.</td>
 </tr>
 <tr key="classendstone_1_1_packet_send_event_1a7521c9aa7ee4395b01ae312d7a14b65b">
-    <td>[`getSubClientId`](#function-getsubclientid)</td>
+    <td>[`getSubClientId`](#getSubClientId)</td>
     <td>Gets the SubClient ID.</td>
 </tr>
 <tr key="classendstone_1_1_packet_send_event_1a7388ad0e80c62aaf7a5d01a4e0974345">
-    <td>[`setPayload`](#function-setpayload)</td>
+    <td>[`setPayload`](#setPayload)</td>
     <td>Sets the raw packet data excluding the header.</td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> ENDSTONE\_EVENT
+### <code className="doc-symbol doc-symbol-function"/> ENDSTONE\_EVENT [#ENDSTONE\_EVENT]
 
 ```cpp
 endstone::PacketSendEvent::ENDSTONE_EVENT (
@@ -75,7 +75,7 @@ endstone::PacketSendEvent::ENDSTONE_EVENT (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> PacketSendEvent
+### <code className="doc-symbol doc-symbol-function"/> PacketSendEvent [#PacketSendEvent]
 
 ```cpp
 inline endstone::PacketSendEvent::PacketSendEvent (
@@ -88,7 +88,7 @@ inline endstone::PacketSendEvent::PacketSendEvent (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> getAddress
+### <code className="doc-symbol doc-symbol-function"/> getAddress [#getAddress]
 
 ```cpp
 inline SocketAddress endstone::PacketSendEvent::getAddress () const
@@ -107,7 +107,7 @@ The [**SocketAddress**](classendstone_1_1_socket_address.md) of the destination 
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getPacketId
+### <code className="doc-symbol doc-symbol-function"/> getPacketId [#getPacketId]
 
 ```cpp
 inline int endstone::PacketSendEvent::getPacketId () const
@@ -126,7 +126,7 @@ The packet ID.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getPayload
+### <code className="doc-symbol doc-symbol-function"/> getPayload [#getPayload]
 
 ```cpp
 inline std::string_view endstone::PacketSendEvent::getPayload () const
@@ -145,7 +145,7 @@ The packet payload data.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getPlayer
+### <code className="doc-symbol doc-symbol-function"/> getPlayer [#getPlayer]
 
 ```cpp
 inline Player * endstone::PacketSendEvent::getPlayer () const
@@ -171,7 +171,7 @@ This may return nullptr if the packet is sent before the player completes the lo
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getSubClientId
+### <code className="doc-symbol doc-symbol-function"/> getSubClientId [#getSubClientId]
 
 ```cpp
 inline int endstone::PacketSendEvent::getSubClientId () const
@@ -197,7 +197,7 @@ The SubClient ID.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setPayload
+### <code className="doc-symbol doc-symbol-function"/> setPayload [#setPayload]
 
 ```cpp
 inline void endstone::PacketSendEvent::setPayload (

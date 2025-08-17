@@ -31,37 +31,37 @@ title: "Score"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_score_1ad4f90b17d4d35334a1732bf428649368">
-    <td>[`getEntry`](#function-getentry)</td>
+    <td>[`getEntry`](#getEntry)</td>
     <td>Gets the entry being tracked by this Score .</td>
 </tr>
 <tr key="classendstone_1_1_score_1a15ddb09b97449ea2805cc1b68ad1231a">
-    <td>[`getObjective`](#function-getobjective)</td>
+    <td>[`getObjective`](#getObjective)</td>
     <td>Gets the Objective being tracked by this Score .</td>
 </tr>
 <tr key="classendstone_1_1_score_1a3501e51b79e4d696e4d2513752d9967d">
-    <td>[`getScoreboard`](#function-getscoreboard)</td>
+    <td>[`getScoreboard`](#getScoreboard)</td>
     <td>Gets the scoreboard for the associated objective.</td>
 </tr>
 <tr key="classendstone_1_1_score_1af2ee6bac6b319da8830876d01be9cb89">
-    <td>[`getValue`](#function-getvalue)</td>
+    <td>[`getValue`](#getValue)</td>
     <td>Gets the current score.</td>
 </tr>
 <tr key="classendstone_1_1_score_1a9a67b67e08e453c1b18568dd7404a04f">
-    <td>[`isScoreSet`](#function-isscoreset)</td>
+    <td>[`isScoreSet`](#isScoreSet)</td>
     <td>Shows if this score has been set at any point in time.</td>
 </tr>
 <tr key="classendstone_1_1_score_1af9354fe026c4039778140e04124dfce4">
-    <td>[`setValue`](#function-setvalue)</td>
+    <td>[`setValue`](#setValue)</td>
     <td>Sets the current score.</td>
 </tr>
 <tr key="classendstone_1_1_score_1aaf6dc0162a28e0b9b3224221d22cb2ea">
-    <td>[`~Score`](#function-score)</td>
+    <td>[`~Score`](#~Score)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> getEntry
+### <code className="doc-symbol doc-symbol-function"/> getEntry [#getEntry]
 
 ```cpp
 virtual ScoreEntry endstone::Score::getEntry () const = 0
@@ -80,7 +80,7 @@ this [**Score**](classendstone_1_1_score.md)'s tracked entry
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getObjective
+### <code className="doc-symbol doc-symbol-function"/> getObjective [#getObjective]
 
 ```cpp
 virtual Objective & endstone::Score::getObjective () const = 0
@@ -99,7 +99,7 @@ the owning objective's scoreboard
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getScoreboard
+### <code className="doc-symbol doc-symbol-function"/> getScoreboard [#getScoreboard]
 
 ```cpp
 virtual Scoreboard & endstone::Score::getScoreboard () const = 0
@@ -118,7 +118,7 @@ the owning objective's scoreboard
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getValue
+### <code className="doc-symbol doc-symbol-function"/> getValue [#getValue]
 
 ```cpp
 virtual Result< int > endstone::Score::getValue () const = 0
@@ -137,7 +137,7 @@ the current score
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> isScoreSet
+### <code className="doc-symbol doc-symbol-function"/> isScoreSet [#isScoreSet]
 
 ```cpp
 virtual Result< bool > endstone::Score::isScoreSet () const = 0
@@ -156,7 +156,7 @@ if this score has been set before
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setValue
+### <code className="doc-symbol doc-symbol-function"/> setValue [#setValue]
 
 ```cpp
 virtual Result< void > endstone::Score::setValue (

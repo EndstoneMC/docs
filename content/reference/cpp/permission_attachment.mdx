@@ -31,53 +31,53 @@ title: "PermissionAttachment"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_permission_attachment_1ac3efc5d7ea2fdc54f5605f43f0492a86">
-    <td>[`PermissionAttachment`](#function-permissionattachment)</td>
+    <td>[`PermissionAttachment`](#PermissionAttachment)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_permission_attachment_1a4406ac5a5c2b406d8422d8b71f07edbe">
-    <td>[`getPermissible`](#function-getpermissible)</td>
+    <td>[`getPermissible`](#getPermissible)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_permission_attachment_1ac65fe772f0d74b4c8d86838ceabea3f0">
-    <td>[`getPermissions`](#function-getpermissions)</td>
+    <td>[`getPermissions`](#getPermissions)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_permission_attachment_1adafcbe1112bc5a69c30978b16fb06bff">
-    <td>[`getPlugin`](#function-getplugin)</td>
+    <td>[`getPlugin`](#getPlugin)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_permission_attachment_1aaa0a0536b3e09e20e52f39c4bd048014">
-    <td>[`getRemovalCallback`](#function-getremovalcallback)</td>
+    <td>[`getRemovalCallback`](#getRemovalCallback)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_permission_attachment_1ae05dac79b46d01cbb836267045cac38e">
-    <td>[`remove`](#function-remove)</td>
+    <td>[`remove`](#remove)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_permission_attachment_1a6f9165a21202205b209092e59ea059d5">
-    <td>[`setPermission`](#function-setpermission-12)</td>
+    <td>[`setPermission`](#setPermission)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_permission_attachment_1ab342904042506f6fc662d809987fbeb3">
-    <td>[`setPermission`](#function-setpermission-22)</td>
+    <td>[`setPermission`](#setPermission)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_permission_attachment_1afdec8bd9ec22c4927bbe3f0942634502">
-    <td>[`setRemovalCallback`](#function-setremovalcallback)</td>
+    <td>[`setRemovalCallback`](#setRemovalCallback)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_permission_attachment_1a3a61d225f54d78fcc966d7039ee66e2b">
-    <td>[`unsetPermission`](#function-unsetpermission-12)</td>
+    <td>[`unsetPermission`](#unsetPermission)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_permission_attachment_1a21033433ac446e94631d0025aa621151">
-    <td>[`unsetPermission`](#function-unsetpermission-22)</td>
+    <td>[`unsetPermission`](#unsetPermission)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> PermissionAttachment
+### <code className="doc-symbol doc-symbol-function"/> PermissionAttachment [#PermissionAttachment]
 
 ```cpp
 inline endstone::PermissionAttachment::PermissionAttachment (
@@ -87,7 +87,7 @@ inline endstone::PermissionAttachment::PermissionAttachment (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> getPermissible
+### <code className="doc-symbol doc-symbol-function"/> getPermissible [#getPermissible]
 
 ```cpp
 inline Permissible & endstone::PermissionAttachment::getPermissible () const
@@ -108,7 +108,7 @@ Gets the [**Permissible**](classendstone_1_1_permissible.md) that this is attach
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getPermissions
+### <code className="doc-symbol doc-symbol-function"/> getPermissions [#getPermissions]
 
 ```cpp
 inline std::unordered_map< std::string, bool > endstone::PermissionAttachment::getPermissions () const
@@ -129,7 +129,7 @@ Copy of all permissions and values expressed by this attachment
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getPlugin
+### <code className="doc-symbol doc-symbol-function"/> getPlugin [#getPlugin]
 
 ```cpp
 inline Plugin & endstone::PermissionAttachment::getPlugin () const
@@ -150,7 +150,7 @@ Gets the plugin responsible for this attachment
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getRemovalCallback
+### <code className="doc-symbol doc-symbol-function"/> getRemovalCallback [#getRemovalCallback]
 
 ```cpp
 inline PermissionRemovedExecutor endstone::PermissionAttachment::getRemovalCallback () const
@@ -171,7 +171,7 @@ Executor to be called when this is removed
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> remove
+### <code className="doc-symbol doc-symbol-function"/> remove [#remove]
 
 ```cpp
 inline bool endstone::PermissionAttachment::remove () 
@@ -192,7 +192,7 @@ true if the permissible was removed successfully, false if it did not exist
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setPermission
+### <code className="doc-symbol doc-symbol-function"/> setPermission [#setPermission]
 
 ```cpp
 inline void endstone::PermissionAttachment::setPermission (
@@ -217,7 +217,7 @@ Sets a permission to the given value, by its fully qualified name
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setPermission
+### <code className="doc-symbol doc-symbol-function"/> setPermission [#setPermission]
 
 ```cpp
 inline void endstone::PermissionAttachment::setPermission (
@@ -242,7 +242,7 @@ Sets a permission to the given value
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setRemovalCallback
+### <code className="doc-symbol doc-symbol-function"/> setRemovalCallback [#setRemovalCallback]
 
 ```cpp
 inline void endstone::PermissionAttachment::setRemovalCallback (
@@ -265,7 +265,7 @@ Sets an executor to be called for when this attachment is removed from a [**Perm
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> unsetPermission
+### <code className="doc-symbol doc-symbol-function"/> unsetPermission [#unsetPermission]
 
 ```cpp
 inline void endstone::PermissionAttachment::unsetPermission (
@@ -288,7 +288,7 @@ Removes the specified permission from this attachment. If the permission does no
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> unsetPermission
+### <code className="doc-symbol doc-symbol-function"/> unsetPermission [#unsetPermission]
 
 ```cpp
 inline void endstone::PermissionAttachment::unsetPermission (

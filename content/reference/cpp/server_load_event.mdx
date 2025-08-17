@@ -22,7 +22,7 @@ Bases: [`endstone::ServerEvent`](classendstone_1_1_server_event.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_server_load_event_1a0fdde50ad13a7c2dc531ca89341a0529">
-    <td>[`LoadType`](#enum-loadtype)</td>
+    <td>[`LoadType`](#LoadType)</td>
     <td></td>
 </tr>
 </tbody>
@@ -40,7 +40,7 @@ Bases: [`endstone::ServerEvent`](classendstone_1_1_server_event.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_server_load_event_1aadade0b34a9857cae4d6eca19401cfb6">
-    <td>[`NAME`](#variable-name)</td>
+    <td>[`NAME`](#NAME)</td>
     <td></td>
 </tr>
 </tbody>
@@ -62,21 +62,21 @@ Bases: [`endstone::ServerEvent`](classendstone_1_1_server_event.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_server_load_event_1a6b655d60130ef5239ec7fb4b70b05670">
-    <td>[`ServerLoadEvent`](#function-serverloadevent)</td>
+    <td>[`ServerLoadEvent`](#ServerLoadEvent)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_server_load_event_1a662aec6d6e841b68e1d1fc269d7f184a">
-    <td>[`getEventName`](#function-geteventname)</td>
+    <td>[`getEventName`](#getEventName)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_server_load_event_1ad6f8ab066b197a8175518ac9e8dcabae">
-    <td>[`getType`](#function-gettype)</td>
+    <td>[`getType`](#getType)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-enum"/> LoadType
+### <code className="doc-symbol doc-symbol-enum"/> LoadType [#LoadType]
 
 ```cpp
 enum endstone::ServerLoadEvent::LoadType {
@@ -86,14 +86,14 @@ enum endstone::ServerLoadEvent::LoadType {
 ```
 
 
-### <code className="doc-symbol doc-symbol-variable"/> NAME
+### <code className="doc-symbol doc-symbol-variable"/> NAME [#NAME]
 
 ```cpp
 const std::string endstone::ServerLoadEvent::NAME;
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> ServerLoadEvent
+### <code className="doc-symbol doc-symbol-function"/> ServerLoadEvent [#ServerLoadEvent]
 
 ```cpp
 inline explicit endstone::ServerLoadEvent::ServerLoadEvent (
@@ -102,7 +102,7 @@ inline explicit endstone::ServerLoadEvent::ServerLoadEvent (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> getEventName
+### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
 inline virtual std::string endstone::ServerLoadEvent::getEventName () override const
@@ -125,7 +125,7 @@ name of this event
         
 Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
 
-### <code className="doc-symbol doc-symbol-function"/> getType
+### <code className="doc-symbol doc-symbol-function"/> getType [#getType]
 
 ```cpp
 inline LoadType endstone::ServerLoadEvent::getType () const

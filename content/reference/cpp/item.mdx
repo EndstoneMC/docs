@@ -32,41 +32,41 @@ Bases: [`endstone::Actor`](classendstone_1_1_actor.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_item_1a7a898259f1715a166bfdd5ac7300cab8">
-    <td>[`getItemStack`](#function-getitemstack)</td>
+    <td>[`getItemStack`](#getItemStack)</td>
     <td>Gets the item stack associated with this item drop.</td>
 </tr>
 <tr key="classendstone_1_1_item_1a3256b7b25cc3a2e8a59a18ea471c386d">
-    <td>[`getPickupDelay`](#function-getpickupdelay)</td>
+    <td>[`getPickupDelay`](#getPickupDelay)</td>
     <td>Gets the delay before this Item is available to be picked up by players.</td>
 </tr>
 <tr key="classendstone_1_1_item_1ab8e408c96b5ddb96277d89bdebf186ae">
-    <td>[`getThrower`](#function-getthrower)</td>
+    <td>[`getThrower`](#getThrower)</td>
     <td>Get the thrower of this item.</td>
 </tr>
 <tr key="classendstone_1_1_item_1ae9d1acdd426e2abdaa9a7d0772e013a9">
-    <td>[`isUnlimitedLifetime`](#function-isunlimitedlifetime)</td>
+    <td>[`isUnlimitedLifetime`](#isUnlimitedLifetime)</td>
     <td>Gets if this Item lives forever.</td>
 </tr>
 <tr key="classendstone_1_1_item_1af161f37341629c74503408f7ebfeb0e1">
-    <td>[`setItemStack`](#function-setitemstack)</td>
+    <td>[`setItemStack`](#setItemStack)</td>
     <td>Sets the item stack associated with this item drop.</td>
 </tr>
 <tr key="classendstone_1_1_item_1a9ecb3d011f118920d313d406b0e1f7cf">
-    <td>[`setPickupDelay`](#function-setpickupdelay)</td>
+    <td>[`setPickupDelay`](#setPickupDelay)</td>
     <td>Sets the delay before this Item is available to be picked up by players.</td>
 </tr>
 <tr key="classendstone_1_1_item_1a76a67449432660c8c549c9e578fbf549">
-    <td>[`setThrower`](#function-setthrower)</td>
+    <td>[`setThrower`](#setThrower)</td>
     <td>Set the thrower of this item.</td>
 </tr>
 <tr key="classendstone_1_1_item_1aa75743e9275be2335852f72f8e77a879">
-    <td>[`setUnlimitedLifetime`](#function-setunlimitedlifetime)</td>
+    <td>[`setUnlimitedLifetime`](#setUnlimitedLifetime)</td>
     <td>Sets if this Item should live forever.</td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> getItemStack
+### <code className="doc-symbol doc-symbol-function"/> getItemStack [#getItemStack]
 
 ```cpp
 virtual std::unique_ptr< ItemStack > endstone::Item::getItemStack () const = 0
@@ -85,7 +85,7 @@ An item stack.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getPickupDelay
+### <code className="doc-symbol doc-symbol-function"/> getPickupDelay [#getPickupDelay]
 
 ```cpp
 virtual int endstone::Item::getPickupDelay () const = 0
@@ -104,7 +104,7 @@ Remaining delay
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getThrower
+### <code className="doc-symbol doc-symbol-function"/> getThrower [#getThrower]
 
 ```cpp
 virtual std::optional< std::int64_t > endstone::Item::getThrower () const = 0
@@ -130,7 +130,7 @@ unique id of thrower
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> isUnlimitedLifetime
+### <code className="doc-symbol doc-symbol-function"/> isUnlimitedLifetime [#isUnlimitedLifetime]
 
 ```cpp
 virtual bool endstone::Item::isUnlimitedLifetime () const = 0
@@ -149,7 +149,7 @@ true if the lifetime is unlimited
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setItemStack
+### <code className="doc-symbol doc-symbol-function"/> setItemStack [#setItemStack]
 
 ```cpp
 virtual void endstone::Item::setItemStack (
@@ -170,7 +170,7 @@ Sets the item stack associated with this item drop.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setPickupDelay
+### <code className="doc-symbol doc-symbol-function"/> setPickupDelay [#setPickupDelay]
 
 ```cpp
 virtual void endstone::Item::setPickupDelay (
@@ -191,7 +191,7 @@ Sets the delay before this Item is available to be picked up by players.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setThrower
+### <code className="doc-symbol doc-symbol-function"/> setThrower [#setThrower]
 
 ```cpp
 virtual void endstone::Item::setThrower (
@@ -219,7 +219,7 @@ The thrower is the entity which dropped the item.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setUnlimitedLifetime
+### <code className="doc-symbol doc-symbol-function"/> setUnlimitedLifetime [#setUnlimitedLifetime]
 
 ```cpp
 virtual void endstone::Item::setUnlimitedLifetime (

@@ -25,7 +25,7 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_block_place_event_1ac4e2bdd1835d163b9eb5accdfbbd63c1">
-    <td>[`NAME`](#variable-name)</td>
+    <td>[`NAME`](#NAME)</td>
     <td></td>
 </tr>
 </tbody>
@@ -47,44 +47,44 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_block_place_event_1a73ef62fcb9caa9f9f873d9ddc6c46e9c">
-    <td>[`BlockPlaceEvent`](#function-blockplaceevent)</td>
+    <td>[`BlockPlaceEvent`](#BlockPlaceEvent)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_block_place_event_1a822e71386ca87244c89763e333cfe7b2">
-    <td>[`getBlockAgainst`](#function-getblockagainst)</td>
+    <td>[`getBlockAgainst`](#getBlockAgainst)</td>
     <td>Gets the block that this block was placed against.</td>
 </tr>
 <tr key="classendstone_1_1_block_place_event_1aaa914dd3891c83edd97b8e3cdaf3b3c5">
-    <td>[`getBlockPlacedState`](#function-getblockplacedstate)</td>
+    <td>[`getBlockPlacedState`](#getBlockPlacedState)</td>
     <td>Gets the BlockState for the block which was placed.</td>
 </tr>
 <tr key="classendstone_1_1_block_place_event_1a5f25a2818f05265737b236b4568e2225">
-    <td>[`getBlockReplaced`](#function-getblockreplaced)</td>
+    <td>[`getBlockReplaced`](#getBlockReplaced)</td>
     <td>Gets the block which was replaced.</td>
 </tr>
 <tr key="classendstone_1_1_block_place_event_1ae9d0d87fc6e9e576202f755046851da5">
-    <td>[`getEventName`](#function-geteventname)</td>
+    <td>[`getEventName`](#getEventName)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_block_place_event_1aaa28353cb0631c1c63a84504abf7067e">
-    <td>[`getPlayer`](#function-getplayer)</td>
+    <td>[`getPlayer`](#getPlayer)</td>
     <td>Gets the player who placed the block involved in this event.</td>
 </tr>
 <tr key="classendstone_1_1_block_place_event_1ab1bb2ece0d15adb5704b90587d971bed">
-    <td>[`~BlockPlaceEvent`](#function-blockplaceevent)</td>
+    <td>[`~BlockPlaceEvent`](#~BlockPlaceEvent)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-variable"/> NAME
+### <code className="doc-symbol doc-symbol-variable"/> NAME [#NAME]
 
 ```cpp
 const std::string endstone::BlockPlaceEvent::NAME;
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> BlockPlaceEvent
+### <code className="doc-symbol doc-symbol-function"/> BlockPlaceEvent [#BlockPlaceEvent]
 
 ```cpp
 inline explicit endstone::BlockPlaceEvent::BlockPlaceEvent (
@@ -96,7 +96,7 @@ inline explicit endstone::BlockPlaceEvent::BlockPlaceEvent (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> getBlockAgainst
+### <code className="doc-symbol doc-symbol-function"/> getBlockAgainst [#getBlockAgainst]
 
 ```cpp
 inline Block & endstone::BlockPlaceEvent::getBlockAgainst () const
@@ -115,7 +115,7 @@ Gets the block that this block was placed against.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getBlockPlacedState
+### <code className="doc-symbol doc-symbol-function"/> getBlockPlacedState [#getBlockPlacedState]
 
 ```cpp
 inline BlockState & endstone::BlockPlaceEvent::getBlockPlacedState () const
@@ -134,7 +134,7 @@ The [**BlockState**](classendstone_1_1_block_state.md) for the block which was p
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getBlockReplaced
+### <code className="doc-symbol doc-symbol-function"/> getBlockReplaced [#getBlockReplaced]
 
 ```cpp
 inline Block & endstone::BlockPlaceEvent::getBlockReplaced () const
@@ -153,7 +153,7 @@ The [**Block**](classendstone_1_1_block.md) which was replaced.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getEventName
+### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
 inline virtual std::string endstone::BlockPlaceEvent::getEventName () override const
@@ -176,7 +176,7 @@ name of this event
         
 Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
 
-### <code className="doc-symbol doc-symbol-function"/> getPlayer
+### <code className="doc-symbol doc-symbol-function"/> getPlayer [#getPlayer]
 
 ```cpp
 inline Player & endstone::BlockPlaceEvent::getPlayer () const

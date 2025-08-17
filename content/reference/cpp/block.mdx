@@ -31,77 +31,77 @@ title: "Block"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_block_1a95bac5d6f459fcfe924ba470d9b9da81">
-    <td>[`captureState`](#function-capturestate)</td>
+    <td>[`captureState`](#captureState)</td>
     <td>Captures the current state of this block.</td>
 </tr>
 <tr key="classendstone_1_1_block_1acf80e005f3032354d7cd7ed0057be6e7">
-    <td>[`clone`](#function-clone)</td>
+    <td>[`clone`](#clone)</td>
     <td>Creates a copy of the current block.</td>
 </tr>
 <tr key="classendstone_1_1_block_1a5293fd07d6c423a5a7132944eec13282">
-    <td>[`getData`](#function-getdata)</td>
+    <td>[`getData`](#getData)</td>
     <td>Gets the complete block data for this block.</td>
 </tr>
 <tr key="classendstone_1_1_block_1a8d18ed25f0fc34c51152ec0a1dd09854">
-    <td>[`getDimension`](#function-getdimension)</td>
+    <td>[`getDimension`](#getDimension)</td>
     <td>Gets the dimension which contains this Block .</td>
 </tr>
 <tr key="classendstone_1_1_block_1a19e164bc3cf23481d01886dfeda41c85">
-    <td>[`getLocation`](#function-getlocation)</td>
+    <td>[`getLocation`](#getLocation)</td>
     <td>Gets the Location of the block.</td>
 </tr>
 <tr key="classendstone_1_1_block_1ade7ede2f68266c797efbb8b5a237304b">
-    <td>[`getRelative`](#function-getrelative-13)</td>
+    <td>[`getRelative`](#getRelative)</td>
     <td>Gets the block at the given offsets.</td>
 </tr>
 <tr key="classendstone_1_1_block_1ae60ad017cb35887e0cad09c2d76b354b">
-    <td>[`getRelative`](#function-getrelative-23)</td>
+    <td>[`getRelative`](#getRelative)</td>
     <td>Gets the block at the given face.</td>
 </tr>
 <tr key="classendstone_1_1_block_1a360bc161449ffdd18506c4775408af14">
-    <td>[`getRelative`](#function-getrelative-33)</td>
+    <td>[`getRelative`](#getRelative)</td>
     <td>Gets the block at the given distance of the given face.</td>
 </tr>
 <tr key="classendstone_1_1_block_1a990361ef55dd7f6c01bf463d0c4206ef">
-    <td>[`getType`](#function-gettype)</td>
+    <td>[`getType`](#getType)</td>
     <td>Get the type of the block.</td>
 </tr>
 <tr key="classendstone_1_1_block_1a1ec1fc7c6fe1aab63db232b0f0684c76">
-    <td>[`getX`](#function-getx)</td>
+    <td>[`getX`](#getX)</td>
     <td>Gets the x-coordinate of this block.</td>
 </tr>
 <tr key="classendstone_1_1_block_1a390b31ef485c4b5176842bd3a59b01bc">
-    <td>[`getY`](#function-gety)</td>
+    <td>[`getY`](#getY)</td>
     <td>Gets the y-coordinate of this block.</td>
 </tr>
 <tr key="classendstone_1_1_block_1a9509b72c86339e30a4b50567f6d5279c">
-    <td>[`getZ`](#function-getz)</td>
+    <td>[`getZ`](#getZ)</td>
     <td>Gets the z-coordinate of this block.</td>
 </tr>
 <tr key="classendstone_1_1_block_1a7f24c60e47c3bcd49f0b1122b80b7b47">
-    <td>[`setData`](#function-setdata-12)</td>
+    <td>[`setData`](#setData)</td>
     <td>Sets the complete data for this block.</td>
 </tr>
 <tr key="classendstone_1_1_block_1a4dbd6ae72829e456925cc5a86d93ea42">
-    <td>[`setData`](#function-setdata-22)</td>
+    <td>[`setData`](#setData)</td>
     <td>Sets the complete data for this block.</td>
 </tr>
 <tr key="classendstone_1_1_block_1afc6493c7fae9703684a17ebcc6c92a32">
-    <td>[`setType`](#function-settype-12)</td>
+    <td>[`setType`](#setType)</td>
     <td>Sets the type of this block.</td>
 </tr>
 <tr key="classendstone_1_1_block_1a6235d565c41138ea5ed584250d84617f">
-    <td>[`setType`](#function-settype-22)</td>
+    <td>[`setType`](#setType)</td>
     <td>Sets the type of this block.</td>
 </tr>
 <tr key="classendstone_1_1_block_1a8a7ea0b990c4c610f75cf53bd5c6647b">
-    <td>[`~Block`](#function-block)</td>
+    <td>[`~Block`](#~Block)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> captureState
+### <code className="doc-symbol doc-symbol-function"/> captureState [#captureState]
 
 ```cpp
 virtual std::unique_ptr< BlockState > endstone::Block::captureState () const = 0
@@ -123,7 +123,7 @@ The returned object will never be updated, and you are not guaranteed that (for 
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> clone
+### <code className="doc-symbol doc-symbol-function"/> clone [#clone]
 
 ```cpp
 virtual std::unique_ptr< Block > endstone::Block::clone () const = 0
@@ -142,7 +142,7 @@ Creates a copy of the current block.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getData
+### <code className="doc-symbol doc-symbol-function"/> getData [#getData]
 
 ```cpp
 virtual std::unique_ptr< BlockData > endstone::Block::getData () const = 0
@@ -161,7 +161,7 @@ block specific data
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getDimension
+### <code className="doc-symbol doc-symbol-function"/> getDimension [#getDimension]
 
 ```cpp
 virtual Dimension & endstone::Block::getDimension () const = 0
@@ -180,7 +180,7 @@ Gets the dimension which contains this Block .
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getLocation
+### <code className="doc-symbol doc-symbol-function"/> getLocation [#getLocation]
 
 ```cpp
 virtual Location endstone::Block::getLocation () const = 0
@@ -199,7 +199,7 @@ Gets the Location of the block.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getRelative
+### <code className="doc-symbol doc-symbol-function"/> getRelative [#getRelative]
 
 ```cpp
 virtual std::unique_ptr< Block > endstone::Block::getRelative (
@@ -231,7 +231,7 @@ Gets the block at the given offsets.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getRelative
+### <code className="doc-symbol doc-symbol-function"/> getRelative [#getRelative]
 
 ```cpp
 virtual std::unique_ptr< Block > endstone::Block::getRelative (
@@ -262,7 +262,7 @@ This method is equal to getRelative(face, 1)
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getRelative
+### <code className="doc-symbol doc-symbol-function"/> getRelative [#getRelative]
 
 ```cpp
 virtual std::unique_ptr< Block > endstone::Block::getRelative (
@@ -292,7 +292,7 @@ Gets the block at the given distance of the given face.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getType
+### <code className="doc-symbol doc-symbol-function"/> getType [#getType]
 
 ```cpp
 virtual std::string endstone::Block::getType () const = 0
@@ -314,7 +314,7 @@ The type of the block.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getX
+### <code className="doc-symbol doc-symbol-function"/> getX [#getX]
 
 ```cpp
 virtual int endstone::Block::getX () const = 0
@@ -333,7 +333,7 @@ x-coordinate
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getY
+### <code className="doc-symbol doc-symbol-function"/> getY [#getY]
 
 ```cpp
 virtual int endstone::Block::getY () const = 0
@@ -352,7 +352,7 @@ x-coordinate
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getZ
+### <code className="doc-symbol doc-symbol-function"/> getZ [#getZ]
 
 ```cpp
 virtual int endstone::Block::getZ () const = 0
@@ -371,7 +371,7 @@ x-coordinate
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setData
+### <code className="doc-symbol doc-symbol-function"/> setData [#setData]
 
 ```cpp
 virtual Result< void > endstone::Block::setData (
@@ -392,7 +392,7 @@ Sets the complete data for this block.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setData
+### <code className="doc-symbol doc-symbol-function"/> setData [#setData]
 
 ```cpp
 virtual Result< void > endstone::Block::setData (
@@ -415,7 +415,7 @@ Sets the complete data for this block.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setType
+### <code className="doc-symbol doc-symbol-function"/> setType [#setType]
 
 ```cpp
 virtual Result< void > endstone::Block::setType (
@@ -436,7 +436,7 @@ Sets the type of this block.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setType
+### <code className="doc-symbol doc-symbol-function"/> setType [#setType]
 
 ```cpp
 virtual Result< void > endstone::Block::setType (

@@ -31,57 +31,57 @@ title: "Scheduler"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_scheduler_1ae1d4003f6f8035f2679b91c09441d53a">
-    <td>[`cancelTask`](#function-canceltask)</td>
+    <td>[`cancelTask`](#cancelTask)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_scheduler_1aff8ea940f0038a278a0d5f230280398c">
-    <td>[`cancelTasks`](#function-canceltasks)</td>
+    <td>[`cancelTasks`](#cancelTasks)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_scheduler_1a990deb156627e87b5e35ade1b72a58e4">
-    <td>[`getPendingTasks`](#function-getpendingtasks)</td>
+    <td>[`getPendingTasks`](#getPendingTasks)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_scheduler_1ae47c4d2e864c797a41d33be6982e9a43">
-    <td>[`isQueued`](#function-isqueued)</td>
+    <td>[`isQueued`](#isQueued)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_scheduler_1a8b427434811562ba2b4a49f1bd2e3e82">
-    <td>[`isRunning`](#function-isrunning)</td>
+    <td>[`isRunning`](#isRunning)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_scheduler_1a9f4787f0c3bcbd771935a8a58fb40198">
-    <td>[`runTask`](#function-runtask)</td>
+    <td>[`runTask`](#runTask)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_scheduler_1a00bc012bc77248bfe0334f0e7b3020a2">
-    <td>[`runTaskAsync`](#function-runtaskasync)</td>
+    <td>[`runTaskAsync`](#runTaskAsync)</td>
     <td>Returns a task that will be executed asynchronously on the next server tick.</td>
 </tr>
 <tr key="classendstone_1_1_scheduler_1a756a006b06a7ceca85281bf4b1928631">
-    <td>[`runTaskLater`](#function-runtasklater)</td>
+    <td>[`runTaskLater`](#runTaskLater)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_scheduler_1aa025f22de368fa7a952d874e6c47af6e">
-    <td>[`runTaskLaterAsync`](#function-runtasklaterasync)</td>
+    <td>[`runTaskLaterAsync`](#runTaskLaterAsync)</td>
     <td>Returns a task that will be executed asynchronously after the specified number of server ticks.</td>
 </tr>
 <tr key="classendstone_1_1_scheduler_1a5e51e79411db6d37584d8ef311c34d16">
-    <td>[`runTaskTimer`](#function-runtasktimer)</td>
+    <td>[`runTaskTimer`](#runTaskTimer)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_scheduler_1ace8829c467271bbf23c72ebfb821aca2">
-    <td>[`runTaskTimerAsync`](#function-runtasktimerasync)</td>
+    <td>[`runTaskTimerAsync`](#runTaskTimerAsync)</td>
     <td>Returns a task that will be executed repeatedly (and asynchronously) until cancelled, starting after the specified number of server ticks.</td>
 </tr>
 <tr key="classendstone_1_1_scheduler_1a869448c7e94100977f5c3026c6a16a45">
-    <td>[`~Scheduler`](#function-scheduler)</td>
+    <td>[`~Scheduler`](#~Scheduler)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> cancelTask
+### <code className="doc-symbol doc-symbol-function"/> cancelTask [#cancelTask]
 
 ```cpp
 virtual void endstone::Scheduler::cancelTask (
@@ -104,7 +104,7 @@ Removes task from scheduler.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> cancelTasks
+### <code className="doc-symbol doc-symbol-function"/> cancelTasks [#cancelTasks]
 
 ```cpp
 virtual void endstone::Scheduler::cancelTasks (
@@ -127,7 +127,7 @@ Removes all tasks associated with a particular plugin from the scheduler.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getPendingTasks
+### <code className="doc-symbol doc-symbol-function"/> getPendingTasks [#getPendingTasks]
 
 ```cpp
 virtual std::vector< Task * > endstone::Scheduler::getPendingTasks () = 0
@@ -151,7 +151,7 @@ Pending tasks
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> isQueued
+### <code className="doc-symbol doc-symbol-function"/> isQueued [#isQueued]
 
 ```cpp
 virtual bool endstone::Scheduler::isQueued (
@@ -181,7 +181,7 @@ If the task is queued to be run.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> isRunning
+### <code className="doc-symbol doc-symbol-function"/> isRunning [#isRunning]
 
 ```cpp
 virtual bool endstone::Scheduler::isRunning (
@@ -211,7 +211,7 @@ If the task is currently running.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> runTask
+### <code className="doc-symbol doc-symbol-function"/> runTask [#runTask]
 
 ```cpp
 virtual std::shared_ptr< Task > endstone::Scheduler::runTask (
@@ -243,7 +243,7 @@ a [**Task**](classendstone_1_1_task.md) that contains the id number (nullptr if 
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> runTaskAsync
+### <code className="doc-symbol doc-symbol-function"/> runTaskAsync [#runTaskAsync]
 
 ```cpp
 virtual std::shared_ptr< Task > endstone::Scheduler::runTaskAsync (
@@ -280,7 +280,7 @@ a [**Task**](classendstone_1_1_task.md) that contains the id number (nullptr if 
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> runTaskLater
+### <code className="doc-symbol doc-symbol-function"/> runTaskLater [#runTaskLater]
 
 ```cpp
 virtual std::shared_ptr< Task > endstone::Scheduler::runTaskLater (
@@ -314,7 +314,7 @@ a [**Task**](classendstone_1_1_task.md) that contains the id number (nullptr if 
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> runTaskLaterAsync
+### <code className="doc-symbol doc-symbol-function"/> runTaskLaterAsync [#runTaskLaterAsync]
 
 ```cpp
 virtual std::shared_ptr< Task > endstone::Scheduler::runTaskLaterAsync (
@@ -353,7 +353,7 @@ a [**Task**](classendstone_1_1_task.md) that contains the id number (nullptr if 
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> runTaskTimer
+### <code className="doc-symbol doc-symbol-function"/> runTaskTimer [#runTaskTimer]
 
 ```cpp
 virtual std::shared_ptr< Task > endstone::Scheduler::runTaskTimer (
@@ -389,7 +389,7 @@ a [**Task**](classendstone_1_1_task.md) that contains the id number (nullptr if 
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> runTaskTimerAsync
+### <code className="doc-symbol doc-symbol-function"/> runTaskTimerAsync [#runTaskTimerAsync]
 
 ```cpp
 virtual std::shared_ptr< Task > endstone::Scheduler::runTaskTimerAsync (

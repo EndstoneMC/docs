@@ -32,65 +32,65 @@ Bases: [`endstone::Inventory`](classendstone_1_1_inventory.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_player_inventory_1adee7ce6d4f195755d45b2b69e62a3817">
-    <td>[`getBoots`](#function-getboots)</td>
+    <td>[`getBoots`](#getBoots)</td>
     <td>Return the ItemStack from the boots slot.</td>
 </tr>
 <tr key="classendstone_1_1_player_inventory_1ab86d60990578106d6482ffcebceb7af8">
-    <td>[`getChestplate`](#function-getchestplate)</td>
+    <td>[`getChestplate`](#getChestplate)</td>
     <td>Return the ItemStack from the chestplate slot.</td>
 </tr>
 <tr key="classendstone_1_1_player_inventory_1a6e1e5493b9a488e34b9cd16ff3767841">
-    <td>[`getHeldItemSlot`](#function-gethelditemslot)</td>
+    <td>[`getHeldItemSlot`](#getHeldItemSlot)</td>
     <td>Get the slot number of the currently held item.</td>
 </tr>
 <tr key="classendstone_1_1_player_inventory_1a5d8aed04054ac15ff23520de1bd12bd3">
-    <td>[`getHelmet`](#function-gethelmet)</td>
+    <td>[`getHelmet`](#getHelmet)</td>
     <td>Return the ItemStack from the helmet slot.</td>
 </tr>
 <tr key="classendstone_1_1_player_inventory_1a99872b670e9b45c92c6527f872edefdb">
-    <td>[`getItemInMainHand`](#function-getiteminmainhand)</td>
+    <td>[`getItemInMainHand`](#getItemInMainHand)</td>
     <td>Gets the item the player is currently holding in their main hand.</td>
 </tr>
 <tr key="classendstone_1_1_player_inventory_1a10ac6823a0e6dcf8435d61f9e06e7966">
-    <td>[`getItemInOffHand`](#function-getiteminoffhand)</td>
+    <td>[`getItemInOffHand`](#getItemInOffHand)</td>
     <td>Gets the item the player is currently holding in their off hand.</td>
 </tr>
 <tr key="classendstone_1_1_player_inventory_1ad3ae88bf84272b3b6cf4b9bb24e11c1f">
-    <td>[`getLeggings`](#function-getleggings)</td>
+    <td>[`getLeggings`](#getLeggings)</td>
     <td>Return the ItemStack from the leg slot.</td>
 </tr>
 <tr key="classendstone_1_1_player_inventory_1a3d2a8c9ccdfe6e6d668a5c64305c0d44">
-    <td>[`setBoots`](#function-setboots)</td>
+    <td>[`setBoots`](#setBoots)</td>
     <td>Put the given ItemStack into the boots slot.</td>
 </tr>
 <tr key="classendstone_1_1_player_inventory_1a50825fd18b6f9ec27b6043081edd39e7">
-    <td>[`setChestplate`](#function-setchestplate)</td>
+    <td>[`setChestplate`](#setChestplate)</td>
     <td>Put the given ItemStack into the chestplate slot.</td>
 </tr>
 <tr key="classendstone_1_1_player_inventory_1a0d7b635b4d5b4711a0c3f7bdd3f2e4e8">
-    <td>[`setHeldItemSlot`](#function-sethelditemslot)</td>
+    <td>[`setHeldItemSlot`](#setHeldItemSlot)</td>
     <td>Set the slot number of the currently held item.</td>
 </tr>
 <tr key="classendstone_1_1_player_inventory_1a811b329ef42ce228d737e4228aade626">
-    <td>[`setHelmet`](#function-sethelmet)</td>
+    <td>[`setHelmet`](#setHelmet)</td>
     <td>Put the given ItemStack into the helmet slot.</td>
 </tr>
 <tr key="classendstone_1_1_player_inventory_1a13913ac8928251b4078bc8b7599db44f">
-    <td>[`setItemInMainHand`](#function-setiteminmainhand)</td>
+    <td>[`setItemInMainHand`](#setItemInMainHand)</td>
     <td>Sets the item the player is holding in their main hand.</td>
 </tr>
 <tr key="classendstone_1_1_player_inventory_1a1b5365a4d2081279549a63a817ffd7fd">
-    <td>[`setItemInOffHand`](#function-setiteminoffhand)</td>
+    <td>[`setItemInOffHand`](#setItemInOffHand)</td>
     <td>Sets the item the player is holding in their off hand.</td>
 </tr>
 <tr key="classendstone_1_1_player_inventory_1a4ab9df3c892e7c8adfd7770ad6442bbb">
-    <td>[`setLeggings`](#function-setleggings)</td>
+    <td>[`setLeggings`](#setLeggings)</td>
     <td>Put the given ItemStack into the leggings slot.</td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> getBoots
+### <code className="doc-symbol doc-symbol-function"/> getBoots [#getBoots]
 
 ```cpp
 virtual std::unique_ptr< ItemStack > endstone::PlayerInventory::getBoots () const = 0
@@ -109,7 +109,7 @@ The [**ItemStack**](classendstone_1_1_item_stack.md) in the boots slot
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getChestplate
+### <code className="doc-symbol doc-symbol-function"/> getChestplate [#getChestplate]
 
 ```cpp
 virtual std::unique_ptr< ItemStack > endstone::PlayerInventory::getChestplate () const = 0
@@ -128,7 +128,7 @@ The [**ItemStack**](classendstone_1_1_item_stack.md) in the chestplate slot
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getHeldItemSlot
+### <code className="doc-symbol doc-symbol-function"/> getHeldItemSlot [#getHeldItemSlot]
 
 ```cpp
 virtual int endstone::PlayerInventory::getHeldItemSlot () const = 0
@@ -147,7 +147,7 @@ Held item slot number
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getHelmet
+### <code className="doc-symbol doc-symbol-function"/> getHelmet [#getHelmet]
 
 ```cpp
 virtual std::unique_ptr< ItemStack > endstone::PlayerInventory::getHelmet () const = 0
@@ -166,7 +166,7 @@ The [**ItemStack**](classendstone_1_1_item_stack.md) in the helmet slot
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getItemInMainHand
+### <code className="doc-symbol doc-symbol-function"/> getItemInMainHand [#getItemInMainHand]
 
 ```cpp
 virtual std::unique_ptr< ItemStack > endstone::PlayerInventory::getItemInMainHand () const = 0
@@ -185,7 +185,7 @@ the currently held item
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getItemInOffHand
+### <code className="doc-symbol doc-symbol-function"/> getItemInOffHand [#getItemInOffHand]
 
 ```cpp
 virtual std::unique_ptr< ItemStack > endstone::PlayerInventory::getItemInOffHand () const = 0
@@ -204,7 +204,7 @@ the currently held item
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getLeggings
+### <code className="doc-symbol doc-symbol-function"/> getLeggings [#getLeggings]
 
 ```cpp
 virtual std::unique_ptr< ItemStack > endstone::PlayerInventory::getLeggings () const = 0
@@ -223,7 +223,7 @@ The [**ItemStack**](classendstone_1_1_item_stack.md) in the leg slot
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setBoots
+### <code className="doc-symbol doc-symbol-function"/> setBoots [#setBoots]
 
 ```cpp
 virtual void endstone::PlayerInventory::setBoots (
@@ -247,7 +247,7 @@ This does not check if the [**ItemStack**](classendstone_1_1_item_stack.md) is a
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setChestplate
+### <code className="doc-symbol doc-symbol-function"/> setChestplate [#setChestplate]
 
 ```cpp
 virtual void endstone::PlayerInventory::setChestplate (
@@ -271,7 +271,7 @@ This does not check if the [**ItemStack**](classendstone_1_1_item_stack.md) is a
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setHeldItemSlot
+### <code className="doc-symbol doc-symbol-function"/> setHeldItemSlot [#setHeldItemSlot]
 
 ```cpp
 virtual Result< void > endstone::PlayerInventory::setHeldItemSlot (
@@ -295,7 +295,7 @@ This validates whether the slot is between 0 and 8 inclusive.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setHelmet
+### <code className="doc-symbol doc-symbol-function"/> setHelmet [#setHelmet]
 
 ```cpp
 virtual void endstone::PlayerInventory::setHelmet (
@@ -319,7 +319,7 @@ This does not check if the [**ItemStack**](classendstone_1_1_item_stack.md) is a
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setItemInMainHand
+### <code className="doc-symbol doc-symbol-function"/> setItemInMainHand [#setItemInMainHand]
 
 ```cpp
 virtual void endstone::PlayerInventory::setItemInMainHand (
@@ -340,7 +340,7 @@ Sets the item the player is holding in their main hand.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setItemInOffHand
+### <code className="doc-symbol doc-symbol-function"/> setItemInOffHand [#setItemInOffHand]
 
 ```cpp
 virtual void endstone::PlayerInventory::setItemInOffHand (
@@ -361,7 +361,7 @@ Sets the item the player is holding in their off hand.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setLeggings
+### <code className="doc-symbol doc-symbol-function"/> setLeggings [#setLeggings]
 
 ```cpp
 virtual void endstone::PlayerInventory::setLeggings (

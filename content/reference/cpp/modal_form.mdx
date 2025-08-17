@@ -22,11 +22,11 @@ Bases: [`endstone::Form`](classendstone_1_1_form.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_modal_form_1a8e10f5a1239c36f705b0a61711efa6ef">
-    <td>[`Control`](#typedef-control)</td>
+    <td>[`Control`](#Control)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_modal_form_1ab4f2f004b3e53a53b2ebe3c9ae04b740">
-    <td>[`OnSubmitCallback`](#typedef-onsubmitcallback)</td>
+    <td>[`OnSubmitCallback`](#OnSubmitCallback)</td>
     <td></td>
 </tr>
 </tbody>
@@ -51,59 +51,59 @@ Bases: [`endstone::Form`](classendstone_1_1_form.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_modal_form_1a452bb91fb803add030766ca27b591ff2">
-    <td>[`addControl`](#function-addcontrol)</td>
+    <td>[`addControl`](#addControl)</td>
     <td>Adds a control to the form.</td>
 </tr>
 <tr key="classendstone_1_1_modal_form_1a9d307f7b12bb0b9fcc13ae2b6945db93">
-    <td>[`getControls`](#function-getcontrols)</td>
+    <td>[`getControls`](#getControls)</td>
     <td>Gets the controls of the modal form.</td>
 </tr>
 <tr key="classendstone_1_1_modal_form_1a5b90bdebd0b0e810a4d8fbdeb15fa18d">
-    <td>[`getIcon`](#function-geticon)</td>
+    <td>[`getIcon`](#getIcon)</td>
     <td>Get the icon of the form.</td>
 </tr>
 <tr key="classendstone_1_1_modal_form_1afb79d3eda590aca8e014c5db99715e70">
-    <td>[`getOnSubmit`](#function-getonsubmit)</td>
+    <td>[`getOnSubmit`](#getOnSubmit)</td>
     <td>Gets the on submit callback of the form.</td>
 </tr>
 <tr key="classendstone_1_1_modal_form_1a5e57d1511c91d8af59d8df8ad3f29803">
-    <td>[`getSubmitButton`](#function-getsubmitbutton)</td>
+    <td>[`getSubmitButton`](#getSubmitButton)</td>
     <td>Gets the submit button text of the form.</td>
 </tr>
 <tr key="classendstone_1_1_modal_form_1ab65ea6f6acb1b5c10610e83ce5f67bc2">
-    <td>[`setControls`](#function-setcontrols)</td>
+    <td>[`setControls`](#setControls)</td>
     <td>Sets the controls of the modal form.</td>
 </tr>
 <tr key="classendstone_1_1_modal_form_1a4192a3d22178a35987c77ce2a4cee2e2">
-    <td>[`setIcon`](#function-seticon)</td>
+    <td>[`setIcon`](#setIcon)</td>
     <td>Sets the icon of the form.</td>
 </tr>
 <tr key="classendstone_1_1_modal_form_1a9b0b97dfd47eb028a0dda6b1229bacec">
-    <td>[`setOnSubmit`](#function-setonsubmit)</td>
+    <td>[`setOnSubmit`](#setOnSubmit)</td>
     <td>Sets the on submit callback of the form.</td>
 </tr>
 <tr key="classendstone_1_1_modal_form_1a0829564dd011a2e7de8518900dd17561">
-    <td>[`setSubmitButton`](#function-setsubmitbutton)</td>
+    <td>[`setSubmitButton`](#setSubmitButton)</td>
     <td>Sets the submit button text of the form.</td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-typedef"/> Control
+### <code className="doc-symbol doc-symbol-typedef"/> Control [#Control]
 
 ```cpp
 using endstone::ModalForm::Control =  std::variant<Dropdown, Label, Slider, StepSlider, TextInput, Toggle, Divider, Header>;
 ```
 
 
-### <code className="doc-symbol doc-symbol-typedef"/> OnSubmitCallback
+### <code className="doc-symbol doc-symbol-typedef"/> OnSubmitCallback [#OnSubmitCallback]
 
 ```cpp
 using endstone::ModalForm::OnSubmitCallback =  std::function<void(Player *, std::string)>;
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> addControl
+### <code className="doc-symbol doc-symbol-function"/> addControl [#addControl]
 
 ```cpp
 inline ModalForm & endstone::ModalForm::addControl (
@@ -131,7 +131,7 @@ A reference to the current form.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getControls
+### <code className="doc-symbol doc-symbol-function"/> getControls [#getControls]
 
 ```cpp
 inline std::vector< Control > endstone::ModalForm::getControls () const
@@ -150,7 +150,7 @@ A list of controls in the modal form.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getIcon
+### <code className="doc-symbol doc-symbol-function"/> getIcon [#getIcon]
 
 ```cpp
 inline std::optional< std::string > endstone::ModalForm::getIcon () const
@@ -169,7 +169,7 @@ The path or URL to the icon file
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getOnSubmit
+### <code className="doc-symbol doc-symbol-function"/> getOnSubmit [#getOnSubmit]
 
 ```cpp
 inline OnSubmitCallback endstone::ModalForm::getOnSubmit () const
@@ -188,7 +188,7 @@ The on submit callback of the form.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getSubmitButton
+### <code className="doc-symbol doc-symbol-function"/> getSubmitButton [#getSubmitButton]
 
 ```cpp
 inline std::optional< Message > endstone::ModalForm::getSubmitButton () const
@@ -207,7 +207,7 @@ The submit button text of the form.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setControls
+### <code className="doc-symbol doc-symbol-function"/> setControls [#setControls]
 
 ```cpp
 inline ModalForm & endstone::ModalForm::setControls (
@@ -235,7 +235,7 @@ A reference to the current form.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setIcon
+### <code className="doc-symbol doc-symbol-function"/> setIcon [#setIcon]
 
 ```cpp
 inline ModalForm & endstone::ModalForm::setIcon (
@@ -263,7 +263,7 @@ A reference to the current form.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setOnSubmit
+### <code className="doc-symbol doc-symbol-function"/> setOnSubmit [#setOnSubmit]
 
 ```cpp
 inline ModalForm & endstone::ModalForm::setOnSubmit (
@@ -291,7 +291,7 @@ A reference to the current form.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setSubmitButton
+### <code className="doc-symbol doc-symbol-function"/> setSubmitButton [#setSubmitButton]
 
 ```cpp
 inline ModalForm & endstone::ModalForm::setSubmitButton (

@@ -32,84 +32,84 @@ Bases: [`endstone::CommandExecutor`](classendstone_1_1_command_executor.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_plugin_1a3c48f15bc7bddcfd3eb0c8ce149a367e">
-    <td>[`Plugin`](#function-plugin-12)</td>
+    <td>[`Plugin`](#Plugin)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_plugin_1a3d1347124cfe422d926f187324bf8607">
-    <td>[`Plugin`](#function-plugin-22)</td>
+    <td>[`Plugin`](#Plugin)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_plugin_1ade724d92b6cebdf4c11d3a4c04e3f49f">
-    <td>[`getCommand`](#function-getcommand)</td>
+    <td>[`getCommand`](#getCommand)</td>
     <td>Gets the command with the given name, specific to this plugin.</td>
 </tr>
 <tr key="classendstone_1_1_plugin_1a3181846afa77e1801c009aa535b25ea0">
-    <td>[`getDataFolder`](#function-getdatafolder)</td>
+    <td>[`getDataFolder`](#getDataFolder)</td>
     <td>Returns the folder that the plugin data's files are located in. The folder may not yet exist.</td>
 </tr>
 <tr key="classendstone_1_1_plugin_1afbb41d0901dc0ba90e6f07e33f1222ea">
-    <td>[`getDescription`](#function-getdescription)</td>
+    <td>[`getDescription`](#getDescription)</td>
     <td>Returns the details of this plugin.</td>
 </tr>
 <tr key="classendstone_1_1_plugin_1a0d49600964b786ccf286a80537c14882">
-    <td>[`getLogger`](#function-getlogger)</td>
+    <td>[`getLogger`](#getLogger)</td>
     <td>Returns the plugin logger associated with this server's logger. The returned logger automatically tags all log messages with the plugin's name.</td>
 </tr>
 <tr key="classendstone_1_1_plugin_1a75894467827c57e62d03f491428a1852">
-    <td>[`getName`](#function-getname)</td>
+    <td>[`getName`](#getName)</td>
     <td>Returns the name of the plugin.</td>
 </tr>
 <tr key="classendstone_1_1_plugin_1ad3c9fb3cfbdc03ca2f00ebf34aa4ef1e">
-    <td>[`getPluginLoader`](#function-getpluginloader)</td>
+    <td>[`getPluginLoader`](#getPluginLoader)</td>
     <td>Gets the associated PluginLoader responsible for this plugin.</td>
 </tr>
 <tr key="classendstone_1_1_plugin_1aa828bda3cbb3f880d2a67b93545957eb">
-    <td>[`getServer`](#function-getserver)</td>
+    <td>[`getServer`](#getServer)</td>
     <td>Returns the Server instance currently running this plugin.</td>
 </tr>
 <tr key="classendstone_1_1_plugin_1ab06a53213e2521dd7d2cde4a260f80f4">
-    <td>[`isEnabled`](#function-isenabled)</td>
+    <td>[`isEnabled`](#isEnabled)</td>
     <td>Returns a value indicating whether this plugin is currently enabled.</td>
 </tr>
 <tr key="classendstone_1_1_plugin_1aadd23b4ac5c6603e6961728d6586b121">
-    <td>[`onDisable`](#function-ondisable)</td>
+    <td>[`onDisable`](#onDisable)</td>
     <td>Called when this plugin is disabled.</td>
 </tr>
 <tr key="classendstone_1_1_plugin_1ae2a98beb4cfdc042da7e0d7ed0cd5856">
-    <td>[`onEnable`](#function-onenable)</td>
+    <td>[`onEnable`](#onEnable)</td>
     <td>Called when this plugin is enabled.</td>
 </tr>
 <tr key="classendstone_1_1_plugin_1af5d90225a0057bf88d97144acfae2ff4">
-    <td>[`onLoad`](#function-onload)</td>
+    <td>[`onLoad`](#onLoad)</td>
     <td>Called after a plugin is loaded but before it has been enabled.</td>
 </tr>
 <tr key="classendstone_1_1_plugin_1a61d1196288528c00e56ba09566293a7f">
-    <td>[`operator=`](#function-operator)</td>
+    <td>[`operator=`](#operator=)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_plugin_1ae552be9edf85435a6b70361de0f0c133">
-    <td>[`registerEvent`](#function-registerevent-12)</td>
+    <td>[`registerEvent`](#registerEvent)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_plugin_1a5a480b1117f2d8459e4923e1808f1239">
-    <td>[`registerEvent`](#function-registerevent-22)</td>
+    <td>[`registerEvent`](#registerEvent)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_plugin_1abe4e7cd4f32eb0e744f8df2850391dfc">
-    <td>[`~Plugin`](#function-plugin)</td>
+    <td>[`~Plugin`](#~Plugin)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> Plugin
+### <code className="doc-symbol doc-symbol-function"/> Plugin [#Plugin]
 
 ```cpp
 endstone::Plugin::Plugin () = default
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> Plugin
+### <code className="doc-symbol doc-symbol-function"/> Plugin [#Plugin]
 
 ```cpp
 endstone::Plugin::Plugin (
@@ -118,7 +118,7 @@ endstone::Plugin::Plugin (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> getCommand
+### <code className="doc-symbol doc-symbol-function"/> getCommand [#getCommand]
 
 ```cpp
 inline PluginCommand * endstone::Plugin::getCommand (
@@ -146,7 +146,7 @@ the plugin command if found, otherwise null
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getDataFolder
+### <code className="doc-symbol doc-symbol-function"/> getDataFolder [#getDataFolder]
 
 ```cpp
 inline const std::filesystem::path & endstone::Plugin::getDataFolder () const
@@ -165,7 +165,7 @@ The folder
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getDescription
+### <code className="doc-symbol doc-symbol-function"/> getDescription [#getDescription]
 
 ```cpp
 virtual const PluginDescription & endstone::Plugin::getDescription () const = 0
@@ -184,7 +184,7 @@ Details of this plugin
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getLogger
+### <code className="doc-symbol doc-symbol-function"/> getLogger [#getLogger]
 
 ```cpp
 inline Logger & endstone::Plugin::getLogger () const
@@ -203,7 +203,7 @@ Returns the plugin logger associated with this server's logger. The returned log
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getName
+### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
 inline std::string endstone::Plugin::getName () const
@@ -225,7 +225,7 @@ name of the plugin
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getPluginLoader
+### <code className="doc-symbol doc-symbol-function"/> getPluginLoader [#getPluginLoader]
 
 ```cpp
 inline PluginLoader & endstone::Plugin::getPluginLoader () const
@@ -244,7 +244,7 @@ Gets the associated PluginLoader responsible for this plugin.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getServer
+### <code className="doc-symbol doc-symbol-function"/> getServer [#getServer]
 
 ```cpp
 inline Server & endstone::Plugin::getServer () const
@@ -263,7 +263,7 @@ Returns the Server instance currently running this plugin.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> isEnabled
+### <code className="doc-symbol doc-symbol-function"/> isEnabled [#isEnabled]
 
 ```cpp
 inline bool endstone::Plugin::isEnabled () const
@@ -282,7 +282,7 @@ true if this plugin is enabled, otherwise false
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> onDisable
+### <code className="doc-symbol doc-symbol-function"/> onDisable [#onDisable]
 
 ```cpp
 inline virtual void endstone::Plugin::onDisable () 
@@ -290,7 +290,7 @@ inline virtual void endstone::Plugin::onDisable ()
 
 Called when this plugin is disabled.
 
-### <code className="doc-symbol doc-symbol-function"/> onEnable
+### <code className="doc-symbol doc-symbol-function"/> onEnable [#onEnable]
 
 ```cpp
 inline virtual void endstone::Plugin::onEnable () 
@@ -298,7 +298,7 @@ inline virtual void endstone::Plugin::onEnable ()
 
 Called when this plugin is enabled.
 
-### <code className="doc-symbol doc-symbol-function"/> onLoad
+### <code className="doc-symbol doc-symbol-function"/> onLoad [#onLoad]
 
 ```cpp
 inline virtual void endstone::Plugin::onLoad () 
@@ -310,7 +310,7 @@ When multiple plugins are loaded, the [**onLoad()**](classendstone_1_1_plugin.md
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> registerEvent
+### <code className="doc-symbol doc-symbol-function"/> registerEvent [#registerEvent]
 
 ```cpp
 template<typename EventType, typename T>
@@ -323,7 +323,7 @@ inline void endstone::Plugin::registerEvent (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> registerEvent
+### <code className="doc-symbol doc-symbol-function"/> registerEvent [#registerEvent]
 
 ```cpp
 template<typename EventType>
@@ -335,7 +335,7 @@ inline void endstone::Plugin::registerEvent (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> setEnabled
+### <code className="doc-symbol doc-symbol-function"/> setEnabled [#setEnabled]
 
 ```cpp
 inline void endstone::Plugin::setEnabled (

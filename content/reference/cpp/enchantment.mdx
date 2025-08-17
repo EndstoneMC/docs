@@ -31,37 +31,37 @@ title: "Enchantment"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_enchantment_1a2cf0c30780f0ccb58f1ac2576c35ab35">
-    <td>[`canEnchantItem`](#function-canenchantitem)</td>
+    <td>[`canEnchantItem`](#canEnchantItem)</td>
     <td>Checks if this Enchantment may be applied to the given ItemStack .</td>
 </tr>
 <tr key="classendstone_1_1_enchantment_1a037e2e31c6eb1ea2dcf82fe33dc7d89e">
-    <td>[`conflictsWith`](#function-conflictswith)</td>
+    <td>[`conflictsWith`](#conflictsWith)</td>
     <td>Check if this enchantment conflicts with another enchantment.</td>
 </tr>
 <tr key="classendstone_1_1_enchantment_1a41203620bf41656373136674afe18921">
-    <td>[`getKey`](#function-getkey)</td>
+    <td>[`getKey`](#getKey)</td>
     <td>Return the namespaced identifier for this enchantment.</td>
 </tr>
 <tr key="classendstone_1_1_enchantment_1a136c9d559081586af3d83318c1934b34">
-    <td>[`getMaxLevel`](#function-getmaxlevel)</td>
+    <td>[`getMaxLevel`](#getMaxLevel)</td>
     <td>Gets the maximum level that this Enchantment may become.</td>
 </tr>
 <tr key="classendstone_1_1_enchantment_1acbc90855ee54a401ea5e8e3e45e80d09">
-    <td>[`getStartLevel`](#function-getstartlevel)</td>
+    <td>[`getStartLevel`](#getStartLevel)</td>
     <td>Gets the level that this Enchantment should start at (also known as minimum level).</td>
 </tr>
 <tr key="classendstone_1_1_enchantment_1a2c9d36d8189de57bcff77586591e9c05">
-    <td>[`getTranslationKey`](#function-gettranslationkey)</td>
+    <td>[`getTranslationKey`](#getTranslationKey)</td>
     <td>Get the translation key, suitable for use in a translation component.</td>
 </tr>
 <tr key="classendstone_1_1_enchantment_1a52f4acd21d110aa3cf5ca3e41815310c">
-    <td>[`~Enchantment`](#function-enchantment)</td>
+    <td>[`~Enchantment`](#~Enchantment)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> canEnchantItem
+### <code className="doc-symbol doc-symbol-function"/> canEnchantItem [#canEnchantItem]
 
 ```cpp
 virtual bool endstone::Enchantment::canEnchantItem (
@@ -92,7 +92,7 @@ True if the enchantment may be applied, otherwise False
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> conflictsWith
+### <code className="doc-symbol doc-symbol-function"/> conflictsWith [#conflictsWith]
 
 ```cpp
 virtual bool endstone::Enchantment::conflictsWith (
@@ -120,7 +120,7 @@ True if there is a conflict.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getKey
+### <code className="doc-symbol doc-symbol-function"/> getKey [#getKey]
 
 ```cpp
 virtual NamespacedKey endstone::Enchantment::getKey () const = 0
@@ -139,7 +139,7 @@ this enchantment's key
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getMaxLevel
+### <code className="doc-symbol doc-symbol-function"/> getMaxLevel [#getMaxLevel]
 
 ```cpp
 virtual int endstone::Enchantment::getMaxLevel () const = 0
@@ -158,7 +158,7 @@ Maximum level of the [**Enchantment**](classendstone_1_1_enchantment.md)
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getStartLevel
+### <code className="doc-symbol doc-symbol-function"/> getStartLevel [#getStartLevel]
 
 ```cpp
 virtual int endstone::Enchantment::getStartLevel () const = 0
@@ -177,7 +177,7 @@ Starting level of the [**Enchantment**](classendstone_1_1_enchantment.md)
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getTranslationKey
+### <code className="doc-symbol doc-symbol-function"/> getTranslationKey [#getTranslationKey]
 
 ```cpp
 virtual std::string endstone::Enchantment::getTranslationKey () const = 0

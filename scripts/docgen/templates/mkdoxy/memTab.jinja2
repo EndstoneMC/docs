@@ -20,7 +20,7 @@ See [{{node.name_long}}]({{node.url}})
 <tbody>
 {% for member in node.query(visibility, kinds, static) -%}
 <tr key="{{ member.refid }}">
-    <td>[`{{ member.name_short }}`](#{{member.anchor}})</td>
+    <td>[`{{ member.name_short }}`](#{{member.name_short}})</td>
     <td>{{member._brief.plain()}}</td>
 </tr>
 {% endfor -%}

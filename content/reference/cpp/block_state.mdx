@@ -31,65 +31,65 @@ title: "BlockState"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_block_state_1af4b36588a23e8df26ea57425c206265f">
-    <td>[`getBlock`](#function-getblock)</td>
+    <td>[`getBlock`](#getBlock)</td>
     <td>Gets the block represented by this block state.</td>
 </tr>
 <tr key="classendstone_1_1_block_state_1a18ebe2b1c527ebb7b915157bb2d0c557">
-    <td>[`getData`](#function-getdata)</td>
+    <td>[`getData`](#getData)</td>
     <td>Gets the data for this block state.</td>
 </tr>
 <tr key="classendstone_1_1_block_state_1a0d30c01fe70f8e5b591a23fe36490738">
-    <td>[`getDimension`](#function-getdimension)</td>
+    <td>[`getDimension`](#getDimension)</td>
     <td>Gets the dimension which contains the block represented by this block state.</td>
 </tr>
 <tr key="classendstone_1_1_block_state_1a6f8f4a475c2c955b1a883877d9b4baf5">
-    <td>[`getLocation`](#function-getlocation)</td>
+    <td>[`getLocation`](#getLocation)</td>
     <td>Gets the location of this block state.</td>
 </tr>
 <tr key="classendstone_1_1_block_state_1ae5c5fbb7989498006f3e7e48d76e10cf">
-    <td>[`getType`](#function-gettype)</td>
+    <td>[`getType`](#getType)</td>
     <td>Gets the type of this block state.</td>
 </tr>
 <tr key="classendstone_1_1_block_state_1a465f89196adeb9f1cb76b1425f8b1856">
-    <td>[`getX`](#function-getx)</td>
+    <td>[`getX`](#getX)</td>
     <td>Gets the x-coordinate of this block state.</td>
 </tr>
 <tr key="classendstone_1_1_block_state_1a26cb455d3bb6d9ab6f703d1df14c9232">
-    <td>[`getY`](#function-gety)</td>
+    <td>[`getY`](#getY)</td>
     <td>Gets the y-coordinate of this block state.</td>
 </tr>
 <tr key="classendstone_1_1_block_state_1a1d4ccdc3539f2d549ef3d98393bb89af">
-    <td>[`getZ`](#function-getz)</td>
+    <td>[`getZ`](#getZ)</td>
     <td>Gets the z-coordinate of this block state.</td>
 </tr>
 <tr key="classendstone_1_1_block_state_1a97427ac349aacfcc0d617ec52fb33ff8">
-    <td>[`setData`](#function-setdata)</td>
+    <td>[`setData`](#setData)</td>
     <td>Sets the data for this block state.</td>
 </tr>
 <tr key="classendstone_1_1_block_state_1a54629f4faa893e30d1ef4d4ac15bf147">
-    <td>[`setType`](#function-settype)</td>
+    <td>[`setType`](#setType)</td>
     <td>Sets the type of this block state.</td>
 </tr>
 <tr key="classendstone_1_1_block_state_1aeaca92e63b3fa7bf37eb82e59bb9a45d">
-    <td>[`update`](#function-update-13)</td>
+    <td>[`update`](#update)</td>
     <td>Attempts to update the block represented by this state, setting it to yhe new values as defined by this state.</td>
 </tr>
 <tr key="classendstone_1_1_block_state_1a4d603b37f4b38df4151ced22c7f78331">
-    <td>[`update`](#function-update-23)</td>
+    <td>[`update`](#update)</td>
     <td>Attempts to update the block represented by this state, setting it to the new values as defined by this state.</td>
 </tr>
 <tr key="classendstone_1_1_block_state_1a6bb9b025f0e02b8ec732e6a74c27b599">
-    <td>[`update`](#function-update-33)</td>
+    <td>[`update`](#update)</td>
     <td>Attempts to update the block represented by this state, setting it to the new values as defined by this state.</td>
 </tr>
 <tr key="classendstone_1_1_block_state_1a7e3b8131f58cbb0ba1cd3338d8b90c12">
-    <td>[`~BlockState`](#function-blockstate)</td>
+    <td>[`~BlockState`](#~BlockState)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> getBlock
+### <code className="doc-symbol doc-symbol-function"/> getBlock [#getBlock]
 
 ```cpp
 virtual std::unique_ptr< Block > endstone::BlockState::getBlock () const = 0
@@ -108,7 +108,7 @@ the block represented by this block state
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getData
+### <code className="doc-symbol doc-symbol-function"/> getData [#getData]
 
 ```cpp
 virtual std::unique_ptr< BlockData > endstone::BlockState::getData () const = 0
@@ -127,7 +127,7 @@ block specific data
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getDimension
+### <code className="doc-symbol doc-symbol-function"/> getDimension [#getDimension]
 
 ```cpp
 virtual Dimension & endstone::BlockState::getDimension () const = 0
@@ -146,7 +146,7 @@ the dimension containing the block represented by this block state
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getLocation
+### <code className="doc-symbol doc-symbol-function"/> getLocation [#getLocation]
 
 ```cpp
 virtual Location endstone::BlockState::getLocation () const = 0
@@ -165,7 +165,7 @@ the location
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getType
+### <code className="doc-symbol doc-symbol-function"/> getType [#getType]
 
 ```cpp
 virtual std::string endstone::BlockState::getType () const = 0
@@ -184,7 +184,7 @@ block type
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getX
+### <code className="doc-symbol doc-symbol-function"/> getX [#getX]
 
 ```cpp
 virtual int endstone::BlockState::getX () const = 0
@@ -203,7 +203,7 @@ x-coordinate
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getY
+### <code className="doc-symbol doc-symbol-function"/> getY [#getY]
 
 ```cpp
 virtual int endstone::BlockState::getY () const = 0
@@ -222,7 +222,7 @@ y-coordinate
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getZ
+### <code className="doc-symbol doc-symbol-function"/> getZ [#getZ]
 
 ```cpp
 virtual int endstone::BlockState::getZ () const = 0
@@ -241,7 +241,7 @@ z-coordinate
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setData
+### <code className="doc-symbol doc-symbol-function"/> setData [#setData]
 
 ```cpp
 virtual Result< void > endstone::BlockState::setData (
@@ -262,7 +262,7 @@ Sets the data for this block state.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setType
+### <code className="doc-symbol doc-symbol-function"/> setType [#setType]
 
 ```cpp
 virtual Result< void > endstone::BlockState::setType (
@@ -283,7 +283,7 @@ Sets the type of this block state.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> update
+### <code className="doc-symbol doc-symbol-function"/> update [#update]
 
 ```cpp
 virtual bool endstone::BlockState::update () = 0
@@ -305,7 +305,7 @@ true if the update was successful, otherwise false
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> update
+### <code className="doc-symbol doc-symbol-function"/> update [#update]
 
 ```cpp
 virtual bool endstone::BlockState::update (
@@ -336,7 +336,7 @@ true if the update was successful, otherwise false
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> update
+### <code className="doc-symbol doc-symbol-function"/> update [#update]
 
 ```cpp
 virtual bool endstone::BlockState::update (

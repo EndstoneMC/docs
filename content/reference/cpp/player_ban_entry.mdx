@@ -32,25 +32,25 @@ Bases: [`endstone::BanEntry`](classendstone_1_1_ban_entry.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_player_ban_entry_1a033dd3ac9645d20c4b51d569ccc9cf77">
-    <td>[`PlayerBanEntry`](#function-playerbanentry)</td>
+    <td>[`PlayerBanEntry`](#PlayerBanEntry)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_player_ban_entry_1a896cb5a70c13eaae3274577097a4c8be">
-    <td>[`getName`](#function-getname)</td>
+    <td>[`getName`](#getName)</td>
     <td>Gets the banned player's name.</td>
 </tr>
 <tr key="classendstone_1_1_player_ban_entry_1aa8aceaaecf33187241f042e1ae0a9e35">
-    <td>[`getUniqueId`](#function-getuniqueid)</td>
+    <td>[`getUniqueId`](#getUniqueId)</td>
     <td>Gets the banned player's unique id.</td>
 </tr>
 <tr key="classendstone_1_1_player_ban_entry_1a28bafcfc774eb95548936c79ca407ebf">
-    <td>[`getXuid`](#function-getxuid)</td>
+    <td>[`getXuid`](#getXuid)</td>
     <td>Gets the banned player's xbox user id (xuid).</td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> PlayerBanEntry
+### <code className="doc-symbol doc-symbol-function"/> PlayerBanEntry [#PlayerBanEntry]
 
 ```cpp
 inline explicit endstone::PlayerBanEntry::PlayerBanEntry (
@@ -61,7 +61,7 @@ inline explicit endstone::PlayerBanEntry::PlayerBanEntry (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> getName
+### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
 inline std::string endstone::PlayerBanEntry::getName () const
@@ -80,7 +80,7 @@ the player name
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getUniqueId
+### <code className="doc-symbol doc-symbol-function"/> getUniqueId [#getUniqueId]
 
 ```cpp
 inline std::optional< UUID > endstone::PlayerBanEntry::getUniqueId () const
@@ -99,7 +99,7 @@ the player's unique id, or std::nullopt if not available
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getXuid
+### <code className="doc-symbol doc-symbol-function"/> getXuid [#getXuid]
 
 ```cpp
 inline std::optional< std::string > endstone::PlayerBanEntry::getXuid () const

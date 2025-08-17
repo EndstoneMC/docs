@@ -25,7 +25,7 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_player_login_event_1aaea7a39a26c68c5436ee3f050d6be2e6">
-    <td>[`NAME`](#variable-name)</td>
+    <td>[`NAME`](#NAME)</td>
     <td></td>
 </tr>
 </tbody>
@@ -47,36 +47,36 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_player_login_event_1a409d08c3d2fde7d1814d0b7d63700fe6">
-    <td>[`PlayerLoginEvent`](#function-playerloginevent)</td>
+    <td>[`PlayerLoginEvent`](#PlayerLoginEvent)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_player_login_event_1a9593905e32bd292c3782ccc93190f92b">
-    <td>[`getEventName`](#function-geteventname)</td>
+    <td>[`getEventName`](#getEventName)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_player_login_event_1a25b7ba1f99219f7b07dc41a2aa36b840">
-    <td>[`getKickMessage`](#function-getkickmessage)</td>
+    <td>[`getKickMessage`](#getKickMessage)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_player_login_event_1a8f5b97ba68ebdaf921e4d9a9e6f8219e">
-    <td>[`setKickMessage`](#function-setkickmessage)</td>
+    <td>[`setKickMessage`](#setKickMessage)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_player_login_event_1aef505c2ab738b4126b68f20611f118dc">
-    <td>[`~PlayerLoginEvent`](#function-playerloginevent)</td>
+    <td>[`~PlayerLoginEvent`](#~PlayerLoginEvent)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-variable"/> NAME
+### <code className="doc-symbol doc-symbol-variable"/> NAME [#NAME]
 
 ```cpp
 const std::string endstone::PlayerLoginEvent::NAME;
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> PlayerLoginEvent
+### <code className="doc-symbol doc-symbol-function"/> PlayerLoginEvent [#PlayerLoginEvent]
 
 ```cpp
 inline explicit endstone::PlayerLoginEvent::PlayerLoginEvent (
@@ -86,7 +86,7 @@ inline explicit endstone::PlayerLoginEvent::PlayerLoginEvent (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> getEventName
+### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
 inline virtual std::string endstone::PlayerLoginEvent::getEventName () override const
@@ -109,7 +109,7 @@ name of this event
         
 Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
 
-### <code className="doc-symbol doc-symbol-function"/> getKickMessage
+### <code className="doc-symbol doc-symbol-function"/> getKickMessage [#getKickMessage]
 
 ```cpp
 inline const std::string & endstone::PlayerLoginEvent::getKickMessage () const
@@ -130,7 +130,7 @@ Current kick message
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setKickMessage
+### <code className="doc-symbol doc-symbol-function"/> setKickMessage [#setKickMessage]
 
 ```cpp
 inline void endstone::PlayerLoginEvent::setKickMessage (

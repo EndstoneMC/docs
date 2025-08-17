@@ -25,7 +25,7 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_packet_receive_event_1a218801638ce951b0f39ba49d6a99e159">
-    <td>[`NAME`](#variable-name)</td>
+    <td>[`NAME`](#NAME)</td>
     <td></td>
 </tr>
 </tbody>
@@ -47,48 +47,48 @@ Bases: [`endstone::Cancellable`](classendstone_1_1_cancellable.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_packet_receive_event_1aadc6685d7ad9177fb9f9175f58088345">
-    <td>[`PacketReceiveEvent`](#function-packetreceiveevent)</td>
+    <td>[`PacketReceiveEvent`](#PacketReceiveEvent)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_packet_receive_event_1ab5fe2e62cbedfbe4312c442b1a774b10">
-    <td>[`getAddress`](#function-getaddress)</td>
+    <td>[`getAddress`](#getAddress)</td>
     <td>Gets the network address to which this packet is being sent.</td>
 </tr>
 <tr key="classendstone_1_1_packet_receive_event_1ade14c9698e182f8c468ff220fdce7eb3">
-    <td>[`getEventName`](#function-geteventname)</td>
+    <td>[`getEventName`](#getEventName)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_packet_receive_event_1a55fbf8774d4f1a7d069e542c685fdd48">
-    <td>[`getPacketId`](#function-getpacketid)</td>
+    <td>[`getPacketId`](#getPacketId)</td>
     <td>Gets the ID of the packet.</td>
 </tr>
 <tr key="classendstone_1_1_packet_receive_event_1a518168db89685906e59159d8fde84006">
-    <td>[`getPayload`](#function-getpayload)</td>
+    <td>[`getPayload`](#getPayload)</td>
     <td>Gets the raw packet data excluding the header.</td>
 </tr>
 <tr key="classendstone_1_1_packet_receive_event_1aad07dd636d8b60d143ea65a0d4ed47bc">
-    <td>[`getPlayer`](#function-getplayer)</td>
+    <td>[`getPlayer`](#getPlayer)</td>
     <td>Returns the player involved in this event.</td>
 </tr>
 <tr key="classendstone_1_1_packet_receive_event_1af975d7e890536043acb7213e7b2e0923">
-    <td>[`getSubClientId`](#function-getsubclientid)</td>
+    <td>[`getSubClientId`](#getSubClientId)</td>
     <td>Gets the SubClient ID.</td>
 </tr>
 <tr key="classendstone_1_1_packet_receive_event_1a38da3d7aa9ee5431efbf9ef500b1df56">
-    <td>[`setPayload`](#function-setpayload)</td>
+    <td>[`setPayload`](#setPayload)</td>
     <td>Sets the raw packet data excluding the header.</td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-variable"/> NAME
+### <code className="doc-symbol doc-symbol-variable"/> NAME [#NAME]
 
 ```cpp
 const std::string endstone::PacketReceiveEvent::NAME;
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> PacketReceiveEvent
+### <code className="doc-symbol doc-symbol-function"/> PacketReceiveEvent [#PacketReceiveEvent]
 
 ```cpp
 inline endstone::PacketReceiveEvent::PacketReceiveEvent (
@@ -101,7 +101,7 @@ inline endstone::PacketReceiveEvent::PacketReceiveEvent (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> getAddress
+### <code className="doc-symbol doc-symbol-function"/> getAddress [#getAddress]
 
 ```cpp
 inline SocketAddress endstone::PacketReceiveEvent::getAddress () const
@@ -120,7 +120,7 @@ The [**SocketAddress**](classendstone_1_1_socket_address.md) of the destination 
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getEventName
+### <code className="doc-symbol doc-symbol-function"/> getEventName [#getEventName]
 
 ```cpp
 inline virtual std::string endstone::PacketReceiveEvent::getEventName () override const
@@ -143,7 +143,7 @@ name of this event
         
 Implements [*endstone::Event::getEventName*](classendstone_1_1_event.md#function-geteventname)
 
-### <code className="doc-symbol doc-symbol-function"/> getPacketId
+### <code className="doc-symbol doc-symbol-function"/> getPacketId [#getPacketId]
 
 ```cpp
 inline int endstone::PacketReceiveEvent::getPacketId () const
@@ -162,7 +162,7 @@ The packet ID.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getPayload
+### <code className="doc-symbol doc-symbol-function"/> getPayload [#getPayload]
 
 ```cpp
 inline std::string_view endstone::PacketReceiveEvent::getPayload () const
@@ -181,7 +181,7 @@ The packet payload data.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getPlayer
+### <code className="doc-symbol doc-symbol-function"/> getPlayer [#getPlayer]
 
 ```cpp
 inline Player * endstone::PacketReceiveEvent::getPlayer () const
@@ -207,7 +207,7 @@ This may return nullptr if the packet is sent before the player completes the lo
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getSubClientId
+### <code className="doc-symbol doc-symbol-function"/> getSubClientId [#getSubClientId]
 
 ```cpp
 inline int endstone::PacketReceiveEvent::getSubClientId () const
@@ -233,7 +233,7 @@ The SubClient ID.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setPayload
+### <code className="doc-symbol doc-symbol-function"/> setPayload [#setPayload]
 
 ```cpp
 inline void endstone::PacketReceiveEvent::setPayload (

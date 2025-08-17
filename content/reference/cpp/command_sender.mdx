@@ -32,53 +32,53 @@ Bases: [`endstone::Permissible`](classendstone_1_1_permissible.md)
 </thead>
 <tbody>
 <tr key="classendstone_1_1_command_sender_1a981997682a69961a0cb5e92b7a70f4ff">
-    <td>[`asActor`](#function-asactor)</td>
+    <td>[`asActor`](#asActor)</td>
     <td>Gets a CommandSender as Actor .</td>
 </tr>
 <tr key="classendstone_1_1_command_sender_1afece60cdcb1ef41acc69bcb8a482320f">
-    <td>[`asBlock`](#function-asblock)</td>
+    <td>[`asBlock`](#asBlock)</td>
     <td>Gets a CommandSender as BlockCommandSender .</td>
 </tr>
 <tr key="classendstone_1_1_command_sender_1a4f5be88d28d49e1c7424acd1c30fc893">
-    <td>[`asCommandSender`](#function-ascommandsender)</td>
+    <td>[`asCommandSender`](#asCommandSender)</td>
     <td>Casts a Permissible as CommandSender .</td>
 </tr>
 <tr key="classendstone_1_1_command_sender_1ad52351f5219698ad2bb2fbd6509c80f5">
-    <td>[`asConsole`](#function-asconsole)</td>
+    <td>[`asConsole`](#asConsole)</td>
     <td>Gets a CommandSender as ConsoleCommandSender .</td>
 </tr>
 <tr key="classendstone_1_1_command_sender_1aef66d1ad6c2cbc924e51f02407f94fa3">
-    <td>[`asPlayer`](#function-asplayer)</td>
+    <td>[`asPlayer`](#asPlayer)</td>
     <td>Gets a CommandSender as Player .</td>
 </tr>
 <tr key="classendstone_1_1_command_sender_1acf20807a70561a571e20d4ee3791d69e">
-    <td>[`getName`](#function-getname)</td>
+    <td>[`getName`](#getName)</td>
     <td>Gets the name of this command sender.</td>
 </tr>
 <tr key="classendstone_1_1_command_sender_1aecd5cad85026861938379fa283d626cf">
-    <td>[`getServer`](#function-getserver)</td>
+    <td>[`getServer`](#getServer)</td>
     <td>Returns the server instance that this command is running on.</td>
 </tr>
 <tr key="classendstone_1_1_command_sender_1a25f6e7b7397652fd14cb57bc994b00eb">
-    <td>[`sendErrorMessage`](#function-senderrormessage-12)</td>
+    <td>[`sendErrorMessage`](#sendErrorMessage)</td>
     <td>Sends this sender a error message.</td>
 </tr>
 <tr key="classendstone_1_1_command_sender_1a9ef7b0d45dc7ba12073ce93187c54b87">
-    <td>[`sendErrorMessage`](#function-senderrormessage-22)</td>
+    <td>[`sendErrorMessage`](#sendErrorMessage)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_command_sender_1a000782a076576822ea70b640f5f230ea">
-    <td>[`sendMessage`](#function-sendmessage-12)</td>
+    <td>[`sendMessage`](#sendMessage)</td>
     <td>Sends this sender a message.</td>
 </tr>
 <tr key="classendstone_1_1_command_sender_1a991e541b0e30e75ab7f508d6fdb141ad">
-    <td>[`sendMessage`](#function-sendmessage-22)</td>
+    <td>[`sendMessage`](#sendMessage)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> asActor
+### <code className="doc-symbol doc-symbol-function"/> asActor [#asActor]
 
 ```cpp
 inline virtual Actor * endstone::CommandSender::asActor () const
@@ -97,7 +97,7 @@ Gets a CommandSender as Actor .
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> asBlock
+### <code className="doc-symbol doc-symbol-function"/> asBlock [#asBlock]
 
 ```cpp
 inline virtual BlockCommandSender * endstone::CommandSender::asBlock () const
@@ -116,7 +116,7 @@ Gets a CommandSender as BlockCommandSender .
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> asCommandSender
+### <code className="doc-symbol doc-symbol-function"/> asCommandSender [#asCommandSender]
 
 ```cpp
 inline virtual CommandSender * endstone::CommandSender::asCommandSender () override const
@@ -137,7 +137,7 @@ Casts a Permissible as CommandSender .
         
 Implements [*endstone::Permissible::asCommandSender*](classendstone_1_1_permissible.md#function-ascommandsender)
 
-### <code className="doc-symbol doc-symbol-function"/> asConsole
+### <code className="doc-symbol doc-symbol-function"/> asConsole [#asConsole]
 
 ```cpp
 inline virtual ConsoleCommandSender * endstone::CommandSender::asConsole () const
@@ -156,7 +156,7 @@ Gets a CommandSender as ConsoleCommandSender .
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> asPlayer
+### <code className="doc-symbol doc-symbol-function"/> asPlayer [#asPlayer]
 
 ```cpp
 inline virtual Player * endstone::CommandSender::asPlayer () const
@@ -175,7 +175,7 @@ Gets a CommandSender as Player .
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getName
+### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
 virtual std::string endstone::CommandSender::getName () const = 0
@@ -194,7 +194,7 @@ Name of the sender
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getServer
+### <code className="doc-symbol doc-symbol-function"/> getServer [#getServer]
 
 ```cpp
 virtual Server & endstone::CommandSender::getServer () const = 0
@@ -213,7 +213,7 @@ Returns the server instance that this command is running on.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> sendErrorMessage
+### <code className="doc-symbol doc-symbol-function"/> sendErrorMessage [#sendErrorMessage]
 
 ```cpp
 virtual void endstone::CommandSender::sendErrorMessage (
@@ -234,7 +234,7 @@ Sends this sender a error message.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> sendErrorMessage
+### <code className="doc-symbol doc-symbol-function"/> sendErrorMessage [#sendErrorMessage]
 
 ```cpp
 template<typename... Args>
@@ -245,7 +245,7 @@ inline void endstone::CommandSender::sendErrorMessage (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> sendMessage
+### <code className="doc-symbol doc-symbol-function"/> sendMessage [#sendMessage]
 
 ```cpp
 virtual void endstone::CommandSender::sendMessage (
@@ -266,7 +266,7 @@ Sends this sender a message.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> sendMessage
+### <code className="doc-symbol doc-symbol-function"/> sendMessage [#sendMessage]
 
 ```cpp
 template<typename... Args>

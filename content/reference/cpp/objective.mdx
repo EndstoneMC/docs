@@ -31,81 +31,81 @@ title: "Objective"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_objective_1a2262338b77cfa7f9d6462857bf94fed2">
-    <td>[`getCriteria`](#function-getcriteria)</td>
+    <td>[`getCriteria`](#getCriteria)</td>
     <td>Gets the criteria this objective tracks.</td>
 </tr>
 <tr key="classendstone_1_1_objective_1add4d16177eaab8a420648e34d3c970e4">
-    <td>[`getDisplayName`](#function-getdisplayname)</td>
+    <td>[`getDisplayName`](#getDisplayName)</td>
     <td>Gets the name displayed to players for this objective.</td>
 </tr>
 <tr key="classendstone_1_1_objective_1af38249b8c237008e2058ca2a21366f10">
-    <td>[`getDisplaySlot`](#function-getdisplayslot)</td>
+    <td>[`getDisplaySlot`](#getDisplaySlot)</td>
     <td>Gets the display slot this objective is displayed at.</td>
 </tr>
 <tr key="classendstone_1_1_objective_1a76ef52e95148d3e88f6f3581bd4a97da">
-    <td>[`getName`](#function-getname)</td>
+    <td>[`getName`](#getName)</td>
     <td>Gets the name of this Objective .</td>
 </tr>
 <tr key="classendstone_1_1_objective_1ad0a6886ee17ccb32139c3b793e29b94a">
-    <td>[`getRenderType`](#function-getrendertype)</td>
+    <td>[`getRenderType`](#getRenderType)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_objective_1a8b28c20b7099517ba2d12eefaf933a97">
-    <td>[`getScore`](#function-getscore)</td>
+    <td>[`getScore`](#getScore)</td>
     <td>Sets manner in which this objective will be rendered.</td>
 </tr>
 <tr key="classendstone_1_1_objective_1ada9df9db7d4dab1a2a129891a58822b9">
-    <td>[`getScoreboard`](#function-getscoreboard)</td>
+    <td>[`getScoreboard`](#getScoreboard)</td>
     <td>Gets the scoreboard to which this objective is attached.</td>
 </tr>
 <tr key="classendstone_1_1_objective_1a05c3b9adac524acd88b8308eea70afb3">
-    <td>[`getSortOrder`](#function-getsortorder)</td>
+    <td>[`getSortOrder`](#getSortOrder)</td>
     <td>Gets the sort order for this objective.</td>
 </tr>
 <tr key="classendstone_1_1_objective_1a0611f9cc4ba7aaa5039c7a82b85c37ff">
-    <td>[`isDisplayed`](#function-isdisplayed)</td>
+    <td>[`isDisplayed`](#isDisplayed)</td>
     <td>Gets if the objective is currently displayed in a slot.</td>
 </tr>
 <tr key="classendstone_1_1_objective_1a8a5034991d4713d86a242ca0a78f063d">
-    <td>[`isModifiable`](#function-ismodifiable)</td>
+    <td>[`isModifiable`](#isModifiable)</td>
     <td>Gets if the objective's scores can be modified directly by a plugin.</td>
 </tr>
 <tr key="classendstone_1_1_objective_1abfd8c61ab066baec27ba92445cc6ce3b">
-    <td>[`operator!=`](#function-operator)</td>
+    <td>[`operator!=`](#operator!=)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_objective_1a8a41679213a22450c756fd1c14edbc36">
-    <td>[`operator==`](#function-operator_1)</td>
+    <td>[`operator==`](#operator==)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_objective_1a42b677651015bc3e39519974f4fdac56">
-    <td>[`setDisplay`](#function-setdisplay)</td>
+    <td>[`setDisplay`](#setDisplay)</td>
     <td>Sets the display slot and sort order for this objective. This will remove it from any other display slot.</td>
 </tr>
 <tr key="classendstone_1_1_objective_1a15982b68232d9cbaf16d4172c4bff1b8">
-    <td>[`setDisplayName`](#function-setdisplayname)</td>
+    <td>[`setDisplayName`](#setDisplayName)</td>
     <td>Sets the name displayed to players for this objective.</td>
 </tr>
 <tr key="classendstone_1_1_objective_1a5c68bd98d41d5d3caa69f50e3f7c3fd4">
-    <td>[`setDisplaySlot`](#function-setdisplayslot)</td>
+    <td>[`setDisplaySlot`](#setDisplaySlot)</td>
     <td>Sets the display slot for this objective. This will remove it from any other display slot.</td>
 </tr>
 <tr key="classendstone_1_1_objective_1a1d3b73d4809a54546966668c08b72245">
-    <td>[`setSortOrder`](#function-setsortorder)</td>
+    <td>[`setSortOrder`](#setSortOrder)</td>
     <td>Sets the sort order for this objective.</td>
 </tr>
 <tr key="classendstone_1_1_objective_1a4edbc25888e5f914ee03379b9db15fe7">
-    <td>[`unregister`](#function-unregister)</td>
+    <td>[`unregister`](#unregister)</td>
     <td>Unregisters this objective from the associated Scoreboard .</td>
 </tr>
 <tr key="classendstone_1_1_objective_1aa8fe81958a62274b81fe7d9d8ff515fd">
-    <td>[`~Objective`](#function-objective)</td>
+    <td>[`~Objective`](#~Objective)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> getCriteria
+### <code className="doc-symbol doc-symbol-function"/> getCriteria [#getCriteria]
 
 ```cpp
 virtual Result< const Criteria * > endstone::Objective::getCriteria () const = 0
@@ -124,7 +124,7 @@ this objective's criteria.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getDisplayName
+### <code className="doc-symbol doc-symbol-function"/> getDisplayName [#getDisplayName]
 
 ```cpp
 virtual Result< std::string > endstone::Objective::getDisplayName () const = 0
@@ -143,7 +143,7 @@ this objective's display name
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getDisplaySlot
+### <code className="doc-symbol doc-symbol-function"/> getDisplaySlot [#getDisplaySlot]
 
 ```cpp
 virtual Result< DisplaySlot > endstone::Objective::getDisplaySlot () const = 0
@@ -162,7 +162,7 @@ the display slot for this objective
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getName
+### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
 virtual Result< std::string > endstone::Objective::getName () const = 0
@@ -181,7 +181,7 @@ this objective's name
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getRenderType
+### <code className="doc-symbol doc-symbol-function"/> getRenderType [#getRenderType]
 
 ```cpp
 virtual Result< RenderType > endstone::Objective::getRenderType () const = 0
@@ -202,7 +202,7 @@ the render type
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getScore
+### <code className="doc-symbol doc-symbol-function"/> getScore [#getScore]
 
 ```cpp
 virtual Result< std::unique_ptr< Score > > endstone::Objective::getScore (
@@ -240,7 +240,7 @@ Gets an entry's [**Score**](classendstone_1_1_score.md) for this objective.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getScoreboard
+### <code className="doc-symbol doc-symbol-function"/> getScoreboard [#getScoreboard]
 
 ```cpp
 virtual Scoreboard & endstone::Objective::getScoreboard () const = 0
@@ -259,7 +259,7 @@ Owning scoreboard
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getSortOrder
+### <code className="doc-symbol doc-symbol-function"/> getSortOrder [#getSortOrder]
 
 ```cpp
 virtual Result< ObjectiveSortOrder > endstone::Objective::getSortOrder () const = 0
@@ -278,7 +278,7 @@ The sort order for this objective.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> isDisplayed
+### <code className="doc-symbol doc-symbol-function"/> isDisplayed [#isDisplayed]
 
 ```cpp
 virtual Result< bool > endstone::Objective::isDisplayed () const = 0
@@ -297,7 +297,7 @@ true if the objective is displayed
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> isModifiable
+### <code className="doc-symbol doc-symbol-function"/> isModifiable [#isModifiable]
 
 ```cpp
 virtual Result< bool > endstone::Objective::isModifiable () const = 0
@@ -316,7 +316,7 @@ true if scores are modifiable
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setDisplay
+### <code className="doc-symbol doc-symbol-function"/> setDisplay [#setDisplay]
 
 ```cpp
 virtual Result< void > endstone::Objective::setDisplay (
@@ -339,7 +339,7 @@ Sets the display slot and sort order for this objective. This will remove it fro
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setDisplayName
+### <code className="doc-symbol doc-symbol-function"/> setDisplayName [#setDisplayName]
 
 ```cpp
 virtual Result< void > endstone::Objective::setDisplayName (
@@ -360,7 +360,7 @@ Sets the name displayed to players for this objective.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setDisplaySlot
+### <code className="doc-symbol doc-symbol-function"/> setDisplaySlot [#setDisplaySlot]
 
 ```cpp
 virtual Result< void > endstone::Objective::setDisplaySlot (
@@ -381,7 +381,7 @@ Sets the display slot for this objective. This will remove it from any other dis
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setSortOrder
+### <code className="doc-symbol doc-symbol-function"/> setSortOrder [#setSortOrder]
 
 ```cpp
 virtual Result< void > endstone::Objective::setSortOrder (
@@ -402,7 +402,7 @@ Sets the sort order for this objective.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> unregister
+### <code className="doc-symbol doc-symbol-function"/> unregister [#unregister]
 
 ```cpp
 virtual Result< void > endstone::Objective::unregister () const = 0

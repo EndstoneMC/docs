@@ -21,7 +21,7 @@ title: "BanEntry"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_ban_entry_1ab092a6e12e478e31aabc04ccd7944f25">
-    <td>[`Date`](#typedef-date)</td>
+    <td>[`Date`](#Date)</td>
     <td></td>
 </tr>
 </tbody>
@@ -39,7 +39,7 @@ title: "BanEntry"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_ban_entry_1ab6991f9c822ac9cd969188b71aabae4a">
-    <td>[`DateFormat`](#variable-dateformat)</td>
+    <td>[`DateFormat`](#DateFormat)</td>
     <td></td>
 </tr>
 </tbody>
@@ -61,55 +61,55 @@ title: "BanEntry"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_ban_entry_1a3d58f91d59173138b7e5530b604ae70d">
-    <td>[`getCreated`](#function-getcreated)</td>
+    <td>[`getCreated`](#getCreated)</td>
     <td>Gets the date this ban entry was created.</td>
 </tr>
 <tr key="classendstone_1_1_ban_entry_1a62dd29dd801c12d3c99e283924c83246">
-    <td>[`getExpiration`](#function-getexpiration)</td>
+    <td>[`getExpiration`](#getExpiration)</td>
     <td>Gets the date this ban expires on, or std::nullopt for no defined end date.</td>
 </tr>
 <tr key="classendstone_1_1_ban_entry_1ae64cc8ac600a8a35f2420ddc0709ade0">
-    <td>[`getReason`](#function-getreason)</td>
+    <td>[`getReason`](#getReason)</td>
     <td>Gets the reason for this ban.</td>
 </tr>
 <tr key="classendstone_1_1_ban_entry_1ad72c12362e0b7d4d5f4fcc9874f4f375">
-    <td>[`getSource`](#function-getsource)</td>
+    <td>[`getSource`](#getSource)</td>
     <td>Gets the source of this ban.</td>
 </tr>
 <tr key="classendstone_1_1_ban_entry_1a25928ad6ec89d5a53291fac94de08af2">
-    <td>[`setCreated`](#function-setcreated)</td>
+    <td>[`setCreated`](#setCreated)</td>
     <td>Sets the date this ban entry was created.</td>
 </tr>
 <tr key="classendstone_1_1_ban_entry_1a034fd3be01a6210a5be8b1436df544e3">
-    <td>[`setExpiration`](#function-setexpiration)</td>
+    <td>[`setExpiration`](#setExpiration)</td>
     <td>Sets the date this ban expires on. std::nullopt values are considered "infinite" bans.</td>
 </tr>
 <tr key="classendstone_1_1_ban_entry_1a59ff6c4f71850c5f1d006199d987d049">
-    <td>[`setReason`](#function-setreason)</td>
+    <td>[`setReason`](#setReason)</td>
     <td>Sets the reason for this ban.</td>
 </tr>
 <tr key="classendstone_1_1_ban_entry_1a475b96ed193e395608804f4d31fb96d4">
-    <td>[`setSource`](#function-setsource)</td>
+    <td>[`setSource`](#setSource)</td>
     <td>Sets the source of this ban.</td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-typedef"/> Date
+### <code className="doc-symbol doc-symbol-typedef"/> Date [#Date]
 
 ```cpp
 using endstone::BanEntry::Date =  std::chrono::system_clock::time_point;
 ```
 
 
-### <code className="doc-symbol doc-symbol-variable"/> DateFormat
+### <code className="doc-symbol doc-symbol-variable"/> DateFormat [#DateFormat]
 
 ```cpp
 const std::string endstone::BanEntry::DateFormat;
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> getCreated
+### <code className="doc-symbol doc-symbol-function"/> getCreated [#getCreated]
 
 ```cpp
 inline Date endstone::BanEntry::getCreated () const
@@ -128,7 +128,7 @@ the creation date
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getExpiration
+### <code className="doc-symbol doc-symbol-function"/> getExpiration [#getExpiration]
 
 ```cpp
 inline std::optional< Date > endstone::BanEntry::getExpiration () const
@@ -147,7 +147,7 @@ the expiration date
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getReason
+### <code className="doc-symbol doc-symbol-function"/> getReason [#getReason]
 
 ```cpp
 inline std::string endstone::BanEntry::getReason () const
@@ -166,7 +166,7 @@ the ban reason
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getSource
+### <code className="doc-symbol doc-symbol-function"/> getSource [#getSource]
 
 ```cpp
 inline std::string endstone::BanEntry::getSource () const
@@ -185,7 +185,7 @@ the source of the ban
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setCreated
+### <code className="doc-symbol doc-symbol-function"/> setCreated [#setCreated]
 
 ```cpp
 inline void endstone::BanEntry::setCreated (
@@ -209,7 +209,7 @@ Sets the date this ban entry was created.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setExpiration
+### <code className="doc-symbol doc-symbol-function"/> setExpiration [#setExpiration]
 
 ```cpp
 inline void endstone::BanEntry::setExpiration (
@@ -230,7 +230,7 @@ Sets the date this ban expires on. std::nullopt values are considered "infinite"
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setReason
+### <code className="doc-symbol doc-symbol-function"/> setReason [#setReason]
 
 ```cpp
 inline void endstone::BanEntry::setReason (
@@ -254,7 +254,7 @@ Sets the reason for this ban.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setSource
+### <code className="doc-symbol doc-symbol-function"/> setSource [#setSource]
 
 ```cpp
 inline void endstone::BanEntry::setSource (

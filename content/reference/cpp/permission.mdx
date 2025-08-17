@@ -24,7 +24,7 @@ title: "Permission"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_permission_1a385c02996be80249d7de305f42f92924">
-    <td>[`DefaultPermission`](#variable-defaultpermission)</td>
+    <td>[`DefaultPermission`](#DefaultPermission)</td>
     <td></td>
 </tr>
 </tbody>
@@ -46,64 +46,64 @@ title: "Permission"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_permission_1a74535a5712de35b6a88927ac33f0b25b">
-    <td>[`Permission`](#function-permission)</td>
+    <td>[`Permission`](#Permission)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_permission_1a44cb16b9597c2e9a2b6ef6f3a3332344">
-    <td>[`addParent`](#function-addparent-12)</td>
+    <td>[`addParent`](#addParent)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_permission_1abce4255512cee5e3a6c8932cece8aa0a">
-    <td>[`addParent`](#function-addparent-22)</td>
+    <td>[`addParent`](#addParent)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_permission_1a00a4dae7f788d5974d87b7b5c296e819">
-    <td>[`getChildren`](#function-getchildren)</td>
+    <td>[`getChildren`](#getChildren)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_permission_1ab667964641734328e6882b4391d0b5d1">
-    <td>[`getDefault`](#function-getdefault)</td>
+    <td>[`getDefault`](#getDefault)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_permission_1a8760bb7006bbd320ee75f80c786f414c">
-    <td>[`getDescription`](#function-getdescription)</td>
+    <td>[`getDescription`](#getDescription)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_permission_1ad3c9f16d5737c0bd1ffca96d069eb18e">
-    <td>[`getName`](#function-getname)</td>
+    <td>[`getName`](#getName)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_permission_1a61a4cbfb72b192e44a695e268c7e6aa6">
-    <td>[`getPermissibles`](#function-getpermissibles)</td>
+    <td>[`getPermissibles`](#getPermissibles)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_permission_1a53ca57f91063211ddebc05e1ea97c26d">
-    <td>[`init`](#function-init)</td>
+    <td>[`init`](#init)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_permission_1ab086181413bdb79b6eefe7848a65300e">
-    <td>[`recalculatePermissibles`](#function-recalculatepermissibles)</td>
+    <td>[`recalculatePermissibles`](#recalculatePermissibles)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_permission_1af76b08d0dd8fea2f839e5e5da221c651">
-    <td>[`setDefault`](#function-setdefault)</td>
+    <td>[`setDefault`](#setDefault)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_permission_1ad758e85f89650756e9782677de269edd">
-    <td>[`setDescription`](#function-setdescription)</td>
+    <td>[`setDescription`](#setDescription)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-variable"/> DefaultPermission
+### <code className="doc-symbol doc-symbol-variable"/> DefaultPermission [#DefaultPermission]
 
 ```cpp
 const PermissionDefault endstone::Permission::DefaultPermission;
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> Permission
+### <code className="doc-symbol doc-symbol-function"/> Permission [#Permission]
 
 ```cpp
 inline explicit endstone::Permission::Permission (
@@ -115,7 +115,7 @@ inline explicit endstone::Permission::Permission (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> addParent
+### <code className="doc-symbol doc-symbol-function"/> addParent [#addParent]
 
 ```cpp
 inline Permission * endstone::Permission::addParent (
@@ -150,7 +150,7 @@ Parent permission it created or loaded
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> addParent
+### <code className="doc-symbol doc-symbol-function"/> addParent [#addParent]
 
 ```cpp
 inline void endstone::Permission::addParent (
@@ -175,7 +175,7 @@ Adds this permission to the specified parent permission.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getChildren
+### <code className="doc-symbol doc-symbol-function"/> getChildren [#getChildren]
 
 ```cpp
 inline std::unordered_map< std::string, bool > & endstone::Permission::getChildren () 
@@ -196,7 +196,7 @@ Gets the children of this permission. If you change this map in any form, you mu
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getDefault
+### <code className="doc-symbol doc-symbol-function"/> getDefault [#getDefault]
 
 ```cpp
 inline PermissionDefault endstone::Permission::getDefault () const
@@ -217,7 +217,7 @@ Default value of this permission.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getDescription
+### <code className="doc-symbol doc-symbol-function"/> getDescription [#getDescription]
 
 ```cpp
 inline std::string endstone::Permission::getDescription () const
@@ -238,7 +238,7 @@ Brief description of this permission
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getName
+### <code className="doc-symbol doc-symbol-function"/> getName [#getName]
 
 ```cpp
 inline std::string endstone::Permission::getName () const
@@ -259,7 +259,7 @@ Fully qualified name
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getPermissibles
+### <code className="doc-symbol doc-symbol-function"/> getPermissibles [#getPermissibles]
 
 ```cpp
 inline std::unordered_set< Permissible * > endstone::Permission::getPermissibles () const
@@ -280,7 +280,7 @@ Set containing permissibles with this permission
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> init
+### <code className="doc-symbol doc-symbol-function"/> init [#init]
 
 ```cpp
 inline void endstone::Permission::init (
@@ -289,7 +289,7 @@ inline void endstone::Permission::init (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> recalculatePermissibles
+### <code className="doc-symbol doc-symbol-function"/> recalculatePermissibles [#recalculatePermissibles]
 
 ```cpp
 inline void endstone::Permission::recalculatePermissibles () 
@@ -303,7 +303,7 @@ This should be called after modifying the children, and is automatically called 
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setDefault
+### <code className="doc-symbol doc-symbol-function"/> setDefault [#setDefault]
 
 ```cpp
 inline void endstone::Permission::setDefault (
@@ -329,7 +329,7 @@ This will not be saved to disk, and is a temporary operation until the server re
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> setDescription
+### <code className="doc-symbol doc-symbol-function"/> setDescription [#setDescription]
 
 ```cpp
 inline void endstone::Permission::setDescription (

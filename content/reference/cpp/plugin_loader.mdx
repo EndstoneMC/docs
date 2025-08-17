@@ -31,49 +31,49 @@ title: "PluginLoader"
 </thead>
 <tbody>
 <tr key="classendstone_1_1_plugin_loader_1a939f5cd14c8dbac76c77f1acea8eb926">
-    <td>[`PluginLoader`](#function-pluginloader-12)</td>
+    <td>[`PluginLoader`](#PluginLoader)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_plugin_loader_1a599ce19d8a2e1d5870942218f380b506">
-    <td>[`PluginLoader`](#function-pluginloader-22)</td>
+    <td>[`PluginLoader`](#PluginLoader)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_plugin_loader_1ae3223c941eb3c61add708b064811310a">
-    <td>[`disablePlugin`](#function-disableplugin)</td>
+    <td>[`disablePlugin`](#disablePlugin)</td>
     <td>Disables the specified plugin Attempting to disable a plugin that is not enabled will have no effect.</td>
 </tr>
 <tr key="classendstone_1_1_plugin_loader_1aa14e843ba2f369aae119f8284fd4ce77">
-    <td>[`enablePlugin`](#function-enableplugin)</td>
+    <td>[`enablePlugin`](#enablePlugin)</td>
     <td>Enables the specified plugin Attempting to enable a plugin that is already enabled will have no effect.</td>
 </tr>
 <tr key="classendstone_1_1_plugin_loader_1ae0c1d16853a74eef8f285436494adc78">
-    <td>[`getPluginFileFilters`](#function-getpluginfilefilters)</td>
+    <td>[`getPluginFileFilters`](#getPluginFileFilters)</td>
     <td>Returns a list of all filename filters expected by this PluginLoader .</td>
 </tr>
 <tr key="classendstone_1_1_plugin_loader_1ac6cee4e3db53a6dfe6a453e854f325e7">
-    <td>[`getServer`](#function-getserver)</td>
+    <td>[`getServer`](#getServer)</td>
     <td>Retrieves the Server object associated with the PluginLoader .</td>
 </tr>
 <tr key="classendstone_1_1_plugin_loader_1a61ca476663966bfe408dcc52b6188782">
-    <td>[`loadPlugin`](#function-loadplugin)</td>
+    <td>[`loadPlugin`](#loadPlugin)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_plugin_loader_1a1e0bb1627f8164603a94bada09dfe71f">
-    <td>[`loadPlugins`](#function-loadplugins)</td>
+    <td>[`loadPlugins`](#loadPlugins)</td>
     <td>Loads the plugin contained within the specified directory.</td>
 </tr>
 <tr key="classendstone_1_1_plugin_loader_1ab20454a8e41b03d4e7f36f2bf3447c17">
-    <td>[`operator=`](#function-operator)</td>
+    <td>[`operator=`](#operator=)</td>
     <td></td>
 </tr>
 <tr key="classendstone_1_1_plugin_loader_1a6a8f266b427ace08cd86695ffda049f6">
-    <td>[`~PluginLoader`](#function-pluginloader)</td>
+    <td>[`~PluginLoader`](#~PluginLoader)</td>
     <td></td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> PluginLoader
+### <code className="doc-symbol doc-symbol-function"/> PluginLoader [#PluginLoader]
 
 ```cpp
 inline explicit endstone::PluginLoader::PluginLoader (
@@ -82,7 +82,7 @@ inline explicit endstone::PluginLoader::PluginLoader (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> PluginLoader
+### <code className="doc-symbol doc-symbol-function"/> PluginLoader [#PluginLoader]
 
 ```cpp
 endstone::PluginLoader::PluginLoader (
@@ -91,7 +91,7 @@ endstone::PluginLoader::PluginLoader (
 ```
 
 
-### <code className="doc-symbol doc-symbol-function"/> disablePlugin
+### <code className="doc-symbol doc-symbol-function"/> disablePlugin [#disablePlugin]
 
 ```cpp
 inline virtual void endstone::PluginLoader::disablePlugin (
@@ -112,7 +112,7 @@ Disables the specified plugin Attempting to disable a plugin that is not enabled
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> enablePlugin
+### <code className="doc-symbol doc-symbol-function"/> enablePlugin [#enablePlugin]
 
 ```cpp
 inline virtual void endstone::PluginLoader::enablePlugin (
@@ -133,7 +133,7 @@ Enables the specified plugin Attempting to enable a plugin that is already enabl
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getPluginFileFilters
+### <code className="doc-symbol doc-symbol-function"/> getPluginFileFilters [#getPluginFileFilters]
 
 ```cpp
 virtual std::vector< std::string > endstone::PluginLoader::getPluginFileFilters () const = 0
@@ -152,7 +152,7 @@ The filters
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> getServer
+### <code className="doc-symbol doc-symbol-function"/> getServer [#getServer]
 
 ```cpp
 inline Server & endstone::PluginLoader::getServer () const
@@ -174,7 +174,7 @@ The [**Server**](classendstone_1_1_server.md) reference.
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> loadPlugin
+### <code className="doc-symbol doc-symbol-function"/> loadPlugin [#loadPlugin]
 
 ```cpp
 virtual Plugin * endstone::PluginLoader::loadPlugin (
@@ -204,7 +204,7 @@ Loads the plugin contained in the specified file
 
 
         
-### <code className="doc-symbol doc-symbol-function"/> loadPlugins
+### <code className="doc-symbol doc-symbol-function"/> loadPlugins [#loadPlugins]
 
 ```cpp
 inline virtual std::vector< Plugin * > endstone::PluginLoader::loadPlugins (
@@ -232,7 +232,7 @@ A list of all plugins loaded
 
 
         
-### <code className="doc-symbol doc-symbol-variable"/> server\_
+### <code className="doc-symbol doc-symbol-variable"/> server\_ [#server\_]
 
 ```cpp
 Server& endstone::PluginLoader::server_;

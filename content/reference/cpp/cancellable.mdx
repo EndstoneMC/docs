@@ -33,21 +33,21 @@ Bases: `EventType`,  [`endstone::ICancellable`](classendstone_1_1_i_cancellable.
 </thead>
 <tbody>
 <tr key="classendstone_1_1_cancellable_1a3512b47db69c6001f5c0450051308327">
-    <td>[`cancel`](#function-cancel)</td>
+    <td>[`cancel`](#cancel)</td>
     <td>Cancel this event. A cancelled event will not be executed in the server, but will still pass to other plugins.</td>
 </tr>
 <tr key="classendstone_1_1_cancellable_1a268b73cc5bda0fa5923336d031814faa">
-    <td>[`isCancelled`](#function-iscancelled)</td>
+    <td>[`isCancelled`](#isCancelled)</td>
     <td>Gets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.</td>
 </tr>
 <tr key="classendstone_1_1_cancellable_1aa12df44bcb66924d06a689d0dd07865e">
-    <td>[`setCancelled`](#function-setcancelled)</td>
+    <td>[`setCancelled`](#setCancelled)</td>
     <td>Sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.</td>
 </tr>
 </tbody>
 </table>
 
-### <code className="doc-symbol doc-symbol-function"/> cancel
+### <code className="doc-symbol doc-symbol-function"/> cancel [#cancel]
 
 ```cpp
 inline virtual void endstone::Cancellable::cancel () 
@@ -57,7 +57,7 @@ Cancel this event. A cancelled event will not be executed in the server, but wil
 
 Implements [*endstone::ICancellable::cancel*](classendstone_1_1_i_cancellable.md#function-cancel)
 
-### <code className="doc-symbol doc-symbol-function"/> isCancelled
+### <code className="doc-symbol doc-symbol-function"/> isCancelled [#isCancelled]
 
 ```cpp
 inline virtual bool endstone::Cancellable::isCancelled () override const
@@ -78,7 +78,7 @@ true if this event is cancelled
         
 Implements [*endstone::ICancellable::isCancelled*](classendstone_1_1_i_cancellable.md#function-iscancelled)
 
-### <code className="doc-symbol doc-symbol-function"/> setCancelled
+### <code className="doc-symbol doc-symbol-function"/> setCancelled [#setCancelled]
 
 ```cpp
 inline virtual void endstone::Cancellable::setCancelled (
