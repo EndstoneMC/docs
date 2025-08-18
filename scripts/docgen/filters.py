@@ -204,6 +204,8 @@ def do_format_codeblock(node: Node) -> str:
             code.append(
                 f"#define {node.name_full_unescaped} {node._initializer.plain()}"
             )
+    elif node.is_typedef:
+        code.append(f"using {node.name_tokens[-1]} = {node._type.plain()}")
 
     else:
         code.append(node._definition.plain())
@@ -220,6 +222,9 @@ def do_format_codeblock(node: Node) -> str:
 
 def do_as_base_classes(node: Node) -> dict[str, Node]:
     ret = {}
+    if node.name_tokens[-1] == "ActionForm":
+        print(node._xml)
+
     for ref in node._xml.findall("basecompoundref"):
         refid = ref.get("refid")
         if refid is None:
