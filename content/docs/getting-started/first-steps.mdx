@@ -1,4 +1,5 @@
 import Admonition from "@/components/endstone/admonition";
+import {File, Folder, Tree} from "@/components/magicui/file-tree";
 
 # First Steps
 
@@ -30,6 +31,18 @@ Follow the instructions on the [Run with Docker](/docs/getting-started/installat
 
 After the first run, the server will create a **`server.properties`** file in the server folder.
 This file contains most settings related to the base gameplay.
+
+<Tree
+    className="overflow-hidden rounded-md bg-background p-2" initialExpandedItems={["1"]}
+>
+    <Folder value="1" element="bedrock_server">
+        <Folder element="behavior_packs"/>
+        <Folder element="plugins"/>
+        <Folder element="resource_packs"/>
+        <Folder element="worlds"/>
+        <File value="7" className="bg-blue-100 dark:bg-blue-900 font-semibold">server.properties</File>
+    </Folder>
+</Tree>
 
 The content of the file should look like this:
 
